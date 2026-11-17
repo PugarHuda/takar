@@ -10,9 +10,10 @@
   "scripts": {
     "fund": "node --env-file=.env scripts/fund-v2.mjs",
     "status": "node --env-file=.env scripts/fund-v2.mjs --status",
-    "test": "node lib/test.mjs && node lib/fleet.test.mjs && node lib/outcome.test.mjs",
+    "test": "node lib/test.mjs && node lib/fleet.test.mjs && node lib/outcome.test.mjs && node lib/scorecard.test.mjs",
     "first-ask": "node --env-file=.env scripts/first-ask.mjs",
-    "fleet": "node --env-file=.env scripts/fleet-run.mjs"
+    "fleet": "node --env-file=.env scripts/fleet-run.mjs",
+    "scorecard": "node --env-file=.env scripts/scorecard-run.mjs"
   },
   "dependencies": {
     "ethers": "^6.13.0"

@@ -1,0 +1,516 @@
+{
+  "title": "Takar forecast scorecard",
+  "method": "Crowd probability on Manifold 7 days before resolution; outcome bought through Telegraph EVENT_OUTCOME_RESOLUTION_GENERAL and compared with the market's resolution; Brier score over confirmed outcomes only.",
+  "generated_at": "2026-11-17T06:51:28.880Z",
+  "network": "Ethereum Sepolia testnet (test USDC)",
+  "summary": {
+    "forecasts": 13,
+    "scored": 0,
+    "contradicted": 0,
+    "unverified": 13,
+    "brier": null,
+    "baseline": 0.25
+  },
+  "rows": [
+    {
+      "market": {
+        "id": "s5sgqZ9qQ5",
+        "question": "Will Jerome Powell cease to hold the office of Chair of the Federal Reserve before 2026?",
+        "url": "https://manifold.markets/DaftPunkRock/will-jerome-powell-cease-to-hold-th",
+        "resolution": "NO",
+        "resolvedAt": 1767681504297,
+        "traders": 316,
+        "topic": "Federal Reserve"
+      },
+      "forecast": {
+        "p": 0.0097,
+        "asOf": "2025-12-28T10:01:31.699Z",
+        "betId": "U5UAPPqlOULU",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "unverified",
+        "telegraph": null,
+        "attempts": [
+          {
+            "miner": {
+              "id": "openai",
+              "name": "openai"
+            },
+            "outcome": "unreadable",
+            "signal": "0x45b6c2b35667b1842af69142c8f5364c85200d0bb8392f7f1d2350dfcf447670",
+            "tx": "0xa7fc7663e5e8133ae4464e9f903fff52d2d7743bf04f79684f527ea2108dd32e"
+          },
+          {
+            "miner": null,
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: status 502: {\"ok\": false, \"error\": \"HTTP Error 404: Not Found\"}"
+          }
+        ]
+      },
+      "brier": 0.0001
+    },
+    {
+      "market": {
+        "id": "87aJQIzxUpCnRq9MlFTi",
+        "question": "Will there be another US Federal Reserve rate hike before the end of 2023?",
+        "url": "https://manifold.markets/AliNikseresht/will-there-be-another-us-federal-re",
+        "resolution": "NO",
+        "resolvedAt": 1704088267044,
+        "traders": 226,
+        "topic": "Federal Reserve"
+      },
+      "forecast": {
+        "p": 0.0135,
+        "asOf": "2023-12-23T23:56:50.965Z",
+        "betId": "EyIZVMIiRtsaAVMZahzJ",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "unverified",
+        "telegraph": null,
+        "attempts": [
+          {
+            "miner": {
+              "id": "openai",
+              "name": "openai"
+            },
+            "outcome": "unreadable",
+            "signal": "0xdf6165f104ff4cc6d28d94752d9659f5a4e6f3d77f2349b5d0d90b8848af7d46",
+            "tx": "0xc0c035a382ab043f95621d89b53e0bab7d9c57b7b3f622a8f02644ae022eab34"
+          },
+          {
+            "miner": null,
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: status 502: {\"ok\": false, \"error\": \"HTTP Error 404: Not Found\"}"
+          }
+        ]
+      },
+      "brier": 0.0002
+    },
+    {
+      "market": {
+        "id": "mAQgw4OFEIJ6xJ4RxZ8A",
+        "question": "30. Will US CPI inflation for 2023 average above 4% in 2023?",
+        "url": "https://manifold.markets/ACXBot/30-will-us-cpi-inflation-for-2023-a",
+        "resolution": "NO",
+        "resolvedAt": 1704142965751,
+        "traders": 155,
+        "topic": "CPI inflation"
+      },
+      "forecast": {
+        "p": 0.0258,
+        "asOf": "2023-12-25T17:49:58.444Z",
+        "betId": "4O3T88iHvDSbJHKBoweU",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "unverified",
+        "telegraph": null,
+        "attempts": [
+          {
+            "miner": {
+              "id": "openai",
+              "name": "openai"
+            },
+            "outcome": "unreadable",
+            "signal": "0x6821ea17235d51b3d70c79ba6870fb6b2109d380ba941e739f74d8e2477b983e",
+            "tx": "0x162005d3d1bf980fac9b4b10df3a1be2ca49bf6c80cee3748db365daa9cefd24"
+          },
+          {
+            "miner": null,
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 503: no_compatible_miner"
+          }
+        ]
+      },
+      "brier": 0.0007
+    },
+    {
+      "market": {
+        "id": "hKB9iD8knG4R2RuSyyCu",
+        "question": "Will Bitcoin hit $100K in 2024?",
+        "url": "https://manifold.markets/bitSanjay/will-bitcoin-reach-100k-in-2024",
+        "resolution": "YES",
+        "resolvedAt": 1733370046441,
+        "traders": 1130,
+        "topic": "Bitcoin"
+      },
+      "forecast": {
+        "p": 0.6847,
+        "asOf": "2024-11-28T03:01:58.390Z",
+        "betId": "hnLAhAq9PtSU",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "unverified",
+        "telegraph": null,
+        "attempts": [
+          {
+            "miner": {
+              "id": "openai",
+              "name": "openai"
+            },
+            "outcome": "unreadable",
+            "signal": "0x499f6b3f8d98a1a64a24314617db62f5bd1d897e2c9cd1280754f9dedd08771b",
+            "tx": "0x276fff9be2c3da70ebaf569db904d44b82ad437218d39618c41c312c53a5e794"
+          },
+          {
+            "miner": null,
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: status 502: {\"ok\": false, \"error\": \"HTTP Error 404: Not Found\"}"
+          }
+        ]
+      },
+      "brier": 0.0994
+    },
+    {
+      "market": {
+        "id": "KTIGrGjY04o8duM8mWHj",
+        "question": "Will Bitcoin Reach $50k By Feb 1st 2024?",
+        "url": "https://manifold.markets/YewNevano/will-bitcoin-reach-50k-by-feb-1st-2",
+        "resolution": "NO",
+        "resolvedAt": 1706803460214,
+        "traders": 335,
+        "topic": "Bitcoin"
+      },
+      "forecast": {
+        "p": 0.0172,
+        "asOf": "2024-01-25T09:37:21.624Z",
+        "betId": "hsbgZ2gqFjxiB6b33LGW",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "unverified",
+        "telegraph": null,
+        "attempts": [
+          {
+            "miner": {
+              "id": "openai",
+              "name": "openai"
+            },
+            "outcome": "unreadable",
+            "signal": "0x8a66aa8b5656569432ccfb273d1d5e7317946c67b8b31f4e9675ff402045f048",
+            "tx": "0x8b72201ff3b6db108d78a43c308433eb6b9d908808c05972b7a689cce814376b"
+          },
+          {
+            "miner": null,
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: status 502: {\"ok\": false, \"error\": \"HTTP Error 404: Not Found\"}"
+          }
+        ]
+      },
+      "brier": 0.0003
+    },
+    {
+      "market": {
+        "id": "8dznULhsgh",
+        "question": "Will Nvidia outperform the S&P 500 in 2025?",
+        "url": "https://manifold.markets/DaftPunkRock/will-nvidia-outperform-the-sp-500-i",
+        "resolution": "YES",
+        "resolvedAt": 1767733251528,
+        "traders": 643,
+        "topic": "S&P 500"
+      },
+      "forecast": {
+        "p": 0.9948,
+        "asOf": "2025-12-29T15:34:31.110Z",
+        "betId": "lCCppSICP9dZ",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "unverified",
+        "telegraph": null,
+        "attempts": [
+          {
+            "miner": {
+              "id": "openai",
+              "name": "openai"
+            },
+            "outcome": "unreadable",
+            "signal": "0xfb29381f81cdf4d36ef7c44777457550812d08177556304a73bf53e49156b65f",
+            "tx": "0x98c0872c1ec77314ba7295c720d2c20f5a87536ad23d6d14d8d65c118c0c2fc4"
+          },
+          {
+            "miner": null,
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: circuit opened due to repeated failures"
+          }
+        ]
+      },
+      "brier": 0
+    },
+    {
+      "market": {
+        "id": "pDCgifEaspF87XO2xK86",
+        "question": "32. Will the S&P 500 index reach a new all-time high in 2023?",
+        "url": "https://manifold.markets/ACXBot/32-will-the-sp-500-index-reach-a-ne",
+        "resolution": "NO",
+        "resolvedAt": 1703884973995,
+        "traders": 354,
+        "topic": "S&P 500"
+      },
+      "forecast": {
+        "p": 0.2923,
+        "asOf": "2023-12-22T20:36:11.162Z",
+        "betId": "bL7VosqwBYPwGgaflCDz",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "unverified",
+        "telegraph": null,
+        "attempts": [
+          {
+            "miner": {
+              "id": "openai",
+              "name": "openai"
+            },
+            "outcome": "unreadable",
+            "signal": "0x67ca940ab38237ea4c87e63ce75480d1d510af28a47ff3c3a43adce9a4d45b25",
+            "tx": "0xe21414ad30d561d928b25a7273398c3ff670c77775af90c64e9cf7c6485ade45"
+          },
+          {
+            "miner": null,
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: status 502: {\"ok\": false, \"error\": \"HTTP Error 404: Not Found\"}"
+          }
+        ]
+      },
+      "brier": 0.0854
+    },
+    {
+      "market": {
+        "id": "IMLre6PYIQgsesV6Wa6O",
+        "question": "Did the US enter a recession before the end of 2024?",
+        "url": "https://manifold.markets/chrisjbillington/will-the-us-enter-a-recession-by-20",
+        "resolution": "NO",
+        "resolvedAt": 1767304566560,
+        "traders": 1479,
+        "topic": "recession"
+      },
+      "forecast": {
+        "p": 0.0104,
+        "asOf": "2025-12-15T03:59:01.416Z",
+        "betId": "pAEyhsPzhSLp",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "unverified",
+        "telegraph": null,
+        "attempts": [
+          {
+            "miner": {
+              "id": "openai",
+              "name": "openai"
+            },
+            "outcome": "unreadable",
+            "signal": "0x4e4b30600e16f5705645a03f1d8cd1169c37c77d1dfd5b132c6de08d912b54d7",
+            "tx": "0x43d9e5e6a2bbaa9e8d2b376b34294b98efa6f5a3debcb0d86b11f2fb00c7ad8c"
+          },
+          {
+            "miner": null,
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 503: no_compatible_miner"
+          }
+        ]
+      },
+      "brier": 0.0001
+    },
+    {
+      "market": {
+        "id": "f2i3zt28mm",
+        "question": "Will the US enter a recession by end of 2025? (Two quarters negative GDP growth)",
+        "url": "https://manifold.markets/jack/will-the-us-enter-a-recession-by-en",
+        "resolution": "NO",
+        "resolvedAt": 1774748848354,
+        "traders": 292,
+        "topic": "recession"
+      },
+      "forecast": {
+        "p": 0.0107,
+        "asOf": "2026-03-19T14:17:34.099Z",
+        "betId": "RSE9OqLZlc99",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "unverified",
+        "telegraph": null,
+        "attempts": [
+          {
+            "miner": {
+              "id": "openai",
+              "name": "openai"
+            },
+            "outcome": "unreadable",
+            "signal": "0x7a654d56d4f118265f3aa2df016c14c2769bc444ae7006bd8fe715dbdf173c47",
+            "tx": "0x1150d8effc16d250093e59c1a0b05c2186756e61fc8fe8c48c8a7137bc2a2f5f"
+          },
+          {
+            "miner": null,
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: status 502: {\"ok\": false, \"error\": \"HTTP Error 404: Not Found\"}"
+          }
+        ]
+      },
+      "brier": 0.0001
+    },
+    {
+      "market": {
+        "id": "ii4d7faxzp",
+        "question": "Will Nvidia be the largest company in the world by market cap at the end of 2024?",
+        "url": "https://manifold.markets/strutheo/will-nvidia-be-the-largest-company-hl44chqzn4",
+        "resolution": "NO",
+        "resolvedAt": 1735672213644,
+        "traders": 310,
+        "topic": "Nvidia"
+      },
+      "forecast": {
+        "p": 0.0542,
+        "asOf": "2024-12-24T15:17:45.140Z",
+        "betId": "EudcCZlC6OzQ",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "unverified",
+        "telegraph": null,
+        "attempts": [
+          {
+            "miner": {
+              "id": "openai",
+              "name": "openai"
+            },
+            "outcome": "unreadable",
+            "signal": "0x820867d8bbf67da52297e8e8b5aa8a5a3b6ba75233ff2ea37e54b7c6302e614c",
+            "tx": "0x25d22e8f117b4c3df0409cdbc1612d601bc6bad3d82aa12635760c68e16a07cf"
+          },
+          {
+            "miner": null,
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 503: no_compatible_miner"
+          }
+        ]
+      },
+      "brier": 0.0029
+    },
+    {
+      "market": {
+        "id": "Z1GN0uwK9PbFMqGoZEs5",
+        "question": "Will Nvidia's share price break $200 in 2024?",
+        "url": "https://manifold.markets/Krypton/will-nvidias-share-price-break-2000",
+        "resolution": "NO",
+        "resolvedAt": 1735777752343,
+        "traders": 259,
+        "topic": "Nvidia"
+      },
+      "forecast": {
+        "p": 0.0187,
+        "asOf": "2024-12-22T08:51:24.553Z",
+        "betId": "9SQE9sARpSCn",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "unverified",
+        "telegraph": null,
+        "attempts": [
+          {
+            "miner": {
+              "id": "openai",
+              "name": "openai"
+            },
+            "outcome": "unreadable",
+            "signal": "0x2c8d64477daeafa4831cb14fc4b9c41fd104f3f65569cebe881b2f38d2a1d090",
+            "tx": "0x578ce77b8c79cbb2002822eefde7c52eda319e32d9e38239cc6f1419b4fc2535"
+          },
+          {
+            "miner": null,
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: status 502: {\"ok\": false, \"error\": \"HTTP Error 404: Not Found\"}"
+          }
+        ]
+      },
+      "brier": 0.0003
+    },
+    {
+      "market": {
+        "id": "DreezzZ09K5d4ee1E64l",
+        "question": "Will Elon Musk step down from being Tesla CEO before 2024?",
+        "url": "https://manifold.markets/Manifold/will-elon-musk-step-down-from-being",
+        "resolution": "NO",
+        "resolvedAt": 1704097849627,
+        "traders": 895,
+        "topic": "Tesla"
+      },
+      "forecast": {
+        "p": 0.0214,
+        "asOf": "2023-12-24T18:07:19.275Z",
+        "betId": "Qji44ftjrtDZbDsdkGxG",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "unverified",
+        "telegraph": null,
+        "attempts": [
+          {
+            "miner": {
+              "id": "openai",
+              "name": "openai"
+            },
+            "outcome": "unreadable",
+            "signal": "0x1ea1a05a4c4dab1a044f5716455fabe96dc6eedb44007c2a1676d1b337c9537a",
+            "tx": "0x27c154c31dc6bb5933ff9377816444c086ea7a6e194950aee653e56268dae6d4"
+          },
+          {
+            "miner": null,
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: status 502: {\"ok\": false, \"error\": \"HTTP Error 404: Not Found\"}"
+          }
+        ]
+      },
+      "brier": 0.0005
+    },
+    {
+      "market": {
+        "id": "BRalVVT58UX4tIFgVeP7",
+        "question": "Will Tesla offer a Robo-Taxi service by the end of 2025?",
+        "url": "https://manifold.markets/GabeGarboden/will-tesla-offer-a-robotaxi-service",
+        "resolution": "NO",
+        "resolvedAt": 1767261427184,
+        "traders": 661,
+        "topic": "Tesla"
+      },
+      "forecast": {
+        "p": 0.0737,
+        "asOf": "2025-12-25T05:39:46.146Z",
+        "betId": "h2PhnL52gZC6",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "unverified",
+        "telegraph": null,
+        "attempts": [
+          {
+            "miner": {
+              "id": "openai",
+              "name": "openai"
+            },
+            "outcome": "unreadable",
+            "signal": "0x4bd879de07fda4db743f8a942b758f9998573368598b869901825767ecee5105",
+            "tx": "0xcee13fc358ff9b9083f3500151f30114fb7132ad5cd9ca53e4ff40680371fe12"
+          },
+          {
+            "miner": null,
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: circuit opened due to repeated failures"
+          }
+        ]
+      },
+      "brier": 0.0054
+    }
+  ],
+  "attestation": {
+    "algorithm": "ed25519",
+    "sha256": "ed28306a87f13d21415871117625aa7284f39e34ff22425b419ef0133c0b4b6d",
+    "signature": "CkTa+vn5WHHYrE0U6fi0XoZ0RqFiQILDtPrhmLATaHMvJHmQyA+FcDm4dHg3zB/djKI0W8njZwhXvxISx8wRAw==",
+    "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+  }
+}
