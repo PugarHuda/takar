@@ -1,0 +1,17 @@
+{
+  "_note": "SIMULATED FLEET for a testnet demo. Units, tasks and limits are illustrative; every Telegraph purchase and station reading is real.",
+  "units": [
+    { "id": "drone-palangkaraya-1", "type": "drone", "location": "Palangka Raya",
+      "task": { "name": "peatland fire patrol", "hours": 4 },
+      "limits": { "maxGustKmh": 35 }, "budgetUsd": 0.03 },
+    { "id": "drone-makassar-2", "type": "drone", "location": "Makassar",
+      "task": { "name": "coastline survey", "hours": 3 },
+      "limits": { "maxGustKmh": 30 }, "budgetUsd": 0.03 },
+    { "id": "sprayer-bandung-1", "type": "field-robot", "location": "Bandung",
+      "task": { "name": "tea estate spraying", "hours": 6 },
+      "limits": { "maxRainPct": 40 }, "budgetUsd": 0.03 },
+    { "id": "rover-jakarta-1", "type": "rover", "location": "Jakarta",
+      "task": { "name": "cold-chain delivery", "hours": 5, "destination": "Bandung" },
+      "limits": { "maxGustKmh": 50, "maxHours": 4.5 }, "budgetUsd": 0.04 }
+  ]
+}

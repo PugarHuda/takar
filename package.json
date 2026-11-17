@@ -1,0 +1,21 @@
+{
+  "name": "takar",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Machines with a budget line, forecasts held to account: ranked intelligence bought through Telegraph, every input with a receipt.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "fund": "node --env-file=.env scripts/fund-v2.mjs",
+    "status": "node --env-file=.env scripts/fund-v2.mjs --status",
+    "test": "node lib/test.mjs && node lib/fleet.test.mjs",
+    "first-ask": "node --env-file=.env scripts/first-ask.mjs",
+    "fleet": "node --env-file=.env scripts/fleet-run.mjs"
+  },
+  "dependencies": {
+    "ethers": "^6.13.0"
+  },
+  "license": "MIT"
+}
