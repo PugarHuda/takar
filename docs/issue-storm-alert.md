@@ -1,6 +1,6 @@
 ### App / mission / integration
 
-Takar — Season II Apps & Agents, Mission 11 Autonomous Systems (fleet units that buy a storm check before they fly or drive). Repository goes public before the Dec 1 deadline.
+Takar — Season II Apps & Agents, Mission 11 Autonomous Systems (fleet units that buy a storm check before they fly or drive). Code and full purchase ledger: https://github.com/PugarHuda/takar (`receipts/ledger.jsonl`).
 
 ### What is supposed to work?
 
