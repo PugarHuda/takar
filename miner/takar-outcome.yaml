@@ -1,0 +1,63 @@
+version: "1"
+kind: miner
+id: 20261117
+slug: takar-outcome
+protocol: generic
+name: Takar Outcome Resolver
+description: >-
+  Resolves whether a real-world event happened, or who won it, from Wikipedia
+  text, and refuses to guess. Every yes/no answer carries a sentence quoted word
+  for word from the cited article, checked in code before it is returned; a
+  quote or winner not found in the sources, or an event whose period has not
+  ended, is answered "unresolved".
+base_url: https://takar-outcome.vercel.app
+rate_limit_per_sec: 2
+cache_ttl_sec: 3600
+circuit_threshold: 5
+circuit_cooldown_seconds: 60
+docs:
+  repository: https://github.com/PugarHuda/takar
+limitations:
+  - code: MAX_PARAM_LENGTH
+    message: event must be at most 500 characters
+    param: event
+    property: length
+    value_num: 500
+    operator: lte
+errors:
+  message_path: error
+endpoints:
+  - path: /resolve
+    external_path: /api/resolve
+    method: POST
+    description: >-
+      Resolve one real-world event stated as a question (sports results,
+      elections, finals, central-bank decisions). Returns outcome yes, no or
+      unresolved, the winner when there is one, cited Wikipedia sources and the
+      verbatim evidence sentence. Future or unsettled events return unresolved.
+    intents: [EVENT_OUTCOME_RESOLUTION_GENERAL]
+    params:
+      body:
+        required:
+          - name: event
+            type: string
+            intents: ["*"]
+            description: >-
+              The event or question to resolve, in plain English, including the
+              year, e.g. "Did Max Verstappen win the 2025 Japanese Grand Prix?".
+              At most 500 characters.
+intent_mapping:
+  EVENT_OUTCOME_RESOLUTION_GENERAL:
+    endpoint: /resolve
+    input:
+      event: { from: event }
+    output:
+      event: { path: event }
+      outcome: { path: outcome }
+      resolved_yes: { path: resolved_yes }
+      winner: { path: winner }
+      resolved_at: { path: resolved_at }
+      sources: { path: sources }
+semantics:
+  supported_intents:
+    - EVENT_OUTCOME_RESOLUTION_GENERAL

@@ -10,7 +10,7 @@
   "scripts": {
     "fund": "node --env-file=.env scripts/fund-v2.mjs",
     "status": "node --env-file=.env scripts/fund-v2.mjs --status",
-    "test": "node lib/test.mjs && node lib/fleet.test.mjs",
+    "test": "node lib/test.mjs && node lib/fleet.test.mjs && node lib/outcome.test.mjs",
     "first-ask": "node --env-file=.env scripts/first-ask.mjs",
     "fleet": "node --env-file=.env scripts/fleet-run.mjs"
   },
