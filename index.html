@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Takar fleet board</title>
+<meta name="description" content="What each machine in a simulated fleet bought through Telegraph before it moved, what it cost, and what the receipts showed. Ethereum Sepolia testnet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #EEF2F0;
+  --sheet: #F8FAF9;
+  --ink: #1E2A33;
+  --muted: #55656F;
+  --rule: #8FA6B5;
+  --rule-soft: #D3DDE2;
+  --airspace: #B0287A;
+  --go: #2F7D4F;
+  --hold: #B07A0C;
+  --abort: #B33A2E;
+  --link: #1F5C8A;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #141C21; --sheet: #1B252B; --ink: #E3EAEE; --muted: #9AABB5;
+    --rule: #4F6573; --rule-soft: #2C3A42; --airspace: #E06AAF;
+    --go: #5BBF86; --hold: #E0A93A; --abort: #E3705F; --link: #7FB6E0;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 400 1rem/1.55 "Atkinson Hyperlegible", system-ui, sans-serif;
+}
+a { color: var(--link); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid var(--airspace); outline-offset: 2px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+.display { font-family: "Barlow Semi Condensed", sans-serif; letter-spacing: .01em; }
+code, .raw { font: 0.8125rem/1.4 ui-monospace, "Cascadia Mono", Consolas, monospace; }
+
+header { padding: 40px 0 28px; border-bottom: 2px solid var(--ink); }
+header h1 { font: 700 clamp(2.4rem, 6vw, 4rem)/1 "Barlow Semi Condensed", sans-serif; margin: 0 0 12px; }
+header p { max-width: 64ch; margin: 0 0 8px; color: var(--muted); }
+header p strong { color: var(--ink); }
+.runbar { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--rule); }
+.runbar label { color: var(--muted); }
+.runbar select { font: inherit; color: var(--ink); background: var(--sheet); border: 1px solid var(--rule); padding: 4px 8px; }
+.tally { display: flex; flex-wrap: wrap; gap: 6px 24px; }
+.tally b { font: 600 1.35rem/1 "Barlow Semi Condensed", sans-serif; }
+
+/* One row per unit: the decision, then why, then what it bought. */
+.unit { display: grid; grid-template-columns: 9.5rem 1fr; gap: 6px 28px; padding: 26px 0; border-bottom: 1px solid var(--rule-soft); }
+.verdict { font: 700 3.2rem/0.9 "Barlow Semi Condensed", sans-serif; }
+.verdict.GO { color: var(--go); } .verdict.HOLD { color: var(--hold); } .verdict.ABORT { color: var(--abort); }
+.unit h2 { font: 600 1.4rem/1.2 "Barlow Semi Condensed", sans-serif; margin: 0; }
+.unit .where { color: var(--muted); margin: 2px 0 12px; }
+.why { margin: 0 0 14px; padding-left: 1.1rem; }
+.why li { margin: 2px 0; }
+.why li.contra { color: var(--airspace); font-weight: 700; }
+
+/* The budget line: spent against the unit's cap, wasted spend hatched. */
+.budget { margin: 4px 0 14px; max-width: 520px; }
+.line { position: relative; height: 10px; background: var(--rule-soft); }
+.line span { position: absolute; top: 0; bottom: 0; left: 0; }
+.line .spent { background: var(--ink); }
+.line .waste { background: repeating-linear-gradient(135deg, var(--airspace) 0 3px, transparent 3px 6px); }
+.budget p { margin: 6px 0 0; color: var(--muted); font-size: .9375rem; }
+.budget p b { color: var(--ink); }
+
+.buys { width: 100%; border-collapse: collapse; font-size: .9375rem; }
+.buys th { text-align: left; font-weight: 700; color: var(--muted); padding: 4px 12px 4px 0; border-bottom: 1px solid var(--rule); }
+.buys td { padding: 6px 12px 6px 0; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+.buys tr.bad td:first-child { box-shadow: inset 3px 0 0 var(--airspace); padding-left: 8px; }
+.tag-bad { color: var(--airspace); font-weight: 700; }
+.station { margin: 12px 0 0; color: var(--muted); font-size: .9375rem; }
+.station .raw { display: block; color: var(--ink); margin-top: 2px; overflow-wrap: anywhere; }
+.side { padding-top: 6px; }
+.side .cost { font: 600 1.5rem/1 "Barlow Semi Condensed", sans-serif; }
+.side small { display: block; color: var(--muted); margin-top: 4px; }
+
+section.found { margin: 44px 0 0; padding: 28px 0; border-top: 2px solid var(--ink); }
+section.found h2, section.ledger h2 { font: 700 2rem/1.1 "Barlow Semi Condensed", sans-serif; margin: 0 0 16px; }
+.found ol { margin: 0; padding-left: 1.4rem; max-width: 76ch; }
+.found li { margin: 0 0 12px; }
+section.ledger { padding: 12px 0 48px; }
+details summary { cursor: pointer; font-weight: 700; padding: 8px 0; }
+.scroll { overflow-x: auto; }
+.ledger table { border-collapse: collapse; font-size: .875rem; min-width: 760px; width: 100%; }
+.ledger th, .ledger td { text-align: left; padding: 5px 10px 5px 0; border-bottom: 1px solid var(--rule-soft); }
+footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--muted); font-size: .9375rem; }
+.empty { padding: 40px 0; color: var(--muted); }
+
+@media (max-width: 720px) {
+  .unit { grid-template-columns: 1fr; }
+  .verdict { font-size: 2.6rem; }
+  .buys thead { display: none; }
+  .buys tr { display: block; border-bottom: 1px solid var(--rule-soft); padding: 6px 0; }
+  .buys td { display: block; border: 0; padding: 1px 0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1 class="display">Takar</h1>
+    <p>Each machine below had a budget for intelligence. Before moving, it bought the checks its task needed through <a href="https://telegraphprotocol.com">Telegraph</a>'s ranked market, compared them with the nearest airport weather station, and decided whether to go.</p>
+    <p><strong>Simulated fleet, real purchases.</strong> The units are illustrative. Every purchase settled on Ethereum Sepolia testnet with test USDC, and every station reading is a published METAR report.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="runbar">
+    <label>Run <select id="run" aria-label="Choose a fleet run"></select></label>
+    <div class="tally" id="tally" aria-live="polite"></div>
+  </div>
+  <div id="units"><p class="empty">Loading the receipts…</p></div>
+
+  <section class="found" aria-labelledby="found-h">
+    <h2 id="found-h" class="display">What the receipts showed</h2>
+    <ol>
+      <li><strong>The top-ranked storm miner ignores the place you ask about.</strong> Storm checks for Makassar, Palangka Raya and Bandung were routed to miner 37007, which answered every one with Tropical Cyclone AKVAN-26 in India. Once, that answer was shaped into a 296 km/h gust for Bandung. Reported with receipts in <a href="https://github.com/telegraphprotocol/bounties/issues/211">bounties#211</a>.</li>
+      <li><strong>A storm answer can be paid for and empty.</strong> The next-ranked miner answered Palangka Raya with every field blank, so the drone there held.</li>
+      <li><strong>A station can disagree with a recorded-weather answer.</strong> A miner gave Makassar a 31.9 °C high for 15 November; the Hasanuddin airport station recorded 34 °C across 49 reports.</li>
+      <li><strong>When two independent sources agree, the machine goes.</strong> The Makassar drone flew after the storm miner forecast a 22.3 km/h gust and the airport station measured 17 km/h.</li>
+    </ol>
+  </section>
+
+  <section class="ledger" aria-labelledby="ledger-h">
+    <h2 id="ledger-h" class="display">Every purchase</h2>
+    <details>
+      <summary id="ledger-sum">Show the purchase ledger</summary>
+      <div class="scroll"><table id="ledger"></table></div>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Source, tests and how to reproduce a run: <a href="https://github.com/PugarHuda/takar">github.com/PugarHuda/takar</a>. Telegraph Hackathon Season II entry (Mission 11, Autonomous Systems), with cash prizes. Testnet only; no real money moves and no real machine acts on these decisions.
+  </div>
+</footer>
+
+<script>
+const TX = (h) => `https://sepolia.etherscan.io/tx/${h}`;
+const SIG = (h) => `https://devnode.telegraphprotocol.com/engine/v1/signal/${h}`;
+const short = (h) => (h ? `${h.slice(0, 10)}…${h.slice(-4)}` : "");
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const usd = (n) => `$${(+n).toFixed(2)}`;
+
+async function jsonl(path) {
+  const res = await fetch(path, { cache: "no-store" });
+  if (!res.ok) throw new Error(`${path}: ${res.status}`);
+  return (await res.text()).trim().split("\n").filter(Boolean).map((l) => JSON.parse(l));
+}
+
+function unitRow(d, budget) {
+  const cap = budget ?? Math.max(d.spentUsd, 0.01);
+  const spentPct = Math.min(100, (d.spentUsd / cap) * 100);
+  const wastePct = Math.min(spentPct, ((d.wastedUsd ?? 0) / cap) * 100);
+  const reasons = d.reasons.map((r) => `<li>${esc(r)}</li>`).join("") +
+    (d.contradictions ?? []).map((c) => `<li class="contra">Contradiction: ${esc(c)}</li>`).join("");
+  const bad = new Set((d.unusableMiners ?? []).map((u) => u.signal));
+  const rows = d.receipts.map((r) => {
+    const isBad = r.signal && bad.has(r.signal);
+    const who = r.miner ? `${esc(r.miner.name)} <span class="raw">#${esc(r.miner.id)}</span>` : "no miner";
+    const proof = r.error ? `<span class="tag-bad">refused before payment</span>`
+      : `<a href="${TX(r.tx)}">tx ${short(r.tx)}</a> · <a href="${SIG(r.signal)}">signal</a>`;
+    const status = r.error ? "not charged" : isBad ? `<span class="tag-bad">unusable</span>` : "used";
+    return `<tr class="${isBad ? "bad" : ""}"><td>${esc(r.intent.replace(/_GENERAL$/, ""))}</td><td>${who}${r.routed === false ? " (asked directly)" : ""}</td><td>${status}</td><td>${proof}</td></tr>`;
+  }).join("");
+  const st = d.station
+    ? `<p class="station">Station ${esc(d.station.icao)}, ${esc(d.station.site)}, ${esc(d.station.km)} km away, at ${esc(d.station.at?.slice(11, 16))} UTC<span class="raw">${esc(d.station.raw)}</span></p>`
+    : d.type === "drone" ? `<p class="station">No airport station within range, so this decision is unconfirmed by instruments.</p>` : "";
+  return `<article class="unit">
+    <div class="side">
+      <div class="verdict ${d.decision}">${d.decision}</div>
+      <div class="cost">${usd(d.costPerOpHourUsd)}/h</div>
+      <small>intelligence per operating hour</small>
+    </div>
+    <div>
+      <h2>${esc(d.unit)}</h2>
+      <p class="where">${esc(d.task)} in ${esc(d.location)}</p>
+      <ul class="why">${reasons}</ul>
+      <div class="budget" role="img" aria-label="Spent ${usd(d.spentUsd)} of a ${usd(cap)} budget, ${usd(d.wastedUsd ?? 0)} on unusable answers">
+        <div class="line"><span class="spent" style="width:${spentPct}%"></span><span class="waste" style="width:${wastePct}%"></span></div>
+        <p>Spent <b>${usd(d.spentUsd)}</b> of ${usd(cap)}${d.wastedUsd ? `, <b>${usd(d.wastedUsd)}</b> of it on answers it could not use` : ""}</p>
+      </div>
+      <table class="buys"><thead><tr><th>Bought</th><th>Answered by</th><th>Outcome</th><th>Proof</th></tr></thead><tbody>${rows}</tbody></table>
+      ${st}
+    </div>
+  </article>`;
+}
+
+(async () => {
+  const unitsEl = document.getElementById("units");
+  let decisions, ledger, fleet;
+  try {
+    [decisions, ledger, fleet] = await Promise.all([jsonl("receipts/decisions.jsonl"), jsonl("receipts/ledger.jsonl"), fetch("fleet.json").then((r) => r.json())]);
+  } catch (e) {
+    unitsEl.innerHTML = `<p class="empty">Could not load the receipts (${esc(e.message)}). Open this page from the repository's GitHub Pages site, or serve the folder locally with any static server.</p>`;
+    return;
+  }
+  const budgets = Object.fromEntries(fleet.units.map((u) => [u.id, u.budgetUsd]));
+  const runs = [...new Set(decisions.map((d) => d.run))].sort().reverse();
+  const sel = document.getElementById("run");
+  sel.innerHTML = runs.map((r) => `<option value="${r}">${new Date(r).toUTCString().replace(" GMT", " UTC")}</option>`).join("");
+
+  function show(run) {
+    const ds = decisions.filter((d) => d.run === run);
+    const spent = ds.reduce((s, d) => s + d.spentUsd, 0);
+    const waste = ds.reduce((s, d) => s + (d.wastedUsd ?? 0), 0);
+    const count = (k) => ds.filter((d) => d.decision === k).length;
+    document.getElementById("tally").innerHTML =
+      `<span><b>${count("GO")}</b> go</span><span><b>${count("HOLD")}</b> hold</span><span><b>${count("ABORT")}</b> abort</span>` +
+      `<span><b>${usd(spent)}</b> spent</span><span><b>${usd(waste)}</b> on unusable answers</span>`;
+    unitsEl.innerHTML = ds.map((d) => unitRow(d, budgets[d.unit])).join("") || `<p class="empty">No decisions in this run.</p>`;
+  }
+  sel.addEventListener("change", () => show(sel.value));
+  show(runs[0]);
+
+  const paid = ledger.filter((e) => e.status === "paid").length;
+  document.getElementById("ledger-sum").textContent = `Show the purchase ledger (${ledger.length} entries, ${paid} paid)`;
+  document.getElementById("ledger").innerHTML =
+    `<thead><tr><th>Time (UTC)</th><th>Unit</th><th>Intent</th><th>Asked</th><th>Miner</th><th>Status</th><th>Proof</th></tr></thead><tbody>` +
+    ledger.slice().reverse().map((e) => `<tr><td>${esc(e.at.slice(5, 16).replace("T", " "))}</td><td>${esc(e.unit ?? "first ask")}</td><td>${esc(e.intent.replace(/_GENERAL$/, ""))}</td><td>${esc(Object.values(e.params).join(", "))}</td><td>${e.miner ? `${esc(e.miner.name)} #${esc(e.miner.id)}` : "—"}</td><td>${esc(e.status)}${e.resultShape === "raw" ? " (raw)" : ""}</td><td>${e.settlementTx ? `<a href="${TX(e.settlementTx)}">tx</a> · <a href="${SIG(e.signalHash)}">signal</a>` : esc(e.error ?? "")}</td></tr>`).join("") + `</tbody>`;
+})();
+</script>
+</body>
+</html>

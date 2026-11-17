@@ -40,7 +40,7 @@ npm install
 cp .env.example .env              # put a TESTNET key in AGENT_PRIVATE_KEY
 npm run status                    # balances, sends nothing
 npm run fund                      # mint test USDC, swap a little to MACHINA, fund escrow (testnet only)
-npm test                          # 27 offline checks: payment signer + fleet rules
+npm test                          # 34 offline checks: payment signer + fleet rules
 npm run fleet                     # one fleet tick, about $0.05–0.09 of test USDC
 npm run first-ask -- Makassar 2026-11-15   # one paid recorded-weather ask vs METAR
 ```
