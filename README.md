@@ -42,7 +42,7 @@ npm install
 cp .env.example .env              # put a TESTNET key in AGENT_PRIVATE_KEY
 npm run status                    # balances, sends nothing
 npm run fund                      # mint test USDC, swap a little to MACHINA, fund escrow (testnet only)
-npm test                          # 36 offline checks: payment signer + fleet rules
+npm test                          # 58 offline checks: payment signer + fleet rules
 npm run fleet                     # one fleet tick, about $0.05–0.09 of test USDC
 npm run first-ask -- Makassar 2026-11-15   # one paid recorded-weather ask vs METAR
 ```
@@ -66,6 +66,40 @@ Spending limits are enforced in code, not trusted to the server:
 - **One storm answer was charged but empty.** The next-ranked miner answered Palangka Raya with every field null.
 - **Station data disagreed with a recorded-weather answer.** For Makassar on 15 Nov, a miner reported a 31.9 °C high. The Hasanuddin airport station (METAR WAAA, 49 reports) recorded 34 °C.
 - **Two independent sources agreed and the drone flew.** For the Makassar drone, the miner's storm answer forecast a 22.3 km/h gust and the WAAA station measured 17 km/h.
+
+## Takar Outcome: a miner that refuses to guess
+
+Takar Outcome is a Telegraph miner for `EVENT_OUTCOME_RESOLUTION_GENERAL` (registration 5295, slug `takar-outcome`). It answers "did X happen / who won X" from Wikipedia text.
+
+A model proposes the answer, and code decides whether that answer stands:
+- The evidence must be a sentence copied word for word from a single cited page.
+- That quote, together with the page's title, must name the asked event.
+- For "who won" questions, the winner must appear inside the quote.
+- An event whose period has not ended yet is "unresolved" before any model is called.
+
+```bash
+curl -s -X POST https://takar-outcome.vercel.app/api/resolve -H 'Content-Type: application/json' \
+  -d '{"event":"Did Real Madrid win the 2024-25 UEFA Champions League?"}'
+# {"outcome":"no","resolved_yes":false,"winner":"Paris Saint-Germain","evidence":"Luis Enrique's Paris Saint-Germain defeated ...","sources":[...]}
+```
+
+On eight questions the network itself asked on 16 Nov, it returned:
+- seven verified answers, all correct: Verstappen won the 2025 Japanese GP, the Seahawks won Super Bowl LX, Mamdani won the NYC mayoral election, Real Madrid did not win the 2024-25 Champions League, Sinner won Wimbledon 2025, Bayern won the 2024-25 Bundesliga, and Trump won the 2024 election;
+- one honest "unresolved", for the September 2025 Fed decision.
+
+The other miners on the same questions behaved like this:
+- one miner answered every question with Formula 1 race data;
+- several returned null.
+
+It runs on free OpenRouter models, falling back to the next model in the list when one is unavailable.
+
+| File | Contents |
+|---|---|
+| `lib/outcome.mjs` | The rules |
+| `lib/outcome.test.mjs` | Tests for the rules |
+| `api/resolve.js` | The endpoint |
+| `miner/takar-outcome.yaml` | The registration file |
+| `scripts/register-miner.mjs` | Registration on the V2 Diamond |
 
 ## Limitations
 

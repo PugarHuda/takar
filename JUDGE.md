@@ -7,7 +7,7 @@ Takar is entered in Season II, Apps & Agents, Mission 11 (Autonomous Systems). I
 1. Open `receipts/ledger.jsonl`. Pick any line with `"status":"paid"` and open its `settlementTx` on https://sepolia.etherscan.io. You should see a 0.01 USDC transfer to the Telegraph Diamond `0x3624EB01…`.
 2. Fetch `https://devnode.telegraphprotocol.com/engine/v1/signal/<signalHash>` for the same line. The stored `request` shows exactly what was asked, and the stored response shows what the miner returned.
 3. Open `receipts/decisions.jsonl`. Each decision lists the purchases it used (`receipts`), any answer it rejected (`unusableMiners`), the station reading (`station`) and the reasons.
-4. Run `npm install && npm test`. This runs 36 offline checks of the payment signer and the decision rules, with no network and no funds.
+4. Run `npm install && npm test`. This runs 58 offline checks of the payment signer and the decision rules, with no network and no funds.
 
 ## Reproduce a live run (needs a testnet key)
 
