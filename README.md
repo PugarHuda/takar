@@ -4,6 +4,8 @@
 
 *Takar* is Indonesian for "to measure out": how much intelligence a machine buys, and how far that intelligence can be trusted.
 
+**Fleet board (no wallet needed):** https://pugarhuda.github.io/takar/
+
 Built for the Telegraph Hackathon Season II, Apps & Agents, **Mission 11: Autonomous Systems**.
 
 > **Network:** Ethereum Sepolia testnet with test USDC. The fleet in `fleet.json` is **simulated**: the units, tasks and limits are illustrative. Every Telegraph purchase, settlement and airport-station reading in this repository is real.
