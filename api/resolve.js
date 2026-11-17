@@ -33,18 +33,20 @@ export default async function handler(req, res) {
   const ip = String(req.headers["x-forwarded-for"] ?? "").split(",")[0].trim() || "unknown";
   if (limited(ip)) return res.status(429).json({ error: `rate limit: ${PER_MIN} requests per minute` });
 
-  const event = String((req.method === "POST" ? req.body?.event : req.query?.event) ?? "").trim();
+  // Normalise once and use the same string for the cache key and for resolving,
+  // so a cached answer is always the answer to exactly this text.
+  const event = String((req.method === "POST" ? req.body?.event : req.query?.event) ?? "").replace(/\s+/g, " ").trim();
   if (!event) return res.status(400).json({ error: "event is required", example: { event: "Did Max Verstappen win the 2025 Japanese Grand Prix?" } });
 
-  const key = event.toLowerCase().replace(/\s+/g, " ");
-  const cached = cache.get(key);
-  if (cached && Date.now() - cached.at < CACHE_MS) return res.status(200).json({ ...cached.answer, cached: true });
+  const cached = cache.get(event);
+  if (cached && Date.now() - cached.at < cached.ttl) return res.status(200).json({ ...cached.answer, cached: true });
 
   try {
     const answer = await resolve(event, { llm: openrouter() });
     answer.resolver = "takar-outcome/0.1";
     answer.checked_at = new Date().toISOString();
-    cache.set(key, { at: Date.now(), answer });
+    // An unresolved answer may resolve later (or was a model hiccup): keep it briefly.
+    cache.set(event, { at: Date.now(), ttl: answer.outcome === "unresolved" ? 15 * 60_000 : CACHE_MS, answer });
     return res.status(200).json(answer);
   } catch (err) {
     const status = err.status === 400 ? 400 : 503;
