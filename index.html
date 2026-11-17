@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Takar fleet board</title>
 <meta name="description" content="What each machine in a simulated fleet bought through Telegraph before it moved, what it cost, and what the receipts showed. Ethereum Sepolia testnet.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%231E2A33'/%3E%3Crect x='2' y='10' width='12' height='2' fill='%23EEF2F0'/%3E%3Crect x='2' y='10' width='7' height='2' fill='%23B0287A'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
@@ -143,11 +144,21 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
 </footer>
 
 <script>
-const TX = (h) => `https://sepolia.etherscan.io/tx/${h}`;
-const SIG = (h) => `https://devnode.telegraphprotocol.com/engine/v1/signal/${h}`;
-const short = (h) => (h ? `${h.slice(0, 10)}…${h.slice(-4)}` : "");
-const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+// Ledger values reach href attributes, so only a well-formed 32-byte hash may become a link.
+const HASH = /^0x[0-9a-fA-F]{64}$/;
+const short = (h) => esc(`${h.slice(0, 10)}…${h.slice(-4)}`);
+const proofLinks = (tx, sig) => {
+  const parts = [];
+  if (HASH.test(tx ?? "")) parts.push(`<a href="https://sepolia.etherscan.io/tx/${tx}">tx ${short(tx)}</a>`);
+  if (HASH.test(sig ?? "")) parts.push(`<a href="https://devnode.telegraphprotocol.com/engine/v1/signal/${sig}">signal</a>`);
+  return parts.join(" · ") || "no receipt";
+};
 const usd = (n) => `$${(+n).toFixed(2)}`;
+// Per-hour costs are fractions of a cent; dollars would round them to $0.00.
+const cents = (n) => `${(+n * 100).toFixed(2).replace(/\.?0+$/, "")}¢`;
+// Runs recorded before wastedUsd existed still list their unusable answers.
+const wasted = (d) => d.wastedUsd ?? (d.unusableMiners?.length ?? 0) * 0.01;
 
 async function jsonl(path) {
   const res = await fetch(path, { cache: "no-store" });
@@ -156,9 +167,11 @@ async function jsonl(path) {
 }
 
 function unitRow(d, budget) {
+  // Anything other than the three known verdicts renders as HOLD, never raw.
+  const dec = ["GO", "HOLD", "ABORT"].includes(d.decision) ? d.decision : "HOLD";
   const cap = budget ?? Math.max(d.spentUsd, 0.01);
   const spentPct = Math.min(100, (d.spentUsd / cap) * 100);
-  const wastePct = Math.min(spentPct, ((d.wastedUsd ?? 0) / cap) * 100);
+  const wastePct = Math.min(spentPct, (wasted(d) / cap) * 100);
   const reasons = d.reasons.map((r) => `<li>${esc(r)}</li>`).join("") +
     (d.contradictions ?? []).map((c) => `<li class="contra">Contradiction: ${esc(c)}</li>`).join("");
   const bad = new Set((d.unusableMiners ?? []).map((u) => u.signal));
@@ -166,7 +179,7 @@ function unitRow(d, budget) {
     const isBad = r.signal && bad.has(r.signal);
     const who = r.miner ? `${esc(r.miner.name)} <span class="raw">#${esc(r.miner.id)}</span>` : "no miner";
     const proof = r.error ? `<span class="tag-bad">refused before payment</span>`
-      : `<a href="${TX(r.tx)}">tx ${short(r.tx)}</a> · <a href="${SIG(r.signal)}">signal</a>`;
+      : proofLinks(r.tx, r.signal);
     const status = r.error ? "not charged" : isBad ? `<span class="tag-bad">unusable</span>` : "used";
     return `<tr class="${isBad ? "bad" : ""}"><td>${esc(r.intent.replace(/_GENERAL$/, ""))}</td><td>${who}${r.routed === false ? " (asked directly)" : ""}</td><td>${status}</td><td>${proof}</td></tr>`;
   }).join("");
@@ -175,17 +188,17 @@ function unitRow(d, budget) {
     : d.type === "drone" ? `<p class="station">No airport station within range, so this decision is unconfirmed by instruments.</p>` : "";
   return `<article class="unit">
     <div class="side">
-      <div class="verdict ${d.decision}">${d.decision}</div>
-      <div class="cost">${usd(d.costPerOpHourUsd)}/h</div>
-      <small>intelligence per operating hour</small>
+      <div class="verdict ${dec}">${dec}</div>
+      <div class="cost">${cents(d.costPerOpHourUsd)}</div>
+      <small>of intelligence per operating hour</small>
     </div>
     <div>
       <h2>${esc(d.unit)}</h2>
       <p class="where">${esc(d.task)} in ${esc(d.location)}</p>
       <ul class="why">${reasons}</ul>
-      <div class="budget" role="img" aria-label="Spent ${usd(d.spentUsd)} of a ${usd(cap)} budget, ${usd(d.wastedUsd ?? 0)} on unusable answers">
+      <div class="budget" role="img" aria-label="Spent ${usd(d.spentUsd)} of a ${usd(cap)} budget, ${usd(wasted(d))} on unusable answers">
         <div class="line"><span class="spent" style="width:${spentPct}%"></span><span class="waste" style="width:${wastePct}%"></span></div>
-        <p>Spent <b>${usd(d.spentUsd)}</b> of ${usd(cap)}${d.wastedUsd ? `, <b>${usd(d.wastedUsd)}</b> of it on answers it could not use` : ""}</p>
+        <p>Spent <b>${usd(d.spentUsd)}</b> of ${usd(cap)}${wasted(d) ? `, <b>${usd(wasted(d))}</b> of it on answers it could not use` : ""}</p>
       </div>
       <table class="buys"><thead><tr><th>Bought</th><th>Answered by</th><th>Outcome</th><th>Proof</th></tr></thead><tbody>${rows}</tbody></table>
       ${st}
@@ -205,12 +218,12 @@ function unitRow(d, budget) {
   const budgets = Object.fromEntries(fleet.units.map((u) => [u.id, u.budgetUsd]));
   const runs = [...new Set(decisions.map((d) => d.run))].sort().reverse();
   const sel = document.getElementById("run");
-  sel.innerHTML = runs.map((r) => `<option value="${r}">${new Date(r).toUTCString().replace(" GMT", " UTC")}</option>`).join("");
+  sel.innerHTML = runs.map((r) => `<option value="${esc(r)}">${esc(new Date(r).toUTCString().replace(" GMT", " UTC"))}</option>`).join("");
 
   function show(run) {
     const ds = decisions.filter((d) => d.run === run);
     const spent = ds.reduce((s, d) => s + d.spentUsd, 0);
-    const waste = ds.reduce((s, d) => s + (d.wastedUsd ?? 0), 0);
+    const waste = ds.reduce((s, d) => s + wasted(d), 0);
     const count = (k) => ds.filter((d) => d.decision === k).length;
     document.getElementById("tally").innerHTML =
       `<span><b>${count("GO")}</b> go</span><span><b>${count("HOLD")}</b> hold</span><span><b>${count("ABORT")}</b> abort</span>` +
@@ -224,7 +237,7 @@ function unitRow(d, budget) {
   document.getElementById("ledger-sum").textContent = `Show the purchase ledger (${ledger.length} entries, ${paid} paid)`;
   document.getElementById("ledger").innerHTML =
     `<thead><tr><th>Time (UTC)</th><th>Unit</th><th>Intent</th><th>Asked</th><th>Miner</th><th>Status</th><th>Proof</th></tr></thead><tbody>` +
-    ledger.slice().reverse().map((e) => `<tr><td>${esc(e.at.slice(5, 16).replace("T", " "))}</td><td>${esc(e.unit ?? "first ask")}</td><td>${esc(e.intent.replace(/_GENERAL$/, ""))}</td><td>${esc(Object.values(e.params).join(", "))}</td><td>${e.miner ? `${esc(e.miner.name)} #${esc(e.miner.id)}` : "—"}</td><td>${esc(e.status)}${e.resultShape === "raw" ? " (raw)" : ""}</td><td>${e.settlementTx ? `<a href="${TX(e.settlementTx)}">tx</a> · <a href="${SIG(e.signalHash)}">signal</a>` : esc(e.error ?? "")}</td></tr>`).join("") + `</tbody>`;
+    ledger.slice().reverse().map((e) => `<tr><td>${esc(e.at.slice(5, 16).replace("T", " "))}</td><td>${esc(e.unit ?? "first ask")}</td><td>${esc(e.intent.replace(/_GENERAL$/, ""))}</td><td>${esc(Object.values(e.params).join(", "))}</td><td>${e.miner ? `${esc(e.miner.name)} #${esc(e.miner.id)}` : "—"}</td><td>${esc(e.status)}${e.resultShape === "raw" ? " (raw)" : ""}</td><td>${e.settlementTx ? proofLinks(e.settlementTx, e.signalHash) : esc(e.error ?? "")}</td></tr>`).join("") + `</tbody>`;
 })();
 </script>
 </body>
