@@ -1,7 +1,7 @@
 {
   "title": "Takar forecast scorecard",
   "method": "Crowd probability on Manifold 7 days before resolution; outcome bought through Telegraph EVENT_OUTCOME_RESOLUTION_GENERAL and compared with the market's resolution; Brier score over confirmed outcomes only.",
-  "generated_at": "2026-11-17T06:51:28.880Z",
+  "generated_at": "2026-11-19T00:59:01.154Z",
   "network": "Ethereum Sepolia testnet (test USDC)",
   "summary": {
     "forecasts": 13,
@@ -33,18 +33,14 @@
         "telegraph": null,
         "attempts": [
           {
-            "miner": {
-              "id": "openai",
-              "name": "openai"
-            },
-            "outcome": "unreadable",
-            "signal": "0x45b6c2b35667b1842af69142c8f5364c85200d0bb8392f7f1d2350dfcf447670",
-            "tx": "0xa7fc7663e5e8133ae4464e9f903fff52d2d7743bf04f79684f527ea2108dd32e"
+            "miner": null,
+            "outcome": "error",
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           },
           {
             "miner": null,
             "outcome": "error",
-            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: status 502: {\"ok\": false, \"error\": \"HTTP Error 404: Not Found\"}"
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 503: no_compatible_miner"
           }
         ]
       },
@@ -71,18 +67,14 @@
         "telegraph": null,
         "attempts": [
           {
-            "miner": {
-              "id": "openai",
-              "name": "openai"
-            },
-            "outcome": "unreadable",
-            "signal": "0xdf6165f104ff4cc6d28d94752d9659f5a4e6f3d77f2349b5d0d90b8848af7d46",
-            "tx": "0xc0c035a382ab043f95621d89b53e0bab7d9c57b7b3f622a8f02644ae022eab34"
+            "miner": null,
+            "outcome": "error",
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           },
           {
             "miner": null,
             "outcome": "error",
-            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: status 502: {\"ok\": false, \"error\": \"HTTP Error 404: Not Found\"}"
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           }
         ]
       },
@@ -109,18 +101,14 @@
         "telegraph": null,
         "attempts": [
           {
-            "miner": {
-              "id": "openai",
-              "name": "openai"
-            },
-            "outcome": "unreadable",
-            "signal": "0x6821ea17235d51b3d70c79ba6870fb6b2109d380ba941e739f74d8e2477b983e",
-            "tx": "0x162005d3d1bf980fac9b4b10df3a1be2ca49bf6c80cee3748db365daa9cefd24"
+            "miner": null,
+            "outcome": "error",
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           },
           {
             "miner": null,
             "outcome": "error",
-            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 503: no_compatible_miner"
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           }
         ]
       },
@@ -147,18 +135,14 @@
         "telegraph": null,
         "attempts": [
           {
-            "miner": {
-              "id": "openai",
-              "name": "openai"
-            },
-            "outcome": "unreadable",
-            "signal": "0x499f6b3f8d98a1a64a24314617db62f5bd1d897e2c9cd1280754f9dedd08771b",
-            "tx": "0x276fff9be2c3da70ebaf569db904d44b82ad437218d39618c41c312c53a5e794"
+            "miner": null,
+            "outcome": "error",
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           },
           {
             "miner": null,
             "outcome": "error",
-            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: status 502: {\"ok\": false, \"error\": \"HTTP Error 404: Not Found\"}"
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           }
         ]
       },
@@ -185,18 +169,14 @@
         "telegraph": null,
         "attempts": [
           {
-            "miner": {
-              "id": "openai",
-              "name": "openai"
-            },
-            "outcome": "unreadable",
-            "signal": "0x8a66aa8b5656569432ccfb273d1d5e7317946c67b8b31f4e9675ff402045f048",
-            "tx": "0x8b72201ff3b6db108d78a43c308433eb6b9d908808c05972b7a689cce814376b"
+            "miner": null,
+            "outcome": "error",
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           },
           {
             "miner": null,
             "outcome": "error",
-            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: status 502: {\"ok\": false, \"error\": \"HTTP Error 404: Not Found\"}"
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 503: no_compatible_miner"
           }
         ]
       },
@@ -223,18 +203,14 @@
         "telegraph": null,
         "attempts": [
           {
-            "miner": {
-              "id": "openai",
-              "name": "openai"
-            },
-            "outcome": "unreadable",
-            "signal": "0xfb29381f81cdf4d36ef7c44777457550812d08177556304a73bf53e49156b65f",
-            "tx": "0x98c0872c1ec77314ba7295c720d2c20f5a87536ad23d6d14d8d65c118c0c2fc4"
+            "miner": null,
+            "outcome": "error",
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           },
           {
             "miner": null,
             "outcome": "error",
-            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: circuit opened due to repeated failures"
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           }
         ]
       },
@@ -261,18 +237,14 @@
         "telegraph": null,
         "attempts": [
           {
-            "miner": {
-              "id": "openai",
-              "name": "openai"
-            },
-            "outcome": "unreadable",
-            "signal": "0x67ca940ab38237ea4c87e63ce75480d1d510af28a47ff3c3a43adce9a4d45b25",
-            "tx": "0xe21414ad30d561d928b25a7273398c3ff670c77775af90c64e9cf7c6485ade45"
+            "miner": null,
+            "outcome": "error",
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           },
           {
             "miner": null,
             "outcome": "error",
-            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: status 502: {\"ok\": false, \"error\": \"HTTP Error 404: Not Found\"}"
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           }
         ]
       },
@@ -299,13 +271,9 @@
         "telegraph": null,
         "attempts": [
           {
-            "miner": {
-              "id": "openai",
-              "name": "openai"
-            },
-            "outcome": "unreadable",
-            "signal": "0x4e4b30600e16f5705645a03f1d8cd1169c37c77d1dfd5b132c6de08d912b54d7",
-            "tx": "0x43d9e5e6a2bbaa9e8d2b376b34294b98efa6f5a3debcb0d86b11f2fb00c7ad8c"
+            "miner": null,
+            "outcome": "error",
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           },
           {
             "miner": null,
@@ -337,18 +305,14 @@
         "telegraph": null,
         "attempts": [
           {
-            "miner": {
-              "id": "openai",
-              "name": "openai"
-            },
-            "outcome": "unreadable",
-            "signal": "0x7a654d56d4f118265f3aa2df016c14c2769bc444ae7006bd8fe715dbdf173c47",
-            "tx": "0x1150d8effc16d250093e59c1a0b05c2186756e61fc8fe8c48c8a7137bc2a2f5f"
+            "miner": null,
+            "outcome": "error",
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           },
           {
             "miner": null,
             "outcome": "error",
-            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: status 502: {\"ok\": false, \"error\": \"HTTP Error 404: Not Found\"}"
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           }
         ]
       },
@@ -375,18 +339,14 @@
         "telegraph": null,
         "attempts": [
           {
-            "miner": {
-              "id": "openai",
-              "name": "openai"
-            },
-            "outcome": "unreadable",
-            "signal": "0x820867d8bbf67da52297e8e8b5aa8a5a3b6ba75233ff2ea37e54b7c6302e614c",
-            "tx": "0x25d22e8f117b4c3df0409cdbc1612d601bc6bad3d82aa12635760c68e16a07cf"
+            "miner": null,
+            "outcome": "error",
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           },
           {
             "miner": null,
             "outcome": "error",
-            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 503: no_compatible_miner"
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           }
         ]
       },
@@ -413,18 +373,14 @@
         "telegraph": null,
         "attempts": [
           {
-            "miner": {
-              "id": "openai",
-              "name": "openai"
-            },
-            "outcome": "unreadable",
-            "signal": "0x2c8d64477daeafa4831cb14fc4b9c41fd104f3f65569cebe881b2f38d2a1d090",
-            "tx": "0x578ce77b8c79cbb2002822eefde7c52eda319e32d9e38239cc6f1419b4fc2535"
+            "miner": null,
+            "outcome": "error",
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           },
           {
             "miner": null,
             "outcome": "error",
-            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: status 502: {\"ok\": false, \"error\": \"HTTP Error 404: Not Found\"}"
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           }
         ]
       },
@@ -451,18 +407,14 @@
         "telegraph": null,
         "attempts": [
           {
-            "miner": {
-              "id": "openai",
-              "name": "openai"
-            },
-            "outcome": "unreadable",
-            "signal": "0x1ea1a05a4c4dab1a044f5716455fabe96dc6eedb44007c2a1676d1b337c9537a",
-            "tx": "0x27c154c31dc6bb5933ff9377816444c086ea7a6e194950aee653e56268dae6d4"
+            "miner": null,
+            "outcome": "error",
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           },
           {
             "miner": null,
             "outcome": "error",
-            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: status 502: {\"ok\": false, \"error\": \"HTTP Error 404: Not Found\"}"
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 503: no_compatible_miner"
           }
         ]
       },
@@ -489,18 +441,14 @@
         "telegraph": null,
         "attempts": [
           {
-            "miner": {
-              "id": "openai",
-              "name": "openai"
-            },
-            "outcome": "unreadable",
-            "signal": "0x4bd879de07fda4db743f8a942b758f9998573368598b869901825767ecee5105",
-            "tx": "0xcee13fc358ff9b9083f3500151f30114fb7132ad5cd9ca53e4ff40680371fe12"
+            "miner": null,
+            "outcome": "error",
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           },
           {
             "miner": null,
             "outcome": "error",
-            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream call failed: circuit opened due to repeated failures"
+            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
           }
         ]
       },
@@ -509,8 +457,8 @@
   ],
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "ed28306a87f13d21415871117625aa7284f39e34ff22425b419ef0133c0b4b6d",
-    "signature": "CkTa+vn5WHHYrE0U6fi0XoZ0RqFiQILDtPrhmLATaHMvJHmQyA+FcDm4dHg3zB/djKI0W8njZwhXvxISx8wRAw==",
+    "sha256": "56d907fde15762cd5b509c08a6727cd837ba02fb543a7a133904d1e6480e8f88",
+    "signature": "NIJ3I/qR0BLuoQaNQiNRKIJUFdMvfm+qDSfZlUK01sM5mNjGKvA0ZlvYLz34zM7t9nyADVWEpfIsn6lwm951BQ==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }
