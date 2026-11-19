@@ -18,12 +18,12 @@ const POOL_FEE = 3000;
 // Bonds are USD amounts taken in MACHINA at the pool price, so the MACHINA target
 // is read from the Diamond, not hardcoded (the docs' "2 USDC ≈ 2 MACHINA" was
 // off by 12x on 17 Nov). Covers miner bond + contributor bond, with 50% slack
-// for price moves. ponytail: add entityBonds()[2] when an adapter is registered.
+// for price moves, plus the $5 evaluator-adapter bond (EVENT_OUTCOME_RESOLUTION).
 const TARGET = {
   escrow: ethers.parseUnits("5", 6), // 500 asks at $0.01
   walletUsdc: ethers.parseUnits("10", 6), // left for x402 "exact" payments
 };
-const SWAP_USDC = ethers.parseUnits("4", 6);
+const SWAP_USDC = ethers.parseUnits("8", 6);
 const MAX_MINT = ethers.parseUnits("50", 6); // refuse anything larger: a units bug, not a plan
 
 const ERC20 = [
@@ -85,8 +85,8 @@ if (ethers.getAddress(dUsdc) !== USDC || ethers.getAddress(dMachina) !== MACHINA
 
 // entityBonds: [adapterUsd, contributorUsd, adapterMachina, contributorMachina]; $1 miner bond == $1 contributor bond
 const bonds = await diamond.entityBonds();
-TARGET.machina = (bonds[3] * 2n * 3n) / 2n;
-console.log(`bond target ${fmt(TARGET.machina, 18)} MACHINA (miner + contributor, +50%)`);
+TARGET.machina = ((bonds[3] * 2n + bonds[2]) * 3n) / 2n;
+console.log(`bond target ${fmt(TARGET.machina, 18)} MACHINA (miner + contributor + adapter, +50%)`);
 
 let s = await status();
 if (process.argv.includes("--status")) process.exit(0);
