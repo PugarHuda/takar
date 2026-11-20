@@ -12,7 +12,8 @@
       "limits": {
         "maxGustKmh": 35
       },
-      "budgetUsd": 0.03
+      "budgetUsd": 0.03,
+      "country": "Indonesia"
     },
     {
       "id": "drone-makassar-2",
@@ -25,7 +26,8 @@
       "limits": {
         "maxGustKmh": 30
       },
-      "budgetUsd": 0.03
+      "budgetUsd": 0.03,
+      "country": "Indonesia"
     },
     {
       "id": "sprayer-bandung-1",
@@ -39,7 +41,8 @@
         "maxRainPct": 40,
         "maxRecentRainMm": 15
       },
-      "budgetUsd": 0.04
+      "budgetUsd": 0.04,
+      "country": "Indonesia"
     },
     {
       "id": "rover-jakarta-1",
@@ -54,7 +57,8 @@
         "maxGustKmh": 50,
         "maxHours": 4.5
       },
-      "budgetUsd": 0.04
+      "budgetUsd": 0.04,
+      "country": "Indonesia"
     }
   ]
 }
