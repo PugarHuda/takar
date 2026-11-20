@@ -13,7 +13,7 @@ Site: https://takar-telegraph.vercel.app. MCP: `npx -y takar-mcp`.
 
 ## Check it in five minutes, with no wallet
 
-1. `npm install && npm test` runs 90 offline checks of the payment signers (exact and escrow), the fleet rules, the outcome resolver and the scorecard rules. No network, no funds.
+1. `npm install && npm test` runs 99 offline checks of the payment signers (exact and escrow), the fleet rules, the outcome resolver and the scorecard rules. No network, no funds.
 2. Open `receipts/ledger.jsonl` and pick a line with `"status":"paid"`.
    - With a `settlementTx` (exact payment before 20 Nov): open it on https://sepolia.etherscan.io and see the 0.01 USDC transfer.
    - With `"rail":"escrow"` (from 20 Nov): the ask is billed to the escrow balance at the next ledger root, and there is no per-ask transaction. See `https://devnode.telegraphprotocol.com/v1/ledger/account/0x39d2bae5eaeda9283535ddc98f1991c81ed5cd7e`.
@@ -38,7 +38,7 @@ For each resolved prediction market, Takar reads the crowd's probability N days 
 |---|---|
 | Run | `npm run fund && npm run scorecard` (at most two $0.01 asks per market, paid from escrow). Writes the signed `receipts/scorecard.json`. |
 | New input | `npm run scorecard -- --days 30 --per-topic 3` scores the crowd 30 days out over more markets. Topics are the `TOPICS` list in `scripts/scorecard-run.mjs`. |
-| Check | `receipts/scorecard.json`: per market, the crowd price and its bet id, the resolution, what Telegraph said and the Brier score. Latest run: 13 of 13 confirmed, Brier 0.015, with 0.25 as the coin-flip baseline. |
+| Check | `receipts/scorecard.json`: per market, the crowd price and its bet id, the resolution, what Telegraph said and the Brier score. Latest run: 13 of 13 confirmed, Brier 0.015, with 0.25 as the coin-flip baseline. Second check: FACT_CHECK agreed on 5, disagreed on 2 and could not settle 6. This is reported beside the score and never changes it. |
 | Inspect | each row's `verification.attempts[].signal`, then the signal URL above. |
 | Break | An outcome that Telegraph contradicts is reported and left out of the score. One it cannot settle is listed as `unverified`, never dropped. `lib/scorecard.test.mjs` covers both. Live: run with an empty escrow and every ask is refused and nothing is charged, so every row comes out `unverified` with a `null` Brier score. |
 
@@ -67,4 +67,4 @@ On real answers from the network, every off-topic payload ranks below an on-topi
 
 ## What is not claimed
 
-Real machines, production traffic or paying customers. The fleet is simulated. Every purchase is testnet. The scorecard is 13 markets, and every outcome was confirmed by a single miner.
+Real machines, production traffic or paying customers. The fleet is simulated. Every purchase is testnet. The scorecard is 13 markets, and every EVENT_OUTCOME confirmation came from a single miner (the FACT_CHECK second opinion came from another).
