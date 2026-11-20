@@ -1,7 +1,7 @@
 {
   "title": "Takar forecast scorecard",
-  "method": "Crowd probability on Manifold 7 days before resolution; outcome bought through Telegraph EVENT_OUTCOME_RESOLUTION_GENERAL and compared with the market's resolution; Brier score over confirmed outcomes only.",
-  "generated_at": "2026-11-20T05:24:47.566Z",
+  "method": "Crowd probability on Manifold 7 days before resolution; outcome bought through Telegraph EVENT_OUTCOME_RESOLUTION_GENERAL and compared with the market's resolution; Brier score over confirmed outcomes only. Each confirmed outcome is also put to FACT_CHECK_GENERAL as a second, independent check, reported and not scored.",
+  "generated_at": "2026-11-20T06:03:49.021Z",
   "network": "Ethereum Sepolia testnet (test USDC)",
   "summary": {
     "forecasts": 13,
@@ -9,6 +9,8 @@
     "contradicted": 0,
     "unverified": 0,
     "brier": 0.015,
+    "corroborated": 5,
+    "fact_check_disagreed": 2,
     "baseline": 0.25
   },
   "rows": [
@@ -38,10 +40,19 @@
               "name": "PREFLIGHT Infrastructure Signals"
             },
             "outcome": "no",
-            "signal": "0x446df2bd7269e4082d15c7b04ed7f5e517f77875e6e43eeea2f04cda3afd150f",
+            "signal": "0x726c3d4b54cbca50135cc76db1e06086e33cab5af7f494ce1f439bb32a0b6be9",
             "tx": null
           }
         ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Jerome Powell cease to hold the office of Chair of the Federal Reserve before 2026?\" is no.",
+        "verdict": "agrees",
+        "miner": {
+          "id": "9002",
+          "name": "TxLens"
+        },
+        "signal": "0xccdc12deee4c5c2e1c9f93c3fbf803b752050a775e7ea35d91b238b8fbee3d11"
       },
       "brier": 0.0001
     },
@@ -71,10 +82,19 @@
               "name": "PREFLIGHT Infrastructure Signals"
             },
             "outcome": "no",
-            "signal": "0x6373632739150a75474c71361e168b4ee05ee989b6ef5c12954b085c35bbe7de",
+            "signal": "0xb383831cc47c38e286c24b4d68e239f83b90c469b8587d3428dbb5ea62b203e2",
             "tx": null
           }
         ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will there be another US Federal Reserve rate hike before the end of 2023?\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "9002",
+          "name": "TxLens"
+        },
+        "signal": "0x071367859cfcc74e0cdd180a8b5ce188d12f22c0103a28871946efa1729f8e4f"
       },
       "brier": 0.0002
     },
@@ -104,10 +124,19 @@
               "name": "PREFLIGHT Infrastructure Signals"
             },
             "outcome": "no",
-            "signal": "0x6a182d38117e38750cde1a421380012dd34d887491433228417d15c8a8da6050",
+            "signal": "0x40a18b85f7a962ec4a2b6e4e7ae15c68d31008c97d137c4cea5be2fd407542ea",
             "tx": null
           }
         ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"30. Will US CPI inflation for 2023 average above 4% in 2023?\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "9002",
+          "name": "TxLens"
+        },
+        "signal": "0x255f00face3da851dd2bdc173d823da4dd5b3ce5d6bb2385df7b628c93bd6089"
       },
       "brier": 0.0007
     },
@@ -137,10 +166,19 @@
               "name": "PREFLIGHT Infrastructure Signals"
             },
             "outcome": "yes",
-            "signal": "0x05d13016c6d7e0ae52cb068922421155de3c1928c18ebc4c737773935cffca31",
+            "signal": "0x8a4afc370438f84d19b7855c887c5d39e284852df2583d634d203ce3f1c981da",
             "tx": null
           }
         ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Bitcoin hit $100K in 2024?\" is yes.",
+        "verdict": "agrees",
+        "miner": {
+          "id": "9002",
+          "name": "TxLens"
+        },
+        "signal": "0xe5c0ab260125a6873c6f6a08b63c467c39c5a61b1019ec560726d3928763e18a"
       },
       "brier": 0.0994
     },
@@ -170,10 +208,19 @@
               "name": "PREFLIGHT Infrastructure Signals"
             },
             "outcome": "no",
-            "signal": "0xa84deba839b554939e76db2dade10cd0b902692d95540aa90acac53a7dde1534",
+            "signal": "0xa79531f2c758b7417ea21dc0bdc3d43ed2316b3f8da20e0294a062ffafa278d6",
             "tx": null
           }
         ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Bitcoin Reach $50k By Feb 1st 2024?\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "9002",
+          "name": "TxLens"
+        },
+        "signal": "0x5e746a6012955396678d8eee6c02917cf5905d5a295cd49e5e5f6d3654db2096"
       },
       "brier": 0.0003
     },
@@ -203,10 +250,19 @@
               "name": "PREFLIGHT Infrastructure Signals"
             },
             "outcome": "yes",
-            "signal": "0x57c5c221a7e50f5cb75fc5a1db11cd52847cb7bb02db703ee013f6bc1fb3f47c",
+            "signal": "0xbcd285b8ae8336e7e9afa691c3ff5d2fd24b7be48ffb3d2f0c5c4bfbb617292f",
             "tx": null
           }
         ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Nvidia outperform the S&P 500 in 2025?\" is yes.",
+        "verdict": "agrees",
+        "miner": {
+          "id": "9002",
+          "name": "TxLens"
+        },
+        "signal": "0x3a5722ed6600318441879a1f1bfdd530e60f6fc56a892d22b1a8009cbe431cd0"
       },
       "brier": 0
     },
@@ -236,10 +292,19 @@
               "name": "PREFLIGHT Infrastructure Signals"
             },
             "outcome": "no",
-            "signal": "0x27a4d10a67c7f2241e3bfb550ec30a2916497a1e0248080fa46364a94db6d29c",
+            "signal": "0xd6a56ece91eb000905ff3d4f60c6e0d556468127b21bd61224900fa59814e861",
             "tx": null
           }
         ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"32. Will the S&P 500 index reach a new all-time high in 2023?\" is no.",
+        "verdict": "agrees",
+        "miner": {
+          "id": "9002",
+          "name": "TxLens"
+        },
+        "signal": "0xaae2a9e9abe408a552ed2465948c975be9804afb59570fb95a3f95b24720704a"
       },
       "brier": 0.0854
     },
@@ -269,10 +334,19 @@
               "name": "PREFLIGHT Infrastructure Signals"
             },
             "outcome": "no",
-            "signal": "0xda0ae1920348c724a8620754caf8a36a6a9559e9e2a58353132c30dd6310b20d",
+            "signal": "0x466852e8db2070a908ce72b67de7d33ea512b09ce3748e16e9df16ed3a634820",
             "tx": null
           }
         ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Did the US enter a recession before the end of 2024?\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "9002",
+          "name": "TxLens"
+        },
+        "signal": "0x07169fc3c244b82c8ab7e2930ca7cc9e34dc25f403b918368bd7be91a53bbec1"
       },
       "brier": 0.0001
     },
@@ -302,10 +376,19 @@
               "name": "PREFLIGHT Infrastructure Signals"
             },
             "outcome": "no",
-            "signal": "0x45eec273280c6cafa5fc31e0672cf83172729b72bfd9a112f77f675efd1db54f",
+            "signal": "0x0c07412b6a7d872edc3e0834611ae81d082df39ba567e6f475c64615b5238699",
             "tx": null
           }
         ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will the US enter a recession by end of 2025? (Two quarters negative GDP growth)\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "9002",
+          "name": "TxLens"
+        },
+        "signal": "0xfdc91985bc56d6c955fa920e67d410b4c93d74851f3bca79cf85197a2bf86e9c"
       },
       "brier": 0.0001
     },
@@ -335,10 +418,19 @@
               "name": "PREFLIGHT Infrastructure Signals"
             },
             "outcome": "no",
-            "signal": "0xd27458c05d7c08b2a6cd878963929207612c2824e1be767994be75199c27ca11",
+            "signal": "0x44a4450ba6fd190e38300f5e6900208e0c7ab3b169cca9620017e93e7ce5013b",
             "tx": null
           }
         ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Nvidia be the largest company in the world by market cap at the end of 2024?\" is no.",
+        "verdict": "disagrees",
+        "miner": {
+          "id": "9002",
+          "name": "TxLens"
+        },
+        "signal": "0x78ba78ea7118e8a7d9757ade2a906dfe07b4fafe458641103598c6fb54ab28b0"
       },
       "brier": 0.0029
     },
@@ -368,10 +460,19 @@
               "name": "PREFLIGHT Infrastructure Signals"
             },
             "outcome": "no",
-            "signal": "0xa1443706e72ba4083f5f8cf30e7f70e105d86d806b1ab4a5e312c6e55f96a270",
+            "signal": "0xb1d52074b45d9774651e91f1a8ddc524547c2ad50c541a8e9a5238eef5c70d02",
             "tx": null
           }
         ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Nvidia's share price break $200 in 2024?\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "9002",
+          "name": "TxLens"
+        },
+        "signal": "0xa5905769c53fcf8f253deb2339f06a44b6b7dff3bfe1fc52367e7b3549a15ea8"
       },
       "brier": 0.0003
     },
@@ -401,10 +502,19 @@
               "name": "PREFLIGHT Infrastructure Signals"
             },
             "outcome": "no",
-            "signal": "0xda4dc1bb5d692b47c3aa94898fd8b837377efef1cafe93bf0d4db686c2271302",
+            "signal": "0x4c9981838627360ce4b563afec8754fc240064ba538af809c6f408b58dabece2",
             "tx": null
           }
         ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Elon Musk step down from being Tesla CEO before 2024?\" is no.",
+        "verdict": "agrees",
+        "miner": {
+          "id": "9002",
+          "name": "TxLens"
+        },
+        "signal": "0x8c3e9084c86abb34771ce6e14d010772da2c6bdad82a6ccafe966f11ccfff315"
       },
       "brier": 0.0005
     },
@@ -434,18 +544,27 @@
               "name": "PREFLIGHT Infrastructure Signals"
             },
             "outcome": "no",
-            "signal": "0x9309607ef7bbf7efb16515a680264e2dfe5796c241c09b8082b90a7633a17d9d",
+            "signal": "0xac5a6836c8b5ecbf1529f200b4e402551dd325be4a47d7ad73c0ea7f49542faa",
             "tx": null
           }
         ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Tesla offer a Robo-Taxi service by the end of 2025?\" is no.",
+        "verdict": "disagrees",
+        "miner": {
+          "id": "9002",
+          "name": "TxLens"
+        },
+        "signal": "0x26712c9a64e9dd9a82b9989691932369e3cfda2438b44e9300543e0a1943f9e6"
       },
       "brier": 0.0054
     }
   ],
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "eaa6e12fa6512f58029698787d556994b80857b75f58207deeed8571d00419ec",
-    "signature": "MWIrMA6ld/Z6TeD3PNa8X+ZHHKQwSOd9sOndETeNOTIKY5criB4pRF8sP/S2aHw3Hzu3wZW8BqKBvDXhP+FLAA==",
+    "sha256": "d753820d5ba020f7a566c3a2843bb3260e8d42ac01b72e09eae696e85c0d9b7d",
+    "signature": "rAsccZ5R9VYPGVfjj/HBIiXpqpuAa3r3wxujL1LsCe5k4GCLMZ+EIu7PeJsdmHNl5Sg4cOXsIIXfL5UPCgjdAQ==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

@@ -225,13 +225,13 @@ const MARKET = /^https:\/\/manifold\.markets\/[\w\-/]+$/;
     document.getElementById("score-sum").innerHTML =
       `For ${esc(s.forecasts)} resolved prediction markets, Takar read the crowd's probability ${esc(card.rows[0]?.forecast?.daysBefore ?? 7)} days before close, then bought the outcome through Telegraph and held it against the market's own resolution. ` +
       `<b>${esc(s.scored)}</b> confirmed, <b>${esc(s.contradicted)}</b> contradicted, <b>${esc(s.unverified)}</b> unverified. ` +
-      `Brier score <b>${esc(s.brier)}</b>, where always saying 50% scores ${esc(s.baseline)}. Signed with Ed25519; verify it with <code>npx -y takar-mcp</code> (tool <code>forecast_scorecard</code>).`;
+      `Brier score <b>${esc(s.brier)}</b>, where always saying 50% scores ${esc(s.baseline)}. A second, independent fact-check agreed with <b>${esc(s.corroborated ?? 0)}</b> outcomes and disagreed with <b>${esc(s.fact_check_disagreed ?? 0)}</b>; the rest it could not settle. Signed with Ed25519; verify it with <code>npx -y takar-mcp</code> (tool <code>forecast_scorecard</code>).`;
     document.getElementById("score").innerHTML =
-      `<thead><tr><th>Market</th><th>Crowd</th><th>Resolved</th><th>Telegraph said</th><th>Brier</th><th>Proof</th></tr></thead><tbody>` +
+      `<thead><tr><th>Market</th><th>Crowd</th><th>Resolved</th><th>Telegraph said</th><th>Fact-check</th><th>Brier</th><th>Proof</th></tr></thead><tbody>` +
       card.rows.map((r) => {
         const q = MARKET.test(r.market.url ?? "") ? `<a href="${r.market.url}">${esc(r.market.question)}</a>` : esc(r.market.question);
         const a = r.verification.attempts?.at(-1);
-        return `<tr><td>${q}</td><td>${r.forecast ? `${esc(Math.round(r.forecast.p * 100))}%` : "—"}</td><td>${esc(r.market.resolution)}</td><td>${esc(r.verification.telegraph ?? r.verification.status)}${a?.miner ? ` <span class="raw">${esc(a.miner.name)}</span>` : ""}</td><td>${r.brier == null ? "—" : esc(r.brier.toFixed(4))}</td><td>${a ? proofLinks(a.tx, a.signal) : "—"}</td></tr>`;
+        return `<tr><td>${q}</td><td>${r.forecast ? `${esc(Math.round(r.forecast.p * 100))}%` : "—"}</td><td>${esc(r.market.resolution)}</td><td>${esc(r.verification.telegraph ?? r.verification.status)}${a?.miner ? ` <span class="raw">${esc(a.miner.name)}</span>` : ""}</td><td>${r.corroboration ? `${esc(r.corroboration.verdict)}${r.corroboration.miner ? ` <span class="raw">${esc(r.corroboration.miner.name)}</span>` : ""}` : "—"}</td><td>${r.brier == null ? "—" : esc(r.brier.toFixed(4))}</td><td>${a ? proofLinks(a.tx, a.signal) : "—"}</td></tr>`;
       }).join("") + `</tbody>`;
   } catch (e) {
     document.getElementById("score-sum").textContent = `Could not load the scorecard (${e.message}).`;
