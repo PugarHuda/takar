@@ -1,0 +1,318 @@
+{
+  "title": "Takar forecast scorecard",
+  "method": "Crowd probability on Manifold 30 days before resolution; outcome bought through Telegraph EVENT_OUTCOME_RESOLUTION_GENERAL and compared with the market's resolution; Brier score over confirmed outcomes only. Each confirmed outcome is also put to FACT_CHECK_GENERAL as a second, independent check, reported and not scored.",
+  "generated_at": "2026-11-20T11:48:06.173Z",
+  "network": "Ethereum Sepolia testnet (test USDC)",
+  "summary": {
+    "forecasts": 7,
+    "scored": 7,
+    "contradicted": 0,
+    "unverified": 0,
+    "brier": 0.1284,
+    "corroborated": 4,
+    "fact_check_disagreed": 1,
+    "baseline": 0.25
+  },
+  "rows": [
+    {
+      "market": {
+        "id": "s5sgqZ9qQ5",
+        "question": "Will Jerome Powell cease to hold the office of Chair of the Federal Reserve before 2026?",
+        "url": "https://manifold.markets/DaftPunkRock/will-jerome-powell-cease-to-hold-th",
+        "resolution": "NO",
+        "resolvedAt": 1767681504297,
+        "traders": 316,
+        "topic": "Federal Reserve"
+      },
+      "forecast": {
+        "p": 0.0115,
+        "asOf": "2025-12-07T00:05:34.191Z",
+        "betId": "cgq0ccAqgu8I",
+        "daysBefore": 30
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x8fe079ef7d65607d08297140ac4336d9c458a3211ebb52648358383872b8d6db",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Jerome Powell cease to hold the office of Chair of the Federal Reserve before 2026?\" is no.",
+        "verdict": "agrees",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x5f94117de6b3a5f619464f16f575f4e9c64abd00166300d288f30d691091cac8"
+      },
+      "brier": 0.0001
+    },
+    {
+      "market": {
+        "id": "mAQgw4OFEIJ6xJ4RxZ8A",
+        "question": "30. Will US CPI inflation for 2023 average above 4% in 2023?",
+        "url": "https://manifold.markets/ACXBot/30-will-us-cpi-inflation-for-2023-a",
+        "resolution": "NO",
+        "resolvedAt": 1704142965751,
+        "traders": 155,
+        "topic": "CPI inflation"
+      },
+      "forecast": {
+        "p": 0.0342,
+        "asOf": "2023-11-29T21:54:23.828Z",
+        "betId": "sbc5anlf2HcTjzriz2it",
+        "daysBefore": 30
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0xca2c2587a4e517a7207f8921c320f621fbdb57fd0f1f5d006f9a74226ea26cef",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"30. Will US CPI inflation for 2023 average above 4% in 2023?\" is no.",
+        "verdict": "agrees",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x49d8118416b639c07736c02386157b944b13e22b4e7d079254545d9f3c0b52db"
+      },
+      "brier": 0.0012
+    },
+    {
+      "market": {
+        "id": "hKB9iD8knG4R2RuSyyCu",
+        "question": "Will Bitcoin hit $100K in 2024?",
+        "url": "https://manifold.markets/bitSanjay/will-bitcoin-reach-100k-in-2024",
+        "resolution": "YES",
+        "resolvedAt": 1733370046441,
+        "traders": 1130,
+        "topic": "Bitcoin"
+      },
+      "forecast": {
+        "p": 0.1467,
+        "asOf": "2024-11-04T15:13:04.725Z",
+        "betId": "Iglg2hZguCLl",
+        "daysBefore": 30
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x198a7488c6b086c2d306280e69d6709034467222ca422b4ff10c4756caed9171",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Bitcoin hit $100K in 2024?\" is yes.",
+        "verdict": "agrees",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xbdf5f69367b51475b6358ffe5b64cd81992044553d8efd072141c61a45a0d957"
+      },
+      "brier": 0.7281
+    },
+    {
+      "market": {
+        "id": "8dznULhsgh",
+        "question": "Will Nvidia outperform the S&P 500 in 2025?",
+        "url": "https://manifold.markets/DaftPunkRock/will-nvidia-outperform-the-sp-500-i",
+        "resolution": "YES",
+        "resolvedAt": 1767733251528,
+        "traders": 643,
+        "topic": "S&P 500"
+      },
+      "forecast": {
+        "p": 0.9387,
+        "asOf": "2025-12-07T00:39:02.836Z",
+        "betId": "ttNnnPpQlguP",
+        "daysBefore": 30
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x40bbf8c18feb5347a63a5d793d134a828279c38d1abf50429050df1739e317da",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Nvidia outperform the S&P 500 in 2025?\" is yes.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xdf2da1e7b724ffaae55e5776b93a05168eeb24db03ecb754538ac6c9698ce840"
+      },
+      "brier": 0.0038
+    },
+    {
+      "market": {
+        "id": "IMLre6PYIQgsesV6Wa6O",
+        "question": "Did the US enter a recession before the end of 2024?",
+        "url": "https://manifold.markets/chrisjbillington/will-the-us-enter-a-recession-by-20",
+        "resolution": "NO",
+        "resolvedAt": 1767304566560,
+        "traders": 1479,
+        "topic": "recession"
+      },
+      "forecast": {
+        "p": 0.01,
+        "asOf": "2025-12-02T18:16:03.025Z",
+        "betId": "ut2s2nuuyAQL",
+        "daysBefore": 30
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0xfd4f6ba19a9a06da56be6449d377d8107c90dbbe54fab8b8f97a2b7ae39c0149",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Did the US enter a recession before the end of 2024?\" is no.",
+        "verdict": "disagrees",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xbcac8969b95933cce2fa4d1e92c226ef19f55813f2f2e6b2d226307323a5845f"
+      },
+      "brier": 0.0001
+    },
+    {
+      "market": {
+        "id": "ii4d7faxzp",
+        "question": "Will Nvidia be the largest company in the world by market cap at the end of 2024?",
+        "url": "https://manifold.markets/strutheo/will-nvidia-be-the-largest-company-hl44chqzn4",
+        "resolution": "NO",
+        "resolvedAt": 1735672213644,
+        "traders": 310,
+        "topic": "Nvidia"
+      },
+      "forecast": {
+        "p": 0.406,
+        "asOf": "2024-12-01T18:14:55.387Z",
+        "betId": "hs6ytp9p5sI2",
+        "daysBefore": 30
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x93d6e089865ec08e5ae722414851e330bb7f5893d308a601f794217a0346866a",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Nvidia be the largest company in the world by market cap at the end of 2024?\" is no.",
+        "verdict": "agrees",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x43d4091313724b5f556211ba48b30f2d5e78b19699292d894d5a139f98206327"
+      },
+      "brier": 0.1648
+    },
+    {
+      "market": {
+        "id": "DreezzZ09K5d4ee1E64l",
+        "question": "Will Elon Musk step down from being Tesla CEO before 2024?",
+        "url": "https://manifold.markets/Manifold/will-elon-musk-step-down-from-being",
+        "resolution": "NO",
+        "resolvedAt": 1704097849627,
+        "traders": 895,
+        "topic": "Tesla"
+      },
+      "forecast": {
+        "p": 0.0286,
+        "asOf": "2023-12-02T07:24:03.988Z",
+        "betId": "rpM669MrzKRQ3E5O8ajx",
+        "daysBefore": 30
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0xf977eec34399eb2fcd3d969bda4aad7a71bc8173cdb929c52af0bfe4fa06bd64",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Elon Musk step down from being Tesla CEO before 2024?\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x742978e45cc814e4d29fabdd5b2b48d16599158e39cd8314e4bbf32fa29b583d"
+      },
+      "brier": 0.0008
+    }
+  ],
+  "attestation": {
+    "algorithm": "ed25519",
+    "sha256": "de3b286b61141808f5415febb1c1da4dd40f4da65efe26165cc8a7ec43d56a39",
+    "signature": "zjjuJNkpYk8Vf3X/PKmQyNALBNkUX8giOz0cCnkVWXhB/wru7qiiMGvTUM+0T1FH3aE80FxAe3mSEkmBl8gTBA==",
+    "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_note": "Demo input for the Mission 11 video (20 Nov 2026): a new place, and a rover whose budget cannot cover the two checks it needs.",
+  "units": [
+    { "id": "drone-denpasar-1", "type": "drone", "location": "Denpasar", "country": "Indonesia",
+      "task": { "name": "rice terrace survey", "hours": 2 },
+      "limits": { "maxGustKmh": 30 }, "budgetUsd": 0.03 },
+    { "id": "rover-surabaya-1", "type": "rover", "location": "Surabaya", "country": "Indonesia",
+      "task": { "name": "medical supply run", "hours": 4, "destination": "Malang" },
+      "limits": { "maxGustKmh": 50, "maxHours": 3 }, "budgetUsd": 0.01 }
+  ]
+}

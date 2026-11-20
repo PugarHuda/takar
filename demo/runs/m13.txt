@@ -1,0 +1,10 @@
+$ npm run scorecard -- --days 30 --per-topic 1   # 2026-11-20T11:48:05Z
+7 markets
+confirmed    p=0.0115 NO  | Will Jerome Powell cease to hold the office of Chair of the Federal Re | PREFLIGHT Infrastructure Signals:no | fact-check agrees
+confirmed    p=0.0342 NO  | 30. Will US CPI inflation for 2023 average above 4% in 2023? | PREFLIGHT Infrastructure Signals:no | fact-check agrees
+confirmed    p=0.1467 YES | Will Bitcoin hit $100K in 2024? | PREFLIGHT Infrastructure Signals:yes | fact-check agrees
+confirmed    p=0.9387 YES | Will Nvidia outperform the S&P 500 in 2025? | PREFLIGHT Infrastructure Signals:yes | fact-check unclear
+confirmed    p=0.01 NO  | Did the US enter a recession before the end of 2024? | PREFLIGHT Infrastructure Signals:no | fact-check disagrees
+confirmed    p=0.406 NO  | Will Nvidia be the largest company in the world by market cap at the e | PREFLIGHT Infrastructure Signals:no | fact-check agrees
+confirmed    p=0.0286 NO  | Will Elon Musk step down from being Tesla CEO before 2024? | PREFLIGHT Infrastructure Signals:no | fact-check unclear
+{"forecasts":7,"scored":7,"contradicted":0,"unverified":0,"brier":0.1284,"corroborated":4,"fact_check_disagreed":1,"baseline":0.25}

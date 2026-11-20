@@ -1,0 +1,6 @@
+$ npm run settle -- run   # 2026-11-20T11:50:46Z
+deal 5: PAID payee, Telegraph resolved it yes
+  https://sepolia.etherscan.io/tx/0xeba79b22fe6a8572f27d2c6185557d74764587f66ed38d692ba6fa6b7a870a7a
+deal 6: the answer cannot settle it yet, left open
+deal 7: REFUNDED payer, 27.2 mm recorded over 3 days, at or over the 20 mm trigger
+  https://sepolia.etherscan.io/tx/0xe7d37e7099c66d09bb662809718ddf0e298b8955feb53d720e7a5b998f68ad5c

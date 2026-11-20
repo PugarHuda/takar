@@ -1,0 +1,12 @@
+$ npm run settle -- open-event --question "Did Spain win UEFA Euro 2024?" --after 1   # 2026-11-20T11:48:06Z
+opened deal 5 (event), 1.0 test USDC, settles after 2026-11-20T11:49:06.000Z
+  https://sepolia.etherscan.io/tx/0x3b79a81628cafc13675257f7cd3af8af7b27ed56d9f3553b4deb3f9e13c5b104
+
+$ npm run settle -- open-event --question "Will Argentina win the 2030 FIFA World Cup?" --after 1
+opened deal 6 (event), 1.0 test USDC, settles after 2026-11-20T11:49:26.000Z
+  https://sepolia.etherscan.io/tx/0x4dce2dd0f97febfbb548e766756d6eed2386b8c1a065a3bf82b200572b7a4117
+
+
+$ npm run settle -- open-drought --location Denpasar --from 2026-11-16 --to 2026-11-18 --trigger 20 --after 1
+opened deal 7 (weather), 1.0 test USDC, settles after 2026-11-20T11:50:28.000Z
+  https://sepolia.etherscan.io/tx/0xffb959493a1f3d30ea38b12057c0949ff9581ef7812f2a741506fe430d032a62

@@ -1,0 +1,16 @@
+$ npm run fleet -- demo/fleet-demo.json   # 2026-11-20T11:47:34Z
+
+GO    drone-denpasar-1  (rice terrace survey, Denpasar)
+      - station WADD measures 15 km/h now, within 30
+      - storm risk acceptable for the window
+      $ STORM_ALERT_GENERAL -> PREFLIGHT Infrastructure Signals (20260828) 
+      cost $0.01 = $0.005/operating hour
+
+HOLD  rover-surabaya-1  (medical supply run, Surabaya)
+      - no readable storm answer: fail closed
+      - route 1.2 h within shift
+      - budget $0.01 exhausted before all checks: no intelligence, no go
+      $ ROUTE_ETA_GENERAL -> TxLens (9002) 
+      cost $0.01 = $0.0025/operating hour
+
+run 2026-11-20T11:47:36.311Z: 2 units, $0.02 of intelligence ($0.00 unusable), 1 GO

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Takar demo replay</title>
+<meta name="description" content="Replays the terminal output of a real Takar run, captured at the time shown, for the hackathon demo videos.">
+<style>
+:root { --bg: #0d1117; --panel: #161b22; --ink: #e6edf3; --dim: #8b949e; --go: #3fb950; --hold: #d29922; --bad: #f85149; --link: #58a6ff; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.5 ui-monospace, "Cascadia Mono", Consolas, monospace; }
+header { padding: 18px 28px; background: var(--panel); border-bottom: 1px solid #30363d; }
+header h1 { margin: 0; font: 600 26px/1.2 system-ui, sans-serif; }
+header p { margin: 6px 0 0; color: var(--dim); font: 16px/1.4 system-ui, sans-serif; }
+#cap { margin: 18px 28px 0; padding: 14px 18px; border-left: 4px solid var(--link); background: #0b2244; font: 600 21px/1.4 system-ui, sans-serif; min-height: 64px; }
+pre { margin: 16px 28px 28px; padding: 20px 22px; background: #010409; border: 1px solid #30363d; border-radius: 8px; white-space: pre-wrap; word-break: break-word; min-height: 60vh; }
+.cmd { color: var(--link); }
+.go { color: var(--go); font-weight: 700; }
+.hold { color: var(--hold); font-weight: 700; }
+.bad { color: var(--bad); }
+.dim { color: var(--dim); }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">Takar</h1>
+  <p id="sub">Replay of real terminal output, captured at the time on the command line. Ethereum Sepolia testnet, test USDC.</p>
+</header>
+<div id="cap" aria-live="polite"></div>
+<pre id="out" aria-live="polite"></pre>
+<script>
+// Each run: the captured files to replay, and a caption shown when a line matches.
+const RUNS = {
+  m11: { title: "Mission 11 · Autonomous Systems: machines that buy their checks before they move",
+    files: ["runs/m11.txt"],
+    caps: [[/^\$/, "New input: a survey drone in Denpasar, and a rover whose $0.01 budget cannot cover the two checks it needs."],
+           [/^GO/, "The drone bought STORM_ALERT through Telegraph and held it against the Denpasar airport station (METAR): GO."],
+           [/^HOLD/, "The rover ran out of budget after one purchase. No intelligence, no go: it holds (the failure case)."],
+           [/^run /, "Every purchase is in receipts/ledger.jsonl; every decision in receipts/decisions.jsonl."]] },
+  m13: { title: "Mission 13 · Asset Management: forecasts held to account by machines",
+    files: ["runs/m13.txt"],
+    caps: [[/^\$/, "New input: the crowd's price 30 days before each market closed (the published scorecard uses 7)."],
+           [/^confirmed/, "Each outcome is bought through Telegraph (EVENT_OUTCOME_RESOLUTION) and checked against the market's own resolution, then put to FACT_CHECK."],
+           [/^\{/, "30 days out the crowd scores Brier 0.128; 7 days out it scored 0.015. Both signed with Ed25519."]] },
+  settle: { title: "Missions 14 and 06 · Takar Settle: money that moves when Telegraph answers",
+    files: ["runs/settle-open.txt", "runs/settle-run.txt"],
+    caps: [[/open-event --question "Did Spain/, "Mission 14: 1 test USDC locked in TakarSettle, paid to the payee if Spain won Euro 2024."],
+           [/2030 FIFA/, "The failure case: an event that has not happened. It must not settle."],
+           [/open-drought/, "Mission 06: a drought cover for Denpasar, 16 to 18 Nov, paying if recorded rain stays under 20 mm."],
+           [/settle -- run/, "A minute later the agent buys each answer through Telegraph and settles on chain."],
+           [/deal 5/, "Spain won: the payee is paid. The Telegraph signal hash is recorded in the Settled event."],
+           [/deal 6/, "2030 is unresolved, so the deal stays open. If nobody settles it, the payer reclaims after 7 days."],
+           [/deal 7/, "Denpasar recorded 27.2 mm, three days bought one by one (WEATHER_FORECAST_VERIFY): over the trigger, so the payer is refunded."]] },
+};
+const run = RUNS[new URLSearchParams(location.search).get("run")] ?? RUNS.m11;
+const speed = Number(new URLSearchParams(location.search).get("speed") ?? 1);
+document.getElementById("title").textContent = run.title;
+const out = document.getElementById("out"), cap = document.getElementById("cap");
+const esc = (s) => s.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+const paint = (line) => {
+  const h = esc(line).replace(/(https:\/\/\S+)/g, '<span class="dim">$1</span>');
+  if (/^\$/.test(line)) return `<span class="cmd">${h}</span>`;
+  if (/^(GO|confirmed)\b/.test(line) || /PAID payee/.test(line)) return h.replace(/^(GO|confirmed)|PAID payee/, (m) => `<span class="go">${m}</span>`);
+  if (/^HOLD|REFUNDED|left open|disagrees/.test(line)) return h.replace(/^HOLD|REFUNDED payer|left open|disagrees/, (m) => `<span class="hold">${m}</span>`);
+  return h;
+};
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms / speed));
+(async () => {
+  for (const f of run.files) {
+    const text = await fetch(f, { cache: "no-store" }).then((r) => r.text());
+    for (const line of text.replace(/\r/g, "").split("\n")) {
+      const c = run.caps.find(([re]) => re.test(line));
+      if (c) { cap.textContent = c[1]; await sleep(2200); }
+      if (/^\$/.test(line)) {
+        out.insertAdjacentHTML("beforeend", '<span class="cmd"></span>');
+        const span = out.lastElementChild;
+        for (const ch of line) { span.textContent += ch; await sleep(18); }
+        out.insertAdjacentHTML("beforeend", "\n");
+        await sleep(900);
+      } else {
+        out.insertAdjacentHTML("beforeend", paint(line) + "\n");
+        await sleep(line.trim() ? 380 : 120);
+      }
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+  }
+  document.body.dataset.done = "1";
+})();
+</script>
+</body>
+</html>

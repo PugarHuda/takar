@@ -66,5 +66,7 @@ const doc = {
   rows,
 };
 const out = { ...doc, attestation: signDoc(doc, key) };
-writeFileSync("receipts/scorecard.json", JSON.stringify(out, null, 2) + "\n");
+// --out keeps a variant run (e.g. --days 30) from replacing the published scorecard.
+const OUT = process.argv.includes("--out") ? process.argv[process.argv.indexOf("--out") + 1] : "receipts/scorecard.json";
+writeFileSync(OUT, JSON.stringify(out, null, 2) + "\n");
 console.log(JSON.stringify(out.summary));
