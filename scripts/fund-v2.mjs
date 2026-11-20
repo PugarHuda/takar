@@ -6,8 +6,8 @@
 // Every step reads the balance first and tops up only to the target, so a
 // re-run after a partial failure never double-spends.
 //
-// The node moved to a new Diamond on 17 Nov 2026 (the docs still named 0x3624…,
-// which the node no longer reads). On it, bonds are test USDC and there is no
+// The node moved to a new Diamond on 17 Nov 2026 (anjoman.ai docs, Addresses and
+// Parameters; the old 0x3624… is no longer read). On it, bonds are test USDC and there is no
 // MACHINA, and the escrow balance lives in the node's ledger roots, read over HTTP.
 import { ethers } from "ethers";
 
