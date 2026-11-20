@@ -38,11 +38,17 @@ export default async function handler(req, res) {
   const event = String((req.method === "POST" ? req.body?.event : req.query?.event) ?? "").replace(/\s+/g, " ").trim();
   if (!event) return res.status(400).json({ error: "event is required", example: { event: "Did Max Verstappen win the 2025 Japanese Grand Prix?" } });
 
+  // One line per ask, so a score can be traced to the questions behind it. The
+  // node's questions are public (its question feed), and no caller data is logged.
+  const t0 = Date.now();
+  const log = (outcome, extra = "") => console.log(JSON.stringify({ event: event.slice(0, 300), outcome, ms: Date.now() - t0, extra }));
+
   const cached = cache.get(event);
-  if (cached && Date.now() - cached.at < cached.ttl) return res.status(200).json({ ...cached.answer, cached: true });
+  if (cached && Date.now() - cached.at < cached.ttl) { log(cached.answer.outcome, "cached"); return res.status(200).json({ ...cached.answer, cached: true }); }
 
   try {
     const answer = await resolve(event, { llm: openrouter() });
+    log(answer.outcome, answer.note ?? "");
     answer.resolver = "takar-outcome/0.1";
     answer.checked_at = new Date().toISOString();
     // An unresolved answer may resolve later (or was a model hiccup): keep it briefly.
@@ -50,6 +56,7 @@ export default async function handler(req, res) {
     return res.status(200).json(answer);
   } catch (err) {
     const status = err.status === 400 ? 400 : 503;
+    log("error", String(err.message).slice(0, 200));
     return res.status(status).json({ error: err.message });
   }
 }
