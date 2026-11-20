@@ -4,9 +4,20 @@
 
 *Takar* is Indonesian for "to measure out": how much intelligence a machine buys, and how far that intelligence can be trusted.
 
-**Fleet board (no wallet needed):** https://pugarhuda.github.io/takar/
+**Board (no wallet needed):** https://takar-telegraph.vercel.app
 
-Built for the Telegraph Hackathon Season II, Apps & Agents, **Mission 11: Autonomous Systems**.
+Built for Telegraph Hackathon Season II, which pays cash prizes. One repo covers all three tracks:
+
+| Part | Track | Where |
+|---|---|---|
+| Fleet | Apps, **Mission 11** Autonomous Systems | this page, `lib/fleet.mjs` |
+| Forecast scorecard | Apps, **Mission 13** Asset Management | `lib/scorecard.mjs`, `receipts/scorecard.json` |
+| Takar Settle, conditional escrow and drought cover | Apps, **Missions 14** Web3 & DeFi and **06** Resources & Agriculture | `onchain/`, `scripts/settle.mjs` |
+| Takar Outcome miner | Miners, EVENT_OUTCOME_RESOLUTION_GENERAL | `api/resolve.js`, `lib/outcome.mjs` |
+| Takar Outcome evaluator | Evaluators, EVENT_OUTCOME_RESOLUTION | [`evaluator/`](evaluator/README.md) |
+| takar-mcp | MCP, three tools with no key or wallet | [`mcp/`](mcp/README.md), `npx -y takar-mcp` |
+
+Reviewers: start at [JUDGE.md](JUDGE.md).
 
 > **Network:** Ethereum Sepolia testnet with test USDC. The fleet in `fleet.json` is **simulated**: the units, tasks and limits are illustrative. Every Telegraph purchase, settlement and airport-station reading in this repository is real.
 
@@ -14,7 +25,7 @@ Built for the Telegraph Hackathon Season II, Apps & Agents, **Mission 11: Autono
 
 ```
 unit task ──► plan: which intents this task needs
-          ──► buy each through POST /engine/v1/ask (x402, $0.01, receipt)
+          ──► buy each through POST /engine/v1/ask ($0.01 via escrow or x402, receipt)
           ──► unusable answer? re-buy from the next-ranked miner (within budget), record who failed
           ──► hold it against the nearest airport station (METAR)
           ──► GO / HOLD / ABORT  +  cost of intelligence per operating hour
@@ -23,7 +34,7 @@ unit task ──► plan: which intents this task needs
 | Unit type | Buys | Decides on |
 |---|---|---|
 | `drone` | `STORM_ALERT_GENERAL` | storm risk and peak gust, then a live station-wind check |
-| `field-robot` | `WEATHER_FORECAST_GENERAL` | rain probability over the work window |
+| `field-robot` | `WEATHER_FORECAST_GENERAL` + `WEATHER_FORECAST_VERIFY_GENERAL` (yesterday) | rain probability over the work window, and yesterday's recorded rain |
 | `rover` | `ROUTE_ETA_GENERAL` + `STORM_ALERT_GENERAL` at the destination | route time within the shift, storm risk on arrival |
 
 **The rules fail closed.** None of these can produce a GO:
