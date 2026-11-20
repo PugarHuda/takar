@@ -1,3 +1,5 @@
-receipts
-docs
-.playwright-mcp
+evaluator/data
+evaluator/*.safetensors
+mcp
+lib/*.test.mjs
+lib/test.mjs
