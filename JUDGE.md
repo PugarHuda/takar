@@ -90,7 +90,7 @@ Trust, stated plainly: one resolver key decides, and it is ours. What keeps it h
 
 ## Evaluator: Takar Outcome evaluator
 
-Details in `evaluator/README.md`. Package `evaluator/EVENT_OUTCOME_RESOLUTION.safetensors`, keccak256 `0xfeac3f31…0eedd3e`, registration 153 on the ledger Diamond `0x72a7…`. Also at https://huggingface.co/PugarHuda/takar-outcome-evaluator.
+Details in `evaluator/README.md`. Package `evaluator/EVENT_OUTCOME_RESOLUTION.safetensors`, keccak256 `0x69630036…ffd479a26` (v2.1: the v2 weights, re-hashed with an `x-takar-build` metadata key so the runnable URL could move), registration 153 on the ledger Diamond `0x72a7…`. Also at https://huggingface.co/PugarHuda/takar-outcome-evaluator.
 
 **Baseline comparison** (same 537 held-out pairs):
 

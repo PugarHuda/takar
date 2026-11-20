@@ -47,7 +47,7 @@ Prompts are real Manifold binary markets: 3,697 resolved (truth known) and
 | Test pairwise accuracy (PyTorch) | 99.81% |
 | "Pick the longer answer" baseline | 50.8% |
 | Ordering on the real engine (WASM, 40 test pairs, `engine-check.py`) | 40/40 |
-| `adapterbuild lora` (node's own checks) | pass. Class hybrid, keccak256 `0xfeac3f31…0eedd3e` |
+| `adapterbuild lora` (node's own checks) | pass. Class hybrid, keccak256 `0x69630036…ffd479a26` (v2.1: the v2 weights, re-hashed with an `x-takar-build` metadata key so the runnable URL could move) |
 
 **Real answers from the network** (`real-check.py`, 10 questions from the node's feed,
 scored on the engine against Takar Outcome's live answer to the same question):

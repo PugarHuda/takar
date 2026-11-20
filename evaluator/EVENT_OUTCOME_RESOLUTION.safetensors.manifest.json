@@ -22,17 +22,17 @@
   "delta_bytes": 6761476,
   "package": {
     "file": "EVENT_OUTCOME_RESOLUTION.safetensors",
-    "sha256": "a6a6d74c7aff8cb3baebbb7667e5fc5d3f2190b96f08f7ea36a5ff5bcd3f0060",
-    "bytes": 6776916
+    "sha256": "7c447e4001aa77b41c2edddfefd666fe7d87a0661a510291437e8e7ec028e73a",
+    "bytes": 6777036
   },
-  "keccak256": "0xfeac3f314909f8a881f67226552445156d347df6682f4f3743eec60e50eedd3e",
+  "keccak256": "0x6963003696008daf03de298b2db08a5e14838ad4e6678a13c51330dffd479a26",
   "verification": {
     "stage1": true,
     "loaded": true,
     "score_hex": "0x40f52435",
     "repeats": 2,
-    "seconds": "4.490",
+    "seconds": "4.504",
     "input": "default"
   },
-  "built_at": "2026-11-20T04:55:36Z"
+  "built_at": "2026-11-20T10:39:38Z"
 }
