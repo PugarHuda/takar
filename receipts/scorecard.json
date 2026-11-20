@@ -1,14 +1,14 @@
 {
   "title": "Takar forecast scorecard",
   "method": "Crowd probability on Manifold 7 days before resolution; outcome bought through Telegraph EVENT_OUTCOME_RESOLUTION_GENERAL and compared with the market's resolution; Brier score over confirmed outcomes only.",
-  "generated_at": "2026-11-19T00:59:01.154Z",
+  "generated_at": "2026-11-20T05:24:47.566Z",
   "network": "Ethereum Sepolia testnet (test USDC)",
   "summary": {
     "forecasts": 13,
-    "scored": 0,
+    "scored": 13,
     "contradicted": 0,
-    "unverified": 13,
-    "brier": null,
+    "unverified": 0,
+    "brier": 0.015,
     "baseline": 0.25
   },
   "rows": [
@@ -29,18 +29,17 @@
         "daysBefore": 7
       },
       "verification": {
-        "status": "unverified",
-        "telegraph": null,
+        "status": "confirmed",
+        "telegraph": "no",
         "attempts": [
           {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
-          },
-          {
-            "miner": null,
-            "outcome": "error",
-            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 503: no_compatible_miner"
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x446df2bd7269e4082d15c7b04ed7f5e517f77875e6e43eeea2f04cda3afd150f",
+            "tx": null
           }
         ]
       },
@@ -63,18 +62,17 @@
         "daysBefore": 7
       },
       "verification": {
-        "status": "unverified",
-        "telegraph": null,
+        "status": "confirmed",
+        "telegraph": "no",
         "attempts": [
           {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
-          },
-          {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x6373632739150a75474c71361e168b4ee05ee989b6ef5c12954b085c35bbe7de",
+            "tx": null
           }
         ]
       },
@@ -97,18 +95,17 @@
         "daysBefore": 7
       },
       "verification": {
-        "status": "unverified",
-        "telegraph": null,
+        "status": "confirmed",
+        "telegraph": "no",
         "attempts": [
           {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
-          },
-          {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x6a182d38117e38750cde1a421380012dd34d887491433228417d15c8a8da6050",
+            "tx": null
           }
         ]
       },
@@ -131,18 +128,17 @@
         "daysBefore": 7
       },
       "verification": {
-        "status": "unverified",
-        "telegraph": null,
+        "status": "confirmed",
+        "telegraph": "yes",
         "attempts": [
           {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
-          },
-          {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x05d13016c6d7e0ae52cb068922421155de3c1928c18ebc4c737773935cffca31",
+            "tx": null
           }
         ]
       },
@@ -165,18 +161,17 @@
         "daysBefore": 7
       },
       "verification": {
-        "status": "unverified",
-        "telegraph": null,
+        "status": "confirmed",
+        "telegraph": "no",
         "attempts": [
           {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
-          },
-          {
-            "miner": null,
-            "outcome": "error",
-            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 503: no_compatible_miner"
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0xa84deba839b554939e76db2dade10cd0b902692d95540aa90acac53a7dde1534",
+            "tx": null
           }
         ]
       },
@@ -199,18 +194,17 @@
         "daysBefore": 7
       },
       "verification": {
-        "status": "unverified",
-        "telegraph": null,
+        "status": "confirmed",
+        "telegraph": "yes",
         "attempts": [
           {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
-          },
-          {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x57c5c221a7e50f5cb75fc5a1db11cd52847cb7bb02db703ee013f6bc1fb3f47c",
+            "tx": null
           }
         ]
       },
@@ -233,18 +227,17 @@
         "daysBefore": 7
       },
       "verification": {
-        "status": "unverified",
-        "telegraph": null,
+        "status": "confirmed",
+        "telegraph": "no",
         "attempts": [
           {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
-          },
-          {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x27a4d10a67c7f2241e3bfb550ec30a2916497a1e0248080fa46364a94db6d29c",
+            "tx": null
           }
         ]
       },
@@ -267,18 +260,17 @@
         "daysBefore": 7
       },
       "verification": {
-        "status": "unverified",
-        "telegraph": null,
+        "status": "confirmed",
+        "telegraph": "no",
         "attempts": [
           {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
-          },
-          {
-            "miner": null,
-            "outcome": "error",
-            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 503: no_compatible_miner"
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0xda0ae1920348c724a8620754caf8a36a6a9559e9e2a58353132c30dd6310b20d",
+            "tx": null
           }
         ]
       },
@@ -301,18 +293,17 @@
         "daysBefore": 7
       },
       "verification": {
-        "status": "unverified",
-        "telegraph": null,
+        "status": "confirmed",
+        "telegraph": "no",
         "attempts": [
           {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
-          },
-          {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x45eec273280c6cafa5fc31e0672cf83172729b72bfd9a112f77f675efd1db54f",
+            "tx": null
           }
         ]
       },
@@ -335,18 +326,17 @@
         "daysBefore": 7
       },
       "verification": {
-        "status": "unverified",
-        "telegraph": null,
+        "status": "confirmed",
+        "telegraph": "no",
         "attempts": [
           {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
-          },
-          {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0xd27458c05d7c08b2a6cd878963929207612c2824e1be767994be75199c27ca11",
+            "tx": null
           }
         ]
       },
@@ -369,18 +359,17 @@
         "daysBefore": 7
       },
       "verification": {
-        "status": "unverified",
-        "telegraph": null,
+        "status": "confirmed",
+        "telegraph": "no",
         "attempts": [
           {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
-          },
-          {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0xa1443706e72ba4083f5f8cf30e7f70e105d86d806b1ab4a5e312c6e55f96a270",
+            "tx": null
           }
         ]
       },
@@ -403,18 +392,17 @@
         "daysBefore": 7
       },
       "verification": {
-        "status": "unverified",
-        "telegraph": null,
+        "status": "confirmed",
+        "telegraph": "no",
         "attempts": [
           {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
-          },
-          {
-            "miner": null,
-            "outcome": "error",
-            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 503: no_compatible_miner"
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0xda4dc1bb5d692b47c3aa94898fd8b837377efef1cafe93bf0d4db686c2271302",
+            "tx": null
           }
         ]
       },
@@ -437,18 +425,17 @@
         "daysBefore": 7
       },
       "verification": {
-        "status": "unverified",
-        "telegraph": null,
+        "status": "confirmed",
+        "telegraph": "no",
         "attempts": [
           {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
-          },
-          {
-            "miner": null,
-            "outcome": "error",
-            "error": "payment signed and refused: payment required; settle request failed: Post \"https://facilitator.x402.rs/settle\": context deadline exceeded (1"
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x9309607ef7bbf7efb16515a680264e2dfe5796c241c09b8082b90a7633a17d9d",
+            "tx": null
           }
         ]
       },
@@ -457,8 +444,8 @@
   ],
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "56d907fde15762cd5b509c08a6727cd837ba02fb543a7a133904d1e6480e8f88",
-    "signature": "NIJ3I/qR0BLuoQaNQiNRKIJUFdMvfm+qDSfZlUK01sM5mNjGKvA0ZlvYLz34zM7t9nyADVWEpfIsn6lwm951BQ==",
+    "sha256": "eaa6e12fa6512f58029698787d556994b80857b75f58207deeed8571d00419ec",
+    "signature": "MWIrMA6ld/Z6TeD3PNa8X+ZHHKQwSOd9sOndETeNOTIKY5criB4pRF8sP/S2aHw3Hzu3wZW8BqKBvDXhP+FLAA==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }
