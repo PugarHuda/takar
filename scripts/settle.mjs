@@ -73,18 +73,32 @@ async function decide(terms, run) {
   return null;
 }
 
+// The contract is public: anyone can open a deal on it. Settling one costs this
+// agent paid asks, so it only works for payers it serves (itself by default, or
+// TAKAR_SETTLE_PAYERS), and stops after MAX_ASKS paid asks per run. A deal from
+// anyone else stays open; its payer can still reclaim it after the grace period.
+const PAYERS = new Set((process.env.TAKAR_SETTLE_PAYERS ?? wallet.address).split(",").map((a) => ethers.getAddress(a.trim())));
+const MAX_ASKS = Number(process.env.TAKAR_SETTLE_MAX_ASKS ?? 40);
+const asksFor = (terms) => (terms.kind === "weather" ? daysOf(terms.from, terms.to).length : 1);
+
 async function runDue() {
   const s = contract();
   const run = new Date().toISOString();
   const n = Number(await s.count());
   const now = Math.floor(Date.now() / 1000);
+  let budget = MAX_ASKS;
   mkdirSync("receipts", { recursive: true });
   for (let id = 0; id < n; id++) {
     const d = await s.deal(id);
     if (Number(d.state) !== 0) continue; // settled or reclaimed
+    if (!PAYERS.has(ethers.getAddress(d.payer))) { console.log(`deal ${id}: payer ${d.payer} is not one this agent serves, skipped`); continue; }
     if (Number(d.resolveAfter) > now) { console.log(`deal ${id}: not due until ${new Date(Number(d.resolveAfter) * 1000).toISOString()}`); continue; }
     let terms;
     try { terms = JSON.parse(d.terms); } catch { console.log(`deal ${id}: terms are not Takar terms, skipped`); continue; }
+    let cost;
+    try { cost = asksFor(terms); } catch (e) { console.log(`deal ${id}: ${e.message}, skipped`); continue; }
+    if (cost > budget) { console.log(`deal ${id}: needs ${cost} paid asks, ${budget} left in this run's cap, left for the next run`); continue; }
+    budget -= cost;
     const c = await decide(terms, run).catch((e) => (console.log(`deal ${id}: ${e.message.slice(0, 120)}`), null));
     if (!c) { console.log(`deal ${id}: the answer cannot settle it yet, left open`); continue; }
     const t = await s.settle(id, c.met, c.signal, c.why.slice(0, 280));
