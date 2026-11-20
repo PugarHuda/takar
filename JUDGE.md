@@ -84,9 +84,10 @@ Trust, stated plainly: one resolver key decides, and it is ours. What keeps it h
 ## Miner: Takar Outcome
 
 - Endpoint: `POST https://takar-outcome.vercel.app/api/resolve {"event": "..."}`. Registration YAML: `miner/takar-outcome.yaml`.
-- Every yes or no carries a sentence quoted word for word from the cited Wikipedia article, and the code checks it is really there. Events that have not ended, or that the sources do not settle, come back `unresolved`.
+- Two sources, in order. **First, a settled Polymarket market:** an exact title match, or a dated fixture matched by slug, date and full event title. The market must be closed, with one outcome's final price at 0.99 or more. **Then Wikipedia:** every yes or no carries a sentence quoted word for word from the cited article, and the code checks it is really there. Events that have not ended, or that neither source settles, come back `unresolved`. A slow model also ends as `unresolved` within a 12 s budget, never as an error.
+- Why Polymarket: the per-ask log (`api/resolve.js`) showed the network asks prediction-market titles and fixtures ("Bitcoin Up or Down - February 28", "Did the … Heidenheim vs Mainz match end in a draw?"), which Wikipedia cannot settle.
 - Network evidence: ranked #1 in epoch 16 at 0.9622, and every spot check that epoch passed (`https://anjoman.ai/api/explorer/spot-checks?miner=takar-outcome`). Scores in later epochs are on the leaderboard as they are; we do not pick epochs.
-- Known gap: facts that exist only in Wikipedia tables never reach the text the resolver reads, so it answers `unresolved` for them.
+- Known gaps: facts that exist only in Wikipedia tables, truncated market titles that match several markets ("Bitcoin Up or Down - February 28" without a time), and fixtures Polymarket never listed. All three are answered `unresolved` rather than guessed.
 
 ## Evaluator: Takar Outcome evaluator
 
