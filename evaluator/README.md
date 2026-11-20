@@ -69,6 +69,20 @@ The test set comes from the same generator as the training data, so these
 numbers measure the five failure modes above. They do not predict accuracy on
 the network's hidden pairs, which nobody outside the validators can read.
 
+## Network result: rejected
+
+Registration 156 (v2.1) reached the node's remote check on 20 Nov 2026. The node
+sent 15 public pairs to our executor and the adapter ordered 7 correctly (46.7%,
+floor 70%), so it was rejected before download. That is the honest measure of
+this adapter: it learned our five failure modes, not what the network's pairs
+reward. Its scores on those texts were mostly negative and close within each
+pair, so it was not confidently wrong; it simply could not tell them apart.
+
+We did not log the node's texts or train on them. The docs put evaluation
+material outside the public build interface. A next version would need broader
+preference data (real miner answers to real questions, judged on more than
+topic), not a fit to the check.
+
 ## Reproduce
 
 ```bash

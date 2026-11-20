@@ -103,7 +103,7 @@ Details in `evaluator/README.md`. Package `evaluator/EVENT_OUTCOME_RESOLUTION.sa
 
 On real answers from the network, every off-topic payload ranks below an on-topic answer (`evaluator/real-check.py`). Before the network tightened its own scoring, those payloads scored about 0.99.
 
-**What it does not cover:** the family is Hybrid, scored by comparator + adapter. This is the adapter half only; we did not build a comparator. Activation is pending the network's remote check, so no canonical status or ranking change is claimed. We chose not to upload our own pairs to this family's evaluation pool, because that pool's hidden half grades adapters, ours included.
+**What it does not cover:** the family is Hybrid, scored by comparator + adapter. This is the adapter half only; we did not build a comparator. The network rejected it (registration 156, 20 Nov): on the node's 15 public pairs it ordered 7 correctly (46.7%, floor 70%). Our accuracy was measured on pairs we generated, and it did not transfer. No canonical status or ranking change is claimed. We chose not to upload our own pairs to this family's evaluation pool, because that pool's hidden half grades adapters, ours included.
 
 ## What is not claimed
 
