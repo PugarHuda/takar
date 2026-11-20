@@ -137,6 +137,12 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
     </details>
   </section>
 
+  <section class="found" aria-labelledby="settle-h">
+    <h2 id="settle-h" class="display">Conditional payments (Missions 14 and 06)</h2>
+    <p>Test USDC locked in <a href="https://sepolia.etherscan.io/address/0xfB5E39924F287d14a1833C58e50f466145e62808">TakarSettle</a> against a condition, settled once Telegraph answers. If the condition is met the payee is paid, otherwise the payer is refunded. Each settlement carries the signal it rests on.</p>
+    <div class="scroll"><table id="settle"><tr><td>Loading…</td></tr></table></div>
+  </section>
+
   <section class="ledger" aria-labelledby="ledger-h">
     <h2 id="ledger-h" class="display">Every purchase</h2>
     <details>
@@ -148,7 +154,7 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
 
 <footer>
   <div class="wrap">
-    Source, tests and how to reproduce a run: <a href="https://github.com/PugarHuda/takar">github.com/PugarHuda/takar</a>. Telegraph Hackathon Season II entry (Missions 11 and 13), with cash prizes. Also: the <a href="https://github.com/PugarHuda/takar/tree/main/evaluator">EVENT_OUTCOME evaluator</a>, the Takar Outcome miner and <a href="https://www.npmjs.com/package/takar-mcp">takar-mcp</a>. Testnet only; no real money moves and no real machine acts on these decisions.
+    Source, tests and how to reproduce a run: <a href="https://github.com/PugarHuda/takar">github.com/PugarHuda/takar</a>. Telegraph Hackathon Season II entry (Missions 11, 13, 14 and 06), with cash prizes. Also: the <a href="https://github.com/PugarHuda/takar/tree/main/evaluator">EVENT_OUTCOME evaluator</a>, the Takar Outcome miner and <a href="https://www.npmjs.com/package/takar-mcp">takar-mcp</a>. Testnet only; no real money moves and no real machine acts on these decisions.
   </div>
 </footer>
 
@@ -217,6 +223,21 @@ function unitRow(d, budget) {
 
 // Market URLs reach href attributes too, so only Manifold links become links.
 const MARKET = /^https:\/\/manifold\.markets\/[\w\-/]+$/;
+
+(async () => {
+  try {
+    const rows = await jsonl("receipts/settlements.jsonl");
+    document.getElementById("settle").innerHTML =
+      `<thead><tr><th>Deal</th><th>Mission</th><th>Condition</th><th>Result</th><th>Why</th><th>Proof</th></tr></thead><tbody>` +
+      rows.map((s) => {
+        const mission = s.terms?.kind === "weather" ? "06 drought cover" : "14 conditional escrow";
+        const cond = s.terms?.kind === "weather" ? `${esc(s.terms.location)}, ${esc(s.terms.from)} to ${esc(s.terms.to)}, under ${esc(s.terms.triggerMm)} mm` : esc(s.terms?.question);
+        return `<tr><td>${esc(s.deal)}</td><td>${mission}</td><td>${cond}</td><td>${s.met ? "paid the payee" : "refunded the payer"} (${esc(s.amount)} USDC)</td><td>${esc(s.why)}</td><td>${proofLinks(s.tx, s.signal)}</td></tr>`;
+      }).join("") + `</tbody>`;
+  } catch (e) {
+    document.getElementById("settle").innerHTML = `<tr><td>Could not load the settlements (${esc(e.message)}).</td></tr>`;
+  }
+})();
 
 (async () => {
   try {

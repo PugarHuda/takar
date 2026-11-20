@@ -6,6 +6,8 @@ Takar is entered in Telegraph Hackathon Season II, in all three tracks, from one
 |---|---|---|
 | Fleet | Apps & Agents | Mission 11, Autonomous Systems |
 | Forecast scorecard | Apps & Agents | Mission 13, Asset Management |
+| Takar Settle, conditional escrow | Apps & Agents | Mission 14, Web3 & DeFi |
+| Takar Settle, drought cover | Apps & Agents | Mission 06, Resources & Agriculture |
 | Takar Outcome miner | Miners / Providers | EVENT_OUTCOME_RESOLUTION_GENERAL |
 | Takar Outcome evaluator | Evaluators | EVENT_OUTCOME_RESOLUTION family (Hybrid) |
 
@@ -13,7 +15,7 @@ Site: https://takar-telegraph.vercel.app. MCP: `npx -y takar-mcp`.
 
 ## Check it in five minutes, with no wallet
 
-1. `npm install && npm test` runs 99 offline checks of the payment signers (exact and escrow), the fleet rules, the outcome resolver and the scorecard rules. No network, no funds.
+1. `npm install && npm test` runs 115 offline checks (plus 8 contract tests: `cd onchain && forge install foundry-rs/forge-std && forge test`) of the payment signers (exact and escrow), the fleet rules, the outcome resolver and the scorecard rules. No network, no funds.
 2. Open `receipts/ledger.jsonl` and pick a line with `"status":"paid"`.
    - With a `settlementTx` (exact payment before 20 Nov): open it on https://sepolia.etherscan.io and see the 0.01 USDC transfer.
    - With `"rail":"escrow"` (from 20 Nov): the ask is billed to the escrow balance at the next ledger root, and there is no per-ask transaction. See `https://devnode.telegraphprotocol.com/v1/ledger/account/0x39d2bae5eaeda9283535ddc98f1991c81ed5cd7e`.
@@ -41,6 +43,43 @@ For each resolved prediction market, Takar reads the crowd's probability N days 
 | Check | `receipts/scorecard.json`: per market, the crowd price and its bet id, the resolution, what Telegraph said and the Brier score. Latest run: 13 of 13 confirmed, Brier 0.015, with 0.25 as the coin-flip baseline. Second check: FACT_CHECK agreed on 5, disagreed on 2 and could not settle 6. This is reported beside the score and never changes it. |
 | Inspect | each row's `verification.attempts[].signal`, then the signal URL above. |
 | Break | An outcome that Telegraph contradicts is reported and left out of the score. One it cannot settle is listed as `unverified`, never dropped. `lib/scorecard.test.mjs` covers both. Live: run with an empty escrow and every ask is refused and nothing is charged, so every row comes out `unverified` with a `null` Brier score. |
+
+## Missions 14 and 06: Takar Settle
+
+One contract, `TakarSettle`, on Sepolia at [`0xfB5E39924F287d14a1833C58e50f466145e62808`](https://sepolia.etherscan.io/address/0xfB5E39924F287d14a1833C58e50f466145e62808). Source in `onchain/src`, with 8 Foundry tests in `onchain/test`.
+
+How a deal works:
+1. A payer locks test USDC for a payee against a condition written in the deal's `terms`.
+2. After `resolveAfter`, Takar's agent buys the answer through Telegraph.
+3. It pays the payee if the condition was met and refunds the payer if not. The settlement records the Telegraph signal hash.
+
+The resolver cannot pay anyone else, cannot settle early or twice, and cannot settle without evidence. If it never settles, the payer reclaims after 7 days.
+
+| | Mission 14, conditional escrow | Mission 06, drought cover |
+|---|---|---|
+| Condition | a real-world event resolves yes | recorded rain over a period stays under a trigger |
+| Bought | EVENT_OUTCOME_RESOLUTION, once | WEATHER_FORECAST_VERIFY, once per day of the period |
+| Waits (never pays) when | the outcome is unresolved or unreadable | any day has no readable record |
+
+| Step | How |
+|---|---|
+| Run | `npm run settle -- open-event --question "Did Argentina win the 2022 FIFA World Cup?" --after 1`, then `npm run settle -- run` a minute later. For M06: `npm run settle -- open-drought --location Kupang --from 2026-11-15 --to 2026-11-17 --trigger 30 --after 1`. |
+| New input | any question, or any place, period and trigger |
+| Check | `receipts/settlements.jsonl`: per deal the terms, the decision and why, the daily readings (M06), the signal and the settlement transaction |
+| Inspect | the `Settled` event on Etherscan carries the signal hash. Open `https://devnode.telegraphprotocol.com/engine/v1/signal/<signal>` to see what was asked and answered. |
+| Break | Open a deal on a future event: `run` leaves it open ("cannot settle it yet") because the answer is unresolved. A drought cover on a period that includes a future day waits the same way. The contract rejects an early settle, a second settle and a settle without evidence (Foundry tests). |
+
+Live on 20 Nov, every branch ran:
+
+| Deal | Result |
+|---|---|
+| 0, Argentina won 2022? | paid the payee |
+| 1, France won 2022? | refunded the payer |
+| 2, Bandung under 30 mm | paid the payee (13.8 mm) |
+| 3, Kupang under 30 mm | paid the payee (16.4 mm) |
+| 4, Bandung under 10 mm | refunded the payer (13.8 mm) |
+
+Trust, stated plainly: one resolver key decides, and it is ours. What keeps it honest is that every decision is public and points at a Telegraph signal anyone can read.
 
 ## Miner: Takar Outcome
 
