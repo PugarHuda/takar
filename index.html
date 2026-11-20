@@ -128,6 +128,15 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
     </ol>
   </section>
 
+  <section class="found" aria-labelledby="score-h">
+    <h2 id="score-h" class="display">Forecast scorecard (Mission 13)</h2>
+    <p id="score-sum">Loading the scorecard…</p>
+    <details>
+      <summary>Show every forecast</summary>
+      <div class="scroll"><table id="score"></table></div>
+    </details>
+  </section>
+
   <section class="ledger" aria-labelledby="ledger-h">
     <h2 id="ledger-h" class="display">Every purchase</h2>
     <details>
@@ -139,7 +148,7 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
 
 <footer>
   <div class="wrap">
-    Source, tests and how to reproduce a run: <a href="https://github.com/PugarHuda/takar">github.com/PugarHuda/takar</a>. Telegraph Hackathon Season II entry (Mission 11, Autonomous Systems), with cash prizes. Testnet only; no real money moves and no real machine acts on these decisions.
+    Source, tests and how to reproduce a run: <a href="https://github.com/PugarHuda/takar">github.com/PugarHuda/takar</a>. Telegraph Hackathon Season II entry (Missions 11 and 13), with cash prizes. Also: the <a href="https://github.com/PugarHuda/takar/tree/main/evaluator">EVENT_OUTCOME evaluator</a>, the Takar Outcome miner and <a href="https://www.npmjs.com/package/takar-mcp">takar-mcp</a>. Testnet only; no real money moves and no real machine acts on these decisions.
   </div>
 </footer>
 
@@ -205,6 +214,29 @@ function unitRow(d, budget) {
     </div>
   </article>`;
 }
+
+// Market URLs reach href attributes too, so only Manifold links become links.
+const MARKET = /^https:\/\/manifold\.markets\/[\w\-/]+$/;
+
+(async () => {
+  try {
+    const card = await fetch("receipts/scorecard.json", { cache: "no-store" }).then((r) => r.json());
+    const s = card.summary;
+    document.getElementById("score-sum").innerHTML =
+      `For ${esc(s.forecasts)} resolved prediction markets, Takar read the crowd's probability ${esc(card.rows[0]?.forecast?.daysBefore ?? 7)} days before close, then bought the outcome through Telegraph and held it against the market's own resolution. ` +
+      `<b>${esc(s.scored)}</b> confirmed, <b>${esc(s.contradicted)}</b> contradicted, <b>${esc(s.unverified)}</b> unverified. ` +
+      `Brier score <b>${esc(s.brier)}</b>, where always saying 50% scores ${esc(s.baseline)}. Signed with Ed25519; verify it with <code>npx -y takar-mcp</code> (tool <code>forecast_scorecard</code>).`;
+    document.getElementById("score").innerHTML =
+      `<thead><tr><th>Market</th><th>Crowd</th><th>Resolved</th><th>Telegraph said</th><th>Brier</th><th>Proof</th></tr></thead><tbody>` +
+      card.rows.map((r) => {
+        const q = MARKET.test(r.market.url ?? "") ? `<a href="${r.market.url}">${esc(r.market.question)}</a>` : esc(r.market.question);
+        const a = r.verification.attempts?.at(-1);
+        return `<tr><td>${q}</td><td>${r.forecast ? `${esc(Math.round(r.forecast.p * 100))}%` : "—"}</td><td>${esc(r.market.resolution)}</td><td>${esc(r.verification.telegraph ?? r.verification.status)}${a?.miner ? ` <span class="raw">${esc(a.miner.name)}</span>` : ""}</td><td>${r.brier == null ? "—" : esc(r.brier.toFixed(4))}</td><td>${a ? proofLinks(a.tx, a.signal) : "—"}</td></tr>`;
+      }).join("") + `</tbody>`;
+  } catch (e) {
+    document.getElementById("score-sum").textContent = `Could not load the scorecard (${e.message}).`;
+  }
+})();
 
 (async () => {
   const unitsEl = document.getElementById("units");
