@@ -8,7 +8,7 @@
 // per ask (at most two per market). Writes receipts/scorecard.json, signed.
 import { appendFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { ask, ranked } from "../lib/telegraph.mjs";
-import { resolvedMarkets, forecastAt, verifyOutcome, brier, summarise } from "../lib/scorecard.mjs";
+import { resolvedMarkets, forecastAt, verifyOutcome, brier, summarise, corroborate } from "../lib/scorecard.mjs";
 import { newKeyPair, signDoc } from "../lib/sign.mjs";
 
 const arg = (k, d) => (process.argv.includes(k) ? Number(process.argv[process.argv.indexOf(k) + 1]) : d);
@@ -49,15 +49,17 @@ for (const m of markets) {
   const forecast = await forecastAt(m, { days: DAYS });
   const verification = await verifyOutcome(m, { ask, ranked, run });
   const happened = m.resolution === "YES";
-  const row = { market: m, forecast, verification, brier: forecast ? +brier(forecast.p, happened).toFixed(4) : null };
+  // A confirmed outcome gets a second, independent check (FACT_CHECK), $0.01 more.
+  const corroboration = verification.status === "confirmed" && !process.argv.includes("--no-corroborate") ? await corroborate(m, verification.telegraph, { ask, run }) : null;
+  const row = { market: m, forecast, verification, corroboration, brier: forecast ? +brier(forecast.p, happened).toFixed(4) : null };
   rows.push(row);
   const by = verification.attempts.map((a) => `${a.miner?.name ?? a.miner?.id ?? "-"}:${a.outcome}`).join(", ");
-  console.log(`${verification.status.padEnd(12)} p=${forecast?.p ?? "?"} ${m.resolution.padEnd(3)} | ${m.question.slice(0, 70)} | ${by}`);
+  console.log(`${verification.status.padEnd(12)} p=${forecast?.p ?? "?"} ${m.resolution.padEnd(3)} | ${m.question.slice(0, 70)} | ${by}${corroboration ? ` | fact-check ${corroboration.verdict}` : ""}`);
 }
 
 const doc = {
   title: "Takar forecast scorecard",
-  method: `Crowd probability on Manifold ${DAYS} days before resolution; outcome bought through Telegraph EVENT_OUTCOME_RESOLUTION_GENERAL and compared with the market's resolution; Brier score over confirmed outcomes only.`,
+  method: `Crowd probability on Manifold ${DAYS} days before resolution; outcome bought through Telegraph EVENT_OUTCOME_RESOLUTION_GENERAL and compared with the market's resolution; Brier score over confirmed outcomes only. Each confirmed outcome is also put to FACT_CHECK_GENERAL as a second, independent check, reported and not scored.`,
   generated_at: run,
   network: "Ethereum Sepolia testnet (test USDC)",
   summary: summarise(rows),
