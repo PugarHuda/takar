@@ -16,6 +16,7 @@ Built by Takar from Telegraph miners on 2026-11-21T17:27:16.233Z. Every finding 
 | 0 | 0.871 kg | 1900–1900 | Ravenswood (period) | [MINOCC-2017:Production:481934:1](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Production: 0.871 KG GOLD BULLION \(Ore Amount 18.746 T; Ore Type HARD ROCK ORE \(OR REEF\)\)" |
 
 - **Sum check (MINOCC-2017):** 1 dated rows add up to 0 t; the register's site total is 0 t: consistent.
+- **Cross-team check** ([Praman Desk arbitrator](https://praman-desk.vercel.app/api/gold-rush/aggregate), another team, not a record): consensus 900k oz = 28 t, which matches none of the recorded totals.
 - **Size band** (OathCast (live MINOCC)): very small, under 0.5 t; the register's total 0 t is inside it.
 
 ## Why it stopped

@@ -383,6 +383,14 @@
         "why": "name"
       }
     ],
+    "cross_check": {
+      "source": "https://praman-desk.vercel.app/api/gold-rush/aggregate",
+      "claim": "900k oz",
+      "tonnes": 28,
+      "status": "SYNTHESIS_ARBITRATED",
+      "matches": [],
+      "note": "matches none of the recorded totals"
+    },
     "receipts_tie": {
       "checked": 2,
       "in_paid_answer": 2,
@@ -612,11 +620,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T18:46:28.492Z",
+  "rederived_at": "2026-11-21T18:52:05.944Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "7ec105fa54e75270641508a4d9f50f36ccd8ec4e1a94edcd0cbbb9b33d9c462f",
-    "signature": "Y8si11K6SiDdiY9koLvoT1e5Gm9TavQl79WToPfga+CYn8JmUeSCFpu5i1bgJHEkEPcMlAi0/381pVa8K34MBw==",
+    "sha256": "ddd81b6041cf19e49c6f7c45efd2f03c8d6320c6918396d95f73c03ac1e7afed",
+    "signature": "e04cu9SWjVxgodL3En8jpDyz1ZWxSZT/V21sVjb/4eRpKPWTmst7WMJFWNHRLuq9Yi+BVo5IJ9AHIUNDqUq0Bg==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

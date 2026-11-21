@@ -905,6 +905,25 @@
         "why": "name"
       }
     ],
+    "cross_check": {
+      "source": "https://praman-desk.vercel.app/api/gold-rush/aggregate",
+      "claim": "8.4M oz",
+      "tonnes": 261.3,
+      "status": "SYNTHESIS_ARBITRATED",
+      "matches": [
+        {
+          "source": "QLDGOV-MM",
+          "t": 250,
+          "period": "1882–1990"
+        },
+        {
+          "source": "WP-MM",
+          "t": 262,
+          "period": "1882–1981"
+        }
+      ],
+      "note": "matches QLDGOV-MM (250 t, 1882–1990) and WP-MM (262 t, 1882–1981)"
+    },
     "receipts_tie": {
       "checked": 7,
       "in_paid_answer": 3,
@@ -1913,11 +1932,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T18:46:13.357Z",
+  "rederived_at": "2026-11-21T18:52:03.209Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "615b38c14f4c1802b68983e3f94dd75dd274d810020b4a8e823bd8797472ef7b",
-    "signature": "KYhtb9sXdBcmd0zuwz/Xixhn72PLxfGyXw1KuJBLFnrX0358skqtfwu9RqxgtyO2k72vzosfSDHDUl5Xek+aCw==",
+    "sha256": "0ee4c79b27870320362d71fccce9b3d5ec9008d4bc44e2683e061d28ddd4abc4",
+    "signature": "i2PRN9OGEyi4Y7EKX64xmG9LaGyYly4+q/wf1+hoAm/LHThsBJkzKrcZEmfShz0wwWuz0/9FrSzpHauPnqqXBg==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

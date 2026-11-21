@@ -18,6 +18,7 @@ Built by Takar from Telegraph miners on 2026-11-21T16:14:19.801Z. Every finding 
 
 - **Sum check (MINOCC-2017):** 1 dated rows add up to 51.5 t; the register's site total is 51.5 t: consistent.
 - **not comparable:** WP-CTSHAFTS vs MINOCC-2017:Total_Ores_Prod:38722: different periods (1908–1916 and ?–1917).
+- **Cross-team check** ([Praman Desk arbitrator](https://praman-desk.vercel.app/api/gold-rush/aggregate), another team, not a record): consensus 6.6M oz = 205.3 t, which matches none of the recorded totals.
 - Like for like: MINOCC-2017's dated rows to 1917 sum to 51.5 t, against 0.7 t in WP-CTSHAFTS.
 - **Size band** (OathCast (live MINOCC)): large, 50-150 t; the register's total 51.5 t is inside it.
 

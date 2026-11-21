@@ -503,6 +503,14 @@
         "why": "town (CHARTERS TOWERS)"
       }
     ],
+    "cross_check": {
+      "source": "https://praman-desk.vercel.app/api/gold-rush/aggregate",
+      "claim": "6.6M oz",
+      "tonnes": 205.3,
+      "status": "SYNTHESIS_ARBITRATED",
+      "matches": [],
+      "note": "matches none of the recorded totals"
+    },
     "receipts_tie": {
       "checked": 3,
       "in_paid_answer": 3,
@@ -841,11 +849,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T18:46:16.256Z",
+  "rederived_at": "2026-11-21T18:52:03.766Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "29c46df6fffd1f379d8617148c106805cc6a4f18f5cbdc51a35e3f2c9c6a999f",
-    "signature": "pqxf4vQceoU8nU+mL+uJu6tLO3DbegQrlWxDzjU1unn6x0vshnnjJ5UqCzVeCoQ8+yh5wHcuh85nwnCxRLZVBg==",
+    "sha256": "77ba36e3e1c6eeebf638a03870489b567df1237aed8ba2124a0a3662d418bf48",
+    "signature": "9IP4rZMJJ/Ys0jj6sS9741wd9zJGZW36F5iWwX99pbxrIjbnSZzawMgWZ/61wTgyPi95e7ZIOAqXERDXxSAOAw==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

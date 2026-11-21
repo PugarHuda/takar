@@ -639,6 +639,13 @@
       "note": "A registered native title claim covers this point. A lease's own native-title category describes the position when it was granted; today's claim still matters for any new grant or access. Confirm with the claimants' representative and a lawyer."
     },
     "heritage": [],
+    "cross_check": {
+      "source": "https://praman-desk.vercel.app/api/gold-rush/aggregate",
+      "claim": "Verified",
+      "tonnes": null,
+      "matches": [],
+      "note": "no usable consensus figure"
+    },
     "receipts_tie": {
       "checked": 14,
       "in_paid_answer": 1,
@@ -1520,11 +1527,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T18:46:18.959Z",
+  "rederived_at": "2026-11-21T18:52:04.054Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "63bfeac8b4fd2f157fabd93fc0c77db1483ff986f1d76b0f007d7c6d7a68f4b2",
-    "signature": "WrTyo6gh88a8glTom65CtZNDrfNKqoWiMeShGoavxSBRSopABfUp+RtOTuQYWnLkntr3HBF2XlAB51Cm/oWhBg==",
+    "sha256": "dbc73d57ab4ddc5fd64da027f26fd8c532bc3ed6b0ed471da7d4a150cd8d1819",
+    "signature": "Ubdxa1KfPd7twFEFPyvVpKa94mNSAuoNwQ0NuDIfBBROI4II4r9iFjvhgBTfPktBNwIKEolKIUHFw9yxZsalAQ==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

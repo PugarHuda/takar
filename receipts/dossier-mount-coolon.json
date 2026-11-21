@@ -554,6 +554,13 @@
         "why": "name"
       }
     ],
+    "cross_check": {
+      "source": "https://praman-desk.vercel.app/api/gold-rush/aggregate",
+      "claim": "Verified",
+      "tonnes": null,
+      "matches": [],
+      "note": "no usable consensus figure"
+    },
     "receipts_tie": {
       "checked": 6,
       "in_paid_answer": 1,
@@ -1125,11 +1132,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T18:46:30.687Z",
+  "rederived_at": "2026-11-21T18:52:06.229Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "a4a0dff44dbdad4c8634201f442b20c6bd0a1f06af41070c51214e44c3b57fa0",
-    "signature": "6LDA7hAsh5FyQ6yS+8Gua3ZQhRLfmlTBHLiHJbDmOh3y3cuEIqsK0O2xrwf08vxRJRk4K+7LKWYZsWR59mepCw==",
+    "sha256": "822751743cd5a637a0e29c01f067dcea9ef1ad10e37f03899806515e8593e258",
+    "signature": "CBaDCVuRXyOpMirn5F/K/f9dVhSxwz+IMHs3hqyLHuogpUPJW+OspkQXwEvidYtOvUS5YBESA4T5MiAHcq5ZCA==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

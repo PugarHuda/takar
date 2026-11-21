@@ -24,6 +24,7 @@ Built by Takar from Telegraph miners on 2026-11-21T16:14:19.801Z. Every finding 
 - **close:** QLDGOV-MM vs WP-MM: within 5% (250 t and 262 t) over different periods (1882–1990 and 1882–1981); the shorter period reports slightly more, so they may count differently.
 - **conflict:** QLDGOV-MM vs MINOCC-2017:Total_Ores_Prod:494270: same period (1882–1990), 250 t against 294.1 t, 15% apart. Candidate explanation: MINOCC-2017 includes 56.2 t from dumps or tailings (1983–1990); without it, 237.9 t, 5% from 250 t. Needs the record to confirm.
 - **not comparable:** WP-MM vs MINOCC-2017:Total_Ores_Prod:494270: different periods (1882–1981 and ?–1990).
+- **Cross-team check** ([Praman Desk arbitrator](https://praman-desk.vercel.app/api/gold-rush/aggregate), another team, not a record): consensus 8.4M oz = 261.3 t, which matches QLDGOV-MM \(250 t, 1882–1990\) and WP-MM \(262 t, 1882–1981\).
 - Like for like: MINOCC-2017's dated rows to 1990 sum to 294.1 t, against 250 t in QLDGOV-MM.
 - Like for like: MINOCC-2017's dated rows to 1982 sum to 237.9 t, against 262 t in WP-MM.
 - **Size band** (OathCast (live MINOCC)): giant, over 150 t; the register's total 294.1 t is inside it.
