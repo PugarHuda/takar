@@ -1,7 +1,7 @@
 {
   "title": "Gold Rush dossier: Mount Leyshon",
   "method": "Telegraph miners asked directly by id; structured rows from goldrush-qld-history's registered endpoint, tied to the paid answer; checks by Takar (lib/dossier.mjs). Figures are never merged or estimated.",
-  "generated_at": "2026-11-21T16:05:56.627Z",
+  "generated_at": "2026-11-21T16:14:19.801Z",
   "network": "Ethereum Sepolia testnet (test USDC)",
   "dossier": {
     "mine": "Mount Leyshon",
@@ -330,7 +330,7 @@
         "miner": "Gold Rush Queensland Mine History",
         "id": "7310050",
         "intent": "RESEARCH_QUERY_GENERAL",
-        "signal": "0x2513d06eeab5d03e8700b201c85756aa584b395f96e0dc7c39432ab598c86e0d",
+        "signal": "0x11a7dc78b1471d5cb192730cebc7b3da72b75ee56145081d9667a28dcb1b8a18",
         "cost": 0.01,
         "shape": "intent"
       }
@@ -360,9 +360,27 @@
           "20260828"
         ],
         "signals": [
-          "0x8c12782985e980c0323c6a8e4490d2fb84781c795b61b82eda98e64d670840da"
+          "0xeb6b02e7d58aaaf709ff65b3618235e3809690247001935e2f39f0023b2a7a9f"
         ],
         "cost": 0.01
+      }
+    ],
+    "closure_research": [
+      {
+        "year": 2002,
+        "status": "single source",
+        "shared": [],
+        "answers": [
+          {
+            "miner": "TxLens",
+            "causes": [
+              "price, cost or capital"
+            ],
+            "quote": "The Mount Leyshon gold mine in Queensland ceased operations in 2002 after the company determined that the remaining ore reserves were too small to justify continued extraction, and falling gold prices made the project uneconomic.  The mine had been operating since the 1970s, but by the early 2000s t",
+            "signal": "0x235c15573909c20a021d5b4640d66edadad801c1738ebe3952ed02020765c98c"
+          }
+        ],
+        "cost": 0.02
       }
     ],
     "receipts_tie": {
@@ -469,7 +487,7 @@
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0x23b6953df451593c569b858f80916dd8da146f18d20ab8fc13c6387705f7f588",
+      "signal": "0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4",
       "cost": 0.01,
       "shape": "intent",
       "rank": "#13 of 30"
@@ -478,7 +496,7 @@
       "miner": "OathCast Queensland Gold Mines",
       "id": "64176",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0xe158e724a199774b59ceb46ba284d580b25d4e6428ed128787d0e876a4f42e9e",
+      "signal": "0x1fa7493e51c2f540a2acf204bc682598bd4ecb8f4d4d20288b40bdcfa2fbdc1e",
       "cost": 0.01,
       "shape": "intent",
       "rank": "#15 of 30"
@@ -487,7 +505,7 @@
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0x2513d06eeab5d03e8700b201c85756aa584b395f96e0dc7c39432ab598c86e0d",
+      "signal": "0x11a7dc78b1471d5cb192730cebc7b3da72b75ee56145081d9667a28dcb1b8a18",
       "cost": 0.01,
       "shape": "intent",
       "rank": "#13 of 30"
@@ -496,7 +514,7 @@
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0xfdb383678eddacfecc6edf3450da825e7842838603ba6b6ce66336b454bf9089",
+      "signal": "0x537da18e8c257b3ff46e883578d1bb18e97e5af07c77c2dcd2947d9069e1cb58",
       "cost": 0.01,
       "shape": "intent",
       "rank": "#13 of 30"
@@ -505,7 +523,7 @@
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0xfdb383678eddacfecc6edf3450da825e7842838603ba6b6ce66336b454bf9089",
+      "signal": "0x537da18e8c257b3ff46e883578d1bb18e97e5af07c77c2dcd2947d9069e1cb58",
       "cost": 0.01,
       "shape": "intent",
       "rank": null,
@@ -1247,8 +1265,8 @@
   },
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "55d89f35f37ad1f4f6e943fcf600c70ff9dc82556ba144b161653b3639b1533c",
-    "signature": "qmZV4CUc6/8yYnoliI8RtEDfyWJVmlWrBMV724lXeHVjDCY4gHYQYkSPKxzOiGIKHyP22fq1tySqcS4/SHBzAA==",
+    "sha256": "ea9f1030a44b8cbb686e895603d3d91afd9a16525b29d834e236c31476fc7e51",
+    "signature": "l7bEsKcD2MrjPMQKxxzECyWHzrUk5VKWBT0gV59luYwrvA/cziP83K/vr9BGp3zLFKNk3Dt5q4h9B47SVuIQDg==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

@@ -1,6 +1,6 @@
 # Mount Morgan: Gold Rush dossier
 
-Built by Takar from Telegraph miners on 2026-11-21T16:05:56.627Z. Every finding names its record; figures are never merged or estimated; conflicts are shown side by side. Signed with Ed25519 (see the JSON).
+Built by Takar from Telegraph miners on 2026-11-21T16:14:19.801Z. Every finding names its record; figures are never merged or estimated; conflicts are shown side by side. Signed with Ed25519 (see the JSON).
 
 ## Identity
 
@@ -36,6 +36,13 @@ Built by Takar from Telegraph miners on 2026-11-21T16:05:56.627Z. Every finding 
 - **1990** (two sources): *no source states a reason*
   - [QLDGOV-MM](https://www.qld.gov.au/environment/land/management/abandoned-mines/remediation-projects/mount-morgan) on Mount Morgan mine: "with its mining operations continuing until November 1990"
   - [MINOCC-2017:MineHist:494270:6](https://geoscience.data.qld.gov.au/dataset/ds000004) on Mount Morgan: "MineHist #6: Start Year 1981, End Year 1990, Tailings retreated by Mount Morgan Ltd."
+
+### What research miners say about the unexplained closures (not records)
+
+- **1990**: single source.
+  - TxLens, naming ore exhausted, price, cost or capital: "The Mount Morgan gold mine in Queensland ceased operations in 1990 because its ore bodies were largely exhausted and the remaining reserves could not be mined profitably. By the late 1980s production had fallen sharply, and falling gold prices combined with high operating costs made further extracti" [signal 0x128ce8b5…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x128ce8b5180d6e1c20cdc0b2edf46545e7ee0987aa467798062dbc977f8bafed)
+
+Two research answers naming the same kind of cause is a lead to check in the record, not a finding.
 
 ## Gold price then and now
 
@@ -73,9 +80,9 @@ A register's status is not a mining tenure: who holds the lease today needs the 
 
 3 of 7 production figures from the miner's structured record also appear word for word in the answer bought through Telegraph.
 
-- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0xa810cf69…](https://devnode.telegraphprotocol.com/engine/v1/signal/0xa810cf694fbe2eb8d11fdcbcf0ac012a6019b92756d3fa9bff2141e0971e6afd), $0.01; node rank for the intent: #13 of 30
-- OathCast Queensland Gold Mines (64176), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x2645faa9…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x2645faa9b01e4c1031561a07f05199633e578df500810016d2eb5a188b6fa6e6), $0.01; node rank for the intent: #15 of 30
-- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x4b586d45…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x4b586d454a89858fd2d4c9379e06084e5e0ae530f59fc3af1968bb9c4c203e05), $0.01; node rank for the intent: #13 of 30
-- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0xfdb38367…](https://devnode.telegraphprotocol.com/engine/v1/signal/0xfdb383678eddacfecc6edf3450da825e7842838603ba6b6ce66336b454bf9089), $0.01; node rank for the intent: #13 of 30
+- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x15762118…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x1576211842e39f4e3a2d12374953e30e387ec32cbac6342799c208982d37a296), $0.01; node rank for the intent: #13 of 30
+- OathCast Queensland Gold Mines (64176), RESEARCH_QUERY_GENERAL: [Telegraph signal 0xbfcb0d3c…](https://devnode.telegraphprotocol.com/engine/v1/signal/0xbfcb0d3c2b0e8a72b9a2fda9e599ad4a1da0d0f774b79c19af8e2779d9207010), $0.01; node rank for the intent: #15 of 30
+- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x8d880417…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x8d880417bb026548a329097fe1e82c85ff27d297ed828fd4f913bd40eb7fad94), $0.01; node rank for the intent: #13 of 30
+- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x537da18e…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x537da18e8c257b3ff46e883578d1bb18e97e5af07c77c2dcd2947d9069e1cb58), $0.01; node rank for the intent: #13 of 30
 
 Rank is shown next to the evidence, never in place of it.

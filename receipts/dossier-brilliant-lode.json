@@ -1,7 +1,7 @@
 {
   "title": "Gold Rush dossier: Brilliant Lode",
   "method": "Telegraph miners asked directly by id; structured rows from goldrush-qld-history's registered endpoint, tied to the paid answer; checks by Takar (lib/dossier.mjs). Figures are never merged or estimated.",
-  "generated_at": "2026-11-21T16:05:56.627Z",
+  "generated_at": "2026-11-21T16:14:19.801Z",
   "network": "Ethereum Sepolia testnet (test USDC)",
   "dossier": {
     "mine": "Brilliant Lode",
@@ -189,7 +189,7 @@
         "miner": "Gold Rush Queensland Mine History",
         "id": "7310050",
         "intent": "RESEARCH_QUERY_GENERAL",
-        "signal": "0x04e7a7a6bc663a89ed2f50ee5089adc6f56e130994db9f7e7f05c4438c0a71e6",
+        "signal": "0xea63c14b735c8d026aec0c888999c79811053a5b00f4f6c807990710c8000480",
         "cost": 0.01,
         "shape": "intent"
       }
@@ -210,8 +210,8 @@
           "6110114"
         ],
         "signals": [
-          "0x057733940f62506eede92cb7f583f489fb8f0758c9572119549ab4a5e3485c2c",
-          "0xe528258f4a222f8cfda4c1ccfca61693f8e2ce799f902c079d1f5d2be30e9322"
+          "0xdf8f3c1f6c1d0de7f68328cff2228b5faea3dbf7466cba24bcc0203dbcbd1343",
+          "0xd78f988621dcde86047c754826dddffef2d7a8a12c53c6c4e3c2bc3c1c7427a6"
         ],
         "cost": 0.02
       },
@@ -226,6 +226,25 @@
         "miners": [],
         "signals": [],
         "cost": 0.01
+      }
+    ],
+    "closure_research": [
+      {
+        "year": 1917,
+        "status": "single source",
+        "shared": [],
+        "answers": [
+          {
+            "miner": "TxLens",
+            "causes": [
+              "ore exhausted",
+              "price, cost or capital"
+            ],
+            "quote": "The Brilliant Lode gold mine in Queensland ceased operations in 1917 when its gold ore reserves were depleted, making further mining uneconomic. The decline in output and rising costs led the owners to shut the mine that year.",
+            "signal": "0xd005f41d16939f5b0b916dfe6c7c8e4bd29f94b46dbe88dff808164acb30a1d2"
+          }
+        ],
+        "cost": 0.02
       }
     ],
     "receipts_tie": {
@@ -264,7 +283,7 @@
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0x469efebbacf03420db6fb8db27eb3c8d81ace424988a2958c99110b225a4df61",
+      "signal": "0x018bbe60ccae8ddeb6cd2949c9505c6aa5a4e8c5eb3c95663cca586090f9f286",
       "cost": 0.01,
       "shape": "intent",
       "rank": "#13 of 30"
@@ -273,7 +292,7 @@
       "miner": "OathCast Queensland Gold Mines",
       "id": "64176",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0xec2f50cd5ec7a7dcf346ffcef72d3f1627fd66473936a33f0af8aa967a6553a0",
+      "signal": "0x38d7c28746a6babf81ab5067605cdbecbc74732779e1156be2626a17672bcc90",
       "cost": 0.01,
       "shape": "intent",
       "rank": "#15 of 30"
@@ -282,7 +301,7 @@
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0x04e7a7a6bc663a89ed2f50ee5089adc6f56e130994db9f7e7f05c4438c0a71e6",
+      "signal": "0xea63c14b735c8d026aec0c888999c79811053a5b00f4f6c807990710c8000480",
       "cost": 0.01,
       "shape": "intent",
       "rank": "#13 of 30"
@@ -291,7 +310,7 @@
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0xfdb383678eddacfecc6edf3450da825e7842838603ba6b6ce66336b454bf9089",
+      "signal": "0x537da18e8c257b3ff46e883578d1bb18e97e5af07c77c2dcd2947d9069e1cb58",
       "cost": 0.01,
       "shape": "intent",
       "rank": "#13 of 30"
@@ -300,7 +319,7 @@
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0xfdb383678eddacfecc6edf3450da825e7842838603ba6b6ce66336b454bf9089",
+      "signal": "0x537da18e8c257b3ff46e883578d1bb18e97e5af07c77c2dcd2947d9069e1cb58",
       "cost": 0.01,
       "shape": "intent",
       "rank": null,
@@ -309,7 +328,7 @@
   ],
   "paid_answers": {
     "history": {
-      "answer": "Brilliant Lode, a large gold mine located 1.1 km east of Charters Towers, was operated from 1879 to 1917 and closed in 1917 without a stated reason. The Geological Survey of Queensland records it as an abandoned mine with a gold size band of 50-150 tonnes. Reported production includes 22,843 ounces of gold from the Brilliant Deeps (on the Brilliant reef) between 1908 and 1916, and 51,482.73 kg (approximately 1.66 Moz troy) of gold from the Brilliant Lode up to 1917. The mine processed 2,168,244 tonnes of ore. Ownership changed from the Brilliant Deep Levels Gold Mining Company (1896-1907) to Citigold Corporation Limited.",
+      "answer": "Brilliant Lode, a large gold mine located 1.1 km east of Charters Towers, was operated from 1879 to 1917 and closed in 1917 without a stated reason. The Geological Survey of Queensland records it as an abandoned mine with a gold size band of 50-150 tonnes. Reported production includes 22,843 ounces of gold from the Brilliant Deeps (1908-1916) and 51,482.73 kg (approximately 1.66 Moz) of gold from the Brilliant Lode (to 1917). The mine processed 2,168,244 tonnes of ore. Ownership was held by the Brilliant Deep Levels Gold Mining Company from 1896 to 1907, followed by Citigold Corporation Limited.",
       "source_count": 3,
       "sources": [
         "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D38722&outFields=%2A&f=json",
@@ -566,8 +585,8 @@
   },
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "fbd361a93d7daa2b98d920f2f0536e466ac4970462abbcb5633e4dad4fcf1eb4",
-    "signature": "tgE1RKvizwpn/sFeAUvNvYVdS31YRWjg2v/r5kTzPYFDIF/zJQRs82dvkmHtWHOJF3xCdsNmlhXui+khqfcAAg==",
+    "sha256": "839fea2c93080ec52453e3f768fb785d06f5cab8349a8bd70208cf3935b98069",
+    "signature": "3+eFHiIKsj8X30qQY8ugpN3YHWA3059WZKF0cD/0cGdbpcWaOLJXvXFlFIscX/CC4Bj0QyEAXqYQQRkilHC7Cw==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }
