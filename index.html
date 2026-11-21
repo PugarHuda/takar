@@ -343,6 +343,17 @@ const canonical = (v) => Array.isArray(v) ? `[${v.map(canonical).join(",")}]`
   }
 })();
 
+// The contested-only scorecard: markets the crowd had not already called (10%–90%).
+(async () => {
+  try {
+    const c = await fetch("receipts/scorecard-contested.json").then((x) => x.json());
+    const s = c.summary;
+    const p = document.createElement("p");
+    p.innerHTML = `<b>The harder test.</b> A second run kept only markets where the crowd sat between 10% and 90% a week out (markets skipped before any ask was paid): ${esc(s.scored)} scored, Brier <b>${esc(s.brier)}</b> (95% interval ${esc(s.sample.brier_ci95.join(" to "))}), skill ${esc(s.brier_skill)} against a coin flip, against ${esc(s.sample.brier_base_rate_forecast)} for always forecasting the base rate. <a href="receipts/scorecard-contested.json">Signed file</a>.`;
+    document.getElementById("score-sum").after(p);
+  } catch {}
+})();
+
 document.getElementById("mr").addEventListener("submit", async (ev) => {
   ev.preventDefault();
   const id = document.getElementById("mr-id").value.trim();

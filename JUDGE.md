@@ -82,7 +82,8 @@ For each resolved prediction market, Takar reads the crowd's probability 7 days 
 |---|---|
 | Run | `npm run fund && npm run scorecard` (up to three $0.01 asks per market plus one FACT_CHECK, from escrow). Writes the signed `receipts/scorecard.json`. |
 | New input | `npm run scorecard -- --days 30 --per-topic 3 --out receipts/scorecard-30d.json`. Topics are `TOPICS` in `scripts/scorecard-run.mjs`. |
-| Check | `summary`: 28 markets, 20 scored, 6 contradicted, 1 split, Brier 0.0085, Brier skill 0.966, log loss 0.064 (a coin flip scores 0.693), plus calibration bins. `summary.miners` grades the miners on the same receipts: PREFLIGHT 13 of 13 right, TxLens 8 right and 7 wrong, Takar Outcome 1 right and 27 `unresolved`. |
+| Check | `summary`: 28 markets, 20 scored, 6 contradicted, 1 split, Brier 0.0085, Brier skill 0.966, log loss 0.064 (a coin flip scores 0.693), plus calibration bins. `summary.miners` grades the miners on the same receipts: PREFLIGHT 13 of 13 right, TxLens 8 right and 7 wrong, Takar Outcome 1 right and 27 `unresolved`. `summary.sample` says what that Brier is worth: 16 of the 20 were near-certain (under 10% or over 90%), so it mostly measures easy markets (bootstrap 95% interval 0.002–0.019; always forecasting the base rate would score 0.0475). |
+| Harder test | `npm run scorecard -- --contested --per-topic 8 --out receipts/scorecard-contested.json` skips, before paying, every market the crowd had already called. Signed result: 15 contested markets, all confirmed, Brier **0.1148** (95% interval 0.054–0.195), skill 0.54 against a coin flip, against 0.249 for always forecasting the base rate. 3 of 15 rest on two miners. |
 | Inspect | each row's `verification.attempts[].signal`. |
 | Break | A miner that contradicts the market is reported, not scored. Two miners that disagree make the row `split`. No yes or no gives `unverified`. All three are tested in `lib/scorecard.test.mjs`. |
 
@@ -169,4 +170,4 @@ We did not capture or train on the node's pairs, and we did not seed the family'
 
 ## What is not claimed
 
-Real machines, production traffic or paying customers. The fleet is simulated, and every purchase is testnet. The scorecard is 28 markets. The Mission 05 note is one brief with eight claims. Our miner answers few of the scorecard's markets; the confirmations there come mostly from PREFLIGHT, and the board shows it.
+Real machines, production traffic or paying customers. The fleet is simulated, and every purchase is testnet. The scorecard is 28 markets, plus 15 contested ones; both samples are small and the intervals say so. Settle has one resolver (Takar) and no dispute bond: a dispute costs the disputer nothing but gas, and the contract cannot check on chain that a signal is Telegraph's. The Mission 05 note is one brief with eight claims. Our miner answers few of the scorecard's markets; the confirmations there come mostly from PREFLIGHT, and the board shows it.
