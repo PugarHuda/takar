@@ -27,7 +27,8 @@ for (const f of readdirSync("receipts").filter((x) => /^dossier-.*\.json$/.test(
 console.table(items.map((i) => ({ kind: i.kind, digest: i.digest.slice(0, 18) + "…", count: i.count })));
 if (!process.argv.includes("--send")) { console.log("dry run; add --send"); process.exit(0); }
 
-const wallet = new ethers.Wallet(process.env.AGENT_PRIVATE_KEY, new ethers.JsonRpcProvider("https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true }));
+// A dedicated anchor key in CI (TAKAR_ANCHOR_KEY, a few test ETH); the agent key locally.
+const wallet = new ethers.Wallet(process.env.TAKAR_ANCHOR_KEY ?? process.env.AGENT_PRIVATE_KEY, new ethers.JsonRpcProvider("https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true }));
 const reg = new ethers.Contract(SCHEMA_REGISTRY, ["function register(string,address,bool) returns (bytes32)", "function getSchema(bytes32) view returns (tuple(bytes32 uid, address resolver, bool revocable, string schema))"], wallet);
 if ((await reg.getSchema(ANCHOR_UID)).uid === ethers.ZeroHash) { const t = await reg.register(ANCHOR_SCHEMA, ethers.ZeroAddress, true); await t.wait(); console.log(`registered anchor schema ${ANCHOR_UID}`); }
 const eas = new ethers.Contract(EAS, ["function multiAttest(tuple(bytes32 schema, tuple(address recipient, uint64 expirationTime, bool revocable, bytes32 refUID, bytes data, uint256 value)[] data)[] multiRequests) payable returns (bytes32[])"], wallet);
