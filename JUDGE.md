@@ -114,7 +114,7 @@ The escalation tally counts confirmed claims only.
 
 - All three settlement contracts (v2 `0xcb35…7187`, v3 `0xf977…502b`, v4 `0x2A61…2aBd`) are source-verified on Sourcify (exact match).
 - `scripts/smoke.mjs` checks the live site's free endpoints every night (`.github/workflows/smoke.yml`); `.github/workflows/served.yml` snapshots the node's request counter every two hours.
-- `scripts/anchor.mjs` puts the ledger's Merkle root and every dossier hash on EAS; `--verify <count> <root>` recomputes a published root from the file.
+- `scripts/anchor.mjs` puts the ledger's Merkle root and every dossier hash on EAS, every day from CI (`.github/workflows/anchor.yml`, a dedicated anchor wallet `0xf3ee…7bE5`); `--verify <count> <root>` recomputes a published root from the file.
 
 ## Gold Rush dossiers (for Telegraph's own Gold Rush app)
 
