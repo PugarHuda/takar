@@ -400,7 +400,14 @@
         "signal": "0x8d880417bb026548a329097fe1e82c85ff27d297ed828fd4f913bd40eb7fad94",
         "cost": 0.01,
         "shape": "intent"
-      }
+      },
+      "real": {
+        "cpi_then": 130.66,
+        "cpi_now": 337.511,
+        "inflation": 2.58,
+        "real_ratio": 3.88
+      },
+      "cpi_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS"
     },
     "control": [
       {
@@ -1470,10 +1477,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
+  "rederived_at": "2026-11-21T16:46:01.156Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "c52f6c66ec1fec69f7a46ec77b92f573889798b632eafbd4e3cece27d330b6e3",
-    "signature": "H3A38TcVisfqcIYzAQb30oPuyVtPzNwGPhQjv79/m3V8jY7fu4afNsh1pXYlhYsNWS01GYkwOtJA83DQBLWyAQ==",
+    "sha256": "f826aecad6b7357d8f3cbcb60f54972eb33a9025ede441272d63b6e54f2eebe8",
+    "signature": "6XZm3szTcS0lpCqg5HnqFihnJnvZR/b8tgFXJQOnDze4JCzBMwO7jeeBGaPnb9I1/I8KJiVeNdFsirzx1thMDA==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

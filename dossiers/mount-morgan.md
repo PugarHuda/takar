@@ -49,6 +49,7 @@ Two research answers naming the same kind of cause is a lead to check in the rec
 - At the last closure year (1990): US$410 per ounce (Gold, monthly average per troy ounce (World Bank Pink Sheet, nominal US dollars) from 1960).
 - Latest: US$4105 per ounce in October 2026 (Gold, monthly average per troy ounce (World Bank Pink Sheet, nominal US dollars) from 1960), single source.
 - About 10x the closure-year price. Nominal dollars, not adjusted for inflation; the closure-year figure may be an official price rather than a market one (see its text).
+- In real terms (US CPI, [FRED CPIAUCNS](https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS); prices rose 2.58x since 1990): about **3.88x**.
 
 ## Who controls it today (company registers)
 

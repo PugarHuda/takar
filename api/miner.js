@@ -10,6 +10,8 @@ import { SCHEMA_UID } from "./second-opinion.js";
 const EXPLORER = "https://anjoman.ai/api/explorer";
 let reg = { at: 0, list: [] };
 let rep = { at: 0, atts: [] };
+let served = { at: 0, snaps: [] };
+const SERVED = "https://raw.githubusercontent.com/PugarHuda/takar/main/receipts/served.jsonl";
 const get = (u) => fetch(u, { signal: AbortSignal.timeout(10_000) }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
 
 export default async function handler(req, res) {
@@ -22,12 +24,14 @@ export default async function handler(req, res) {
   if (Date.now() - rep.at > 10 * 60_000) rep = { at: Date.now(), atts: await readAttestations(SCHEMA_UID).catch(() => rep.atts) };
 
   const slug = encodeURIComponent(m.slug);
-  const [scores, checks, statuses] = await Promise.all([
-    get(`${EXPLORER}/scores?miner=${slug}&limit=100`), get(`${EXPLORER}/spot-checks?miner=${slug}&limit=100`), get(`${EXPLORER}/miner-status?miner=${slug}`),
+  // The node's request counter, snapshotted every two hours by .github/workflows/served.yml.
+  if (Date.now() - served.at > 30 * 60_000) { const t = await fetch(SERVED, { signal: AbortSignal.timeout(10_000) }).then((r) => (r.ok ? r.text() : "")).catch(() => ""); served = { at: Date.now(), snaps: t.split(/\r?\n/).filter(Boolean).map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean) }; }
+  const [scores, checks, statuses, epochs] = await Promise.all([
+    get(`${EXPLORER}/scores?miner=${slug}&limit=100`), get(`${EXPLORER}/spot-checks?miner=${slug}&limit=100`), get(`${EXPLORER}/miner-status?miner=${slug}`), get(`${EXPLORER}/epochs?limit=100`),
   ]);
   const intents = [...new Set(rep.atts.filter((a) => a.minerId === String(m.id)).map((a) => a.intent))];
   const evidence = intents.flatMap((intent) => rank(rep.atts, { intent }).filter((r) => r.minerId === String(m.id)).map((r) => ({ ...r, intent })));
-  const report = minerReport({ scores: scores?.scores ?? [], checks: checks?.checks ?? [], statuses: statuses?.statuses ?? [], evidence });
+  const report = minerReport({ scores: scores?.scores ?? [], checks: checks?.checks ?? [], statuses: statuses?.statuses ?? [], evidence, minerId: m.id, snapshots: served.snaps, epochs: epochs?.epochs ?? [] });
 
   res.setHeader("Cache-Control", "s-maxage=600");
   if (req.query?.format === "svg") {

@@ -192,7 +192,9 @@
         "signal": "0xea63c14b735c8d026aec0c888999c79811053a5b00f4f6c807990710c8000480",
         "cost": 0.01,
         "shape": "intent"
-      }
+      },
+      "real": null,
+      "cpi_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS"
     },
     "control": [
       {
@@ -583,10 +585,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
+  "rederived_at": "2026-11-21T16:46:01.174Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "839fea2c93080ec52453e3f768fb785d06f5cab8349a8bd70208cf3935b98069",
-    "signature": "3+eFHiIKsj8X30qQY8ugpN3YHWA3059WZKF0cD/0cGdbpcWaOLJXvXFlFIscX/CC4Bj0QyEAXqYQQRkilHC7Cw==",
+    "sha256": "37a93504f46963274d686ca465f7961c4713b86765eb7c2406ed72926dd60d75",
+    "signature": "Oe5JpwKARHBHzeidslKFnnDSUfuh+ZK/7hz4X94JlM4dx1zZ9GM+AbT8h5hszzqDiMmkXEtiUVjptnJCwEndCA==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

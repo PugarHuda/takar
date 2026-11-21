@@ -40,6 +40,15 @@ const TRUTH = {
   "Bank Rossiya": { listed: true, source: "US Treasury OFAC SDN list, UID 16681 (UKRAINE-EO13661), https://sanctionssearch.ofac.treas.gov/" },
   "Siemens AG": { listed: false, source: "not on the US Treasury OFAC SDN list as of 21 Nov 2026, https://sanctionssearch.ofac.treas.gov/" },
 };
+// Every screen Settle v3 decided also carries Praman's OFAC SDN verdict, a check outside Telegraph:
+// a name Praman screened cleanly becomes known truth for the miners asked about it.
+if (existsSync("receipts/settlements3.jsonl")) {
+  for (const l of readFileSync("receipts/settlements3.jsonl", "utf8").split(/\r?\n/).filter(Boolean)) {
+    const r = JSON.parse(l);
+    if (r.name && typeof r.praman?.matched === "boolean" && r.praman.list_loaded && !TRUTH[r.name])
+      TRUTH[r.name] = { listed: r.praman.matched, source: `Praman OFAC SDN screen (list loaded ${r.praman.list_loaded}), outside Telegraph${r.praman.top ? `: ${r.praman.top}` : ""}` };
+  }
+}
 const ledger = readFileSync("receipts/ledger.jsonl", "utf8").trim().split("\n").filter(Boolean).map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
 const records = dedupe([...fromScorecard(card), ...fromFleet(decisions), ...fromScreens(ledger, TRUTH)], already);
 console.log(`${records.length} new records (${already.size} signals already attested)`);

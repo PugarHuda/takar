@@ -27,16 +27,19 @@ const provider = new ethers.JsonRpcProvider(process.env.RPC ?? "https://ethereum
 const r1 = new ethers.Wallet(process.env.AGENT_PRIVATE_KEY, provider); // proposes, and is the payer of the demo deals
 const r2 = new ethers.Wallet(process.env.SERVER_PAYER_KEY, provider); // seconds
 const party = { payer: r1, payee: new ethers.Wallet(process.env.TAKAR_COUNTERPARTY_KEY, provider) };
-const artifact = JSON.parse(readFileSync(new URL("../onchain/TakarSettle3.artifact.json", import.meta.url), "utf8"));
+// --v4: the same flow on TakarSettle4 (v3 plus escalation to the full panel once both parties disputed).
+const V4 = process.argv.includes("--v4");
+const ENV = V4 ? "TAKAR_SETTLE4" : "TAKAR_SETTLE3";
+const artifact = JSON.parse(readFileSync(new URL(`../onchain/TakarSettle${V4 ? 4 : 3}.artifact.json`, import.meta.url), "utf8"));
 const erc20 = (w) => new ethers.Contract(USDC, ["function approve(address,uint256) returns (bool)", "function allowance(address,address) view returns (uint256)"], w);
 const [cmd, ...rest] = process.argv.slice(2);
 const arg = (k, d) => { const i = rest.indexOf(`--${k}`); return i >= 0 ? rest[i + 1] : d; };
 const tx = (h) => `https://sepolia.etherscan.io/tx/${h}`;
 const STATES = ["open", "proposed", "settled", "reclaimed"];
-const log = (row) => { mkdirSync("receipts", { recursive: true }); appendFileSync("receipts/settlements3.jsonl", JSON.stringify({ at: new Date().toISOString(), ...row }) + "\n"); };
+const log = (row) => { mkdirSync("receipts", { recursive: true }); appendFileSync(V4 ? "receipts/settlements4.jsonl" : "receipts/settlements3.jsonl", JSON.stringify({ at: new Date().toISOString(), ...row }) + "\n"); };
 const settle = (w = r1) => {
-  if (!process.env.TAKAR_SETTLE3) throw new Error("no TAKAR_SETTLE3 in .env: run `deploy` first");
-  return new ethers.Contract(process.env.TAKAR_SETTLE3, artifact.abi, w);
+  if (!process.env[ENV]) throw new Error(`no ${ENV} in .env: run deploy first`);
+  return new ethers.Contract(process.env[ENV], artifact.abi, w);
 };
 
 /** Praman's OFAC SDN screen, over MCP. */
@@ -87,6 +90,7 @@ async function secondCheck(name, signals, met) {
 async function back(id, name, signals, met, proposeTx) {
   const why = await secondCheck(name, signals, met);
   if (why) { console.log(`deal ${id}: resolver 2 declines to second: ${why}`); log({ action: "declined", id, why, propose: proposeTx }); return; }
+  if ((await settle(r1).deal(id)).finalizesAt > 0n) { console.log(`deal ${id}: the threshold is met; the window is open`); return; }
   const hash = ethers.keccak256(ethers.AbiCoder.defaultAbiCoder().encode(["bool", "bytes32[]"], [met, signals]));
   const q = await settle(r2).second(id, hash); await q.wait();
   console.log(`deal ${id}: seconded by resolver 2 after its own check; dispute window open\n  second  ${tx(q.hash)}`);
@@ -95,10 +99,10 @@ async function back(id, name, signals, met, proposeTx) {
 
 if (cmd === "deploy") {
   const f = new ethers.ContractFactory(artifact.abi, artifact.bytecode, r1);
-  const c = await f.deploy(USDC, [r1.address, r2.address], 2, Number(arg("liveness", "10")) * 60, ethers.parseUnits(String(arg("bond", "0.5")), 6));
+  const c = await f.deploy(USDC, [r1.address, r2.address], Number(arg("threshold", V4 ? "1" : "2")), Number(arg("liveness", "10")) * 60, ethers.parseUnits(String(arg("bond", "0.5")), 6));
   await c.waitForDeployment();
-  appendFileSync(".env", `\nTAKAR_SETTLE3=${c.target}\n`);
-  console.log(`TakarSettle3 at ${c.target}: resolvers ${r1.address}, ${r2.address}; threshold 2\n  ${tx(c.deploymentTransaction().hash)}`);
+  appendFileSync(".env", `\n${ENV}=${c.target}\n`);
+  console.log(`TakarSettle${V4 ? 4 : 3} at ${c.target}: resolvers ${r1.address}, ${r2.address}; threshold ${arg("threshold", V4 ? "1" : "2")}\n  ${tx(c.deploymentTransaction().hash)}`);
 } else if (cmd === "open-screen") {
   const name = arg("name");
   if (!name) throw new Error("--name required");
@@ -113,6 +117,7 @@ if (cmd === "deploy") {
   log({ action: "open", id: Number(id), name, tx: t.hash });
 } else if (cmd === "run") {
   const s = settle(r1);
+  let finalized = 0;
   const n = Number(await s.count());
   for (let id = 0; id < n; id++) {
     const d = await s.deal(id);
@@ -126,6 +131,7 @@ if (cmd === "deploy") {
       const t = await s.finalize(id); await t.wait();
       console.log(`deal ${id}: finalized, ${d.conditionMet ? "paid the supplier" : "refunded the payer"}\n  ${tx(t.hash)}`);
       log({ action: "finalize", id, met: d.conditionMet, tx: t.hash });
+      finalized++;
       continue;
     }
     // A proposal still waiting for resolver 2 (e.g. an earlier run stopped): its signals come from the event.
@@ -143,6 +149,8 @@ if (cmd === "deploy") {
     log({ action: "propose", id, ...dec, propose: p.hash });
     await back(id, terms.name, dec.signals, dec.met, p.hash);
   }
+  // Settled deals feed the open record: the miners' screens go to EAS against Praman's verdict (scripts/attest.mjs).
+  if (finalized) { const { execFileSync } = await import("node:child_process"); console.log(execFileSync(process.execPath, ["--env-file=.env", "scripts/attest.mjs", "--send"], { encoding: "utf8" }).split("\n").slice(-3).join("\n")); }
 } else if (cmd === "dispute") {
   const id = Number(arg("id")), who = arg("as", "payee");
   const w = party[who];
