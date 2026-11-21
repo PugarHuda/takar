@@ -11,8 +11,8 @@ Built by Takar from Telegraph miners on 2026-11-21T16:14:19.801Z. Every finding 
 
 | Tonnes | As recorded | Period | Working | Source | Quote |
 |---|---|---|---|---|---|
-| 0.7 | 22843 oz | 1908–1916 | Brilliant Deeps (on the Brilliant reef) () | [WP-CTSHAFTS](https://en.wikipedia.org/w/index.php?title=Charters_Towers_mine_shafts&oldid=1367481111) |  "From 1908 to 1916, 22,843 ounces" |
-| 51.5 | 51482.73 kg | ?–1917 | Brilliant Lode (site_total) | [MINOCC-2017:Total_Ores_Prod:38722](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Total\_Ores\_Prod: 51482.73 KG Au \(Ore Amount 2168244 tonnes\)" |
+| 0.7 | 22843 oz | 1908–1916 | Brilliant Deeps \(on the Brilliant reef\) () | [WP-CTSHAFTS](https://en.wikipedia.org/w/index.php?title=Charters_Towers_mine_shafts&oldid=1367481111) |  "From 1908 to 1916, 22,843 ounces" |
+| 51.5 | 51482.73 kg | ?–1917 | Brilliant Lode (site\_total) | [MINOCC-2017:Total\_Ores\_Prod:38722](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Total\_Ores\_Prod: 51482.73 KG Au \(Ore Amount 2168244 tonnes\)" |
 | 51.5 | 51482.73 kg | ?–1917 | Brilliant Lode (period) | [MINOCC-2017:Production:38722:1](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Production: 51482.73 KG GOLD FINE \(Ore Amount 2168244 T; Ore Type HARD ROCK ORE \(OR REEF\)\)" |
 
 - **Sum check (MINOCC-2017):** 1 dated rows add up to 51.5 t; the register's site total is 51.5 t: consistent.
@@ -40,14 +40,14 @@ Two research answers naming the same kind of cause is a lead to check in the rec
 
 ## Who controls it today (company registers)
 
-- **Citigold Corporation Limited**: active, per two registers from different operators (20260828 and 6110114), registered as CITIGOLD CORPORATION LIMITED; the registers differ only on registered_address.
+- **Citigold Corporation Limited**: active, per two registers from different operators (20260828 and 6110114), registered as CITIGOLD CORPORATION LIMITED; the registers differ only on registered\_address.
 - **Brilliant Deep Levels Gold Mining Company**: not established (fewer than two usable answers).
 
 A register's status is not a mining tenure: who holds the lease today needs the tenure register.
 
 ## Who held it
 
-- Citigold Corporation Limited (?–?, principal holder of mining lease 1499, mining lease 10093, mining lease 10208 (MINOCC Tenure table, as at the 2017 release; no dates recorded)) [MINOCC-2017:Tenure:38722] "Tenure: Principal Holder Name CITIGOLD CORPORATION LIMITED; MINING LEASE 1499, MINING LEASE 10093, MINING LEASE 10208"
+- Citigold Corporation Limited (?–?, principal holder of mining lease 1499, mining lease 10093, mining lease 10208 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:38722] "Tenure: Principal Holder Name CITIGOLD CORPORATION LIMITED; MINING LEASE 1499, MINING LEASE 10093, MINING LEASE 10208"
 - Brilliant Deep Levels Gold Mining Company (1896–1907, operator) [WP-CTSHAFTS] "the company was reconstituted in 1896 as the Brilliant Deep Levels Gold Mining Company"
 
 ## Company reports to read next
@@ -58,7 +58,7 @@ A register's status is not a mining tenure: who holds the lease today needs the 
 
 - closure reason: the indexed sources give a closure year but quote no reason
 - why it stopped in 1917: no source quotes a reason; do not assume exhaustion
-- who controls it: Brilliant Deep Levels Gold Mining Company could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly
+- who controls it: Brilliant Deep Levels Gold Mining Company could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly
 
 ## Receipts
 

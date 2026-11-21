@@ -11,7 +11,7 @@ Built by Takar from Telegraph miners on 2026-11-21T16:14:19.801Z. Every finding 
 
 | Tonnes | As recorded | Period | Working | Source | Quote |
 |---|---|---|---|---|---|
-| 107.7 | 107670.417 kg | 1986–2002 | Mount Leyshon (site_total) | [MINOCC-2017:Total_Ores_Prod:38940](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Total\_Ores\_Prod: 107670.417 KG Au 68900 KG Ag \(Ore Amount 73133075 tonnes\)" |
+| 107.7 | 107670.417 kg | 1986–2002 | Mount Leyshon (site\_total) | [MINOCC-2017:Total\_Ores\_Prod:38940](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Total\_Ores\_Prod: 107670.417 KG Au 68900 KG Ag \(Ore Amount 73133075 tonnes\)" |
 | 24.8 | 24793 kg | 1986–1991 | Mount Leyshon (period) | [MINOCC-2017:Production:38940:1](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Production: 19300 KG SILVER METAL 24793 KG GOLD FINE \(Ore Amount 15400000 T; Ore Type HARD ROCK ORE \(OR REEF\)\)" |
 | 6.1 | 6115.223 kg | 1991–1991 | Mount Leyshon (period) | [MINOCC-2017:Production:38940:2](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Production: 6115.223 KG GOLD FINE 5100 KG SILVER METAL \(Ore Amount 4032000 T; Ore Type HARD ROCK ORE \(OR REEF\)\)" |
 | 6.7 | 6719.118 kg | 1992–1992 | Mount Leyshon (period) | [MINOCC-2017:Production:38940:3](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Production: 6719.118 KG GOLD FINE 5600 KG SILVER METAL \(Ore Amount 4626000 T; Ore Type HARD ROCK ORE \(OR REEF\)\)" |
@@ -56,8 +56,8 @@ A register's status is not a mining tenure: who holds the lease today needs the 
 
 ## Who held it
 
-- Leyshon Resources Limited (?–?, principal holder of mining lease 10144 (MINOCC Tenure table, as at the 2017 release; no dates recorded)) [MINOCC-2017:Tenure:38940] "Tenure: Principal Holder Name LEYSHON RESOURCES LIMITED; MINING LEASE 10144"
-- Mount Isa Mines Ltd (1960–1961, exploration tenure EPM 152 (MINOCC Explorer table)) [MINOCC-2017:Explorer:38940:1] "Explorer: EPM 152, Start\_Year 1960, End\_Year 1961, Company Name MOUNT ISA MINES LTD"
+- Leyshon Resources Limited (?–?, principal holder of mining lease 10144 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:38940] "Tenure: Principal Holder Name LEYSHON RESOURCES LIMITED; MINING LEASE 10144"
+- Mount Isa Mines Ltd (1960–1961, exploration tenure EPM 152 \(MINOCC Explorer table\)) [MINOCC-2017:Explorer:38940:1] "Explorer: EPM 152, Start\_Year 1960, End\_Year 1961, Company Name MOUNT ISA MINES LTD"
 
 ## Company reports to read next
 
@@ -67,9 +67,9 @@ A register's status is not a mining tenure: who holds the lease today needs the 
 
 - closure reason: the indexed sources give a closure year but quote no reason
 - why it stopped in 2002: no source quotes a reason; do not assume exhaustion
-- production rests on one register (MINOCC-2017); no second source to check it against
-- who controls it: Leyshon Resources Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly
-- who controls it: Mount Isa Mines Ltd could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly
+- production rests on one register \(MINOCC-2017\); no second source to check it against
+- who controls it: Leyshon Resources Limited could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly
+- who controls it: Mount Isa Mines Ltd could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly
 
 ## Receipts
 
