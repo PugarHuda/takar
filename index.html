@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Takar fleet board</title>
+<title>Takar</title>
 <meta name="description" content="What each machine in a simulated fleet bought through Telegraph before it moved, what it cost, and what the receipts showed. Ethereum Sepolia testnet.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%231E2A33'/%3E%3Crect x='2' y='10' width='12' height='2' fill='%23EEF2F0'/%3E%3Crect x='2' y='10' width='7' height='2' fill='%23B0287A'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -120,12 +120,29 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
 <header>
   <div class="wrap">
     <h1 class="display">Takar</h1>
-    <p>Each machine below had a budget for intelligence. Before moving, it bought the checks its task needed through <a href="https://telegraphprotocol.com">Telegraph</a>'s ranked market, compared them with the nearest airport weather station, and decided whether to go.</p>
-    <p><strong>Simulated fleet, real purchases.</strong> The units are illustrative. Every purchase settled on Ethereum Sepolia testnet with test USDC, and every station reading is a published METAR report.</p>
+    <p><strong>Never act on one answer from Telegraph.</strong> Takar is a verification layer: it asks two miners from different operators and compares them field by field, keeps an open on-chain record of who was right, and moves money only when two independent sources agree. Testnet (Ethereum Sepolia), test USDC.</p>
   </div>
 </header>
 
 <main class="wrap">
+  <section class="found" aria-labelledby="start-h">
+    <h2 id="start-h" class="display">Start here</h2>
+    <video controls preload="metadata" src="media/takar-overview.mp4" style="width:100%;max-width:960px;border-radius:8px;background:#000"></video>
+    <p class="note">2:33, narrated. <a href="videos.html">All videos</a> · <a href="JUDGE.md">reviewer guide</a> · <a href="https://github.com/PugarHuda/takar">code</a></p>
+    <ol>
+      <li><strong>A second opinion for any intent</strong>, every call on the public EAS record: <a href="#so-h">try it</a>, <a href="api/feed">feed</a>, <a href="#mr-h">why did my miner score that?</a></li>
+      <li><strong>Money that needs two resolvers and costs a wrong dispute</strong>: TakarSettle v3/v4, live deals with Praman's sanctions screen, <a href="#settle-h">every step with its transaction</a>.</li>
+      <li><strong>Gold Rush dossiers</strong>: eight Queensland mines, every figure to its record, tenure and native title today, <a href="goldrush.html">read or download</a>.</li>
+    </ol>
+    <p class="note">For other teams: <code>POST /api/second-opinion</code> (<a href="openapi.json">OpenAPI</a>), <code>npx -y takar-mcp</code>, the Minds Bazaar Skill "Takar Second Opinion", <code>GET /api/miner?id=</code>, <code>GET /api/dossier?mine=</code>.</p>
+  </section>
+
+  <section class="found" aria-labelledby="fleet-h">
+    <h2 id="fleet-h" class="display">App: a fleet that buys checks before it moves (Mission 11)</h2>
+    <p>Each machine below had a budget for intelligence. Before moving, it bought the checks its task needed through <a href="https://telegraphprotocol.com">Telegraph</a>'s ranked market, compared them with the nearest airport weather station, and decided whether to go.</p>
+    <p><strong>Simulated fleet, real purchases.</strong> The units are illustrative. Every purchase settled on Ethereum Sepolia testnet with test USDC, and every station reading is a published METAR report.</p>
+  </section>
+
   <div class="runbar">
     <label>Run <select id="run" aria-label="Choose a fleet run"></select></label>
     <div class="tally" id="tally" aria-live="polite"></div>
