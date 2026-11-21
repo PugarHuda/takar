@@ -17,7 +17,7 @@ const USDC = "0xcc194e1a843B658526D0D5C431f670028582Ae17"; // test token, public
 const LEDGER = "https://devnode.telegraphprotocol.com/v1/ledger/account/";
 
 const TARGET = {
-  escrow: ethers.parseUnits("2", 6), // 200 asks at $0.01
+  escrow: ethers.parseUnits("5", 6), // 500 asks at $0.01
   walletUsdc: ethers.parseUnits("10", 6), // bonds ($5 adapter, $1 miner) and x402 "exact" payments
 };
 const MAX_MINT = ethers.parseUnits("50", 6); // refuse anything larger: a units bug, not a plan

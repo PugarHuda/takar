@@ -1,0 +1,15 @@
+{
+  "title": "India and Pakistan, April to June 2025: a country note priced per fact",
+  "customer": "A macro or commodities risk desk with South Asia exposure (rupee, cotton, shipping through Karachi) that must separate what happened from what was claimed before it moves a position.",
+  "note": "Claims written the way a desk analyst would put them in a note. Observations are checked through Telegraph; forecasts are listed and not bought. c6 is fabricated on purpose (the failure case) and c4 is a claim the two governments contested.",
+  "claims": [
+    { "id": "c1", "kind": "escalation", "claim": "India suspended the Indus Waters Treaty with Pakistan in April 2025.", "question": "Did India suspend the Indus Waters Treaty with Pakistan in April 2025?" },
+    { "id": "c2", "kind": "escalation", "claim": "India launched missile strikes on targets in Pakistan in May 2025.", "question": "Did India launch missile strikes on targets in Pakistan in May 2025?" },
+    { "id": "c3", "kind": "de-escalation", "claim": "India and Pakistan agreed a ceasefire in May 2025.", "question": "Did India and Pakistan agree a ceasefire in May 2025?" },
+    { "id": "c4", "kind": "escalation", "claim": "Pakistan shot down Indian Rafale fighter jets in May 2025.", "question": "Did Pakistan shoot down Indian Rafale fighter jets in May 2025?" },
+    { "id": "c5", "kind": "escalation", "claim": "Pakistan closed its airspace to Indian airlines in April 2025.", "question": "Did Pakistan close its airspace to Indian airlines in April 2025?" },
+    { "id": "c6", "kind": "escalation", "claim": "India and Pakistan exchanged nuclear strikes in May 2025.", "question": "Did India and Pakistan exchange nuclear strikes in May 2025?" },
+    { "id": "c7", "kind": "context", "claim": "India and Pakistan will restore the Indus Waters Treaty in 2027.", "question": "Will India and Pakistan restore the Indus Waters Treaty in 2027?" },
+    { "id": "c8", "kind": "context", "claim": "Bilateral trade between India and Pakistan will resume by the end of 2026.", "question": "Will bilateral trade between India and Pakistan resume by December 2026?" }
+  ]
+}

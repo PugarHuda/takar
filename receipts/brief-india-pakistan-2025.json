@@ -1,0 +1,446 @@
+{
+  "title": "India and Pakistan, April to June 2025: a country note priced per fact",
+  "customer": "A macro or commodities risk desk with South Asia exposure (rupee, cotton, shipping through Karachi) that must separate what happened from what was claimed before it moves a position.",
+  "note": "Claims written the way a desk analyst would put them in a note. Observations are checked through Telegraph; forecasts are listed and not bought. c6 is fabricated on purpose (the failure case) and c4 is a claim the two governments contested.",
+  "method": "Each observation is bought through Telegraph from three checks: EVENT_OUTCOME_RESOLUTION from Takar Outcome (asked by id), EVENT_OUTCOME_RESOLUTION from the ranked route, and FACT_CHECK on the claim as a sentence. Checks are not averaged: a claim is confirmed (or contradicted) only when two or more checks agree and none disagrees; a lone yes or no is single-source and not counted; yes and no together is disputed; no yes or no is unsupported. Forecasts are listed and not bought. The escalation tally counts confirmed claims only.",
+  "generated_at": "2026-11-21T02:28:40.814Z",
+  "rescored_at": "2026-11-21T02:30:39.186Z",
+  "network": "Ethereum Sepolia testnet (test USDC, Telegraph escrow)",
+  "summary": {
+    "claims": 8,
+    "observations": 6,
+    "forecasts": 2,
+    "confirmed": 2,
+    "contradicted": 1,
+    "disputed": 1,
+    "unsupported": 1,
+    "single_source": 1,
+    "escalation": {
+      "confirmed_escalations": 1,
+      "confirmed_de_escalations": 1,
+      "net": 0,
+      "disputed": [
+        "c4"
+      ],
+      "single_source": [
+        "c5"
+      ]
+    },
+    "cost_usd": 0.18,
+    "cost_per_settled_claim_usd": 0.06
+  },
+  "rows": [
+    {
+      "id": "c1",
+      "kind": "escalation",
+      "claim": "India suspended the Indus Waters Treaty with Pakistan in April 2025.",
+      "question": "Did India suspend the Indus Waters Treaty with Pakistan in April 2025?",
+      "type": "observation",
+      "result": {
+        "status": "confirmed",
+        "yes": 3,
+        "no": 0,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": "yes",
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_crisis",
+              "https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_conflict",
+              "https://en.wikipedia.org/wiki/2025_Pahalgam_attack"
+            ],
+            "signal": "0x729da4f584ee35f54e6a825dcca583d061b541956d65d4a07907a75224ccf117",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "duplicate": false,
+            "reads": "yes",
+            "answer": "yes",
+            "evidence": null,
+            "sources": null,
+            "signal": "0x0679db86ad902e63cc83b6558570eb8bc7de53e053d5f7562ca2a8083c46abf3",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "reads": "yes",
+            "answer": "agrees",
+            "evidence": "True",
+            "signal": "0x8bf6fb2d7e6f4409cc04f8cb78dfb7ecd6ebd454d7a349d2fb41a7eb9d4908d2",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 12977
+    },
+    {
+      "id": "c2",
+      "kind": "escalation",
+      "claim": "India launched missile strikes on targets in Pakistan in May 2025.",
+      "question": "Did India launch missile strikes on targets in Pakistan in May 2025?",
+      "type": "observation",
+      "result": {
+        "status": "unsupported",
+        "yes": 0,
+        "no": 0,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": null,
+            "answer": "unresolved",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_conflict",
+              "https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_crisis",
+              "https://en.wikipedia.org/wiki/2024_Iran%E2%80%93Pakistan_conflict"
+            ],
+            "signal": "0x3fb2ae4410fbb90468e54e4d1d8874a8b4e185903e17dc4e5ee88bab44bc7a3f",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "duplicate": false,
+            "reads": null,
+            "answer": "unresolved",
+            "evidence": null,
+            "sources": [
+              "https://anantacentre.in/ananta-insights-pakistans-nuclear-brinkmanship-continues-november-2026",
+              "https://cnaws.in/detailed-reports/india-s-pralay-missile-reshaping-conventional-deterrence-against-china-and-pakistan",
+              "https://www.facebook.com/inspiringyoungindian/posts/pakistans-nightmare-indias-mach-5-pralay-missile-brings-devastating-strike-power/1475702001393007",
+              "https://www.instagram.com/reel/Df9qQ5hOGNX",
+              "https://aa.com.tr/en/asia-pacific/pakistan-launches-fatah-3-supersonic-cruise-missile/4129527"
+            ],
+            "signal": "0x5308bb596115fa293ea429d1af74949c29f7fad3a2c39ce97fecfdb65fa06af0",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "reads": null,
+            "answer": "unclear",
+            "evidence": null,
+            "signal": "0xbd84cd0ae24f8e50f07ab008b333ae221c9194b9ddd64e68797a7912541b0bbe",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 11254
+    },
+    {
+      "id": "c3",
+      "kind": "de-escalation",
+      "claim": "India and Pakistan agreed a ceasefire in May 2025.",
+      "question": "Did India and Pakistan agree a ceasefire in May 2025?",
+      "type": "observation",
+      "result": {
+        "status": "confirmed",
+        "yes": 3,
+        "no": 0,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": "yes",
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_crisis",
+              "https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_conflict",
+              "https://en.wikipedia.org/wiki/2025_Cambodian%E2%80%93Thai_border_crisis"
+            ],
+            "signal": "0x3a6ef6e0816c4a9a6c60ed16f7c5c911d0cf7636dc4bcef28a2c8685c9a90ea1",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "duplicate": false,
+            "reads": "yes",
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "Al Jazeera",
+              "Britannica"
+            ],
+            "signal": "0xc04f225d1e2b876605db346bae1fcb592f7b325ef03b57dc27ce1abcd94e92c3",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "reads": "yes",
+            "answer": "agrees",
+            "evidence": "True",
+            "signal": "0xd48ff4aec55aaee7581a5f558f0adfec6d0f5d8b42377c180e3c100e15243a9b",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 10578
+    },
+    {
+      "id": "c4",
+      "kind": "escalation",
+      "claim": "Pakistan shot down Indian Rafale fighter jets in May 2025.",
+      "question": "Did Pakistan shoot down Indian Rafale fighter jets in May 2025?",
+      "type": "observation",
+      "result": {
+        "status": "disputed",
+        "yes": 1,
+        "no": 1,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": null,
+            "answer": "unresolved",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_conflict",
+              "https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_crisis",
+              "https://en.wikipedia.org/wiki/Dassault_Rafale"
+            ],
+            "signal": "0x7cb68ddcd352d4825f63ea19213c17b7d2ad7ae63ea07fed5b3406b32bf2d06c",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "duplicate": false,
+            "reads": "no",
+            "answer": "no",
+            "evidence": null,
+            "sources": [
+              "What happened to four IAF Rafale fighter jets? Pakistan uses FlightGlobal report to revive shootdown claims - The Week (https://www.theweek.in/news/defence/2026/11/19/what-happened-to-four-iaf-rafale-fighter-jets-pakistan-uses-flightglobal-report-to-revive-shootdown-claims.html)"
+            ],
+            "signal": "0x265e7aeccf4cba1240c3862899ca0dd7e863a477ad389d60fc3c8c2510c42634",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "reads": "yes",
+            "answer": "agrees",
+            "evidence": "True",
+            "signal": "0xcfcc42d9b47128244876d5f42f057e7ae16721e41d5b8479710ade1c59eeb62e",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 26508
+    },
+    {
+      "id": "c5",
+      "kind": "escalation",
+      "claim": "Pakistan closed its airspace to Indian airlines in April 2025.",
+      "question": "Did Pakistan close its airspace to Indian airlines in April 2025?",
+      "type": "observation",
+      "result": {
+        "status": "single-source",
+        "yes": 1,
+        "no": 0,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": "yes",
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_crisis",
+              "https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_conflict",
+              "https://en.wikipedia.org/wiki/Indian_Airlines_Flight_814"
+            ],
+            "signal": "0x71efcb38ada6bda529c650659570a2f45fe18abb9dfa0cd9dd2d35136b9f160d",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "duplicate": false,
+            "reads": null,
+            "answer": "unreadable",
+            "evidence": null,
+            "sources": [
+              "DAWN.COM (https://www.dawn.com/news/2045680/airspace-ban-on-indian-aircraft-extended-till-dec-24)",
+              "AviNews (https://avi-go.com/news/articles/25a9ea6483f3ba2ee2f42618abaf638f)"
+            ],
+            "signal": "0x0feb61b25303e1dbd3bac681d883e974d7dd787db741f1bcc8e97cc66cc885b9",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "reads": null,
+            "answer": "unclear",
+            "evidence": null,
+            "signal": "0x0172a69956e05a9b98e1df56b79192f3e9d465049a73204b3b630e6ad9949f9b",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 12261
+    },
+    {
+      "id": "c6",
+      "kind": "escalation",
+      "claim": "India and Pakistan exchanged nuclear strikes in May 2025.",
+      "question": "Did India and Pakistan exchange nuclear strikes in May 2025?",
+      "type": "observation",
+      "result": {
+        "status": "contradicted",
+        "yes": 0,
+        "no": 2,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": null,
+            "answer": "unresolved",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_conflict",
+              "https://en.wikipedia.org/wiki/2025%E2%80%932026_Iran%E2%80%93United_States_negotiations",
+              "https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_crisis"
+            ],
+            "signal": "0x6ee4a4449de566133b9fc70c6fbac0e849f9e639642d38cc5900f516552805f1",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "duplicate": false,
+            "reads": "no",
+            "answer": "no",
+            "evidence": null,
+            "sources": null,
+            "signal": "0xfd8bd3e6bbc0e49281ea1c63d527312d5c1a2e402ce07bed13f8f32077bdf16c",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "reads": "no",
+            "answer": "disagrees",
+            "evidence": "False",
+            "signal": "0x0cf6e80014cd916a04c5e0669cc4dc68689cccedb8b50628df2591ad11c29fd7",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 11311
+    },
+    {
+      "id": "c7",
+      "kind": "context",
+      "claim": "India and Pakistan will restore the Indus Waters Treaty in 2027.",
+      "question": "Will India and Pakistan restore the Indus Waters Treaty in 2027?",
+      "type": "forecast",
+      "result": {
+        "status": "forecast",
+        "checks": [],
+        "costUsd": 0
+      },
+      "ms": 0
+    },
+    {
+      "id": "c8",
+      "kind": "context",
+      "claim": "Bilateral trade between India and Pakistan will resume by the end of 2026.",
+      "question": "Will bilateral trade between India and Pakistan resume by December 2026?",
+      "type": "forecast",
+      "result": {
+        "status": "forecast",
+        "checks": [],
+        "costUsd": 0
+      },
+      "ms": 0
+    }
+  ],
+  "attestation": {
+    "algorithm": "ed25519",
+    "sha256": "5d34f2c39b336c6729e1054a258c3a7f7bf6026d566a88ebdf4b794d51e14b23",
+    "signature": "6/htpS8INGL3NQQ/omR8RLwpjLBguwbB1btJ57y+4LsEEmDpjM2Z4w7sW0gmNFPGoNOY2i3M/hepjmL4oOlhAw==",
+    "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+  }
+}

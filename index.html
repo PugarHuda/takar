@@ -158,6 +158,12 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
     </details>
   </section>
 
+  <section class="found" aria-labelledby="brief-h">
+    <h2 id="brief-h" class="display">A country note priced per fact (Mission 05)</h2>
+    <p id="brief-sum">Loading the note…</p>
+    <div class="scroll"><table id="brief"></table></div>
+  </section>
+
   <section class="found" aria-labelledby="settle-h">
     <h2 id="settle-h" class="display">Conditional payments (Missions 14 and 06)</h2>
     <p>Test USDC locked in <a href="https://sepolia.etherscan.io/address/0xcb35d51094335141a986a429bA546b7955705187">TakarSettle v2</a> against a condition. Takar buys the answer through Telegraph and <b>proposes</b> a settlement; the payer and the payee each get one dispute during a 10-minute window, and then anyone can finalize it. The contract refuses an event proposal backed by fewer than two Telegraph signals, so <b>two different miners must agree</b>. A drought cover also needs <b>NASA POWER</b>, a record independent of Telegraph's weather miners, to land on the same side of the trigger, or it holds.</p>
@@ -261,6 +267,24 @@ const PINNED_KEY = "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I=
 const canonical = (v) => Array.isArray(v) ? `[${v.map(canonical).join(",")}]`
   : v && typeof v === "object" ? `{${Object.keys(v).sort().map((k) => `${JSON.stringify(k)}:${canonical(v[k])}`).join(",")}}`
   : JSON.stringify(v ?? null);
+
+(async () => {
+  try {
+    const b = await fetch("receipts/brief-india-pakistan-2025.json", { cache: "no-store" }).then((r) => r.json());
+    const s = b.summary;
+    document.getElementById("brief-sum").innerHTML =
+      `<b>${esc(b.title)}</b>. ${esc(b.customer)} Each factual claim was bought through Telegraph from three checks (Takar Outcome by id, the ranked route, and FACT_CHECK); forecasts are listed and not bought. ` +
+      `<b>${esc(s.confirmed)}</b> confirmed, <b>${esc(s.contradicted)}</b> contradicted, <b>${esc(s.disputed)}</b> disputed, <b>${esc(s.single_source ?? 0)}</b> single-source, <b>${esc(s.unsupported)}</b> unsupported, <b>${esc(s.forecasts)}</b> forecasts. ` +
+      `Escalation tally from confirmed claims only: <b>${esc(s.escalation.confirmed_escalations)}</b> escalation, <b>${esc(s.escalation.confirmed_de_escalations)}</b> de-escalation; disputed claims are listed, never averaged in. ` +
+      `Total <b>$${esc(s.cost_usd)}</b> test USDC, $${esc(s.cost_per_settled_claim_usd)} per settled claim.`;
+    const cls = { confirmed: "ok", contradicted: "bad", disputed: "bad" };
+    document.getElementById("brief").innerHTML =
+      `<thead><tr><th>Claim</th><th>Kind</th><th>Status</th><th>What each check said</th><th>Cost</th></tr></thead><tbody>` +
+      b.rows.map((r) => `<tr><td>${esc(r.claim)}</td><td>${esc(r.kind)}</td><td><span class="${cls[r.result.status] ?? ""}">${esc(r.result.status)}</span></td><td>${r.result.checks.map((k) => `${esc(k.via === "FACT_CHECK" ? "fact-check" : (k.miner?.name ?? "route"))}: ${esc(k.answer)}${k.duplicate ? " (same miner again)" : ""}${HASH.test(k.signal ?? "") ? ` <a href="https://devnode.telegraphprotocol.com/engine/v1/signal/${k.signal}">signal</a>` : ""}`).join("<br>") || "not bought: a forecast"}</td><td>$${esc(r.result.costUsd)}</td></tr>`).join("") + `</tbody>`;
+  } catch (e) {
+    document.getElementById("brief-sum").textContent = `Could not load the note (${e.message}).`;
+  }
+})();
 
 // Try it: the miner's own endpoint, free, rate-limited per IP on the server.
 document.getElementById("try").addEventListener("submit", async (ev) => {
