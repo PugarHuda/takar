@@ -1,12 +1,16 @@
 // Build the signed forecast scorecard (Mission 13).
 //
-//   node --env-file=.env scripts/scorecard-run.mjs [--per-topic 2] [--days 7]
+//   node --env-file=.env scripts/scorecard-run.mjs [--per-topic 2] [--days 7] [--contested] [--out file]
+//   node --env-file=.env scripts/scorecard-run.mjs --rescore [--out file]   (re-summarise and re-sign, no asks)
+//
+// --contested skips, before paying, markets the crowd already called (p < 0.1 or > 0.9):
+// a Brier over near-certain markets measures little.
 //
 // For each resolved market: read the crowd's probability N days before it
 // resolved, buy the outcome through Telegraph, compare it with the market's own
 // resolution, and score only what Telegraph confirmed. Costs $0.01 test USDC
 // per ask (at most two per market). Writes receipts/scorecard.json, signed.
-import { appendFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { ask, ranked } from "../lib/telegraph.mjs";
 import { resolvedMarkets, forecastAt, verifyOutcome, brier, summarise, corroborate } from "../lib/scorecard.mjs";
 import { newKeyPair, signDoc } from "../lib/sign.mjs";
@@ -30,6 +34,15 @@ if (!key) {
   throw new Error("TAKAR_SIGNING_KEY is set but keys/takar-ed25519.pub is missing");
 }
 
+const OUT = process.argv.includes("--out") ? process.argv[process.argv.indexOf("--out") + 1] : "receipts/scorecard.json";
+if (process.argv.includes("--rescore")) {
+  const { attestation, ...old } = JSON.parse(readFileSync(OUT, "utf8"));
+  const doc = { ...old, summary: summarise(old.rows), rescored_at: new Date().toISOString() };
+  writeFileSync(OUT, JSON.stringify({ ...doc, attestation: signDoc(doc, key) }, null, 2) + "\n");
+  console.log(JSON.stringify(doc.summary.sample));
+  process.exit(0);
+}
+const CONTESTED = process.argv.includes("--contested");
 const run = new Date().toISOString();
 const seen = new Set();
 const markets = [];
@@ -47,6 +60,7 @@ console.log(`${markets.length} markets`);
 const rows = [];
 for (const m of markets) {
   const forecast = await forecastAt(m, { days: DAYS });
+  if (CONTESTED && (!forecast || forecast.p < 0.1 || forecast.p > 0.9)) { console.log(`skip (crowd p=${forecast?.p ?? "?"}) | ${m.question.slice(0, 70)}`); continue; }
   const verification = await verifyOutcome(m, { ask, ranked, run });
   const happened = m.resolution === "YES";
   // A confirmed outcome gets a second, independent check (FACT_CHECK), $0.01 more.
@@ -59,7 +73,7 @@ for (const m of markets) {
 
 const doc = {
   title: "Takar forecast scorecard",
-  method: `Crowd probability on Manifold ${DAYS} days before resolution; outcome bought through Telegraph EVENT_OUTCOME_RESOLUTION_GENERAL and compared with the market's resolution; Brier score over confirmed outcomes only. Each confirmed outcome is also put to FACT_CHECK_GENERAL as a second, independent check, reported and not scored.`,
+  method: `${CONTESTED ? "Contested markets only (crowd between 10% and 90%). " : ""}Crowd probability on Manifold ${DAYS} days before resolution; outcome bought through Telegraph EVENT_OUTCOME_RESOLUTION_GENERAL and compared with the market's resolution; Brier score over confirmed outcomes only. Each confirmed outcome is also put to FACT_CHECK_GENERAL as a second, independent check, reported and not scored.`,
   generated_at: run,
   network: "Ethereum Sepolia testnet (test USDC)",
   summary: summarise(rows),
@@ -67,6 +81,5 @@ const doc = {
 };
 const out = { ...doc, attestation: signDoc(doc, key) };
 // --out keeps a variant run (e.g. --days 30) from replacing the published scorecard.
-const OUT = process.argv.includes("--out") ? process.argv[process.argv.indexOf("--out") + 1] : "receipts/scorecard.json";
 writeFileSync(OUT, JSON.stringify(out, null, 2) + "\n");
 console.log(JSON.stringify(out.summary));

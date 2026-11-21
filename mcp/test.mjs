@@ -27,7 +27,7 @@ child.stdin.end();
 await new Promise((r) => child.on("exit", r));
 const by = Object.fromEntries(frames.map((f) => [f.id, f]));
 assert.equal(by[1].result.serverInfo.name, "takar");
-assert.deepEqual(by[2].result.tools.map((t) => t.name), ["resolve_event", "forecast_scorecard", "intent_ranking", "second_opinion", "miner_reputation"]);
+assert.deepEqual(by[2].result.tools.map((t) => t.name), ["resolve_event", "forecast_scorecard", "intent_ranking", "second_opinion", "miner_reputation", "miner_report"]);
 assert.equal(JSON.parse(by[3].result.content[0].text).verified, true);
 assert.ok(JSON.parse(by[4].result.content[0].text).miners.length > 0);
 assert.equal(by[5].result.isError, true);

@@ -184,6 +184,22 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
     <h3 class="display sub">Who was right: the open record</h3>
     <p class="note">Every check Takar bought is an <a href="https://sepolia.easscan.org/schema/view/0x351bc4ecf778660c8de0d42eb111e758469e1fe5ffc1b993899e399c9c056741">EAS attestation</a> on Ethereum Sepolia: the miner, the Telegraph signal as evidence, and whether the answer held up. Anyone can add evidence to the same schema. Paid asks are ordered only by attesters Takar trusts. An honest "unresolved" is coverage, not error.</p>
     <div class="scroll"><table id="rep"><tr><td>Loading…</td></tr></table></div>
+    <p class="note">Have your own receipts? Add evidence with your own wallet, no code: <a href="https://sepolia.easscan.org/attestation/attestWithSchema/0x351bc4ecf778660c8de0d42eb111e758469e1fe5ffc1b993899e399c9c056741">attest on easscan</a> (intent, miner id, the Telegraph signal, verdict 1 right / 2 wrong / 3 unusable / 4 wrong place / 5 abstained, and where the truth came from). <code>/api/reputation?attester=0x…</code> reads one attester's view.</p>
+    <h3 class="display sub">Every second opinion, on the record</h3>
+    <p class="note">Each call is written to EAS as it happens (<a href="https://sepolia.easscan.org/schema/view/0xe0bad453487eee9668996b592e5cc85d5945dd5e07125f20feec4cf65b224513">schema</a>): the intent, the two miners and signals, the verdict and the fields that differed. Usage and disagreements are counted from the chain, not from our logs. Pass <code>"client": "your-app"</code> to be counted by name. <a href="api/feed">JSON</a>.</p>
+    <p id="feed-sum">Loading…</p>
+    <div class="scroll"><table id="feed"></table></div>
+  </section>
+
+  <section class="found" aria-labelledby="mr-h">
+    <h2 id="mr-h" class="display">Why did my miner score that?</h2>
+    <p>For miner operators: the scorer's own numbers per epoch, the spot checks and node status, next to the open record of how the miner's answers held up when someone paid for them. A 0 with no failure reason is flagged: it can mean the miner was never asked, not that it answered badly (<a href="https://github.com/telegraphprotocol/bounties/issues/225">bounties#225</a>).</p>
+    <form id="mr" class="try">
+      <label for="mr-id">Miner id or slug</label>
+      <input id="mr-id" value="takar-outcome" maxlength="64" required>
+      <button type="submit" class="btn">Report</button>
+    </form>
+    <div id="mr-out" aria-live="polite"></div>
   </section>
 
   <section class="found" aria-labelledby="try-h">
@@ -312,6 +328,39 @@ const canonical = (v) => Array.isArray(v) ? `[${v.map(canonical).join(",")}]`
   }
 })();
 
+(async () => {
+  try {
+    const f = await fetch("api/feed").then((x) => x.json());
+    if (f.error) throw new Error(f.error);
+    const v = f.verdicts ?? {};
+    const named = Object.entries(f.clients ?? {}).filter(([k]) => k !== "unnamed");
+    document.getElementById("feed-sum").innerHTML = `<b>${esc(f.calls)}</b> second opinions on chain${f.since ? ` since ${esc(f.since.slice(0, 10))}` : ""}: ${esc(v.agree ?? 0)} agree, <b>${esc(v.disagree ?? 0)} disagree</b>, ${esc(v.insufficient ?? 0)} insufficient. Across ${esc(Object.keys(f.intents ?? {}).length)} intents${named.length ? `; clients: ${named.map(([k, n]) => `${esc(k)} (${esc(n)})`).join(", ")}` : ""}.`;
+    document.getElementById("feed").innerHTML = f.disagreements?.length
+      ? `<thead><tr><th>When</th><th>Intent</th><th>Miners</th><th>Differ on</th><th>Evidence</th></tr></thead><tbody>` + f.disagreements.map((d) => `<tr><td>${esc(d.at.slice(0, 16).replace("T", " "))}</td><td>${esc(d.intent.replace(/_GENERAL$/, ""))}</td><td>${esc(d.miners.join(" vs "))}</td><td>${esc(d.differ.join(", "))}</td><td>${d.signals.map((u, i) => `<a href="${esc(u)}">signal ${i + 1}</a>`).join(" · ")} · <a href="${esc(d.attestation)}">EAS</a></td></tr>`).join("") + `</tbody>`
+      : "";
+  } catch (e) {
+    document.getElementById("feed-sum").textContent = `Could not read the feed (${e.message}).`;
+  }
+})();
+
+document.getElementById("mr").addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const id = document.getElementById("mr-id").value.trim();
+  const out = document.getElementById("mr-out");
+  out.innerHTML = `<p class="note">Reading the scorer and the record…</p>`;
+  try {
+    const res = await fetch(`api/miner?id=${encodeURIComponent(id)}`);
+    const r = await res.json();
+    if (!res.ok) throw new Error(r.error ?? res.status);
+    out.innerHTML = `<p><b>${esc(r.miner.name)}</b> (${esc(r.miner.id)}) <img src="${esc(r.badge)}" alt="badge" height="20" style="vertical-align:middle"> <span class="note">Badge for your README: <code>${esc(`![telegraph](${r.badge})`)}</code></span></p>` +
+      r.intents.map((i) => `<h3 class="display sub">${esc(i.intent)}</h3><p>${i.latest ? `Latest epoch ${esc(i.latest.epoch)}: <b>${esc(i.latest.score)}</b> (rank ${esc(i.latest.rank)}). Best: ${esc(i.best.score)} in epoch ${esc(i.best.epoch)}.` : "Not scored yet."} Spot checks: ${esc(i.spot_checks.run)} run, ${esc(i.spot_checks.failed)} failed.${i.paid_record ? ` Paid record: ${esc(i.paid_record.right)} right, ${esc(i.paid_record.wrong)} wrong, ${esc(i.paid_record.unusable)} unusable, ${esc(i.paid_record.abstained)} abstained.` : ""}</p>` +
+        (i.flags.length ? `<ul>${i.flags.map((x) => `<li class="bad">${esc(x)}</li>`).join("")}</ul>` : `<p class="note">Nothing flagged.</p>`) +
+        `<p class="note">Epochs: ${i.epochs.map((e) => `${esc(e.epoch)}: ${esc(e.score)}`).join(" · ")}</p>`).join("");
+  } catch (e) {
+    out.innerHTML = `<p class="bad">No report (${esc(e.message)}).</p>`;
+  }
+});
+
 document.getElementById("so").addEventListener("submit", async (ev) => {
   ev.preventDefault();
   const out = document.getElementById("so-out");
@@ -404,7 +453,7 @@ document.getElementById("try").addEventListener("submit", async (ev) => {
       (s.confirmed_by_two_or_more != null ? `<b>${esc(s.confirmed_by_two_or_more)}</b> of the confirmed outcomes rest on two miners. ` : "") +
       `Brier score <b>${esc(s.brier)}</b>, where always saying 50% scores ${esc(s.baseline)}` +
       (s.brier_skill != null ? ` (skill <b>${esc(s.brier_skill)}</b>; log loss ${esc(s.log_loss)} against 0.693 for a coin flip)` : "") +
-      `. A second, independent fact-check agreed with <b>${esc(s.corroborated ?? 0)}</b> outcomes and disagreed with <b>${esc(s.fact_check_disagreed ?? 0)}</b>; the rest it could not settle. Signed with Ed25519: check it below, or with <code>npx -y takar-mcp</code> (tool <code>forecast_scorecard</code>).`;
+      `. A second, independent fact-check agreed with <b>${esc(s.corroborated ?? 0)}</b> outcomes and disagreed with <b>${esc(s.fact_check_disagreed ?? 0)}</b>; the rest it could not settle. Signed with Ed25519: check it below, or with <code>npx -y takar-mcp</code> (tool <code>forecast_scorecard</code>).` + (s.sample ? `<br><b>Read that Brier with care.</b> ${esc(s.sample.near_certain)} of the ${esc(s.sample.n)} scored forecasts were near-certain (under 10% or over 90%); on the ${esc(s.sample.contested)} contested ones the crowd scored <b>${esc(s.sample.brier_contested ?? "—")}</b>. 95% bootstrap interval ${esc(s.sample.brier_ci95.join(" to "))}. Always forecasting the sample's own base rate (${esc(Math.round(s.sample.base_rate * 100))}%) would score ${esc(s.sample.brier_base_rate_forecast)}, a harder bar than 50%.` : "");
     document.getElementById("miners").innerHTML = s.miners?.length
       ? `<thead><tr><th>Miner</th><th>Asked</th><th>Right</th><th>Wrong</th><th>No yes/no</th><th>Accuracy</th></tr></thead><tbody>` +
         s.miners.map((m) => `<tr><td>${esc(m.miner)}</td><td>${esc(m.asked)}</td><td>${esc(m.right)}</td><td>${esc(m.wrong)}</td><td>${esc(m.no_answer)}</td><td>${m.accuracy == null ? "—" : `${esc(Math.round(m.accuracy * 100))}%`}</td></tr>`).join("") + `</tbody>`

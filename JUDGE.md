@@ -25,9 +25,11 @@ Takar offers that check once, for any intent and any app:
 
 | Piece | Where | What it does |
 |---|---|---|
-| Second opinion | `POST https://takar-telegraph.vercel.app/api/second-opinion {intent, params}` | Asks two different miners, from different operators, directly by id, and compares their answers field by field: agree, disagree or insufficient. An "unresolved" answer is an abstention and brings in the next miner. It never averages. |
-| Open record of who was right | [EAS schema on Sepolia](https://sepolia.easscan.org/schema/view/0x351bc4ecf778660c8de0d42eb111e758469e1fe5ffc1b993899e399c9c056741), `GET /api/reputation?intent=` | Every check Takar bought is an attestation: miner, Telegraph signal, verdict against an independent truth. 74 so far. Anyone can attest; paid asks are ordered only by trusted attesters. |
-| Drop-in for agents | [`openapi.json`](https://takar-telegraph.vercel.app/openapi.json), `npx -y takar-mcp` (tools `second_opinion`, `miner_reputation`) | An HTTP tool for Minds and any agent framework. |
+| Second opinion | `POST https://takar-telegraph.vercel.app/api/second-opinion {intent, params}` | Asks two different miners, from different operators, directly by id, and compares their answers field by field (nested fields too; tolerance by what the field measures: prices 0.5%, temperatures 1°C, wind 10%): agree, disagree or insufficient, plus the numeric `spread`. An "unresolved" answer is an abstention and brings in the next miner. It never averages. |
+| Open record of who was right | [EAS schema on Sepolia](https://sepolia.easscan.org/schema/view/0x351bc4ecf778660c8de0d42eb111e758469e1fe5ffc1b993899e399c9c056741), `GET /api/reputation?intent=` | Every check Takar bought is an attestation: miner, Telegraph signal, verdict against an independent truth. 74 so far. Anyone can attest with their own wallet [on easscan](https://sepolia.easscan.org/attestation/attestWithSchema/0x351bc4ecf778660c8de0d42eb111e758469e1fe5ffc1b993899e399c9c056741); paid asks are ordered only by trusted attesters. |
+| Public record of every call | [feed schema](https://sepolia.easscan.org/schema/view/0xe0bad453487eee9668996b592e5cc85d5945dd5e07125f20feec4cf65b224513), `GET /api/feed` | Each second opinion is an EAS attestation as it happens: intent, both miners and signals, verdict, the fields that differed, the caller's self-declared `client`. Usage and disagreements are counted from the chain, not our logs. |
+| For miner operators | `GET /api/miner?id=<id or slug>` (`&format=svg` for a README badge) | Why a miner scored what it scored: per-epoch scores and failure reasons, spot checks, status, its paid record, and a flag on every 0 that came with no reason (bounties#225). |
+| Drop-in for agents | [`openapi.json`](https://takar-telegraph.vercel.app/openapi.json), `npx -y takar-mcp` (tools `second_opinion`, `miner_reputation`, `miner_report`), and a [Minds Bazaar Skill](https://hellominds.ai) ("Takar Second Opinion") | An HTTP tool for Minds and any agent framework. |
 | Meta-miner | Takar Outcome (20261117) | When its own sources cannot settle a past event, it answers only if two other miners agree. It never asks itself. |
 
 Try it: the board's "A second opinion for any Telegraph intent" box, or
@@ -38,7 +40,7 @@ curl -X POST https://takar-telegraph.vercel.app/api/second-opinion -H 'content-t
 
 ## Check it in five minutes, with no wallet
 
-1. `npm install && npm test` runs 217 offline checks: the payment signers (exact and escrow), the fleet, the outcome resolver, the scorecard, Settle and the Mission 05 note. `cd onchain && forge install foundry-rs/forge-std --no-git && forge test` runs the 11 contract tests. No network, no funds.
+1. `npm install && npm test` runs 278 offline checks: the payment signers (exact and escrow), the fleet, the outcome resolver, the scorecard, Settle and the Mission 05 note. `cd onchain && forge install foundry-rs/forge-std --no-git && forge test` runs the 11 contract tests. No network, no funds.
 2. On the site, press **Verify the signature in this browser** under the scorecard. It checks the Ed25519 signature against the key pinned in the page, with WebCrypto.
 3. On the site, use **Ask the outcome miner yourself**. It calls the miner's own endpoint, with no wallet.
 4. Open `receipts/ledger.jsonl` and pick a line with `"status":"paid"`.

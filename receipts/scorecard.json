@@ -73,7 +73,20 @@
         "no_answer": 27,
         "accuracy": 1
       }
-    ]
+    ],
+    "sample": {
+      "n": 20,
+      "near_certain": 16,
+      "contested": 4,
+      "brier_contested": 0.0365,
+      "brier_ci95": [
+        0.0019,
+        0.0187
+      ],
+      "base_rate": 0.05,
+      "brier_base_rate_forecast": 0.0475,
+      "caveat": "only 4 of 20 forecasts were contested (10%–90%); the headline Brier mostly measures easy markets"
+    }
   },
   "rows": [
     {
@@ -1617,10 +1630,11 @@
       "brier": 0.003
     }
   ],
+  "rescored_at": "2026-11-21T14:44:33.372Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "744c78e639a1dab2a51b80574ada00b04244af54acb475ae13dfd5ef318193f4",
-    "signature": "hpkRFiqDYYQC9Zgn05CSbmQ4QRDIKY0Y01NBtD+Svc+NdV29jyP65a9DXtP4DPJbiB7GLrXOzknYOoVjj7eTAw==",
+    "sha256": "5307e14ba83d4a99c0bfb4b1589c2d1768854da62d116edb9f60f4074829c14f",
+    "signature": "pZnUlsyBfLxUXx5mzUJPT4g3IoGV7l7ihqnQcbkx8mtfhFoO7zYlwJOTxl4qJnZGpsP7e49ApZv/nzEoTbZ+Bw==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

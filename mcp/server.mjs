@@ -99,6 +99,14 @@ const TOOLS = [
       },
     },
   },
+  {
+    name: "miner_report",
+    description:
+      "Why a Telegraph miner scored what it scored: the scorer's per-epoch scores and failure reasons, spot checks, " +
+      "node status, and the open EAS record of its paid answers, with flags such as a 0 that came with no failure " +
+      "reason (often: never asked in the window). Also returns a README badge URL.",
+    inputSchema: { type: "object", required: ["id"], properties: { id: { type: "string", description: "Miner id or slug, e.g. takar-outcome" } } },
+  },
 ];
 
 async function getJson(url, init) {
@@ -159,6 +167,10 @@ const CALLS = {
     if (intent) q.set("intent", String(intent));
     if (attester) q.set("attester", String(attester));
     return getJson(`${SITE}/api/reputation?${q}`);
+  },
+
+  async miner_report({ id }) {
+    return getJson(`${SITE}/api/miner?id=${encodeURIComponent(String(id ?? ""))}`);
   },
 
   async intent_ranking({ intent, top = 10 }) {

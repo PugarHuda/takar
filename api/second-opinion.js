@@ -8,6 +8,7 @@ import { ethers } from "ethers";
 import { ask, ranked } from "../lib/telegraph.mjs";
 import { secondOpinion } from "../lib/second.mjs";
 import { readAttestations, rank } from "../lib/reputation.mjs";
+import { recordFeed } from "../lib/feed.mjs";
 
 export const SCHEMA_UID = "0x351bc4ecf778660c8de0d42eb111e758469e1fe5ffc1b993899e399c9c056741";
 const PER_MIN = 6, PER_DAY = 300; // per IP, and per instance per day: the escrow balance is the real cap
@@ -70,6 +71,8 @@ export default async function handler(req, res) {
   const params = req.body?.params;
   if (!/^[A-Z][A-Z0-9_]{2,80}$/.test(intent)) return res.status(400).json({ error: "intent must be a Telegraph intent name, e.g. EVENT_OUTCOME_RESOLUTION_GENERAL" });
   if (!params || typeof params !== "object" || Array.isArray(params) || JSON.stringify(params).length > 2000) return res.status(400).json({ error: "params must be an object of the intent's request params, at most 2,000 characters" });
+  const client = req.body?.client == null ? "" : String(req.body.client);
+  if (client && !/^[\w .@\/-]{1,40}$/.test(client)) return res.status(400).json({ error: "client is an optional name for your app, at most 40 plain characters" });
   const ip = String(req.headers["x-forwarded-for"] ?? "").split(",")[0].trim() || "unknown";
   if (limited(ip)) return res.status(429).json({ error: `rate limit: ${PER_MIN} per minute per caller` });
   if (!process.env.SERVER_PAYER_KEY) return res.status(503).json({ error: "payer not configured" });
@@ -79,12 +82,17 @@ export default async function handler(req, res) {
   try {
     const reputation = await reputationFor(intent);
     const out = await secondOpinion({ intent, params }, { ask: (a) => ask({ ...a, signer }), ranked, reputation, operatorOf: await operatorOf(), strictOperators: true });
-    console.log(JSON.stringify({ intent, verdict: out.verdict, ms: Date.now() - t0, cost: out.costUsd }));
+    // Every call goes on the public record (EAS). A failed write never fails the answer.
+    // ponytail: concurrent sends on one instance can collide on the nonce; that call just goes unrecorded.
+    const record = await Promise.race([recordFeed(out, client, signer), new Promise((_, no) => setTimeout(() => no(new Error("timeout")), 8000))]).catch((e) => { console.log(JSON.stringify({ feed_error: String(e.message).slice(0, 120) })); return null; });
+    console.log(JSON.stringify({ intent, client, verdict: out.verdict, ms: Date.now() - t0, cost: out.costUsd, record }));
     return res.status(200).json({
       ...out,
       how: "Two different Telegraph miners, ordered by the open EAS record of who was right (then the node's rank), asked directly by id and compared field by field. Never averaged.",
       reputation_schema: `https://sepolia.easscan.org/schema/view/${SCHEMA_UID}`,
       signals: out.answers.filter((a) => a.signal).map((a) => `https://devnode.telegraphprotocol.com/engine/v1/signal/${a.signal}`),
+      record: record ? `https://sepolia.etherscan.io/tx/${record}` : null,
+      feed: "https://takar-telegraph.vercel.app/api/feed",
       ms: Date.now() - t0,
     });
   } catch (err) {

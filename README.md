@@ -56,7 +56,7 @@ npm install
 cp .env.example .env              # put a TESTNET key in AGENT_PRIVATE_KEY
 npm run status                    # balances, sends nothing
 npm run fund                      # mint test USDC, swap a little to MACHINA, fund escrow (testnet only)
-npm test                          # 217 offline checks
+npm test                          # 278 offline checks
 npm run fleet                     # one fleet tick, about $0.10 of test USDC
 npm run scorecard                 # Mission 13, signed scorecard (two miners per market)
 npm run brief -- briefs/india-pakistan-2025.json   # Mission 05, a note priced per fact

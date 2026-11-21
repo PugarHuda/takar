@@ -11,6 +11,7 @@ import { ethers } from "ethers";
 import { resolve, openrouter, RULES } from "../lib/outcome.mjs";
 import { ask, ranked } from "../lib/telegraph.mjs";
 import { secondOpinion, quorumAnswer } from "../lib/second.mjs";
+import { recordFeed } from "../lib/feed.mjs";
 import { reputationFor, operatorOf, overBudget } from "./second-opinion.js";
 
 const SELF = "20261117"; // Takar Outcome's own node id: never ask ourselves
@@ -22,6 +23,7 @@ async function meta(event, ip) {
   const intent = "EVENT_OUTCOME_RESOLUTION_GENERAL";
   const run = secondOpinion({ intent, params: { event } }, { ask: (a) => ask({ ...a, signer }), ranked, reputation: await reputationFor(intent).catch(() => []), exclude: [SELF], unit: "meta-miner", operatorOf: await operatorOf(), strictOperators: true });
   const so = await Promise.race([run, new Promise((r) => setTimeout(() => r(null), META_MS))]);
+  if (so) await recordFeed(so, "takar-outcome meta-miner", signer).catch(() => null); // public record; a failed write never fails the answer
   return so ? quorumAnswer(event, so, RULES.quorum) : null;
 }
 

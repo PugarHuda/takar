@@ -8,6 +8,12 @@
     },
     "api/reputation.js": {
       "maxDuration": 30
+    },
+    "api/feed.js": {
+      "maxDuration": 30
+    },
+    "api/miner.js": {
+      "maxDuration": 30
     }
   }
 }
