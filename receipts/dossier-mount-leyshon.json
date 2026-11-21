@@ -1,0 +1,1212 @@
+{
+  "title": "Gold Rush dossier: Mount Leyshon",
+  "method": "Telegraph miners asked directly by id; structured rows from goldrush-qld-history's registered endpoint, tied to the paid answer; checks by Takar (lib/dossier.mjs). Figures are never merged or estimated.",
+  "generated_at": "2026-11-21T15:17:45.426Z",
+  "network": "Ethereum Sepolia testnet (test USDC)",
+  "dossier": {
+    "mine": "Mount Leyshon",
+    "identity": {
+      "history_site_no": 38940,
+      "survey_site_no": 38940,
+      "same_site": true,
+      "name": "Mount Leyshon",
+      "location": "23.8KM SOUTH OF CHARTERS TOWERS",
+      "status": "ABANDONED MINE"
+    },
+    "production": {
+      "gold": [
+        {
+          "t": 107.670417,
+          "amount": 107670.417,
+          "unit": "kg",
+          "from": 1986,
+          "to": 2002,
+          "entity": "Mount Leyshon",
+          "scope": "site_total",
+          "source": "MINOCC-2017:Total_Ores_Prod:38940",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 38940",
+          "quote": "Total_Ores_Prod: 107670.417 KG Au 68900 KG Ag (Ore Amount 73133075 tonnes)"
+        },
+        {
+          "t": 24.793,
+          "amount": 24793,
+          "unit": "kg",
+          "from": 1986,
+          "to": 1991,
+          "entity": "Mount Leyshon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:38940:1",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 38940, row 1",
+          "quote": "Production: 19300 KG SILVER METAL 24793 KG GOLD FINE (Ore Amount 15400000 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 6.115223,
+          "amount": 6115.223,
+          "unit": "kg",
+          "from": 1991,
+          "to": 1991,
+          "entity": "Mount Leyshon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:38940:2",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 38940, row 2",
+          "quote": "Production: 6115.223 KG GOLD FINE 5100 KG SILVER METAL (Ore Amount 4032000 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 6.719118000000001,
+          "amount": 6719.118,
+          "unit": "kg",
+          "from": 1992,
+          "to": 1992,
+          "entity": "Mount Leyshon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:38940:3",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 38940, row 3",
+          "quote": "Production: 6719.118 KG GOLD FINE 5600 KG SILVER METAL (Ore Amount 4626000 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 6.823469,
+          "amount": 6823.469,
+          "unit": "kg",
+          "from": 1993,
+          "to": 1993,
+          "entity": "Mount Leyshon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:38940:4",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 38940, row 4",
+          "quote": "Production: 6823.469 KG GOLD FINE 5900 KG SILVER METAL (Ore Amount 4683000 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 7.26327,
+          "amount": 7263.27,
+          "unit": "kg",
+          "from": 1994,
+          "to": 1994,
+          "entity": "Mount Leyshon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:38940:5",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 38940, row 5",
+          "quote": "Production: 7263.27 KG GOLD FINE 6800 KG SILVER METAL (Ore Amount 5644000 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 7.376169,
+          "amount": 7376.169,
+          "unit": "kg",
+          "from": 1995,
+          "to": 1995,
+          "entity": "Mount Leyshon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:38940:6",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 38940, row 6",
+          "quote": "Production: 7376.169 KG GOLD FINE 6900 KG SILVER METAL (Ore Amount 5915000 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 5.9716819999999995,
+          "amount": 5971.682,
+          "unit": "kg",
+          "from": 1996,
+          "to": 1996,
+          "entity": "Mount Leyshon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:38940:7",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 38940, row 7",
+          "quote": "Production: 5971.682 KG GOLD FINE 5600 KG SILVER METAL (Ore Amount 5070000 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 7.043771,
+          "amount": 7043.771,
+          "unit": "kg",
+          "from": 1997,
+          "to": 1997,
+          "entity": "Mount Leyshon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:38940:8",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 38940, row 8",
+          "quote": "Production: 7043.771 KG GOLD FINE 6600 KG SILVER METAL (Ore Amount 5492000 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 7.620235,
+          "amount": 7620.235,
+          "unit": "kg",
+          "from": 1998,
+          "to": 1998,
+          "entity": "Mount Leyshon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:38940:9",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 38940, row 9",
+          "quote": "Production: 7620.235 KG GOLD FINE 7100 KG SILVER METAL (Ore Amount 5475000 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 9.7842,
+          "amount": 9784.2,
+          "unit": "kg",
+          "from": 1998,
+          "to": 1999,
+          "entity": "Mount Leyshon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:38940:10",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 38940, row 10",
+          "quote": "Production: 9784.2 KG GOLD BULLION 2 G/T (Ore Amount 5421000 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 8.80174,
+          "amount": 8801.74,
+          "unit": "kg",
+          "from": 1999,
+          "to": 2000,
+          "entity": "Mount Leyshon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:38940:11",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 38940, row 11",
+          "quote": "Production: 8801.74 KG GOLD BULLION (Ore Amount 5705600 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 7.27078,
+          "amount": 7270.78,
+          "unit": "kg",
+          "from": 2000,
+          "to": 2001,
+          "entity": "Mount Leyshon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:38940:12",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 38940, row 12",
+          "quote": "Production: 7270.78 KG GOLD BULLION (Ore Amount 5669475 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 2.0877600000000003,
+          "amount": 2087.76,
+          "unit": "kg",
+          "from": 2001,
+          "to": 2002,
+          "entity": "Mount Leyshon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:38940:13",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 38940, row 13",
+          "quote": "Production: 2087.76 KG GOLD BULLION (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+        }
+      ],
+      "sums": [
+        {
+          "register": "MINOCC-2017",
+          "rows": 13,
+          "sum_t": 107.7,
+          "site_total_t": 107.7,
+          "consistent": true,
+          "to": 2002
+        }
+      ],
+      "pairs": [],
+      "cumulative": [],
+      "band": {
+        "band": "large, 50-150 t",
+        "range_t": [
+          50,
+          150
+        ],
+        "total_t": 107.7,
+        "consistent": true
+      },
+      "band_source": "OathCast (live MINOCC)"
+    },
+    "closures": [
+      {
+        "year": 2002,
+        "sources": [
+          {
+            "source": "MINOCC-2017:MineHist:38940:2",
+            "title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+            "url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+            "quote": "MineHist #2: Start Year 1986, End Year 2002, Large low grade potential discovered in 1980s. Normandy Mt Leyshon Limited commenced mining in 1986 open cutting the site of the historical mine workings. Mining concluded in June 2001 with stockpile milling continuing until Feb 2002.",
+            "entity": "Mount Leyshon"
+          }
+        ],
+        "reasons": [],
+        "status": "single source",
+        "reason": "no source states a reason"
+      }
+    ],
+    "years_worked": [
+      {
+        "periods": [
+          {
+            "seq": 1,
+            "start_year": 1872,
+            "end_year": 1916,
+            "comment": "Mosman, Clarke and Fraser discovery gold at Mount Leyshon in 1871. Mining commenced soon after with lode and alluvial operations completing by 1912.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 2,
+            "start_year": 1986,
+            "end_year": 2002,
+            "comment": "Large low grade potential discovered in 1980s. Normandy Mt Leyshon Limited commenced mining in 1986 open cutting the site of the historical mine workings. Mining concluded in June 2001 with stockpile milling continuing until Feb 2002.",
+            "mine_life_flag": null
+          }
+        ],
+        "entity": "Mount Leyshon",
+        "source_ref": "MINOCC-2017:MineHist:38940",
+        "source_table": "MineHist",
+        "record_id": "SITE_NO 38940",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "MineHist: #1: 1872-1916 Mosman, Clarke and Fraser discovery gold at Mount Leyshon in 1871. Mining commenced soon after with lode and alluvial operations completing by 1912. | #2: 1986-2002 Large low grade potential discovered in 1980s. Normandy Mt Leyshon Limited commenced mining in 1986 open cutting the site of the historical mine workings. Mining concluded in June 2001 with stockpile milling continuing until Feb 2002."
+      }
+    ],
+    "ownership": [
+      {
+        "owner": "Leyshon Resources Limited",
+        "role": "principal holder of mining lease 10144 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
+        "from": null,
+        "to": null,
+        "entity": "Mount Leyshon",
+        "source": "MINOCC-2017:Tenure:38940",
+        "quote": "Tenure: Principal Holder Name LEYSHON RESOURCES LIMITED; MINING LEASE 10144"
+      },
+      {
+        "owner": "Mount Isa Mines Ltd",
+        "role": "exploration tenure EPM 152 (MINOCC Explorer table)",
+        "from": 1960,
+        "to": 1961,
+        "entity": "Mount Leyshon",
+        "source": "MINOCC-2017:Explorer:38940:1",
+        "quote": "Explorer: EPM 152, Start_Year 1960, End_Year 1961, Company Name MOUNT ISA MINES LTD"
+      }
+    ],
+    "references": [
+      {
+        "cr_numbers": [
+          497,
+          2823,
+          12412,
+          12413,
+          15066,
+          30415,
+          31111,
+          32302,
+          32990
+        ],
+        "source_ref": "MINOCC-2017:Company reports:38940",
+        "source_table": "Company reports",
+        "record_id": "SITE_NO 38940",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Company reports: CR 497, CR 2823, CR 12412, CR 12413, CR 15066, CR 30415, CR 31111, CR 32302, CR 32990"
+      }
+    ],
+    "gold_price": {
+      "year": 2002,
+      "then": "US$282 per ounce (Gold, monthly average per troy ounce (World Bank Pink Sheet, nominal US dollars) from 1960)",
+      "now": "US$4105 per ounce in October 2026 (Gold, monthly average per troy ounce (World Bank Pink Sheet, nominal US dollars) from 1960), single source",
+      "ratio": 14.6,
+      "note": "Nominal dollars, not adjusted for inflation; the closure-year figure may be an official price rather than a market one (see its text).",
+      "receipt": {
+        "miner": "Gold Rush Queensland Mine History",
+        "id": "7310050",
+        "intent": "RESEARCH_QUERY_GENERAL",
+        "signal": "0x2c042695b8714c1dd193354cac00fe4bd84e9ab19d78e95ac64441c8608aa032",
+        "cost": 0.01,
+        "shape": "intent"
+      }
+    },
+    "receipts_tie": {
+      "checked": 14,
+      "in_paid_answer": 1,
+      "rows": [
+        {
+          "source": "MINOCC-2017:Total_Ores_Prod:38940",
+          "amount": 107670.417,
+          "unit": "kg",
+          "in_paid_answer": true
+        },
+        {
+          "source": "MINOCC-2017:Production:38940:1",
+          "amount": 24793,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:38940:2",
+          "amount": 6115.223,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:38940:3",
+          "amount": 6719.118,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:38940:4",
+          "amount": 6823.469,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:38940:5",
+          "amount": 7263.27,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:38940:6",
+          "amount": 7376.169,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:38940:7",
+          "amount": 5971.682,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:38940:8",
+          "amount": 7043.771,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:38940:9",
+          "amount": 7620.235,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:38940:10",
+          "amount": 9784.2,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:38940:11",
+          "amount": 8801.74,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:38940:12",
+          "amount": 7270.78,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:38940:13",
+          "amount": 2087.76,
+          "unit": "kg",
+          "in_paid_answer": false
+        }
+      ]
+    },
+    "open_questions": [
+      "closure reason: the indexed sources give a closure year but quote no reason",
+      "why it stopped in 2002: no source quotes a reason; do not assume exhaustion",
+      "production rests on one register (MINOCC-2017); no second source to check it against"
+    ],
+    "miner_conflicts": []
+  },
+  "receipts": [
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0x5bf6266094c0d19b8ed51d576d8a9a9f61ac0eb9ee3f775d96d2424feeb790ac",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#13 of 31"
+    },
+    {
+      "miner": "OathCast Queensland Gold Mines",
+      "id": "64176",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0xc7e5a9761ad7c4cb6d7ceae9ea04280d480f163912f11029763a69847d68c993",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#15 of 31"
+    },
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0x2c042695b8714c1dd193354cac00fe4bd84e9ab19d78e95ac64441c8608aa032",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#13 of 31"
+    },
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0xc5e922635444870be269d431035395cb4f7b879162d7bd89e5f7d999bbe9f443",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#13 of 31"
+    }
+  ],
+  "paid_answers": {
+    "history": {
+      "answer": "Mount Leyshon, an abandoned gold mine located 23.8 km south of Charters Towers, produced a total of 107,670.417 kg of gold between 1986 and 2002, equivalent to approximately 3.46 Moz troy. The mine also produced 68,900 kg of silver and 73,133,075 tonnes of ore during the same period. The mine operated in two distinct periods: from 1872 to 1916 and from 1986 to 2002. It closed in 2002, though no specific reason for the closure is provided in the available records. Ownership of the site has changed over time, with Mount Isa Mines Ltd holding tenure from 1960 to 1961, and Leyshon Resources Limited being the current owner.",
+      "source_count": 2,
+      "sources": [
+        "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D38940&outFields=%2A&f=json",
+        "https://geoscience.data.qld.gov.au/dataset/ds000004"
+      ],
+      "brief": "Mount Leyshon: gold 107,670.417 kg (+13 more)"
+    },
+    "survey": {
+      "answer": "Mount Leyshon (Geological Survey of Queensland site 38940) is recorded as an abandoned mine on the Charters Towers 1:100,000 sheet (23.8km south of charters towers), at -20.2907, 146.2718, located to within 100 m. The survey classes its gold as large, 50-150 t, and also records silver (small). Within 5 km it records 30 other historical workings, 29 of them with gold; other commodities nearby: copper, lead, silver, zinc. The record gives a size band, not production figures, and holds no owners or closure dates.",
+      "source_count": 2,
+      "sources": [
+        "Geological Survey of Queensland, MINOCC historical workings (CC BY 4.0, State of Queensland), site 38940: https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D38940&outFields=%2A&f=json",
+        "https://geoscience.data.qld.gov.au/dataset/ds000004"
+      ],
+      "brief": "Mount Leyshon: abandoned mine, gold large"
+    }
+  },
+  "structured_record": {
+    "answer": "Mount Leyshon (GSQ site 38940, 23.8km south of charters towers) is recorded by the Geological Survey of Queensland as abandoned mine, gold size band large, 50 - 150 t. Reported production: 107,670.417 kg gold, about 3.46 Moz troy (converted here; the survey records 107,670.417 kg) (1986 to 2002, Mount Leyshon, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 38940)); 68,900 kg silver (1986 to 2002, Mount Leyshon, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 38940)); 73,133,075 tonnes ore (1986 to 2002, Mount Leyshon, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 38940)). GSQ MINOCC 2017 also lists 13 dated Production rows (gold: 24,793 kg 1986 to 1991; 6,115.223 kg 1991; 6,719.118 kg 1992; 6,823.469 kg 1993; 7,263.27 kg 1994; 7,376.169 kg 1995; 5,971.682 kg 1996; 7,043.771 kg 1997; 7,620.235 kg 1998; 9,784.2 kg 1998 to 1999; 8,801.74 kg 1999 to 2000; 7,270.78 kg 2000 to 2001; 2,087.76 kg 2001 to 2002); see production. Closure: 2002 (no reason quoted) [Mount Leyshon, unknown, per GSQ MINOCC 2017 (MineHist, SITE_NO 38940, row 2)]. Years worked per GSQ MINOCC 2017 (MineHist, SITE_NO 38940): 1872-1916, 1986-2002. Ownership and tenure: Leyshon Resources Limited per GSQ MINOCC 2017 (Tenure, SITE_NO 38940); Mount Isa Mines Ltd (1960 to 1961) per GSQ MINOCC 2017 (Explorer, SITE_NO 38940, row 1). GSQ MINOCC 2017 lists 9 company reports for this site: CR 497, CR 2823, CR 12412, CR 12413, CR 15066, CR 30415, CR 31111, CR 32302, .... Not found: closure reason: the indexed sources give a closure year but quote no reason.",
+    "source_count": 2,
+    "sources": [
+      "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D38940&outFields=%2A&f=json",
+      "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    ],
+    "brief": "Mount Leyshon: gold 107,670.417 kg (+13 more)",
+    "site_no": 38940,
+    "site_name": "Mount Leyshon",
+    "matched_by": "name",
+    "gsq_record": {
+      "source_ref": "GSQ-MINOCC",
+      "source_url": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D38940&outFields=%2A&f=json",
+      "mine_status": "ABANDONED MINE",
+      "size_band": "LARGE",
+      "size_definition": "50 - 150 TONNES",
+      "latitude": -20.290719,
+      "longitude": 146.271798,
+      "location_accuracy_m": 100,
+      "locality": "23.8KM SOUTH OF CHARTERS TOWERS",
+      "map_sheet_100k": "CHARTERS TOWERS",
+      "commodities": "Au(l);Ag(s)",
+      "record_current_to": "2010-12-02"
+    },
+    "production": [
+      {
+        "commodity": "gold",
+        "amount": 107670.417,
+        "unit": "kg",
+        "period_from": 1986,
+        "period_to": 2002,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "site_total",
+        "commodity_code": "AU",
+        "ore_class": "ore (hard rock, dumps, tailings and other)",
+        "converted": {
+          "amount": 3461684,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 107670.417 kg"
+        },
+        "source_ref": "MINOCC-2017:Total_Ores_Prod:38940",
+        "source_table": "Total_Ores_Prod",
+        "record_id": "SITE_NO 38940",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Total_Ores_Prod: 107670.417 KG Au 68900 KG Ag (Ore Amount 73133075 tonnes)"
+      },
+      {
+        "commodity": "silver",
+        "amount": 68900,
+        "unit": "kg",
+        "period_from": 1986,
+        "period_to": 2002,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "site_total",
+        "commodity_code": "AG",
+        "ore_class": "ore (hard rock, dumps, tailings and other)",
+        "source_ref": "MINOCC-2017:Total_Ores_Prod:38940",
+        "source_table": "Total_Ores_Prod",
+        "record_id": "SITE_NO 38940",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Total_Ores_Prod: 107670.417 KG Au 68900 KG Ag (Ore Amount 73133075 tonnes)"
+      },
+      {
+        "commodity": "ore",
+        "amount": 73133075,
+        "unit": "t",
+        "period_from": 1986,
+        "period_to": 2002,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "site_total",
+        "commodity_code": "ORE",
+        "ore_class": "ore (hard rock, dumps, tailings and other)",
+        "source_ref": "MINOCC-2017:Total_Ores_Prod:38940",
+        "source_table": "Total_Ores_Prod",
+        "record_id": "SITE_NO 38940",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Total_Ores_Prod: 107670.417 KG Au 68900 KG Ag (Ore Amount 73133075 tonnes)"
+      },
+      {
+        "commodity": "silver",
+        "amount": 19300,
+        "unit": "kg",
+        "period_from": 1986,
+        "period_to": 1991,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "metal",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "15400000 T",
+        "comment": "(to1991)",
+        "source_ref": "MINOCC-2017:Production:38940:1",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 1",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 19300 KG SILVER METAL 24793 KG GOLD FINE (Ore Amount 15400000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 24793,
+        "unit": "kg",
+        "period_from": 1986,
+        "period_to": 1991,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "15400000 T",
+        "comment": "(to1991)",
+        "converted": {
+          "amount": 797113,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 24793 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:38940:1",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 1",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 19300 KG SILVER METAL 24793 KG GOLD FINE (Ore Amount 15400000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 6115.223,
+        "unit": "kg",
+        "period_from": 1991,
+        "period_to": 1991,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "4032000 T",
+        "converted": {
+          "amount": 196609,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 6115.223 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:38940:2",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 2",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 6115.223 KG GOLD FINE 5100 KG SILVER METAL (Ore Amount 4032000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "silver",
+        "amount": 5100,
+        "unit": "kg",
+        "period_from": 1991,
+        "period_to": 1991,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "metal",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "4032000 T",
+        "source_ref": "MINOCC-2017:Production:38940:2",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 2",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 6115.223 KG GOLD FINE 5100 KG SILVER METAL (Ore Amount 4032000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 6719.118,
+        "unit": "kg",
+        "period_from": 1992,
+        "period_to": 1992,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "4626000 T",
+        "converted": {
+          "amount": 216025,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 6719.118 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:38940:3",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 3",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 6719.118 KG GOLD FINE 5600 KG SILVER METAL (Ore Amount 4626000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "silver",
+        "amount": 5600,
+        "unit": "kg",
+        "period_from": 1992,
+        "period_to": 1992,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "metal",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "4626000 T",
+        "source_ref": "MINOCC-2017:Production:38940:3",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 3",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 6719.118 KG GOLD FINE 5600 KG SILVER METAL (Ore Amount 4626000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 6823.469,
+        "unit": "kg",
+        "period_from": 1993,
+        "period_to": 1993,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "4683000 T",
+        "converted": {
+          "amount": 219380,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 6823.469 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:38940:4",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 4",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 6823.469 KG GOLD FINE 5900 KG SILVER METAL (Ore Amount 4683000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "silver",
+        "amount": 5900,
+        "unit": "kg",
+        "period_from": 1993,
+        "period_to": 1993,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "metal",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "4683000 T",
+        "source_ref": "MINOCC-2017:Production:38940:4",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 4",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 6823.469 KG GOLD FINE 5900 KG SILVER METAL (Ore Amount 4683000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 7263.27,
+        "unit": "kg",
+        "period_from": 1994,
+        "period_to": 1994,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "5644000 T",
+        "converted": {
+          "amount": 233520,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 7263.27 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:38940:5",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 5",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 7263.27 KG GOLD FINE 6800 KG SILVER METAL (Ore Amount 5644000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "silver",
+        "amount": 6800,
+        "unit": "kg",
+        "period_from": 1994,
+        "period_to": 1994,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "metal",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "5644000 T",
+        "source_ref": "MINOCC-2017:Production:38940:5",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 5",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 7263.27 KG GOLD FINE 6800 KG SILVER METAL (Ore Amount 5644000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 7376.169,
+        "unit": "kg",
+        "period_from": 1995,
+        "period_to": 1995,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "5915000 T",
+        "converted": {
+          "amount": 237149,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 7376.169 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:38940:6",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 6",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 7376.169 KG GOLD FINE 6900 KG SILVER METAL (Ore Amount 5915000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "silver",
+        "amount": 6900,
+        "unit": "kg",
+        "period_from": 1995,
+        "period_to": 1995,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "metal",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "5915000 T",
+        "source_ref": "MINOCC-2017:Production:38940:6",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 6",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 7376.169 KG GOLD FINE 6900 KG SILVER METAL (Ore Amount 5915000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 5971.682,
+        "unit": "kg",
+        "period_from": 1996,
+        "period_to": 1996,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "5070000 T",
+        "converted": {
+          "amount": 191994,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 5971.682 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:38940:7",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 7",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 5971.682 KG GOLD FINE 5600 KG SILVER METAL (Ore Amount 5070000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "silver",
+        "amount": 5600,
+        "unit": "kg",
+        "period_from": 1996,
+        "period_to": 1996,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "metal",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "5070000 T",
+        "source_ref": "MINOCC-2017:Production:38940:7",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 7",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 5971.682 KG GOLD FINE 5600 KG SILVER METAL (Ore Amount 5070000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 7043.771,
+        "unit": "kg",
+        "period_from": 1997,
+        "period_to": 1997,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "5492000 T",
+        "converted": {
+          "amount": 226462,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 7043.771 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:38940:8",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 8",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 7043.771 KG GOLD FINE 6600 KG SILVER METAL (Ore Amount 5492000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "silver",
+        "amount": 6600,
+        "unit": "kg",
+        "period_from": 1997,
+        "period_to": 1997,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "metal",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "5492000 T",
+        "source_ref": "MINOCC-2017:Production:38940:8",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 8",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 7043.771 KG GOLD FINE 6600 KG SILVER METAL (Ore Amount 5492000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 7620.235,
+        "unit": "kg",
+        "period_from": 1998,
+        "period_to": 1998,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "5475000 T",
+        "converted": {
+          "amount": 244996,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 7620.235 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:38940:9",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 9",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 7620.235 KG GOLD FINE 7100 KG SILVER METAL (Ore Amount 5475000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "silver",
+        "amount": 7100,
+        "unit": "kg",
+        "period_from": 1998,
+        "period_to": 1998,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "metal",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "5475000 T",
+        "source_ref": "MINOCC-2017:Production:38940:9",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 9",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 7620.235 KG GOLD FINE 7100 KG SILVER METAL (Ore Amount 5475000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 9784.2,
+        "unit": "kg",
+        "period_from": 1998,
+        "period_to": 1999,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "bullion",
+        "grade": "2 G/T",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "5421000 T",
+        "converted": {
+          "amount": 314569,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 9784.2 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:38940:10",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 10",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 9784.2 KG GOLD BULLION 2 G/T (Ore Amount 5421000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 8801.74,
+        "unit": "kg",
+        "period_from": 1999,
+        "period_to": 2000,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "bullion",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "5705600 T",
+        "comment": "Production for financial year.",
+        "converted": {
+          "amount": 282983,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 8801.74 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:38940:11",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 11",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 8801.74 KG GOLD BULLION (Ore Amount 5705600 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 7270.78,
+        "unit": "kg",
+        "period_from": 2000,
+        "period_to": 2001,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "bullion",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "5669475 T",
+        "converted": {
+          "amount": 233761,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 7270.78 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:38940:12",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 12",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 7270.78 KG GOLD BULLION (Ore Amount 5669475 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 2087.76,
+        "unit": "kg",
+        "period_from": 2001,
+        "period_to": 2002,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Leyshon",
+        "scope": "period",
+        "form": "bullion",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "T",
+        "converted": {
+          "amount": 67123,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 2087.76 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:38940:13",
+        "source_table": "Production",
+        "record_id": "SITE_NO 38940, row 13",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 2087.76 KG GOLD BULLION (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+      }
+    ],
+    "closure": [
+      {
+        "year": 2002,
+        "reason_text": null,
+        "reason_class": "unknown",
+        "entity": "Mount Leyshon",
+        "scope": "site",
+        "source_ref": "MINOCC-2017:MineHist:38940:2",
+        "source_table": "MineHist",
+        "record_id": "SITE_NO 38940, row 2",
+        "basis_note": "latest End Year recorded in the MineHist table (end of the last recorded period of working)",
+        "page": null,
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "MineHist #2: Start Year 1986, End Year 2002, Large low grade potential discovered in 1980s. Normandy Mt Leyshon Limited commenced mining in 1986 open cutting the site of the historical mine workings. Mining concluded in June 2001 with stockpile milling continuing until Feb 2002."
+      }
+    ],
+    "years_worked": [
+      {
+        "periods": [
+          {
+            "seq": 1,
+            "start_year": 1872,
+            "end_year": 1916,
+            "comment": "Mosman, Clarke and Fraser discovery gold at Mount Leyshon in 1871. Mining commenced soon after with lode and alluvial operations completing by 1912.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 2,
+            "start_year": 1986,
+            "end_year": 2002,
+            "comment": "Large low grade potential discovered in 1980s. Normandy Mt Leyshon Limited commenced mining in 1986 open cutting the site of the historical mine workings. Mining concluded in June 2001 with stockpile milling continuing until Feb 2002.",
+            "mine_life_flag": null
+          }
+        ],
+        "entity": "Mount Leyshon",
+        "source_ref": "MINOCC-2017:MineHist:38940",
+        "source_table": "MineHist",
+        "record_id": "SITE_NO 38940",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "MineHist: #1: 1872-1916 Mosman, Clarke and Fraser discovery gold at Mount Leyshon in 1871. Mining commenced soon after with lode and alluvial operations completing by 1912. | #2: 1986-2002 Large low grade potential discovered in 1980s. Normandy Mt Leyshon Limited commenced mining in 1986 open cutting the site of the historical mine workings. Mining concluded in June 2001 with stockpile milling continuing until Feb 2002."
+      }
+    ],
+    "ownership": [
+      {
+        "owner": "Leyshon Resources Limited",
+        "role": "principal holder of mining lease 10144 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
+        "period_from": null,
+        "period_to": null,
+        "entity": "Mount Leyshon",
+        "source_ref": "MINOCC-2017:Tenure:38940",
+        "source_table": "Tenure",
+        "record_id": "SITE_NO 38940",
+        "tenures": [
+          {
+            "type": "MINING LEASE",
+            "number": 10144
+          }
+        ],
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Tenure: Principal Holder Name LEYSHON RESOURCES LIMITED; MINING LEASE 10144"
+      },
+      {
+        "owner": "Mount Isa Mines Ltd",
+        "role": "exploration tenure EPM 152 (MINOCC Explorer table)",
+        "period_from": 1960,
+        "period_to": 1961,
+        "entity": "Mount Leyshon",
+        "source_ref": "MINOCC-2017:Explorer:38940:1",
+        "source_table": "Explorer",
+        "record_id": "SITE_NO 38940, row 1",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Explorer: EPM 152, Start_Year 1960, End_Year 1961, Company Name MOUNT ISA MINES LTD"
+      }
+    ],
+    "references": [
+      {
+        "cr_numbers": [
+          497,
+          2823,
+          12412,
+          12413,
+          15066,
+          30415,
+          31111,
+          32302,
+          32990
+        ],
+        "source_ref": "MINOCC-2017:Company reports:38940",
+        "source_table": "Company reports",
+        "record_id": "SITE_NO 38940",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Company reports: CR 497, CR 2823, CR 12412, CR 12413, CR 15066, CR 30415, CR 31111, CR 32302, CR 32990"
+      }
+    ],
+    "conflicts": [],
+    "not_found": [
+      "closure reason: the indexed sources give a closure year but quote no reason"
+    ],
+    "other_sites_with_same_name": [],
+    "dataset": {
+      "gsq_minocc_fetched": "2026-11-20",
+      "index_built": "2026-11-20",
+      "minocc_2017": {
+        "title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "licence": "CC BY 4.0 (as listed on the GSQ Open Data Portal / data.qld.gov.au dataset listing); (c) State of Queensland (Department of Natural Resources and Mines). The download's own PDFs state no licence."
+      },
+      "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
+    }
+  },
+  "attestation": {
+    "algorithm": "ed25519",
+    "sha256": "3eeac3b5443b812cc17ec6719a2844ddc35a5733f455a46ea46629b266e80a00",
+    "signature": "NeoUTaYxvbYIyBNqcUvGPVosaIVAEQsEOIbjmIpbZl3feoiH1e5Vk6Yxhyr0OJFH50v+2b6BiDrlisIU6gBdCg==",
+    "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+  }
+}

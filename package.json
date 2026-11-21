@@ -10,7 +10,7 @@
   "scripts": {
     "fund": "node --env-file=.env scripts/fund-v2.mjs",
     "status": "node --env-file=.env scripts/fund-v2.mjs --status",
-    "test": "node lib/test.mjs && node lib/fleet.test.mjs && node lib/outcome.test.mjs && node lib/scorecard.test.mjs && node lib/settle.test.mjs && node lib/brief.test.mjs && node lib/reputation.test.mjs && node lib/second.test.mjs && node lib/feed.test.mjs",
+    "test": "node lib/test.mjs && node lib/fleet.test.mjs && node lib/outcome.test.mjs && node lib/scorecard.test.mjs && node lib/settle.test.mjs && node lib/brief.test.mjs && node lib/reputation.test.mjs && node lib/second.test.mjs && node lib/feed.test.mjs && node lib/dossier.test.mjs",
     "first-ask": "node --env-file=.env scripts/first-ask.mjs",
     "fleet": "node --env-file=.env scripts/fleet-run.mjs",
     "scorecard": "node --env-file=.env scripts/scorecard-run.mjs",

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gold Rush dossiers</title>
+<meta name="description" content="Queensland historical gold mines, every finding traced to its record, conflicts shown side by side, built from Telegraph's Gold Rush miners by Takar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --paper:#EEF2F0; --sheet:#F8FAF9; --ink:#1E2A33; --muted:#55656F; --rule:#8FA6B5; --rule-soft:#D3DDE2; --accent:#9A6A00; --bad:#B33A2E; --link:#1F5C8A; }
+@media (prefers-color-scheme: dark) { :root { --paper:#141C21; --sheet:#1B252B; --ink:#E3EAEE; --muted:#9AABB5; --rule:#4F6573; --rule-soft:#2C3A42; --accent:#E0B341; --bad:#E3705F; --link:#7FB6E0; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font:400 1rem/1.55 "Atkinson Hyperlegible", system-ui, sans-serif; }
+a { color:var(--link); text-underline-offset:2px; }
+.wrap { max-width:980px; margin:0 auto; padding:0 16px 48px; }
+h1, h2, h3 { font-family:"Barlow Semi Condensed", system-ui, sans-serif; line-height:1.2; }
+h1 { font-size:2.2rem; margin:28px 0 6px; }
+.lede { color:var(--muted); max-width:70ch; }
+nav.mines { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0; }
+nav.mines button, form button { font:600 1rem "Barlow Semi Condensed", sans-serif; padding:8px 14px; border:1px solid var(--rule); background:var(--sheet); color:var(--ink); border-radius:6px; cursor:pointer; }
+nav.mines button[aria-pressed="true"] { border-color:var(--accent); box-shadow:inset 0 -3px 0 var(--accent); }
+form { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 18px; }
+input { font:inherit; padding:8px 10px; border:1px solid var(--rule); border-radius:6px; background:var(--sheet); color:var(--ink); min-width:240px; flex:1; }
+article { background:var(--sheet); border:1px solid var(--rule-soft); border-radius:8px; padding:4px 20px 20px; overflow-wrap:anywhere; }
+article table { border-collapse:collapse; font-size:.9rem; display:block; overflow-x:auto; }
+article th, article td { border-bottom:1px solid var(--rule-soft); padding:6px 8px; text-align:left; vertical-align:top; }
+article strong { color:var(--accent); }
+.dl { margin:10px 0; font-size:.95rem; }
+.note { color:var(--muted); font-size:.92rem; }
+.bad { color:var(--bad); }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>Gold Rush dossiers</h1>
+  <p class="lede">Queensland historical gold mines, built from Telegraph's Gold Rush miners (goldrush-qld-history and OathCast, asked directly by id and paid through Telegraph). Takar adds the checks a reader would otherwise do by hand: do the dated rows add up, do two sources count the same period, does the total fit the survey's size band, which closures were geological and which were not. Figures are never merged or estimated. Every finding names its record, and every answer has its Telegraph receipt. The miner's rank is shown next to the evidence, not in place of it.</p>
+  <nav class="mines" aria-label="Dossiers">
+    <button data-m="mount-morgan">Mount Morgan</button>
+    <button data-m="brilliant-lode">Brilliant Lode</button>
+    <button data-m="mount-leyshon">Mount Leyshon (a site we had not looked at)</button>
+  </nav>
+  <form id="any">
+    <input id="mine" placeholder="Any Queensland gold mine the survey records, e.g. Croydon" maxlength="80" aria-label="Mine name">
+    <button type="submit">Build a dossier (about 40 s)</button>
+  </form>
+  <p class="dl" id="dl"></p>
+  <article id="doc" aria-live="polite"><p>Loading…</p></article>
+  <p class="note">Code: <a href="https://github.com/PugarHuda/takar/blob/main/lib/dossier.mjs">lib/dossier.mjs</a> (rules, 21 offline checks) · API: <code>GET /api/dossier?mine=…</code> (JSON) or <code>&amp;format=md</code> (download) · <a href="./">Takar board</a>. Testnet; Takar pays the asks.</p>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js" integrity="sha512-xeUh+KxNyTufZOje++oQHstlMQ8/rpyzPuM+gjMFYK3z5ILJGE7l2NvYL+XfliKURMpBIKKp1XoPN/qswlSMFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+const docEl = document.getElementById("doc"), dl = document.getElementById("dl");
+// marked renders the dossier's own Markdown; raw HTML in it is escaped first.
+const render = (md) => {
+  docEl.innerHTML = marked.parse(esc(md).replace(/&gt;/g, ">"));
+  // Links come from miners' records: only http(s) and relative links survive.
+  docEl.querySelectorAll("a").forEach((a) => { if (!/^(https?:|\/|[a-z0-9#])/i.test(a.getAttribute("href") ?? "") || /^(javascript|data|vbscript):/i.test(a.getAttribute("href") ?? "")) a.removeAttribute("href"); a.rel = "noopener"; });
+};
+async function show(slug) {
+  document.querySelectorAll("nav.mines button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.m === slug)));
+  docEl.innerHTML = "<p>Loading…</p>";
+  try {
+    const md = await fetch(`dossiers/${slug}.md`).then((r) => { if (!r.ok) throw new Error(r.status); return r.text(); });
+    render(md);
+    dl.innerHTML = `Download: <a href="dossiers/${slug}.md" download>Markdown</a> · <a href="receipts/dossier-${slug}.json" download>signed JSON</a> (Ed25519, with every paid answer and the structured record)`;
+    history.replaceState(null, "", `#${slug}`);
+  } catch (e) { docEl.innerHTML = `<p class="bad">Could not load (${esc(e.message)}).</p>`; }
+}
+document.querySelectorAll("nav.mines button").forEach((b) => b.addEventListener("click", () => show(b.dataset.m)));
+document.getElementById("any").addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const mine = document.getElementById("mine").value.trim();
+  if (!mine) return;
+  const btn = ev.target.querySelector("button");
+  btn.disabled = true;
+  docEl.innerHTML = `<p>Buying the records for ${esc(mine)} through Telegraph…</p>`;
+  try {
+    const url = `api/dossier?mine=${encodeURIComponent(mine)}&format=md`;
+    const r = await fetch(url);
+    if (!r.ok) throw new Error((await r.json().catch(() => ({}))).error ?? r.status);
+    render(await r.text());
+    dl.innerHTML = `Download: <a href="${esc(url)}">Markdown</a> · <a href="api/dossier?mine=${encodeURIComponent(mine)}">JSON</a>`;
+    document.querySelectorAll("nav.mines button").forEach((b) => b.setAttribute("aria-pressed", "false"));
+  } catch (e) { docEl.innerHTML = `<p class="bad">No dossier (${esc(e.message)}).</p>`; }
+  finally { btn.disabled = false; }
+});
+show(location.hash.slice(1) || "mount-morgan");
+</script>
+</body>
+</html>
