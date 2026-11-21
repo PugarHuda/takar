@@ -1,5 +1,23 @@
 # For reviewers
 
+## In one page
+
+**Takar: never act on one answer from Telegraph.** A verification layer: two miners from different operators compared field by field, an open on-chain record of who was right, and money that moves only when two independent sources agree. Ethereum Sepolia, test USDC.
+
+Watch (2:33, narrated): https://takar-telegraph.vercel.app/media/takar-overview.mp4
+
+| Proof | Try it in one step | What to look for |
+|---|---|---|
+| A second opinion for any intent, every call on EAS | `curl -X POST https://takar-telegraph.vercel.app/api/second-opinion -H 'content-type: application/json' -d '{"intent":"SANCTIONS_SCREENING_MATCH_GENERAL","params":{"name":"Bank Rossiya"},"fields":["matched"]}'` | `agree`, two miners of different operators, two Telegraph signals, an EAS `record`; then `/api/feed` counts it |
+| Escrow that needs two resolvers and makes a wrong dispute cost | https://takar-telegraph.vercel.app/#settle-h | v3: the payer disputed a correct payment and its bond went to the supplier; v4: after both parties disputed, both resolvers had to sign. Contracts verified on Sourcify |
+| Gold Rush dossiers for Telegraph's own Gold Rush | https://takar-telegraph.vercel.app/goldrush.html | Mount Morgan: 250 t vs 294 t explained by dump retreatment (offered, not applied); 24 leases past expiry yet "Granted"; an active native title claim the lease category does not show |
+| Honest numbers | `receipts/scorecard-contested-2.json` | 37 contested markets, Brier 0.121 (0.076–0.176); our miner 15 right, 0 wrong |
+| For miner operators | `GET /api/miner?id=takar-outcome` | per-epoch scores, silent zeros flagged, routing check from the node's request counter |
+
+Offline: `npm ci && npm test` (364 checks), `cd onchain && forge test` (25). Everything below is detail.
+
+---
+
 Takar is entered in Telegraph Hackathon Season II, in all three tracks, from one repo. Everything runs on Ethereum Sepolia testnet with test USDC.
 
 | Part | Track | Mission or Intent |
@@ -40,7 +58,7 @@ curl -X POST https://takar-telegraph.vercel.app/api/second-opinion -H 'content-t
 
 ## Check it in five minutes, with no wallet
 
-1. `npm install && npm test` runs 347 offline checks: the payment signers (exact and escrow), the fleet, the outcome resolver, the scorecard, Settle and the Mission 05 note. `cd onchain && forge install foundry-rs/forge-std --no-git && forge test` runs the 25 contract tests. No network, no funds.
+1. `npm install && npm test` runs 364 offline checks: the payment signers (exact and escrow), the fleet, the outcome resolver, the scorecard, Settle and the Mission 05 note. `cd onchain && forge install foundry-rs/forge-std --no-git && forge test` runs the 25 contract tests. No network, no funds.
 2. On the site, press **Verify the signature in this browser** under the scorecard. It checks the Ed25519 signature against the key pinned in the page, with WebCrypto.
 3. On the site, use **Ask the outcome miner yourself**. It calls the miner's own endpoint, with no wallet.
 4. Open `receipts/ledger.jsonl` and pick a line with `"status":"paid"`.
