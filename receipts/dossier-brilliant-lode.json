@@ -414,6 +414,95 @@
         }
       ]
     },
+    "native_title": {
+      "checked_at": "2026-11-21T18:46:16.254Z",
+      "sources": [
+        "https://services2.arcgis.com/rzk7fNEt0xoEp3cX/arcgis/rest/services/NNTT_Custodial_AGOL/FeatureServer (National Native Title Tribunal)",
+        "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/CulturalHeritageBoundaries/MapServer (Queensland Government)"
+      ],
+      "entries": [
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Gudjala People and Local Government ILUA",
+          "id": "QI2014/031",
+          "status": null,
+          "lodged": "2014-04-29",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Gudjala People and Ergon Energy ILUA",
+          "id": "QI2013/082",
+          "status": null,
+          "lodged": "2013-11-08",
+          "determined": null
+        },
+        {
+          "kind": "representative body area",
+          "name": "Northern Queensland Region",
+          "id": null,
+          "status": null,
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage party",
+          "name": "Gudjala People",
+          "id": "QCD2014/006 DET",
+          "status": "DETERMINED",
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage body",
+          "name": "Gudjal Traditional Owners Aboriginal Corporation",
+          "id": "CLH000209",
+          "status": null,
+          "lodged": null,
+          "determined": "2014-10-04"
+        }
+      ],
+      "errors": [],
+      "active_claims": 0,
+      "note": null
+    },
+    "heritage": [
+      {
+        "ref": "602801",
+        "name": "ED Miles Mining Exchange (former)",
+        "suburb": "CHARTERS TOWERS",
+        "entered": "2012-11-09",
+        "why": "town (CHARTERS TOWERS)"
+      },
+      {
+        "ref": "600402",
+        "name": "School of Mines, Charters Towers",
+        "suburb": "CHARTERS TOWERS",
+        "entered": "1992-10-21",
+        "why": "town (CHARTERS TOWERS)"
+      },
+      {
+        "ref": "600413",
+        "name": "Venus State Battery",
+        "suburb": "CHARTERS TOWERS",
+        "entered": "1992-10-21",
+        "why": "town (CHARTERS TOWERS)"
+      },
+      {
+        "ref": "602200",
+        "name": "Day Dawn PC No.3 Shaft mine remains",
+        "suburb": "CHARTERS TOWERS",
+        "entered": "2003-04-29",
+        "why": "town (CHARTERS TOWERS)"
+      },
+      {
+        "ref": "602221",
+        "name": "Charters Towers Gold Mine Shafts and Remains",
+        "suburb": "CHARTERS TOWERS",
+        "entered": "2003-04-29",
+        "why": "town (CHARTERS TOWERS)"
+      }
+    ],
     "receipts_tie": {
       "checked": 3,
       "in_paid_answer": 3,
@@ -442,6 +531,7 @@
       "closure reason: the indexed sources give a closure year but quote no reason",
       "why it stopped in 1917: no source quotes a reason; do not assume exhaustion",
       "tenure: 1 authorities show an expiry date in the past with status \"Granted\": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.",
+      "heritage: 5 heritage-listed places belong to this mine or its town; works on them need heritage approval",
       "who controls it: Brilliant Deep Levels Gold Mining Company could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly"
     ],
     "miner_conflicts": []
@@ -751,11 +841,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T18:37:43.578Z",
+  "rederived_at": "2026-11-21T18:46:16.256Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "c505e7c9f99ad02d0023b5c61e1f4a0ffe40599c9b9886ee399c26f139a3ecac",
-    "signature": "NGD1eTBON6NTt8Vq3fv6NkBzBoElw98j+JK2bUQnjBUf9TdMdgQCxD9B1XvwOazgdbRoNw2rD+5mxLQ357u9Bg==",
+    "sha256": "29c46df6fffd1f379d8617148c106805cc6a4f18f5cbdc51a35e3f2c9c6a999f",
+    "signature": "pqxf4vQceoU8nU+mL+uJu6tLO3DbegQrlWxDzjU1unn6x0vshnnjJ5UqCzVeCoQ8+yh5wHcuh85nwnCxRLZVBg==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

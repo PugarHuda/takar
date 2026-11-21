@@ -837,6 +837,74 @@
         }
       ]
     },
+    "native_title": {
+      "checked_at": "2026-11-21T18:46:13.331Z",
+      "sources": [
+        "https://services2.arcgis.com/rzk7fNEt0xoEp3cX/arcgis/rest/services/NNTT_Custodial_AGOL/FeatureServer (National Native Title Tribunal)",
+        "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/CulturalHeritageBoundaries/MapServer (Queensland Government)"
+      ],
+      "entries": [
+        {
+          "kind": "registered claim",
+          "name": "Gaangalu Nation People",
+          "id": "QC2012/009",
+          "status": "Active",
+          "lodged": "2012-08-20",
+          "determined": null
+        },
+        {
+          "kind": "claim application",
+          "name": "Gaangalu Nation People",
+          "id": "QC2012/009",
+          "status": "Active",
+          "lodged": "2012-08-20",
+          "determined": null
+        },
+        {
+          "kind": "representative body area",
+          "name": "Southern and Western Queensland Region",
+          "id": null,
+          "status": null,
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage party",
+          "name": "Gaangalu Nation People",
+          "id": "QC2012/009",
+          "status": "PREVIOUSLY_REGISTERED",
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage body",
+          "name": "GNP Holdings Pty Ltd",
+          "id": "CHB024004",
+          "status": null,
+          "lodged": null,
+          "determined": "2024-07-05"
+        }
+      ],
+      "errors": [],
+      "active_claims": 2,
+      "note": "A registered native title claim covers this point. A lease's own native-title category describes the position when it was granted; today's claim still matters for any new grant or access. Confirm with the claimants' representative and a lawyer."
+    },
+    "heritage": [
+      {
+        "ref": "645613",
+        "name": "Adolphus William Copper Smelter and Dee Township",
+        "suburb": "MOUNT MORGAN",
+        "entered": "2011-05-13",
+        "why": "name"
+      },
+      {
+        "ref": "600751",
+        "name": "Mount Morgan Mine Site",
+        "suburb": "MOUNT MORGAN",
+        "entered": "1992-10-21",
+        "why": "name"
+      }
+    ],
     "receipts_tie": {
       "checked": 7,
       "in_paid_answer": 3,
@@ -888,6 +956,8 @@
     "open_questions": [
       "why it stopped in 1990: no source quotes a reason; do not assume exhaustion",
       "tenure: 24 authorities show an expiry date in the past with status \"Granted\": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.",
+      "native title: A registered native title claim covers this point. A lease's own native-title category describes the position when it was granted; today's claim still matters for any new grant or access. Confirm with the claimants' representative and a lawyer.",
+      "heritage: 2 heritage-listed places belong to this mine or its town; works on them need heritage approval",
       "who controls it: Norton Gold Fields Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly",
       "who controls it: Mount Morgan Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly",
       "production: QLDGOV-MM and MINOCC-2017:Total_Ores_Prod:494270 conflict (same period (1882–1990), 250 t against 294.1 t, 15% apart. Candidate explanation: MINOCC-2017 includes 56.2 t from dumps or tailings (1983–1990); without it, 237.9 t, 5% from 250 t. Needs the record to confirm); check whether they count recovered or contained gold, and whether tailings retreatment is included"
@@ -1843,11 +1913,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T18:37:41.942Z",
+  "rederived_at": "2026-11-21T18:46:13.357Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "0119ae11cdd0cfa8ba4170f8743c03fbbe2f4df18b48f0f9e216334bad3341cd",
-    "signature": "jplZSXiv5d2Ef7wbSJRRme30mBocFvXkw/yWPk70JrpQ8Ro/vPGmumkCDkWhDwUJdW+lYsfDHV2NGfeLRVXEDw==",
+    "sha256": "615b38c14f4c1802b68983e3f94dd75dd274d810020b4a8e823bd8797472ef7b",
+    "signature": "KYhtb9sXdBcmd0zuwz/Xixhn72PLxfGyXw1KuJBLFnrX0358skqtfwu9RqxgtyO2k72vzosfSDHDUl5Xek+aCw==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

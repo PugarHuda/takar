@@ -471,6 +471,67 @@
         }
       ]
     },
+    "native_title": {
+      "checked_at": "2026-11-21T18:46:23.932Z",
+      "sources": [
+        "https://services2.arcgis.com/rzk7fNEt0xoEp3cX/arcgis/rest/services/NNTT_Custodial_AGOL/FeatureServer (National Native Title Tribunal)",
+        "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/CulturalHeritageBoundaries/MapServer (Queensland Government)"
+      ],
+      "entries": [
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Ergon Energy and Wulli Wulli People ILUA",
+          "id": "QI2015/045",
+          "status": null,
+          "lodged": "2015-08-11",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Cracow Project ILUA",
+          "id": "QI2002/053",
+          "status": null,
+          "lodged": "2002-12-05",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Wulli Wulli People and Banana Shire Council ILUA",
+          "id": "QI2015/044",
+          "status": null,
+          "lodged": "2015-08-11",
+          "determined": null
+        },
+        {
+          "kind": "representative body area",
+          "name": "Southern and Western Queensland Region",
+          "id": null,
+          "status": null,
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage party",
+          "name": "Wulli Wulli People",
+          "id": "QCD2015/009 DET",
+          "status": "DETERMINED",
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage body",
+          "name": "Wulli Wulli Nation Aboriginal Corporation RNTBC",
+          "id": "CHB015527",
+          "status": null,
+          "lodged": null,
+          "determined": "2016-01-11"
+        }
+      ],
+      "errors": [],
+      "active_claims": 0,
+      "note": null
+    },
+    "heritage": [],
     "receipts_tie": {
       "checked": 8,
       "in_paid_answer": 0,
@@ -1014,11 +1075,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T18:37:48.402Z",
+  "rederived_at": "2026-11-21T18:46:23.933Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "e461d5ba2cdd4e5360c198e6180d265807b28058517aa4273620c1cbbe68f1a7",
-    "signature": "3bGBc2xPwsU1Hc4esP1KRxiewHvyygMAiYlrPuQnH4MS6g+13mEX949XWi1YTMTTLpO+MFj6DItEHR0yFsyiAA==",
+    "sha256": "db2b602f3c4539570607dc6f017c33e9b9a8bbf255dd6fbe168ffc98962baea6",
+    "signature": "qCW+7KmUdTKMrDY+1TgQc3t0M2AEyATeqitUfZMRlpeVSiCGV/Jvg3rej7iAimG4ggoY3paPoTDqfNiXXO7FBQ==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

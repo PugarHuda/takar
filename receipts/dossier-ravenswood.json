@@ -302,6 +302,87 @@
         }
       ]
     },
+    "native_title": {
+      "checked_at": "2026-11-21T18:46:28.490Z",
+      "sources": [
+        "https://services2.arcgis.com/rzk7fNEt0xoEp3cX/arcgis/rest/services/NNTT_Custodial_AGOL/FeatureServer (National Native Title Tribunal)",
+        "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/CulturalHeritageBoundaries/MapServer (Queensland Government)"
+      ],
+      "entries": [
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Birriah People and Local Government ILUA",
+          "id": "QI2014/090",
+          "status": null,
+          "lodged": "2014-12-23",
+          "determined": null
+        },
+        {
+          "kind": "representative body area",
+          "name": "Northern Queensland Region",
+          "id": null,
+          "status": null,
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage party",
+          "name": "Birriah People",
+          "id": "QCD2016/001 DET",
+          "status": "DETERMINED",
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage body",
+          "name": "Birriah Aboriginal Corporation RNTBC",
+          "id": "CHB015003",
+          "status": null,
+          "lodged": null,
+          "determined": "2024-08-24"
+        }
+      ],
+      "errors": [],
+      "active_claims": 0,
+      "note": null
+    },
+    "heritage": [
+      {
+        "ref": "600452",
+        "name": "Thorps Building",
+        "suburb": "RAVENSWOOD",
+        "entered": "1992-10-21",
+        "why": "name"
+      },
+      {
+        "ref": "601206",
+        "name": "Mabel Mill (former)",
+        "suburb": "RAVENSWOOD",
+        "entered": "1994-01-28",
+        "why": "name"
+      },
+      {
+        "ref": "601207",
+        "name": "London North Mine, Ravenswood",
+        "suburb": "RAVENSWOOD",
+        "entered": "1994-02-22",
+        "why": "name"
+      },
+      {
+        "ref": "601848",
+        "name": "Pandanus Creek Battery",
+        "suburb": "RAVENSWOOD",
+        "entered": "2004-04-05",
+        "why": "name"
+      },
+      {
+        "ref": "650038",
+        "name": "Ravenswood Mining Landscape and Chinese Settlement Area",
+        "suburb": "RAVENSWOOD",
+        "entered": "2016-10-14",
+        "why": "name"
+      }
+    ],
     "receipts_tie": {
       "checked": 2,
       "in_paid_answer": 2,
@@ -325,6 +406,7 @@
       "closure: no closure year or reason in the sources indexed for this site",
       "production rests on one register (MINOCC-2017); no second source to check it against",
       "tenure: 1 authorities show an expiry date in the past with status \"Granted\": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.",
+      "heritage: 5 heritage-listed places belong to this mine or its town; works on them need heritage approval",
       "who controls it: EMR Capital Group, Golden Energy and Resources Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly"
     ],
     "miner_conflicts": []
@@ -530,11 +612,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T18:37:51.797Z",
+  "rederived_at": "2026-11-21T18:46:28.492Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "eab526a6e42b3a41ebb69ae8992a2158fa722fb576d58ba73d5eb42c8454efff",
-    "signature": "5RkDbIJzHdLXHuz0ykczqzoSloqlwWEgqBel59mDRjtQYy8QhfLltp8HJ0AZGjIRCCflye6sFHR2N7jvDI87DQ==",
+    "sha256": "7ec105fa54e75270641508a4d9f50f36ccd8ec4e1a94edcd0cbbb9b33d9c462f",
+    "signature": "Y8si11K6SiDdiY9koLvoT1e5Gm9TavQl79WToPfga+CYn8JmUeSCFpu5i1bgJHEkEPcMlAi0/381pVa8K34MBw==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

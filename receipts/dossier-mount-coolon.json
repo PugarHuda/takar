@@ -493,6 +493,67 @@
         }
       ]
     },
+    "native_title": {
+      "checked_at": "2026-11-21T18:46:30.686Z",
+      "sources": [
+        "https://services2.arcgis.com/rzk7fNEt0xoEp3cX/arcgis/rest/services/NNTT_Custodial_AGOL/FeatureServer (National Native Title Tribunal)",
+        "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/CulturalHeritageBoundaries/MapServer (Queensland Government)"
+      ],
+      "entries": [
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Jangga People and Charters Towers Regional Council, Isaac Regional Council and Whitsunday Regional Council ILUA",
+          "id": "QI2007/007",
+          "status": null,
+          "lodged": "2009-09-04",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Jangga People Part Compensation ILUA",
+          "id": "QI2023/006",
+          "status": null,
+          "lodged": "2023-09-19",
+          "determined": null
+        },
+        {
+          "kind": "representative body area",
+          "name": "Northern Queensland Region",
+          "id": null,
+          "status": null,
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage party",
+          "name": "Jangga People",
+          "id": "QCD2012/009 DET",
+          "status": "DETERMINED",
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage body",
+          "name": "Bulganunna Aboriginal Corporation RNTBC",
+          "id": "CHB024003",
+          "status": null,
+          "lodged": null,
+          "determined": "2024-08-19"
+        }
+      ],
+      "errors": [],
+      "active_claims": 0,
+      "note": null
+    },
+    "heritage": [
+      {
+        "ref": "602242",
+        "name": "Barclay's Battery",
+        "suburb": "MOUNT COOLON",
+        "entered": "2004-05-17",
+        "why": "name"
+      }
+    ],
     "receipts_tie": {
       "checked": 6,
       "in_paid_answer": 1,
@@ -539,6 +600,7 @@
       "closure reason: the indexed sources give a closure year but quote no reason",
       "why it stopped in 1996: no source quotes a reason; do not assume exhaustion",
       "production rests on one register (MINOCC-2017); no second source to check it against",
+      "heritage: 1 heritage-listed places belong to this mine or its town; works on them need heritage approval",
       "who controls it: Mt Coolon Gold Mines Pty Ltd could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly"
     ],
     "miner_conflicts": []
@@ -1063,11 +1125,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T18:37:53.408Z",
+  "rederived_at": "2026-11-21T18:46:30.687Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "b18a1187dadeca4ce54e659388ad40e5409fdf99c5bb06df2d4691e01d57ef6c",
-    "signature": "maMj/4WiKWQLp+dFzSJ0H38IWLBMgAJ8r0CDYK60atriox8RKTE10l4bbiXOV607di0FWAaY6IsUZgEQgBhlAg==",
+    "sha256": "a4a0dff44dbdad4c8634201f442b20c6bd0a1f06af41070c51214e44c3b57fa0",
+    "signature": "6LDA7hAsh5FyQ6yS+8Gua3ZQhRLfmlTBHLiHJbDmOh3y3cuEIqsK0O2xrwf08vxRJRk4K+7LKWYZsWR59mepCw==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

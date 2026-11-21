@@ -71,6 +71,25 @@ Newest:
 - EPM 28609 (EPM granted), TRI-STAR GOLD PTY LTD, granted 2025-11-25, AMOC
 - EPM 29338 (EPM application), LAKESIDE EXPLORATION PTY LTD, lodged 2025-11-17, AMOC
 
+## Native title and Traditional Owners at the site (NNTT and Queensland registers, read directly)
+
+- Indigenous Land Use Agreement: Ewamian-Etheridge Shire Area ILUA No. 3 (QI2005/004), lodged 2007-09-05
+- Indigenous Land Use Agreement: Ewamian People Exploration Permit Backlog Project (QI2002/060), lodged 2002-11-13
+- Indigenous Land Use Agreement: Ewamian Renison Exploration ILUA (QI2011/024), lodged 2011-05-19
+- Indigenous Land Use Agreement: Ewamian Copper Strike Einasleigh ILUA (QI2007/035), lodged 2008-01-25
+- Indigenous Land Use Agreement: Ewamian People Small Scale Miners ILUA (QI2013/087), lodged 2013-12-19
+- Indigenous Land Use Agreement: Ewamian Small Scale Mining and Exploration (QI2003/044), lodged 2004-04-16
+- representative body area: Northern Queensland Region
+- cultural heritage party: Ewamian People \# 3 (QCD2013/007 DET), DETERMINED
+
+Checked 2026-11-21T18:46:21.429Z. Contact details are on the registers, not copied here.
+
+## Heritage-listed places (Queensland Heritage Register)
+
+- Kidston State Battery & Township, KIDSTON (QHR 600506, entered 1992-10-21; matched by name)
+
+Look a place up by its QHR number at [the register](https://qhr.detsi.qld.gov.au/map).
+
 ## Who held it
 
 - Kidston Gold Mines Limited (?–?, principal holder of mining lease 3347 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:479629] "Tenure: Principal Holder Name KIDSTON GOLD MINES LIMITED; MINING LEASE 3347"
@@ -84,6 +103,7 @@ Newest:
 - closure reason: the indexed sources give a closure year but quote no reason
 - why it stopped in 2001: no source quotes a reason; do not assume exhaustion
 - production rests on one register \(MINOCC-2017\); no second source to check it against
+- heritage: 1 heritage-listed places belong to this mine or its town; works on them need heritage approval
 - who controls it: Kidston Gold Mines Limited could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly
 
 ## Receipts

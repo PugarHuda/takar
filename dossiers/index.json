@@ -8,7 +8,7 @@
    "conflict",
    "not comparable"
   ],
-  "open": 5
+  "open": 7
  },
  {
   "slug": "brilliant-lode",
@@ -17,21 +17,21 @@
   "pairs": [
    "not comparable"
   ],
-  "open": 4
+  "open": 5
  },
  {
   "slug": "mount-leyshon",
   "name": "Mount Leyshon",
   "site_no": 38940,
   "pairs": [],
-  "open": 5
+  "open": 6
  },
  {
   "slug": "kidston",
   "name": "Kidston",
   "site_no": 479629,
   "pairs": [],
-  "open": 4
+  "open": 5
  },
  {
   "slug": "golden-plateau",
@@ -52,13 +52,13 @@
   "name": "Ravenswood",
   "site_no": 481934,
   "pairs": [],
-  "open": 5
+  "open": 6
  },
  {
   "slug": "mount-coolon",
   "name": "Mount Coolon",
   "site_no": 41615,
   "pairs": [],
-  "open": 4
+  "open": 5
  }
 ]

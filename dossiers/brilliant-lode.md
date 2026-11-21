@@ -74,6 +74,26 @@ Newest:
 - ML 100404 (ML application), CITIGOLD CORPORATION LIMITED, lodged 2024-07-25, CU,PB,ZN,AG,AU
 - EPM 28565 (EPM granted), Ballymore Resources Limited, granted 2024-05-02, AMOC
 
+## Native title and Traditional Owners at the site (NNTT and Queensland registers, read directly)
+
+- Indigenous Land Use Agreement: Gudjala People and Local Government ILUA (QI2014/031), lodged 2014-04-29
+- Indigenous Land Use Agreement: Gudjala People and Ergon Energy ILUA (QI2013/082), lodged 2013-11-08
+- representative body area: Northern Queensland Region
+- cultural heritage party: Gudjala People (QCD2014/006 DET), DETERMINED
+- cultural heritage body: Gudjal Traditional Owners Aboriginal Corporation (CLH000209), 2014-10-04
+
+Checked 2026-11-21T18:46:16.254Z. Contact details are on the registers, not copied here.
+
+## Heritage-listed places (Queensland Heritage Register)
+
+- ED Miles Mining Exchange \(former\), CHARTERS TOWERS (QHR 602801, entered 2012-11-09; matched by town \(CHARTERS TOWERS\))
+- School of Mines, Charters Towers, CHARTERS TOWERS (QHR 600402, entered 1992-10-21; matched by town \(CHARTERS TOWERS\))
+- Venus State Battery, CHARTERS TOWERS (QHR 600413, entered 1992-10-21; matched by town \(CHARTERS TOWERS\))
+- Day Dawn PC No.3 Shaft mine remains, CHARTERS TOWERS (QHR 602200, entered 2003-04-29; matched by town \(CHARTERS TOWERS\))
+- Charters Towers Gold Mine Shafts and Remains, CHARTERS TOWERS (QHR 602221, entered 2003-04-29; matched by town \(CHARTERS TOWERS\))
+
+Look a place up by its QHR number at [the register](https://qhr.detsi.qld.gov.au/map).
+
 ## Who held it
 
 - Citigold Corporation Limited (?–?, principal holder of mining lease 1499, mining lease 10093, mining lease 10208 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:38722] "Tenure: Principal Holder Name CITIGOLD CORPORATION LIMITED; MINING LEASE 1499, MINING LEASE 10093, MINING LEASE 10208"
@@ -88,6 +108,7 @@ Newest:
 - closure reason: the indexed sources give a closure year but quote no reason
 - why it stopped in 1917: no source quotes a reason; do not assume exhaustion
 - tenure: 1 authorities show an expiry date in the past with status "Granted": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.
+- heritage: 5 heritage-listed places belong to this mine or its town; works on them need heritage approval
 - who controls it: Brilliant Deep Levels Gold Mining Company could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly
 
 ## Receipts

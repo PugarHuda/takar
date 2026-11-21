@@ -84,6 +84,20 @@ Newest:
 - EPM 29541 (EPM application), SWEETROCK ENTERPRISES PTY LTD, lodged 2026-05-01, AMOC
 - EPM 29049 (EPM granted), SUNSHINE \(RAVENSWOOD\) PTY LTD, granted 2026-02-16, AMOC
 
+## Native title and Traditional Owners at the site (NNTT and Queensland registers, read directly)
+
+- registered claim: Jangga People \#2 (QC2018/002), Active, lodged 2018-06-08
+- registered claim: Gudjala People \#3 (QC2023/001), Active, lodged 2023-03-30
+- claim application: Jangga People \#2 (QC2018/002), Active, lodged 2018-06-08
+- claim application: Gudjala People \#3 (QC2023/001), Active, lodged 2023-03-30
+- representative body area: Northern Queensland Region
+- cultural heritage party: Gudjala People (QC2023/001), REGISTERED
+- cultural heritage party: Jangga People \#2 (QC2018/002), REGISTERED
+
+**A registered native title claim covers this point. A lease's own native-title category describes the position when it was granted; today's claim still matters for any new grant or access. Confirm with the claimants' representative and a lawyer.**
+
+Checked 2026-11-21T18:46:18.958Z. Contact details are on the registers, not copied here.
+
 ## Who held it
 
 - Leyshon Resources Limited (?–?, principal holder of mining lease 10144 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:38940] "Tenure: Principal Holder Name LEYSHON RESOURCES LIMITED; MINING LEASE 10144"
@@ -98,6 +112,7 @@ Newest:
 - closure reason: the indexed sources give a closure year but quote no reason
 - why it stopped in 2002: no source quotes a reason; do not assume exhaustion
 - production rests on one register \(MINOCC-2017\); no second source to check it against
+- native title: A registered native title claim covers this point. A lease's own native-title category describes the position when it was granted; today's claim still matters for any new grant or access. Confirm with the claimants' representative and a lawyer.
 - who controls it: Leyshon Resources Limited could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly
 - who controls it: Mount Isa Mines Ltd could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly
 

@@ -76,6 +76,22 @@ Newest:
 - EPM 28322 (EPM application), AUSTRAL DUTCH KAOLIN LIMITED, lodged 2022-03-02, AMOC
 - EPM 27598 (EPM granted), MT COOLON GOLD MINES PTY LTD, granted 2021-07-26, AMOC
 
+## Native title and Traditional Owners at the site (NNTT and Queensland registers, read directly)
+
+- Indigenous Land Use Agreement: Jangga People and Charters Towers Regional Council, Isaac Regional Council and Whitsunday Regional Council ILUA (QI2007/007), lodged 2009-09-04
+- Indigenous Land Use Agreement: Jangga People Part Compensation ILUA (QI2023/006), lodged 2023-09-19
+- representative body area: Northern Queensland Region
+- cultural heritage party: Jangga People (QCD2012/009 DET), DETERMINED
+- cultural heritage body: Bulganunna Aboriginal Corporation RNTBC (CHB024003), 2024-08-19
+
+Checked 2026-11-21T18:46:30.686Z. Contact details are on the registers, not copied here.
+
+## Heritage-listed places (Queensland Heritage Register)
+
+- Barclay's Battery, MOUNT COOLON (QHR 602242, entered 2004-05-17; matched by name)
+
+Look a place up by its QHR number at [the register](https://qhr.detsi.qld.gov.au/map).
+
 ## Who held it
 
 - Mt Coolon Gold Mines Pty Ltd (?–?, principal holder of exploration permit mineral 15902, mining lease 1029, mining lease 1085, mining lease 1086 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:41615] "Tenure: Principal Holder Name MT COOLON GOLD MINES PTY LTD; EXPLORATION PERMIT MINERAL 15902, MINING LEASE 1029, MINING LEASE 1085, MINING LEASE 1086"
@@ -89,6 +105,7 @@ Newest:
 - closure reason: the indexed sources give a closure year but quote no reason
 - why it stopped in 1996: no source quotes a reason; do not assume exhaustion
 - production rests on one register \(MINOCC-2017\); no second source to check it against
+- heritage: 1 heritage-listed places belong to this mine or its town; works on them need heritage approval
 - who controls it: Mt Coolon Gold Mines Pty Ltd could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly
 
 ## Receipts

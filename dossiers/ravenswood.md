@@ -58,6 +58,25 @@ Newest:
 - EPM 28753 (EPM granted), TRI-STAR GOLD PTY LTD, granted 2025-01-09, AMOC
 - EPM 28619 (EPM granted), Ravenswood Gold Pty Ltd, granted 2024-11-05, AMOC
 
+## Native title and Traditional Owners at the site (NNTT and Queensland registers, read directly)
+
+- Indigenous Land Use Agreement: Birriah People and Local Government ILUA (QI2014/090), lodged 2014-12-23
+- representative body area: Northern Queensland Region
+- cultural heritage party: Birriah People (QCD2016/001 DET), DETERMINED
+- cultural heritage body: Birriah Aboriginal Corporation RNTBC (CHB015003), 2024-08-24
+
+Checked 2026-11-21T18:46:28.490Z. Contact details are on the registers, not copied here.
+
+## Heritage-listed places (Queensland Heritage Register)
+
+- Thorps Building, RAVENSWOOD (QHR 600452, entered 1992-10-21; matched by name)
+- Mabel Mill \(former\), RAVENSWOOD (QHR 601206, entered 1994-01-28; matched by name)
+- London North Mine, Ravenswood, RAVENSWOOD (QHR 601207, entered 1994-02-22; matched by name)
+- Pandanus Creek Battery, RAVENSWOOD (QHR 601848, entered 2004-04-05; matched by name)
+- Ravenswood Mining Landscape and Chinese Settlement Area, RAVENSWOOD (QHR 650038, entered 2016-10-14; matched by name)
+
+Look a place up by its QHR number at [the register](https://qhr.detsi.qld.gov.au/map).
+
 ## Who held it
 
 - EMR Capital Group, Golden Energy and Resources Limited (?–?, company listed by Geoscience Australia \(status: operating mine\)) [GA-MINERALDEPOSITS-336045] "COMPANIES: EMR Capital Group, Golden Energy and Resources Limited"
@@ -72,6 +91,7 @@ Newest:
 - closure: no closure year or reason in the sources indexed for this site
 - production rests on one register \(MINOCC-2017\); no second source to check it against
 - tenure: 1 authorities show an expiry date in the past with status "Granted": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.
+- heritage: 5 heritage-listed places belong to this mine or its town; works on them need heritage approval
 - who controls it: EMR Capital Group, Golden Energy and Resources Limited could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly
 
 ## Receipts

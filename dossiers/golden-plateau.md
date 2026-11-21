@@ -81,6 +81,17 @@ Newest:
 - EPM 28719 (EPM granted), TERRAIN MINERALS LTD, granted 2024-10-17, AMOC
 - EPM 28618 (EPM granted), GCM Corporation Limited, granted 2024-10-16, AMOC
 
+## Native title and Traditional Owners at the site (NNTT and Queensland registers, read directly)
+
+- Indigenous Land Use Agreement: Ergon Energy and Wulli Wulli People ILUA (QI2015/045), lodged 2015-08-11
+- Indigenous Land Use Agreement: Cracow Project ILUA (QI2002/053), lodged 2002-12-05
+- Indigenous Land Use Agreement: Wulli Wulli People and Banana Shire Council ILUA (QI2015/044), lodged 2015-08-11
+- representative body area: Southern and Western Queensland Region
+- cultural heritage party: Wulli Wulli People (QCD2015/009 DET), DETERMINED
+- cultural heritage body: Wulli Wulli Nation Aboriginal Corporation RNTBC (CHB015527), 2016-01-11
+
+Checked 2026-11-21T18:46:23.932Z. Contact details are on the registers, not copied here.
+
 ## Who held it
 
 - Lion Mining Pty Ltd (?–?, principal holder of mining lease 3219, mining lease 3221, mining lease 3223, mining lease 3224, mining lease 3227, mining lease 3228, mining lease 3230, mining lease 3232, mining lease 3234, mining lease 80024 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:493636] "Tenure: Principal Holder Name LION MINING PTY LTD; MINING LEASE 3219, MINING LEASE 3221, MINING LEASE 3223, MINING LEASE 3224, MINING LEASE 3227, MINING LEASE 3228, MINING LEASE 3230, MINING LEASE 3232, MINING LEASE 3234, MINING LEASE 80024"

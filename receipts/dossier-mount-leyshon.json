@@ -570,6 +570,75 @@
         }
       ]
     },
+    "native_title": {
+      "checked_at": "2026-11-21T18:46:18.958Z",
+      "sources": [
+        "https://services2.arcgis.com/rzk7fNEt0xoEp3cX/arcgis/rest/services/NNTT_Custodial_AGOL/FeatureServer (National Native Title Tribunal)",
+        "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/CulturalHeritageBoundaries/MapServer (Queensland Government)"
+      ],
+      "entries": [
+        {
+          "kind": "registered claim",
+          "name": "Jangga People #2",
+          "id": "QC2018/002",
+          "status": "Active",
+          "lodged": "2018-06-08",
+          "determined": null
+        },
+        {
+          "kind": "registered claim",
+          "name": "Gudjala People #3",
+          "id": "QC2023/001",
+          "status": "Active",
+          "lodged": "2023-03-30",
+          "determined": null
+        },
+        {
+          "kind": "claim application",
+          "name": "Jangga People #2",
+          "id": "QC2018/002",
+          "status": "Active",
+          "lodged": "2018-06-08",
+          "determined": null
+        },
+        {
+          "kind": "claim application",
+          "name": "Gudjala People #3",
+          "id": "QC2023/001",
+          "status": "Active",
+          "lodged": "2023-03-30",
+          "determined": null
+        },
+        {
+          "kind": "representative body area",
+          "name": "Northern Queensland Region",
+          "id": null,
+          "status": null,
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage party",
+          "name": "Gudjala People",
+          "id": "QC2023/001",
+          "status": "REGISTERED",
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage party",
+          "name": "Jangga People #2",
+          "id": "QC2018/002",
+          "status": "REGISTERED",
+          "lodged": null,
+          "determined": null
+        }
+      ],
+      "errors": [],
+      "active_claims": 4,
+      "note": "A registered native title claim covers this point. A lease's own native-title category describes the position when it was granted; today's claim still matters for any new grant or access. Confirm with the claimants' representative and a lawyer."
+    },
+    "heritage": [],
     "receipts_tie": {
       "checked": 14,
       "in_paid_answer": 1,
@@ -664,6 +733,7 @@
       "closure reason: the indexed sources give a closure year but quote no reason",
       "why it stopped in 2002: no source quotes a reason; do not assume exhaustion",
       "production rests on one register (MINOCC-2017); no second source to check it against",
+      "native title: A registered native title claim covers this point. A lease's own native-title category describes the position when it was granted; today's claim still matters for any new grant or access. Confirm with the claimants' representative and a lawyer.",
       "who controls it: Leyshon Resources Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly",
       "who controls it: Mount Isa Mines Ltd could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly"
     ],
@@ -1450,11 +1520,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T18:37:45.186Z",
+  "rederived_at": "2026-11-21T18:46:18.959Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "22311a13a820f98a4ad7dec5c5008d71edbb2a1049ef7151dd3207f2b905d01b",
-    "signature": "T8y8VZFUPiOimmIJCKV3AH3dk5FlbwaYorkBLyXUK9nek+seI1903vIyS/aILoJrMzdiz2ZaOvQ17TolBXpLDw==",
+    "sha256": "63bfeac8b4fd2f157fabd93fc0c77db1483ff986f1d76b0f007d7c6d7a68f4b2",
+    "signature": "WrTyo6gh88a8glTom65CtZNDrfNKqoWiMeShGoavxSBRSopABfUp+RtOTuQYWnLkntr3HBF2XlAB51Cm/oWhBg==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

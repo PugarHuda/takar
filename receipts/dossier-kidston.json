@@ -433,6 +433,91 @@
         }
       ]
     },
+    "native_title": {
+      "checked_at": "2026-11-21T18:46:21.429Z",
+      "sources": [
+        "https://services2.arcgis.com/rzk7fNEt0xoEp3cX/arcgis/rest/services/NNTT_Custodial_AGOL/FeatureServer (National Native Title Tribunal)",
+        "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/CulturalHeritageBoundaries/MapServer (Queensland Government)"
+      ],
+      "entries": [
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Ewamian-Etheridge Shire Area ILUA No. 3",
+          "id": "QI2005/004",
+          "status": null,
+          "lodged": "2007-09-05",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Ewamian People Exploration Permit Backlog Project",
+          "id": "QI2002/060",
+          "status": null,
+          "lodged": "2002-11-13",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Ewamian Renison Exploration ILUA",
+          "id": "QI2011/024",
+          "status": null,
+          "lodged": "2011-05-19",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Ewamian Copper Strike Einasleigh ILUA",
+          "id": "QI2007/035",
+          "status": null,
+          "lodged": "2008-01-25",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Ewamian People Small Scale Miners ILUA",
+          "id": "QI2013/087",
+          "status": null,
+          "lodged": "2013-12-19",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Ewamian Small Scale Mining and Exploration",
+          "id": "QI2003/044",
+          "status": null,
+          "lodged": "2004-04-16",
+          "determined": null
+        },
+        {
+          "kind": "representative body area",
+          "name": "Northern Queensland Region",
+          "id": null,
+          "status": null,
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage party",
+          "name": "Ewamian People # 3",
+          "id": "QCD2013/007 DET",
+          "status": "DETERMINED",
+          "lodged": null,
+          "determined": null
+        }
+      ],
+      "errors": [],
+      "active_claims": 0,
+      "note": null
+    },
+    "heritage": [
+      {
+        "ref": "600506",
+        "name": "Kidston State Battery & Township",
+        "suburb": "KIDSTON",
+        "entered": "1992-10-21",
+        "why": "name"
+      }
+    ],
     "receipts_tie": {
       "checked": 6,
       "in_paid_answer": 1,
@@ -479,6 +564,7 @@
       "closure reason: the indexed sources give a closure year but quote no reason",
       "why it stopped in 2001: no source quotes a reason; do not assume exhaustion",
       "production rests on one register (MINOCC-2017); no second source to check it against",
+      "heritage: 1 heritage-listed places belong to this mine or its town; works on them need heritage approval",
       "who controls it: Kidston Gold Mines Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly"
     ],
     "miner_conflicts": []
@@ -983,11 +1069,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T18:37:46.804Z",
+  "rederived_at": "2026-11-21T18:46:21.430Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "895c241c62d43fd953c1de3220e3db7aa4be9a5b142a604f322d94f38a640b89",
-    "signature": "Rz22I75rPR/y2Kzr0lBEdi3W0NmzlHXEZo3hyfqkFBPp0gFfpx6bPgCQgapia2JV3w9y4P4gbGwLfxY1nLxTBg==",
+    "sha256": "23f1a4226065f62b964440a107193abbe71af1d14d15b5dfb31788d0e06b9ca5",
+    "signature": "rkjefnv77foulCpKmWVhrEty6MxrJ7bXTK7zj2DKw4RgTTi9TtSE/xWfOTfwQy5sT+xp9IxPb0CF40gXaKwqBw==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

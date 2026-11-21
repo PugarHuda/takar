@@ -255,6 +255,107 @@
         }
       ]
     },
+    "native_title": {
+      "checked_at": "2026-11-21T18:46:26.182Z",
+      "sources": [
+        "https://services2.arcgis.com/rzk7fNEt0xoEp3cX/arcgis/rest/services/NNTT_Custodial_AGOL/FeatureServer (National Native Title Tribunal)",
+        "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/CulturalHeritageBoundaries/MapServer (Queensland Government)"
+      ],
+      "entries": [
+        {
+          "kind": "determination",
+          "name": "Tagalaka People #2",
+          "id": "QCD2012/013",
+          "status": null,
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Tagalaka People and Ergon Energy ILUA",
+          "id": "QI2013/034",
+          "status": null,
+          "lodged": "2013-08-07",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Tagalaka People/Alehvale and Mooremount ILUA",
+          "id": "QI2014/089",
+          "status": null,
+          "lodged": "2014-12-22",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Small Scale Mining and Exploration Activities North Queensland Area TAGALAKA",
+          "id": "QI2004/019",
+          "status": null,
+          "lodged": "2004-04-15",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Tagalaka Croydon Area ILUA #1",
+          "id": "QI2003/021",
+          "status": null,
+          "lodged": "2005-03-17",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Tagalaka - Croydon Area ILUA #2",
+          "id": "QI2006/047",
+          "status": null,
+          "lodged": "2007-08-16",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Croydon Shire Council - Tagalaka People Determination ILUA",
+          "id": "QI2013/030",
+          "status": null,
+          "lodged": "2013-05-31",
+          "determined": null
+        },
+        {
+          "kind": "registered native title body corporate",
+          "name": null,
+          "id": null,
+          "status": null,
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "representative body area",
+          "name": "Northern Queensland Region",
+          "id": null,
+          "status": null,
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage party",
+          "name": "Tagalaka People #2",
+          "id": "QCD2012/013 DET",
+          "status": "DETERMINED",
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage body",
+          "name": "Tagalaka Aboriginal Corporation RNTBC",
+          "id": "CLH018002",
+          "status": null,
+          "lodged": null,
+          "determined": "2018-09-04"
+        }
+      ],
+      "errors": [],
+      "active_claims": 0,
+      "note": null
+    },
+    "heritage": [],
     "receipts_tie": {
       "checked": 2,
       "in_paid_answer": 2,
@@ -495,11 +596,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T18:37:50.044Z",
+  "rederived_at": "2026-11-21T18:46:26.183Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "5ab245836ad6930b82425c3beecc84a0b31f0102b6277b255bda52692a28dc70",
-    "signature": "5S+8QGDH9N5dDe/8lV3y6PLJ34W40A0OqwloB7lMhGgyQ8CtBcakz5OPX2TNF2oFmaxndOpmjZMmfenH1GbzBg==",
+    "sha256": "31dd927ca17a9ecb4cc0910fe4adc6b9224a2f5fe4188ee3df9469b371f5eeea",
+    "signature": "wOzPcsOghUNBUiGl285C0Hy5da67yUE5ZR2qFy4xJ6A8ikR1IIdOF4gRiGD0N2MF8TTwjWUcxRLFVR09NUOrCw==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

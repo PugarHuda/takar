@@ -97,6 +97,25 @@ Newest:
 - EPM 29487 (EPM application), CENTRAL QUEENSLAND METALS PTY LTD, lodged 2026-04-01, AMOC
 - EPM 29440 (EPM application), MT MORGAN SOUTH PTY LTD, lodged 2026-03-02, AMOC
 
+## Native title and Traditional Owners at the site (NNTT and Queensland registers, read directly)
+
+- registered claim: Gaangalu Nation People (QC2012/009), Active, lodged 2012-08-20
+- claim application: Gaangalu Nation People (QC2012/009), Active, lodged 2012-08-20
+- representative body area: Southern and Western Queensland Region
+- cultural heritage party: Gaangalu Nation People (QC2012/009), PREVIOUSLY\_REGISTERED
+- cultural heritage body: GNP Holdings Pty Ltd (CHB024004), 2024-07-05
+
+**A registered native title claim covers this point. A lease's own native-title category describes the position when it was granted; today's claim still matters for any new grant or access. Confirm with the claimants' representative and a lawyer.**
+
+Checked 2026-11-21T18:46:13.331Z. Contact details are on the registers, not copied here.
+
+## Heritage-listed places (Queensland Heritage Register)
+
+- Adolphus William Copper Smelter and Dee Township, MOUNT MORGAN (QHR 645613, entered 2011-05-13; matched by name)
+- Mount Morgan Mine Site, MOUNT MORGAN (QHR 600751, entered 1992-10-21; matched by name)
+
+Look a place up by its QHR number at [the register](https://qhr.detsi.qld.gov.au/map).
+
 ## Who held it
 
 - Norton Gold Fields Limited (?–?, principal holder of mining lease 5589, mining lease 5602, mining lease 5608, mining lease 5609, mining lease 5612, mining lease 5613, mining lease 5616, mining lease 5618, mining lease 5620, mining lease 5623, mining lease 5624, mining lease 5625, mining lease 5633, mining lease 5634, mining lease 5659, mining lease 5660, mining lease 6692 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:494270] "Tenure: Principal Holder Name NORTON GOLD FIELDS LIMITED; MINING LEASE 5589, MINING LEASE 5602, MINING LEASE 5608, MINING LEASE 5609, MINING LEASE 5612, MINING LEASE 5613, MINING LEASE 5616, MINING LEASE 5618, MINING LEASE 5620, MINING LEASE 5623, MINING LEASE 5624, MINING LEASE 5625, MINING LEASE 5633, MINING LEASE 5634, MINING LEASE 5659, MINING LEASE 5660, MINING LEASE 6692"
@@ -112,6 +131,8 @@ Newest:
 
 - why it stopped in 1990: no source quotes a reason; do not assume exhaustion
 - tenure: 24 authorities show an expiry date in the past with status "Granted": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.
+- native title: A registered native title claim covers this point. A lease's own native-title category describes the position when it was granted; today's claim still matters for any new grant or access. Confirm with the claimants' representative and a lawyer.
+- heritage: 2 heritage-listed places belong to this mine or its town; works on them need heritage approval
 - who controls it: Norton Gold Fields Limited could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly
 - who controls it: Mount Morgan Limited could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly
 - production: QLDGOV-MM and MINOCC-2017:Total\_Ores\_Prod:494270 conflict \(same period \(1882–1990\), 250 t against 294.1 t, 15% apart. Candidate explanation: MINOCC-2017 includes 56.2 t from dumps or tailings \(1983–1990\); without it, 237.9 t, 5% from 250 t. Needs the record to confirm\); check whether they count recovered or contained gold, and whether tailings retreatment is included

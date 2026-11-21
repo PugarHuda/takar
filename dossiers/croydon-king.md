@@ -54,6 +54,22 @@ Newest:
 - EPM 29587 (EPM application), Bonney, Luke David, lodged 2026-06-01, AMOC
 - EPM 29581 (EPM application), SEBROF RESOURCES PTY LTD, lodged 2026-06-01, AMOC
 
+## Native title and Traditional Owners at the site (NNTT and Queensland registers, read directly)
+
+- determination: Tagalaka People \#2 (QCD2012/013)
+- Indigenous Land Use Agreement: Tagalaka People and Ergon Energy ILUA (QI2013/034), lodged 2013-08-07
+- Indigenous Land Use Agreement: Tagalaka People/Alehvale and Mooremount ILUA (QI2014/089), lodged 2014-12-22
+- Indigenous Land Use Agreement: Small Scale Mining and Exploration Activities North Queensland Area TAGALAKA (QI2004/019), lodged 2004-04-15
+- Indigenous Land Use Agreement: Tagalaka Croydon Area ILUA \#1 (QI2003/021), lodged 2005-03-17
+- Indigenous Land Use Agreement: Tagalaka - Croydon Area ILUA \#2 (QI2006/047), lodged 2007-08-16
+- Indigenous Land Use Agreement: Croydon Shire Council - Tagalaka People Determination ILUA (QI2013/030), lodged 2013-05-31
+- registered native title body corporate: unnamed
+- representative body area: Northern Queensland Region
+- cultural heritage party: Tagalaka People \#2 (QCD2012/013 DET), DETERMINED
+- cultural heritage body: Tagalaka Aboriginal Corporation RNTBC (CLH018002), 2018-09-04
+
+Checked 2026-11-21T18:46:26.182Z. Contact details are on the registers, not copied here.
+
 ## Who held it
 
 - Jko Mining Pty Limited (?–?, principal holder of mining lease 5108 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:479076] "Tenure: Principal Holder Name JKO MINING PTY LIMITED; MINING LEASE 5108"
