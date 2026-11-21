@@ -20,7 +20,7 @@ async function meta(event, ip) {
   if (overBudget(`meta:${ip}`, 3, 150)) return null; // paid path: 3 a minute per caller, 150 a day per instance
   const signer = new ethers.Wallet(process.env.SERVER_PAYER_KEY, new ethers.JsonRpcProvider("https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true }));
   const intent = "EVENT_OUTCOME_RESOLUTION_GENERAL";
-  const run = secondOpinion({ intent, params: { event } }, { ask: (a) => ask({ ...a, signer }), ranked, reputation: await reputationFor(intent).catch(() => []), exclude: [SELF], unit: "meta-miner", operatorOf: await operatorOf() });
+  const run = secondOpinion({ intent, params: { event } }, { ask: (a) => ask({ ...a, signer }), ranked, reputation: await reputationFor(intent).catch(() => []), exclude: [SELF], unit: "meta-miner", operatorOf: await operatorOf(), strictOperators: true });
   const so = await Promise.race([run, new Promise((r) => setTimeout(() => r(null), META_MS))]);
   return so ? quorumAnswer(event, so, RULES.quorum) : null;
 }

@@ -78,7 +78,7 @@ export default async function handler(req, res) {
   const t0 = Date.now();
   try {
     const reputation = await reputationFor(intent);
-    const out = await secondOpinion({ intent, params }, { ask: (a) => ask({ ...a, signer }), ranked, reputation, operatorOf: await operatorOf() });
+    const out = await secondOpinion({ intent, params }, { ask: (a) => ask({ ...a, signer }), ranked, reputation, operatorOf: await operatorOf(), strictOperators: true });
     console.log(JSON.stringify({ intent, verdict: out.verdict, ms: Date.now() - t0, cost: out.costUsd }));
     return res.status(200).json({
       ...out,
