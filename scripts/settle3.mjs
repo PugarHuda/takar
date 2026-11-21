@@ -42,8 +42,12 @@ const settle = (w = r1) => {
 /** Praman's OFAC SDN screen, over MCP. */
 async function praman(name) {
   const r = await fetch(PRAMAN, { method: "POST", headers: { "content-type": "application/json", accept: "application/json, text/event-stream" }, body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "tools/call", params: { name: "screen_sanctions", arguments: { name } } }), signal: AbortSignal.timeout(30_000) });
-  const j = JSON.parse((await r.json()).result.content[0].text);
-  return { matched: !!j.matched, top: j.matches?.[0] ? `${j.matches[0].matched_name} (SDN ${j.matches[0].sdn_uid}, score ${j.matches[0].similarity_score})` : null, list_loaded: j.sdn_last_loaded };
+  const body = await r.json();
+  // Fail closed: anything but a clean boolean verdict over a loaded list is an error, so the deal holds.
+  if (!r.ok || body.error || body.result?.isError) throw new Error(`Praman error: ${JSON.stringify(body.error ?? body.result?.content?.[0]?.text ?? r.status).slice(0, 120)}`);
+  const j = JSON.parse(body.result.content[0].text);
+  if (typeof j.matched !== "boolean" || j.error || !j.sdn_last_loaded) throw new Error("Praman gave no clean verdict");
+  return { matched: j.matched, top: j.matches?.[0] ? `${j.matches[0].matched_name} (SDN ${j.matches[0].sdn_uid}, score ${j.matches[0].similarity_score})` : null, list_loaded: j.sdn_last_loaded };
 }
 
 /** Miner id -> payout address, so one operator's two miners count once. */
@@ -59,6 +63,8 @@ async function decide(name) {
   const yes = (v) => v === true || /^(true|yes|match|matched|1)$/i.test(String(v));
   const takar = so.verdict === "agree" ? yes(so.answer?.matched) : null;
   const out = { name, takar: so.verdict, takarMatched: takar, miners: so.answers.filter((a) => a.usable).map((a) => a.miner?.id), praman: p, signals: so.answers.filter((a) => a.usable).map((a) => a.signal) };
+  // The decision field itself must have been compared, and filled by both miners.
+  if (so.verdict === "agree" && !so.compared.includes("matched")) return { ...out, hold: "the two miners agreed on other fields, not on matched" };
   if (takar === null) return { ...out, hold: `Telegraph second opinion: ${so.verdict}${so.differ?.length ? ` on ${so.differ.join(", ")}` : ""}` };
   if (p.error) return { ...out, hold: `Praman unavailable: ${p.error}` };
   if (p.matched !== takar) return { ...out, hold: `Takar says matched=${takar}, Praman says matched=${p.matched}` };
@@ -71,7 +77,8 @@ async function secondCheck(name, signals, met) {
     const r = await fetch(`${NODE}/engine/v1/signal/${s}`, { signal: AbortSignal.timeout(15_000) });
     if (!r.ok) return `signal ${s.slice(0, 10)} not found on the node (${r.status})`;
   }
-  const p = await praman(name);
+  const p = await praman(name).catch((e) => ({ error: e.message }));
+  if (p.error) return p.error;
   if (p.matched === met) return `Praman now says matched=${p.matched}`;
   return null;
 }
@@ -109,7 +116,10 @@ if (cmd === "deploy") {
   const n = Number(await s.count());
   for (let id = 0; id < n; id++) {
     const d = await s.deal(id);
-    const terms = JSON.parse(d.terms);
+    // The contract is public: only deals this agent opened are decided, and odd terms are skipped.
+    if (d.payer.toLowerCase() !== r1.address.toLowerCase()) continue;
+    let terms;
+    try { terms = JSON.parse(d.terms); } catch { console.log(`deal ${id}: terms are not JSON, skipped`); continue; }
     const now = Math.floor(Date.now() / 1000);
     if (STATES[Number(d.state)] === "proposed" && d.finalizesAt > 0n) {
       if (now < Number(d.finalizesAt)) { console.log(`deal ${id}: in its dispute window until ${new Date(Number(d.finalizesAt) * 1000).toISOString()}`); continue; }

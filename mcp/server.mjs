@@ -109,6 +109,27 @@ const TOOLS = [
   },
 ];
 
+/**
+ * Self-pay mode (TAKAR_PAYER_KEY set): the same rules run here and the caller's own Telegraph
+ * escrow pays the asks, so there is no rate limit and no dependence on Takar's wallet. Miners
+ * are still ordered by the open EAS record (read from Takar's API) and one operator counts once.
+ * Loaded only in this mode, so the default stays dependency-free in practice.
+ */
+async function selfPay(intent, params) {
+  process.env.TAKAR_LEDGER ??= (await import("node:path")).join((await import("node:os")).tmpdir(), "takar-mcp-ledger.jsonl");
+  // The npm package carries lib/ (copied at pack time); run from the repo, it uses the repo's lib/.
+  const dir = (await import("node:fs")).existsSync(new URL("./lib/second.mjs", import.meta.url)) ? "./lib/" : "../lib/";
+  const [{ ethers }, t, { secondOpinion }] = await Promise.all([import("ethers"), import(`${dir}telegraph.mjs`), import(`${dir}second.mjs`)]);
+  const signer = new ethers.Wallet(process.env.TAKAR_PAYER_KEY, new ethers.JsonRpcProvider(process.env.RPC ?? "https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true }));
+  const [rep, miners] = await Promise.all([
+    getJson(`${SITE}/api/reputation?intent=${encodeURIComponent(intent)}`).catch(() => ({})),
+    getJson(`${NODE}/api/miners`).catch(() => []),
+  ]);
+  const ops = new Map((Array.isArray(miners) ? miners : []).map((m) => [String(m.id), m.fee_address ?? m.wallet_address ?? null]));
+  const out = await secondOpinion({ intent, params }, { ask: (a) => t.ask({ ...a, signer }), ranked: t.ranked, reputation: rep.ranking ?? [], operatorOf: (id) => ops.get(String(id)) ?? null, strictOperators: true, unit: "takar-mcp" });
+  return { ...out, mode: "self-pay", paid_by: signer.address, signals: out.answers.filter((a) => a.signal).map((a) => `${NODE}/engine/v1/signal/${a.signal}`) };
+}
+
 async function getJson(url, init) {
   const r = await fetch(url, { ...init, signal: AbortSignal.timeout(90_000) });
   const text = await r.text();
@@ -155,11 +176,12 @@ const CALLS = {
     };
   },
 
-  async second_opinion({ intent, params }) {
+  async second_opinion({ intent, params, client }) {
     const name = String(intent ?? "").trim();
     if (!/^[A-Z][A-Z0-9_]{2,80}$/.test(name)) throw new Error("intent must be an exact intent name");
     if (!params || typeof params !== "object" || Array.isArray(params)) throw new Error("params must be an object");
-    return getJson(`${SITE}/api/second-opinion`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ intent: name, params }) });
+    if (process.env.TAKAR_PAYER_KEY) return selfPay(name, params);
+    return getJson(`${SITE}/api/second-opinion`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ intent: name, params, ...(client ? { client: String(client).slice(0, 40) } : {}) }) });
   },
 
   async miner_reputation({ intent, attester } = {}) {
