@@ -1,0 +1,25 @@
+name: series-snapshot
+# FRED blocks data-centre IPs on its CSV and API hosts, so the miner cannot read it from Vercel.
+# This copies the series lib/numeric.mjs uses into data/series/ once a day; the miner reads them
+# from raw.githubusercontent.com. Each file is FRED's own CSV, unchanged.
+on:
+  schedule: [{ cron: "40 6 * * *" }]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          for id in CBBTCUSD CBETHUSD SP500 DCOILWTICO DCOILBRENTEU GASREGW UNRATE CPIAUCNS; do
+            curl -sf -m 60 "https://fred.stlouisfed.org/graph/fredgraph.csv?id=$id&cosd=2000-01-01" -o "data/series/$id.tmp" && head -1 "data/series/$id.tmp" | grep -q observation_date && mv "data/series/$id.tmp" "data/series/$id.csv" || { echo "::warning::$id not fetched"; rm -f "data/series/$id.tmp"; }
+          done
+          ls -la data/series
+      - run: |
+          git config user.name "takar-snapshot"
+          git config user.email "takar-snapshot@users.noreply.github.com"
+          git add data/series/*.csv
+          git commit -m "series snapshot" || exit 0
+          git pull --rebase && git push
