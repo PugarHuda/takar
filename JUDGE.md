@@ -129,7 +129,7 @@ Trust, stated plainly: the resolver key is ours. What limits it is the quorum, t
   - **A settled Polymarket market.** An exact title match (ignoring a trailing "Resolution" or "Resolve this market"), or a dated fixture matched by slug, date and full event title. The market must be closed, with a final price of 0.99 or more.
   - **Wikipedia.** The prose plus the table rows that name the question's year or terms. Every yes or no carries a sentence or table row quoted word for word, checked in code; a quote may not run across two rows.
 - Every answer states `confidence` (`high` for a settled market, `medium` for a checked quote, `none` for unresolved) and the `resolution_rule` it rests on.
-- Network evidence: ranked #1 in epoch 16 at 0.9622, with every spot check passed. Epochs 18–28 scored 0: every graded ask came back `unresolved`. One cause was ours (the "Resolution" suffix, fixed 21 Nov). The other is asks that name no event at all, which no source can settle. Reported with data, without quoting graded material. We do not pick epochs.
+- Network evidence: ranked #1 in epoch 16 at 0.9622, with every spot check passed. Epochs 18–28 scored 0: every graded ask came back `unresolved`. One cause was ours (the "Resolution" suffix, fixed 21 Nov). The other is asks that name no event at all, which no source can settle. Reported in [bounties#225](https://github.com/telegraphprotocol/bounties/issues/225), with data and without quoting graded material. We do not pick epochs.
 - Known gaps:
   - Titles that match several markets ("Bitcoin Up or Down - February 28" with no time).
   - Fixtures Polymarket never listed.
