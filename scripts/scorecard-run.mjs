@@ -14,7 +14,7 @@ import { newKeyPair, signDoc } from "../lib/sign.mjs";
 const arg = (k, d) => (process.argv.includes(k) ? Number(process.argv[process.argv.indexOf(k) + 1]) : d);
 const PER_TOPIC = arg("--per-topic", 2);
 const DAYS = arg("--days", 7);
-const TOPICS = ["Federal Reserve", "CPI inflation", "Bitcoin", "S&P 500", "recession", "Nvidia", "Tesla"];
+const TOPICS = ["Federal Reserve", "CPI inflation", "Bitcoin", "S&P 500", "recession", "Nvidia", "Tesla", "Ethereum", "interest rate", "unemployment", "GDP", "gold price", "oil price", "Apple", "Microsoft"];
 const SINCE = Date.parse("2023-01-01T00:00:00Z");
 
 // One signing key for the scorecard, created on first run. Private half stays in .env.
