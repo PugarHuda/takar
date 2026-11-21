@@ -13,11 +13,11 @@ Built by Takar from Telegraph miners on 2026-11-21T16:14:19.801Z. Every finding 
 |---|---|---|---|---|---|
 | 250 | 250 t | 1882–1990 | Mount Morgan mine (site_total) | [QLDGOV-MM](https://www.qld.gov.au/environment/land/management/abandoned-mines/remediation-projects/mount-morgan) |  "with about 250 tonnes of gold and 360,000 tonnes of copper extracted from the mine" |
 | 262 | 262 t | 1882–1981 | Mount Morgan mine (site_total) | [WP-MM](https://en.wikipedia.org/w/index.php?title=Mount_Morgan_Mine&oldid=1368226293) |  "the mine yielded approximately 262 metric tons" |
-| 294.1 | 294056 kg | ?–1990 (end year from its dated rows) | Mount Morgan (site_total) | [MINOCC-2017:Total_Ores_Prod:494270](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Total_Ores_Prod: 294056 KG Au 36842 KG Ag 360616 T Cu (Ore Amount 102000000 tonnes)" |
-| 1.8 | 1835 kg | ?–? | Mount Morgan (period) | [MINOCC-2017:Production:494270:1](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Production: 1835 KG GOLD BULLION (Ore Amount T; Ore Type OXIDE ORE)" |
-| 157.3 | 157273 kg | ?–1927 | Mount Morgan (period) | [MINOCC-2017:Production:494270:2](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Production: 157273 KG GOLD BULLION 116175 T COPPER MATTE (Ore Amount 8600000 T; Ore Type SULPHIDE ORE)" |
-| 78.8 | 78788 kg | 1929–1982 | Mount Morgan (period) | [MINOCC-2017:Production:494270:3](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Production: 78788 KG GOLD FINE 244441 T COPPER MATTE 36842 KG SILVER METAL 568000 T PYRITE METALLURGICAL ORE (Ore Amount 41400000 T; Ore Type SULPHIDE ORE)" |
-| 56.2 | 56160 kg | 1983–1990 | Mount Morgan (period) | [MINOCC-2017:Production:494270:4](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Production: 56160 KG GOLD BULLION 1.08 G/T (Ore Amount 52000000 T; Ore Type DUMP)" |
+| 294.1 | 294056 kg | ?–1990 (end year from its dated rows) | Mount Morgan (site_total) | [MINOCC-2017:Total_Ores_Prod:494270](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Total\_Ores\_Prod: 294056 KG Au 36842 KG Ag 360616 T Cu \(Ore Amount 102000000 tonnes\)" |
+| 1.8 | 1835 kg | ?–? | Mount Morgan (period) | [MINOCC-2017:Production:494270:1](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Production: 1835 KG GOLD BULLION \(Ore Amount T; Ore Type OXIDE ORE\)" |
+| 157.3 | 157273 kg | ?–1927 | Mount Morgan (period) | [MINOCC-2017:Production:494270:2](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Production: 157273 KG GOLD BULLION 116175 T COPPER MATTE \(Ore Amount 8600000 T; Ore Type SULPHIDE ORE\)" |
+| 78.8 | 78788 kg | 1929–1982 | Mount Morgan (period) | [MINOCC-2017:Production:494270:3](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Production: 78788 KG GOLD FINE 244441 T COPPER MATTE 36842 KG SILVER METAL 568000 T PYRITE METALLURGICAL ORE \(Ore Amount 41400000 T; Ore Type SULPHIDE ORE\)" |
+| 56.2 | 56160 kg | 1983–1990 | Mount Morgan (period) | [MINOCC-2017:Production:494270:4](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Production: 56160 KG GOLD BULLION 1.08 G/T \(Ore Amount 52000000 T; Ore Type DUMP\)" |
 
 - **Sum check (MINOCC-2017):** 4 dated rows add up to 294.1 t; the register's site total is 294.1 t: consistent.
 - **close:** QLDGOV-MM vs WP-MM: within 5% (250 t and 262 t) over different periods (1882–1990 and 1882–1981); the shorter period reports slightly more, so they may count differently.
@@ -35,7 +35,7 @@ Built by Takar from Telegraph miners on 2026-11-21T16:14:19.801Z. Every finding 
   - [WP-MM](https://en.wikipedia.org/w/index.php?title=Mount_Morgan_Mine&oldid=1368226293) on Mount Morgan mine: "until it reached the end of its ore body in 1981"
 - **1990** (two sources): *no source states a reason*
   - [QLDGOV-MM](https://www.qld.gov.au/environment/land/management/abandoned-mines/remediation-projects/mount-morgan) on Mount Morgan mine: "with its mining operations continuing until November 1990"
-  - [MINOCC-2017:MineHist:494270:6](https://geoscience.data.qld.gov.au/dataset/ds000004) on Mount Morgan: "MineHist #6: Start Year 1981, End Year 1990, Tailings retreated by Mount Morgan Ltd."
+  - [MINOCC-2017:MineHist:494270:6](https://geoscience.data.qld.gov.au/dataset/ds000004) on Mount Morgan: "MineHist \#6: Start Year 1981, End Year 1990, Tailings retreated by Mount Morgan Ltd."
 
 ### What research miners say about the unexplained closures (not records)
 

@@ -26,7 +26,7 @@ export default async function handler(req, res) {
     if (!process.env.SERVER_PAYER_KEY) return res.status(503).json({ error: "payer not configured" });
     const signer = new ethers.Wallet(process.env.SERVER_PAYER_KEY, new ethers.JsonRpcProvider("https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true }));
     try {
-      const g = await gatherDossier(mine, { ask: (a) => ask({ ...a, signer }), ranked, unit: "dossier-api" });
+      const g = await gatherDossier(mine, { ask: (a) => ask({ ...a, signer }), ranked, unit: "dossier-api", deep: false }) // the public path buys 3-4 asks, never the registry/research fan-out;
       out = process.env.TAKAR_SIGNING_KEY ? { ...g.doc, attestation: signDoc(g.doc, process.env.TAKAR_SIGNING_KEY) } : g.doc;
       cache.set(k, { at: Date.now(), out });
     } catch (err) {

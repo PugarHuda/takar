@@ -12,8 +12,8 @@ Built by Takar from Telegraph miners on 2026-11-21T16:14:19.801Z. Every finding 
 | Tonnes | As recorded | Period | Working | Source | Quote |
 |---|---|---|---|---|---|
 | 0.7 | 22843 oz | 1908–1916 | Brilliant Deeps (on the Brilliant reef) () | [WP-CTSHAFTS](https://en.wikipedia.org/w/index.php?title=Charters_Towers_mine_shafts&oldid=1367481111) |  "From 1908 to 1916, 22,843 ounces" |
-| 51.5 | 51482.73 kg | ?–1917 | Brilliant Lode (site_total) | [MINOCC-2017:Total_Ores_Prod:38722](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Total_Ores_Prod: 51482.73 KG Au (Ore Amount 2168244 tonnes)" |
-| 51.5 | 51482.73 kg | ?–1917 | Brilliant Lode (period) | [MINOCC-2017:Production:38722:1](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Production: 51482.73 KG GOLD FINE (Ore Amount 2168244 T; Ore Type HARD ROCK ORE (OR REEF))" |
+| 51.5 | 51482.73 kg | ?–1917 | Brilliant Lode (site_total) | [MINOCC-2017:Total_Ores_Prod:38722](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Total\_Ores\_Prod: 51482.73 KG Au \(Ore Amount 2168244 tonnes\)" |
+| 51.5 | 51482.73 kg | ?–1917 | Brilliant Lode (period) | [MINOCC-2017:Production:38722:1](https://geoscience.data.qld.gov.au/dataset/ds000004) |  "Production: 51482.73 KG GOLD FINE \(Ore Amount 2168244 T; Ore Type HARD ROCK ORE \(OR REEF\)\)" |
 
 - **Sum check (MINOCC-2017):** 1 dated rows add up to 51.5 t; the register's site total is 51.5 t: consistent.
 - **not comparable:** WP-CTSHAFTS vs MINOCC-2017:Total_Ores_Prod:38722: different periods (1908–1916 and ?–1917).
@@ -24,7 +24,7 @@ Built by Takar from Telegraph miners on 2026-11-21T16:14:19.801Z. Every finding 
 
 - **1917** (two sources): *no source states a reason*
   - [WP-CTSHAFTS](https://en.wikipedia.org/w/index.php?title=Charters_Towers_mine_shafts&oldid=1367481111) on Brilliant Extended: "the Brilliant Extended, closing down in 1917"
-  - [MINOCC-2017:MineHist:38722:1](https://geoscience.data.qld.gov.au/dataset/ds000004) on Brilliant Lode: "MineHist #1: Start Year 1879, End Year 1917"
+  - [MINOCC-2017:MineHist:38722:1](https://geoscience.data.qld.gov.au/dataset/ds000004) on Brilliant Lode: "MineHist \#1: Start Year 1879, End Year 1917"
 
 ### What research miners say about the unexplained closures (not records)
 
