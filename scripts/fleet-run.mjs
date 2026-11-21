@@ -6,7 +6,7 @@
 // go to receipts/decisions.jsonl next to the purchase ledger.
 import { appendFileSync, readFileSync } from "node:fs";
 import { ask, ranked } from "../lib/telegraph.mjs";
-import { geocode, nearestStation, reports, latest } from "../lib/observe.mjs";
+import { geocode, nearestStation, reports, latest, modelWind } from "../lib/observe.mjs";
 import { runUnit } from "../lib/fleet.mjs";
 
 const file = process.argv.slice(2).find((a) => a.endsWith(".json")) ?? "fleet.json";
@@ -17,7 +17,7 @@ const run = new Date().toISOString();
 async function observe(place) {
   const g = await geocode(place);
   const s = await nearestStation(g);
-  if (!s) return null;
+  if (!s) return modelWind(g).catch(() => null); // no instrument in range: a labelled model reading
   const now = latest(await reports(s.icao, 3));
   return now && { icao: s.icao, site: s.site, km: s.km, ...now };
 }
