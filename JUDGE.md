@@ -32,7 +32,7 @@ Takar offers that check once, for any intent and any app:
 | Drop-in for agents | [`openapi.json`](https://takar-telegraph.vercel.app/openapi.json), `npx -y takar-mcp` (tools `second_opinion`, `miner_reputation`, `miner_report`), and a [Minds Bazaar Skill](https://hellominds.ai) ("Takar Second Opinion") | An HTTP tool for Minds and any agent framework. |
 | Meta-miner | Takar Outcome (20261117) | When its own sources cannot settle a past event, it answers only if two other miners agree. It never asks itself. |
 
-Try it: the board's "A second opinion for any Telegraph intent" box, or
+Watch it (1:38): [media/takar-second-opinion.mp4](media/takar-second-opinion.mp4). Try it: the board's "A second opinion for any Telegraph intent" box, or
 
 ```
 curl -X POST https://takar-telegraph.vercel.app/api/second-opinion -H 'content-type: application/json'   -d '{"intent":"EVENT_OUTCOME_RESOLUTION_GENERAL","params":{"event":"Did France win the 2022 FIFA World Cup?"}}'
