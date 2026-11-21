@@ -1,6 +1,6 @@
 # Mount Leyshon: Gold Rush dossier
 
-Built by Takar from Telegraph miners on 2026-11-21T15:17:45.426Z. Every finding names its record; figures are never merged or estimated; conflicts are shown side by side. Signed with Ed25519 (see the JSON).
+Built by Takar from Telegraph miners on 2026-11-21T16:05:56.627Z. Every finding names its record; figures are never merged or estimated; conflicts are shown side by side. Signed with Ed25519 (see the JSON).
 
 ## Identity
 
@@ -40,6 +40,13 @@ Built by Takar from Telegraph miners on 2026-11-21T15:17:45.426Z. Every finding 
 - Latest: US$4105 per ounce in October 2026 (Gold, monthly average per troy ounce (World Bank Pink Sheet, nominal US dollars) from 1960), single source.
 - About 14.6x the closure-year price. Nominal dollars, not adjusted for inflation; the closure-year figure may be an official price rather than a market one (see its text).
 
+## Who controls it today (company registers)
+
+- **Leyshon Resources Limited**: not established (fewer than two usable answers).
+- **Mount Isa Mines Ltd**: not established (fewer than two usable answers).
+
+A register's status is not a mining tenure: who holds the lease today needs the tenure register.
+
 ## Who held it
 
 - Leyshon Resources Limited (?–?, principal holder of mining lease 10144 (MINOCC Tenure table, as at the 2017 release; no dates recorded)) [MINOCC-2017:Tenure:38940] "Tenure: Principal Holder Name LEYSHON RESOURCES LIMITED; MINING LEASE 10144"
@@ -54,14 +61,17 @@ Built by Takar from Telegraph miners on 2026-11-21T15:17:45.426Z. Every finding 
 - closure reason: the indexed sources give a closure year but quote no reason
 - why it stopped in 2002: no source quotes a reason; do not assume exhaustion
 - production rests on one register (MINOCC-2017); no second source to check it against
+- who controls it: Leyshon Resources Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly
+- who controls it: Mount Isa Mines Ltd could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly
 
 ## Receipts
 
 1 of 14 production figures from the miner's structured record also appear word for word in the answer bought through Telegraph.
 
-- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x5bf62660…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x5bf6266094c0d19b8ed51d576d8a9a9f61ac0eb9ee3f775d96d2424feeb790ac), $0.01; node rank for the intent: #13 of 31
-- OathCast Queensland Gold Mines (64176), RESEARCH_QUERY_GENERAL: [Telegraph signal 0xc7e5a976…](https://devnode.telegraphprotocol.com/engine/v1/signal/0xc7e5a9761ad7c4cb6d7ceae9ea04280d480f163912f11029763a69847d68c993), $0.01; node rank for the intent: #15 of 31
-- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x2c042695…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x2c042695b8714c1dd193354cac00fe4bd84e9ab19d78e95ac64441c8608aa032), $0.01; node rank for the intent: #13 of 31
-- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0xc5e92263…](https://devnode.telegraphprotocol.com/engine/v1/signal/0xc5e922635444870be269d431035395cb4f7b879162d7bd89e5f7d999bbe9f443), $0.01; node rank for the intent: #13 of 31
+- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x23b6953d…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x23b6953df451593c569b858f80916dd8da146f18d20ab8fc13c6387705f7f588), $0.01; node rank for the intent: #13 of 30
+- OathCast Queensland Gold Mines (64176), RESEARCH_QUERY_GENERAL: [Telegraph signal 0xe158e724…](https://devnode.telegraphprotocol.com/engine/v1/signal/0xe158e724a199774b59ceb46ba284d580b25d4e6428ed128787d0e876a4f42e9e), $0.01; node rank for the intent: #15 of 30
+- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x2513d06e…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x2513d06eeab5d03e8700b201c85756aa584b395f96e0dc7c39432ab598c86e0d), $0.01; node rank for the intent: #13 of 30
+- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0xfdb38367…](https://devnode.telegraphprotocol.com/engine/v1/signal/0xfdb383678eddacfecc6edf3450da825e7842838603ba6b6ce66336b454bf9089), $0.01; node rank for the intent: #13 of 30
+- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0xfdb38367…](https://devnode.telegraphprotocol.com/engine/v1/signal/0xfdb383678eddacfecc6edf3450da825e7842838603ba6b6ce66336b454bf9089), $0.01
 
 Rank is shown next to the evidence, never in place of it.

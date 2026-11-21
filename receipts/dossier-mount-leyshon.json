@@ -1,7 +1,7 @@
 {
   "title": "Gold Rush dossier: Mount Leyshon",
   "method": "Telegraph miners asked directly by id; structured rows from goldrush-qld-history's registered endpoint, tied to the paid answer; checks by Takar (lib/dossier.mjs). Figures are never merged or estimated.",
-  "generated_at": "2026-11-21T15:17:45.426Z",
+  "generated_at": "2026-11-21T16:05:56.627Z",
   "network": "Ethereum Sepolia testnet (test USDC)",
   "dossier": {
     "mine": "Mount Leyshon",
@@ -330,11 +330,41 @@
         "miner": "Gold Rush Queensland Mine History",
         "id": "7310050",
         "intent": "RESEARCH_QUERY_GENERAL",
-        "signal": "0x2c042695b8714c1dd193354cac00fe4bd84e9ab19d78e95ac64441c8608aa032",
+        "signal": "0x2513d06eeab5d03e8700b201c85756aa584b395f96e0dc7c39432ab598c86e0d",
         "cost": 0.01,
         "shape": "intent"
       }
     },
+    "control": [
+      {
+        "company": "Leyshon Resources Limited",
+        "verdict": "insufficient",
+        "active": null,
+        "legal_name": null,
+        "registration_id": null,
+        "other_differences": [],
+        "why": "fewer than two usable answers",
+        "miners": [],
+        "signals": [],
+        "cost": 0.01
+      },
+      {
+        "company": "Mount Isa Mines Ltd",
+        "verdict": "insufficient",
+        "active": null,
+        "legal_name": null,
+        "registration_id": null,
+        "other_differences": [],
+        "why": "fewer than two usable answers",
+        "miners": [
+          "20260828"
+        ],
+        "signals": [
+          "0x8c12782985e980c0323c6a8e4490d2fb84781c795b61b82eda98e64d670840da"
+        ],
+        "cost": 0.01
+      }
+    ],
     "receipts_tie": {
       "checked": 14,
       "in_paid_answer": 1,
@@ -428,7 +458,9 @@
     "open_questions": [
       "closure reason: the indexed sources give a closure year but quote no reason",
       "why it stopped in 2002: no source quotes a reason; do not assume exhaustion",
-      "production rests on one register (MINOCC-2017); no second source to check it against"
+      "production rests on one register (MINOCC-2017); no second source to check it against",
+      "who controls it: Leyshon Resources Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly",
+      "who controls it: Mount Isa Mines Ltd could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly"
     ],
     "miner_conflicts": []
   },
@@ -437,37 +469,47 @@
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0x5bf6266094c0d19b8ed51d576d8a9a9f61ac0eb9ee3f775d96d2424feeb790ac",
+      "signal": "0x23b6953df451593c569b858f80916dd8da146f18d20ab8fc13c6387705f7f588",
       "cost": 0.01,
       "shape": "intent",
-      "rank": "#13 of 31"
+      "rank": "#13 of 30"
     },
     {
       "miner": "OathCast Queensland Gold Mines",
       "id": "64176",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0xc7e5a9761ad7c4cb6d7ceae9ea04280d480f163912f11029763a69847d68c993",
+      "signal": "0xe158e724a199774b59ceb46ba284d580b25d4e6428ed128787d0e876a4f42e9e",
       "cost": 0.01,
       "shape": "intent",
-      "rank": "#15 of 31"
+      "rank": "#15 of 30"
     },
     {
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0x2c042695b8714c1dd193354cac00fe4bd84e9ab19d78e95ac64441c8608aa032",
+      "signal": "0x2513d06eeab5d03e8700b201c85756aa584b395f96e0dc7c39432ab598c86e0d",
       "cost": 0.01,
       "shape": "intent",
-      "rank": "#13 of 31"
+      "rank": "#13 of 30"
     },
     {
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0xc5e922635444870be269d431035395cb4f7b879162d7bd89e5f7d999bbe9f443",
+      "signal": "0xfdb383678eddacfecc6edf3450da825e7842838603ba6b6ce66336b454bf9089",
       "cost": 0.01,
       "shape": "intent",
-      "rank": "#13 of 31"
+      "rank": "#13 of 30"
+    },
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0xfdb383678eddacfecc6edf3450da825e7842838603ba6b6ce66336b454bf9089",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": null,
+      "shared": "latest gold price, bought once for this run"
     }
   ],
   "paid_answers": {
@@ -1205,8 +1247,8 @@
   },
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "3eeac3b5443b812cc17ec6719a2844ddc35a5733f455a46ea46629b266e80a00",
-    "signature": "NeoUTaYxvbYIyBNqcUvGPVosaIVAEQsEOIbjmIpbZl3feoiH1e5Vk6Yxhyr0OJFH50v+2b6BiDrlisIU6gBdCg==",
+    "sha256": "55d89f35f37ad1f4f6e943fcf600c70ff9dc82556ba144b161653b3639b1533c",
+    "signature": "qmZV4CUc6/8yYnoliI8RtEDfyWJVmlWrBMV724lXeHVjDCY4gHYQYkSPKxzOiGIKHyP22fq1tySqcS4/SHBzAA==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

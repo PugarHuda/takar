@@ -1,7 +1,7 @@
 {
   "title": "Gold Rush dossier: Mount Morgan",
   "method": "Telegraph miners asked directly by id; structured rows from goldrush-qld-history's registered endpoint, tied to the paid answer; checks by Takar (lib/dossier.mjs). Figures are never merged or estimated.",
-  "generated_at": "2026-11-21T15:17:45.426Z",
+  "generated_at": "2026-11-21T16:05:56.627Z",
   "network": "Ethereum Sepolia testnet (test USDC)",
   "dossier": {
     "mine": "Mount Morgan",
@@ -314,31 +314,31 @@
     ],
     "ownership": [
       {
-        "owner": "Mount Morgan Gold Mining Company Limited",
-        "role": "operator",
-        "from": 1886,
-        "to": 1928,
-        "entity": "Mount Morgan mine",
-        "source": "WP-MM",
-        "quote": "In October 1886, the syndicate became the Mount Morgan Gold Mining Company Limited"
+        "owner": "Norton Gold Fields Limited",
+        "role": "principal holder of mining lease 5589, mining lease 5602, mining lease 5608, mining lease 5609, mining lease 5612, mining lease 5613, mining lease 5616, mining lease 5618, mining lease 5620, mining lease 5623, mining lease 5624, mining lease 5625, mining lease 5633, mining lease 5634, mining lease 5659, mining lease 5660, mining lease 6692 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
+        "from": null,
+        "to": null,
+        "entity": "Mount Morgan",
+        "source": "MINOCC-2017:Tenure:494270",
+        "quote": "Tenure: Principal Holder Name NORTON GOLD FIELDS LIMITED; MINING LEASE 5589, MINING LEASE 5602, MINING LEASE 5608, MINING LEASE 5609, MINING LEASE 5612, MINING LEASE 5613, MINING LEASE 5616, MINING LEASE 5618, MINING LEASE 5620, MINING LEASE 5623, MINING LEASE 5624, MINING LEASE 5625, MINING LEASE 5633, MINING LEASE 5634, MINING LEASE 5659, MINING LEASE 5660, MINING LEASE 6692"
       },
       {
-        "owner": "Mount Morgan Limited",
-        "role": "operator",
-        "from": 1928,
-        "to": 1990,
-        "entity": "Mount Morgan mine",
-        "source": "WP-MM",
-        "quote": "operating as Mount Morgan Limited"
+        "owner": "Heritage Minerals Pty Ltd",
+        "role": "company listed by Geoscience Australia (status: historic mine)",
+        "from": null,
+        "to": null,
+        "entity": "Mount Morgan",
+        "source": "GA-MINERALDEPOSITS-333486",
+        "quote": "COMPANIES: Heritage Minerals Pty Ltd"
       },
       {
-        "owner": "Peko-Wallsend (parent of Mount Morgan Limited)",
-        "role": "parent company",
-        "from": 1968,
+        "owner": "Heritage Minerals Pty Ltd",
+        "role": "mining lease holder (transfer of mining leases in 2020)",
+        "from": 2020,
         "to": null,
         "entity": "Mount Morgan mine",
-        "source": "WP-MM",
-        "quote": "Mount Morgan Limited became a subsidiary of Peko-Wallsend in 1968"
+        "source": "QLDGOV-MM",
+        "quote": "as part of the transfer of mining leases to Heritage Minerals in 2020"
       },
       {
         "owner": "Norton Gold Fields",
@@ -359,31 +359,31 @@
         "quote": "We subsequently took over management of the legacy issues at the mine in January 1993"
       },
       {
-        "owner": "Heritage Minerals Pty Ltd",
-        "role": "mining lease holder (transfer of mining leases in 2020)",
-        "from": 2020,
+        "owner": "Peko-Wallsend (parent of Mount Morgan Limited)",
+        "role": "parent company",
+        "from": 1968,
         "to": null,
         "entity": "Mount Morgan mine",
-        "source": "QLDGOV-MM",
-        "quote": "as part of the transfer of mining leases to Heritage Minerals in 2020"
+        "source": "WP-MM",
+        "quote": "Mount Morgan Limited became a subsidiary of Peko-Wallsend in 1968"
       },
       {
-        "owner": "Norton Gold Fields Limited",
-        "role": "principal holder of mining lease 5589, mining lease 5602, mining lease 5608, mining lease 5609, mining lease 5612, mining lease 5613, mining lease 5616, mining lease 5618, mining lease 5620, mining lease 5623, mining lease 5624, mining lease 5625, mining lease 5633, mining lease 5634, mining lease 5659, mining lease 5660, mining lease 6692 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
-        "from": null,
-        "to": null,
-        "entity": "Mount Morgan",
-        "source": "MINOCC-2017:Tenure:494270",
-        "quote": "Tenure: Principal Holder Name NORTON GOLD FIELDS LIMITED; MINING LEASE 5589, MINING LEASE 5602, MINING LEASE 5608, MINING LEASE 5609, MINING LEASE 5612, MINING LEASE 5613, MINING LEASE 5616, MINING LEASE 5618, MINING LEASE 5620, MINING LEASE 5623, MINING LEASE 5624, MINING LEASE 5625, MINING LEASE 5633, MINING LEASE 5634, MINING LEASE 5659, MINING LEASE 5660, MINING LEASE 6692"
+        "owner": "Mount Morgan Limited",
+        "role": "operator",
+        "from": 1928,
+        "to": 1990,
+        "entity": "Mount Morgan mine",
+        "source": "WP-MM",
+        "quote": "operating as Mount Morgan Limited"
       },
       {
-        "owner": "Heritage Minerals Pty Ltd",
-        "role": "company listed by Geoscience Australia (status: historic mine)",
-        "from": null,
-        "to": null,
-        "entity": "Mount Morgan",
-        "source": "GA-MINERALDEPOSITS-333486",
-        "quote": "COMPANIES: Heritage Minerals Pty Ltd"
+        "owner": "Mount Morgan Gold Mining Company Limited",
+        "role": "operator",
+        "from": 1886,
+        "to": 1928,
+        "entity": "Mount Morgan mine",
+        "source": "WP-MM",
+        "quote": "In October 1886, the syndicate became the Mount Morgan Gold Mining Company Limited"
       }
     ],
     "references": [],
@@ -397,11 +397,55 @@
         "miner": "Gold Rush Queensland Mine History",
         "id": "7310050",
         "intent": "RESEARCH_QUERY_GENERAL",
-        "signal": "0x4b2296e4d1a640446ed1f558f5c4c4015354fcc55efa12857deaffe9114713f3",
+        "signal": "0x4b586d454a89858fd2d4c9379e06084e5e0ae530f59fc3af1968bb9c4c203e05",
         "cost": 0.01,
         "shape": "intent"
       }
     },
+    "control": [
+      {
+        "company": "Norton Gold Fields Limited",
+        "verdict": "insufficient",
+        "active": null,
+        "legal_name": null,
+        "registration_id": null,
+        "other_differences": [],
+        "why": "fewer than two usable answers",
+        "miners": [],
+        "signals": [],
+        "cost": 0.01
+      },
+      {
+        "company": "Heritage Minerals Pty Ltd",
+        "verdict": "agree",
+        "active": true,
+        "legal_name": "HERITAGE MINERALS PTY LTD",
+        "registration_id": null,
+        "other_differences": [],
+        "why": null,
+        "miners": [
+          "20260828",
+          "6110114"
+        ],
+        "signals": [
+          "0x2c71d9dfc970466cc72a0b8d6042131197d3776d3a5a5795daa8fe0c332092e0",
+          "0x58578737806cc4d885432443dab1131b5ddb381f868f14fcb9567dfa3acc695d"
+        ],
+        "cost": 0.02
+      },
+      {
+        "company": "Mount Morgan Limited",
+        "verdict": "insufficient",
+        "active": null,
+        "legal_name": null,
+        "registration_id": null,
+        "other_differences": [],
+        "why": "fewer than two usable answers",
+        "miners": [],
+        "signals": [],
+        "cost": 0.01
+      }
+    ],
     "receipts_tie": {
       "checked": 7,
       "in_paid_answer": 3,
@@ -452,6 +496,8 @@
     },
     "open_questions": [
       "why it stopped in 1990: no source quotes a reason; do not assume exhaustion",
+      "who controls it: Norton Gold Fields Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly",
+      "who controls it: Mount Morgan Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly",
       "production: QLDGOV-MM and MINOCC-2017:Total_Ores_Prod:494270 conflict (same period (1882–1990), 250 t against 294.1 t, 15% apart. Candidate explanation: MINOCC-2017 includes 56.2 t from dumps or tailings (1983–1990); without it, 237.9 t, 5% from 250 t. Needs the record to confirm); check whether they count recovered or contained gold, and whether tailings retreatment is included"
     ],
     "miner_conflicts": [
@@ -570,37 +616,37 @@
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0xb1e34d71cf24df38ab5c2c8e7225808e353deffef3f946c01e580d619a2ff0ba",
+      "signal": "0xa810cf694fbe2eb8d11fdcbcf0ac012a6019b92756d3fa9bff2141e0971e6afd",
       "cost": 0.01,
       "shape": "intent",
-      "rank": "#13 of 31"
+      "rank": "#13 of 30"
     },
     {
       "miner": "OathCast Queensland Gold Mines",
       "id": "64176",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0xfe6816fd71425c1070036ffcce28b65ce67cf63c8d06cd90fe8a751d51a04b8c",
+      "signal": "0x2645faa9b01e4c1031561a07f05199633e578df500810016d2eb5a188b6fa6e6",
       "cost": 0.01,
       "shape": "intent",
-      "rank": "#15 of 31"
+      "rank": "#15 of 30"
     },
     {
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0x4b2296e4d1a640446ed1f558f5c4c4015354fcc55efa12857deaffe9114713f3",
+      "signal": "0x4b586d454a89858fd2d4c9379e06084e5e0ae530f59fc3af1968bb9c4c203e05",
       "cost": 0.01,
       "shape": "intent",
-      "rank": "#13 of 31"
+      "rank": "#13 of 30"
     },
     {
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0xc5e922635444870be269d431035395cb4f7b879162d7bd89e5f7d999bbe9f443",
+      "signal": "0xfdb383678eddacfecc6edf3450da825e7842838603ba6b6ce66336b454bf9089",
       "cost": 0.01,
       "shape": "intent",
-      "rank": "#13 of 31"
+      "rank": "#13 of 30"
     }
   ],
   "paid_answers": {
@@ -1114,72 +1160,6 @@
     ],
     "ownership": [
       {
-        "owner": "Mount Morgan Gold Mining Company Limited",
-        "role": "operator",
-        "period_from": 1886,
-        "period_to": 1928,
-        "entity": "Mount Morgan mine",
-        "source_ref": "WP-MM",
-        "source_title": "Mount Morgan Mine (Wikipedia), revision 1368226293 of 2026-08-07",
-        "source_url": "https://en.wikipedia.org/w/index.php?title=Mount_Morgan_Mine&oldid=1368226293",
-        "quote": "In October 1886, the syndicate became the Mount Morgan Gold Mining Company Limited"
-      },
-      {
-        "owner": "Mount Morgan Limited",
-        "role": "operator",
-        "period_from": 1928,
-        "period_to": 1990,
-        "entity": "Mount Morgan mine",
-        "source_ref": "WP-MM",
-        "source_title": "Mount Morgan Mine (Wikipedia), revision 1368226293 of 2026-08-07",
-        "source_url": "https://en.wikipedia.org/w/index.php?title=Mount_Morgan_Mine&oldid=1368226293",
-        "quote": "operating as Mount Morgan Limited"
-      },
-      {
-        "owner": "Peko-Wallsend (parent of Mount Morgan Limited)",
-        "role": "parent company",
-        "period_from": 1968,
-        "period_to": null,
-        "entity": "Mount Morgan mine",
-        "source_ref": "WP-MM",
-        "source_title": "Mount Morgan Mine (Wikipedia), revision 1368226293 of 2026-08-07",
-        "source_url": "https://en.wikipedia.org/w/index.php?title=Mount_Morgan_Mine&oldid=1368226293",
-        "quote": "Mount Morgan Limited became a subsidiary of Peko-Wallsend in 1968"
-      },
-      {
-        "owner": "Norton Gold Fields",
-        "role": "lease holder",
-        "period_from": 2007,
-        "period_to": null,
-        "entity": "Mount Morgan mine",
-        "source_ref": "WP-MM",
-        "source_title": "Mount Morgan Mine (Wikipedia), revision 1368226293 of 2026-08-07",
-        "source_url": "https://en.wikipedia.org/w/index.php?title=Mount_Morgan_Mine&oldid=1368226293",
-        "quote": "Since 2007 the mine and mining leases have been owned by Norton Gold Fields"
-      },
-      {
-        "owner": "Queensland Government (legacy site management)",
-        "role": "site manager",
-        "period_from": 1993,
-        "period_to": null,
-        "entity": "Mount Morgan mine",
-        "source_ref": "QLDGOV-MM",
-        "source_title": "Mount Morgan mine - abandoned mine remediation project (Queensland Government)",
-        "source_url": "https://www.qld.gov.au/environment/land/management/abandoned-mines/remediation-projects/mount-morgan",
-        "quote": "We subsequently took over management of the legacy issues at the mine in January 1993"
-      },
-      {
-        "owner": "Heritage Minerals Pty Ltd",
-        "role": "mining lease holder (transfer of mining leases in 2020)",
-        "period_from": 2020,
-        "period_to": null,
-        "entity": "Mount Morgan mine",
-        "source_ref": "QLDGOV-MM",
-        "source_title": "Mount Morgan mine - abandoned mine remediation project (Queensland Government)",
-        "source_url": "https://www.qld.gov.au/environment/land/management/abandoned-mines/remediation-projects/mount-morgan",
-        "quote": "as part of the transfer of mining leases to Heritage Minerals in 2020"
-      },
-      {
         "owner": "Norton Gold Fields Limited",
         "role": "principal holder of mining lease 5589, mining lease 5602, mining lease 5608, mining lease 5609, mining lease 5612, mining lease 5613, mining lease 5616, mining lease 5618, mining lease 5620, mining lease 5623, mining lease 5624, mining lease 5625, mining lease 5633, mining lease 5634, mining lease 5659, mining lease 5660, mining lease 6692 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
         "period_from": null,
@@ -1273,6 +1253,72 @@
         "source_url": "https://services.ga.gov.au/gis/earthresource/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=ama%3AMineralDeposits&outputFormat=application%2Fjson&cql_filter=ENO%3D333486",
         "quote": "COMPANIES: Heritage Minerals Pty Ltd",
         "link_basis": "GA deposit with the same name within 5 km of the GSQ site"
+      },
+      {
+        "owner": "Heritage Minerals Pty Ltd",
+        "role": "mining lease holder (transfer of mining leases in 2020)",
+        "period_from": 2020,
+        "period_to": null,
+        "entity": "Mount Morgan mine",
+        "source_ref": "QLDGOV-MM",
+        "source_title": "Mount Morgan mine - abandoned mine remediation project (Queensland Government)",
+        "source_url": "https://www.qld.gov.au/environment/land/management/abandoned-mines/remediation-projects/mount-morgan",
+        "quote": "as part of the transfer of mining leases to Heritage Minerals in 2020"
+      },
+      {
+        "owner": "Norton Gold Fields",
+        "role": "lease holder",
+        "period_from": 2007,
+        "period_to": null,
+        "entity": "Mount Morgan mine",
+        "source_ref": "WP-MM",
+        "source_title": "Mount Morgan Mine (Wikipedia), revision 1368226293 of 2026-08-07",
+        "source_url": "https://en.wikipedia.org/w/index.php?title=Mount_Morgan_Mine&oldid=1368226293",
+        "quote": "Since 2007 the mine and mining leases have been owned by Norton Gold Fields"
+      },
+      {
+        "owner": "Queensland Government (legacy site management)",
+        "role": "site manager",
+        "period_from": 1993,
+        "period_to": null,
+        "entity": "Mount Morgan mine",
+        "source_ref": "QLDGOV-MM",
+        "source_title": "Mount Morgan mine - abandoned mine remediation project (Queensland Government)",
+        "source_url": "https://www.qld.gov.au/environment/land/management/abandoned-mines/remediation-projects/mount-morgan",
+        "quote": "We subsequently took over management of the legacy issues at the mine in January 1993"
+      },
+      {
+        "owner": "Peko-Wallsend (parent of Mount Morgan Limited)",
+        "role": "parent company",
+        "period_from": 1968,
+        "period_to": null,
+        "entity": "Mount Morgan mine",
+        "source_ref": "WP-MM",
+        "source_title": "Mount Morgan Mine (Wikipedia), revision 1368226293 of 2026-08-07",
+        "source_url": "https://en.wikipedia.org/w/index.php?title=Mount_Morgan_Mine&oldid=1368226293",
+        "quote": "Mount Morgan Limited became a subsidiary of Peko-Wallsend in 1968"
+      },
+      {
+        "owner": "Mount Morgan Limited",
+        "role": "operator",
+        "period_from": 1928,
+        "period_to": 1990,
+        "entity": "Mount Morgan mine",
+        "source_ref": "WP-MM",
+        "source_title": "Mount Morgan Mine (Wikipedia), revision 1368226293 of 2026-08-07",
+        "source_url": "https://en.wikipedia.org/w/index.php?title=Mount_Morgan_Mine&oldid=1368226293",
+        "quote": "operating as Mount Morgan Limited"
+      },
+      {
+        "owner": "Mount Morgan Gold Mining Company Limited",
+        "role": "operator",
+        "period_from": 1886,
+        "period_to": 1928,
+        "entity": "Mount Morgan mine",
+        "source_ref": "WP-MM",
+        "source_title": "Mount Morgan Mine (Wikipedia), revision 1368226293 of 2026-08-07",
+        "source_url": "https://en.wikipedia.org/w/index.php?title=Mount_Morgan_Mine&oldid=1368226293",
+        "quote": "In October 1886, the syndicate became the Mount Morgan Gold Mining Company Limited"
       }
     ],
     "references": [],
@@ -1407,8 +1453,8 @@
   },
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "c0165c82430a7caaa7f59d45a8530cdfad86a28231280f4d087590059fd7ac0e",
-    "signature": "cLlhZ+doULVbPUCu8ySKzdLImjUeMJz/88qBiRsn/iGRAAYg2V6rz7u60TpxUD2z8IGUe+WuL8cOpzpATR4jDQ==",
+    "sha256": "f8ac6062c82d2c7a711761ac3983ef87effbcd1f12c620a51d65fc8bc32b5bc4",
+    "signature": "3TdSCTDAvocsX/oz6LsrmFhQXOoo8wrIGR86IXTMmKinCNRurnwCVUfBpajGd8GVrjftcq0w4+a0r/vtTos6DA==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

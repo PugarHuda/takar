@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Takar demo videos</title>
+<meta name="description" content="Demo videos of Takar on Telegraph: the second opinion layer, the fleet, the forecast scorecard and the escrow that settles on two miners.">
+<style>
+:root { --paper:#EEF2F0; --sheet:#F8FAF9; --ink:#1E2A33; --muted:#55656F; --rule:#D3DDE2; --link:#1F5C8A; }
+@media (prefers-color-scheme: dark) { :root { --paper:#141C21; --sheet:#1B252B; --ink:#E3EAEE; --muted:#9AABB5; --rule:#2C3A42; --link:#7FB6E0; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font:400 1rem/1.55 system-ui, sans-serif; }
+a { color:var(--link); }
+main { max-width:960px; margin:0 auto; padding:24px 16px 48px; }
+h1 { margin:0 0 4px; }
+section { background:var(--sheet); border:1px solid var(--rule); border-radius:8px; padding:16px; margin:16px 0; }
+h2 { margin:0 0 6px; font-size:1.2rem; }
+p { margin:0 0 10px; color:var(--muted); }
+video { width:100%; height:auto; border-radius:6px; background:#000; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Takar demo videos</h1>
+  <p>Recorded on the live board and from real testnet runs. <a href="./">Takar board</a> · <a href="goldrush.html">Gold Rush dossiers</a> · <a href="https://github.com/PugarHuda/takar">code</a></p>
+  <section>
+    <h2>A second opinion for any Telegraph intent (1:38)</h2>
+    <p>A live call: two miners from different operators, compared field by field. Every call goes on the public EAS feed. Then "why did my miner score that?" for any miner.</p>
+    <video controls preload="metadata" src="media/takar-second-opinion.mp4"></video>
+  </section>
+  <section>
+    <h2>Escrow that settles on two miners, with a dispute window (2:02)</h2>
+    <p>TakarSettle v2 on Sepolia: proposals need two distinct Telegraph signals; a dispute voids the proposal and blocks the same evidence from returning.</p>
+    <video controls preload="metadata" src="media/takar-m14-m06-settle-v2.mp4"></video>
+  </section>
+  <section>
+    <h2>Forecast scorecard (2:07)</h2>
+    <p>Prediction-market crowds scored against outcomes bought from Telegraph, signed with Ed25519.</p>
+    <video controls preload="metadata" src="media/takar-m13-scorecard.mp4"></video>
+  </section>
+  <section>
+    <h2>Fleet: machines that buy intelligence before they move (2:29)</h2>
+    <p>Each unit buys the checks its task needs, holds them against an independent station, and decides GO, HOLD or ABORT.</p>
+    <video controls preload="metadata" src="media/takar-m11-fleet.mp4"></video>
+  </section>
+</main>
+</body>
+</html>

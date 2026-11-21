@@ -1,6 +1,6 @@
 # Mount Morgan: Gold Rush dossier
 
-Built by Takar from Telegraph miners on 2026-11-21T15:17:45.426Z. Every finding names its record; figures are never merged or estimated; conflicts are shown side by side. Signed with Ed25519 (see the JSON).
+Built by Takar from Telegraph miners on 2026-11-21T16:05:56.627Z. Every finding names its record; figures are never merged or estimated; conflicts are shown side by side. Signed with Ed25519 (see the JSON).
 
 ## Identity
 
@@ -43,29 +43,39 @@ Built by Takar from Telegraph miners on 2026-11-21T15:17:45.426Z. Every finding 
 - Latest: US$4105 per ounce in October 2026 (Gold, monthly average per troy ounce (World Bank Pink Sheet, nominal US dollars) from 1960), single source.
 - About 10x the closure-year price. Nominal dollars, not adjusted for inflation; the closure-year figure may be an official price rather than a market one (see its text).
 
+## Who controls it today (company registers)
+
+- **Norton Gold Fields Limited**: not established (fewer than two usable answers).
+- **Heritage Minerals Pty Ltd**: active, per two registers from different operators (20260828 and 6110114), registered as HERITAGE MINERALS PTY LTD.
+- **Mount Morgan Limited**: not established (fewer than two usable answers).
+
+A register's status is not a mining tenure: who holds the lease today needs the tenure register.
+
 ## Who held it
 
-- Mount Morgan Gold Mining Company Limited (1886–1928, operator) [WP-MM] "In October 1886, the syndicate became the Mount Morgan Gold Mining Company Limited"
-- Mount Morgan Limited (1928–1990, operator) [WP-MM] "operating as Mount Morgan Limited"
-- Peko-Wallsend (parent of Mount Morgan Limited) (1968–?, parent company) [WP-MM] "Mount Morgan Limited became a subsidiary of Peko-Wallsend in 1968"
-- Norton Gold Fields (2007–?, lease holder) [WP-MM] "Since 2007 the mine and mining leases have been owned by Norton Gold Fields"
-- Queensland Government (legacy site management) (1993–?, site manager) [QLDGOV-MM] "We subsequently took over management of the legacy issues at the mine in January 1993"
-- Heritage Minerals Pty Ltd (2020–?, mining lease holder (transfer of mining leases in 2020)) [QLDGOV-MM] "as part of the transfer of mining leases to Heritage Minerals in 2020"
 - Norton Gold Fields Limited (?–?, principal holder of mining lease 5589, mining lease 5602, mining lease 5608, mining lease 5609, mining lease 5612, mining lease 5613, mining lease 5616, mining lease 5618, mining lease 5620, mining lease 5623, mining lease 5624, mining lease 5625, mining lease 5633, mining lease 5634, mining lease 5659, mining lease 5660, mining lease 6692 (MINOCC Tenure table, as at the 2017 release; no dates recorded)) [MINOCC-2017:Tenure:494270] "Tenure: Principal Holder Name NORTON GOLD FIELDS LIMITED; MINING LEASE 5589, MINING LEASE 5602, MINING LEASE 5608, MINING LEASE 5609, MINING LEASE 5612, MINING LEASE 5613, MINING LEASE 5616, MINING LEASE 5618, MINING LEASE 5620, MINING LEASE 5623, MINING LEASE 5624, MINING LEASE 5625, MINING LEASE 5633, MINING LEASE 5634, MINING LEASE 5659, MINING LEASE 5660, MINING LEASE 6692"
 - Heritage Minerals Pty Ltd (?–?, company listed by Geoscience Australia (status: historic mine)) [GA-MINERALDEPOSITS-333486] "COMPANIES: Heritage Minerals Pty Ltd"
+- Heritage Minerals Pty Ltd (2020–?, mining lease holder (transfer of mining leases in 2020)) [QLDGOV-MM] "as part of the transfer of mining leases to Heritage Minerals in 2020"
+- Norton Gold Fields (2007–?, lease holder) [WP-MM] "Since 2007 the mine and mining leases have been owned by Norton Gold Fields"
+- Queensland Government (legacy site management) (1993–?, site manager) [QLDGOV-MM] "We subsequently took over management of the legacy issues at the mine in January 1993"
+- Peko-Wallsend (parent of Mount Morgan Limited) (1968–?, parent company) [WP-MM] "Mount Morgan Limited became a subsidiary of Peko-Wallsend in 1968"
+- Mount Morgan Limited (1928–1990, operator) [WP-MM] "operating as Mount Morgan Limited"
+- Mount Morgan Gold Mining Company Limited (1886–1928, operator) [WP-MM] "In October 1886, the syndicate became the Mount Morgan Gold Mining Company Limited"
 
 ## Open questions (what the records do not settle)
 
 - why it stopped in 1990: no source quotes a reason; do not assume exhaustion
+- who controls it: Norton Gold Fields Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly
+- who controls it: Mount Morgan Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly
 - production: QLDGOV-MM and MINOCC-2017:Total_Ores_Prod:494270 conflict (same period (1882–1990), 250 t against 294.1 t, 15% apart. Candidate explanation: MINOCC-2017 includes 56.2 t from dumps or tailings (1983–1990); without it, 237.9 t, 5% from 250 t. Needs the record to confirm); check whether they count recovered or contained gold, and whether tailings retreatment is included
 
 ## Receipts
 
 3 of 7 production figures from the miner's structured record also appear word for word in the answer bought through Telegraph.
 
-- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0xb1e34d71…](https://devnode.telegraphprotocol.com/engine/v1/signal/0xb1e34d71cf24df38ab5c2c8e7225808e353deffef3f946c01e580d619a2ff0ba), $0.01; node rank for the intent: #13 of 31
-- OathCast Queensland Gold Mines (64176), RESEARCH_QUERY_GENERAL: [Telegraph signal 0xfe6816fd…](https://devnode.telegraphprotocol.com/engine/v1/signal/0xfe6816fd71425c1070036ffcce28b65ce67cf63c8d06cd90fe8a751d51a04b8c), $0.01; node rank for the intent: #15 of 31
-- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x4b2296e4…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x4b2296e4d1a640446ed1f558f5c4c4015354fcc55efa12857deaffe9114713f3), $0.01; node rank for the intent: #13 of 31
-- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0xc5e92263…](https://devnode.telegraphprotocol.com/engine/v1/signal/0xc5e922635444870be269d431035395cb4f7b879162d7bd89e5f7d999bbe9f443), $0.01; node rank for the intent: #13 of 31
+- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0xa810cf69…](https://devnode.telegraphprotocol.com/engine/v1/signal/0xa810cf694fbe2eb8d11fdcbcf0ac012a6019b92756d3fa9bff2141e0971e6afd), $0.01; node rank for the intent: #13 of 30
+- OathCast Queensland Gold Mines (64176), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x2645faa9…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x2645faa9b01e4c1031561a07f05199633e578df500810016d2eb5a188b6fa6e6), $0.01; node rank for the intent: #15 of 30
+- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x4b586d45…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x4b586d454a89858fd2d4c9379e06084e5e0ae530f59fc3af1968bb9c4c203e05), $0.01; node rank for the intent: #13 of 30
+- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0xfdb38367…](https://devnode.telegraphprotocol.com/engine/v1/signal/0xfdb383678eddacfecc6edf3450da825e7842838603ba6b6ce66336b454bf9089), $0.01; node rank for the intent: #13 of 30
 
 Rank is shown next to the evidence, never in place of it.

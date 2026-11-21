@@ -3,4 +3,4 @@ evaluator/*.safetensors
 mcp
 lib/*.test.mjs
 lib/test.mjs
-media
+media/takar-m14-m06-settle.mp4

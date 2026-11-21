@@ -58,7 +58,7 @@ async function operators() {
 }
 
 async function decide(name) {
-  const so = await secondOpinion({ intent: "SANCTIONS_SCREENING_MATCH_GENERAL", params: { name } }, { ask: (a) => ask({ ...a, unit: "settle3" }), ranked, operatorOf: await operators(), strictOperators: true, maxAsks: Number(arg("max-asks", "6")), unit: "settle3" });
+  const so = await secondOpinion({ intent: "SANCTIONS_SCREENING_MATCH_GENERAL", params: { name } }, { ask: (a) => ask({ ...a, unit: "settle3" }), ranked, operatorOf: await operators(), strictOperators: true, maxAsks: Number(arg("max-asks", "6")), unit: "settle3", fields: ["matched"] });
   const p = await praman(name).catch((e) => ({ error: e.message }));
   const yes = (v) => v === true || /^(true|yes|match|matched|1)$/i.test(String(v));
   const takar = so.verdict === "agree" ? yes(so.answer?.matched) : null;

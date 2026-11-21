@@ -1,7 +1,7 @@
 {
   "title": "Gold Rush dossier: Brilliant Lode",
   "method": "Telegraph miners asked directly by id; structured rows from goldrush-qld-history's registered endpoint, tied to the paid answer; checks by Takar (lib/dossier.mjs). Figures are never merged or estimated.",
-  "generated_at": "2026-11-21T15:17:45.426Z",
+  "generated_at": "2026-11-21T16:05:56.627Z",
   "network": "Ethereum Sepolia testnet (test USDC)",
   "dossier": {
     "mine": "Brilliant Lode",
@@ -142,15 +142,6 @@
     ],
     "ownership": [
       {
-        "owner": "Brilliant Deep Levels Gold Mining Company",
-        "role": "operator",
-        "from": 1896,
-        "to": 1907,
-        "entity": "Brilliant Deeps",
-        "source": "WP-CTSHAFTS",
-        "quote": "the company was reconstituted in 1896 as the Brilliant Deep Levels Gold Mining Company"
-      },
-      {
         "owner": "Citigold Corporation Limited",
         "role": "principal holder of mining lease 1499, mining lease 10093, mining lease 10208 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
         "from": null,
@@ -158,6 +149,15 @@
         "entity": "Brilliant Lode",
         "source": "MINOCC-2017:Tenure:38722",
         "quote": "Tenure: Principal Holder Name CITIGOLD CORPORATION LIMITED; MINING LEASE 1499, MINING LEASE 10093, MINING LEASE 10208"
+      },
+      {
+        "owner": "Brilliant Deep Levels Gold Mining Company",
+        "role": "operator",
+        "from": 1896,
+        "to": 1907,
+        "entity": "Brilliant Deeps",
+        "source": "WP-CTSHAFTS",
+        "quote": "the company was reconstituted in 1896 as the Brilliant Deep Levels Gold Mining Company"
       }
     ],
     "references": [
@@ -189,11 +189,45 @@
         "miner": "Gold Rush Queensland Mine History",
         "id": "7310050",
         "intent": "RESEARCH_QUERY_GENERAL",
-        "signal": "0xc92af590e478a324d95d3f7f9f4f72eb69e2e2f44294691d0bc6dd8a86df8a73",
+        "signal": "0x04e7a7a6bc663a89ed2f50ee5089adc6f56e130994db9f7e7f05c4438c0a71e6",
         "cost": 0.01,
         "shape": "intent"
       }
     },
+    "control": [
+      {
+        "company": "Citigold Corporation Limited",
+        "verdict": "agree",
+        "active": true,
+        "legal_name": "CITIGOLD CORPORATION LIMITED",
+        "registration_id": null,
+        "other_differences": [
+          "registered_address"
+        ],
+        "why": null,
+        "miners": [
+          "20260828",
+          "6110114"
+        ],
+        "signals": [
+          "0x057733940f62506eede92cb7f583f489fb8f0758c9572119549ab4a5e3485c2c",
+          "0xe528258f4a222f8cfda4c1ccfca61693f8e2ce799f902c079d1f5d2be30e9322"
+        ],
+        "cost": 0.02
+      },
+      {
+        "company": "Brilliant Deep Levels Gold Mining Company",
+        "verdict": "insufficient",
+        "active": null,
+        "legal_name": null,
+        "registration_id": null,
+        "other_differences": [],
+        "why": "fewer than two usable answers",
+        "miners": [],
+        "signals": [],
+        "cost": 0.01
+      }
+    ],
     "receipts_tie": {
       "checked": 3,
       "in_paid_answer": 3,
@@ -220,7 +254,8 @@
     },
     "open_questions": [
       "closure reason: the indexed sources give a closure year but quote no reason",
-      "why it stopped in 1917: no source quotes a reason; do not assume exhaustion"
+      "why it stopped in 1917: no source quotes a reason; do not assume exhaustion",
+      "who controls it: Brilliant Deep Levels Gold Mining Company could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly"
     ],
     "miner_conflicts": []
   },
@@ -229,42 +264,52 @@
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0x6e832310f368c469aaa510dd22ab0effbdbbede7a6bf904d89c50b7617847dee",
+      "signal": "0x469efebbacf03420db6fb8db27eb3c8d81ace424988a2958c99110b225a4df61",
       "cost": 0.01,
       "shape": "intent",
-      "rank": "#13 of 31"
+      "rank": "#13 of 30"
     },
     {
       "miner": "OathCast Queensland Gold Mines",
       "id": "64176",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0x260ab22653fce2acfa0dba2808147792b7b476802f9bdda85aeefebe8a4879fa",
+      "signal": "0xec2f50cd5ec7a7dcf346ffcef72d3f1627fd66473936a33f0af8aa967a6553a0",
       "cost": 0.01,
       "shape": "intent",
-      "rank": "#15 of 31"
+      "rank": "#15 of 30"
     },
     {
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0xc92af590e478a324d95d3f7f9f4f72eb69e2e2f44294691d0bc6dd8a86df8a73",
+      "signal": "0x04e7a7a6bc663a89ed2f50ee5089adc6f56e130994db9f7e7f05c4438c0a71e6",
       "cost": 0.01,
       "shape": "intent",
-      "rank": "#13 of 31"
+      "rank": "#13 of 30"
     },
     {
       "miner": "Gold Rush Queensland Mine History",
       "id": "7310050",
       "intent": "RESEARCH_QUERY_GENERAL",
-      "signal": "0xc5e922635444870be269d431035395cb4f7b879162d7bd89e5f7d999bbe9f443",
+      "signal": "0xfdb383678eddacfecc6edf3450da825e7842838603ba6b6ce66336b454bf9089",
       "cost": 0.01,
       "shape": "intent",
-      "rank": "#13 of 31"
+      "rank": "#13 of 30"
+    },
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0xfdb383678eddacfecc6edf3450da825e7842838603ba6b6ce66336b454bf9089",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": null,
+      "shared": "latest gold price, bought once for this run"
     }
   ],
   "paid_answers": {
     "history": {
-      "answer": "Brilliant Lode, a large gold mine located 1.1 km east of Charters Towers, was operated from 1879 to 1917 and closed in 1917 without a stated reason. The Geological Survey of Queensland records it as an abandoned mine with a gold size band of 50-150 tonnes. Reported production includes 22,843 ounces of gold from the Brilliant Deeps (1908-1916) and 51,482.73 kg (approximately 1.66 Moz) of gold from the Brilliant Lode (to 1917). The mine processed 2,168,244 tonnes of ore. Ownership was held by the Brilliant Deep Levels Gold Mining Company from 1896 to 1907, followed by Citigold Corporation Limited.",
+      "answer": "Brilliant Lode, a large gold mine located 1.1 km east of Charters Towers, was operated from 1879 to 1917 and closed in 1917 without a stated reason. The Geological Survey of Queensland records it as an abandoned mine with a gold size band of 50-150 tonnes. Reported production includes 22,843 ounces of gold from the Brilliant Deeps (on the Brilliant reef) between 1908 and 1916, and 51,482.73 kg (approximately 1.66 Moz troy) of gold from the Brilliant Lode up to 1917. The mine processed 2,168,244 tonnes of ore. Ownership changed from the Brilliant Deep Levels Gold Mining Company (1896-1907) to Citigold Corporation Limited.",
       "source_count": 3,
       "sources": [
         "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D38722&outFields=%2A&f=json",
@@ -446,17 +491,6 @@
     ],
     "ownership": [
       {
-        "owner": "Brilliant Deep Levels Gold Mining Company",
-        "role": "operator",
-        "period_from": 1896,
-        "period_to": 1907,
-        "entity": "Brilliant Deeps",
-        "source_ref": "WP-CTSHAFTS",
-        "source_title": "Charters Towers mine shafts (Wikipedia, Queensland Heritage Register text), revision 1367481111 of 2026-08-03",
-        "source_url": "https://en.wikipedia.org/w/index.php?title=Charters_Towers_mine_shafts&oldid=1367481111",
-        "quote": "the company was reconstituted in 1896 as the Brilliant Deep Levels Gold Mining Company"
-      },
-      {
         "owner": "Citigold Corporation Limited",
         "role": "principal holder of mining lease 1499, mining lease 10093, mining lease 10208 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
         "period_from": null,
@@ -482,6 +516,17 @@
         "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
         "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
         "quote": "Tenure: Principal Holder Name CITIGOLD CORPORATION LIMITED; MINING LEASE 1499, MINING LEASE 10093, MINING LEASE 10208"
+      },
+      {
+        "owner": "Brilliant Deep Levels Gold Mining Company",
+        "role": "operator",
+        "period_from": 1896,
+        "period_to": 1907,
+        "entity": "Brilliant Deeps",
+        "source_ref": "WP-CTSHAFTS",
+        "source_title": "Charters Towers mine shafts (Wikipedia, Queensland Heritage Register text), revision 1367481111 of 2026-08-03",
+        "source_url": "https://en.wikipedia.org/w/index.php?title=Charters_Towers_mine_shafts&oldid=1367481111",
+        "quote": "the company was reconstituted in 1896 as the Brilliant Deep Levels Gold Mining Company"
       }
     ],
     "references": [
@@ -521,8 +566,8 @@
   },
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "ce6c8e700761d8ffa0c0870d2ea5da2f8df51d3110a562a7a34c6d4afe691637",
-    "signature": "g/e8i4cQKSy8n/tbyzCrgKvipaqTDDwt5b2hZz3B+YI9RXvVMHcgKHaoQCqyp6pjpOx0TRWQOs0Jx392IHbFDg==",
+    "sha256": "fbd361a93d7daa2b98d920f2f0536e466ac4970462abbcb5633e4dad4fcf1eb4",
+    "signature": "tgE1RKvizwpn/sFeAUvNvYVdS31YRWjg2v/r5kTzPYFDIF/zJQRs82dvkmHtWHOJF3xCdsNmlhXui+khqfcAAg==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }
