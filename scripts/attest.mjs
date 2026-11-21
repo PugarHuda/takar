@@ -8,7 +8,7 @@
 // why). One attestation per Telegraph signal; signals already attested are skipped.
 // The recipient is the miner's fee wallet from the node's registry, so a miner's
 // record follows its wallet. Gas only, testnet.
-import { readFileSync, appendFileSync } from "node:fs";
+import { readFileSync, appendFileSync, existsSync } from "node:fs";
 import { ethers } from "ethers";
 import { EAS, SCHEMA_REGISTRY, SCHEMA, fromScorecard, fromFleet, dedupe, readAttestations } from "../lib/reputation.mjs";
 
@@ -30,7 +30,11 @@ console.log(`schema ${uid} ${exists ? "registered" : "not registered yet"}`);
 
 const card = JSON.parse(readFileSync("receipts/scorecard.json", "utf8"));
 const decisions = readFileSync("receipts/decisions.jsonl", "utf8").trim().split("\n").filter(Boolean).map((l) => JSON.parse(l));
-const already = exists ? new Set((await readAttestations(uid)).map((a) => String(a.signal).toLowerCase())) : new Set();
+// Skip only what THIS wallet already attested (on chain, plus the local log): the schema
+// is open, so another attester's record of a signal must never suppress ours.
+const mine = exists ? await readAttestations(uid, { attester: wallet.address }) : [];
+const logged = existsSync("receipts/attestations.jsonl") ? readFileSync("receipts/attestations.jsonl", "utf8").trim().split("\n").filter(Boolean).flatMap((l) => JSON.parse(l).signals ?? []) : [];
+const already = new Set([...mine.map((a) => String(a.signal)), ...logged].map((x) => x.toLowerCase()));
 const records = dedupe([...fromScorecard(card), ...fromFleet(decisions)], already);
 console.log(`${records.length} new records (${already.size} signals already attested)`);
 
