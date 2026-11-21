@@ -6,105 +6,143 @@ Takar is entered in Telegraph Hackathon Season II, in all three tracks, from one
 |---|---|---|
 | Fleet | Apps & Agents | Mission 11, Autonomous Systems |
 | Forecast scorecard | Apps & Agents | Mission 13, Asset Management |
+| Country note priced per fact | Apps & Agents | Mission 05, Conflict Intelligence |
 | Takar Settle, conditional escrow | Apps & Agents | Mission 14, Web3 & DeFi |
 | Takar Settle, drought cover | Apps & Agents | Mission 06, Resources & Agriculture |
 | Takar Outcome miner | Miners / Providers | EVENT_OUTCOME_RESOLUTION_GENERAL |
-| Takar Outcome evaluator | Evaluators | EVENT_OUTCOME_RESOLUTION family (Hybrid) |
+| Takar Outcome evaluator | Evaluators | EVENT_OUTCOME_RESOLUTION family (Hybrid). Rejected by the network; kept as a documented negative result |
 
-Site: https://takar-telegraph.vercel.app. MCP: `npx -y takar-mcp`.
+Site: https://takar-telegraph.vercel.app. MCP: `npx -y takar-mcp`. CI: `.github/workflows/test.yml`.
 
 ## Check it in five minutes, with no wallet
 
-1. `npm install && npm test` runs 115 offline checks (plus 8 contract tests: `cd onchain && forge install foundry-rs/forge-std && forge test`) of the payment signers (exact and escrow), the fleet rules, the outcome resolver and the scorecard rules. No network, no funds.
-2. Open `receipts/ledger.jsonl` and pick a line with `"status":"paid"`.
-   - With a `settlementTx` (exact payment before 20 Nov): open it on https://sepolia.etherscan.io and see the 0.01 USDC transfer.
-   - With `"rail":"escrow"` (from 20 Nov): the ask is billed to the escrow balance at the next ledger root, and there is no per-ask transaction. See `https://devnode.telegraphprotocol.com/v1/ledger/account/0x39d2bae5eaeda9283535ddc98f1991c81ed5cd7e`.
-3. Fetch `https://devnode.telegraphprotocol.com/engine/v1/signal/<signalHash>` for the same line. It shows exactly what was asked and what the miner returned.
-4. `npx -y takar-mcp` and call `forecast_scorecard`. It checks the scorecard's Ed25519 signature against the pinned key and reports `verified`.
+1. `npm install && npm test` runs 217 offline checks: the payment signers (exact and escrow), the fleet, the outcome resolver, the scorecard, Settle and the Mission 05 note. `cd onchain && forge install foundry-rs/forge-std --no-git && forge test` runs the 11 contract tests. No network, no funds.
+2. On the site, press **Verify the signature in this browser** under the scorecard. It checks the Ed25519 signature against the key pinned in the page, with WebCrypto.
+3. On the site, use **Ask the outcome miner yourself**. It calls the miner's own endpoint, with no wallet.
+4. Open `receipts/ledger.jsonl` and pick a line with `"status":"paid"`.
+   - With a `settlementTx` (exact payment, before 20 Nov): open it on https://sepolia.etherscan.io.
+   - With `"rail":"escrow"` (from 20 Nov): the ask is billed to the escrow balance at the next ledger root, with no per-ask transaction. See `https://devnode.telegraphprotocol.com/v1/ledger/account/0x39d2bae5eaeda9283535ddc98f1991c81ed5cd7e`.
+5. Fetch `https://devnode.telegraphprotocol.com/engine/v1/signal/<signalHash>` for the same line. It shows what was asked and what the miner returned.
+
+## With and without Telegraph's second opinion
+
+Every app here buys **more than one** answer before it acts. The same runs, read with only the first answer, would have acted wrongly:
+
+| App | With one answer | With the second check | Receipt |
+|---|---|---|---|
+| Settle, M06 | Bandung, 10–12 Nov, 30 mm trigger: Telegraph recorded 9 mm, so the cover **pays** | NASA POWER recorded 40.2 mm: the sources disagree, the cover **holds** | `receipts/settlements.jsonl`, deal 2 on v2 |
+| Fleet, M11 | Makassar and Palangka Raya: PREFLIGHT says LOW risk (gusts 22.7 and 16.9 km/h), so the drones **fly** | No second usable STORM_ALERT miner exists for Indonesia (37004 answers with *space* weather, Tempest misses fields), so both **hold** | `receipts/decisions.jsonl`, run 2026-11-21T02:34 |
+| Note, M05 | "Pakistan shot down Indian Rafale jets": FACT_CHECK says true, so it is **confirmed** | TxLens says no, so the claim is **disputed** and stays out of the escalation tally | `receipts/brief-india-pakistan-2025.json`, c4 |
+| Scorecard, M13 | Asking only the routed miner: TxLens answered 15 of 28 markets and got 7 wrong | Asked of two miners and held against each market's own resolution, so the wrong answers are **contradicted** and left out of the score | `receipts/scorecard.json`, `summary.miners` |
 
 ## Mission 11: the fleet
 
 | Step | How |
 |---|---|
-| Run | `npm run fund && npm run fleet` (about $0.05–0.09 of test USDC). Prints GO, HOLD or ABORT per unit, with receipts. |
+| Run | `npm run fund && npm run fleet` (about $0.10 of test USDC). Prints GO, HOLD or ABORT per unit, with receipts. |
 | New input | Edit `fleet.json`: change a unit's `location`, `limits` or `budgetUsd`. |
-| Check | `receipts/decisions.jsonl`: the purchases each decision used, any answer it rejected (`unusableMiners`), the METAR station reading and the reasons. |
-| Inspect | the `ledger.jsonl` lines named in a decision's `receipts`, then their signal or transaction (above). |
-| Break | Set a rover's `budgetUsd` to `0.01`: it needs two purchases, so it must HOLD with "budget exhausted". Set a drone's `maxGustKmh` below the station wind: it must HOLD and say why. Pick a place with no airport nearby: the decision is marked unconfirmed. |
+| Check | `receipts/decisions.jsonl`: the purchases behind each decision, the answers it rejected (`unusableMiners`), the station reading and the reasons. |
+| Inspect | the `ledger.jsonl` lines a decision's `receipts` name, then their signal. |
+| Break | Set a rover's `budgetUsd` to `0.01`: it must HOLD, "budget exhausted". Set a drone's `maxGustKmh` below the station wind: it must HOLD. |
+
+The rules, in order:
+- **A drone needs two different STORM_ALERT miners that agree**: on whether the risk level can fly, and on which side of the gust limit they are. It acts on the worst of each field (highest risk, highest gust; a missing gust fails closed).
+- **An answer about another place or country is unusable** (bounties#211), and the unit re-buys from the next-ranked miner.
+- **The nearest METAR station must not contradict the answer.** With no station in range, an Open-Meteo model reading is used, labelled as a model. It can hold the unit but never confirms a GO.
 
 ## Mission 13: the forecast scorecard
 
-For each resolved prediction market, Takar reads the crowd's probability N days before close from Manifold's public bet history. It then buys the outcome through Telegraph (EVENT_OUTCOME_RESOLUTION_GENERAL) and checks it against the market's own resolution. Only outcomes that Telegraph confirmed are scored.
+For each resolved prediction market, Takar reads the crowd's probability 7 days before close from Manifold's public bet history. It then buys the outcome through Telegraph from **two miners**: Takar Outcome by id, and the ranked route. Each answer is held against the market's own resolution.
 
 | Step | How |
 |---|---|
-| Run | `npm run fund && npm run scorecard` (at most two $0.01 asks per market, paid from escrow). Writes the signed `receipts/scorecard.json`. |
-| New input | `npm run scorecard -- --days 30 --per-topic 3` scores the crowd 30 days out over more markets. Topics are the `TOPICS` list in `scripts/scorecard-run.mjs`. |
-| Check | `receipts/scorecard.json`: per market, the crowd price and its bet id, the resolution, what Telegraph said and the Brier score. Latest run: 13 of 13 confirmed, Brier 0.015, with 0.25 as the coin-flip baseline. Second check: FACT_CHECK agreed on 5, disagreed on 2 and could not settle 6. This is reported beside the score and never changes it. |
-| Inspect | each row's `verification.attempts[].signal`, then the signal URL above. |
-| Break | An outcome that Telegraph contradicts is reported and left out of the score. One it cannot settle is listed as `unverified`, never dropped. `lib/scorecard.test.mjs` covers both. Live: run with an empty escrow and every ask is refused and nothing is charged, so every row comes out `unverified` with a `null` Brier score. |
+| Run | `npm run fund && npm run scorecard` (up to three $0.01 asks per market plus one FACT_CHECK, from escrow). Writes the signed `receipts/scorecard.json`. |
+| New input | `npm run scorecard -- --days 30 --per-topic 3 --out receipts/scorecard-30d.json`. Topics are `TOPICS` in `scripts/scorecard-run.mjs`. |
+| Check | `summary`: 28 markets, 20 scored, 6 contradicted, 1 split, Brier 0.0085, Brier skill 0.966, log loss 0.064 (a coin flip scores 0.693), plus calibration bins. `summary.miners` grades the miners on the same receipts: PREFLIGHT 13 of 13 right, TxLens 8 right and 7 wrong, Takar Outcome 1 right and 27 `unresolved`. |
+| Inspect | each row's `verification.attempts[].signal`. |
+| Break | A miner that contradicts the market is reported, not scored. Two miners that disagree make the row `split`. No yes or no gives `unverified`. All three are tested in `lib/scorecard.test.mjs`. |
 
-## Missions 14 and 06: Takar Settle
+Our own miner is honest but narrow here. On Manifold's vaguer questions ("Will Google be in a winning position in the AI war?") Wikipedia settles nothing, so it answers `unresolved` and does not guess.
 
-One contract, `TakarSettle`, on Sepolia at [`0xfB5E39924F287d14a1833C58e50f466145e62808`](https://sepolia.etherscan.io/address/0xfB5E39924F287d14a1833C58e50f466145e62808). Source in `onchain/src`, with 8 Foundry tests in `onchain/test`.
+## Mission 05: a country note priced per fact
 
-How a deal works:
-1. A payer locks test USDC for a payee against a condition written in the deal's `terms`.
-2. After `resolveAfter`, Takar's agent buys the answer through Telegraph.
-3. It pays the payee if the condition was met and refunds the payer if not. The settlement records the Telegraph signal hash.
+A risk desk's note on India and Pakistan, April to June 2025, is written as claims in `briefs/india-pakistan-2025.json`.
+- **Observations** (a period that has ended) are bought from three checks: Takar Outcome by id, the ranked EVENT_OUTCOME route, and FACT_CHECK.
+- **Forecasts** are listed and not bought.
 
-The resolver cannot pay anyone else, cannot settle early or twice, and cannot settle without evidence. If it never settles, the payer reclaims after 7 days.
+The checks are never averaged:
+- **confirmed** or **contradicted** needs two agreeing checks and none against;
+- a lone answer is **single-source**;
+- yes and no together is **disputed**;
+- no yes or no is **unsupported**.
+
+The escalation tally counts confirmed claims only.
+
+| Step | How |
+|---|---|
+| Run | `npm run brief -- briefs/india-pakistan-2025.json` ($0.03 per observation). `--rescore` re-applies the rules to the checks already bought, with no new asks. |
+| New input | write a brief JSON with your own claims (`id`, `kind`, `claim`, `question`) |
+| Check | `receipts/brief-india-pakistan-2025.json` (signed). Result: 2 confirmed, 1 contradicted, 1 disputed, 1 single-source, 1 unsupported, 2 forecasts. $0.18 total. |
+| Break | c6 is fabricated on purpose ("exchanged nuclear strikes"): contradicted by TxLens and FACT_CHECK. c4 is contested: disputed. |
+
+## Missions 14 and 06: Takar Settle v2
+
+[`TakarSettle` v2](https://sepolia.etherscan.io/address/0xcb35d51094335141a986a429bA546b7955705187) runs on Sepolia at `0xcb35d51094335141a986a429bA546b7955705187`, with a 10-minute liveness. Source is in `onchain/src`, with 11 Foundry tests.
+
+The dispute window follows the optimistic-oracle pattern (UMA):
+1. The payer locks test USDC for a payee against a condition in `terms`.
+2. After `resolveAfter`, Takar buys the answer through Telegraph and **proposes** pay or refund, with the signal hashes.
+3. During liveness the payer and the payee may each **dispute** once. A dispute voids the proposal, and the same signal set cannot be proposed again.
+4. After liveness, **anyone** finalizes.
 
 | | Mission 14, conditional escrow | Mission 06, drought cover |
 |---|---|---|
 | Condition | a real-world event resolves yes | recorded rain over a period stays under a trigger |
-| Bought | EVENT_OUTCOME_RESOLUTION, once | WEATHER_FORECAST_VERIFY, once per day of the period |
-| Waits (never pays) when | the outcome is unresolved or unreadable | any day has no readable record |
+| Bought | EVENT_OUTCOME from Takar Outcome by id plus the ranked route; **two miners must agree** (the contract refuses fewer than two distinct signals) | WEATHER_FORECAST_VERIFY per day; every day's signal goes on-chain |
+| Second source | the second miner | **NASA POWER** (MERRA-2 reanalysis) must put the period on the same side of the trigger |
+| Holds (never pays) when | miners disagree, fewer than two answer, or the event is unresolved | a day is missing, or the sources disagree |
 
 | Step | How |
 |---|---|
-| Run | `npm run settle -- open-event --question "Did Argentina win the 2022 FIFA World Cup?" --after 1`, then `npm run settle -- run` a minute later. For M06: `npm run settle -- open-drought --location Kupang --from 2026-11-15 --to 2026-11-17 --trigger 30 --after 1`. |
-| New input | any question, or any place, period and trigger |
-| Check | `receipts/settlements.jsonl`: per deal the terms, the decision and why, the daily readings (M06), the signal and the settlement transaction |
-| Inspect | the `Settled` event on Etherscan carries the signal hash. Open `https://devnode.telegraphprotocol.com/engine/v1/signal/<signal>` to see what was asked and answered. |
-| Break | Open a deal on a future event: `run` leaves it open ("cannot settle it yet") because the answer is unresolved. A drought cover on a period that includes a future day waits the same way. The contract rejects an early settle, a second settle and a settle without evidence (Foundry tests). |
+| Run | `npm run settle -- open-event --question "Did Argentina win the 2022 FIFA World Cup?" --after 1`, then `npm run settle -- run` (proposes), and `run` again after 10 minutes (finalizes). |
+| Dispute | `npm run settle -- dispute --id <n> --as payee` during liveness. |
+| Check | `receipts/settlements.jsonl`: every step (`propose`, `dispute`, `finalize`, `hold`) with its reasons, answers, signals and transaction. |
+| Break | A future event stays open. A disputed proposal cannot come back with the same evidence. An early proposal, one with a single signal, a repeated signal or a dispute by a third party are all rejected (Foundry tests). |
 
-Live on 20 Nov, every branch ran:
+Live on 21 Nov, every branch ran:
 
-| Deal | Result |
+| Deal | What happened |
 |---|---|
-| 0, Argentina won 2022? | paid the payee |
-| 1, France won 2022? | refunded the payer |
-| 2, Bandung under 30 mm | paid the payee (13.8 mm) |
-| 3, Kupang under 30 mm | paid the payee (16.4 mm) |
-| 4, Bandung under 10 mm | refunded the payer (13.8 mm) |
+| 0, Argentina won 2022? | two miners agree yes → proposed → finalized, payee paid |
+| 1, France won 2022? | two miners agree no → proposed → **disputed by the payee** → re-proposed with new signals → finalized, payer refunded |
+| 2, Bandung 10–12 Nov, under 30 mm | Telegraph 9 mm, NASA POWER 40.2 mm → **held** |
+| 3, Kupang 14–16 Nov, under 30 mm | Telegraph 13.1 mm, NASA POWER 4.3 mm, both under → proposed → finalized, payee paid |
 
-Trust, stated plainly: one resolver key decides, and it is ours. What keeps it honest is that every decision is public and points at a Telegraph signal anyone can read.
+v1 (`0xfB5E…2808`) settled five deals on 20 Nov on one answer, with no window; its rows are marked v1 on the board.
+
+Trust, stated plainly: the resolver key is ours. What limits it is the quorum, the second source, the window in which either party can dispute, and that every step points at public Telegraph signals.
 
 ## Miner: Takar Outcome
 
-- Endpoint: `POST https://takar-outcome.vercel.app/api/resolve {"event": "..."}`. Registration YAML: `miner/takar-outcome.yaml`.
-- Two sources, in order. **First, a settled Polymarket market:** an exact title match, or a dated fixture matched by slug, date and full event title. The market must be closed, with one outcome's final price at 0.99 or more. **Then Wikipedia:** every yes or no carries a sentence quoted word for word from the cited article, and the code checks it is really there. Events that have not ended, or that neither source settles, come back `unresolved`. A slow model also ends as `unresolved` within a 12 s budget, never as an error.
-- Why Polymarket: the per-ask log (`api/resolve.js`) showed the network asks prediction-market titles and fixtures ("Bitcoin Up or Down - February 28", "Did the … Heidenheim vs Mainz match end in a draw?"), which Wikipedia cannot settle.
-- Network evidence: ranked #1 in epoch 16 at 0.9622, and every spot check that epoch passed (`https://anjoman.ai/api/explorer/spot-checks?miner=takar-outcome`). Scores in later epochs are on the leaderboard as they are; we do not pick epochs.
-- Known gaps: facts that exist only in Wikipedia tables, truncated market titles that match several markets ("Bitcoin Up or Down - February 28" without a time), and fixtures Polymarket never listed. All three are answered `unresolved` rather than guessed.
+- Endpoint: `POST https://takar-outcome.vercel.app/api/resolve {"event": "..."}`. Registration YAML: `miner/takar-outcome.yaml`. Node id 20261117.
+- It uses two sources, in order:
+  - **A settled Polymarket market.** An exact title match (ignoring a trailing "Resolution" or "Resolve this market"), or a dated fixture matched by slug, date and full event title. The market must be closed, with a final price of 0.99 or more.
+  - **Wikipedia.** The prose plus the table rows that name the question's year or terms. Every yes or no carries a sentence or table row quoted word for word, checked in code; a quote may not run across two rows.
+- Every answer states `confidence` (`high` for a settled market, `medium` for a checked quote, `none` for unresolved) and the `resolution_rule` it rests on.
+- Network evidence: ranked #1 in epoch 16 at 0.9622, with every spot check passed. Epochs 18–28 scored 0: every graded ask came back `unresolved`. One cause was ours (the "Resolution" suffix, fixed 21 Nov). The other is asks that name no event at all, which no source can settle. Reported with data, without quoting graded material. We do not pick epochs.
+- Known gaps:
+  - Titles that match several markets ("Bitcoin Up or Down - February 28" with no time).
+  - Fixtures Polymarket never listed.
+  - Vague questions.
 
-## Evaluator: Takar Outcome evaluator
+  All are answered `unresolved` rather than guessed.
 
-Details in `evaluator/README.md`. Package `evaluator/EVENT_OUTCOME_RESOLUTION.safetensors`, keccak256 `0x69630036…ffd479a26` (v2.1: the v2 weights, re-hashed with an `x-takar-build` metadata key so the runnable URL could move), registration 153 on the ledger Diamond `0x72a7…`. Also at https://huggingface.co/PugarHuda/takar-outcome-evaluator.
+## Evaluator: Takar Outcome evaluator (rejected)
 
-**Baseline comparison** (same 537 held-out pairs):
+Details are in `evaluator/README.md`. Registration 156 was **rejected** on 20 Nov: on the node's 15 public pairs it ordered 7 correctly (46.7%, floor 70%). Our 99.8% was measured on 537 held-out pairs we generated (length baseline 50.8%, bag-of-words 62.2%), and it did not transfer to the network's material.
 
-| Method | Pairwise accuracy |
-|---|---|
-| Pick the longer answer | 50.8% |
-| Bag-of-words probe, prompt hidden (the kit's dataset gate) | 62.2% |
-| This adapter | 99.8% (PyTorch), and 40 of 40 sampled on the real WASM engine |
-
-On real answers from the network, every off-topic payload ranks below an on-topic answer (`evaluator/real-check.py`). Before the network tightened its own scoring, those payloads scored about 0.99.
-
-**What it does not cover:** the family is Hybrid, scored by comparator + adapter. This is the adapter half only; we did not build a comparator. The network rejected it (registration 156, 20 Nov): on the node's 15 public pairs it ordered 7 correctly (46.7%, floor 70%). Our accuracy was measured on pairs we generated, and it did not transfer. No canonical status or ranking change is claimed. We chose not to upload our own pairs to this family's evaluation pool, because that pool's hidden half grades adapters, ours included.
+We did not capture or train on the node's pairs, and we did not seed the family's evaluation pool, because its hidden half grades adapters, ours included. It is kept as a documented negative result: the data, the training run and the rejection are all public. We do not claim it as a qualifying Evaluators entry.
 
 ## What is not claimed
 
-Real machines, production traffic or paying customers. The fleet is simulated. Every purchase is testnet. The scorecard is 13 markets, and every EVENT_OUTCOME confirmation came from a single miner (the FACT_CHECK second opinion came from another).
+Real machines, production traffic or paying customers. The fleet is simulated, and every purchase is testnet. The scorecard is 28 markets. The Mission 05 note is one brief with eight claims. Our miner answers few of the scorecard's markets; the confirmations there come mostly from PREFLIGHT, and the board shows it.

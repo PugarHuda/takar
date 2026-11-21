@@ -12,12 +12,15 @@ Built for Telegraph Hackathon Season II, which pays cash prizes. One repo covers
 |---|---|---|
 | Fleet | Apps, **Mission 11** Autonomous Systems | this page, `lib/fleet.mjs` |
 | Forecast scorecard | Apps, **Mission 13** Asset Management | `lib/scorecard.mjs`, `receipts/scorecard.json` |
-| Takar Settle, conditional escrow and drought cover | Apps, **Missions 14** Web3 & DeFi and **06** Resources & Agriculture | `onchain/`, `scripts/settle.mjs` |
+| Country note priced per fact | Apps, **Mission 05** Conflict Intelligence | `lib/brief.mjs`, `briefs/`, `receipts/brief-*.json` |
+| Takar Settle v2, conditional escrow and drought cover (two-miner quorum, NASA POWER check, dispute window) | Apps, **Missions 14** Web3 & DeFi and **06** Resources & Agriculture | `onchain/`, `scripts/settle.mjs` |
 | Takar Outcome miner | Miners, EVENT_OUTCOME_RESOLUTION_GENERAL | `api/resolve.js`, `lib/outcome.mjs` |
-| Takar Outcome evaluator | Evaluators, EVENT_OUTCOME_RESOLUTION | [`evaluator/`](evaluator/README.md) |
+| Takar Outcome evaluator (rejected by the network, kept as a negative result) | Evaluators, EVENT_OUTCOME_RESOLUTION | [`evaluator/`](evaluator/README.md) |
 | takar-mcp | MCP, three tools with no key or wallet | [`mcp/`](mcp/README.md), `npx -y takar-mcp` |
 
-Reviewers: start at [JUDGE.md](JUDGE.md).
+Reviewers: start at [JUDGE.md](JUDGE.md), which opens with what each app does **with and without** a second opinion.
+
+[![test](https://github.com/PugarHuda/takar/actions/workflows/test.yml/badge.svg)](https://github.com/PugarHuda/takar/actions/workflows/test.yml)
 
 > **Network:** Ethereum Sepolia testnet with test USDC. The fleet in `fleet.json` is **simulated**: the units, tasks and limits are illustrative. Every Telegraph purchase, settlement and airport-station reading in this repository is real.
 
@@ -33,7 +36,7 @@ unit task ──► plan: which intents this task needs
 
 | Unit type | Buys | Decides on |
 |---|---|---|
-| `drone` | `STORM_ALERT_GENERAL` | storm risk and peak gust, then a live station-wind check |
+| `drone` | `STORM_ALERT_GENERAL` from **two different miners** | both must agree on flyability and the gust limit; then a live station-wind check (or a labelled model reading where no station is in range, which can only hold) |
 | `field-robot` | `WEATHER_FORECAST_GENERAL` + `WEATHER_FORECAST_VERIFY_GENERAL` (yesterday) | rain probability over the work window, and yesterday's recorded rain |
 | `rover` | `ROUTE_ETA_GENERAL` + `STORM_ALERT_GENERAL` at the destination | route time within the shift, storm risk on arrival |
 
@@ -53,8 +56,11 @@ npm install
 cp .env.example .env              # put a TESTNET key in AGENT_PRIVATE_KEY
 npm run status                    # balances, sends nothing
 npm run fund                      # mint test USDC, swap a little to MACHINA, fund escrow (testnet only)
-npm test                          # 79 offline checks: payment signer + fleet rules
-npm run fleet                     # one fleet tick, about $0.05–0.09 of test USDC
+npm test                          # 217 offline checks
+npm run fleet                     # one fleet tick, about $0.10 of test USDC
+npm run scorecard                 # Mission 13, signed scorecard (two miners per market)
+npm run brief -- briefs/india-pakistan-2025.json   # Mission 05, a note priced per fact
+npm run settle -- run             # Missions 14 / 06: propose, then finalize after the dispute window
 npm run first-ask -- Makassar 2026-11-15   # one paid recorded-weather ask vs METAR
 ```
 
@@ -115,7 +121,9 @@ It runs on free OpenRouter models, falling back to the next model in the list wh
 ## Limitations
 
 - The fleet is simulated. No real machine acts on these decisions.
-- METAR stations are airports. Some places have none in range: Palangka Raya has no METAR station within about 100 km, so its answers stay "unconfirmed".
+- METAR stations are airports. Some places have none in range (Palangka Raya has no METAR station within about 100 km). There the fleet reads an Open-Meteo model wind, labelled as a model: it can hold a unit, but the answer stays "unconfirmed".
+- Only one STORM_ALERT miner (PREFLIGHT) gave a usable answer for Indonesian places on 21 Nov, so drones that need two agreeing miners hold. That is the rule working, and a gap in the network.
+- Takar Outcome answers few of the scorecard's Manifold questions: it never guesses, and Wikipedia does not settle vague ones.
 - Ranking data comes from the node's public leaderboard, which only lists intents scored in a recent epoch. Takar walks back up to 12 epochs.
 - Testnet only. Test USDC has no value, and nothing here is paid production usage.
 
