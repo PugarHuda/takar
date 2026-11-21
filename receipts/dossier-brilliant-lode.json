@@ -11,7 +11,9 @@
       "same_site": true,
       "name": "Brilliant Lode",
       "location": "1.1 KM ESE OF CHARTERS TOWERS",
-      "status": "ABANDONED MINE"
+      "status": "ABANDONED MINE",
+      "nearby_workings": 99,
+      "size_band": "50 - 150 TONNES"
     },
     "production": {
       "gold": [
@@ -249,37 +251,6 @@
         "cost": 0.02
       }
     ],
-    "receipts_tie": {
-      "checked": 3,
-      "in_paid_answer": 3,
-      "rows": [
-        {
-          "source": "WP-CTSHAFTS",
-          "amount": 22843,
-          "unit": "oz",
-          "in_paid_answer": true
-        },
-        {
-          "source": "MINOCC-2017:Total_Ores_Prod:38722",
-          "amount": 51482.73,
-          "unit": "kg",
-          "in_paid_answer": true
-        },
-        {
-          "source": "MINOCC-2017:Production:38722:1",
-          "amount": 51482.73,
-          "unit": "kg",
-          "in_paid_answer": true
-        }
-      ]
-    },
-    "open_questions": [
-      "tenure: 1 authorities show an expiry date in the past with status \"Granted\": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.",
-      "closure reason: the indexed sources give a closure year but quote no reason",
-      "why it stopped in 1917: no source quotes a reason; do not assume exhaustion",
-      "who controls it: Brilliant Deep Levels Gold Mining Company could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly"
-    ],
-    "miner_conflicts": [],
     "tenure": {
       "checked_at": "2026-11-21T17:18:02.912Z",
       "source": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer (Queensland Government, open data), read directly",
@@ -329,7 +300,38 @@
           "minerals": "CU,PB,ZN,SI,AG,AU"
         }
       ]
-    }
+    },
+    "receipts_tie": {
+      "checked": 3,
+      "in_paid_answer": 3,
+      "rows": [
+        {
+          "source": "WP-CTSHAFTS",
+          "amount": 22843,
+          "unit": "oz",
+          "in_paid_answer": true
+        },
+        {
+          "source": "MINOCC-2017:Total_Ores_Prod:38722",
+          "amount": 51482.73,
+          "unit": "kg",
+          "in_paid_answer": true
+        },
+        {
+          "source": "MINOCC-2017:Production:38722:1",
+          "amount": 51482.73,
+          "unit": "kg",
+          "in_paid_answer": true
+        }
+      ]
+    },
+    "open_questions": [
+      "closure reason: the indexed sources give a closure year but quote no reason",
+      "why it stopped in 1917: no source quotes a reason; do not assume exhaustion",
+      "tenure: 1 authorities show an expiry date in the past with status \"Granted\": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.",
+      "who controls it: Brilliant Deep Levels Gold Mining Company could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly"
+    ],
+    "miner_conflicts": []
   },
   "receipts": [
     {
@@ -636,11 +638,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T17:18:02.912Z",
+  "rederived_at": "2026-11-21T17:32:37.614Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "043e16052720865d4749c80ecc46cd8507bd6308124cd99bc9827924ac4c3bd3",
-    "signature": "4MIOa2bDsgTbWMw6FmVlXbTkmahDRHBK1AyTekyX+iu+omoGBJ3Jg1jWxxOSQq6jXGPRd6XwJOGu+d57gGqKCA==",
+    "sha256": "d39c4a4f51bf11a57a3fb11b4aabed1f15a5e74f5a3e39f59fd43d8284c0ce1c",
+    "signature": "cPx3SaM3BQlhSjGu7BnrzB75gYVV0b0wQnH6cNfvfbVaAR+qYvfc4JE64YU3bJzEc4LzcbZ3Los6TSQV4g12Bw==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

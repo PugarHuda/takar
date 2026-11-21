@@ -1,0 +1,64 @@
+[
+ {
+  "slug": "mount-morgan",
+  "name": "Mount Morgan",
+  "site_no": 494270,
+  "pairs": [
+   "close",
+   "conflict",
+   "not comparable"
+  ],
+  "open": 5
+ },
+ {
+  "slug": "brilliant-lode",
+  "name": "Brilliant Lode",
+  "site_no": 38722,
+  "pairs": [
+   "not comparable"
+  ],
+  "open": 4
+ },
+ {
+  "slug": "mount-leyshon",
+  "name": "Mount Leyshon",
+  "site_no": 38940,
+  "pairs": [],
+  "open": 5
+ },
+ {
+  "slug": "kidston",
+  "name": "Kidston",
+  "site_no": 479629,
+  "pairs": [],
+  "open": 4
+ },
+ {
+  "slug": "golden-plateau",
+  "name": "Golden Plateau",
+  "site_no": 493636,
+  "pairs": [],
+  "open": 5
+ },
+ {
+  "slug": "croydon-king",
+  "name": "Croydon King",
+  "site_no": 479076,
+  "pairs": [],
+  "open": 5
+ },
+ {
+  "slug": "ravenswood",
+  "name": "Ravenswood",
+  "site_no": 481934,
+  "pairs": [],
+  "open": 5
+ },
+ {
+  "slug": "mount-coolon",
+  "name": "Mount Coolon",
+  "site_no": 41615,
+  "pairs": [],
+  "open": 4
+ }
+]

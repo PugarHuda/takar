@@ -5,7 +5,8 @@ Built by Takar from Telegraph miners on 2026-11-21T16:14:19.801Z. Every finding 
 ## Identity
 
 - GSQ site 494270 (goldrush-qld-history) and 494270 (OathCast, live MINOCC): **same site**.
-- ABANDONED MINE, 36 KM SOUTH-WEST OF ROCKHAMPTON, 90KM WNW OF GLADSTONE..
+- ABANDONED MINE, 36 KM SOUTH-WEST OF ROCKHAMPTON, 90KM WNW OF GLADSTONE.; gold size band \>150 TONNES.
+- 37 other historical workings within 5 km (OathCast).
 
 ## Gold production
 
@@ -98,8 +99,8 @@ Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov
 
 ## Open questions (what the records do not settle)
 
-- tenure: 24 authorities show an expiry date in the past with status "Granted": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.
 - why it stopped in 1990: no source quotes a reason; do not assume exhaustion
+- tenure: 24 authorities show an expiry date in the past with status "Granted": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.
 - who controls it: Norton Gold Fields Limited could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly
 - who controls it: Mount Morgan Limited could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly
 - production: QLDGOV-MM and MINOCC-2017:Total\_Ores\_Prod:494270 conflict \(same period \(1882–1990\), 250 t against 294.1 t, 15% apart. Candidate explanation: MINOCC-2017 includes 56.2 t from dumps or tailings \(1983–1990\); without it, 237.9 t, 5% from 250 t. Needs the record to confirm\); check whether they count recovered or contained gold, and whether tailings retreatment is included

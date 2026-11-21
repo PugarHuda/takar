@@ -37,11 +37,7 @@ article strong { color:var(--accent); }
 <main class="wrap">
   <h1>Gold Rush dossiers</h1>
   <p class="lede">Queensland historical gold mines, built from Telegraph's Gold Rush miners (goldrush-qld-history and OathCast, asked directly by id and paid through Telegraph). Takar adds the checks a reader would otherwise do by hand: do the dated rows add up, do two sources count the same period, does the total fit the survey's size band, which closures were geological and which were not. Figures are never merged or estimated. Every finding names its record, and every answer has its Telegraph receipt. The miner's rank is shown next to the evidence, not in place of it.</p>
-  <nav class="mines" aria-label="Dossiers">
-    <button data-m="mount-morgan">Mount Morgan</button>
-    <button data-m="brilliant-lode">Brilliant Lode</button>
-    <button data-m="mount-leyshon">Mount Leyshon (a site we had not looked at)</button>
-  </nav>
+  <nav class="mines" aria-label="Dossiers"></nav>
   <form id="any">
     <input id="mine" placeholder="Any Queensland gold mine the survey records, e.g. Croydon" maxlength="80" aria-label="Mine name">
     <button type="submit">Build a dossier (about 40 s)</button>
@@ -70,7 +66,13 @@ async function show(slug) {
     history.replaceState(null, "", `#${slug}`);
   } catch (e) { docEl.innerHTML = `<p class="bad">Could not load (${esc(e.message)}).</p>`; }
 }
-document.querySelectorAll("nav.mines button").forEach((b) => b.addEventListener("click", () => show(b.dataset.m)));
+// The list of dossiers comes from dossiers/index.json, written by scripts/dossier-run.mjs.
+fetch("dossiers/index.json").then((r) => r.json()).then((idx) => {
+  const nav = document.querySelector("nav.mines");
+  nav.innerHTML = idx.map((x) => `<button data-m="${esc(x.slug)}">${esc(x.name)}</button>`).join("");
+  nav.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => show(b.dataset.m)));
+  show(location.hash.slice(1) || idx[0]?.slug || "mount-morgan");
+}).catch(() => show(location.hash.slice(1) || "mount-morgan"));
 document.getElementById("any").addEventListener("submit", async (ev) => {
   ev.preventDefault();
   const mine = document.getElementById("mine").value.trim();
@@ -88,7 +90,6 @@ document.getElementById("any").addEventListener("submit", async (ev) => {
   } catch (e) { docEl.innerHTML = `<p class="bad">No dossier (${esc(e.message)}).</p>`; }
   finally { btn.disabled = false; }
 });
-show(location.hash.slice(1) || "mount-morgan");
 </script>
 </body>
 </html>

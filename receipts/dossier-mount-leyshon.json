@@ -11,7 +11,9 @@
       "same_site": true,
       "name": "Mount Leyshon",
       "location": "23.8KM SOUTH OF CHARTERS TOWERS",
-      "status": "ABANDONED MINE"
+      "status": "ABANDONED MINE",
+      "nearby_workings": 30,
+      "size_band": "50 - 150 TONNES"
     },
     "production": {
       "gold": [
@@ -390,6 +392,66 @@
         "cost": 0.02
       }
     ],
+    "tenure": {
+      "checked_at": "2026-11-21T17:18:06.385Z",
+      "source": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer (Queensland Government, open data), read directly",
+      "authorities": 4,
+      "holders": {
+        "Newmont Landco Pty Ltd": 4
+      },
+      "kinds": {
+        "ML granted": 1,
+        "ML granted (access)": 3
+      },
+      "native_title": {
+        "Granted before 1 January 1994": 2,
+        "Granted before 23 Dec 1996, intermediate period checked": 2
+      },
+      "expired_but_granted": 0,
+      "note": null,
+      "rows": [
+        {
+          "id": "ML 10144",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "Newmont Landco Pty Ltd",
+          "approved": "1993-09-30",
+          "expiry": "2029-09-30",
+          "native_title": "Granted before 1 January 1994",
+          "minerals": "CU,PB,ZN,AG,AU"
+        },
+        {
+          "id": "ML 10148",
+          "kind": "ML granted (access)",
+          "status": "Granted",
+          "holder": "Newmont Landco Pty Ltd",
+          "approved": "1993-07-15",
+          "expiry": "2029-07-31",
+          "native_title": "Granted before 1 January 1994",
+          "minerals": ""
+        },
+        {
+          "id": "ML 10172",
+          "kind": "ML granted (access)",
+          "status": "Granted",
+          "holder": "Newmont Landco Pty Ltd",
+          "approved": "1994-04-14",
+          "expiry": "2029-04-30",
+          "native_title": "Granted before 23 Dec 1996, intermediate period checked",
+          "minerals": "CU,PB,ZN,AG,AU"
+        },
+        {
+          "id": "ML 10173",
+          "kind": "ML granted (access)",
+          "status": "Granted",
+          "holder": "Newmont Landco Pty Ltd",
+          "approved": "1994-04-14",
+          "expiry": "2029-04-30",
+          "native_title": "Granted before 23 Dec 1996, intermediate period checked",
+          "minerals": "CU,PB,ZN,AG,AU"
+        }
+      ]
+    },
     "receipts_tie": {
       "checked": 14,
       "in_paid_answer": 1,
@@ -487,67 +549,7 @@
       "who controls it: Leyshon Resources Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly",
       "who controls it: Mount Isa Mines Ltd could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly"
     ],
-    "miner_conflicts": [],
-    "tenure": {
-      "checked_at": "2026-11-21T17:18:06.385Z",
-      "source": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer (Queensland Government, open data), read directly",
-      "authorities": 4,
-      "holders": {
-        "Newmont Landco Pty Ltd": 4
-      },
-      "kinds": {
-        "ML granted": 1,
-        "ML granted (access)": 3
-      },
-      "native_title": {
-        "Granted before 1 January 1994": 2,
-        "Granted before 23 Dec 1996, intermediate period checked": 2
-      },
-      "expired_but_granted": 0,
-      "note": null,
-      "rows": [
-        {
-          "id": "ML 10144",
-          "kind": "ML granted",
-          "status": "Granted",
-          "holder": "Newmont Landco Pty Ltd",
-          "approved": "1993-09-30",
-          "expiry": "2029-09-30",
-          "native_title": "Granted before 1 January 1994",
-          "minerals": "CU,PB,ZN,AG,AU"
-        },
-        {
-          "id": "ML 10148",
-          "kind": "ML granted (access)",
-          "status": "Granted",
-          "holder": "Newmont Landco Pty Ltd",
-          "approved": "1993-07-15",
-          "expiry": "2029-07-31",
-          "native_title": "Granted before 1 January 1994",
-          "minerals": ""
-        },
-        {
-          "id": "ML 10172",
-          "kind": "ML granted (access)",
-          "status": "Granted",
-          "holder": "Newmont Landco Pty Ltd",
-          "approved": "1994-04-14",
-          "expiry": "2029-04-30",
-          "native_title": "Granted before 23 Dec 1996, intermediate period checked",
-          "minerals": "CU,PB,ZN,AG,AU"
-        },
-        {
-          "id": "ML 10173",
-          "kind": "ML granted (access)",
-          "status": "Granted",
-          "holder": "Newmont Landco Pty Ltd",
-          "approved": "1994-04-14",
-          "expiry": "2029-04-30",
-          "native_title": "Granted before 23 Dec 1996, intermediate period checked",
-          "minerals": "CU,PB,ZN,AG,AU"
-        }
-      ]
-    }
+    "miner_conflicts": []
   },
   "receipts": [
     {
@@ -1330,11 +1332,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T17:18:06.385Z",
+  "rederived_at": "2026-11-21T17:32:37.620Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "5466da617f60c9c0a68519f27d13cd248f505e00a189bf3858dc887203508378",
-    "signature": "RSXGN90W7D848XXJbYOeSF4fJXBOGHueK2rgi3TGbfeMnjDOw7tMLRoLrefoWLh2FAcXl/QQZQAOJkv45ZCMBA==",
+    "sha256": "97ee8da145ffbea86993d42de8d959c14180c8f320c3087c80aec9a1186696d8",
+    "signature": "RIYG1U5vTvEI1soeqpzkNmGf2llHj7pOEcoNK0tT9k6/McJXva85ghmaaLxNehH8t1LBTyoARKY2wCpfSEQODw==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

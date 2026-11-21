@@ -1,0 +1,926 @@
+{
+  "title": "Gold Rush dossier: Golden Plateau",
+  "method": "Telegraph miners asked directly by id; structured rows from goldrush-qld-history's registered endpoint, tied to the paid answer; checks by Takar (lib/dossier.mjs). Figures are never merged or estimated.",
+  "generated_at": "2026-11-21T17:27:16.233Z",
+  "network": "Ethereum Sepolia testnet (test USDC)",
+  "dossier": {
+    "mine": "Golden Plateau",
+    "identity": {
+      "history_site_no": 493636,
+      "survey_site_no": 493636,
+      "same_site": true,
+      "name": "Golden Plateau",
+      "location": "1.59KM NNW OF CRACOW, 173.21KM SE OF GLADSTONE.",
+      "status": "ABANDONED MINE",
+      "nearby_workings": 58,
+      "size_band": "5 - 50 TONNES"
+    },
+    "production": {
+      "gold": [
+        {
+          "t": 25.233,
+          "amount": 25233,
+          "unit": "kg",
+          "from": 1934,
+          "to": 1993,
+          "entity": "Golden Plateau",
+          "scope": "site_total",
+          "source": "MINOCC-2017:Total_Ores_Prod:493636",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 493636",
+          "quote": "Total_Ores_Prod: 25233 KG Au 20792 KG Ag (Ore Amount 2625632 tonnes)"
+        },
+        {
+          "t": 19.081,
+          "amount": 19081,
+          "unit": "kg",
+          "from": 1934,
+          "to": 1976,
+          "entity": "Golden Plateau",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:493636:1",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 493636, row 1",
+          "quote": "Production: 19081 KG GOLD FINE 20792 KG SILVER METAL (Ore Amount 1483900 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 1.143,
+          "amount": 1143,
+          "unit": "kg",
+          "from": 1987,
+          "to": 1988,
+          "entity": "Golden Plateau",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:493636:2",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 493636, row 2",
+          "quote": "Production: 1143 KG GOLD BULLION (Ore Amount 276005 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 1.192,
+          "amount": 1192,
+          "unit": "kg",
+          "from": 1988,
+          "to": 1989,
+          "entity": "Golden Plateau",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:493636:3",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 493636, row 3",
+          "quote": "Production: 1192 KG GOLD BULLION (Ore Amount 285280 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 1.166,
+          "amount": 1166,
+          "unit": "kg",
+          "from": 1989,
+          "to": 1990,
+          "entity": "Golden Plateau",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:493636:4",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 493636, row 4",
+          "quote": "Production: 1166 KG GOLD BULLION (Ore Amount 301747 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 1.371,
+          "amount": 1371,
+          "unit": "kg",
+          "from": 1990,
+          "to": 1991,
+          "entity": "Golden Plateau",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:493636:5",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 493636, row 5",
+          "quote": "Production: 1371 KG GOLD BULLION (Ore Amount 278700 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 0.733,
+          "amount": 733,
+          "unit": "kg",
+          "from": 1991,
+          "to": 1992,
+          "entity": "Golden Plateau",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:493636:6",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 493636, row 6",
+          "quote": "Production: 733 KG GOLD BULLION (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 0.547,
+          "amount": 547,
+          "unit": "kg",
+          "from": 1992,
+          "to": 1993,
+          "entity": "Golden Plateau",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:493636:7",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 493636, row 7",
+          "quote": "Production: 547 KG GOLD BULLION (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+        }
+      ],
+      "sums": [
+        {
+          "register": "MINOCC-2017",
+          "rows": 7,
+          "sum_t": 25.2,
+          "site_total_t": 25.2,
+          "consistent": true,
+          "to": 1993
+        }
+      ],
+      "pairs": [],
+      "cumulative": [],
+      "band": {
+        "band": "medium, 5-50 t",
+        "range_t": [
+          5,
+          50
+        ],
+        "total_t": 25.2,
+        "consistent": true
+      },
+      "band_source": "OathCast (live MINOCC)"
+    },
+    "closures": [
+      {
+        "year": 1993,
+        "sources": [
+          {
+            "source": "MINOCC-2017:MineHist:493636:4",
+            "title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+            "url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+            "quote": "MineHist #4: Start Year 1987, End Year 1993, Open cut mining by Sedimentary Holdings NL and limited underground mining from a decline at the base of the opencut. High costs caused cesation of mining in 1993.",
+            "entity": "Golden Plateau"
+          }
+        ],
+        "reasons": [],
+        "status": "single source",
+        "reason": "no source states a reason"
+      }
+    ],
+    "years_worked": [
+      {
+        "periods": [
+          {
+            "seq": 3,
+            "start_year": 1932,
+            "end_year": 1976,
+            "comment": "Initial period of undeground mining from an extensive network of shafts and adits over eight levels.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 4,
+            "start_year": 1987,
+            "end_year": 1993,
+            "comment": "Open cut mining by Sedimentary Holdings NL and limited underground mining from a decline at the base of the opencut. High costs caused cesation of mining in 1993.",
+            "mine_life_flag": null
+          }
+        ],
+        "entity": "Golden Plateau",
+        "source_ref": "MINOCC-2017:MineHist:493636",
+        "source_table": "MineHist",
+        "record_id": "SITE_NO 493636",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "MineHist: #3: 1932-1976 Initial period of undeground mining from an extensive network of shafts and adits over eight levels. | #4: 1987-1993 Open cut mining by Sedimentary Holdings NL and limited underground mining from a decline at the base of the opencut. High costs caused cesation of mining in 1993."
+      }
+    ],
+    "ownership": [
+      {
+        "owner": "Lion Mining Pty Ltd",
+        "role": "principal holder of mining lease 3219, mining lease 3221, mining lease 3223, mining lease 3224, mining lease 3227, mining lease 3228, mining lease 3230, mining lease 3232, mining lease 3234, mining lease 80024 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
+        "from": null,
+        "to": null,
+        "entity": "Golden Plateau",
+        "source": "MINOCC-2017:Tenure:493636",
+        "quote": "Tenure: Principal Holder Name LION MINING PTY LTD; MINING LEASE 3219, MINING LEASE 3221, MINING LEASE 3223, MINING LEASE 3224, MINING LEASE 3227, MINING LEASE 3228, MINING LEASE 3230, MINING LEASE 3232, MINING LEASE 3234, MINING LEASE 80024"
+      },
+      {
+        "owner": "Aeris Resources Limited",
+        "role": "company listed by Geoscience Australia (status: historic mine)",
+        "from": null,
+        "to": null,
+        "entity": "Golden Plateau",
+        "source": "GA-MINERALDEPOSITS-335572",
+        "quote": "COMPANIES: Aeris Resources Limited"
+      }
+    ],
+    "references": [],
+    "gold_price": {
+      "year": 1993,
+      "then": "US$329 per ounce (Gold, monthly average per troy ounce (World Bank Pink Sheet, nominal US dollars) from 1960)",
+      "now": "US$4105 per ounce in October 2026 (Gold, monthly average per troy ounce (World Bank Pink Sheet, nominal US dollars) from 1960), single source",
+      "ratio": 12.5,
+      "real": {
+        "cpi_then": 144.46,
+        "cpi_now": 337.511,
+        "inflation": 2.34,
+        "real_ratio": 5.34
+      },
+      "cpi_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS",
+      "note": "Nominal dollars, not adjusted for inflation; the closure-year figure may be an official price rather than a market one (see its text).",
+      "receipt": {
+        "miner": "Gold Rush Queensland Mine History",
+        "id": "7310050",
+        "intent": "RESEARCH_QUERY_GENERAL",
+        "signal": "0x684c981bfbc90ec42827e1ff17e054a756d56447430c0bf107648b68f0ae2c51",
+        "cost": 0.01,
+        "shape": "intent"
+      }
+    },
+    "control": [
+      {
+        "company": "Lion Mining Pty Ltd",
+        "verdict": "insufficient",
+        "active": null,
+        "legal_name": null,
+        "registration_id": null,
+        "other_differences": [],
+        "why": "fewer than two usable answers",
+        "miners": [],
+        "signals": [],
+        "cost": 0.01
+      },
+      {
+        "company": "Aeris Resources Limited",
+        "verdict": "agree",
+        "active": true,
+        "legal_name": "Aeris Resources Limited",
+        "registration_id": null,
+        "other_differences": [
+          "registered_address"
+        ],
+        "why": null,
+        "miners": [
+          "20260828",
+          "6110114"
+        ],
+        "signals": [
+          "0x342edee32f72dd87050357d98e67b6c4edfcb11cf6e01debb045ea34459f0701",
+          "0xbd20ebc3777f581a2160a858a39897d8b28c2c4e731be0e26a590822375e4564"
+        ],
+        "cost": 0.02
+      }
+    ],
+    "closure_research": [
+      {
+        "year": 1993,
+        "status": "single source",
+        "shared": [],
+        "answers": [
+          {
+            "miner": "TxLens",
+            "causes": [
+              "price, cost or capital"
+            ],
+            "quote": "The Golden Plateau gold mine in Queensland ceased operations in 1993 because the ore grades had fallen to levels that made extraction economically unviable. By the early 1990s, the mine’s production costs exceeded the revenue from the gold it could recover, prompting the company to shut down the ope",
+            "signal": "0x288c077183769fc8386fa9dce2ca63b9cd9f4988b3791c413ee5d0748f38e819"
+          }
+        ],
+        "cost": 0.02
+      }
+    ],
+    "tenure": {
+      "checked_at": "2026-11-21T17:29:37.389Z",
+      "source": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer (Queensland Government, open data), read directly",
+      "authorities": 6,
+      "holders": {
+        "LION MINING PTY LTD": 6
+      },
+      "kinds": {
+        "EPM granted": 1,
+        "ML granted": 5
+      },
+      "native_title": {
+        "Private ILUA": 2,
+        "New private ILUA": 3,
+        "Granted before 1 January 1994": 1
+      },
+      "expired_but_granted": 1,
+      "note": "1 authorities show an expiry date in the past with status \"Granted\": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.",
+      "rows": [
+        {
+          "id": "EPM 15981",
+          "kind": "EPM granted",
+          "status": "Granted",
+          "holder": "LION MINING PTY LTD",
+          "approved": "2007-02-26",
+          "expiry": "2027-02-25",
+          "native_title": "Private ILUA",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "ML 3230",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "LION MINING PTY LTD",
+          "approved": "1986-07-10",
+          "expiry": "2028-07-31",
+          "native_title": "New private ILUA",
+          "minerals": "CU,PB,ZN,AG,AU"
+        },
+        {
+          "id": "ML 3221",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "LION MINING PTY LTD",
+          "approved": "1981-03-19",
+          "expiry": "2035-07-31",
+          "native_title": "Granted before 1 January 1994",
+          "minerals": "AG,AU"
+        },
+        {
+          "id": "ML 3227",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "LION MINING PTY LTD",
+          "approved": "1986-06-05",
+          "expiry": "2028-06-30",
+          "native_title": "New private ILUA",
+          "minerals": "CU,PB,ZN,AG,AU"
+        },
+        {
+          "id": "ML 3228",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "LION MINING PTY LTD",
+          "approved": "1986-07-10",
+          "expiry": "2028-07-31",
+          "native_title": "New private ILUA",
+          "minerals": "CU,PB,ZN,AG,AU"
+        },
+        {
+          "id": "ML 3243",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "LION MINING PTY LTD",
+          "approved": "1989-04-20",
+          "expiry": "2025-04-30",
+          "native_title": "Private ILUA",
+          "minerals": ""
+        }
+      ]
+    },
+    "receipts_tie": {
+      "checked": 8,
+      "in_paid_answer": 0,
+      "rows": [
+        {
+          "source": "MINOCC-2017:Total_Ores_Prod:493636",
+          "amount": 25233,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:493636:1",
+          "amount": 19081,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:493636:2",
+          "amount": 1143,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:493636:3",
+          "amount": 1192,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:493636:4",
+          "amount": 1166,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:493636:5",
+          "amount": 1371,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:493636:6",
+          "amount": 733,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:493636:7",
+          "amount": 547,
+          "unit": "kg",
+          "in_paid_answer": false
+        }
+      ]
+    },
+    "open_questions": [
+      "closure reason: the indexed sources give a closure year but quote no reason",
+      "why it stopped in 1993: no source quotes a reason; do not assume exhaustion",
+      "production rests on one register (MINOCC-2017); no second source to check it against",
+      "tenure: 1 authorities show an expiry date in the past with status \"Granted\": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.",
+      "who controls it: Lion Mining Pty Ltd could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly"
+    ],
+    "miner_conflicts": []
+  },
+  "receipts": [
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0x4a4558ff02cc85ab19c1d75c138520b7ea2f323aa25f21db4f4ab8a6a1154902",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#13 of 30"
+    },
+    {
+      "miner": "OathCast Queensland Gold Mines",
+      "id": "64176",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0x5a171f81bcc500e07b50cf8898121352571d25e63c1363ef6b558dd1018bd3fc",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#15 of 30"
+    },
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0x684c981bfbc90ec42827e1ff17e054a756d56447430c0bf107648b68f0ae2c51",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#13 of 30"
+    },
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0xdfc80a75aeb8d7b933d50e7d7d319869e01df4cc87f0111f60465fdf45591b5e",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#13 of 30"
+    },
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0xdfc80a75aeb8d7b933d50e7d7d319869e01df4cc87f0111f60465fdf45591b5e",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": null,
+      "shared": "latest gold price, bought once for this run"
+    }
+  ],
+  "paid_answers": {
+    "history": {
+      "answer": null,
+      "source_count": 3,
+      "sources": null,
+      "brief": "Golden Plateau: gold 25,233 kg (+7 more)"
+    },
+    "survey": {
+      "answer": "Golden Plateau (Geological Survey of Queensland site 493636) is recorded as an abandoned mine on the Cracow 1:100,000 sheet (1.59km nnw of cracow, 173.21km se of gladstone.), at -25.2837, 150.2920, located to within 100 m. The survey classes its gold as medium, 5-50 t, and also records silver (small). Within 5 km it records 58 other historical workings, 58 of them with gold; other commodities nearby: copper, silver. The record gives a size band, not production figures, and holds no owners or closure dates.",
+      "source_count": 2,
+      "sources": [
+        "Geological Survey of Queensland, MINOCC historical workings (CC BY 4.0, State of Queensland), site 493636: https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D493636&outFields=%2A&f=json",
+        "https://geoscience.data.qld.gov.au/dataset/ds000004"
+      ],
+      "brief": "Golden Plateau: abandoned mine, gold medium"
+    }
+  },
+  "structured_record": {
+    "answer": "Golden Plateau (GSQ site 493636, 1.59km nnw of cracow, 173.21km se of gladstone) is recorded by the Geological Survey of Queensland as abandoned mine, gold size band medium, 5 - 50 t. Reported production: 25,233 kg gold, about 811,260 oz troy (converted here; the survey records 25,233 kg) (1934 to 1993, Golden Plateau, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 493636)); 20,792 kg silver (1934 to 1993, Golden Plateau, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 493636)); 2,625,632 tonnes ore (1934 to 1993, Golden Plateau, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 493636)). GSQ MINOCC 2017 also lists 7 dated Production rows (gold: 19,081 kg 1934 to 1976; 1,143 kg 1987 to 1988; 1,192 kg 1988 to 1989; 1,166 kg 1989 to 1990; 1,371 kg 1990 to 1991; 733 kg 1991 to 1992; 547 kg 1992 to 1993); see production. Closure: 1993 (no reason quoted) [Golden Plateau, unknown, per GSQ MINOCC 2017 (MineHist, SITE_NO 493636, row 4)]. Years worked per GSQ MINOCC 2017 (MineHist, SITE_NO 493636): 1932-1976, 1987-1993. Ownership and tenure: Lion Mining Pty Ltd per GSQ MINOCC 2017 (Tenure, SITE_NO 493636); Aeris Resources Limited per GA-MINERALDEPOSITS-335572. Not found: closure reason: the indexed sources give a closure year but quote no reason.",
+    "source_count": 3,
+    "sources": [
+      "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D493636&outFields=%2A&f=json",
+      "https://geoscience.data.qld.gov.au/dataset/ds000004",
+      "https://services.ga.gov.au/gis/earthresource/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=ama%3AMineralDeposits&outputFormat=application%2Fjson&cql_filter=ENO%3D335572"
+    ],
+    "brief": "Golden Plateau: gold 25,233 kg (+7 more)",
+    "site_no": 493636,
+    "site_name": "Golden Plateau",
+    "matched_by": "name",
+    "gsq_record": {
+      "source_ref": "GSQ-MINOCC",
+      "source_url": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D493636&outFields=%2A&f=json",
+      "mine_status": "ABANDONED MINE",
+      "size_band": "MEDIUM",
+      "size_definition": "5 - 50 TONNES",
+      "latitude": -25.28367,
+      "longitude": 150.292045,
+      "location_accuracy_m": 100,
+      "locality": "1.59KM NNW OF CRACOW, 173.21KM SE OF GLADSTONE.",
+      "map_sheet_100k": "CRACOW",
+      "commodities": "Au(m);Ag(s)",
+      "record_current_to": "2013-02-28"
+    },
+    "production": [
+      {
+        "commodity": "gold",
+        "amount": 25233,
+        "unit": "kg",
+        "period_from": 1934,
+        "period_to": 1993,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Golden Plateau",
+        "scope": "site_total",
+        "commodity_code": "AU",
+        "ore_class": "ore (hard rock, dumps, tailings and other)",
+        "converted": {
+          "amount": 811260,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 25233 kg"
+        },
+        "source_ref": "MINOCC-2017:Total_Ores_Prod:493636",
+        "source_table": "Total_Ores_Prod",
+        "record_id": "SITE_NO 493636",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Total_Ores_Prod: 25233 KG Au 20792 KG Ag (Ore Amount 2625632 tonnes)"
+      },
+      {
+        "commodity": "silver",
+        "amount": 20792,
+        "unit": "kg",
+        "period_from": 1934,
+        "period_to": 1993,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Golden Plateau",
+        "scope": "site_total",
+        "commodity_code": "AG",
+        "ore_class": "ore (hard rock, dumps, tailings and other)",
+        "source_ref": "MINOCC-2017:Total_Ores_Prod:493636",
+        "source_table": "Total_Ores_Prod",
+        "record_id": "SITE_NO 493636",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Total_Ores_Prod: 25233 KG Au 20792 KG Ag (Ore Amount 2625632 tonnes)"
+      },
+      {
+        "commodity": "ore",
+        "amount": 2625632,
+        "unit": "t",
+        "period_from": 1934,
+        "period_to": 1993,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Golden Plateau",
+        "scope": "site_total",
+        "commodity_code": "ORE",
+        "ore_class": "ore (hard rock, dumps, tailings and other)",
+        "source_ref": "MINOCC-2017:Total_Ores_Prod:493636",
+        "source_table": "Total_Ores_Prod",
+        "record_id": "SITE_NO 493636",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Total_Ores_Prod: 25233 KG Au 20792 KG Ag (Ore Amount 2625632 tonnes)"
+      },
+      {
+        "commodity": "gold",
+        "amount": 19081,
+        "unit": "kg",
+        "period_from": 1934,
+        "period_to": 1976,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Golden Plateau",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "1483900 T",
+        "converted": {
+          "amount": 613468,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 19081 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:493636:1",
+        "source_table": "Production",
+        "record_id": "SITE_NO 493636, row 1",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 19081 KG GOLD FINE 20792 KG SILVER METAL (Ore Amount 1483900 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "silver",
+        "amount": 20792,
+        "unit": "kg",
+        "period_from": 1934,
+        "period_to": 1976,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Golden Plateau",
+        "scope": "period",
+        "form": "metal",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "1483900 T",
+        "source_ref": "MINOCC-2017:Production:493636:1",
+        "source_table": "Production",
+        "record_id": "SITE_NO 493636, row 1",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 19081 KG GOLD FINE 20792 KG SILVER METAL (Ore Amount 1483900 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 1143,
+        "unit": "kg",
+        "period_from": 1987,
+        "period_to": 1988,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Golden Plateau",
+        "scope": "period",
+        "form": "bullion",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "276005 T",
+        "converted": {
+          "amount": 36748,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 1143 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:493636:2",
+        "source_table": "Production",
+        "record_id": "SITE_NO 493636, row 2",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 1143 KG GOLD BULLION (Ore Amount 276005 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 1192,
+        "unit": "kg",
+        "period_from": 1988,
+        "period_to": 1989,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Golden Plateau",
+        "scope": "period",
+        "form": "bullion",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "285280 T",
+        "converted": {
+          "amount": 38324,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 1192 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:493636:3",
+        "source_table": "Production",
+        "record_id": "SITE_NO 493636, row 3",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 1192 KG GOLD BULLION (Ore Amount 285280 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 1166,
+        "unit": "kg",
+        "period_from": 1989,
+        "period_to": 1990,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Golden Plateau",
+        "scope": "period",
+        "form": "bullion",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "301747 T",
+        "converted": {
+          "amount": 37488,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 1166 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:493636:4",
+        "source_table": "Production",
+        "record_id": "SITE_NO 493636, row 4",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 1166 KG GOLD BULLION (Ore Amount 301747 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 1371,
+        "unit": "kg",
+        "period_from": 1990,
+        "period_to": 1991,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Golden Plateau",
+        "scope": "period",
+        "form": "bullion",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "278700 T",
+        "converted": {
+          "amount": 44079,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 1371 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:493636:5",
+        "source_table": "Production",
+        "record_id": "SITE_NO 493636, row 5",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 1371 KG GOLD BULLION (Ore Amount 278700 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 733,
+        "unit": "kg",
+        "period_from": 1991,
+        "period_to": 1992,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Golden Plateau",
+        "scope": "period",
+        "form": "bullion",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "T",
+        "converted": {
+          "amount": 23566,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 733 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:493636:6",
+        "source_table": "Production",
+        "record_id": "SITE_NO 493636, row 6",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 733 KG GOLD BULLION (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 547,
+        "unit": "kg",
+        "period_from": 1992,
+        "period_to": 1993,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Golden Plateau",
+        "scope": "period",
+        "form": "bullion",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "T",
+        "converted": {
+          "amount": 17586,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 547 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:493636:7",
+        "source_table": "Production",
+        "record_id": "SITE_NO 493636, row 7",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 547 KG GOLD BULLION (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+      }
+    ],
+    "closure": [
+      {
+        "year": 1993,
+        "reason_text": null,
+        "reason_class": "unknown",
+        "entity": "Golden Plateau",
+        "scope": "site",
+        "source_ref": "MINOCC-2017:MineHist:493636:4",
+        "source_table": "MineHist",
+        "record_id": "SITE_NO 493636, row 4",
+        "basis_note": "latest End Year recorded in the MineHist table (end of the last recorded period of working)",
+        "page": null,
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "MineHist #4: Start Year 1987, End Year 1993, Open cut mining by Sedimentary Holdings NL and limited underground mining from a decline at the base of the opencut. High costs caused cesation of mining in 1993."
+      }
+    ],
+    "years_worked": [
+      {
+        "periods": [
+          {
+            "seq": 3,
+            "start_year": 1932,
+            "end_year": 1976,
+            "comment": "Initial period of undeground mining from an extensive network of shafts and adits over eight levels.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 4,
+            "start_year": 1987,
+            "end_year": 1993,
+            "comment": "Open cut mining by Sedimentary Holdings NL and limited underground mining from a decline at the base of the opencut. High costs caused cesation of mining in 1993.",
+            "mine_life_flag": null
+          }
+        ],
+        "entity": "Golden Plateau",
+        "source_ref": "MINOCC-2017:MineHist:493636",
+        "source_table": "MineHist",
+        "record_id": "SITE_NO 493636",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "MineHist: #3: 1932-1976 Initial period of undeground mining from an extensive network of shafts and adits over eight levels. | #4: 1987-1993 Open cut mining by Sedimentary Holdings NL and limited underground mining from a decline at the base of the opencut. High costs caused cesation of mining in 1993."
+      }
+    ],
+    "ownership": [
+      {
+        "owner": "Lion Mining Pty Ltd",
+        "role": "principal holder of mining lease 3219, mining lease 3221, mining lease 3223, mining lease 3224, mining lease 3227, mining lease 3228, mining lease 3230, mining lease 3232, mining lease 3234, mining lease 80024 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
+        "period_from": null,
+        "period_to": null,
+        "entity": "Golden Plateau",
+        "source_ref": "MINOCC-2017:Tenure:493636",
+        "source_table": "Tenure",
+        "record_id": "SITE_NO 493636",
+        "tenures": [
+          {
+            "type": "MINING LEASE",
+            "number": 3219
+          },
+          {
+            "type": "MINING LEASE",
+            "number": 3221
+          },
+          {
+            "type": "MINING LEASE",
+            "number": 3223
+          },
+          {
+            "type": "MINING LEASE",
+            "number": 3224
+          },
+          {
+            "type": "MINING LEASE",
+            "number": 3227
+          },
+          {
+            "type": "MINING LEASE",
+            "number": 3228
+          },
+          {
+            "type": "MINING LEASE",
+            "number": 3230
+          },
+          {
+            "type": "MINING LEASE",
+            "number": 3232
+          },
+          {
+            "type": "MINING LEASE",
+            "number": 3234
+          },
+          {
+            "type": "MINING LEASE",
+            "number": 80024
+          }
+        ],
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Tenure: Principal Holder Name LION MINING PTY LTD; MINING LEASE 3219, MINING LEASE 3221, MINING LEASE 3223, MINING LEASE 3224, MINING LEASE 3227, MINING LEASE 3228, MINING LEASE 3230, MINING LEASE 3232, MINING LEASE 3234, MINING LEASE 80024"
+      },
+      {
+        "owner": "Aeris Resources Limited",
+        "role": "company listed by Geoscience Australia (status: historic mine)",
+        "period_from": null,
+        "period_to": null,
+        "entity": "Golden Plateau",
+        "source_ref": "GA-MINERALDEPOSITS-335572",
+        "source_title": "Geoscience Australia Mineral Deposits and Mineral Resources WFS (ama:MineralDeposits), Queensland gold",
+        "source_url": "https://services.ga.gov.au/gis/earthresource/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=ama%3AMineralDeposits&outputFormat=application%2Fjson&cql_filter=ENO%3D335572",
+        "quote": "COMPANIES: Aeris Resources Limited",
+        "link_basis": "GA deposit with the same name within 5 km of the GSQ site"
+      }
+    ],
+    "references": [],
+    "conflicts": [],
+    "not_found": [
+      "closure reason: the indexed sources give a closure year but quote no reason"
+    ],
+    "other_sites_with_same_name": [],
+    "dataset": {
+      "gsq_minocc_fetched": "2026-11-20",
+      "index_built": "2026-11-20",
+      "minocc_2017": {
+        "title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "licence": "CC BY 4.0 (as listed on the GSQ Open Data Portal / data.qld.gov.au dataset listing); (c) State of Queensland (Department of Natural Resources and Mines). The download's own PDFs state no licence."
+      },
+      "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
+    }
+  },
+  "rederived_at": "2026-11-21T17:32:37.627Z",
+  "attestation": {
+    "algorithm": "ed25519",
+    "sha256": "d737ccb560b17c33c5edff644e7fdd1bdb850a719da5c97e7d58668c7c0b33f2",
+    "signature": "qvOPSw3DLivAyXEvZoKcrsaZqqgHf/KnyLe1hC/qxBlN+TdmMYYzRCJNk1YGTI9WSWb5rIPbMcnd8OPuaUZPAw==",
+    "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+  }
+}

@@ -5,7 +5,8 @@ Built by Takar from Telegraph miners on 2026-11-21T16:14:19.801Z. Every finding 
 ## Identity
 
 - GSQ site 38940 (goldrush-qld-history) and 38940 (OathCast, live MINOCC): **same site**.
-- ABANDONED MINE, 23.8KM SOUTH OF CHARTERS TOWERS.
+- ABANDONED MINE, 23.8KM SOUTH OF CHARTERS TOWERS; gold size band 50 - 150 TONNES.
+- 30 other historical workings within 5 km (OathCast).
 
 ## Gold production
 

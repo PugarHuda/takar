@@ -1,0 +1,895 @@
+{
+  "title": "Gold Rush dossier: Kidston",
+  "method": "Telegraph miners asked directly by id; structured rows from goldrush-qld-history's registered endpoint, tied to the paid answer; checks by Takar (lib/dossier.mjs). Figures are never merged or estimated.",
+  "generated_at": "2026-11-21T17:27:16.233Z",
+  "network": "Ethereum Sepolia testnet (test USDC)",
+  "dossier": {
+    "mine": "Kidston",
+    "identity": {
+      "history_site_no": 479629,
+      "survey_site_no": 479629,
+      "same_site": true,
+      "name": "Kidston",
+      "location": "40.7 KM SOUTH OF EINASLEIGH, 255KM SW OF CAIRNS.",
+      "status": "ABANDONED MINE",
+      "nearby_workings": 2,
+      "size_band": "50 - 150 TONNES"
+    },
+    "production": {
+      "gold": [
+        {
+          "t": 113.8045,
+          "amount": 113804.5,
+          "unit": "kg",
+          "from": 1915,
+          "to": 2002,
+          "entity": "Kidston",
+          "scope": "site_total",
+          "source": "MINOCC-2017:Total_Ores_Prod:479629",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 479629",
+          "quote": "Total_Ores_Prod: 113804.5 KG Au 60887.3 KG Ag (Ore Amount 32661055 tonnes)"
+        },
+        {
+          "t": 1.309,
+          "amount": 1309,
+          "unit": "kg",
+          "from": 1915,
+          "to": 1924,
+          "entity": "Kidston",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:479629:1",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 479629, row 1",
+          "quote": "Production: 1309 KG GOLD BULLION 6.5 G/T (Ore Amount 200945 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 66.333,
+          "amount": 66333,
+          "unit": "kg",
+          "from": 1985,
+          "to": 1994,
+          "entity": "Kidston",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:479629:2",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 479629, row 2",
+          "quote": "Production: 66333 KG GOLD FINE 36340 KG SILVER FINE (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 30.589000000000002,
+          "amount": 30589,
+          "unit": "kg",
+          "from": 1994,
+          "to": 1999,
+          "entity": "Kidston",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:479629:3",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 479629, row 3",
+          "quote": "Production: 30589 KG GOLD FINE 0.94 G/T 16730 KG SILVER FINE 0.51 G/T (Ore Amount 32460110 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 14.8654,
+          "amount": 14865.4,
+          "unit": "kg",
+          "from": 1999,
+          "to": 2001,
+          "entity": "Kidston",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:479629:4",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 479629, row 4",
+          "quote": "Production: 14865.4 KG GOLD FINE 7417.3 KG SILVER FINE (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 0.7081000000000001,
+          "amount": 708.1,
+          "unit": "kg",
+          "from": 2001,
+          "to": 2002,
+          "entity": "Kidston",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:479629:5",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 479629, row 5",
+          "quote": "Production: 708.1 KG GOLD FINE 400 KG SILVER FINE (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+        }
+      ],
+      "sums": [
+        {
+          "register": "MINOCC-2017",
+          "rows": 5,
+          "sum_t": 113.8,
+          "site_total_t": 113.8,
+          "consistent": true,
+          "to": 2002
+        }
+      ],
+      "pairs": [],
+      "cumulative": [],
+      "band": {
+        "band": "large, 50-150 t",
+        "range_t": [
+          50,
+          150
+        ],
+        "total_t": 113.8,
+        "consistent": true
+      },
+      "band_source": "OathCast (live MINOCC)"
+    },
+    "closures": [
+      {
+        "year": 2001,
+        "sources": [
+          {
+            "source": "MINOCC-2017:MineHist:479629:3",
+            "title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+            "url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+            "quote": "MineHist #3: Start Year 1994, End Year 2001, Eldridge (Kidston) gold deposit was discovered in 1993 and mining commenced in 1994. Additional resources discovered in 1996. Mining ceased in March 2001 and the mine closed in July 2001.",
+            "entity": "Kidston"
+          }
+        ],
+        "reasons": [],
+        "status": "single source",
+        "reason": "no source states a reason"
+      }
+    ],
+    "years_worked": [
+      {
+        "periods": [
+          {
+            "seq": 1,
+            "start_year": 1915,
+            "end_year": 1924,
+            "comment": "Three sizeable pits were bulk mined in the south-west portion of the orebody at Wise's Hill.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 3,
+            "start_year": 1994,
+            "end_year": 2001,
+            "comment": "Eldridge (Kidston) gold deposit was discovered in 1993 and mining commenced in 1994. Additional resources discovered in 1996. Mining ceased in March 2001 and the mine closed in July 2001.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 4,
+            "start_year": 1924,
+            "end_year": 1948,
+            "comment": "Intermitant small scale mining with last stamper battery closing in 1948.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 5,
+            "start_year": 1950,
+            "end_year": 1963,
+            "comment": "Minor production from reprocessing of tailings and alluvial operations.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 6,
+            "start_year": 1985,
+            "end_year": 1994,
+            "comment": "Mined by Kidston Gold Mines Ltd via initial treatment of tailings and then Wise's Hill pit. Operations in Wise's Hill pit ceased in 1994 after which it was used for tailings disposal.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 8,
+            "start_year": 1907,
+            "end_year": 1910,
+            "comment": "Gold discovered in late 1907 causing the last major gold rush in Queensland. Alluvial gold was detected in the area in the 1880's.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 9,
+            "start_year": 1967,
+            "end_year": 1973,
+            "comment": "Kidston Gold Mines Ltd was formed as a private gold mining concern in which Placer held a major interest. Placer acquired full ownership of Kidston Gold Mines Ltd in 1973.",
+            "mine_life_flag": null
+          }
+        ],
+        "entity": "Kidston",
+        "source_ref": "MINOCC-2017:MineHist:479629",
+        "source_table": "MineHist",
+        "record_id": "SITE_NO 479629",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "MineHist: #1: 1915-1924 Three sizeable pits were bulk mined in the south-west portion of the orebody at Wise's Hill. | #3: 1994-2001 Eldridge (Kidston) gold deposit was discovered in 1993 and mining commenced in 1994. Additional resources discovered in 1996. Mining ceased in March 2001 and the mine closed in July 2001. | #4: 1924-1948 Intermitant small scale mining with last stamper battery closing in 1948. | #5: 1950-1963 Minor production from reprocessing of tailings and alluvial operations. | #6: 1985-1994 Mined by Kidston Gold Mines Ltd via initial treatment of tailings and then Wise's Hill pit. Operations in Wise's Hill pit ceased in 1994 after which it was used for tailings disposal. | #8: 1907-1910 Gold discovered in late 1907 causing the last major gold rush in Queensland. Alluvial gold was detected in the area in the 1880's. | #9: 1967-1973 Kidston Gold Mines Ltd was formed as a private gold mining concern in which Placer held a major interest. Placer acquired full ownership of Kidston Gold Mines Ltd in 1973."
+      }
+    ],
+    "ownership": [
+      {
+        "owner": "Kidston Gold Mines Limited",
+        "role": "principal holder of mining lease 3347 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
+        "from": null,
+        "to": null,
+        "entity": "Kidston",
+        "source": "MINOCC-2017:Tenure:479629",
+        "quote": "Tenure: Principal Holder Name KIDSTON GOLD MINES LIMITED; MINING LEASE 3347"
+      }
+    ],
+    "references": [
+      {
+        "cr_numbers": [
+          70,
+          1022,
+          1852,
+          1999,
+          2146,
+          2254,
+          2255,
+          7003,
+          8196,
+          8772,
+          9282,
+          9854,
+          9855,
+          10547,
+          11381,
+          11382,
+          12820
+        ],
+        "source_ref": "MINOCC-2017:Company reports:479629",
+        "source_table": "Company reports",
+        "record_id": "SITE_NO 479629",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Company reports: CR 70, CR 1022, CR 1852, CR 1999, CR 2146, CR 2254, CR 2255, CR 7003, CR 8196, CR 8772, CR 9282, CR 9854, CR 9855, CR 10547, CR 11381, CR 11382, CR 12820"
+      }
+    ],
+    "gold_price": {
+      "year": 2001,
+      "then": "not found",
+      "now": "US$4105 per ounce in October 2026 (Gold, monthly average per troy ounce (World Bank Pink Sheet, nominal US dollars) from 1960), single source",
+      "ratio": null,
+      "real": null,
+      "cpi_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS",
+      "note": "Nominal dollars, not adjusted for inflation; the closure-year figure may be an official price rather than a market one (see its text).",
+      "receipt": {
+        "miner": "Gold Rush Queensland Mine History",
+        "id": "7310050",
+        "intent": "RESEARCH_QUERY_GENERAL",
+        "signal": "0x369a9155058f07d80876a493122a4a1f625483c9f417c94d3ee736b9270798e4",
+        "cost": 0.01,
+        "shape": "intent"
+      }
+    },
+    "control": [
+      {
+        "company": "Kidston Gold Mines Limited",
+        "verdict": "insufficient",
+        "active": null,
+        "legal_name": null,
+        "registration_id": null,
+        "other_differences": [],
+        "why": "fewer than two usable answers",
+        "miners": [],
+        "signals": [],
+        "cost": 0.01
+      }
+    ],
+    "closure_research": [
+      {
+        "year": 2001,
+        "status": "single source",
+        "shared": [],
+        "answers": [
+          {
+            "miner": "TxLens",
+            "causes": [
+              "ore exhausted",
+              "price, cost or capital"
+            ],
+            "quote": "The Kidston gold mine in Queensland ceased operations in 2001 because the economically recoverable ore body was exhausted and falling gold prices made further mining unprofitable. After more than a decade of production, the mine’s reserves could no longer support viable extraction, leading to its sh",
+            "signal": "0xe585896502b141d63ddd8a2d8e5eb8c1cc2673e976b84c781cd6ef46545957a6"
+          }
+        ],
+        "cost": 0.02
+      }
+    ],
+    "tenure": {
+      "checked_at": "2026-11-21T17:28:29.511Z",
+      "source": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer (Queensland Government, open data), read directly",
+      "authorities": 2,
+      "holders": {
+        "JUBILEE METALS LIMITED": 1,
+        "Kidston Gold Mines Pty Ltd": 1
+      },
+      "kinds": {
+        "EPM granted": 1,
+        "ML granted": 1
+      },
+      "native_title": {
+        "Granted with Native Title Protection Conditions": 1,
+        "Granted before 1 January 1994": 1
+      },
+      "expired_but_granted": 0,
+      "note": null,
+      "rows": [
+        {
+          "id": "EPM 27579",
+          "kind": "EPM granted",
+          "status": "Granted",
+          "holder": "JUBILEE METALS LIMITED",
+          "approved": "2021-02-04",
+          "expiry": "2031-02-03",
+          "native_title": "Granted with Native Title Protection Conditions",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "ML 3347",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "Kidston Gold Mines Pty Ltd",
+          "approved": "1983-06-09",
+          "expiry": "2031-06-30",
+          "native_title": "Granted before 1 January 1994",
+          "minerals": "CU,FE,MO,PB,SN,W,ZN,LS,RC,S,AG,AU"
+        }
+      ]
+    },
+    "receipts_tie": {
+      "checked": 6,
+      "in_paid_answer": 1,
+      "rows": [
+        {
+          "source": "MINOCC-2017:Total_Ores_Prod:479629",
+          "amount": 113804.5,
+          "unit": "kg",
+          "in_paid_answer": true
+        },
+        {
+          "source": "MINOCC-2017:Production:479629:1",
+          "amount": 1309,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:479629:2",
+          "amount": 66333,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:479629:3",
+          "amount": 30589,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:479629:4",
+          "amount": 14865.4,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:479629:5",
+          "amount": 708.1,
+          "unit": "kg",
+          "in_paid_answer": false
+        }
+      ]
+    },
+    "open_questions": [
+      "closure reason: the indexed sources give a closure year but quote no reason",
+      "why it stopped in 2001: no source quotes a reason; do not assume exhaustion",
+      "production rests on one register (MINOCC-2017); no second source to check it against",
+      "who controls it: Kidston Gold Mines Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly"
+    ],
+    "miner_conflicts": []
+  },
+  "receipts": [
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0x07e1ccd17fc5acde2af35cdfab71127264e20a16b55fde217c8f27e079bfcdea",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#13 of 30"
+    },
+    {
+      "miner": "OathCast Queensland Gold Mines",
+      "id": "64176",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0x27cd2506e9cc1e333b241f6973442d89b38ca58e73c74d4ae885189ff7be8e82",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#15 of 30"
+    },
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0x369a9155058f07d80876a493122a4a1f625483c9f417c94d3ee736b9270798e4",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#13 of 30"
+    },
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0xdfc80a75aeb8d7b933d50e7d7d319869e01df4cc87f0111f60465fdf45591b5e",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#13 of 30"
+    }
+  ],
+  "paid_answers": {
+    "history": {
+      "answer": "Kidston (GSQ site 479629, 40.7 km south of einasleigh, 255km sw of cairns) is recorded by the Geological Survey of Queensland as an abandoned mine with a large gold size band of 50 - 150 t. Reported production includes 113,804.5 kg gold, about 3.66 Moz troy, 60,887.3 kg silver, and 32,661,055 tonnes of ore from 1915 to 2002. The mine operated in several periods: 1915-1924, 1924-1948, 1950-1963, 1967-1973, 1985-1994, 1994-2001, and 1907-1910. Closure occurred in 2001 with no reason quoted. Ownership and tenure were held by Kidston Gold Mines Limited.",
+      "source_count": 2,
+      "sources": [
+        "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D479629&outFields=%2A&f=json",
+        "https://geoscience.data.qld.gov.au/dataset/ds000004"
+      ],
+      "brief": "Kidston: gold 113,804.5 kg (+5 more)"
+    },
+    "survey": {
+      "answer": "Kidston (Geological Survey of Queensland site 479629) is recorded as an abandoned mine on the Einasleigh 1:100,000 sheet (40.7 km south of einasleigh, 255km sw of cairns.), at -18.8751, 144.1519, located to within 100 m. The survey classes its gold as large, 50-150 t, and also records silver (small), copper (very small), zinc (very small), lead (very small). Within 5 km it records 2 other historical workings, 2 of them with gold; other commodities nearby: copper, lead, silver, zinc. The record gives a size band, not production figures, and holds no owners or closure dates.",
+      "source_count": 2,
+      "sources": [
+        "Geological Survey of Queensland, MINOCC historical workings (CC BY 4.0, State of Queensland), site 479629: https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D479629&outFields=%2A&f=json",
+        "https://geoscience.data.qld.gov.au/dataset/ds000004"
+      ],
+      "brief": "Kidston: abandoned mine, gold large"
+    }
+  },
+  "structured_record": {
+    "answer": "Kidston (GSQ site 479629, 40.7 km south of einasleigh, 255km sw of cairns) is recorded by the Geological Survey of Queensland as abandoned mine, gold size band large, 50 - 150 t. Reported production: 113,804.5 kg gold, about 3.66 Moz troy (converted here; the survey records 113,804.5 kg) (1915 to 2002, Kidston, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 479629)); 60,887.3 kg silver (1915 to 2002, Kidston, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 479629)); 32,661,055 tonnes ore (1915 to 2002, Kidston, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 479629)). GSQ MINOCC 2017 also lists 5 dated Production rows (gold: 1,309 kg 1915 to 1924; 66,333 kg 1985 to 1994; 30,589 kg 1994 to 1999; 14,865.4 kg 1999 to 2001; 708.1 kg 2001 to 2002); see production. Closure: 2001 (no reason quoted) [Kidston, unknown, per GSQ MINOCC 2017 (MineHist, SITE_NO 479629, row 3)]. Years worked per GSQ MINOCC 2017 (MineHist, SITE_NO 479629): 1915-1924, 1994-2001, 1924-1948, 1950-1963, 1985-1994, 1907-1910, 1967-1973. Ownership and tenure: Kidston Gold Mines Limited per GSQ MINOCC 2017 (Tenure, SITE_NO 479629). GSQ MINOCC 2017 lists 17 company reports for this site: CR 70, CR 1022, CR 1852, CR 1999, CR 2146, CR 2254, CR 2255, CR 7003, .... Not found: closure reason: the indexed sources give a closure year but quote no reason.",
+    "source_count": 2,
+    "sources": [
+      "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D479629&outFields=%2A&f=json",
+      "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    ],
+    "brief": "Kidston: gold 113,804.5 kg (+5 more)",
+    "site_no": 479629,
+    "site_name": "Kidston",
+    "matched_by": "name",
+    "gsq_record": {
+      "source_ref": "GSQ-MINOCC",
+      "source_url": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D479629&outFields=%2A&f=json",
+      "mine_status": "ABANDONED MINE",
+      "size_band": "LARGE",
+      "size_definition": "50 - 150 TONNES",
+      "latitude": -18.875091,
+      "longitude": 144.151902,
+      "location_accuracy_m": 100,
+      "locality": "40.7 KM SOUTH OF EINASLEIGH, 255KM SW OF CAIRNS.",
+      "map_sheet_100k": "EINASLEIGH",
+      "commodities": "Au(l);Ag(s);Cu(vs);Zn(vs);Pb(vs)",
+      "record_current_to": "2006-11-29"
+    },
+    "production": [
+      {
+        "commodity": "gold",
+        "amount": 113804.5,
+        "unit": "kg",
+        "period_from": 1915,
+        "period_to": 2002,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Kidston",
+        "scope": "site_total",
+        "commodity_code": "AU",
+        "ore_class": "ore (hard rock, dumps, tailings and other)",
+        "converted": {
+          "amount": 3658900,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 113804.5 kg"
+        },
+        "source_ref": "MINOCC-2017:Total_Ores_Prod:479629",
+        "source_table": "Total_Ores_Prod",
+        "record_id": "SITE_NO 479629",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Total_Ores_Prod: 113804.5 KG Au 60887.3 KG Ag (Ore Amount 32661055 tonnes)"
+      },
+      {
+        "commodity": "silver",
+        "amount": 60887.3,
+        "unit": "kg",
+        "period_from": 1915,
+        "period_to": 2002,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Kidston",
+        "scope": "site_total",
+        "commodity_code": "AG",
+        "ore_class": "ore (hard rock, dumps, tailings and other)",
+        "source_ref": "MINOCC-2017:Total_Ores_Prod:479629",
+        "source_table": "Total_Ores_Prod",
+        "record_id": "SITE_NO 479629",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Total_Ores_Prod: 113804.5 KG Au 60887.3 KG Ag (Ore Amount 32661055 tonnes)"
+      },
+      {
+        "commodity": "ore",
+        "amount": 32661055,
+        "unit": "t",
+        "period_from": 1915,
+        "period_to": 2002,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Kidston",
+        "scope": "site_total",
+        "commodity_code": "ORE",
+        "ore_class": "ore (hard rock, dumps, tailings and other)",
+        "source_ref": "MINOCC-2017:Total_Ores_Prod:479629",
+        "source_table": "Total_Ores_Prod",
+        "record_id": "SITE_NO 479629",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Total_Ores_Prod: 113804.5 KG Au 60887.3 KG Ag (Ore Amount 32661055 tonnes)"
+      },
+      {
+        "commodity": "gold",
+        "amount": 1309,
+        "unit": "kg",
+        "period_from": 1915,
+        "period_to": 1924,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Kidston",
+        "scope": "period",
+        "form": "bullion",
+        "grade": "6.5 G/T",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "200945 T",
+        "converted": {
+          "amount": 42085,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 1309 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:479629:1",
+        "source_table": "Production",
+        "record_id": "SITE_NO 479629, row 1",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 1309 KG GOLD BULLION 6.5 G/T (Ore Amount 200945 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 66333,
+        "unit": "kg",
+        "period_from": 1985,
+        "period_to": 1994,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Kidston",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "T",
+        "converted": {
+          "amount": 2132655,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 66333 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:479629:2",
+        "source_table": "Production",
+        "record_id": "SITE_NO 479629, row 2",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 66333 KG GOLD FINE 36340 KG SILVER FINE (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "silver",
+        "amount": 36340,
+        "unit": "kg",
+        "period_from": 1985,
+        "period_to": 1994,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Kidston",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "T",
+        "source_ref": "MINOCC-2017:Production:479629:2",
+        "source_table": "Production",
+        "record_id": "SITE_NO 479629, row 2",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 66333 KG GOLD FINE 36340 KG SILVER FINE (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 30589,
+        "unit": "kg",
+        "period_from": 1994,
+        "period_to": 1999,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Kidston",
+        "scope": "period",
+        "form": "fine",
+        "grade": "0.94 G/T",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "32460110 T",
+        "converted": {
+          "amount": 983459,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 30589 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:479629:3",
+        "source_table": "Production",
+        "record_id": "SITE_NO 479629, row 3",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 30589 KG GOLD FINE 0.94 G/T 16730 KG SILVER FINE 0.51 G/T (Ore Amount 32460110 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "silver",
+        "amount": 16730,
+        "unit": "kg",
+        "period_from": 1994,
+        "period_to": 1999,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Kidston",
+        "scope": "period",
+        "form": "fine",
+        "grade": "0.51 G/T",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "32460110 T",
+        "source_ref": "MINOCC-2017:Production:479629:3",
+        "source_table": "Production",
+        "record_id": "SITE_NO 479629, row 3",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 30589 KG GOLD FINE 0.94 G/T 16730 KG SILVER FINE 0.51 G/T (Ore Amount 32460110 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 14865.4,
+        "unit": "kg",
+        "period_from": 1999,
+        "period_to": 2001,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Kidston",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "T",
+        "converted": {
+          "amount": 477934,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 14865.4 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:479629:4",
+        "source_table": "Production",
+        "record_id": "SITE_NO 479629, row 4",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 14865.4 KG GOLD FINE 7417.3 KG SILVER FINE (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "silver",
+        "amount": 7417.3,
+        "unit": "kg",
+        "period_from": 1999,
+        "period_to": 2001,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Kidston",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "T",
+        "source_ref": "MINOCC-2017:Production:479629:4",
+        "source_table": "Production",
+        "record_id": "SITE_NO 479629, row 4",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 14865.4 KG GOLD FINE 7417.3 KG SILVER FINE (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 708.1,
+        "unit": "kg",
+        "period_from": 2001,
+        "period_to": 2002,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Kidston",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "T",
+        "converted": {
+          "amount": 22766,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 708.1 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:479629:5",
+        "source_table": "Production",
+        "record_id": "SITE_NO 479629, row 5",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 708.1 KG GOLD FINE 400 KG SILVER FINE (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "silver",
+        "amount": 400,
+        "unit": "kg",
+        "period_from": 2001,
+        "period_to": 2002,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Kidston",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "T",
+        "source_ref": "MINOCC-2017:Production:479629:5",
+        "source_table": "Production",
+        "record_id": "SITE_NO 479629, row 5",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 708.1 KG GOLD FINE 400 KG SILVER FINE (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+      }
+    ],
+    "closure": [
+      {
+        "year": 2001,
+        "reason_text": null,
+        "reason_class": "unknown",
+        "entity": "Kidston",
+        "scope": "site",
+        "source_ref": "MINOCC-2017:MineHist:479629:3",
+        "source_table": "MineHist",
+        "record_id": "SITE_NO 479629, row 3",
+        "basis_note": "latest End Year recorded in the MineHist table (end of the last recorded period of working)",
+        "page": null,
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "MineHist #3: Start Year 1994, End Year 2001, Eldridge (Kidston) gold deposit was discovered in 1993 and mining commenced in 1994. Additional resources discovered in 1996. Mining ceased in March 2001 and the mine closed in July 2001."
+      }
+    ],
+    "years_worked": [
+      {
+        "periods": [
+          {
+            "seq": 1,
+            "start_year": 1915,
+            "end_year": 1924,
+            "comment": "Three sizeable pits were bulk mined in the south-west portion of the orebody at Wise's Hill.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 3,
+            "start_year": 1994,
+            "end_year": 2001,
+            "comment": "Eldridge (Kidston) gold deposit was discovered in 1993 and mining commenced in 1994. Additional resources discovered in 1996. Mining ceased in March 2001 and the mine closed in July 2001.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 4,
+            "start_year": 1924,
+            "end_year": 1948,
+            "comment": "Intermitant small scale mining with last stamper battery closing in 1948.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 5,
+            "start_year": 1950,
+            "end_year": 1963,
+            "comment": "Minor production from reprocessing of tailings and alluvial operations.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 6,
+            "start_year": 1985,
+            "end_year": 1994,
+            "comment": "Mined by Kidston Gold Mines Ltd via initial treatment of tailings and then Wise's Hill pit. Operations in Wise's Hill pit ceased in 1994 after which it was used for tailings disposal.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 8,
+            "start_year": 1907,
+            "end_year": 1910,
+            "comment": "Gold discovered in late 1907 causing the last major gold rush in Queensland. Alluvial gold was detected in the area in the 1880's.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 9,
+            "start_year": 1967,
+            "end_year": 1973,
+            "comment": "Kidston Gold Mines Ltd was formed as a private gold mining concern in which Placer held a major interest. Placer acquired full ownership of Kidston Gold Mines Ltd in 1973.",
+            "mine_life_flag": null
+          }
+        ],
+        "entity": "Kidston",
+        "source_ref": "MINOCC-2017:MineHist:479629",
+        "source_table": "MineHist",
+        "record_id": "SITE_NO 479629",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "MineHist: #1: 1915-1924 Three sizeable pits were bulk mined in the south-west portion of the orebody at Wise's Hill. | #3: 1994-2001 Eldridge (Kidston) gold deposit was discovered in 1993 and mining commenced in 1994. Additional resources discovered in 1996. Mining ceased in March 2001 and the mine closed in July 2001. | #4: 1924-1948 Intermitant small scale mining with last stamper battery closing in 1948. | #5: 1950-1963 Minor production from reprocessing of tailings and alluvial operations. | #6: 1985-1994 Mined by Kidston Gold Mines Ltd via initial treatment of tailings and then Wise's Hill pit. Operations in Wise's Hill pit ceased in 1994 after which it was used for tailings disposal. | #8: 1907-1910 Gold discovered in late 1907 causing the last major gold rush in Queensland. Alluvial gold was detected in the area in the 1880's. | #9: 1967-1973 Kidston Gold Mines Ltd was formed as a private gold mining concern in which Placer held a major interest. Placer acquired full ownership of Kidston Gold Mines Ltd in 1973."
+      }
+    ],
+    "ownership": [
+      {
+        "owner": "Kidston Gold Mines Limited",
+        "role": "principal holder of mining lease 3347 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
+        "period_from": null,
+        "period_to": null,
+        "entity": "Kidston",
+        "source_ref": "MINOCC-2017:Tenure:479629",
+        "source_table": "Tenure",
+        "record_id": "SITE_NO 479629",
+        "tenures": [
+          {
+            "type": "MINING LEASE",
+            "number": 3347
+          }
+        ],
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Tenure: Principal Holder Name KIDSTON GOLD MINES LIMITED; MINING LEASE 3347"
+      }
+    ],
+    "references": [
+      {
+        "cr_numbers": [
+          70,
+          1022,
+          1852,
+          1999,
+          2146,
+          2254,
+          2255,
+          7003,
+          8196,
+          8772,
+          9282,
+          9854,
+          9855,
+          10547,
+          11381,
+          11382,
+          12820
+        ],
+        "source_ref": "MINOCC-2017:Company reports:479629",
+        "source_table": "Company reports",
+        "record_id": "SITE_NO 479629",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Company reports: CR 70, CR 1022, CR 1852, CR 1999, CR 2146, CR 2254, CR 2255, CR 7003, CR 8196, CR 8772, CR 9282, CR 9854, CR 9855, CR 10547, CR 11381, CR 11382, CR 12820"
+      }
+    ],
+    "conflicts": [],
+    "not_found": [
+      "closure reason: the indexed sources give a closure year but quote no reason"
+    ],
+    "other_sites_with_same_name": [],
+    "dataset": {
+      "gsq_minocc_fetched": "2026-11-20",
+      "index_built": "2026-11-20",
+      "minocc_2017": {
+        "title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "licence": "CC BY 4.0 (as listed on the GSQ Open Data Portal / data.qld.gov.au dataset listing); (c) State of Queensland (Department of Natural Resources and Mines). The download's own PDFs state no licence."
+      },
+      "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
+    }
+  },
+  "rederived_at": "2026-11-21T17:32:37.624Z",
+  "attestation": {
+    "algorithm": "ed25519",
+    "sha256": "5847e6e656411d5be4909bcf826933bf640ee8d6851771b1a46a4712fd4b72e4",
+    "signature": "KomLRBnEhVOj3+BZYboqtxuqN2b4CLysf4XPnK6VW+YB/rOYSFB3e/SbibPYcnH8kkCX32ILxxfObbSDbF9xBg==",
+    "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+  }
+}

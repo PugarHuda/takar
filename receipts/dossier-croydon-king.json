@@ -1,0 +1,407 @@
+{
+  "title": "Gold Rush dossier: Croydon King",
+  "method": "Telegraph miners asked directly by id; structured rows from goldrush-qld-history's registered endpoint, tied to the paid answer; checks by Takar (lib/dossier.mjs). Figures are never merged or estimated.",
+  "generated_at": "2026-11-21T17:27:16.233Z",
+  "network": "Ethereum Sepolia testnet (test USDC)",
+  "dossier": {
+    "mine": "Croydon King",
+    "identity": {
+      "history_site_no": 479076,
+      "survey_site_no": 479076,
+      "same_site": true,
+      "name": "Croydon King",
+      "location": "8.5 KM SE OF CROYDON.",
+      "status": "ABANDONED MINE",
+      "nearby_workings": 32,
+      "size_band": "0.5 - 5 TONNES"
+    },
+    "production": {
+      "gold": [
+        {
+          "t": 0.53986,
+          "amount": 539.86,
+          "unit": "kg",
+          "from": null,
+          "to": 1933,
+          "entity": "Croydon King",
+          "scope": "site_total",
+          "source": "MINOCC-2017:Total_Ores_Prod:479076",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 479076",
+          "quote": "Total_Ores_Prod: 539.86 KG Au (Ore Amount 7973 tonnes)"
+        },
+        {
+          "t": 0.53986,
+          "amount": 539.86,
+          "unit": "kg",
+          "from": null,
+          "to": 1933,
+          "entity": "Croydon King",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:479076:1",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 479076, row 1",
+          "quote": "Production: 539.86 KG GOLD BULLION 67.71 G/T (Ore Amount 7973 T; Ore Type HARD ROCK ORE (OR REEF))"
+        }
+      ],
+      "sums": [
+        {
+          "register": "MINOCC-2017",
+          "rows": 1,
+          "sum_t": 0.5,
+          "site_total_t": 0.5,
+          "consistent": true,
+          "to": 1933
+        }
+      ],
+      "pairs": [],
+      "cumulative": [],
+      "band": {
+        "band": "small, 0.5-5 t",
+        "range_t": [
+          0.5,
+          5
+        ],
+        "total_t": 0.5,
+        "consistent": true
+      },
+      "band_source": "OathCast (live MINOCC)"
+    },
+    "closures": [],
+    "years_worked": [],
+    "ownership": [
+      {
+        "owner": "Jko Mining Pty Limited",
+        "role": "principal holder of mining lease 5108 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
+        "from": null,
+        "to": null,
+        "entity": "Croydon King",
+        "source": "MINOCC-2017:Tenure:479076",
+        "quote": "Tenure: Principal Holder Name JKO MINING PTY LIMITED; MINING LEASE 5108"
+      }
+    ],
+    "references": [
+      {
+        "cr_numbers": [
+          2946,
+          4868,
+          9568,
+          20314,
+          20315,
+          20971
+        ],
+        "source_ref": "MINOCC-2017:Company reports:479076",
+        "source_table": "Company reports",
+        "record_id": "SITE_NO 479076",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Company reports: CR 2946, CR 4868, CR 9568, CR 20314, CR 20315, CR 20971"
+      }
+    ],
+    "gold_price": null,
+    "control": [
+      {
+        "company": "Jko Mining Pty Limited",
+        "verdict": "insufficient",
+        "active": null,
+        "legal_name": null,
+        "registration_id": null,
+        "other_differences": [],
+        "why": "fewer than two usable answers",
+        "miners": [],
+        "signals": [],
+        "cost": 0.01
+      }
+    ],
+    "closure_research": [],
+    "tenure": {
+      "checked_at": "2026-11-21T17:30:15.406Z",
+      "source": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer (Queensland Government, open data), read directly",
+      "authorities": 2,
+      "holders": {
+        "QLD AUS GRAPHITE PTY LTD": 1,
+        "JUBILEE METALS LIMITED": 1
+      },
+      "kinds": {
+        "EPM granted": 1,
+        "ML granted": 1
+      },
+      "native_title": {
+        "Granted with Native Title Protection Conditions": 1,
+        "Granted before 23rd Dec 1996": 1
+      },
+      "expired_but_granted": 1,
+      "note": "1 authorities show an expiry date in the past with status \"Granted\": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.",
+      "rows": [
+        {
+          "id": "EPM 28270",
+          "kind": "EPM granted",
+          "status": "Granted",
+          "holder": "QLD AUS GRAPHITE PTY LTD",
+          "approved": "2023-05-02",
+          "expiry": "2028-05-01",
+          "native_title": "Granted with Native Title Protection Conditions",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "ML 5108",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "JUBILEE METALS LIMITED",
+          "approved": "1985-01-17",
+          "expiry": "2026-01-31",
+          "native_title": "Granted before 23rd Dec 1996",
+          "minerals": "AG,AU"
+        }
+      ]
+    },
+    "receipts_tie": {
+      "checked": 2,
+      "in_paid_answer": 2,
+      "rows": [
+        {
+          "source": "MINOCC-2017:Total_Ores_Prod:479076",
+          "amount": 539.86,
+          "unit": "kg",
+          "in_paid_answer": true
+        },
+        {
+          "source": "MINOCC-2017:Production:479076:1",
+          "amount": 539.86,
+          "unit": "kg",
+          "in_paid_answer": true
+        }
+      ]
+    },
+    "open_questions": [
+      "identity: the name matched GSQ site 479076, one of 33 historical workings within 5 km; if you meant the field or a larger operation, ask for it by its site number",
+      "closure: no closure year or reason in the sources indexed for this site",
+      "production rests on one register (MINOCC-2017); no second source to check it against",
+      "tenure: 1 authorities show an expiry date in the past with status \"Granted\": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.",
+      "who controls it: Jko Mining Pty Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly"
+    ],
+    "miner_conflicts": []
+  },
+  "receipts": [
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0x35a5cc980fbdf7209d7dffe1e0e6c0c3a9669518a1bce5a1dda66670441a58b3",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#13 of 30"
+    },
+    {
+      "miner": "OathCast Queensland Gold Mines",
+      "id": "64176",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0xe3e293c9262f0c8f053eeb11ffc02356c006578f4f2099cc7bbacb5920d969b4",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#15 of 30"
+    },
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0xdfc80a75aeb8d7b933d50e7d7d319869e01df4cc87f0111f60465fdf45591b5e",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#13 of 30"
+    },
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0xdfc80a75aeb8d7b933d50e7d7d319869e01df4cc87f0111f60465fdf45591b5e",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": null,
+      "shared": "latest gold price, bought once for this run"
+    }
+  ],
+  "paid_answers": {
+    "history": {
+      "answer": "Croydon King (GSQ site 479076, 8.5 km se of croydon) is recorded by the Geological Survey of Queensland as abandoned mine, gold size band small, 0.5 - 5 t. Reported production: 539.86 kg gold, about 17,357 oz troy (converted here; the survey records 539.86 kg) (to 1933, Croydon King, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 479076)); 7,973 tonnes ore (to 1933, Croydon King, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 479076)). GSQ MINOCC 2017 also lists 1 dated Production row (gold: 539.86 kg to 1933); see production. Ownership and tenure: Jko Mining Pty Limited per GSQ MINOCC 2017 (Tenure, SITE_NO 479076). GSQ MINOCC 2017 lists 6 company reports for this site: CR 2946, CR 4868, CR 9568, CR 20314, CR 20315, CR 20971. Not found: closure: no closure year or reason in the sources indexed for this site.",
+      "source_count": 2,
+      "sources": [
+        "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D479076&outFields=%2A&f=json",
+        "https://geoscience.data.qld.gov.au/dataset/ds000004"
+      ],
+      "brief": "Croydon King: gold 539.86 kg (+1 more)"
+    },
+    "survey": {
+      "answer": "Croydon King (Geological Survey of Queensland site 479076) is recorded as an abandoned mine on the Croydon 1:100,000 sheet (8.5 km se of croydon.), at -18.2550, 142.3030, located to within 50 m. The survey classes its gold as small, 0.5-5 t, and also records silver (very small). Within 5 km it records 32 other historical workings, 32 of them with gold. The record gives a size band, not production figures, and holds no owners or closure dates.",
+      "source_count": 2,
+      "sources": [
+        "Geological Survey of Queensland, MINOCC historical workings (CC BY 4.0, State of Queensland), site 479076: https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D479076&outFields=%2A&f=json",
+        "https://geoscience.data.qld.gov.au/dataset/ds000004"
+      ],
+      "brief": "Croydon King: abandoned mine, gold small"
+    }
+  },
+  "structured_record": {
+    "answer": "Croydon King (GSQ site 479076, 8.5 km se of croydon) is recorded by the Geological Survey of Queensland as abandoned mine, gold size band small, 0.5 - 5 t. Reported production: 539.86 kg gold, about 17,357 oz troy (converted here; the survey records 539.86 kg) (to 1933, Croydon King, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 479076)); 7,973 tonnes ore (to 1933, Croydon King, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 479076)). GSQ MINOCC 2017 also lists 1 dated Production row (gold: 539.86 kg to 1933); see production. Ownership and tenure: Jko Mining Pty Limited per GSQ MINOCC 2017 (Tenure, SITE_NO 479076). GSQ MINOCC 2017 lists 6 company reports for this site: CR 2946, CR 4868, CR 9568, CR 20314, CR 20315, CR 20971. Not found: closure: no closure year or reason in the sources indexed for this site.",
+    "source_count": 2,
+    "sources": [
+      "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D479076&outFields=%2A&f=json",
+      "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    ],
+    "brief": "Croydon King: gold 539.86 kg (+1 more)",
+    "site_no": 479076,
+    "site_name": "Croydon King",
+    "matched_by": "name",
+    "gsq_record": {
+      "source_ref": "GSQ-MINOCC",
+      "source_url": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D479076&outFields=%2A&f=json",
+      "mine_status": "ABANDONED MINE",
+      "size_band": "SMALL",
+      "size_definition": "0.5 - 5 TONNES",
+      "latitude": -18.254987,
+      "longitude": 142.303022,
+      "location_accuracy_m": 50,
+      "locality": "8.5 KM SE OF CROYDON.",
+      "map_sheet_100k": "CROYDON",
+      "commodities": "Au(s);Ag(vs)",
+      "record_current_to": "2008-10-24"
+    },
+    "production": [
+      {
+        "commodity": "gold",
+        "amount": 539.86,
+        "unit": "kg",
+        "period_from": null,
+        "period_to": 1933,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Croydon King",
+        "scope": "site_total",
+        "commodity_code": "AU",
+        "ore_class": "ore (hard rock, dumps, tailings and other)",
+        "converted": {
+          "amount": 17357,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 539.86 kg"
+        },
+        "source_ref": "MINOCC-2017:Total_Ores_Prod:479076",
+        "source_table": "Total_Ores_Prod",
+        "record_id": "SITE_NO 479076",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Total_Ores_Prod: 539.86 KG Au (Ore Amount 7973 tonnes)"
+      },
+      {
+        "commodity": "ore",
+        "amount": 7973,
+        "unit": "t",
+        "period_from": null,
+        "period_to": 1933,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Croydon King",
+        "scope": "site_total",
+        "commodity_code": "ORE",
+        "ore_class": "ore (hard rock, dumps, tailings and other)",
+        "source_ref": "MINOCC-2017:Total_Ores_Prod:479076",
+        "source_table": "Total_Ores_Prod",
+        "record_id": "SITE_NO 479076",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Total_Ores_Prod: 539.86 KG Au (Ore Amount 7973 tonnes)"
+      },
+      {
+        "commodity": "gold",
+        "amount": 539.86,
+        "unit": "kg",
+        "period_from": null,
+        "period_to": 1933,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Croydon King",
+        "scope": "period",
+        "form": "bullion",
+        "grade": "67.71 G/T",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "7973 T",
+        "comment": "Production in 1886 to 1904, 1922 and 1933 - PA, PC, N, S, Consols, 1N-8N, 1S, 1-8, 2&3 United.",
+        "converted": {
+          "amount": 17357,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 539.86 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:479076:1",
+        "source_table": "Production",
+        "record_id": "SITE_NO 479076, row 1",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 539.86 KG GOLD BULLION 67.71 G/T (Ore Amount 7973 T; Ore Type HARD ROCK ORE (OR REEF))"
+      }
+    ],
+    "closure": [],
+    "years_worked": [],
+    "ownership": [
+      {
+        "owner": "Jko Mining Pty Limited",
+        "role": "principal holder of mining lease 5108 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
+        "period_from": null,
+        "period_to": null,
+        "entity": "Croydon King",
+        "source_ref": "MINOCC-2017:Tenure:479076",
+        "source_table": "Tenure",
+        "record_id": "SITE_NO 479076",
+        "tenures": [
+          {
+            "type": "MINING LEASE",
+            "number": 5108
+          }
+        ],
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Tenure: Principal Holder Name JKO MINING PTY LIMITED; MINING LEASE 5108"
+      }
+    ],
+    "references": [
+      {
+        "cr_numbers": [
+          2946,
+          4868,
+          9568,
+          20314,
+          20315,
+          20971
+        ],
+        "source_ref": "MINOCC-2017:Company reports:479076",
+        "source_table": "Company reports",
+        "record_id": "SITE_NO 479076",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Company reports: CR 2946, CR 4868, CR 9568, CR 20314, CR 20315, CR 20971"
+      }
+    ],
+    "conflicts": [],
+    "not_found": [
+      "closure: no closure year or reason in the sources indexed for this site"
+    ],
+    "other_sites_with_same_name": [],
+    "dataset": {
+      "gsq_minocc_fetched": "2026-11-20",
+      "index_built": "2026-11-20",
+      "minocc_2017": {
+        "title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "licence": "CC BY 4.0 (as listed on the GSQ Open Data Portal / data.qld.gov.au dataset listing); (c) State of Queensland (Department of Natural Resources and Mines). The download's own PDFs state no licence."
+      },
+      "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
+    }
+  },
+  "rederived_at": "2026-11-21T17:32:37.633Z",
+  "attestation": {
+    "algorithm": "ed25519",
+    "sha256": "90e55bd4a0f8bd165bd06fc553913b6c36c7be92ec2ea61beada3d1000a9cefc",
+    "signature": "lXPOZ00WVfJYIo/vFD6AwxoQRs5JeAdIvIaHu6ZQfMYximbMzeJSuD9ZpWompgL7/VPurJtDR/vkphEYPoxQDw==",
+    "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+  }
+}

@@ -1,0 +1,990 @@
+{
+  "title": "Gold Rush dossier: Mount Coolon",
+  "method": "Telegraph miners asked directly by id; structured rows from goldrush-qld-history's registered endpoint, tied to the paid answer; checks by Takar (lib/dossier.mjs). Figures are never merged or estimated.",
+  "generated_at": "2026-11-21T17:30:58.527Z",
+  "network": "Ethereum Sepolia testnet (test USDC)",
+  "dossier": {
+    "mine": "Mount Coolon",
+    "identity": {
+      "history_site_no": 41615,
+      "survey_site_no": 41615,
+      "same_site": true,
+      "name": "Mount Coolon",
+      "location": "2.7KM SE OF MOUNT COOLON, 220KM SSE OF TOWNSVILLE",
+      "status": "ABANDONED MINE",
+      "nearby_workings": 1,
+      "size_band": "5 - 50 TONNES"
+    },
+    "production": {
+      "gold": [
+        {
+          "t": 7.07068,
+          "amount": 7070.68,
+          "unit": "kg",
+          "from": 1914,
+          "to": 2005,
+          "entity": "Mount Coolon",
+          "scope": "site_total",
+          "source": "MINOCC-2017:Total_Ores_Prod:41615",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 41615",
+          "quote": "Total_Ores_Prod: 7070.68 KG Au 757.372 KG Ag (Ore Amount 574498.17 tonnes)"
+        },
+        {
+          "t": 3.74263,
+          "amount": 3742.63,
+          "unit": "kg",
+          "from": 1914,
+          "to": 1934,
+          "entity": "Mount Coolon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:41615:1",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 41615, row 1",
+          "quote": "Production: 3742.63 KG GOLD BULLION 22.95 G/T (Ore Amount 163061 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 1.83909,
+          "amount": 1839.09,
+          "unit": "kg",
+          "from": 1934,
+          "to": 1939,
+          "entity": "Mount Coolon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:41615:3",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 41615, row 3",
+          "quote": "Production: 1839.09 KG GOLD BULLION 13.1 G/T (Ore Amount 140347 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 0.01718,
+          "amount": 17.18,
+          "unit": "kg",
+          "from": 1940,
+          "to": 1942,
+          "entity": "Mount Coolon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:41615:4",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 41615, row 4",
+          "quote": "Production: 17.18 KG GOLD BULLION 15.76 G/T (Ore Amount 1090.17 T; Ore Type DUMP)"
+        },
+        {
+          "t": 1.46186,
+          "amount": 1461.86,
+          "unit": "kg",
+          "from": 1996,
+          "to": 1996,
+          "entity": "Mount Coolon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:41615:5",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 41615, row 5",
+          "quote": "Production: 1461.86 KG GOLD BULLION 5.41 G/T (Ore Amount 270000 T; Ore Type HARD ROCK ORE (OR REEF))"
+        },
+        {
+          "t": 0.00992,
+          "amount": 9.92,
+          "unit": "kg",
+          "from": 2004,
+          "to": 2005,
+          "entity": "Mount Coolon",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:41615:6",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 41615, row 6",
+          "quote": "Production: 9.92 KG GOLD FINE 1.102 KG SILVER FINE (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+        }
+      ],
+      "sums": [
+        {
+          "register": "MINOCC-2017",
+          "rows": 5,
+          "sum_t": 7.1,
+          "site_total_t": 7.1,
+          "consistent": true,
+          "to": 2005
+        }
+      ],
+      "pairs": [],
+      "cumulative": [],
+      "band": {
+        "band": "medium, 5-50 t",
+        "range_t": [
+          5,
+          50
+        ],
+        "total_t": 7.1,
+        "consistent": true
+      },
+      "band_source": "OathCast (live MINOCC)"
+    },
+    "closures": [
+      {
+        "year": 1996,
+        "sources": [
+          {
+            "source": "MINOCC-2017:MineHist:41615:15",
+            "title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+            "url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+            "quote": "MineHist #15: Start Year 1996, End Year 1996, Open cut mining commenced but was abandoned later that year due to pit-wall instability.",
+            "entity": "Mount Coolon"
+          }
+        ],
+        "reasons": [],
+        "status": "single source",
+        "reason": "no source states a reason"
+      }
+    ],
+    "years_worked": [
+      {
+        "periods": [
+          {
+            "seq": 1,
+            "start_year": 1913,
+            "end_year": 1939,
+            "comment": "Historic mining was carried out along the north-west-striking Mount Coolon Lode.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 2,
+            "start_year": 1913,
+            "end_year": 1913,
+            "comment": "Mount Coolon deposit discovered by Luke Reynolds.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 7,
+            "start_year": 1987,
+            "end_year": 1988,
+            "comment": "Decline excavated by RGC. Terminated due to excessive water and bad ground conditions. Finished 200m short of original target of 895m.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 8,
+            "start_year": 1988,
+            "end_year": 1988,
+            "comment": "Completion of a feasibiltiy study by RGC to exploit the Mount Coolon Lode in an open-pit style mining method. Environmental Impact Assessment and lease application submitted.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 10,
+            "start_year": 1989,
+            "end_year": 1989,
+            "comment": "ACM Gold Ltd acquired RGC Ltd's 51% share in the Mount Coolon Joint Venture with Saracen Minerals NL. ACM reviewed feasibility study for open cut mining.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 12,
+            "start_year": 1991,
+            "end_year": 1991,
+            "comment": "Normandy Poseidon purchased ACM Gold Ltd's 51% interest in the Mount Coolon Joint Venture.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 13,
+            "start_year": 1993,
+            "end_year": 1993,
+            "comment": "Ross Mining NL purchased Normandy Poseidon's 51% share of the Mount Coolon Joint Venture with Saracen Minerals NL.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 14,
+            "start_year": 1995,
+            "end_year": 1995,
+            "comment": "Ross Mining NL purchased the remaining 49% of the Mount Coolon Joint Venture from Saracen Minerals NL.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 15,
+            "start_year": 1996,
+            "end_year": 1996,
+            "comment": "Open cut mining commenced but was abandoned later that year due to pit-wall instability.",
+            "mine_life_flag": null
+          }
+        ],
+        "entity": "Mount Coolon",
+        "source_ref": "MINOCC-2017:MineHist:41615",
+        "source_table": "MineHist",
+        "record_id": "SITE_NO 41615",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "MineHist: #1: 1913-1939 Historic mining was carried out along the north-west-striking Mount Coolon Lode. | #2: 1913-1913 Mount Coolon deposit discovered by Luke Reynolds. | #7: 1987-1988 Decline excavated by RGC. Terminated due to excessive water and bad ground conditions. Finished 200m short of original target of 895m. | #8: 1988-1988 Completion of a feasibiltiy study by RGC to exploit the Mount Coolon Lode in an open-pit style mining method. Environmental Impact Assessment and lease application submitted. | #10: 1989-1989 ACM Gold Ltd acquired RGC Ltd's 51% share in the Mount Coolon Joint Venture with Saracen Minerals NL. ACM reviewed feasibility study for open cut mining. | #12: 1991-1991 Normandy Poseidon purchased ACM Gold Ltd's 51% interest in the Mount Coolon Joint Venture. | #13: 1993-1993 Ross Mining NL purchased Normandy Poseidon's 51% share of the Mount Coolon Joint Venture with Saracen Minerals NL. | #14: 1995-1995 Ross Mining NL purchased the remaining 49% of the Mount Coolon Joint Venture from Saracen Minerals NL. | #15: 1996-1996 Open cut mining commenced but was abandoned later that year due to pit-wall instability."
+      }
+    ],
+    "ownership": [
+      {
+        "owner": "Mt Coolon Gold Mines Pty Ltd",
+        "role": "principal holder of exploration permit mineral 15902, mining lease 1029, mining lease 1085, mining lease 1086 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
+        "from": null,
+        "to": null,
+        "entity": "Mount Coolon",
+        "source": "MINOCC-2017:Tenure:41615",
+        "quote": "Tenure: Principal Holder Name MT COOLON GOLD MINES PTY LTD; EXPLORATION PERMIT MINERAL 15902, MINING LEASE 1029, MINING LEASE 1085, MINING LEASE 1086"
+      }
+    ],
+    "references": [
+      {
+        "cr_numbers": [
+          3596,
+          4078,
+          14682,
+          14809,
+          15476,
+          15568,
+          15893,
+          15969,
+          16449,
+          16567,
+          17105,
+          17474,
+          19239,
+          19248,
+          19358,
+          19881,
+          19995,
+          20003,
+          20310,
+          21042,
+          21430,
+          21431,
+          21789,
+          21966,
+          22128,
+          22178,
+          22720,
+          22837,
+          22921,
+          22922,
+          23595,
+          23936,
+          24218,
+          24782,
+          25511,
+          26876,
+          28591,
+          28592,
+          29784,
+          30767,
+          31648,
+          32792,
+          33251
+        ],
+        "source_ref": "MINOCC-2017:Company reports:41615",
+        "source_table": "Company reports",
+        "record_id": "SITE_NO 41615",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Company reports: CR 3596, CR 4078, CR 14682, CR 14809, CR 15476, CR 15568, CR 15893, CR 15969, CR 16449, CR 16567, CR 17105, CR 17474, CR 19239, CR 19248, CR 19358, CR 19881, CR 19995, CR 20003, CR 20310, CR 21042, CR 21430, CR 21431, CR 21789, CR 21966, CR 22128, CR 22178, CR 22720, CR 22837, CR 22921, CR 22922, CR 23595, CR 23936, CR 24218, CR 24782, CR 25511, CR 26876, CR 28591, CR 28592, CR 29784, CR 30767, CR 31648, CR 32792, CR 33251"
+      }
+    ],
+    "gold_price": {
+      "year": 1996,
+      "then": "US$399 per ounce (Gold, monthly average per troy ounce (World Bank Pink Sheet, nominal US dollars) from 1960)",
+      "now": "US$4105 per ounce in October 2026 (Gold, monthly average per troy ounce (World Bank Pink Sheet, nominal US dollars) from 1960), single source",
+      "ratio": 10.3,
+      "real": {
+        "cpi_then": 156.85,
+        "cpi_now": 337.511,
+        "inflation": 2.15,
+        "real_ratio": 4.78
+      },
+      "cpi_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS",
+      "note": "Nominal dollars, not adjusted for inflation; the closure-year figure may be an official price rather than a market one (see its text).",
+      "receipt": {
+        "miner": "Gold Rush Queensland Mine History",
+        "id": "7310050",
+        "intent": "RESEARCH_QUERY_GENERAL",
+        "signal": "0xa1c48797cf4b75bf1d4da67097e1522c29912bab91b193474d303bbb7121918a",
+        "cost": 0.01,
+        "shape": "intent"
+      }
+    },
+    "control": [
+      {
+        "company": "Mt Coolon Gold Mines Pty Ltd",
+        "verdict": "insufficient",
+        "active": null,
+        "legal_name": null,
+        "registration_id": null,
+        "other_differences": [],
+        "why": "fewer than two usable answers",
+        "miners": [],
+        "signals": [],
+        "cost": 0.01
+      }
+    ],
+    "closure_research": [
+      {
+        "year": 1996,
+        "status": "single source",
+        "shared": [],
+        "answers": [
+          {
+            "miner": "TxLens",
+            "causes": [
+              "ore exhausted",
+              "price, cost or capital"
+            ],
+            "quote": "The Mount Coolon gold mine in Queensland shut down in 1996 because its high-grade ore bodies were exhausted and the remaining reserves were not economically viable at the prevailing low gold prices. The mine’s operating costs exceeded revenue, leading the owners to cease production.",
+            "signal": "0x02e38f07ac9cbe99d58e42ac2c16094ddd71d074181e512a0de8a9b933d1b9fb"
+          }
+        ],
+        "cost": 0.02
+      }
+    ],
+    "tenure": {
+      "checked_at": "2026-11-21T17:32:03.388Z",
+      "source": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer (Queensland Government, open data), read directly",
+      "authorities": 5,
+      "holders": {
+        "MT COOLON GOLD MINES PTY LTD": 5
+      },
+      "kinds": {
+        "EPM granted": 1,
+        "ML granted": 3,
+        "ML granted (access)": 1
+      },
+      "native_title": {
+        "Section 31 Agreement": 1,
+        "100% exclusive land": 4
+      },
+      "expired_but_granted": 0,
+      "note": null,
+      "rows": [
+        {
+          "id": "EPM 15902",
+          "kind": "EPM granted",
+          "status": "Granted",
+          "holder": "MT COOLON GOLD MINES PTY LTD",
+          "approved": "2008-06-13",
+          "expiry": "2028-06-12",
+          "native_title": "Section 31 Agreement",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "ML 1029",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "MT COOLON GOLD MINES PTY LTD",
+          "approved": "1974-05-30",
+          "expiry": "2034-01-31",
+          "native_title": "100% exclusive land",
+          "minerals": "BI,CU,MO,AG,AU"
+        },
+        {
+          "id": "ML 1085",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "MT COOLON GOLD MINES PTY LTD",
+          "approved": "1994-01-27",
+          "expiry": "2034-01-31",
+          "native_title": "100% exclusive land",
+          "minerals": ""
+        },
+        {
+          "id": "ML 1086",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "MT COOLON GOLD MINES PTY LTD",
+          "approved": "1994-01-27",
+          "expiry": "2034-01-31",
+          "native_title": "100% exclusive land",
+          "minerals": ""
+        },
+        {
+          "id": "ML 10227",
+          "kind": "ML granted (access)",
+          "status": "Granted",
+          "holder": "MT COOLON GOLD MINES PTY LTD",
+          "approved": "1996-12-05",
+          "expiry": "2034-01-31",
+          "native_title": "100% exclusive land",
+          "minerals": "AG,AU"
+        }
+      ]
+    },
+    "receipts_tie": {
+      "checked": 6,
+      "in_paid_answer": 1,
+      "rows": [
+        {
+          "source": "MINOCC-2017:Total_Ores_Prod:41615",
+          "amount": 7070.68,
+          "unit": "kg",
+          "in_paid_answer": true
+        },
+        {
+          "source": "MINOCC-2017:Production:41615:1",
+          "amount": 3742.63,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:41615:3",
+          "amount": 1839.09,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:41615:4",
+          "amount": 17.18,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:41615:5",
+          "amount": 1461.86,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:41615:6",
+          "amount": 9.92,
+          "unit": "kg",
+          "in_paid_answer": false
+        }
+      ]
+    },
+    "open_questions": [
+      "closure reason: the indexed sources give a closure year but quote no reason",
+      "why it stopped in 1996: no source quotes a reason; do not assume exhaustion",
+      "production rests on one register (MINOCC-2017); no second source to check it against",
+      "who controls it: Mt Coolon Gold Mines Pty Ltd could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly"
+    ],
+    "miner_conflicts": []
+  },
+  "receipts": [
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0x1875edc55b710692359eb1fbe7cbff37a7ce92a3b6b797692705127da6426d72",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#13 of 30"
+    },
+    {
+      "miner": "OathCast Queensland Gold Mines",
+      "id": "64176",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0x7a64827f44a342dfc4046eed13c4dc2c22c78c030289fb85fc4970373a6f6ddc",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#15 of 30"
+    },
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0xa1c48797cf4b75bf1d4da67097e1522c29912bab91b193474d303bbb7121918a",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#13 of 30"
+    },
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0x97231263a147668b8bbb07c9f877a0bbf00841f149d8c19b2b4c2ea47b646387",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#13 of 30"
+    }
+  ],
+  "paid_answers": {
+    "history": {
+      "answer": "Mount Coolon, an abandoned gold mine in Queensland, produced a total of 7,070.68 kg of gold between 1914 and 2005. The mine operated in several periods, including 1913-1939, 1987-1988, and 1995-1996, before closing in 1996 for an unquoted reason. It was owned by Mt Coolon Gold Mines Pty Ltd.",
+      "source_count": 2,
+      "sources": [
+        "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D41615&outFields=%2A&f=json",
+        "https://geoscience.data.qld.gov.au/dataset/ds000004"
+      ],
+      "brief": "Mount Coolon: gold 7,070.68 kg (+5 more)"
+    },
+    "survey": {
+      "answer": "Mount Coolon (Geological Survey of Queensland site 41615) is recorded as an abandoned mine on the Mount Coolon 1:100,000 sheet (2.7km se of mount coolon, 220km sse of townsville), at -21.4059, 147.3549, located to within 10 m. The survey classes its gold as medium, 5-50 t, and also records silver (very small). Within 5 km it records 1 other historical workings, 1 of them with gold. The record gives a size band, not production figures, and holds no owners or closure dates.",
+      "source_count": 2,
+      "sources": [
+        "Geological Survey of Queensland, MINOCC historical workings (CC BY 4.0, State of Queensland), site 41615: https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D41615&outFields=%2A&f=json",
+        "https://geoscience.data.qld.gov.au/dataset/ds000004"
+      ],
+      "brief": "Mount Coolon: abandoned mine, gold medium"
+    }
+  },
+  "structured_record": {
+    "answer": "Mount Coolon (GSQ site 41615, 2.7km se of mount coolon, 220km sse of townsville) is recorded by the Geological Survey of Queensland as abandoned mine, gold size band medium, 5 - 50 t. Reported production: 7,070.68 kg gold, about 227,328 oz troy (converted here; the survey records 7,070.68 kg) (1914 to 2005, Mount Coolon, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 41615)); 757.372 kg silver (1914 to 2005, Mount Coolon, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 41615)); 574,498.17 tonnes ore (1914 to 2005, Mount Coolon, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 41615)). GSQ MINOCC 2017 also lists 6 dated Production rows (gold: 3,742.63 kg 1914 to 1934; 1,839.09 kg 1934 to 1939; 17.18 kg 1940 to 1942; 1,461.86 kg 1996; 9.92 kg 2004 to 2005); see production. Closure: 1996 (no reason quoted) [Mount Coolon, unknown, per GSQ MINOCC 2017 (MineHist, SITE_NO 41615, row 15)]. Years worked per GSQ MINOCC 2017 (MineHist, SITE_NO 41615): 1913-1939, 1913-1913, 1987-1988, 1988-1988, 1989-1989, 1991-1991, 1993-1993, 1995-1995, 1996-1996. Ownership and tenure: Mt Coolon Gold Mines Pty Ltd per GSQ MINOCC 2017 (Tenure, SITE_NO 41615). GSQ MINOCC 2017 lists 43 company reports for this site: CR 3596, CR 4078, CR 14682, CR 14809, CR 15476, CR 15568, CR 15893, CR 15969, .... Not found: closure reason: the indexed sources give a closure year but quote no reason.",
+    "source_count": 2,
+    "sources": [
+      "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D41615&outFields=%2A&f=json",
+      "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    ],
+    "brief": "Mount Coolon: gold 7,070.68 kg (+5 more)",
+    "site_no": 41615,
+    "site_name": "Mount Coolon",
+    "matched_by": "name",
+    "gsq_record": {
+      "source_ref": "GSQ-MINOCC",
+      "source_url": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D41615&outFields=%2A&f=json",
+      "mine_status": "ABANDONED MINE",
+      "size_band": "MEDIUM",
+      "size_definition": "5 - 50 TONNES",
+      "latitude": -21.405926,
+      "longitude": 147.354927,
+      "location_accuracy_m": 10,
+      "locality": "2.7KM SE OF MOUNT COOLON, 220KM SSE OF TOWNSVILLE",
+      "map_sheet_100k": "MOUNT COOLON",
+      "commodities": "Au(m);Ag(vs)",
+      "record_current_to": "2018-07-11"
+    },
+    "production": [
+      {
+        "commodity": "gold",
+        "amount": 7070.68,
+        "unit": "kg",
+        "period_from": 1914,
+        "period_to": 2005,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Coolon",
+        "scope": "site_total",
+        "commodity_code": "AU",
+        "ore_class": "ore (hard rock, dumps, tailings and other)",
+        "converted": {
+          "amount": 227328,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 7070.68 kg"
+        },
+        "source_ref": "MINOCC-2017:Total_Ores_Prod:41615",
+        "source_table": "Total_Ores_Prod",
+        "record_id": "SITE_NO 41615",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Total_Ores_Prod: 7070.68 KG Au 757.372 KG Ag (Ore Amount 574498.17 tonnes)"
+      },
+      {
+        "commodity": "silver",
+        "amount": 757.372,
+        "unit": "kg",
+        "period_from": 1914,
+        "period_to": 2005,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Coolon",
+        "scope": "site_total",
+        "commodity_code": "AG",
+        "ore_class": "ore (hard rock, dumps, tailings and other)",
+        "source_ref": "MINOCC-2017:Total_Ores_Prod:41615",
+        "source_table": "Total_Ores_Prod",
+        "record_id": "SITE_NO 41615",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Total_Ores_Prod: 7070.68 KG Au 757.372 KG Ag (Ore Amount 574498.17 tonnes)"
+      },
+      {
+        "commodity": "ore",
+        "amount": 574498.17,
+        "unit": "t",
+        "period_from": 1914,
+        "period_to": 2005,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Coolon",
+        "scope": "site_total",
+        "commodity_code": "ORE",
+        "ore_class": "ore (hard rock, dumps, tailings and other)",
+        "source_ref": "MINOCC-2017:Total_Ores_Prod:41615",
+        "source_table": "Total_Ores_Prod",
+        "record_id": "SITE_NO 41615",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Total_Ores_Prod: 7070.68 KG Au 757.372 KG Ag (Ore Amount 574498.17 tonnes)"
+      },
+      {
+        "commodity": "gold",
+        "amount": 3742.63,
+        "unit": "kg",
+        "period_from": 1914,
+        "period_to": 1934,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Coolon",
+        "scope": "period",
+        "form": "bullion",
+        "grade": "22.95 G/T",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "163061 T",
+        "comment": "Includes production from 49790t of milled products and tailings.",
+        "converted": {
+          "amount": 120328,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 3742.63 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:41615:1",
+        "source_table": "Production",
+        "record_id": "SITE_NO 41615, row 1",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 3742.63 KG GOLD BULLION 22.95 G/T (Ore Amount 163061 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "silver",
+        "amount": 756.27,
+        "unit": "kg",
+        "period_from": 1924,
+        "period_to": 1934,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Coolon",
+        "scope": "period",
+        "form": "metal",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "T",
+        "comment": "Production figures are from Annual Reports of the Department of Mines.",
+        "source_ref": "MINOCC-2017:Production:41615:2",
+        "source_table": "Production",
+        "record_id": "SITE_NO 41615, row 2",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 756.27 KG SILVER METAL (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 1839.09,
+        "unit": "kg",
+        "period_from": 1934,
+        "period_to": 1939,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Coolon",
+        "scope": "period",
+        "form": "bullion",
+        "grade": "13.1 G/T",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "140347 T",
+        "comment": "Historical mining ceased in 1938. Production in 1939 was from clean up of the ore dumps.",
+        "converted": {
+          "amount": 59128,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 1839.09 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:41615:3",
+        "source_table": "Production",
+        "record_id": "SITE_NO 41615, row 3",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 1839.09 KG GOLD BULLION 13.1 G/T (Ore Amount 140347 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 17.18,
+        "unit": "kg",
+        "period_from": 1940,
+        "period_to": 1942,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Coolon",
+        "scope": "period",
+        "form": "bullion",
+        "grade": "15.76 G/T",
+        "ore_class": "DUMP",
+        "ore_recorded": "1090.17 T",
+        "comment": "Milled ore and tailings. Production figures from Annual Reports of the Department of Mines.",
+        "converted": {
+          "amount": 552,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 17.18 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:41615:4",
+        "source_table": "Production",
+        "record_id": "SITE_NO 41615, row 4",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 17.18 KG GOLD BULLION 15.76 G/T (Ore Amount 1090.17 T; Ore Type DUMP)"
+      },
+      {
+        "commodity": "gold",
+        "amount": 1461.86,
+        "unit": "kg",
+        "period_from": 1996,
+        "period_to": 1996,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Coolon",
+        "scope": "period",
+        "form": "bullion",
+        "grade": "5.41 G/T",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "270000 T",
+        "comment": "Production from Koala Pit. Mining ceased due to instability in open cut wall. Head-grade was 5.53g/t Au.",
+        "converted": {
+          "amount": 47000,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 1461.86 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:41615:5",
+        "source_table": "Production",
+        "record_id": "SITE_NO 41615, row 5",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 1461.86 KG GOLD BULLION 5.41 G/T (Ore Amount 270000 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "gold",
+        "amount": 9.92,
+        "unit": "kg",
+        "period_from": 2004,
+        "period_to": 2005,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Coolon",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "T",
+        "comment": "Gold and Silver metal produced from 11.022 kg Au bullion.",
+        "converted": {
+          "amount": 319,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 9.92 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:41615:6",
+        "source_table": "Production",
+        "record_id": "SITE_NO 41615, row 6",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 9.92 KG GOLD FINE 1.102 KG SILVER FINE (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "silver",
+        "amount": 1.102,
+        "unit": "kg",
+        "period_from": 2004,
+        "period_to": 2005,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Mount Coolon",
+        "scope": "period",
+        "form": "fine",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "T",
+        "comment": "Gold and Silver metal produced from 11.022 kg Au bullion.",
+        "source_ref": "MINOCC-2017:Production:41615:6",
+        "source_table": "Production",
+        "record_id": "SITE_NO 41615, row 6",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 9.92 KG GOLD FINE 1.102 KG SILVER FINE (Ore Amount T; Ore Type HARD ROCK ORE (OR REEF))"
+      }
+    ],
+    "closure": [
+      {
+        "year": 1996,
+        "reason_text": null,
+        "reason_class": "unknown",
+        "entity": "Mount Coolon",
+        "scope": "site",
+        "source_ref": "MINOCC-2017:MineHist:41615:15",
+        "source_table": "MineHist",
+        "record_id": "SITE_NO 41615, row 15",
+        "basis_note": "latest End Year recorded in the MineHist table (end of the last recorded period of working)",
+        "page": null,
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "MineHist #15: Start Year 1996, End Year 1996, Open cut mining commenced but was abandoned later that year due to pit-wall instability."
+      }
+    ],
+    "years_worked": [
+      {
+        "periods": [
+          {
+            "seq": 1,
+            "start_year": 1913,
+            "end_year": 1939,
+            "comment": "Historic mining was carried out along the north-west-striking Mount Coolon Lode.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 2,
+            "start_year": 1913,
+            "end_year": 1913,
+            "comment": "Mount Coolon deposit discovered by Luke Reynolds.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 7,
+            "start_year": 1987,
+            "end_year": 1988,
+            "comment": "Decline excavated by RGC. Terminated due to excessive water and bad ground conditions. Finished 200m short of original target of 895m.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 8,
+            "start_year": 1988,
+            "end_year": 1988,
+            "comment": "Completion of a feasibiltiy study by RGC to exploit the Mount Coolon Lode in an open-pit style mining method. Environmental Impact Assessment and lease application submitted.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 10,
+            "start_year": 1989,
+            "end_year": 1989,
+            "comment": "ACM Gold Ltd acquired RGC Ltd's 51% share in the Mount Coolon Joint Venture with Saracen Minerals NL. ACM reviewed feasibility study for open cut mining.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 12,
+            "start_year": 1991,
+            "end_year": 1991,
+            "comment": "Normandy Poseidon purchased ACM Gold Ltd's 51% interest in the Mount Coolon Joint Venture.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 13,
+            "start_year": 1993,
+            "end_year": 1993,
+            "comment": "Ross Mining NL purchased Normandy Poseidon's 51% share of the Mount Coolon Joint Venture with Saracen Minerals NL.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 14,
+            "start_year": 1995,
+            "end_year": 1995,
+            "comment": "Ross Mining NL purchased the remaining 49% of the Mount Coolon Joint Venture from Saracen Minerals NL.",
+            "mine_life_flag": null
+          },
+          {
+            "seq": 15,
+            "start_year": 1996,
+            "end_year": 1996,
+            "comment": "Open cut mining commenced but was abandoned later that year due to pit-wall instability.",
+            "mine_life_flag": null
+          }
+        ],
+        "entity": "Mount Coolon",
+        "source_ref": "MINOCC-2017:MineHist:41615",
+        "source_table": "MineHist",
+        "record_id": "SITE_NO 41615",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "MineHist: #1: 1913-1939 Historic mining was carried out along the north-west-striking Mount Coolon Lode. | #2: 1913-1913 Mount Coolon deposit discovered by Luke Reynolds. | #7: 1987-1988 Decline excavated by RGC. Terminated due to excessive water and bad ground conditions. Finished 200m short of original target of 895m. | #8: 1988-1988 Completion of a feasibiltiy study by RGC to exploit the Mount Coolon Lode in an open-pit style mining method. Environmental Impact Assessment and lease application submitted. | #10: 1989-1989 ACM Gold Ltd acquired RGC Ltd's 51% share in the Mount Coolon Joint Venture with Saracen Minerals NL. ACM reviewed feasibility study for open cut mining. | #12: 1991-1991 Normandy Poseidon purchased ACM Gold Ltd's 51% interest in the Mount Coolon Joint Venture. | #13: 1993-1993 Ross Mining NL purchased Normandy Poseidon's 51% share of the Mount Coolon Joint Venture with Saracen Minerals NL. | #14: 1995-1995 Ross Mining NL purchased the remaining 49% of the Mount Coolon Joint Venture from Saracen Minerals NL. | #15: 1996-1996 Open cut mining commenced but was abandoned later that year due to pit-wall instability."
+      }
+    ],
+    "ownership": [
+      {
+        "owner": "Mt Coolon Gold Mines Pty Ltd",
+        "role": "principal holder of exploration permit mineral 15902, mining lease 1029, mining lease 1085, mining lease 1086 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
+        "period_from": null,
+        "period_to": null,
+        "entity": "Mount Coolon",
+        "source_ref": "MINOCC-2017:Tenure:41615",
+        "source_table": "Tenure",
+        "record_id": "SITE_NO 41615",
+        "tenures": [
+          {
+            "type": "EXPLORATION PERMIT MINERAL",
+            "number": 15902
+          },
+          {
+            "type": "MINING LEASE",
+            "number": 1029
+          },
+          {
+            "type": "MINING LEASE",
+            "number": 1085
+          },
+          {
+            "type": "MINING LEASE",
+            "number": 1086
+          }
+        ],
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Tenure: Principal Holder Name MT COOLON GOLD MINES PTY LTD; EXPLORATION PERMIT MINERAL 15902, MINING LEASE 1029, MINING LEASE 1085, MINING LEASE 1086"
+      }
+    ],
+    "references": [
+      {
+        "cr_numbers": [
+          3596,
+          4078,
+          14682,
+          14809,
+          15476,
+          15568,
+          15893,
+          15969,
+          16449,
+          16567,
+          17105,
+          17474,
+          19239,
+          19248,
+          19358,
+          19881,
+          19995,
+          20003,
+          20310,
+          21042,
+          21430,
+          21431,
+          21789,
+          21966,
+          22128,
+          22178,
+          22720,
+          22837,
+          22921,
+          22922,
+          23595,
+          23936,
+          24218,
+          24782,
+          25511,
+          26876,
+          28591,
+          28592,
+          29784,
+          30767,
+          31648,
+          32792,
+          33251
+        ],
+        "source_ref": "MINOCC-2017:Company reports:41615",
+        "source_table": "Company reports",
+        "record_id": "SITE_NO 41615",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Company reports: CR 3596, CR 4078, CR 14682, CR 14809, CR 15476, CR 15568, CR 15893, CR 15969, CR 16449, CR 16567, CR 17105, CR 17474, CR 19239, CR 19248, CR 19358, CR 19881, CR 19995, CR 20003, CR 20310, CR 21042, CR 21430, CR 21431, CR 21789, CR 21966, CR 22128, CR 22178, CR 22720, CR 22837, CR 22921, CR 22922, CR 23595, CR 23936, CR 24218, CR 24782, CR 25511, CR 26876, CR 28591, CR 28592, CR 29784, CR 30767, CR 31648, CR 32792, CR 33251"
+      }
+    ],
+    "conflicts": [],
+    "not_found": [
+      "closure reason: the indexed sources give a closure year but quote no reason"
+    ],
+    "other_sites_with_same_name": [],
+    "dataset": {
+      "gsq_minocc_fetched": "2026-11-20",
+      "index_built": "2026-11-20",
+      "minocc_2017": {
+        "title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "licence": "CC BY 4.0 (as listed on the GSQ Open Data Portal / data.qld.gov.au dataset listing); (c) State of Queensland (Department of Natural Resources and Mines). The download's own PDFs state no licence."
+      },
+      "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
+    }
+  },
+  "rederived_at": "2026-11-21T17:32:37.645Z",
+  "attestation": {
+    "algorithm": "ed25519",
+    "sha256": "219712251a3cadc98e24e8b2cfda649e799b35ecb6e33c7fc849071ca493b687",
+    "signature": "AO4KcSaSSnpwYs19rOjg3WwhOu5DC+kc9imsrGBuD317m0ZIttw4KipyL0bSZcgvw1jTqJ+yCN72jj3RDnUSDQ==",
+    "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+  }
+}

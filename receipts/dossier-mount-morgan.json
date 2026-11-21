@@ -11,7 +11,9 @@
       "same_site": true,
       "name": "Mount Morgan",
       "location": "36 KM SOUTH-WEST OF ROCKHAMPTON, 90KM WNW OF GLADSTONE.",
-      "status": "ABANDONED MINE"
+      "status": "ABANDONED MINE",
+      "nearby_workings": 37,
+      "size_band": ">150 TONNES"
     },
     "production": {
       "gold": [
@@ -472,171 +474,6 @@
         "cost": 0.02
       }
     ],
-    "receipts_tie": {
-      "checked": 7,
-      "in_paid_answer": 3,
-      "rows": [
-        {
-          "source": "QLDGOV-MM",
-          "amount": 250,
-          "unit": "t",
-          "in_paid_answer": true
-        },
-        {
-          "source": "WP-MM",
-          "amount": 262,
-          "unit": "t",
-          "in_paid_answer": true
-        },
-        {
-          "source": "MINOCC-2017:Total_Ores_Prod:494270",
-          "amount": 294056,
-          "unit": "kg",
-          "in_paid_answer": true
-        },
-        {
-          "source": "MINOCC-2017:Production:494270:1",
-          "amount": 1835,
-          "unit": "kg",
-          "in_paid_answer": false
-        },
-        {
-          "source": "MINOCC-2017:Production:494270:2",
-          "amount": 157273,
-          "unit": "kg",
-          "in_paid_answer": false
-        },
-        {
-          "source": "MINOCC-2017:Production:494270:3",
-          "amount": 78788,
-          "unit": "kg",
-          "in_paid_answer": false
-        },
-        {
-          "source": "MINOCC-2017:Production:494270:4",
-          "amount": 56160,
-          "unit": "kg",
-          "in_paid_answer": false
-        }
-      ]
-    },
-    "open_questions": [
-      "tenure: 24 authorities show an expiry date in the past with status \"Granted\": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.",
-      "why it stopped in 1990: no source quotes a reason; do not assume exhaustion",
-      "who controls it: Norton Gold Fields Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly",
-      "who controls it: Mount Morgan Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly",
-      "production: QLDGOV-MM and MINOCC-2017:Total_Ores_Prod:494270 conflict (same period (1882–1990), 250 t against 294.1 t, 15% apart. Candidate explanation: MINOCC-2017 includes 56.2 t from dumps or tailings (1983–1990); without it, 237.9 t, 5% from 250 t. Needs the record to confirm); check whether they count recovered or contained gold, and whether tailings retreatment is included"
-    ],
-    "miner_conflicts": [
-      {
-        "field": "production gold (Mount Morgan mine)",
-        "values": [
-          {
-            "value": "250 t",
-            "source_ref": "QLDGOV-MM",
-            "period": "1882 to 1990"
-          },
-          {
-            "value": "262 t",
-            "source_ref": "WP-MM",
-            "period": "1882 to 1981"
-          }
-        ]
-      },
-      {
-        "field": "production copper (Mount Morgan mine)",
-        "values": [
-          {
-            "value": "360000 t",
-            "source_ref": "QLDGOV-MM",
-            "period": "1882 to 1990"
-          },
-          {
-            "value": "387000 t",
-            "source_ref": "WP-MM",
-            "period": "1882 to 1981"
-          }
-        ]
-      },
-      {
-        "field": "closure year (Mount Morgan mine)",
-        "values": [
-          {
-            "value": 1990,
-            "source_ref": "QLDGOV-MM"
-          },
-          {
-            "value": 1981,
-            "source_ref": "WP-MM"
-          }
-        ]
-      },
-      {
-        "field": "production gold, whole-site totals across sources (including MINOCC 2017)",
-        "comparison_basis": "compared in tonnes; kg and troy-oz values converted for the comparison only (1 troy oz = 31.1034768 g); a spread over 1% is listed",
-        "values": [
-          {
-            "value": "250 t",
-            "as_tonnes": 250,
-            "source_ref": "QLDGOV-MM",
-            "period": "1882 to 1990"
-          },
-          {
-            "value": "262 t",
-            "as_tonnes": 262,
-            "source_ref": "WP-MM",
-            "period": "1882 to 1981"
-          },
-          {
-            "value": "294056 kg",
-            "as_tonnes": 294.056,
-            "source_ref": "MINOCC-2017:Total_Ores_Prod:494270",
-            "period": "period not stated"
-          }
-        ]
-      },
-      {
-        "field": "production copper, whole-site totals across sources (including MINOCC 2017)",
-        "comparison_basis": "compared in tonnes; kg and troy-oz values converted for the comparison only (1 troy oz = 31.1034768 g); a spread over 1% is listed",
-        "values": [
-          {
-            "value": "360000 t",
-            "as_tonnes": 360000,
-            "source_ref": "QLDGOV-MM",
-            "period": "1882 to 1990"
-          },
-          {
-            "value": "387000 t",
-            "as_tonnes": 387000,
-            "source_ref": "WP-MM",
-            "period": "1882 to 1981"
-          },
-          {
-            "value": "360616 t",
-            "as_tonnes": 360616,
-            "source_ref": "MINOCC-2017:Total_Ores_Prod:494270",
-            "period": "period not stated"
-          }
-        ]
-      },
-      {
-        "field": "closure year, whole site, across sources (including MINOCC 2017)",
-        "values": [
-          {
-            "value": 1990,
-            "source_ref": "QLDGOV-MM"
-          },
-          {
-            "value": 1981,
-            "source_ref": "WP-MM"
-          },
-          {
-            "value": 1990,
-            "source_ref": "MINOCC-2017:MineHist:494270:6"
-          }
-        ]
-      }
-    ],
     "tenure": {
       "checked_at": "2026-11-21T17:17:59.345Z",
       "source": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer (Queensland Government, open data), read directly",
@@ -896,7 +733,172 @@
           "minerals": "CU,MO,ZN,PY,AG,AU"
         }
       ]
-    }
+    },
+    "receipts_tie": {
+      "checked": 7,
+      "in_paid_answer": 3,
+      "rows": [
+        {
+          "source": "QLDGOV-MM",
+          "amount": 250,
+          "unit": "t",
+          "in_paid_answer": true
+        },
+        {
+          "source": "WP-MM",
+          "amount": 262,
+          "unit": "t",
+          "in_paid_answer": true
+        },
+        {
+          "source": "MINOCC-2017:Total_Ores_Prod:494270",
+          "amount": 294056,
+          "unit": "kg",
+          "in_paid_answer": true
+        },
+        {
+          "source": "MINOCC-2017:Production:494270:1",
+          "amount": 1835,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:494270:2",
+          "amount": 157273,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:494270:3",
+          "amount": 78788,
+          "unit": "kg",
+          "in_paid_answer": false
+        },
+        {
+          "source": "MINOCC-2017:Production:494270:4",
+          "amount": 56160,
+          "unit": "kg",
+          "in_paid_answer": false
+        }
+      ]
+    },
+    "open_questions": [
+      "why it stopped in 1990: no source quotes a reason; do not assume exhaustion",
+      "tenure: 24 authorities show an expiry date in the past with status \"Granted\": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.",
+      "who controls it: Norton Gold Fields Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly",
+      "who controls it: Mount Morgan Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly",
+      "production: QLDGOV-MM and MINOCC-2017:Total_Ores_Prod:494270 conflict (same period (1882–1990), 250 t against 294.1 t, 15% apart. Candidate explanation: MINOCC-2017 includes 56.2 t from dumps or tailings (1983–1990); without it, 237.9 t, 5% from 250 t. Needs the record to confirm); check whether they count recovered or contained gold, and whether tailings retreatment is included"
+    ],
+    "miner_conflicts": [
+      {
+        "field": "production gold (Mount Morgan mine)",
+        "values": [
+          {
+            "value": "250 t",
+            "source_ref": "QLDGOV-MM",
+            "period": "1882 to 1990"
+          },
+          {
+            "value": "262 t",
+            "source_ref": "WP-MM",
+            "period": "1882 to 1981"
+          }
+        ]
+      },
+      {
+        "field": "production copper (Mount Morgan mine)",
+        "values": [
+          {
+            "value": "360000 t",
+            "source_ref": "QLDGOV-MM",
+            "period": "1882 to 1990"
+          },
+          {
+            "value": "387000 t",
+            "source_ref": "WP-MM",
+            "period": "1882 to 1981"
+          }
+        ]
+      },
+      {
+        "field": "closure year (Mount Morgan mine)",
+        "values": [
+          {
+            "value": 1990,
+            "source_ref": "QLDGOV-MM"
+          },
+          {
+            "value": 1981,
+            "source_ref": "WP-MM"
+          }
+        ]
+      },
+      {
+        "field": "production gold, whole-site totals across sources (including MINOCC 2017)",
+        "comparison_basis": "compared in tonnes; kg and troy-oz values converted for the comparison only (1 troy oz = 31.1034768 g); a spread over 1% is listed",
+        "values": [
+          {
+            "value": "250 t",
+            "as_tonnes": 250,
+            "source_ref": "QLDGOV-MM",
+            "period": "1882 to 1990"
+          },
+          {
+            "value": "262 t",
+            "as_tonnes": 262,
+            "source_ref": "WP-MM",
+            "period": "1882 to 1981"
+          },
+          {
+            "value": "294056 kg",
+            "as_tonnes": 294.056,
+            "source_ref": "MINOCC-2017:Total_Ores_Prod:494270",
+            "period": "period not stated"
+          }
+        ]
+      },
+      {
+        "field": "production copper, whole-site totals across sources (including MINOCC 2017)",
+        "comparison_basis": "compared in tonnes; kg and troy-oz values converted for the comparison only (1 troy oz = 31.1034768 g); a spread over 1% is listed",
+        "values": [
+          {
+            "value": "360000 t",
+            "as_tonnes": 360000,
+            "source_ref": "QLDGOV-MM",
+            "period": "1882 to 1990"
+          },
+          {
+            "value": "387000 t",
+            "as_tonnes": 387000,
+            "source_ref": "WP-MM",
+            "period": "1882 to 1981"
+          },
+          {
+            "value": "360616 t",
+            "as_tonnes": 360616,
+            "source_ref": "MINOCC-2017:Total_Ores_Prod:494270",
+            "period": "period not stated"
+          }
+        ]
+      },
+      {
+        "field": "closure year, whole site, across sources (including MINOCC 2017)",
+        "values": [
+          {
+            "value": 1990,
+            "source_ref": "QLDGOV-MM"
+          },
+          {
+            "value": 1981,
+            "source_ref": "WP-MM"
+          },
+          {
+            "value": 1990,
+            "source_ref": "MINOCC-2017:MineHist:494270:6"
+          }
+        ]
+      }
+    ]
   },
   "receipts": [
     {
@@ -1738,11 +1740,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T17:17:59.346Z",
+  "rederived_at": "2026-11-21T17:32:37.597Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "faa67af0434dba291518804f49c768cb6543a7e5805a83ffd254360db59665b0",
-    "signature": "TMcQbliGnEy8Xf07AzAkmojtfilBquJlWDk4NFjF5O3VYIxvBOviQgfnQtcDep0b4S7HOn2CULSNjyluOaxKAA==",
+    "sha256": "a5b9cd33ebd85503632debf18e55b400ba64fb61c4bbee933b1b108331a9fcb6",
+    "signature": "bAWIA+IDbpi7/itr829xcQrsjsq27B2DRlvRSE/GVNE6baNb1JXyQ+Lz6bdzPzodkAF0NT4cZoq7NMh9S0vWCg==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

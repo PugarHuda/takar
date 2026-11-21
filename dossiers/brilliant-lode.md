@@ -5,7 +5,8 @@ Built by Takar from Telegraph miners on 2026-11-21T16:14:19.801Z. Every finding 
 ## Identity
 
 - GSQ site 38722 (goldrush-qld-history) and 38722 (OathCast, live MINOCC): **same site**.
-- ABANDONED MINE, 1.1 KM ESE OF CHARTERS TOWERS.
+- ABANDONED MINE, 1.1 KM ESE OF CHARTERS TOWERS; gold size band 50 - 150 TONNES.
+- 99 other historical workings within 5 km (OathCast).
 
 ## Gold production
 
@@ -73,9 +74,9 @@ Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov
 
 ## Open questions (what the records do not settle)
 
-- tenure: 1 authorities show an expiry date in the past with status "Granted": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.
 - closure reason: the indexed sources give a closure year but quote no reason
 - why it stopped in 1917: no source quotes a reason; do not assume exhaustion
+- tenure: 1 authorities show an expiry date in the past with status "Granted": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.
 - who controls it: Brilliant Deep Levels Gold Mining Company could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly
 
 ## Receipts
