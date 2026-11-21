@@ -162,6 +162,8 @@ v1 (`0xfB5E…2808`) settled five deals on 20 Nov on one answer, with no window;
 
 Trust, stated plainly: the resolver key is ours. What limits it is the quorum, the second source, the window in which either party can dispute, and that every step points at public Telegraph signals.
 
+TakarSettle4 (0x2A615f7D3E52e9Ee68AB8CaaE3385bcbACCB2aBd) adds escalation: once both parties have disputed, every resolver must back the decision. The demo instance runs with threshold 1 so the escalation is visible (one resolver suffices until both parties dispute); at threshold 1 resolver 2's own check is advisory, so `scripts/settle3.mjs` refuses to deploy below 2 without `--unsafe-single`.
+
 ## Miner: Takar Outcome
 
 - Endpoint: `POST https://takar-outcome.vercel.app/api/resolve {"event": "..."}`. Registration YAML: `miner/takar-outcome.yaml`. Node id 20261117.

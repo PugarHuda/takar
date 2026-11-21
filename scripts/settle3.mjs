@@ -89,6 +89,7 @@ async function secondCheck(name, signals, met) {
 /** Resolver 2 checks for itself, then seconds. The hash is computed locally: RPC reads can lag a block. */
 async function back(id, name, signals, met, proposeTx) {
   const why = await secondCheck(name, signals, met);
+  if (why && (await settle(r1).deal(id)).finalizesAt > 0n) { console.log(`deal ${id}: WARNING resolver 2 disagrees (${why}) but this instance's threshold is already met: only a party's dispute can stop it now`); log({ action: "declined-too-late", id, why, propose: proposeTx }); return; }
   if (why) { console.log(`deal ${id}: resolver 2 declines to second: ${why}`); log({ action: "declined", id, why, propose: proposeTx }); return; }
   // RPC reads can lag the block that holds the proposal: wait until it is visible.
   let live = await settle(r1).deal(id);
@@ -101,11 +102,15 @@ async function back(id, name, signals, met, proposeTx) {
 }
 
 if (cmd === "deploy") {
+  // Threshold 2 by default: with 1, resolver 2's own check is advisory (a decline cannot block
+  // a window that is already open). A single-resolver instance needs an explicit --unsafe-single.
+  const threshold = Number(arg("threshold", "2"));
+  if (threshold < 2 && !process.argv.includes("--unsafe-single")) throw new Error("threshold < 2 makes the second check advisory; pass --unsafe-single to deploy it anyway");
   const f = new ethers.ContractFactory(artifact.abi, artifact.bytecode, r1);
-  const c = await f.deploy(USDC, [r1.address, r2.address], Number(arg("threshold", V4 ? "1" : "2")), Number(arg("liveness", "10")) * 60, ethers.parseUnits(String(arg("bond", "0.5")), 6));
+  const c = await f.deploy(USDC, [r1.address, r2.address], threshold, Number(arg("liveness", "10")) * 60, ethers.parseUnits(String(arg("bond", "0.5")), 6));
   await c.waitForDeployment();
   appendFileSync(".env", `\n${ENV}=${c.target}\n`);
-  console.log(`TakarSettle${V4 ? 4 : 3} at ${c.target}: resolvers ${r1.address}, ${r2.address}; threshold ${arg("threshold", V4 ? "1" : "2")}\n  ${tx(c.deploymentTransaction().hash)}`);
+  console.log(`TakarSettle${V4 ? 4 : 3} at ${c.target}: resolvers ${r1.address}, ${r2.address}; threshold ${threshold}\n  ${tx(c.deploymentTransaction().hash)}`);
 } else if (cmd === "open-screen") {
   const name = arg("name");
   if (!name) throw new Error("--name required");
