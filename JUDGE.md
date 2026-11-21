@@ -14,6 +14,28 @@ Takar is entered in Telegraph Hackathon Season II, in all three tracks, from one
 
 Site: https://takar-telegraph.vercel.app. MCP: `npx -y takar-mcp`. CI: `.github/workflows/test.yml`.
 
+## The second-opinion layer (what every app here runs on, and what other teams can use)
+
+Every team on Telegraph ends up writing its own cross-check:
+- Gold Rush's niche questions get routed to a general miner;
+- Ballast's ERCOT question got NYISO answers;
+- a top-ranked FX miner returned 1.0.
+
+Takar offers that check once, for any intent and any app:
+
+| Piece | Where | What it does |
+|---|---|---|
+| Second opinion | `POST https://takar-telegraph.vercel.app/api/second-opinion {intent, params}` | Asks two different miners, from different operators, directly by id, and compares their answers field by field: agree, disagree or insufficient. An "unresolved" answer is an abstention and brings in the next miner. It never averages. |
+| Open record of who was right | [EAS schema on Sepolia](https://sepolia.easscan.org/schema/view/0x351bc4ecf778660c8de0d42eb111e758469e1fe5ffc1b993899e399c9c056741), `GET /api/reputation?intent=` | Every check Takar bought is an attestation: miner, Telegraph signal, verdict against an independent truth. 74 so far. Anyone can attest; paid asks are ordered only by trusted attesters. |
+| Drop-in for agents | [`openapi.json`](https://takar-telegraph.vercel.app/openapi.json), `npx -y takar-mcp` (tools `second_opinion`, `miner_reputation`) | An HTTP tool for Minds and any agent framework. |
+| Meta-miner | Takar Outcome (20261117) | When its own sources cannot settle a past event, it answers only if two other miners agree. It never asks itself. |
+
+Try it: the board's "A second opinion for any Telegraph intent" box, or
+
+```
+curl -X POST https://takar-telegraph.vercel.app/api/second-opinion -H 'content-type: application/json'   -d '{"intent":"EVENT_OUTCOME_RESOLUTION_GENERAL","params":{"event":"Did France win the 2022 FIFA World Cup?"}}'
+```
+
 ## Check it in five minutes, with no wallet
 
 1. `npm install && npm test` runs 217 offline checks: the payment signers (exact and escrow), the fleet, the outcome resolver, the scorecard, Settle and the Mission 05 note. `cd onchain && forge install foundry-rs/forge-std --no-git && forge test` runs the 11 contract tests. No network, no funds.
