@@ -1,0 +1,662 @@
+{
+  "title": "lib/numeric.mjs on resolved Manifold markets it was not tuned on",
+  "generated_at": "2026-11-21T19:17:58.695Z",
+  "terms": [
+    "bitcoin 2023",
+    "bitcoin 2022",
+    "bitcoin 2025",
+    "bitcoin 2026",
+    "ethereum 2024",
+    "ethereum 2025",
+    "SP500",
+    "S&P 2024",
+    "S&P 2025",
+    "S&P 2026",
+    "WTI spot",
+    "unemployment rate 2024",
+    "unemployment rate 2025",
+    "gasoline price"
+  ],
+  "excluded": 366,
+  "summary": {
+    "markets": 70,
+    "answered": 37,
+    "right": 37,
+    "wrong": 0,
+    "unresolved": 10,
+    "not_taken": 23,
+    "accuracy": 1
+  },
+  "rows": [
+    {
+      "id": "Z3YoD0btI1ZNhg8NDPR0",
+      "url": "https://manifold.markets/NathanDickson/at-any-point-during-2023-will-bitco",
+      "question": "At any point during 2023 will bitcoin be worth over $100,000.00?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2023-01-01..2023-12-31 was 44223.94 on 2023-12-08, never above 100000.",
+      "right": true
+    },
+    {
+      "id": "137mn2oO71ABTfJnLiez",
+      "url": "https://manifold.markets/59cd/will-bitcoin-hit-100k-in-2023",
+      "question": "Will bitcoin hit 100k$ in 2023?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2023-01-01..2023-12-31 was 44223.94 on 2023-12-08, never at or above 100000.",
+      "right": true
+    },
+    {
+      "id": "16UklbqlMDQAcjqXXFwC",
+      "url": "https://manifold.markets/nick/will-bitcoin-close-above-31190-on-j",
+      "question": "Will bitcoin close above $31,190 on JULY 1, 2023?",
+      "market": "no",
+      "ours": "unresolved",
+      "evidence": "30585 on 2023-07-01 is within 3% of 31190; a daily close cannot settle that",
+      "right": null
+    },
+    {
+      "id": "i5dmGrKhbqxi7KYHEhT0",
+      "url": "https://manifold.markets/itsTomekK/will-bitcoin-transaction-fees-reach",
+      "question": "Will Bitcoin transaction fees reach $50 in 2023?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "0uNlsquudQ",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-120k-in-2025",
+      "question": "Bitcoin $120K in 2025?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2025-01-01..2025-12-31 was 124720.09 on 2025-10-05, at or above 120000.",
+      "right": true
+    },
+    {
+      "id": "zcu0pg080t",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-125k-in-2025",
+      "question": "Bitcoin $125K in 2025?",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "the highest daily close, 124720.09 on 2025-10-05, is within 10% of 125000; an intraday move may have crossed it",
+      "right": null
+    },
+    {
+      "id": "69EhtOsg2n",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-115k-in-2025",
+      "question": "Bitcoin $115K in 2025?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2025-01-01..2025-12-31 was 124720.09 on 2025-10-05, at or above 115000.",
+      "right": true
+    },
+    {
+      "id": "UnsISN6Qyd",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-150k-in-2025",
+      "question": "Bitcoin $150K in 2025?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2025-01-01..2025-12-31 was 124720.09 on 2025-10-05, never at or above 150000.",
+      "right": true
+    },
+    {
+      "id": "Cg0ZuCycdu",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-180k-in-2025",
+      "question": "Bitcoin $180K in 2025?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2025-01-01..2025-12-31 was 124720.09 on 2025-10-05, never at or above 180000.",
+      "right": true
+    },
+    {
+      "id": "t5EQgAhq0E",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-130k-in-2025",
+      "question": "Bitcoin $130K in 2025?",
+      "market": "no",
+      "ours": "unresolved",
+      "evidence": "the highest daily close, 124720.09 on 2025-10-05, is within 10% of 130000; an intraday move may have crossed it",
+      "right": null
+    },
+    {
+      "id": "0s5dzyp5cp",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-200k-in-2025",
+      "question": "Bitcoin $200K in 2025?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2025-01-01..2025-12-31 was 124720.09 on 2025-10-05, never at or above 200000.",
+      "right": true
+    },
+    {
+      "id": "E9s2zNgPCQ",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-160k-in-2025",
+      "question": "Bitcoin $160K in 2025?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2025-01-01..2025-12-31 was 124720.09 on 2025-10-05, never at or above 160000.",
+      "right": true
+    },
+    {
+      "id": "2U8pssIOR0",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-140k-in-2025",
+      "question": "Bitcoin $140K in 2025?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2025-01-01..2025-12-31 was 124720.09 on 2025-10-05, never at or above 140000.",
+      "right": true
+    },
+    {
+      "id": "C8StC6qU6l",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-240k-in-2025",
+      "question": "Bitcoin $240K in 2025?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2025-01-01..2025-12-31 was 124720.09 on 2025-10-05, never at or above 240000.",
+      "right": true
+    },
+    {
+      "id": "2HNod63yjKRGSt7oX6Qc",
+      "url": "https://manifold.markets/JonathanRay/will-bitcoin-be-over-100k-on-april",
+      "question": "Will bitcoin be over $100k on April 5, 2025?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 78370.75 on 2025-04-05, not above 100000.",
+      "right": true
+    },
+    {
+      "id": "Z0luy6nsQS",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-120k-by-q1-2025",
+      "question": "Bitcoin $120K by Q1 2025?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2025-01-01..2025-03-31 was 106159.26 on 2025-01-20, never at or above 120000.",
+      "right": true
+    },
+    {
+      "id": "5uUtcOEslL",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-100k-by-q1-2025",
+      "question": "Bitcoin $100K by Q1 2025?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2025-01-01..2025-03-31 was 106159.26 on 2025-01-20, at or above 100000.",
+      "right": true
+    },
+    {
+      "id": "ddhA5Ihhlg",
+      "url": "https://manifold.markets/Jack1/bitcoin-87500-in-september-2026",
+      "question": "Bitcoin $87,500 in September 2026?",
+      "market": "no",
+      "ours": "unresolved",
+      "evidence": "the highest daily close, 86396.74 on 2026-09-21, is within 10% of 87500; an intraday move may have crossed it",
+      "right": null
+    },
+    {
+      "id": "sgUZP8EzSq",
+      "url": "https://manifold.markets/Jack1/bitcoin-87500-in-october-2026",
+      "question": "Bitcoin $87,500 in October 2026?",
+      "market": "no",
+      "ours": "unresolved",
+      "evidence": "the highest daily close, 86423.68 on 2026-10-04, is within 10% of 87500; an intraday move may have crossed it",
+      "right": null
+    },
+    {
+      "id": "RAQt2s2RE9",
+      "url": "https://manifold.markets/alttest100a/will-bitcoin-hit-75k-in-february-20",
+      "question": "Will bitcoin hit $75K in February 2026?",
+      "market": "yes",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "6uRhIRNRph",
+      "url": "https://manifold.markets/ShyriSkunk/will-bitcoin-exceed-93000-usd-at-18",
+      "question": "Will Bitcoin exceed $93,000 USD at 18:00 UTC on January 21, 2026?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 89936.47 on 2026-01-21, not above 93000.",
+      "right": true
+    },
+    {
+      "id": "05P9LI9u8z",
+      "url": "https://manifold.markets/ShyriSkunk/will-bitcoin-exceed-93000-usd-at-18-Ptn8NQpPEA",
+      "question": "Will Bitcoin exceed $93,000 USD at 18:00 UTC on January 25, 2026?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 86978.89 on 2026-01-25, not above 93000.",
+      "right": true
+    },
+    {
+      "id": "iGNl0uQATkiV5xPFBgfv",
+      "url": "https://manifold.markets/xxxxx/will-ethereum-trade-above-5k-at-any-a299cbc76660",
+      "question": "Will Ethereum trade above $5k at any point in 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Ether (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 4072.22 on 2024-03-11, never above 5000.",
+      "right": true
+    },
+    {
+      "id": "JJWCaoP6wEMo6ncI75LU",
+      "url": "https://manifold.markets/CCat/will-ethereum-hit-4350-in-2024",
+      "question": "Will Ethereum hit $4350 in 2024?",
+      "market": "no",
+      "ours": "unresolved",
+      "evidence": "the highest daily close, 4072.22 on 2024-03-11, is within 10% of 4350; an intraday move may have crossed it",
+      "right": null
+    },
+    {
+      "id": "daUIeOhk8vNBtgrCpxz8",
+      "url": "https://manifold.markets/AlexRoux/will-ethereum-reach-8000-in-2024",
+      "question": "Will Ethereum reach $8,000 in 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Ether (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 4072.22 on 2024-03-11, never at or above 8000.",
+      "right": true
+    },
+    {
+      "id": "pam3XY9kvsb8ZhL80t3l",
+      "url": "https://manifold.markets/MRf09d/will-ethereum-reach-5000-in-2024",
+      "question": "Will Ethereum  Reach $5000  in 2024",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Ether (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 4072.22 on 2024-03-11, never at or above 5000.",
+      "right": true
+    },
+    {
+      "id": "seflCzKmSlkKUTA2iyG8",
+      "url": "https://manifold.markets/JimAusman/will-ethereum-trade-above-20k-at-an",
+      "question": "Will Ethereum trade above $20k at any point in 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Ether (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 4072.22 on 2024-03-11, never above 20000.",
+      "right": true
+    },
+    {
+      "id": "OVRrsvpYIdAe0LkyZKTV",
+      "url": "https://manifold.markets/predyx_markets/will-ethereum-hit-5k-in-2024",
+      "question": "Will Ethereum hit $5.5K in 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Ether (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 4072.22 on 2024-03-11, never at or above 5500.",
+      "right": true
+    },
+    {
+      "id": "Wn83OIRDODBYU9vSlSEy",
+      "url": "https://manifold.markets/BoltonBailey/will-ethereum-reach-a-new-alltime-h",
+      "question": "Will Ethereum reach a new All-Time High in 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Ether (Coinbase, USD, daily): highest close in 2024-01-01..2024-12-31 was 4072.22 on 2024-03-11; highest before it was 4805.95 on 2021-11-08 (FRED history from 2016-05-18).",
+      "right": true
+    },
+    {
+      "id": "IeCFEstx1pRWJkcdhRkX",
+      "url": "https://manifold.markets/CCat/will-ethereum-hit-3950-in-april-202",
+      "question": "Will Ethereum hit $3950 in April 2024?",
+      "market": "no",
+      "ours": "unresolved",
+      "evidence": "the highest daily close, 3699.13 on 2024-04-08, is within 10% of 3950; an intraday move may have crossed it",
+      "right": null
+    },
+    {
+      "id": "b19YsvV5pFNnNuLFSJTc",
+      "url": "https://manifold.markets/xxxxx/will-ethereum-trade-above-10k-at-an",
+      "question": "Will Ethereum trade above $10k at any point in 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Ether (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 4072.22 on 2024-03-11, never above 10000.",
+      "right": true
+    },
+    {
+      "id": "Raru4i0QbqSTF8yi0TFP",
+      "url": "https://manifold.markets/CCat/will-ethereum-hit-3830-in-april-202",
+      "question": "Will Ethereum hit $3830 in April 2024?",
+      "market": "no",
+      "ours": "unresolved",
+      "evidence": "the highest daily close, 3699.13 on 2024-04-08, is within 10% of 3830; an intraday move may have crossed it",
+      "right": null
+    },
+    {
+      "id": "EYI1R5XEiy3qAABsN0QB",
+      "url": "https://manifold.markets/CCat/will-ethereum-hit-3650-in-april-202",
+      "question": "Will Ethereum hit $3650 in April 2024?",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "the highest value, 3699.13 on 2024-04-08, is within 3% of 3650; another benchmark or exchange may not have crossed it",
+      "right": null
+    },
+    {
+      "id": "DKWUiuYuoD9enUVVMdax",
+      "url": "https://manifold.markets/predyx_markets/will-ethereum-hit-41k-in-april-2024",
+      "question": "Will Ethereum hit $4.1K in April 2024?",
+      "market": "no",
+      "ours": "unresolved",
+      "evidence": "the highest daily close, 3699.13 on 2024-04-08, is within 10% of 4100; an intraday move may have crossed it",
+      "right": null
+    },
+    {
+      "id": "2k8pnkluADgBo8HHUJI9",
+      "url": "https://manifold.markets/CCat/will-ethereum-hit-3450-in-april-202",
+      "question": "Will Ethereum hit $3450 in April 2024?",
+      "market": "yes",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "EPolFzdojE4u8xfeD4de",
+      "url": "https://manifold.markets/barak/will-the-sp-500-increase-in-2024",
+      "question": "Will the S&P 500 increase in 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): 4769.83 on 2023-12-29 (last before the window), 5881.63 on 2024-12-31 (last in it), 23.31%.",
+      "right": true
+    },
+    {
+      "id": "dBVWBDi1DKF4BRXiDZWq",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-2-on-a",
+      "question": "Will S&P 500 increase by over 2% on any day in Feb 2024?",
+      "market": "yes",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "HU49BjbQnPkC5lf52pxp",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-2-on-a-7487ffc28e90",
+      "question": "Will S&P 500 increase by over 2% on any day in Oct 2024?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "EI4DJxc7lc78ctXtxaY0",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-15-on-fd307a9f313b",
+      "question": "Will S&P 500 increase by over 1.5% on any day in May 2024?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "JLZycFnqCYoyHSlzRIPQ",
+      "url": "https://manifold.markets/bessarabov/will-sp-500-increase-in-2024",
+      "question": "Will S&P 500 increase in 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): 4769.83 on 2023-12-29 (last before the window), 5881.63 on 2024-12-31 (last in it), 23.31%.",
+      "right": true
+    },
+    {
+      "id": "gkPrLgP5eQDlBksPd5Yl",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-2-on-a-d4a067d27236",
+      "question": "Will S&P 500 increase by over 2% on any day in May 2024?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "xXVotM1ECOT2Sp9xnuRK",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-2-on-a-9d20f95085a5",
+      "question": "Will S&P 500 increase by over 2% on any day in Mar 2024?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "N3kWJrY8RgoZTxsKtgqX",
+      "url": "https://manifold.markets/Lunar/-will-the-sp-500-indexspinx-close-h-d2de23a5882b",
+      "question": "🏛⬆️ Will The S&P 500 (INDEXSP:.INX) Close Higher Than 5,299.99 At Any Point During 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): highest value in 2024-01-01..2024-12-31 was 6090.27 on 2024-12-06, above 5299.99.",
+      "right": true
+    },
+    {
+      "id": "tdgIeLDARWfp71aYEWmz",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-15-on-fee1c3e9184e",
+      "question": "Will S&P 500 increase by over 1.5% on any day in Apr 2024?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "WFlDb6LZxp6mdSjGTWcO",
+      "url": "https://manifold.markets/Lunar/-will-the-sp-500-indexspinx-close-l-a0ed92dcc724",
+      "question": "🏛⬆️ Will The S&P 500 (INDEXSP:.INX) Close Lower Than 4,499.99 At Any Point During Q2-Q4 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): lowest value in 2024-10-01..2024-12-31 was 5695.94 on 2024-10-07, never below 4499.99.",
+      "right": true
+    },
+    {
+      "id": "3S8p2GOiP5rZxhcebZul",
+      "url": "https://manifold.markets/Lunar/-will-the-sp-500-indexspinx-close-h-17e3f57ffc51",
+      "question": "🏛⬆️ Will The S&P 500 (INDEXSP:.INX) Close Higher Than 5,499.99 At Any Point During 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): highest value in 2024-01-01..2024-12-31 was 6090.27 on 2024-12-06, above 5499.99.",
+      "right": true
+    },
+    {
+      "id": "DdEC7HgwiTAY1IQZR3IF",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-15-on-d8196080c05f",
+      "question": "Will S&P 500 increase by over 1.5% on any day in Jul 2024?",
+      "market": "yes",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "dYubAL39GGCRAxV5t3lY",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-15-on-d2c7f4c392f2",
+      "question": "Will S&P 500 increase by over 1.5% on any day in Mar 2024?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "JFjAIkbwOJd4vF4Hav8Q",
+      "url": "https://manifold.markets/Lunar/-will-the-sp-500-indexspinx-close-h-537e7ffcdd2e",
+      "question": "🏛⬆️ Will The S&P 500 (INDEXSP:.INX) Close Higher Than 5,399.99 At Any Point During 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): highest value in 2024-01-01..2024-12-31 was 6090.27 on 2024-12-06, above 5399.99.",
+      "right": true
+    },
+    {
+      "id": "e8G5IPdpzXjBmVrl9iLL",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-15-on-993278f81b26",
+      "question": "Will S&P 500 increase by over 1.5% on any day in Nov 2024?",
+      "market": "yes",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "eqwEWAJZKzOL4ygvk4t6",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-15-on-82d767bfaa45",
+      "question": "Will S&P 500 increase by over 1.5% on any day in Aug 2024?",
+      "market": "yes",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "CylDVnvci4AaeTMsa9lg",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-2-on-a-c8db198a4720",
+      "question": "Will S&P 500 increase by over 2% on any day in Sep 2024?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "VzUy1RR8D3bXIbL5GYqT",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-2-on-a-f50263c02100",
+      "question": "Will S&P 500 increase by over 2% on any day in Apr 2024?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "wL7Z7yyIHHcHFBeUp6Qs",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-15-on-34f4f9b3f231",
+      "question": "Will S&P 500 increase by over 1.5% on any day in Oct 2024?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "fcsPgTqKa1FvHMowzeT8",
+      "url": "https://manifold.markets/Lunar/-will-the-sp-500-indexspinx-close-l-4a253821632b",
+      "question": "🏛⬆️ Will The S&P 500 (INDEXSP:.INX) Close Lower Than 4,899.99 At Any Point During Q2-Q4 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): lowest value in 2024-10-01..2024-12-31 was 5695.94 on 2024-10-07, never below 4899.99.",
+      "right": true
+    },
+    {
+      "id": "H6vs47acuRjKiKd4Huwn",
+      "url": "https://manifold.markets/Lunar/-will-the-sp-500-indexspinx-close-l-150a01b99b44",
+      "question": "🏛⬆️ Will The S&P 500 (INDEXSP:.INX) Close Lower Than 4,599.99 At Any Point During Q2-Q4 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): lowest value in 2024-10-01..2024-12-31 was 5695.94 on 2024-10-07, never below 4599.99.",
+      "right": true
+    },
+    {
+      "id": "hvTb0uFWpErSsF9XBXs7",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-2-on-a-617c4c573052",
+      "question": "Will S&P 500 increase by over 2% on any day in Jun 2024?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "mICPUZs8pnwrPOxAzMfm",
+      "url": "https://manifold.markets/Lunar/will-the-sp-500-indexspinx-close-at",
+      "question": "🏛⬆️ Will The S&P 500 (INDEXSP:.INX) Close Higher Than 5,199.99 At Any Point During 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): highest value in 2024-01-01..2024-12-31 was 6090.27 on 2024-12-06, above 5199.99.",
+      "right": true
+    },
+    {
+      "id": "0UhRMwBie68M9uyoA4Md",
+      "url": "https://manifold.markets/Lunar/-will-the-sp-500-indexspinx-close-h",
+      "question": "🏛 Will The S&P 500 (INDEXSP:.INX) Close Higher Than 4,899.99 At Any Point During 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): highest value in 2024-01-01..2024-12-31 was 6090.27 on 2024-12-06, above 4899.99.",
+      "right": true
+    },
+    {
+      "id": "63SVIETW4LiO66575t7U",
+      "url": "https://manifold.markets/Lunar/-will-the-sp-500-indexspinx-close-h-4050cf2c8d7b",
+      "question": "🏛⬆️ Will The S&P 500 (INDEXSP:.INX) Close Higher Than 5,099.99 At Any Point During 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): highest value in 2024-01-01..2024-12-31 was 6090.27 on 2024-12-06, above 5099.99.",
+      "right": true
+    },
+    {
+      "id": "fZOonARaPd1WTpgRSIX7",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-15-on-7aea63143e88",
+      "question": "Will S&P 500 increase by over 1.5% on any day in Sep 2024?",
+      "market": "yes",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "V2NvIvjHZySFwVmpY5BI",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-2-on-a-f1c4889333f1",
+      "question": "Will S&P 500 increase by over 2% on any day in Aug 2024?",
+      "market": "yes",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "fiWGATLPdozMzAT53gsS",
+      "url": "https://manifold.markets/Lunar/-will-the-sp-500-indexspinx-close-h-5ae7668cb7ee",
+      "question": "🏛⬆️ Will The S&P 500 (INDEXSP:.INX) Close Higher Than 5,249.99 At Any Point During 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): highest value in 2024-01-01..2024-12-31 was 6090.27 on 2024-12-06, above 5249.99.",
+      "right": true
+    },
+    {
+      "id": "hOatK4RH84jzU5E7EgQ8",
+      "url": "https://manifold.markets/Lunar/-will-the-sp-500-indexspinx-close-h-ee554f99b769",
+      "question": "🏛⬆️ Will The S&P 500 (INDEXSP:.INX) Close Higher Than 4,999.99 At Any Point During 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): highest value in 2024-01-01..2024-12-31 was 6090.27 on 2024-12-06, above 4999.99.",
+      "right": true
+    },
+    {
+      "id": "Z9ZsnvYVSXEqHakjLvV0",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-15-on-df76896e82ef",
+      "question": "Will S&P 500 increase by over 1.5% on any day in Jun 2024?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "Z9wgLBoFqiMSO0MasBjQ",
+      "url": "https://manifold.markets/Lunar/-will-the-sp-500-indexspinx-close-l-845546e75768",
+      "question": "🏛⬆️ Will The S&P 500 (INDEXSP:.INX) Close Lower Than 4,799.99 At Any Point During Q2-Q4 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): lowest value in 2024-10-01..2024-12-31 was 5695.94 on 2024-10-07, never below 4799.99.",
+      "right": true
+    },
+    {
+      "id": "i5PvsWrf5hpMmLV7cPwJ",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-2-on-a-f59b9f1204a3",
+      "question": "Will S&P 500 increase by over 2% on any day in Nov 2024?",
+      "market": "yes",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "kK5TVtWCeeROPRZ84ajj",
+      "url": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-2-on-a-0acb932925ce",
+      "question": "Will S&P 500 increase by over 2% on any day in Jul 2024?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "uEA1w0nL20V3fQZFDiu9",
+      "url": "https://manifold.markets/Ernie/will-the-sp-500-increase-by-over-10-8e7c3c86a15e",
+      "question": "Will the S&P 500 increase by over 10% in Q3 2024?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "hK4TPo7VsXr2nvm9Hwdo",
+      "url": "https://manifold.markets/benjaminIkuta/will-the-sp-500-index-reach-a-new-a-c3961474a3b6",
+      "question": "Will the S&P 500 index reach a new all-time high in 2025?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): highest close in 2025-01-01..2025-12-31 was 6932.05 on 2025-12-24; highest before it was 6090.27 on 2024-12-06 (FRED history from 2016-11-21).",
+      "right": true
+    }
+  ]
+}

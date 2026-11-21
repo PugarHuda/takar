@@ -1,0 +1,723 @@
+{
+  "title": "lib/numeric.mjs on resolved Manifold markets it was not tuned on",
+  "generated_at": "2026-11-21T19:16:31.464Z",
+  "terms": [
+    "bitcoin price end",
+    "bitcoin reach",
+    "BTC above",
+    "ether above",
+    "S&P close above",
+    "S&P 500 end of",
+    "stock market",
+    "crude oil spot",
+    "unemployment above",
+    "gas prices",
+    "bitcoin below",
+    "S&P 500 below"
+  ],
+  "excluded": 289,
+  "summary": {
+    "markets": 77,
+    "answered": 57,
+    "right": 50,
+    "wrong": 7,
+    "unresolved": 18,
+    "not_taken": 2,
+    "accuracy": 0.8772
+  },
+  "rows": [
+    {
+      "id": "sUlPnlA9cq",
+      "url": "https://manifold.markets/ShyriSkunk/will-bitcoin-exceed-97000-before-no",
+      "question": "Will Bitcoin exceed $97,000 before noon (12:00 pm) on January 19, 2026?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 92572.21 on 2026-01-19, not above 97000.",
+      "right": true
+    },
+    {
+      "id": "QE8gNndUlC",
+      "url": "https://manifold.markets/ShyriSkunk/will-bitcoin-exceed-92000-usd-at-18",
+      "question": "Will Bitcoin exceed $92,000 USD at 18:00 UTC on January 22, 2026?",
+      "market": "no",
+      "ours": "unresolved",
+      "evidence": "89522.33 on 2026-01-22 is within 3% of 92000; a daily close cannot settle that",
+      "right": null
+    },
+    {
+      "id": "zgTlZgWS9mIlss9aYNd5",
+      "url": "https://manifold.markets/Athena/will-bitcoin-increase-in-february-2",
+      "question": "Will Bitcoin increase in February 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 42599.49 on 2024-01-31 (last before the window), 61240.13 on 2024-02-29 (last in it), 43.76%.",
+      "right": true
+    },
+    {
+      "id": "u8UuypuNzQ",
+      "url": "https://manifold.markets/100Anonymous/will-bitcoin-reach-90k-usd-in-may-2",
+      "question": "Will Bitcoin reach $90K USD in May 2026?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2026-05-01..2026-05-31 was 82103.78 on 2026-05-10, never at or above 90000.",
+      "right": true
+    },
+    {
+      "id": "QpRgO2ZySc",
+      "url": "https://manifold.markets/TrustMe/will-bitcoin-reach-200k-in-2025",
+      "question": "Will Bitcoin reach $200K in 2025?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2025-01-01..2025-12-31 was 124720.09 on 2025-10-05, never at or above 200000.",
+      "right": true
+    },
+    {
+      "id": "2pOoXsxjVDydNzp3V0Nm",
+      "url": "https://manifold.markets/NathanDickson/will-bitcoin-reach-90000-in-2024",
+      "question": "Will Bitcoin reach $90000 in 2024",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 106136.99 on 2024-12-16, at or above 90000.",
+      "right": true
+    },
+    {
+      "id": "WtE2klkdBI0MmNY0DceQ",
+      "url": "https://manifold.markets/DavidJohansson/will-bitcoin-reach-38000-in-2023",
+      "question": "Will Bitcoin reach 38000 in 2023?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2023-01-01..2023-12-31 was 44223.94 on 2023-12-08, at or above 38000.",
+      "right": true
+    },
+    {
+      "id": "xhuheRWi0nS379bNIAuU",
+      "url": "https://manifold.markets/NathanDickson/will-bitcoin-reach-80000-in-2024",
+      "question": "Will Bitcoin reach $80000 in 2024",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 106136.99 on 2024-12-16, at or above 80000.",
+      "right": true
+    },
+    {
+      "id": "gZrfQUin7DyAd2emHZBc",
+      "url": "https://manifold.markets/LandynMcAfee/will-bitcoin-reach-60000-in-2024-bf0412b0af0b",
+      "question": "Will Bitcoin reach $60,000 in 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 106136.99 on 2024-12-16, at or above 60000.",
+      "right": true
+    },
+    {
+      "id": "dc7fjmOcxZDMmiYo25MZ",
+      "url": "https://manifold.markets/CrptoYeti/will-bitcoin-reach-a-new-all-time-h",
+      "question": "Will Bitcoin reach a new all time high in USD in 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest close in 2024-01-01..2024-12-31 was 106136.99 on 2024-12-16; highest before it was 67510.06 on 2021-11-08 (FRED history from 2014-12-01).",
+      "right": true
+    },
+    {
+      "id": "A8Gl4TCf9jMbt5VDSDGm",
+      "url": "https://manifold.markets/NathanDickson/will-bitcoin-reach-70000-in-2024",
+      "question": "Will Bitcoin reach $70000 in 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 106136.99 on 2024-12-16, at or above 70000.",
+      "right": true
+    },
+    {
+      "id": "6jWh8DGO9UJ3XJHHgWLQ",
+      "url": "https://manifold.markets/NathanDickson/will-bitcoin-reach-50000-in-2024",
+      "question": "Will Bitcoin reach $50000 in 2024",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 106136.99 on 2024-12-16, at or above 50000.",
+      "right": true
+    },
+    {
+      "id": "4Sec94nD8oJqoOttuFy9",
+      "url": "https://manifold.markets/SyedKhaled/will-bitcoin-reach-80000-in-march-2",
+      "question": "Will Bitcoin reach $80,000 in March 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2024-03-01..2024-03-31 was 73098.48 on 2024-03-13, never at or above 80000.",
+      "right": true
+    },
+    {
+      "id": "hPKmOPNWotSADIEfyGUK",
+      "url": "https://manifold.markets/AlexLiesman/will-bitcoin-reach-69420-in-2023",
+      "question": "Will Bitcoin reach $69,420 in 2023?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2023-01-01..2023-12-31 was 44223.94 on 2023-12-08, never at or above 69420.",
+      "right": true
+    },
+    {
+      "id": "CVL936s7pZwzH4iuPXc6",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-reach-60k-in-feb-2024",
+      "question": "Will Bitcoin reach $60K in Feb 2024",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2024-02-01..2024-02-29 was 62479.39 on 2024-02-28, at or above 60000.",
+      "right": true
+    },
+    {
+      "id": "Wx1cIOB3haJGhPjpKiut",
+      "url": "https://manifold.markets/ShadequesterShadequester/will-bitcoin-reach-30000-in-april-2",
+      "question": "Will bitcoin reach $30000 in April 2023",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "the highest value, 30493.72 on 2023-04-14, is within 3% of 30000; another benchmark or exchange may not have crossed it",
+      "right": null
+    },
+    {
+      "id": "do9AOaDqOUwD8la5mGsY",
+      "url": "https://manifold.markets/NathanDickson/will-bitcoin-reach-60000-in-2024",
+      "question": "Will Bitcoin reach $60000 in 2024",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 106136.99 on 2024-12-16, at or above 60000.",
+      "right": true
+    },
+    {
+      "id": "hrTVHfaD4hqsNx5s2hZF",
+      "url": "https://manifold.markets/Zoe/will-the-bitcoin-lightning-network",
+      "question": "Will the Bitcoin lightning network reach a public capacity of at least 8000 BTC in 2023?",
+      "market": "no",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2023-01-01..2023-12-31 was 44223.94 on 2023-12-08, at or above 8000.",
+      "right": false
+    },
+    {
+      "id": "QH7QPMaCT0XzSbCc48gx",
+      "url": "https://manifold.markets/nick/btc-week-94910-will-bitcoin-close-a",
+      "question": "(BTC week: 9/4-9/10) Will bitcoin close above $25,969 on September 10, 2023?",
+      "market": "no",
+      "ours": "unresolved",
+      "evidence": "25835.33 on 2023-09-10 is within 3% of 25969; a daily close cannot settle that",
+      "right": null
+    },
+    {
+      "id": "jEVt2j9wvve6GYDRGLZW",
+      "url": "https://manifold.markets/nick/btc-week-73186-will-bitcoin-close-a",
+      "question": "(BTC week: 7/31-8/6) Will bitcoin close above $29,230 on August 6, 2023?",
+      "market": "no",
+      "ours": "unresolved",
+      "evidence": "29040.44 on 2023-08-06 is within 3% of 29230; a daily close cannot settle that",
+      "right": null
+    },
+    {
+      "id": "MhTCcG9aDvQ8J6X8v7UB",
+      "url": "https://manifold.markets/nick/btc-week-911917-will-bitcoin-close",
+      "question": "(BTC week: 9/11-9/17) Will bitcoin close above $25,834 on September 17, 2023?",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "26533.6 on 2023-09-17 is within 3% of 25834; a daily close cannot settle that",
+      "right": null
+    },
+    {
+      "id": "zPEscD3tzis7oYmm7ubx",
+      "url": "https://manifold.markets/nick/btc-week-87813-will-bitcoin-close-a",
+      "question": "(BTC week: 8/7-8/13) Will bitcoin close above $29,043 on August 13, 2023?",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "29267.56 on 2023-08-13 is within 3% of 29043; a daily close cannot settle that",
+      "right": null
+    },
+    {
+      "id": "IkxCZ1KxXUgH2EFy6Pbd",
+      "url": "https://manifold.markets/navitron32/will-gme-reach-50-before-ether-end",
+      "question": "Will GME reach $50 before ether end of June 2024",
+      "market": "yes",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "UNI96QlSSl",
+      "url": "https://manifold.markets/CalibratedGhosts/will-us-average-gas-price-exceed-4g",
+      "question": "Will US average gas price exceed $4/gallon in March 2026?",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "the highest value, 3.99 on 2026-03-30, is within 1% of 4; an intraday move may have crossed it",
+      "right": null
+    },
+    {
+      "id": "RhdEh5pq5C",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-below-80k-in-2026",
+      "question": "Bitcoin below $80K in 2026?",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "the window this question names has not ended yet",
+      "right": null
+    },
+    {
+      "id": "Zuc5sqQCCS",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-below-90k-in-2025",
+      "question": "Bitcoin below $90K in 2025?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2025-01-01..2025-12-31 was 76251.64 on 2025-04-07, below 90000.",
+      "right": true
+    },
+    {
+      "id": "2np9Otu5lI",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-below-60k-in-2026",
+      "question": "Bitcoin below $60K in 2026?",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "the window this question names has not ended yet",
+      "right": null
+    },
+    {
+      "id": "hKB9iD8knG4R2RuSyyCu",
+      "url": "https://manifold.markets/bitSanjay/will-bitcoin-reach-100k-in-2024",
+      "question": "Will Bitcoin hit $100K in 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 106136.99 on 2024-12-16, at or above 100000.",
+      "right": true
+    },
+    {
+      "id": "0OL5IRPCuc",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-below-65k-in-2026",
+      "question": "Bitcoin below $65K in 2026?",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "the window this question names has not ended yet",
+      "right": null
+    },
+    {
+      "id": "zNhIAlCAhL",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-below-100k-in-2025",
+      "question": "Bitcoin below $100K in 2025?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2025-01-01..2025-12-31 was 76251.64 on 2025-04-07, below 100000.",
+      "right": true
+    },
+    {
+      "id": "lRh02czlLC",
+      "url": "https://manifold.markets/strutheo/will-bitcoin-drop-down-below-40000",
+      "question": "Will Bitcoin drop down below $40,000 in 2025?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2025-01-01..2025-12-31 was 76251.64 on 2025-04-07, never below 40000.",
+      "right": true
+    },
+    {
+      "id": "nRAUlqAO5E",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-below-75k-in-2026",
+      "question": "Bitcoin below $75K in 2026?",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "the window this question names has not ended yet",
+      "right": null
+    },
+    {
+      "id": "SNO2qS8ORz",
+      "url": "https://manifold.markets/Soli/will-bitcoin-go-below-80k-in-2025",
+      "question": "Will bitcoin go below $80k in 2025?",
+      "market": "no",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2025-01-01..2025-12-31 was 76251.64 on 2025-04-07, below 80000.",
+      "right": false
+    },
+    {
+      "id": "qgRERdnIC5",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-below-70k-in-2026",
+      "question": "Bitcoin below $70K in 2026?",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "the window this question names has not ended yet",
+      "right": null
+    },
+    {
+      "id": "25QZ5yn8hQ",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-below-80k-in-2025",
+      "question": "Bitcoin below $80K in 2025?",
+      "market": "no",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2025-01-01..2025-12-31 was 76251.64 on 2025-04-07, below 80000.",
+      "right": false
+    },
+    {
+      "id": "I2nZzzsIyp",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-below-78k-in-2025",
+      "question": "Bitcoin below $78K in 2025?",
+      "market": "no",
+      "ours": "unresolved",
+      "evidence": "the lowest value, 76251.64 on 2025-04-07, is within 3% of 78000; another benchmark or exchange may not have crossed it",
+      "right": null
+    },
+    {
+      "id": "s9RuAhd9RQ",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-below-84k-in-2025",
+      "question": "Bitcoin below $84K in 2025?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2025-01-01..2025-12-31 was 76251.64 on 2025-04-07, below 84000.",
+      "right": true
+    },
+    {
+      "id": "tRyIdZId2O",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-below-82k-in-2025",
+      "question": "Bitcoin below $82K in 2025?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2025-01-01..2025-12-31 was 76251.64 on 2025-04-07, below 82000.",
+      "right": true
+    },
+    {
+      "id": "hnOz68CP9N",
+      "url": "https://manifold.markets/predyx_markets/bitcoin-below-75k-in-2025",
+      "question": "Bitcoin below $75K in 2025?",
+      "market": "no",
+      "ours": "unresolved",
+      "evidence": "the lowest value, 76251.64 on 2025-04-07, is within 3% of 75000; an intraday move may have crossed it",
+      "right": null
+    },
+    {
+      "id": "9tOC8qzEnd",
+      "url": "https://manifold.markets/deleted007/will-bitcoin-fall-below-60k-at-any",
+      "question": "Will Bitcoin fall below $60k at any point in 2025?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2025-01-01..2025-12-31 was 76251.64 on 2025-04-07, never below 60000.",
+      "right": true
+    },
+    {
+      "id": "8QzyENP8ut",
+      "url": "https://manifold.markets/strutheo/will-bitcoin-drop-down-below-50000",
+      "question": "Will Bitcoin drop down below $50,000 in 2025?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2025-01-01..2025-12-31 was 76251.64 on 2025-04-07, never below 50000.",
+      "right": true
+    },
+    {
+      "id": "cYMCpGxzM1ycJTlslhqO",
+      "url": "https://manifold.markets/BTE/will-bitcoin-drop-below-35000-durin",
+      "question": "Will bitcoin drop below $35,000 during 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-01-01..2024-12-31 was 39547.64 on 2024-01-22, never below 35000.",
+      "right": true
+    },
+    {
+      "id": "ustfYb5tXMVeL4U6fM84",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-go-below-58k-in-march",
+      "question": "Will Bitcoin go below $58K in March 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-03-01..2024-03-31 was 61977.96 on 2024-03-19, never below 58000.",
+      "right": true
+    },
+    {
+      "id": "dW5GPypWgFMXuYxrvAoG",
+      "url": "https://manifold.markets/ShaikhNiyaz/will-bitcoin-drop-below-50k-in-2024",
+      "question": "Will Bitcoin Drop below 50K$ in 2024 ?",
+      "market": "no",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-01-01..2024-12-31 was 39547.64 on 2024-01-22, below 50000.",
+      "right": false
+    },
+    {
+      "id": "CMgUgGSVhQ0Df16JEHDS",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-go-below-60k-in-april",
+      "question": "Will Bitcoin go below $60K in April 2024?",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "the lowest value, 60690.8 on 2024-04-30, is within 3% of 60000; an intraday move may have crossed it",
+      "right": null
+    },
+    {
+      "id": "C1gsBdDLXane9HH1RRI8",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-go-below-58k-in-april",
+      "question": "Will Bitcoin go below $58K in April 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-04-01..2024-04-30 was 60690.8 on 2024-04-30, never below 58000.",
+      "right": true
+    },
+    {
+      "id": "JObijq71JPpjvZsB6Whw",
+      "url": "https://manifold.markets/brianwang/will-bitcoin-go-below-55000-in-may",
+      "question": "Will bitcoin go below $55000 in May 2024",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-05-01..2024-05-31 was 58278.09 on 2024-05-01, never below 55000.",
+      "right": true
+    },
+    {
+      "id": "KJxCIYLSpUN7NkiKeM5a",
+      "url": "https://manifold.markets/BTE/will-bitcoin-drop-below-20000-durin",
+      "question": "Will bitcoin drop below $20,000 during 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-01-01..2024-12-31 was 39547.64 on 2024-01-22, never below 20000.",
+      "right": true
+    },
+    {
+      "id": "9tzpF6rh5PzYg4tMXdKp",
+      "url": "https://manifold.markets/Quin/will-bitcoin-drop-below-38k-in-2024",
+      "question": "Will bitcoin drop below 38k in 2024",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-01-01..2024-12-31 was 39547.64 on 2024-01-22, never below 38000.",
+      "right": true
+    },
+    {
+      "id": "pudCWTD8ayO7qfFVAJNV",
+      "url": "https://manifold.markets/BTE/will-bitcoin-drop-below-25000-durin",
+      "question": "Will bitcoin drop below $25,000 during 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-01-01..2024-12-31 was 39547.64 on 2024-01-22, never below 25000.",
+      "right": true
+    },
+    {
+      "id": "YJxEuxI2tpzBErNDZecw",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-go-below-48k-in-march",
+      "question": "Will Bitcoin go below $48K in March 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-03-01..2024-03-31 was 61977.96 on 2024-03-19, never below 48000.",
+      "right": true
+    },
+    {
+      "id": "KH4CaH5ilnyi8y2h4PM5",
+      "url": "https://manifold.markets/itsTomekK/will-bitcoin-go-below-30000-in-2024",
+      "question": "Will Bitcoin go below $30,000 in 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-01-01..2024-12-31 was 39547.64 on 2024-01-22, never below 30000.",
+      "right": true
+    },
+    {
+      "id": "jHzQOcYC5gPd9DjW0G3U",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-dip-below-60k-in-march",
+      "question": "Will Bitcoin dip below $60K in March 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-03-01..2024-03-31 was 61977.96 on 2024-03-19, never below 60000.",
+      "right": true
+    },
+    {
+      "id": "v5unqilzf4",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-go-below-52k-in-july-2",
+      "question": "Will Bitcoin go below $52K in July 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-07-01..2024-07-31 was 55913.47 on 2024-07-07, never below 52000.",
+      "right": true
+    },
+    {
+      "id": "XL7hDzoSSCnhXvS3i9a5",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-go-below-48k-in-2024",
+      "question": "Will Bitcoin go below $48K in 2024?",
+      "market": "no",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-01-01..2024-12-31 was 39547.64 on 2024-01-22, below 48000.",
+      "right": false
+    },
+    {
+      "id": "4dFBxFRJL6eFqqT7cXGe",
+      "url": "https://manifold.markets/itsTomekK/will-bitcoin-go-below-20000-in-2024",
+      "question": "Will Bitcoin go below $20,000 in 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-01-01..2024-12-31 was 39547.64 on 2024-01-22, never below 20000.",
+      "right": true
+    },
+    {
+      "id": "o28q5wwg69",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-go-below-58k-in-july-2",
+      "question": "Will Bitcoin go below $58K in July 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-07-01..2024-07-31 was 55913.47 on 2024-07-07, below 58000.",
+      "right": true
+    },
+    {
+      "id": "rkqcy6rke",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-go-below-55k-in-july-2",
+      "question": "Will Bitcoin go below $55K in July 2024?",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "the lowest value, 55913.47 on 2024-07-07, is within 3% of 55000; an intraday move may have crossed it",
+      "right": null
+    },
+    {
+      "id": "e33fo8tt0i",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-go-below-50k-in-july-2",
+      "question": "Will Bitcoin go below $50K in July 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-07-01..2024-07-31 was 55913.47 on 2024-07-07, never below 50000.",
+      "right": true
+    },
+    {
+      "id": "AafpTryeRZABnnJP8iOt",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-go-below-55k-in-march",
+      "question": "Will Bitcoin go below $55K in March 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-03-01..2024-03-31 was 61977.96 on 2024-03-19, never below 55000.",
+      "right": true
+    },
+    {
+      "id": "FdPc1h3uwkfyQxbVQQ3J",
+      "url": "https://manifold.markets/Gigacasting/will-bitcoin-go-below-15k-for-at-le",
+      "question": "Will Bitcoin go below $15k for at least 24 hours before Q4 2022?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "MdvcK9v2yT1JYY144ENz",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-go-below-52k-in-march",
+      "question": "Will Bitcoin go below $52K in March 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-03-01..2024-03-31 was 61977.96 on 2024-03-19, never below 52000.",
+      "right": true
+    },
+    {
+      "id": "o9yWZWDqEJlrBPurggFm",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-dip-below-25k-in-2024",
+      "question": "Will Bitcoin dip below $25K in 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-01-01..2024-12-31 was 39547.64 on 2024-01-22, never below 25000.",
+      "right": true
+    },
+    {
+      "id": "GXgQ3XMJNTmqJbVFXtqW",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-go-below-48k-in-feb-20",
+      "question": "Will Bitcoin go below $48K in Feb 2024?",
+      "market": "no",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-02-01..2024-02-29 was 42566.63 on 2024-02-04, below 48000.",
+      "right": false
+    },
+    {
+      "id": "ePUh3o17Ji5xeERc7JFS",
+      "url": "https://manifold.markets/itsTomekK/will-bitcoin-go-below-40000-in-2024",
+      "question": "Will Bitcoin go below $40,000 in 2024?",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "the lowest value, 39547.64 on 2024-01-22, is within 3% of 40000; another benchmark or exchange may not have crossed it",
+      "right": null
+    },
+    {
+      "id": "DmYEAqnIUFad9PSTm3dY",
+      "url": "https://manifold.markets/nick/will-bitcoin-close-below-26970-on-n",
+      "question": "Will bitcoin close below $26,970 on November 1, 2023?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 35469.43 on 2023-11-01, not below 26970.",
+      "right": true
+    },
+    {
+      "id": "y8szZsy5O0",
+      "url": "https://manifold.markets/AndrewCrosse/will-bitcoin-drop-below-85000-at-an",
+      "question": "Will bitcoin drop below $85,000 at any point during 2025.",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2025-01-01..2025-12-31 was 76251.64 on 2025-04-07, below 85000.",
+      "right": true
+    },
+    {
+      "id": "bJgQ5907eSqI9LhexGFr",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-go-below-50k-in-march",
+      "question": "Will Bitcoin go below $50K in March 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-03-01..2024-03-31 was 61977.96 on 2024-03-19, never below 50000.",
+      "right": true
+    },
+    {
+      "id": "8y0qWCF1QPziaEeWmloo",
+      "url": "https://manifold.markets/nick/btc-week-9251001-will-bitcoin-close",
+      "question": "(BTC week: 9/25-10/01) Will bitcoin close below $26,250 on October 1, 2023?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 27994.89 on 2023-10-01, not below 26250.",
+      "right": true
+    },
+    {
+      "id": "chfnJs5wnmTkK98eI0yt",
+      "url": "https://manifold.markets/nick/btc-week-10021008-will-bitcoin-clos",
+      "question": "(BTC week: 10/02-10/08) Will bitcoin close below $26,970 on October 8, 2023?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 27937.62 on 2023-10-08, not below 26970.",
+      "right": true
+    },
+    {
+      "id": "ngSqdonEAKuGmqWxS6Zy",
+      "url": "https://manifold.markets/nick/btc-week-917924-will-bitcoin-close",
+      "question": "(BTC week: 9/17-9/24) Will bitcoin close below $26,538 on September 24, 2023?",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "26229.29 on 2023-09-24 is within 3% of 26538; a daily close cannot settle that",
+      "right": null
+    },
+    {
+      "id": "s65q0ybvop",
+      "url": "https://manifold.markets/predyx_markets/will-bitcoin-go-below-52k-in-august",
+      "question": "Will Bitcoin go below $52K in August 2024?",
+      "market": "yes",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): lowest value in 2024-08-01..2024-08-31 was 54025.9 on 2024-08-05, never below 52000.",
+      "right": false
+    },
+    {
+      "id": "UGe9f18bwMcJJUO3ZBW5",
+      "url": "https://manifold.markets/nick/btc-week-10161022-will-bitcoin-clos",
+      "question": "(BTC week: 10/16-10/22) Will bitcoin close below $26,861 on October 22, 2023?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 29988.13 on 2023-10-22, not below 26861.",
+      "right": true
+    },
+    {
+      "id": "kMAI2yHW3Ti5ahekIc14",
+      "url": "https://manifold.markets/kenmichaels/will-the-sp-500-close-below-3600-on",
+      "question": "Will the S&P 500 close below 3600 on Dec 30, 2022?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): 3839.5 on 2022-12-30, not below 3600.",
+      "right": true
+    },
+    {
+      "id": "pflxMMeSAw9jPL47x1ky",
+      "url": "https://manifold.markets/HarrisonLucas/sp-500-closes-below-3200-in-2022",
+      "question": "S&P 500 closes below 3200 in 2022",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): lowest value in 2022-01-01..2022-12-31 was 3577.03 on 2022-10-12, never below 3200.",
+      "right": true
+    },
+    {
+      "id": "Qw4XfyB68hIQXmHbJgjZ",
+      "url": "https://manifold.markets/Keepcalmandchill/sp-500-will-go-below-3000-during-20",
+      "question": "S&P 500 will go below 3000 during 2022",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): lowest value in 2022-01-01..2022-12-31 was 3577.03 on 2022-10-12, never below 3000.",
+      "right": true
+    },
+    {
+      "id": "hLhWhotBtzylO2cjfH4O",
+      "url": "https://manifold.markets/BruceGrugett/will-the-sp-500-trade-below-3800-in",
+      "question": "Will the S&P 500 trade below 3800 in 2022?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): lowest value in 2022-01-01..2022-12-31 was 3577.03 on 2022-10-12, below 3800.",
+      "right": true
+    }
+  ]
+}

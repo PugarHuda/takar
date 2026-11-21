@@ -1,0 +1,370 @@
+{
+  "title": "lib/numeric.mjs on resolved Manifold markets it was not tuned on",
+  "generated_at": "2026-11-21T19:16:10.638Z",
+  "terms": [
+    "BTC",
+    "bitcoin close",
+    "S&P 500 close",
+    "SPX",
+    "ETH price",
+    "unemployment",
+    "gasoline",
+    "crude spot",
+    "bitcoin above",
+    "S&P 500 above"
+  ],
+  "excluded": 251,
+  "summary": {
+    "markets": 38,
+    "answered": 29,
+    "right": 28,
+    "wrong": 1,
+    "unresolved": 5,
+    "not_taken": 4,
+    "accuracy": 0.9655
+  },
+  "rows": [
+    {
+      "id": "ONAgpzSqqz",
+      "url": "https://manifold.markets/HillaryClinton/will-bitcoin-btc-reach-130000-in-20",
+      "question": "Will Bitcoin BTC reach $130,000 in 2025?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2025-01-01..2025-12-31 was 124720.09 on 2025-10-05, never at or above 130000.",
+      "right": true
+    },
+    {
+      "id": "EQnpdhNZQL",
+      "url": "https://manifold.markets/MikeIz9ZE/btc-reaches-140k-high-in-2025",
+      "question": "BTC reaches $140K high in 2025?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2025-01-01..2025-12-31 was 124720.09 on 2025-10-05, never at or above 140000.",
+      "right": true
+    },
+    {
+      "id": "TRDajQdGyaXxHlmVhHEw",
+      "url": "https://manifold.markets/AmmonLam/will-bitcoin-btc-increase-by-over-6",
+      "question": "Will Bitcoin (BTC) increase by over 6% on any day in Feb 2024?",
+      "market": "yes",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "hJrMGWb4loTeFwTycOfo",
+      "url": "https://manifold.markets/AmmonLam/will-bitcoin-btc-increase-by-over-6-ae8920a812b7",
+      "question": "Will Bitcoin (BTC) increase by over 6% on any day in May 2024?",
+      "market": "yes",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "3wKBdWkgYjWNzxJJ6I0u",
+      "url": "https://manifold.markets/AmmonLam/will-bitcoin-btc-increase-by-over-6-42cc58f94dc1",
+      "question": "Will Bitcoin (BTC) increase by over 6% on any day in Mar 2024?",
+      "market": "yes",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "8Ph8lpNzSc",
+      "url": "https://manifold.markets/InvestorOakmont/bitcoin-prevclose-below-65000-on-ap",
+      "question": "Bitcoin Prev-Close below $65,000 on April 25, 2026?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 77650.51 on 2026-04-25, not below 65000.",
+      "right": true
+    },
+    {
+      "id": "RIU9h2dNsA",
+      "url": "https://manifold.markets/InvestorOakmont/bitcoin-prevclose-below-93000-on-ja",
+      "question": "Bitcoin Prev-Close below $93,000 on January 27, 2026?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 89296 on 2026-01-27, below 93000.",
+      "right": true
+    },
+    {
+      "id": "SUZA95ptt2",
+      "url": "https://manifold.markets/InvestorOakmont/bitcoin-prevclose-below-89000-on-de",
+      "question": "Bitcoin Prev-Close below $89,000 on December 15, 2025?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 85950 on 2025-12-15, below 89000.",
+      "right": true
+    },
+    {
+      "id": "wBKHXVf1l8M7CgJXrdLB",
+      "url": "https://manifold.markets/DarrylDaytona/will-the-sp-500-close-above-4450-on-3d6675587872",
+      "question": "Will the S&P 500 close above 4,450 on Sep. 22, 2023?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): 4320.06 on 2023-09-22, not above 4450.",
+      "right": true
+    },
+    {
+      "id": "86IMv4jnSJXK1ttQaVCh",
+      "url": "https://manifold.markets/Lunar/-will-the-sp-500-indexspinx-close-l-ea5228b39a64",
+      "question": "🏛⬆️ Will The S&P 500 (INDEXSP:.INX) Close Lower Than 4,699.99 At Any Point During Q2-Q4 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): lowest value in 2024-10-01..2024-12-31 was 5695.94 on 2024-10-07, never below 4699.99.",
+      "right": true
+    },
+    {
+      "id": "407sgFVx82ZAvHRA7L1s",
+      "url": "https://manifold.markets/father/stock-market-will-the-sp-500-index",
+      "question": "Stock Market: Will the S&P 500 index trade above 4800 during 2023?",
+      "market": "no",
+      "ours": "unresolved",
+      "evidence": "the highest value, 4783.35 on 2023-12-28, is within 1% of 4800; an intraday move may have crossed it",
+      "right": null
+    },
+    {
+      "id": "IZOnyCP5dl",
+      "url": "https://manifold.markets/Lunar/-will-the-sp-500-spx-close-lower-th",
+      "question": "🏛⬆️ Will The S&P 500 (SPX) Close Lower Than 5,783 At Any Point During 2025?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): lowest value in 2025-01-01..2025-12-31 was 4982.77 on 2025-04-08, below 5783.",
+      "right": true
+    },
+    {
+      "id": "SAuhNdPIQg",
+      "url": "https://manifold.markets/Lunar/-will-the-sp-500-spx-close-lower-th-usUyPSg6yR",
+      "question": "🏛⬆️ Will The S&P 500 (SPX) Close Lower Than 5,618 At Any Point During 2025?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): lowest value in 2025-01-01..2025-12-31 was 4982.77 on 2025-04-08, below 5618.",
+      "right": true
+    },
+    {
+      "id": "LDlZ5ZjyHc0O60jMmcmi",
+      "url": "https://manifold.markets/XComhghall/will-sp-500-increase-more-than-nasd-2083903410e1",
+      "question": "Will S&P 500 increase more than Nasdaq Composite in March 2023?",
+      "market": "no",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): 3970.15 on 2023-02-28 (last before the window), 4109.31 on 2023-03-31 (last in it), 3.51%.",
+      "right": false
+    },
+    {
+      "id": "arOrDm0ZuwgE9GqdmQrL",
+      "url": "https://manifold.markets/BearMarket/will-the-price-of-ether-ethereum-et",
+      "question": "Will the price of Ether (Ethereum / ETH) exceed $5,000 in 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Ether (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 4072.22 on 2024-03-11, never above 5000.",
+      "right": true
+    },
+    {
+      "id": "NS6yInlQLt",
+      "url": "https://manifold.markets/turtleleo77/sp500-closes-below-1-point-at-any-p",
+      "question": "S&P500 closes below 1 point at any point in 2025?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "l3K7632Z273RnWmmIgoY",
+      "url": "https://manifold.markets/ACXBot/37-will-the-us-unemployment-rate-no",
+      "question": "37. Will the US unemployment rate (now 3.7%) be above 4% in November 2023?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "US unemployment rate (%, monthly): highest value in 2023-11-01..2023-11-30 was 3.7 on 2023-11-01, never above 4.",
+      "right": true
+    },
+    {
+      "id": "sduzl25ER8",
+      "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-NUlNqydPhq",
+      "question": "Will the WTI Crude Oil Spot Price be above $95 on March 20, 2026?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "WTI crude spot (USD/bbl, daily): 98.71 on 2026-03-20, above 95.",
+      "right": true
+    },
+    {
+      "id": "APzUZNUS8I",
+      "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-uQc5l8UgUI",
+      "question": "Will the WTI Crude Oil Spot Price be above $100 on May 11, 2026?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "WTI crude spot (USD/bbl, daily): 101.56 on 2026-05-11, above 100.",
+      "right": true
+    },
+    {
+      "id": "pDCgifEaspF87XO2xK86",
+      "url": "https://manifold.markets/ACXBot/32-will-the-sp-500-index-reach-a-ne",
+      "question": "32. Will the S&P 500 index reach a new all-time high in 2023?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): highest close in 2023-01-01..2023-12-31 was 4783.35 on 2023-12-28; highest before it was 4796.56 on 2022-01-03 (FRED history from 2016-11-21).",
+      "right": true
+    },
+    {
+      "id": "jUAiahY5EgpJ3yGFeiH3",
+      "url": "https://manifold.markets/XComhghall/will-the-sp-500-increase-in-q3-2023",
+      "question": "Will the S&P 500 increase in Q3 2023?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): 4450.38 on 2023-06-30 (last before the window), 4288.05 on 2023-09-29 (last in it), -3.65%.",
+      "right": true
+    },
+    {
+      "id": "WH0IcolValuX1i1v6avO",
+      "url": "https://manifold.markets/XComhghall/will-the-sp-500-increase-in-august",
+      "question": "Will the S&P 500 increase in August 2023?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): 4588.96 on 2023-07-31 (last before the window), 4507.66 on 2023-08-31 (last in it), -1.77%.",
+      "right": true
+    },
+    {
+      "id": "5J1JCkyVIci7RZRRu2I9",
+      "url": "https://manifold.markets/AmmonLam/will-the-sp-500-be-above-5000-at-th-bc4c86e2d6fd",
+      "question": "Will the S&P 500 be above 5000 at the end of Feb 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): 5096.27 on 2024-02-29, above 5000.",
+      "right": true
+    },
+    {
+      "id": "CTQCTcTvjigczwotykhR",
+      "url": "https://manifold.markets/XComhghall/will-sp-500-increase-in-april-2023",
+      "question": "Will S&P 500 increase in April 2023?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): 4109.31 on 2023-03-31 (last before the window), 4169.48 on 2023-04-28 (last in it), 1.46%.",
+      "right": true
+    },
+    {
+      "id": "sAXXjBtMrZ9cR6nawUq2",
+      "url": "https://manifold.markets/XComhghall/will-sp-500-increase-in-may-2023",
+      "question": "Will S&P 500 increase in May 2023?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): 4169.48 on 2023-04-28 (last before the window), 4179.83 on 2023-05-31 (last in it), 0.25%.",
+      "right": true
+    },
+    {
+      "id": "9fZT2bGy9LuBiozaj6Af",
+      "url": "https://manifold.markets/Pedro/will-the-sp-500-be-above-5000-at-th-788b8f3e3399",
+      "question": "Will the S&P 500 be above 5000 at the end of April 2024?",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "5035.69 on 2024-04-30 is within 1% of 5000; a daily close cannot settle that",
+      "right": null
+    },
+    {
+      "id": "y3dFehmhA0PCbZEEsDDs",
+      "url": "https://manifold.markets/AmmonLam/will-the-sp-500-be-above-5200-at-th",
+      "question": "Will the S&P 500 be above 5200 at the end of Apr 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): 5035.69 on 2024-04-30, not above 5200.",
+      "right": true
+    },
+    {
+      "id": "0Y42qgHce6JmEbyQcQk6",
+      "url": "https://manifold.markets/AmmonLam/will-the-sp-500-be-above-5000-at-th-261e96eeddb0",
+      "question": "Will the S&P 500 be above 5000 at the end of Jan 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): 4845.65 on 2024-01-31, not above 5000.",
+      "right": true
+    },
+    {
+      "id": "hJAyffyosgyGvL0DcivX",
+      "url": "https://manifold.markets/Pedro/will-the-sp-500-be-above-5200-at-th-f923567a169e",
+      "question": "Will the S&P 500 be above 5200 at the end of April 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): 5035.69 on 2024-04-30, not above 5200.",
+      "right": true
+    },
+    {
+      "id": "UTEje27kxw7EzzQWKOsk",
+      "url": "https://manifold.markets/DarrylDaytona/will-the-sp-500-close-above-4464-on",
+      "question": "Will the S&P 500 close above 4,464 on Aug 18, 2023?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): 4369.71 on 2023-08-18, not above 4464.",
+      "right": true
+    },
+    {
+      "id": "7d1v2Aru6KEYbbONoykH",
+      "url": "https://manifold.markets/DarrylDaytona/will-the-sp-500-close-above-4406-on",
+      "question": "Will the S&P 500 close above 4,406 on Sept. 1, 2023?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): 4515.77 on 2023-09-01, above 4406.",
+      "right": true
+    },
+    {
+      "id": "gb66KHfQKZYhirvDnaaq",
+      "url": "https://manifold.markets/DarrylDaytona/will-the-sp-500-close-above-4500-on",
+      "question": "Will the S&P 500 close above 4,500 on Aug 11, 2023",
+      "market": "no",
+      "ours": "unresolved",
+      "evidence": "4464.05 on 2023-08-11 is within 1% of 4500; a daily close cannot settle that",
+      "right": null
+    },
+    {
+      "id": "C6xxZQCR0HQdU5uyxGbE",
+      "url": "https://manifold.markets/Pedro/will-the-sp-500-be-above-5100-at-th",
+      "question": "Will the S&P 500 be above 5100 at the end of April 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): 5035.69 on 2024-04-30, not above 5100.",
+      "right": true
+    },
+    {
+      "id": "UzPIppSbnOaRWn9GzH1X",
+      "url": "https://manifold.markets/AmmonLam/will-the-sp-500-be-above-5500-at-th-81a5d85f5e18",
+      "question": "Will the S&P 500 be above 5500 at the end of Apr 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): 5035.69 on 2024-04-30, not above 5500.",
+      "right": true
+    },
+    {
+      "id": "kzOnn9bPrUeFVjETFzlU",
+      "url": "https://manifold.markets/Pedro/will-the-sp-500-be-above-5300-at-th",
+      "question": "Will the S&P 500 be above 5300 at the end of April 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): 5035.69 on 2024-04-30, not above 5300.",
+      "right": true
+    },
+    {
+      "id": "WLiBRpXl5oxY4vA7TVXq",
+      "url": "https://manifold.markets/AmmonLam/will-the-sp-500-be-above-5300-at-th-1d1a2b02bc86",
+      "question": "Will the S&P 500 be above 5300 at the end of Apr 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): 5035.69 on 2024-04-30, not above 5300.",
+      "right": true
+    },
+    {
+      "id": "lPtkxI8ynQISLFNBNTO4",
+      "url": "https://manifold.markets/Pedro/will-the-sp-500-be-above-5050-at-th",
+      "question": "Will the S&P 500 be above 5050 at the end of April 2024?",
+      "market": "no",
+      "ours": "unresolved",
+      "evidence": "5035.69 on 2024-04-30 is within 1% of 5050; a daily close cannot settle that",
+      "right": null
+    },
+    {
+      "id": "bRG05BTCRgQSkkItXjQd",
+      "url": "https://manifold.markets/DarrylDaytona/will-the-sp-500-close-above-4450-on",
+      "question": "Will the S&P 500 close above 4,450 on Sep. 15, 2023?",
+      "market": "yes",
+      "ours": "unresolved",
+      "evidence": "4450.32 on 2023-09-15 is within 1% of 4450; a daily close cannot settle that",
+      "right": null
+    }
+  ]
+}

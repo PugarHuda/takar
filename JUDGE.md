@@ -191,10 +191,21 @@ TakarSettle4 (0x2A615f7D3E52e9Ee68AB8CaaE3385bcbACCB2aBd) adds escalation: once 
 ## Miner: Takar Outcome
 
 - Endpoint: `POST https://takar-outcome.vercel.app/api/resolve {"event": "..."}`. Registration YAML: `miner/takar-outcome.yaml`. Node id 20261117.
-- It uses two sources, in order:
+- It uses three sources, in order:
   - **A settled Polymarket market.** An exact title match (ignoring a trailing "Resolution" or "Resolve this market"), or a dated fixture matched by slug, date and full event title. The market must be closed, with a final price of 0.99 or more.
+  - **A published data series, for price and rate thresholds (since 22 Nov).** Bitcoin and Ether (Coinbase), S&P 500, WTI and Brent *spot*, US gasoline and US unemployment, from FRED, read by code with no model (`lib/numeric.mjs`). It does not take a deadline with no start date, a conditional, "again", a comparison with another series, oil without the word "spot" (futures can sit far from spot: Brent spot reached 138 in April 2026 while futures stayed under 100), or a window that was already past its threshold on day one. Within the series' margin of the threshold it answers `unresolved` (3% for crypto, 10% for "never crossed", since a daily close hides intraday wicks). FRED refuses data-centre IPs, so a GitHub Action copies FRED's own CSVs into `data/series/` daily and the miner reads that copy; an outage is answered `unresolved` with the reason.
+    - Why: our own scorecard had left 23 of 38 contested questions unresolved, most of them prices. It now settles 15 of our 59 scorecard questions, all right.
+    - Measured on resolved Manifold markets it was not tuned on (`scripts/numeric-holdout.mjs`, receipts in `receipts/numeric-holdout-*.json`). Every round is reported, including the bad one:
+
+      | Round | Answered | Right | Wrong | Then fixed |
+      |---|---|---|---|---|
+      | Holdout 2 | 29 | 28 | 1 (a comparison with the Nasdaq) | comparisons not taken |
+      | Holdout 3 | 57 | 50 | 7 (4 markets opened mid-window, 1 intraday crash, 1 "8000 BTC" read as a price, 1 more mid-window) | 10% miss margin, "$" needed, day-one rule |
+      | **Holdout 4, final rules, never seen** | **37** | **37** | **0** | |
+
+      Two holdout-3 questions are still answered against the market ("Bitcoin below $80K in 2025?": it closed at 76,252 on 7 April 2025; the market was opened later). The node's questions carry no creation date, so that ambiguity cannot be removed.
   - **Wikipedia.** The prose plus the table rows that name the question's year or terms. Every yes or no carries a sentence or table row quoted word for word, checked in code; a quote may not run across two rows.
-- Every answer states `confidence` (`high` for a settled market, `medium` for a checked quote, `none` for unresolved) and the `resolution_rule` it rests on.
+- Every answer states `confidence` (`high` for a settled market or a data series, `medium` for a checked quote, `none` for unresolved) and the `resolution_rule` it rests on.
 - Network evidence: ranked #1 in epoch 16 at 0.9622, with every spot check passed. Epochs 18–28 scored 0: every graded ask came back `unresolved`. One cause was ours (the "Resolution" suffix, fixed 21 Nov). The other is asks that name no event at all, which no source can settle. Reported in [bounties#225](https://github.com/telegraphprotocol/bounties/issues/225), with data and without quoting graded material. After the fix, epoch 30 scored 0.9993 (rank #2). We do not pick epochs.
 - Known gaps:
   - Titles that match several markets ("Bitcoin Up or Down - February 28" with no time).
