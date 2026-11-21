@@ -51,6 +51,17 @@ const RUNS = {
            [/deal 5/, "Spain won: the payee is paid. The Telegraph signal hash is recorded in the Settled event."],
            [/deal 6/, "2030 is unresolved, so the deal stays open. If nobody settles it, the payer reclaims after 7 days."],
            [/deal 7/, "Denpasar recorded 27.2 mm, three days bought one by one (WEATHER_FORECAST_VERIFY): over the trigger, so the payer is refunded."]] },
+  settle2: { title: "Missions 14 and 06 · Takar Settle v2: two miners must agree, and either party can dispute",
+    files: ["runs/settle2.txt"],
+    caps: [[/open-event --question "Did Argentina/, "Mission 14: 1 test USDC locked in TakarSettle v2, paid to the payee if Argentina won the 2022 World Cup."],
+           [/open-drought --location Bandung/, "Mission 06: drought covers for Bandung and Kupang, paying if recorded rain stays under 30 mm."],
+           [/^\$ npm run settle -- run$/, "The agent asks Takar Outcome by id and the ranked route. The contract refuses an event proposal with fewer than two Telegraph signals."],
+           [/deal 2: HOLD/, "Bandung: Telegraph recorded 9 mm, NASA POWER 40.2 mm. The sources disagree, so the cover holds instead of paying on a wet week."],
+           [/deal 3: PROPOSED/, "Kupang: Telegraph and NASA POWER both put the period under 30 mm. Proposed, not paid yet: a 10-minute dispute window opens."],
+           [/dispute --id 1/, "The payee disputes the refund. A dispute voids the proposal, and the same evidence cannot be proposed again."],
+           [/disputable until 2026-11-21T02:20/, "The resolver re-proposes deal 1 on new signals. Deals 0 and 3 are still inside their window."],
+           [/deal 0: FINALIZED/, "After the window, anyone can finalize. Argentina won: the payee is paid."],
+           [/deal 1: FINALIZED/, "France did not win: refunded, after one dispute. Every step points at a public Telegraph signal."]] },
 };
 const run = RUNS[new URLSearchParams(location.search).get("run")] ?? RUNS.m11;
 const speed = Number(new URLSearchParams(location.search).get("speed") ?? 1);
@@ -60,8 +71,8 @@ const esc = (s) => s.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">":
 const paint = (line) => {
   const h = esc(line).replace(/(https:\/\/\S+)/g, '<span class="dim">$1</span>');
   if (/^\$/.test(line)) return `<span class="cmd">${h}</span>`;
-  if (/^(GO|confirmed)\b/.test(line) || /PAID payee/.test(line)) return h.replace(/^(GO|confirmed)|PAID payee/, (m) => `<span class="go">${m}</span>`);
-  if (/^HOLD|REFUNDED|left open|disagrees/.test(line)) return h.replace(/^HOLD|REFUNDED payer|left open|disagrees/, (m) => `<span class="hold">${m}</span>`);
+  if (/^(GO|confirmed)\b/.test(line) || /PAID payee|PROPOSED/.test(line)) return h.replace(/^(GO|confirmed)|PAID payee|PROPOSED/, (m) => `<span class="go">${m}</span>`);
+  if (/^HOLD|REFUNDED|left open|disagrees|DISPUTED|: HOLD/.test(line)) return h.replace(/^HOLD|REFUNDED payer|left open|disagrees|DISPUTED|HOLD/, (m) => `<span class="hold">${m}</span>`);
   return h;
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms / speed));

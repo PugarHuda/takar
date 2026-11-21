@@ -1,0 +1,42 @@
+$ npm run settle -- open-event --question "Did Argentina win the 2022 FIFA World Cup?" --after 1   # 2026-11-21
+opened deal 0 (event), 1.0 test USDC, settles after 2026-11-21T02:08:03.000Z
+  https://sepolia.etherscan.io/tx/0x18d91a88902072905a499a5e6b5cdc0c649a3800ff51c8049fbe33107d92fd9a
+$ npm run settle -- open-event --question "Did France win the 2022 FIFA World Cup?" --after 1
+opened deal 1 (event), 1.0 test USDC, settles after 2026-11-21T02:08:38.000Z
+  https://sepolia.etherscan.io/tx/0x8b383f32dfcb0bcf3ce86bc07afdfe2ff59a079a3c1bfa99c9ce0beae1507beb
+$ npm run settle -- open-drought --location Bandung --from 2026-11-10 --to 2026-11-12 --trigger 30 --after 1
+opened deal 2 (weather), 1.0 test USDC, settles after 2026-11-21T02:08:53.000Z
+  https://sepolia.etherscan.io/tx/0xd57a002cdcd9ae207c13821097ab7a05b88f872b56bb921a7c30c1fb8b9272dc
+$ npm run settle -- open-drought --location Kupang --from 2026-11-14 --to 2026-11-16 --trigger 30 --after 1
+opened deal 3 (weather), 1.0 test USDC, settles after 2026-11-21T02:09:04.000Z
+  https://sepolia.etherscan.io/tx/0xfccb86e4909d18cdf33b8c89894727462e48b21cf58dab6f27d2221ca963a034
+
+$ npm run settle -- run
+deal 0: PROPOSED pay payee, 2 miners agree: Telegraph resolved it yes (Argentina)
+  https://sepolia.etherscan.io/tx/0x0ca3311dac8c126da8c1a60e5b75d662083c360714c3eda109d6e3385d8dd7da
+deal 1: PROPOSED refund payer, 2 miners agree: Telegraph resolved it no
+  https://sepolia.etherscan.io/tx/0x0476d8c0dba1e42ba525baa42c18b67b8e43b799453e5742d06cc580ef450d2b
+deal 2: HOLD, sources disagree: Telegraph 9 mm, NASA POWER 40.2 mm, trigger 30 mm
+deal 3: PROPOSED pay payee, 13.1 mm recorded over 3 days, under the 30 mm trigger; NASA POWER 4.3 mm agrees
+  https://sepolia.etherscan.io/tx/0xa8bbf28b59d9939a0dcd408a8726d88a165b7b0380eb8781a5397aa631165586
+
+$ npm run settle -- dispute --id 1 --as payee
+deal 1: DISPUTED by the payee; the resolver must propose again with other evidence
+  https://sepolia.etherscan.io/tx/0x65ac1a3aee8ca643d34ae8e8f17be7f456aec78b14c1c6ea1d0ff24f807ca42e
+
+$ npm run settle -- run
+deal 0: proposed, disputable until 2026-11-21T02:20:00.000Z
+deal 1: PROPOSED refund payer, 2 miners agree: Telegraph resolved it no
+  https://sepolia.etherscan.io/tx/0x528417ab5b1fe9c3702e1cd2ebf2fe7aed19cf3681de937d03e877e1a122e6e2
+deal 2: HOLD, sources disagree: Telegraph 9 mm, NASA POWER 40.2 mm, trigger 30 mm
+deal 3: proposed, disputable until 2026-11-21T02:22:48.000Z
+
+$ npm run settle -- run   # 02:20 UTC
+deal 0: FINALIZED, PAID payee
+  https://sepolia.etherscan.io/tx/0x40860608957104746e6cb01d1002ec579ba6acc3c505fbc1fcfd2f89daba1d41
+
+$ npm run settle -- run   # 02:30 UTC
+deal 1: FINALIZED, REFUNDED payer
+  https://sepolia.etherscan.io/tx/0xe4bc4682ea3a24aa370ac299cbffe441320a28200c17bd9f960915833bd3b37d
+deal 3: FINALIZED, PAID payee
+  https://sepolia.etherscan.io/tx/0x336eb2726d4939156f42c756ece8e1ff198d109c833780be84773c7350aaf517
