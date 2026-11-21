@@ -1,0 +1,15 @@
+{
+  "name": "takar-video",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.jsx",
+    "render": "remotion render src/index.jsx Takar out/takar.mp4 --codec h264"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.545",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.545"
+  }
+}

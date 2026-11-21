@@ -1,0 +1,78 @@
+[
+  {
+    "id": "s01",
+    "kind": "title",
+    "title": "Takar",
+    "subtitle": "Never act on one answer from Telegraph",
+    "vo": "Telegraph sells intelligence one answer at a time. But a single routed answer can be confidently wrong. Takar is the verification layer that never acts on one miner's word."
+  },
+  {
+    "id": "s02",
+    "kind": "card",
+    "title": "The problem, on our own receipts",
+    "bullets": [
+      "One EVENT_OUTCOME miner: 7 wrong of 15 market questions",
+      "A routed weather question answered with space weather",
+      "A sanctioned bank answered with matched = null"
+    ],
+    "vo": "On our own receipts, one event miner got seven of fifteen market questions wrong. A storm question came back as space weather. A sanctioned bank came back with matched equals null. Any single answer would have passed straight through."
+  },
+  {
+    "id": "s03",
+    "kind": "clip",
+    "clip": "clip-so2.mp4",
+    "from": 0,
+    "caption": "POST /api/second-opinion  {intent, params}",
+    "vo": "So Takar asks twice. One call, for any intent. Two miners from different operators, asked directly by id, compared field by field. Agree, disagree, or insufficient. It never averages, and if a miner leaves the deciding field empty, the next one is asked."
+  },
+  {
+    "id": "s04",
+    "kind": "clip",
+    "clip": "clip-so2.mp4",
+    "from": 21,
+    "caption": "EAS on Ethereum Sepolia",
+    "vo": "Who was right goes on chain. Every check Takar paid for is an EAS attestation, ninety three so far, and every second opinion is recorded as it happens, so usage and disagreements are counted from the chain, not from our logs."
+  },
+  {
+    "id": "s05",
+    "kind": "clip",
+    "clip": "clip-so2.mp4",
+    "from": 38,
+    "caption": "GET /api/miner?id=…",
+    "vo": "For miner operators: why did my miner score that? Takar lines up the scorer's numbers, the spot checks and the paid record, and flags every zero that came with no reason. Our own miner went from zero back to point nine nine nine after we found our bug."
+  },
+  {
+    "id": "s06",
+    "kind": "clip",
+    "clip": "clip-settle3.mp4",
+    "from": 4,
+    "caption": "TakarSettle v3 · 0xf977…502b",
+    "vo": "Money follows the same rule. TakarSettle holds test USDC until two Telegraph signals agree. Version three also needs two resolvers to back the same evidence, and a dispute costs a bond. In a joint test with Praman's sanctions screen, the payer disputed a correct payment and lost its bond to the supplier. Bank Rossiya, on the OFAC list, was refunded."
+  },
+  {
+    "id": "s07",
+    "kind": "clip",
+    "clip": "clip-goldrush.mp4",
+    "from": 2,
+    "caption": "takar-telegraph.vercel.app/goldrush.html",
+    "vo": "For Telegraph's Gold Rush, the same checks become a dossier. At Mount Morgan, the survey's rows add up to two hundred ninety four tonnes. The Queensland Government says two fifty for the same years. The gap is close to the fifty six tonnes from dump retreatment, offered as a candidate, never applied. Who controls it today comes from two company registers."
+  },
+  {
+    "id": "s08",
+    "kind": "card",
+    "title": "We check our own numbers too",
+    "bullets": [
+      "Brier 0.0085 came mostly from near-certain markets",
+      "Contested markets only: Brier 0.11 (95% interval 0.05 to 0.20)",
+      "Every receipt anchored on EAS as a Merkle root"
+    ],
+    "vo": "We check our own numbers too. Our first Brier score came mostly from easy markets, so we reran it on contested ones only, and show the interval. And every paid receipt is anchored on chain, so none can be deleted quietly."
+  },
+  {
+    "id": "s09",
+    "kind": "title",
+    "title": "Use it today",
+    "subtitle": "Minds Bazaar Skill · npx -y takar-mcp · takar-telegraph.vercel.app",
+    "vo": "Use it from a Mind on the Bazaar, over MCP with npx takar-mcp, or plain HTTP. Takar. Never act on one answer. Built for Telegraph Hackathon Season Two."
+  }
+]

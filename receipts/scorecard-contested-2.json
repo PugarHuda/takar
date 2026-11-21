@@ -1,0 +1,2113 @@
+{
+  "title": "Takar forecast scorecard",
+  "method": "Contested markets only (crowd between 10% and 90%). Crowd probability on Manifold 7 days before resolution; outcome bought through Telegraph EVENT_OUTCOME_RESOLUTION_GENERAL and compared with the market's resolution; Brier score over confirmed outcomes only. Each confirmed outcome is also put to FACT_CHECK_GENERAL as a second, independent check, reported and not scored.",
+  "generated_at": "2026-11-21T16:31:20.568Z",
+  "network": "Ethereum Sepolia testnet (test USDC)",
+  "summary": {
+    "forecasts": 38,
+    "scored": 37,
+    "contradicted": 0,
+    "split": 0,
+    "unverified": 1,
+    "confirmed_by_two_or_more": 15,
+    "brier": 0.1207,
+    "baseline": 0.25,
+    "brier_skill": 0.5172,
+    "log_loss": 0.4079,
+    "calibration": [
+      {
+        "bin": "0.0-0.2",
+        "n": 11,
+        "said": 0.141,
+        "happened": 0
+      },
+      {
+        "bin": "0.2-0.4",
+        "n": 7,
+        "said": 0.302,
+        "happened": 0.143
+      },
+      {
+        "bin": "0.4-0.6",
+        "n": 6,
+        "said": 0.533,
+        "happened": 0.667
+      },
+      {
+        "bin": "0.6-0.8",
+        "n": 9,
+        "said": 0.701,
+        "happened": 1
+      },
+      {
+        "bin": "0.8-1.0",
+        "n": 4,
+        "said": 0.849,
+        "happened": 0.75
+      }
+    ],
+    "corroborated": 5,
+    "fact_check_disagreed": 6,
+    "miners": [
+      {
+        "miner": "PREFLIGHT Infrastructure Signals",
+        "asked": 38,
+        "right": 37,
+        "wrong": 0,
+        "no_answer": 1,
+        "accuracy": 1
+      },
+      {
+        "miner": "Takar Outcome Resolver",
+        "asked": 38,
+        "right": 15,
+        "wrong": 0,
+        "no_answer": 23,
+        "accuracy": 1
+      },
+      {
+        "miner": "Polymarket Public Search",
+        "asked": 1,
+        "right": 0,
+        "wrong": 0,
+        "no_answer": 1,
+        "accuracy": null
+      }
+    ],
+    "sample": {
+      "n": 37,
+      "near_certain": 0,
+      "contested": 37,
+      "brier_contested": 0.1207,
+      "brier_ci95": [
+        0.0763,
+        0.176
+      ],
+      "base_rate": 0.459,
+      "brier_base_rate_forecast": 0.2484,
+      "caveat": null
+    }
+  },
+  "rows": [
+    {
+      "market": {
+        "id": "hR8lhRO9gz",
+        "question": "Do professional economic forecasters expect a US recession (two quarters negative GDP growth) to begin in 2025?",
+        "url": "https://manifold.markets/chrisjbillington/do-professional-economic-forecaster",
+        "resolution": "NO",
+        "resolvedAt": 1747404313512,
+        "traders": 108,
+        "topic": "Federal Reserve"
+      },
+      "forecast": {
+        "p": 0.5893,
+        "asOf": "2025-05-09T12:19:10.194Z",
+        "betId": "CuEzglsUCQZ0",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0x0beaac27547bcecbecd92e533646438a6d9e76c1bda68de6b9c4ae653363de5d",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x026b13907d55bd5053d919d20bbbf8a2a7f3db63a6827da8f68f7d59e221ac95",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Do professional economic forecasters expect a US recession (two quarters negative GDP growth) to begin in 2025?\" is no.",
+        "verdict": "disagrees",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x63f99e1d941fb29018fde69084e2b39e534c8454de5e46d6dec5ee9b6dfdef52"
+      },
+      "brier": 0.3473
+    },
+    {
+      "market": {
+        "id": "hKB9iD8knG4R2RuSyyCu",
+        "question": "Will Bitcoin hit $100K in 2024?",
+        "url": "https://manifold.markets/bitSanjay/will-bitcoin-reach-100k-in-2024",
+        "resolution": "YES",
+        "resolvedAt": 1733370046441,
+        "traders": 1130,
+        "topic": "Bitcoin"
+      },
+      "forecast": {
+        "p": 0.6847,
+        "asOf": "2024-11-28T03:01:58.390Z",
+        "betId": "hnLAhAq9PtSU",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 2,
+        "answered": 2,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "yes",
+            "signal": "0xc35e9d43baba5ac6e3bc18a9899db56681c952eba7e9426a174b9133486003f1",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0xc721836b54e207728af0ff364fbff84d6948e5990557f13ad3807e18a07780f4",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Bitcoin hit $100K in 2024?\" is yes.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x164cdfaf862b231179578a62ce85892b49a015d3c4d0aa5dfcaeb3c9aaadfa6e"
+      },
+      "brier": 0.0994
+    },
+    {
+      "market": {
+        "id": "FrzKn5knD72wiZBjmQYJ",
+        "question": "Will Bitcoin be priced higher than $69,420 on April, 20th, 2024 at 4:20pm EST",
+        "url": "https://manifold.markets/SamE/will-bitcoin-be-priced-higher-than-6bf3b63f445c",
+        "resolution": "NO",
+        "resolvedAt": 1713727058992,
+        "traders": 258,
+        "topic": "Bitcoin"
+      },
+      "forecast": {
+        "p": 0.2087,
+        "asOf": "2024-04-14T18:13:53.814Z",
+        "betId": "7jMXK4qcSar4NVJiyLwE",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0xb792fb16a719b9a00f91e73a76d81fc65e6adb065df29fd7e21861d61a80e870",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x8fd60bfafd77e041f46194e51ccf5475b9d4e4561afb3c49d8bdd60e3f15fd5a",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Bitcoin be priced higher than $69,420 on April, 20th, 2024 at 4:20pm EST\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xe88057cb9085fa0b98bfd4b13c392e70566762b7f3872a3fa48d4225aa515ede"
+      },
+      "brier": 0.0436
+    },
+    {
+      "market": {
+        "id": "2pOoXsxjVDydNzp3V0Nm",
+        "question": "Will Bitcoin reach $90000 in 2024",
+        "url": "https://manifold.markets/NathanDickson/will-bitcoin-reach-90000-in-2024",
+        "resolution": "YES",
+        "resolvedAt": 1731512671994,
+        "traders": 251,
+        "topic": "Bitcoin"
+      },
+      "forecast": {
+        "p": 0.243,
+        "asOf": "2024-11-06T09:00:46.374Z",
+        "betId": "UZRdE9L80yAQ",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0x0bda4adaf348ec66911825b7d2d09b7b95b9d2b8f9ad99b51adc9082751e05c8",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x7025d71de24805a1d7fc5a89a157ed7b6e4690067a33115be7a5c30c8da7113a",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Bitcoin reach $90000 in 2024\" is yes.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xc0ceda71051393d636b382b0dbfc8408552b0fdc967a8fc9820a63e3e6f6ab60"
+      },
+      "brier": 0.573
+    },
+    {
+      "market": {
+        "id": "uSr1eDOefOY4Rg3hC1SX",
+        "question": "Will Bitcoin exceed 100,000 USD In 2024?",
+        "url": "https://manifold.markets/MichaelBetenson/will-bitcoin-exceed-100000-usd-in-2",
+        "resolution": "YES",
+        "resolvedAt": 1733418638374,
+        "traders": 237,
+        "topic": "Bitcoin"
+      },
+      "forecast": {
+        "p": 0.7067,
+        "asOf": "2024-11-28T15:29:38.422Z",
+        "betId": "g00AQsEpPSzC",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 2,
+        "answered": 2,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "yes",
+            "signal": "0xccfcf2bab7db4e8f14d7b8eb37a68f94b8045559756de3db38143a5ba32b4357",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0xd28d14880d915512642e456e613c9219e1a245f78f7b5e930deffbb64c336207",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Bitcoin exceed 100,000 USD In 2024?\" is yes.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xbfa3634ae94afd2d2460faff3dea50d7bda5ce2e1470a166da06fa26535b8ac8"
+      },
+      "brier": 0.086
+    },
+    {
+      "market": {
+        "id": "U0yX28gWmK1D1Z25veX5",
+        "question": "Will Bitcoin hit $75K in March 2024?",
+        "url": "https://manifold.markets/predyx_markets/will-bitcoin-hit-75k-in-march-2024",
+        "resolution": "NO",
+        "resolvedAt": 1711954933617,
+        "traders": 228,
+        "topic": "Bitcoin"
+      },
+      "forecast": {
+        "p": 0.1271,
+        "asOf": "2024-03-25T06:01:48.448Z",
+        "betId": "glaVQB7R6VVThHrJGVyp",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 2,
+        "answered": 2,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0x119007cd01dcd1b9591a09692a66f65a00b642db439041ab1252a6b05782b19c",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0xe26b4ce36f648e675ac16dc9dff80f60f8ca7e96acb1325318af7e8643ea2fc1",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Bitcoin hit $75K in March 2024?\" is no.",
+        "verdict": "disagrees",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x0e3925a19b926a0badfb2d654aae6767bfaa4a8079db582e873fdc8c5d88cb1e"
+      },
+      "brier": 0.0162
+    },
+    {
+      "market": {
+        "id": "pzyhqUcshn",
+        "question": "Will Bitcoin be above $100k at the close of December 2024?",
+        "url": "https://manifold.markets/MerleBtc/will-bitcoin-close-above-100k-in-de",
+        "resolution": "NO",
+        "resolvedAt": 1735686275388,
+        "traders": 225,
+        "topic": "Bitcoin"
+      },
+      "forecast": {
+        "p": 0.455,
+        "asOf": "2024-12-24T22:59:55.361Z",
+        "betId": "9ny99Al5g65s",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 2,
+        "answered": 2,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0x0e08f8c1e35c3ce7d8801fe55d6f59eeb9edb6eee35014df7375242622f4591a",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x0560c089340a8580b0eeec70f9281ba27a5263135247cd0ecd28586221bdd3f9",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Bitcoin be above $100k at the close of December 2024?\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xe1bf12d7c493e2ab845e13633bd18a270e18828798e30447797d4a536be97819"
+      },
+      "brier": 0.207
+    },
+    {
+      "market": {
+        "id": "yWPALDFVEUMIDyPcfw3f",
+        "question": "Will Bitcoin trade at $65,000 or higher at any point in 2024?",
+        "url": "https://manifold.markets/DennyVonDoom/will-bitcoin-trade-at-65000-or-high",
+        "resolution": "YES",
+        "resolvedAt": 1709561810549,
+        "traders": 217,
+        "topic": "Bitcoin"
+      },
+      "forecast": {
+        "p": 0.5097,
+        "asOf": "2024-02-26T09:38:49.668Z",
+        "betId": "CpMG2BSgPK3aV4OXHJws",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0x5c0c31abfd24d098c9dfbaa352ed15dd86a5d338f191859d70f09dc568317353",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0xbc397c91877edef704b5b3bc6d188577f418fc6738f3edae29aa3b6904123b07",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Bitcoin trade at $65,000 or higher at any point in 2024?\" is yes.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x0e3315c160527c59494dc4f8866d03fecbad9b829c30c35bcdf077e683a78d93"
+      },
+      "brier": 0.2404
+    },
+    {
+      "market": {
+        "id": "hvcnzbj2lb",
+        "question": "Will 1 bitcoin be worth $100,000 or more before 2025?",
+        "url": "https://manifold.markets/Flig/will-1-bitcoin-be-worth-100000-or-m",
+        "resolution": "YES",
+        "resolvedAt": 1733425855364,
+        "traders": 215,
+        "topic": "Bitcoin"
+      },
+      "forecast": {
+        "p": 0.6946,
+        "asOf": "2024-11-28T18:29:22.206Z",
+        "betId": "PpyUucsPIs2n",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "unverified",
+        "telegraph": null,
+        "agreeing": 0,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0xd5ceda766abe736739b2df5dba53027e3b104f56ff69592ce979094d686ec1dc",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "unresolved",
+            "signal": "0x2952af72b76dc6705afdd8340668219caa4fb35dd51218a70c6444e7a7309830",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "59003",
+              "name": "Polymarket Public Search"
+            },
+            "outcome": "unreadable",
+            "signal": "0xaff753bbcb0830310386514e7f6934067030806494bc2794a290bbe9972da959",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": null,
+      "brier": 0.0933
+    },
+    {
+      "market": {
+        "id": "WtFfUD2ZDiRgGVs22GFr",
+        "question": "Will the Price of Bitcoin be above 30.000,00$ before 1st Jan 2024?",
+        "url": "https://manifold.markets/TobiasSowaaed/will-the-price-of-bitcoin-be-above",
+        "resolution": "YES",
+        "resolvedAt": 1697798683983,
+        "traders": 212,
+        "topic": "Bitcoin"
+      },
+      "forecast": {
+        "p": 0.5515,
+        "asOf": "2023-10-11T15:00:21.921Z",
+        "betId": "jLfMnZfqxWGBHX8qymRH",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 2,
+        "answered": 2,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "yes",
+            "signal": "0x8d92e0418cdf7eab822c8ae1db47953065621b2dd91ef104ab51513d9541bd3f",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0xc42fdfeef3ab036892e51db00f43fe45e25599f0e266aec42d3a2473105ac666",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will the Price of Bitcoin be above 30.000,00$ before 1st Jan 2024?\" is yes.",
+        "verdict": "agrees",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x4febf396f68f1b233a49efa091339ad9656516f7bbf81224977a394f23f061d5"
+      },
+      "brier": 0.2012
+    },
+    {
+      "market": {
+        "id": "7RJk8EdUxRDeSi1fR07A",
+        "question": "Bitcoin $100K in 2024?",
+        "url": "https://manifold.markets/predyx_markets/will-bitcoin-reach-107k-in-2024",
+        "resolution": "YES",
+        "resolvedAt": 1733370698532,
+        "traders": 187,
+        "topic": "Bitcoin"
+      },
+      "forecast": {
+        "p": 0.7045,
+        "asOf": "2024-11-28T02:50:58.720Z",
+        "betId": "EAupOpudhRE8",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0xa9f7077efa89c0ce24345e6e802b53e7b0bf725e09728f0736d2233e5cba5f55",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x9a747ed6f876f096f5e1aa1cfefe48516853d2501c96cc2f27fdc33ed29db2bb",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Bitcoin $100K in 2024?\" is yes.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xa9e6666929967afdfcb68a72028de6cc0e5977144d65307dd58eb92207b92f02"
+      },
+      "brier": 0.0873
+    },
+    {
+      "market": {
+        "id": "91mUaePn2DjTqqzC8pjo",
+        "question": "Will Bitcoin hit $72K in March 2024?",
+        "url": "https://manifold.markets/CCat/will-bitcoin-hit-72k-in-march-2024-37c879bbedbb",
+        "resolution": "NO",
+        "resolvedAt": 1711945160307,
+        "traders": 184,
+        "topic": "Bitcoin"
+      },
+      "forecast": {
+        "p": 0.2955,
+        "asOf": "2024-03-25T01:46:05.180Z",
+        "betId": "V6AJqvrh4yuFJB8Pc4yW",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 2,
+        "answered": 2,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0xd0c55cff25c2c1f71a7c30b53f889227a69ccf9ff9d7a685491e67545fbee28b",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0xc7baafcf564179f016da1f71eb4eefc05c3187713141a1af93c56b2316082e98",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Bitcoin hit $72K in March 2024?\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x55b7cf51be1222289f5d5b6ded139085dce58e7721062e2010d7aec29a3aebee"
+      },
+      "brier": 0.0873
+    },
+    {
+      "market": {
+        "id": "pDCgifEaspF87XO2xK86",
+        "question": "32. Will the S&P 500 index reach a new all-time high in 2023?",
+        "url": "https://manifold.markets/ACXBot/32-will-the-sp-500-index-reach-a-ne",
+        "resolution": "NO",
+        "resolvedAt": 1703884973995,
+        "traders": 354,
+        "topic": "S&P 500"
+      },
+      "forecast": {
+        "p": 0.2923,
+        "asOf": "2023-12-22T20:36:11.162Z",
+        "betId": "bL7VosqwBYPwGgaflCDz",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0x1b877fa814c560db19b14d35b14d4a4257824960ac0004e2486ee34ed4f259c4",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x6a3fe8d70853e2dbc5d3d2ebbb30448a1038a3850b429c8e3b87f898f1ac79e7",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"32. Will the S&P 500 index reach a new all-time high in 2023?\" is no.",
+        "verdict": "disagrees",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x57d47fe5f0d6490ce0748cce0bfd896a528af79dbb4c13fda4bb530c2da373ea"
+      },
+      "brier": 0.0854
+    },
+    {
+      "market": {
+        "id": "jUAiahY5EgpJ3yGFeiH3",
+        "question": "Will the S&P 500 increase in Q3 2023?",
+        "url": "https://manifold.markets/XComhghall/will-the-sp-500-increase-in-q3-2023",
+        "resolution": "NO",
+        "resolvedAt": 1696061840835,
+        "traders": 143,
+        "topic": "S&P 500"
+      },
+      "forecast": {
+        "p": 0.1256,
+        "asOf": "2023-09-22T23:08:24.369Z",
+        "betId": "KtaDvq6lEXTyGxhGsvyF",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0x2e0657cdb299756a9e2cee5b8a5b6a9085c7605534883077d284436e90bcfa16",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x88625099bcf79947a28512e2e3f4267041648cff970ef4680bff9cc17c21ffa2",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will the S&P 500 increase in Q3 2023?\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xf72c34d6602183e50ee36a8b2d526d2e5cc1c6f60049ce1cfca513d94b43af94"
+      },
+      "brier": 0.0158
+    },
+    {
+      "market": {
+        "id": "C36tpkqxU19A5MkGrEsE",
+        "question": "Will Congressional stock trades outperform the S&P 500 by more than 10 percentage points in 2023?",
+        "url": "https://manifold.markets/such/will-congressional-stock-trades-out",
+        "resolution": "NO",
+        "resolvedAt": 1705002765439,
+        "traders": 125,
+        "topic": "S&P 500"
+      },
+      "forecast": {
+        "p": 0.1495,
+        "asOf": "2023-12-31T16:37:24.245Z",
+        "betId": "t2kgglQUTOP2q4Aci67O",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 2,
+        "answered": 2,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0xa3d876a4cc394e52610e01e6b8badb5732c3bf993a38108716b15f6ade633a27",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x62000c215fcf0f75257d29b0c874586892f9546cc55cd0574f64cd0824c6e5fe",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Congressional stock trades outperform the S&P 500 by more than 10 percentage points in 2023?\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x32ad77072398094e72edb2183e826131f6f7b2c2fa72a4fb229ed4e30d659645"
+      },
+      "brier": 0.0224
+    },
+    {
+      "market": {
+        "id": "WH0IcolValuX1i1v6avO",
+        "question": "Will the S&P 500 increase in August 2023?",
+        "url": "https://manifold.markets/XComhghall/will-the-sp-500-increase-in-august",
+        "resolution": "NO",
+        "resolvedAt": 1693529449101,
+        "traders": 125,
+        "topic": "S&P 500"
+      },
+      "forecast": {
+        "p": 0.1069,
+        "asOf": "2023-08-24T21:31:59.534Z",
+        "betId": "ihxZ24BrDTHVAx7IekHJ",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 2,
+        "answered": 2,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0x1a249cc93e0e36eaddb376ea074299c309c449741d0b1aa4702d784bfeaef2bf",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0xc1c1cd2794a6cf6f925cef722ea2eb6be66bd9969f7f8f6217ef2f458e5f77cd",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will the S&P 500 increase in August 2023?\" is no.",
+        "verdict": "disagrees",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xc5f874f4a9d1f451894a15e6b7998ec5738de52ceae6c7dfc3f7c68c0485b1a2"
+      },
+      "brier": 0.0114
+    },
+    {
+      "market": {
+        "id": "5J1JCkyVIci7RZRRu2I9",
+        "question": "Will the S&P 500 be above 5000 at the end of Feb 2024?",
+        "url": "https://manifold.markets/AmmonLam/will-the-sp-500-be-above-5000-at-th-bc4c86e2d6fd",
+        "resolution": "YES",
+        "resolvedAt": 1709243306358,
+        "traders": 124,
+        "topic": "S&P 500"
+      },
+      "forecast": {
+        "p": 0.8384,
+        "asOf": "2024-02-22T21:33:27.461Z",
+        "betId": "mmjBx3mlUMmyVZ5E9dsk",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0xc59e223bf36c1cb2c50dfa6c9b54da2f7defb3f0b4bfe63249db39444b7457b7",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x4fbfd2ca86b0cfe8b127acde7ec03eadd0946f5aad04fee15a4fb8566c44b516",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will the S&P 500 be above 5000 at the end of Feb 2024?\" is yes.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xbc6d01482f55612783ca4238193e07285b8b940b8c00324f0fbdd8e346485a7b"
+      },
+      "brier": 0.0261
+    },
+    {
+      "market": {
+        "id": "n5RPZpZtlh",
+        "question": "S&P 500 drops 8%+ by April 2025 post-Liberation Day?",
+        "url": "https://manifold.markets/NeoMalthusian/sp-500-drops-8-by-april-2025-postli",
+        "resolution": "NO",
+        "resolvedAt": 1746047726442,
+        "traders": 124,
+        "topic": "S&P 500"
+      },
+      "forecast": {
+        "p": 0.1647,
+        "asOf": "2025-04-23T21:14:26.724Z",
+        "betId": "LL0tL0dztUZu",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0x408c750e8eee626b62fa47fa61a73dabc4d00e6e428219b4afdc02d7c8c1c77d",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x86f5426304f15d70d1b35ab6e197f37651b69c026ad020ab3f592eb54ca82ec1",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"S&P 500 drops 8%+ by April 2025 post-Liberation Day?\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x4598caae6b191c39557376f5bc77012860f6e8e4eb3cb65a748822aaafbeb878"
+      },
+      "brier": 0.0271
+    },
+    {
+      "market": {
+        "id": "CTQCTcTvjigczwotykhR",
+        "question": "Will S&P 500 increase in April 2023?",
+        "url": "https://manifold.markets/XComhghall/will-sp-500-increase-in-april-2023",
+        "resolution": "YES",
+        "resolvedAt": 1682987961248,
+        "traders": 117,
+        "topic": "S&P 500"
+      },
+      "forecast": {
+        "p": 0.6918,
+        "asOf": "2023-04-24T19:58:22.125Z",
+        "betId": "eJdMD37ZeAalF6C98dWu",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 2,
+        "answered": 2,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "yes",
+            "signal": "0xfb0356196c64910bcb71bea8e0c4014205bd35a54539f0f869fd3437e7b36b81",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x8a951e025287d3b3b53a7fd82ef96f03f936e70a862ae118cc9fbb6ad0a47923",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will S&P 500 increase in April 2023?\" is yes.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xfb76fa7e1bcbdd2d7f69949e1e1f8f7d2a18636d0d35009de8bef7368ff179bf"
+      },
+      "brier": 0.095
+    },
+    {
+      "market": {
+        "id": "udMMbaf4SzLnxzb3VS7j",
+        "question": "Will the S&P 500 close at an all time high in 2023?",
+        "url": "https://manifold.markets/BruceGrugett/will-the-sp-500-close-at-an-all-tim",
+        "resolution": "NO",
+        "resolvedAt": 1703884124084,
+        "traders": 110,
+        "topic": "S&P 500"
+      },
+      "forecast": {
+        "p": 0.3717,
+        "asOf": "2023-12-22T20:10:26.564Z",
+        "betId": "fBCs5hqsHiSvXzwk1nOV",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 2,
+        "answered": 2,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0xebdbafb33b175ece4ba5e2b063403d5e707449ea6f4ef125690f7c4fb907ed0e",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x452970a62e38a4518622c08baea8a9b6d3107976ce7ddde42bd17302e1822da7",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will the S&P 500 close at an all time high in 2023?\" is no.",
+        "verdict": "agrees",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x66569e7141fa224f3430a1706e8e9e55f6aefeaa2430bee146039410b82d2c06"
+      },
+      "brier": 0.1382
+    },
+    {
+      "market": {
+        "id": "sAXXjBtMrZ9cR6nawUq2",
+        "question": "Will S&P 500 increase in May 2023?",
+        "url": "https://manifold.markets/XComhghall/will-sp-500-increase-in-may-2023",
+        "resolution": "YES",
+        "resolvedAt": 1685652836559,
+        "traders": 103,
+        "topic": "S&P 500"
+      },
+      "forecast": {
+        "p": 0.5148,
+        "asOf": "2023-05-25T20:31:13.330Z",
+        "betId": "du5w4m3LWX4WEFdpco5T",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0x6e843b84024031fda5a91b9110d927a63dba6b286d11c34992cbd9e5f5845d8c",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x2744a0a51ee6ff7f7cab359a240cad9af9b7fd338ec41364494bcaed040383f3",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will S&P 500 increase in May 2023?\" is yes.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x841a8be30cc49d0aab469eb4aa6b74ab10dc96b5b026ac0729f21d027de821eb"
+      },
+      "brier": 0.2354
+    },
+    {
+      "market": {
+        "id": "N4PwSuA7jH9c2y7ucaG2",
+        "question": "Will Germany experience negative economic growth for two consecutive quarters in 2023? (Recession in Germany)",
+        "url": "https://manifold.markets/MaxG/will-germany-experience-negative-ec",
+        "resolution": "NO",
+        "resolvedAt": 1706621814303,
+        "traders": 118,
+        "topic": "recession"
+      },
+      "forecast": {
+        "p": 0.8691,
+        "asOf": "2023-12-27T10:27:43.664Z",
+        "betId": "Kcg1ZBZPnuuAJNxHEzIR",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0x47b72b6c04ed2652f3353018e98de72a56a2b0463d4b07bd4604f743f8abff5f",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x5655e7c8e431713a6a7cc77424ef8961bfb045f431867fb881660333d1341ba9",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Germany experience negative economic growth for two consecutive quarters in 2023? (Recession in Germany)\" is no.",
+        "verdict": "disagrees",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x0b972f04403267dd8e7d2c81e0838932e9713f1b60933129d91bcfc711f3e90b"
+      },
+      "brier": 0.7553
+    },
+    {
+      "market": {
+        "id": "470xwyy5ig",
+        "question": "Will the US enter a recession by first half of 2025? (Two quarters negative GDP growth)",
+        "url": "https://manifold.markets/jack/will-the-us-enter-a-recession-by-20-h8h1iir9rt",
+        "resolution": "NO",
+        "resolvedAt": 1756136710861,
+        "traders": 116,
+        "topic": "recession"
+      },
+      "forecast": {
+        "p": 0.1008,
+        "asOf": "2025-06-30T02:02:11.854Z",
+        "betId": "NEtONqZUCEg5",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 2,
+        "answered": 2,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0x18b87ace687ac7b1c61b657e16036d05625a725231ced8648a214d728711ca7a",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x365fb46ae10b777f934c571dd1781895c8ced02054563ec6817ce41d9f7447ad",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will the US enter a recession by first half of 2025? (Two quarters negative GDP growth)\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x6f85719412859c4fea5a6cfdcbe4551193476e48abb898fb49f1bba071fb468a"
+      },
+      "brier": 0.0102
+    },
+    {
+      "market": {
+        "id": "dKRuptMSKMAUZ17mnU3u",
+        "question": "Will Nvidia's share price break $1000 in 2024?",
+        "url": "https://manifold.markets/Krypton/will-nvidias-share-price-break-1000",
+        "resolution": "YES",
+        "resolvedAt": 1716412528723,
+        "traders": 114,
+        "topic": "Nvidia"
+      },
+      "forecast": {
+        "p": 0.8025,
+        "asOf": "2024-05-15T19:48:44.596Z",
+        "betId": "KV34nBQY345OQkNNwl2F",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 2,
+        "answered": 2,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "yes",
+            "signal": "0x9a2bc8c4d17a9a8151be05225d914472260c9509aa2c40fca4ee7644112215de",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x8ee8ea6a56dbdbcb16edf6b54504434c0ced7db3f50c82df9ce4e0d46e59ba6d",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Nvidia's share price break $1000 in 2024?\" is yes.",
+        "verdict": "disagrees",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x5440519fa48b2fd66d82c413f965a29aa1ae4d5bb908779673b86a40393fa85f"
+      },
+      "brier": 0.039
+    },
+    {
+      "market": {
+        "id": "gx18r8g6AM5sXGJ0lpSQ",
+        "question": "Will Tesla provide (or be included in) an autonomous ride-hailing service before the end of 2026",
+        "url": "https://manifold.markets/makoyass/will-tesla-provide-an-autonomous-dr",
+        "resolution": "YES",
+        "resolvedAt": 1791149427991,
+        "traders": 134,
+        "topic": "Tesla"
+      },
+      "forecast": {
+        "p": 0.7638,
+        "asOf": "2026-09-27T13:32:08.141Z",
+        "betId": "yU8A5lc5nlsC",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0x5dd865efc625e3e4c6816d5603d94ffa8fafc7f33740970b61f8c1391badc4b2",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x026b5afb56e7bfe16d96a2b6a94ca25f15a2f7cd3cf5c8ea5b5fe448ea426d2b",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Tesla provide (or be included in) an autonomous ride-hailing service before the end of 2026\" is yes.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x8d94ed3c51260a0666838fa3c4636ee7abd27fb6882e00a3aa9279784e890b50"
+      },
+      "brier": 0.0558
+    },
+    {
+      "market": {
+        "id": "AXQZvs3RFuxnUmzYRcLQ",
+        "question": "Will Meta have a higher market cap than Tesla at the end of January 2023?",
+        "url": "https://manifold.markets/BTE/will-meta-have-a-higher-market-cap",
+        "resolution": "NO",
+        "resolvedAt": 1675228880620,
+        "traders": 112,
+        "topic": "Tesla"
+      },
+      "forecast": {
+        "p": 0.17,
+        "asOf": "2023-01-24T21:50:47.094Z",
+        "betId": "TdONeTjniPp964h1eXnw",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 2,
+        "answered": 2,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0x089e45fc818988e0261d79a1808abd2677be9fef074b35c4640656af0ed7373a",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x789086fbd6ecc4f91b9663a34cd6ddae311a3d848d8bf46f4c8a52b704a8b886",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Meta have a higher market cap than Tesla at the end of January 2023?\" is no.",
+        "verdict": "agrees",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x8ba4fee9dd84133fadfce81310a93588cb09e249bd672b1c99fbdfa70a92fea0"
+      },
+      "brier": 0.0289
+    },
+    {
+      "market": {
+        "id": "HwoB8OteashLPScjzrNC",
+        "question": "Will the price of Ethereum exceed $2.500,- in 2023?",
+        "url": "https://manifold.markets/kian_spire/will-the-price-of-ethereum-exceed-2",
+        "resolution": "NO",
+        "resolvedAt": 1704088629426,
+        "traders": 115,
+        "topic": "Ethereum"
+      },
+      "forecast": {
+        "p": 0.1503,
+        "asOf": "2023-12-25T02:15:52.529Z",
+        "betId": "Ku8VxAp24f2OshsYcqHF",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 2,
+        "answered": 2,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0xee5a4e84de64b5979d2078c9df60fe293773309317b7d1b9f0f57ff1e9a73e9c",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x34bc9868819a7e8178b2d09e049d6f39e22329dfaa564ee5294b71fa54009f83",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will the price of Ethereum exceed $2.500,- in 2023?\" is no.",
+        "verdict": "agrees",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x903e14e232ceab3db1ae0951d67f85d046acea9889b4cf126ee3a6989493359d"
+      },
+      "brier": 0.0226
+    },
+    {
+      "market": {
+        "id": "l3K7632Z273RnWmmIgoY",
+        "question": "37. Will the US unemployment rate (now 3.7%) be above 4% in November 2023?",
+        "url": "https://manifold.markets/ACXBot/37-will-the-us-unemployment-rate-no",
+        "resolution": "NO",
+        "resolvedAt": 1702078367134,
+        "traders": 204,
+        "topic": "unemployment"
+      },
+      "forecast": {
+        "p": 0.1804,
+        "asOf": "2023-11-30T22:59:21.577Z",
+        "betId": "emc9GCklp9GKoLZp0Kjn",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0x3671afc5b5ab93798bc6ab21aed4a612a112059f9ff5bde9ccee1c19c99c182e",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x5004df8e563361bca8bfeda01c8d251be1d0c53dbf476bcfdabb95e2f2291ae5",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"37. Will the US unemployment rate (now 3.7%) be above 4% in November 2023?\" is no.",
+        "verdict": "agrees",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xfe06d4a35d30264db8f4e414e33697dfd9275c2c2ef40e2485978eba0519f1f9"
+      },
+      "brier": 0.0325
+    },
+    {
+      "market": {
+        "id": "WcFhziw9MPFI6cPk6mGr",
+        "question": "Will the unemployment rate in Argentina be lower in Q4 2024 than Q4 2023?",
+        "url": "https://manifold.markets/EvanDaniel/will-the-unemployment-rate-in-argen-dc7a6fed1f4e",
+        "resolution": "NO",
+        "resolvedAt": 1745792827022,
+        "traders": 103,
+        "topic": "unemployment"
+      },
+      "forecast": {
+        "p": 0.1338,
+        "asOf": "2025-03-01T09:21:32.044Z",
+        "betId": "y2cu2ngs0uIN",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 2,
+        "answered": 2,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0xc5962a3d15de35c8738ba4cac1f87c3bd89db6c2d33f00cf2f0abd90db1c4e5b",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x744a6926afe07f66311dffe5ebee129d133e07a8d5be2e1f38d12d295444ae3b",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will the unemployment rate in Argentina be lower in Q4 2024 than Q4 2023?\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x4ed1b38a18a78470520423a8f5216b1d8da03c3f0283a3419a68be7bf4df0779"
+      },
+      "brier": 0.0179
+    },
+    {
+      "market": {
+        "id": "sduzl25ER8",
+        "question": "Will the WTI Crude Oil Spot Price be above $95 on March 20, 2026?",
+        "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-NUlNqydPhq",
+        "resolution": "YES",
+        "resolvedAt": 1774122765984,
+        "traders": 220,
+        "topic": "oil price"
+      },
+      "forecast": {
+        "p": 0.6819,
+        "asOf": "2026-03-14T19:44:15.853Z",
+        "betId": "dQLqdIAuOgsO",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0x5f06f8dc218cbf8ac714ae9c525e8340db6695eab8765f7a6b21957fc20deeb2",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x8bb07acd547be4bfe19ef5e106fd9e540c6e5a5ce7a937b3428b447b91d73ad9",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will the WTI Crude Oil Spot Price be above $95 on March 20, 2026?\" is yes.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xf7a272293396a6b629fa6d561a3e84d37179fa8cd6fd2337f27e566e668b5f0e"
+      },
+      "brier": 0.1012
+    },
+    {
+      "market": {
+        "id": "PLS9ZCLzth",
+        "question": "Will Brent Oil Price Exceed $120 per Barrel by end of March 31, 2026?",
+        "url": "https://manifold.markets/069/will-brent-oil-price-exceed-120-per",
+        "resolution": "NO",
+        "resolvedAt": 1775059225453,
+        "traders": 155,
+        "topic": "oil price"
+      },
+      "forecast": {
+        "p": 0.3528,
+        "asOf": "2026-03-10T02:15:38.698Z",
+        "betId": "8uqROAEuyzut",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0x52d30f11c4e9af17dd4af4f078650f8a4feafa0d73b7a3f8ba343826a3f6a2c1",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x461fc0070e1cc72b4b0ae148afdfec660174e3ee8d2e36f2b1a17e40d6d6250b",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Brent Oil Price Exceed $120 per Barrel by end of March 31, 2026?\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x2b00405caf0f1d256857f561cf086c0878e1d2bd2454e91f0175487819663c7d"
+      },
+      "brier": 0.1245
+    },
+    {
+      "market": {
+        "id": "AAZgNUchy8",
+        "question": "Will Brent Crude Oil close above $120 on April 15th, 2026?",
+        "url": "https://manifold.markets/arnv/will-brent-crude-oil-close-above-12",
+        "resolution": "NO",
+        "resolvedAt": 1776351060585,
+        "traders": 153,
+        "topic": "oil price"
+      },
+      "forecast": {
+        "p": 0.35,
+        "asOf": "2026-04-08T23:24:02.478Z",
+        "betId": "pNNqI9NthlzC",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0x492219f9edd33f50e8beaaa91dd2cd39785ea83b5b47d745e45f79c9587a86dd",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x47267b2ac594bdd84671a8e7080d75709d4fc4c9f4566fa45ab75047e29b8aca",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Brent Crude Oil close above $120 on April 15th, 2026?\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x98d5c12744fdce71a7e547f68eaaacc7992037224cc9ec715ec6554ff3f9c01b"
+      },
+      "brier": 0.1225
+    },
+    {
+      "market": {
+        "id": "UNI96QlSSl",
+        "question": "Will US average gas price exceed $4/gallon in March 2026?",
+        "url": "https://manifold.markets/CalibratedGhosts/will-us-average-gas-price-exceed-4g",
+        "resolution": "YES",
+        "resolvedAt": 1775147662759,
+        "traders": 129,
+        "topic": "oil price"
+      },
+      "forecast": {
+        "p": 0.8851,
+        "asOf": "2026-03-26T15:55:26.230Z",
+        "betId": "qd9S68uCgNAS",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0xa2f15d1c9c7363075bcbfe319b50fa08c7a9844f086075a8f3edfdacac4cfe12",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x8cc01d1c4e05267ea21e9d4c8233058cbc196565978fa898581d3d375192237a",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will US average gas price exceed $4/gallon in March 2026?\" is yes.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x0e35bbf718cc5b8394a48890b6bb18a51b91e4a5dfeb8843d5ff18fb45f8ee21"
+      },
+      "brier": 0.0132
+    },
+    {
+      "market": {
+        "id": "APzUZNUS8I",
+        "question": "Will the WTI Crude Oil Spot Price be above $100 on May 11, 2026?",
+        "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-uQc5l8UgUI",
+        "resolution": "YES",
+        "resolvedAt": 1778596918526,
+        "traders": 116,
+        "topic": "oil price"
+      },
+      "forecast": {
+        "p": 0.77,
+        "asOf": "2026-05-05T13:39:08.126Z",
+        "betId": "nhnqZCRgnLCL",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0xa8a2b0664d031c8a14309c2a756eb96f5b9ee7ba2a11a7b652243585637ac28b",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x02bc46468a0a945d92d7c58f8cad54315fd37939641d8c2be954e358f9c08ed6",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will the WTI Crude Oil Spot Price be above $100 on May 11, 2026?\" is yes.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x25a9423c95bd6c44edeca5f36e5c64ca121a5097fc49446e85496e90f3b9e66b"
+      },
+      "brier": 0.0529
+    },
+    {
+      "market": {
+        "id": "7dydRYW81ShM8d6w6bwJ",
+        "question": "Will Apple announce a partnership with OpenAI regarding Siri during WWDC 2024?",
+        "url": "https://manifold.markets/Predict/will-apple-announce-a-partnership-w-db8a0fd6ca2f",
+        "resolution": "YES",
+        "resolvedAt": 1718047564959,
+        "traders": 1351,
+        "topic": "Apple"
+      },
+      "forecast": {
+        "p": 0.7064,
+        "asOf": "2024-06-03T18:57:36.347Z",
+        "betId": "HsXjF10pRDB5",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0xadc9880af8018cd24b5e4a411bd32be14288b569f3fc4172092c456f1ae57de1",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x6ab10f9568d35c8981af745b4aef25ec2385e5d98c9819840621b6879fa63421",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Apple announce a partnership with OpenAI regarding Siri during WWDC 2024?\" is yes.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xe56100e7b4e748ce16d1676838422d26bba0c9227c2afa4db7d7a7e1f6881f04"
+      },
+      "brier": 0.0862
+    },
+    {
+      "market": {
+        "id": "t7Ewym4a84h1HwAnaWmL",
+        "question": "Will Apple announce new hardware at WWDC 2024?",
+        "url": "https://manifold.markets/Predict/will-apple-announce-new-hardware-at",
+        "resolution": "NO",
+        "resolvedAt": 1718048889936,
+        "traders": 231,
+        "topic": "Apple"
+      },
+      "forecast": {
+        "p": 0.1423,
+        "asOf": "2024-06-03T16:46:39.521Z",
+        "betId": "fgxrwV1TeeVz",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "no",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0x1f0492fe10f573b08f824ebaacec224b470f41dbbf04cd6a88f353b19c2320a9",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x8e3fab1182742d794c887a1f4f8c5287d8d8be2fec3e17b6e9373bf35f07aae2",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Apple announce new hardware at WWDC 2024?\" is no.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0x8c11de80df516163841cf51fb18f51685c98f3c8c4479e99e2b2c6a6e93da683"
+      },
+      "brier": 0.0202
+    },
+    {
+      "market": {
+        "id": "5ta4N6w77ozjc59azwmC",
+        "question": "Apple releases a touchscreen Macbook by the end of 2026?",
+        "url": "https://manifold.markets/IsaacKing/will-any-macbook-have-a-touchscreen",
+        "resolution": "YES",
+        "resolvedAt": 1793284064329,
+        "traders": 135,
+        "topic": "Apple"
+      },
+      "forecast": {
+        "p": 0.5795,
+        "asOf": "2026-10-20T04:10:31.177Z",
+        "betId": "USd8SnUnQ5tc",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0x84d2bdc955757ec54541cac905a00ed97e834b3721b241354d0e2c82de5b2101",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x600b13700d0e09cc0bc1b4213295481cf7ca826a7e8e5864020c56b073266dc2",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Apple releases a touchscreen Macbook by the end of 2026?\" is yes.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xf98f345d4d99f9459558f1abbf8c577d2a4cab18ce63c4062f29698400d6e95b"
+      },
+      "brier": 0.1768
+    },
+    {
+      "market": {
+        "id": "auzOLj2mRk8vblYzsjWR",
+        "question": "Will Apple mention 'ChatGPT' at WWDC 2024?",
+        "url": "https://manifold.markets/Predict/will-apple-mention-chatgpt-at-wwdc",
+        "resolution": "YES",
+        "resolvedAt": 1718049058766,
+        "traders": 125,
+        "topic": "Apple"
+      },
+      "forecast": {
+        "p": 0.6013,
+        "asOf": "2024-06-03T14:54:56.388Z",
+        "betId": "wMcN8TZ3CZlK",
+        "daysBefore": 7
+      },
+      "verification": {
+        "status": "confirmed",
+        "telegraph": "yes",
+        "agreeing": 1,
+        "answered": 1,
+        "attempts": [
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0xb889ea81bc0d18a88237f4d39c4824a34d6e03185d9054abc94fce092391add3",
+            "tx": null
+          },
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0xbce9ce22bf275fabd93635ca50c5639551733f781236800056719237fe639be6",
+            "tx": null
+          }
+        ]
+      },
+      "corroboration": {
+        "claim": "The answer to the question \"Will Apple mention 'ChatGPT' at WWDC 2024?\" is yes.",
+        "verdict": "unclear",
+        "miner": {
+          "id": "4433",
+          "name": "LiveCert — Sourced Answers for Agents"
+        },
+        "signal": "0xb49b28ef9bd44a22b3319b104752272864f8a28f23fe389e2b3723fa39860fdf"
+      },
+      "brier": 0.159
+    }
+  ],
+  "attestation": {
+    "algorithm": "ed25519",
+    "sha256": "1ae14acf1ff864614d4392e8933681985c49876db382cb93a757ab8458066b23",
+    "signature": "Lpm9VQeqLXFSQmcHE4APh+bHjbUdkyXHYBEgx88vRivlWpQZe7gjehV0YOJYwsmT5ZVhUd+tmgnRfAKfzTHqDw==",
+    "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+  }
+}

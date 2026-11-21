@@ -90,7 +90,10 @@ async function secondCheck(name, signals, met) {
 async function back(id, name, signals, met, proposeTx) {
   const why = await secondCheck(name, signals, met);
   if (why) { console.log(`deal ${id}: resolver 2 declines to second: ${why}`); log({ action: "declined", id, why, propose: proposeTx }); return; }
-  if ((await settle(r1).deal(id)).finalizesAt > 0n) { console.log(`deal ${id}: the threshold is met; the window is open`); return; }
+  // RPC reads can lag the block that holds the proposal: wait until it is visible.
+  let live = await settle(r1).deal(id);
+  for (let i = 0; i < 15 && Number(live.state) !== 1; i++) { await new Promise((r) => setTimeout(r, 2000)); live = await settle(r1).deal(id); }
+  if (live.finalizesAt > 0n) { console.log(`deal ${id}: the threshold is met; the window is open`); return; }
   const hash = ethers.keccak256(ethers.AbiCoder.defaultAbiCoder().encode(["bool", "bytes32[]"], [met, signals]));
   const q = await settle(r2).second(id, hash); await q.wait();
   console.log(`deal ${id}: seconded by resolver 2 after its own check; dispute window open\n  second  ${tx(q.hash)}`);
