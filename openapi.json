@@ -44,6 +44,17 @@
                     "maxLength": 40,
                     "description": "Optional name for your app. Every call is recorded on EAS; named clients are counted by name in /api/feed.",
                     "example": "my-mind"
+                  },
+                  "fields": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "maxItems": 5,
+                    "description": "Optional: the fields that decide the verdict (both miners must fill them); other differences are reported as other_differences",
+                    "example": [
+                      "matched"
+                    ]
                   }
                 }
               }
