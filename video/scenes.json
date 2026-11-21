@@ -63,7 +63,7 @@
     "title": "We check our own numbers too",
     "bullets": [
       "Brier 0.0085 came mostly from near-certain markets",
-      "Contested markets only: Brier 0.11 (95% interval 0.05 to 0.20)",
+      "37 contested markets: Brier 0.12 (95% interval 0.08 to 0.18)",
       "Every receipt anchored on EAS as a Merkle root"
     ],
     "vo": "We check our own numbers too. Our first Brier score came mostly from easy markets, so we reran it on contested ones only, and show the interval. And every paid receipt is anchored on chain, so none can be deleted quietly."
