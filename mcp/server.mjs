@@ -25,6 +25,7 @@ const SCORECARD = process.env.TAKAR_SCORECARD ?? "https://raw.githubusercontent.
 // re-signed by anyone. This is keys/takar-ed25519.pub in the repo.
 const TAKAR_KEY = "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I=";
 const NAME = "takar";
+const SITE = process.env.TAKAR_SITE ?? "https://takar-telegraph.vercel.app";
 const VERSION = JSON.parse(readFileSync(new URL("./package.json", import.meta.url), "utf8")).version;
 const PROTOCOL = "2024-11-05";
 
@@ -65,6 +66,37 @@ const TOOLS = [
         top: { type: "integer", minimum: 1, maximum: 50, description: "How many miners to return. Default 10." },
       },
       required: ["intent"],
+    },
+  },
+  {
+    name: "second_opinion",
+    description:
+      "Before acting on intelligence from Telegraph, get a second opinion: Takar asks two DIFFERENT miners " +
+      "the same question (any intent), chosen by an open on-chain record of who was right, and compares their " +
+      "answers field by field. verdict 'agree' -> act on 'answer'. 'disagree' -> do not act on either alone; " +
+      "report both and the differing fields. 'insufficient' -> fewer than two usable answers. Takar pays the asks " +
+      "in test USDC; no key or wallet needed. Testnet only.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        intent: { type: "string", description: "Exact Telegraph intent name, e.g. WEATHER_FORECAST_VERIFY_GENERAL or EVENT_OUTCOME_RESOLUTION_GENERAL." },
+        params: { type: "object", description: "The intent's request params, as its schema defines them." },
+      },
+      required: ["intent", "params"],
+    },
+  },
+  {
+    name: "miner_reputation",
+    description:
+      "Which Telegraph miner to trust for an intent, from an open on-chain record (EAS on Ethereum Sepolia) of how " +
+      "each miner's paid answers held up against independent truth: right, wrong, unusable, wrong place, abstained. " +
+      "Ranked by the Wilson lower bound of accuracy. Anyone can add evidence to the same schema.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        intent: { type: "string", description: "Exact intent name. Omit to list the intents with evidence." },
+        attester: { type: "string", description: "Only count evidence from this attester address." },
+      },
     },
   },
 ];
@@ -113,6 +145,20 @@ const CALLS = {
       summary: card.summary,
       rows: card.rows,
     };
+  },
+
+  async second_opinion({ intent, params }) {
+    const name = String(intent ?? "").trim();
+    if (!/^[A-Z][A-Z0-9_]{2,80}$/.test(name)) throw new Error("intent must be an exact intent name");
+    if (!params || typeof params !== "object" || Array.isArray(params)) throw new Error("params must be an object");
+    return getJson(`${SITE}/api/second-opinion`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ intent: name, params }) });
+  },
+
+  async miner_reputation({ intent, attester } = {}) {
+    const q = new URLSearchParams();
+    if (intent) q.set("intent", String(intent));
+    if (attester) q.set("attester", String(attester));
+    return getJson(`${SITE}/api/reputation?${q}`);
   },
 
   async intent_ranking({ intent, top = 10 }) {

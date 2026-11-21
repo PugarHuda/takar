@@ -1,7 +1,7 @@
 {
   "name": "takar-mcp",
-  "version": "0.1.0",
-  "description": "Resolve real-world events with verbatim quotes, read a signed forecast scorecard, and rank Telegraph miners. No key, no wallet.",
+  "version": "0.2.0",
+  "description": "A second opinion for any Telegraph intent: two independent miners, chosen by an open on-chain record of who was right. Plus event resolution with verbatim quotes and a signed forecast scorecard. No key, no wallet.",
   "keywords": ["mcp", "modelcontextprotocol", "telegraph", "prediction-markets", "event-resolution", "oracle", "forecasting"],
   "homepage": "https://github.com/PugarHuda/takar/tree/main/mcp",
   "repository": { "type": "git", "url": "git+https://github.com/PugarHuda/takar.git", "directory": "mcp" },
