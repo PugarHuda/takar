@@ -521,6 +521,7 @@
       ]
     },
     "open_questions": [
+      "tenure: 24 authorities show an expiry date in the past with status \"Granted\": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.",
       "why it stopped in 1990: no source quotes a reason; do not assume exhaustion",
       "who controls it: Norton Gold Fields Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly",
       "who controls it: Mount Morgan Limited could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly",
@@ -635,7 +636,267 @@
           }
         ]
       }
-    ]
+    ],
+    "tenure": {
+      "checked_at": "2026-11-21T17:17:59.345Z",
+      "source": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer (Queensland Government, open data), read directly",
+      "authorities": 24,
+      "holders": {
+        "HERITAGE MINERALS PTY LTD": 24
+      },
+      "kinds": {
+        "ML granted": 14,
+        "ML granted (access)": 10
+      },
+      "native_title": {
+        "No Registered Native Title Claimants": 17,
+        "Granted before 1 January 1994": 7
+      },
+      "expired_but_granted": 24,
+      "note": "24 authorities show an expiry date in the past with status \"Granted\": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.",
+      "rows": [
+        {
+          "id": "ML 5612",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1954-01-01",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5613",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1974-01-07",
+          "expiry": "2025-08-31",
+          "native_title": "Granted before 1 January 1994",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5614",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1977-07-18",
+          "expiry": "2025-08-31",
+          "native_title": "Granted before 1 January 1994",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5615",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1977-07-18",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5616",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1985-04-22",
+          "expiry": "2025-08-31",
+          "native_title": "Granted before 1 January 1994",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5618",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1974-05-16",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5619",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1974-05-16",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5621",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "2011-04-07",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5623",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1974-05-16",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5624",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1974-05-16",
+          "expiry": "2025-08-31",
+          "native_title": "Granted before 1 January 1994",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5625",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1975-01-29",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5649",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1976-02-12",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5660",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1984-04-16",
+          "expiry": "2025-08-31",
+          "native_title": "Granted before 1 January 1994",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 6692",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1977-04-19",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5658",
+          "kind": "ML granted (access)",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1983-12-15",
+          "expiry": "2025-08-31",
+          "native_title": "Granted before 1 January 1994",
+          "minerals": "CU,PY,AG,AU"
+        },
+        {
+          "id": "ML 5633",
+          "kind": "ML granted (access)",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1974-04-04",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,PY,AG,AU"
+        },
+        {
+          "id": "ML 5634",
+          "kind": "ML granted (access)",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1974-05-02",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,PY,AG,AU"
+        },
+        {
+          "id": "ML 5648",
+          "kind": "ML granted (access)",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1976-02-12",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5608",
+          "kind": "ML granted (access)",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1974-05-16",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5609",
+          "kind": "ML granted (access)",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1974-05-16",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5617",
+          "kind": "ML granted (access)",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1985-05-15",
+          "expiry": "2025-08-31",
+          "native_title": "Granted before 1 January 1994",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5622",
+          "kind": "ML granted (access)",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1972-04-01",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5626",
+          "kind": "ML granted (access)",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1975-01-29",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        },
+        {
+          "id": "ML 5627",
+          "kind": "ML granted (access)",
+          "status": "Granted",
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "approved": "1975-01-29",
+          "expiry": "2025-08-31",
+          "native_title": "No Registered Native Title Claimants",
+          "minerals": "CU,MO,ZN,PY,AG,AU"
+        }
+      ]
+    }
   },
   "receipts": [
     {
@@ -1477,11 +1738,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T16:46:01.156Z",
+  "rederived_at": "2026-11-21T17:17:59.346Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "f826aecad6b7357d8f3cbcb60f54972eb33a9025ede441272d63b6e54f2eebe8",
-    "signature": "6XZm3szTcS0lpCqg5HnqFihnJnvZR/b8tgFXJQOnDze4JCzBMwO7jeeBGaPnb9I1/I8KJiVeNdFsirzx1thMDA==",
+    "sha256": "faa67af0434dba291518804f49c768cb6543a7e5805a83ffd254360db59665b0",
+    "signature": "TMcQbliGnEy8Xf07AzAkmojtfilBquJlWDk4NFjF5O3VYIxvBOviQgfnQtcDep0b4S7HOn2CULSNjyluOaxKAA==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

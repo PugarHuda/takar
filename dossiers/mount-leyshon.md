@@ -55,6 +55,23 @@ Two research answers naming the same kind of cause is a lead to check in the rec
 
 A register's status is not a mining tenure: who holds the lease today needs the tenure register.
 
+## Tenure today (Queensland register, read directly, not a Telegraph answer)
+
+Checked 2026-11-21T17:18:06.385Z within 500 m of the survey's point: **4** current authorities.
+
+- Holders: Newmont Landco Pty Ltd (4).
+- Types: ML granted (1), ML granted \(access\) (3).
+- Native title category: Granted before 1 January 1994 (2), Granted before 23 Dec 1996, intermediate period checked (2).
+
+| Authority | Holder | Status | Expiry | Native title |
+|---|---|---|---|---|
+| ML 10144 | Newmont Landco Pty Ltd | Granted | 2029-09-30 | Granted before 1 January 1994 |
+| ML 10148 | Newmont Landco Pty Ltd | Granted | 2029-07-31 | Granted before 1 January 1994 |
+| ML 10172 | Newmont Landco Pty Ltd | Granted | 2029-04-30 | Granted before 23 Dec 1996, intermediate period checked |
+| ML 10173 | Newmont Landco Pty Ltd | Granted | 2029-04-30 | Granted before 23 Dec 1996, intermediate period checked |
+
+Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
+
 ## Who held it
 
 - Leyshon Resources Limited (?–?, principal holder of mining lease 10144 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:38940] "Tenure: Principal Holder Name LEYSHON RESOURCES LIMITED; MINING LEASE 10144"

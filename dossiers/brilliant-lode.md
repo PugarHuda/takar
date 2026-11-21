@@ -45,6 +45,23 @@ Two research answers naming the same kind of cause is a lead to check in the rec
 
 A register's status is not a mining tenure: who holds the lease today needs the tenure register.
 
+## Tenure today (Queensland register, read directly, not a Telegraph answer)
+
+Checked 2026-11-21T17:18:02.912Z within 500 m of the survey's point: **3** current authorities.
+
+- Holders: CITIGOLD CORPORATION LIMITED (3).
+- Types: EPM granted (1), ML granted (2).
+- Native title category: Land subject to Native Title is excluded from the permit area (1), Granted before 23 Dec 1996, intermediate period checked (2).
+- **1 authorities show an expiry date in the past with status "Granted": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.**
+
+| Authority | Holder | Status | Expiry | Native title |
+|---|---|---|---|---|
+| EPM 15964 | CITIGOLD CORPORATION LIMITED | Granted | 2025-05-01 | Land subject to Native Title is excluded from the permit area |
+| ML 1499 | CITIGOLD CORPORATION LIMITED | Granted | 2035-12-31 | Granted before 23 Dec 1996, intermediate period checked |
+| ML 10208 | CITIGOLD CORPORATION LIMITED | Granted | 2035-12-31 | Granted before 23 Dec 1996, intermediate period checked |
+
+Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
+
 ## Who held it
 
 - Citigold Corporation Limited (?–?, principal holder of mining lease 1499, mining lease 10093, mining lease 10208 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:38722] "Tenure: Principal Holder Name CITIGOLD CORPORATION LIMITED; MINING LEASE 1499, MINING LEASE 10093, MINING LEASE 10208"
@@ -56,6 +73,7 @@ A register's status is not a mining tenure: who holds the lease today needs the 
 
 ## Open questions (what the records do not settle)
 
+- tenure: 1 authorities show an expiry date in the past with status "Granted": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.
 - closure reason: the indexed sources give a closure year but quote no reason
 - why it stopped in 1917: no source quotes a reason; do not assume exhaustion
 - who controls it: Brilliant Deep Levels Gold Mining Company could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly

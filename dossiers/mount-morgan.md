@@ -59,6 +59,32 @@ Two research answers naming the same kind of cause is a lead to check in the rec
 
 A register's status is not a mining tenure: who holds the lease today needs the tenure register.
 
+## Tenure today (Queensland register, read directly, not a Telegraph answer)
+
+Checked 2026-11-21T17:17:59.345Z within 500 m of the survey's point: **24** current authorities.
+
+- Holders: HERITAGE MINERALS PTY LTD (24).
+- Types: ML granted (14), ML granted \(access\) (10).
+- Native title category: No Registered Native Title Claimants (17), Granted before 1 January 1994 (7).
+- **24 authorities show an expiry date in the past with status "Granted": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.**
+
+| Authority | Holder | Status | Expiry | Native title |
+|---|---|---|---|---|
+| ML 5612 | HERITAGE MINERALS PTY LTD | Granted | 2025-08-31 | No Registered Native Title Claimants |
+| ML 5613 | HERITAGE MINERALS PTY LTD | Granted | 2025-08-31 | Granted before 1 January 1994 |
+| ML 5614 | HERITAGE MINERALS PTY LTD | Granted | 2025-08-31 | Granted before 1 January 1994 |
+| ML 5615 | HERITAGE MINERALS PTY LTD | Granted | 2025-08-31 | No Registered Native Title Claimants |
+| ML 5616 | HERITAGE MINERALS PTY LTD | Granted | 2025-08-31 | Granted before 1 January 1994 |
+| ML 5618 | HERITAGE MINERALS PTY LTD | Granted | 2025-08-31 | No Registered Native Title Claimants |
+| ML 5619 | HERITAGE MINERALS PTY LTD | Granted | 2025-08-31 | No Registered Native Title Claimants |
+| ML 5621 | HERITAGE MINERALS PTY LTD | Granted | 2025-08-31 | No Registered Native Title Claimants |
+| ML 5623 | HERITAGE MINERALS PTY LTD | Granted | 2025-08-31 | No Registered Native Title Claimants |
+| ML 5624 | HERITAGE MINERALS PTY LTD | Granted | 2025-08-31 | Granted before 1 January 1994 |
+| ML 5625 | HERITAGE MINERALS PTY LTD | Granted | 2025-08-31 | No Registered Native Title Claimants |
+| ML 5649 | HERITAGE MINERALS PTY LTD | Granted | 2025-08-31 | No Registered Native Title Claimants |
+
+Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
+
 ## Who held it
 
 - Norton Gold Fields Limited (?–?, principal holder of mining lease 5589, mining lease 5602, mining lease 5608, mining lease 5609, mining lease 5612, mining lease 5613, mining lease 5616, mining lease 5618, mining lease 5620, mining lease 5623, mining lease 5624, mining lease 5625, mining lease 5633, mining lease 5634, mining lease 5659, mining lease 5660, mining lease 6692 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:494270] "Tenure: Principal Holder Name NORTON GOLD FIELDS LIMITED; MINING LEASE 5589, MINING LEASE 5602, MINING LEASE 5608, MINING LEASE 5609, MINING LEASE 5612, MINING LEASE 5613, MINING LEASE 5616, MINING LEASE 5618, MINING LEASE 5620, MINING LEASE 5623, MINING LEASE 5624, MINING LEASE 5625, MINING LEASE 5633, MINING LEASE 5634, MINING LEASE 5659, MINING LEASE 5660, MINING LEASE 6692"
@@ -72,6 +98,7 @@ A register's status is not a mining tenure: who holds the lease today needs the 
 
 ## Open questions (what the records do not settle)
 
+- tenure: 24 authorities show an expiry date in the past with status "Granted": usually a renewal is pending. The ground is not available on the register's word alone; confirm with the Department of Resources.
 - why it stopped in 1990: no source quotes a reason; do not assume exhaustion
 - who controls it: Norton Gold Fields Limited could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly
 - who controls it: Mount Morgan Limited could not be confirmed in two company registers \(fewer than two usable answers\); check ASIC directly
