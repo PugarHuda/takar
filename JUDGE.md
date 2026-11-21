@@ -110,6 +110,12 @@ The escalation tally counts confirmed claims only.
 | Check | `receipts/brief-india-pakistan-2025.json` (signed). Result: 2 confirmed, 1 contradicted, 1 disputed, 1 single-source, 1 unsupported, 2 forecasts. $0.18 total. |
 | Break | c6 is fabricated on purpose ("exchanged nuclear strikes"): contradicted by TxLens and FACT_CHECK. c4 is contested: disputed. |
 
+## Verified and watched
+
+- All three settlement contracts (v2 `0xcb35…7187`, v3 `0xf977…502b`, v4 `0x2A61…2aBd`) are source-verified on Sourcify (exact match).
+- `scripts/smoke.mjs` checks the live site's free endpoints every night (`.github/workflows/smoke.yml`); `.github/workflows/served.yml` snapshots the node's request counter every two hours.
+- `scripts/anchor.mjs` puts the ledger's Merkle root and every dossier hash on EAS; `--verify <count> <root>` recomputes a published root from the file.
+
 ## Gold Rush dossiers (for Telegraph's own Gold Rush app)
 
 Ahmed asked the Gold Rush contributors for the verification side: show both figures, check whether they mean different periods, trace every finding to its record, and export a dossier. [goldrush.html](https://takar-telegraph.vercel.app/goldrush.html) does that from the two Gold Rush miners (goldrush-qld-history 7310050 and OathCast 64176), asked by id and paid through Telegraph.
@@ -123,7 +129,7 @@ Ahmed asked the Gold Rush contributors for the verification side: show both figu
 | Closures | Mount Morgan closed in 1927 (fire, not geological), 1981 (end of the ore body, one source) and 1990 (no reason quoted). A closure with no quoted reason becomes an open question, never "exhausted". |
 | Receipts | Each structured figure is checked against the answer bought through Telegraph; the miner's rank sits next to the evidence. |
 
-Any mine: `GET /api/dossier?mine=…` (`&format=md` downloads). Tested on a site we had not looked at (Golden Plateau). Rules in `lib/dossier.mjs`, 21 offline checks; `npm run`-free: `node --env-file=.env scripts/dossier-run.mjs`.
+Eight mines so far, each as a page, PDF, Markdown and signed JSON. Also: **tenure today** from the Queensland register (Mount Morgan: 24 leases held by Heritage Minerals, all past their expiry date yet "Granted", which the dossier flags as a pending renewal, not free ground), native title category per authority, gold then and now in real terms (US CPI), and a warning when a name matched a small working in a crowded field (Ravenswood). Any mine: `GET /api/dossier?mine=…` (`&format=md` downloads). Tested on a site we had not looked at (Golden Plateau). Rules in `lib/dossier.mjs`, 21 offline checks; `npm run`-free: `node --env-file=.env scripts/dossier-run.mjs`.
 
 ## Missions 14 and 06: Takar Settle v2
 

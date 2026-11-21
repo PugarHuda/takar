@@ -191,6 +191,7 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
     <h3 class="display sub">Every second opinion, on the record</h3>
     <p class="note">Each call is written to EAS as it happens (<a href="https://sepolia.easscan.org/schema/view/0xe0bad453487eee9668996b592e5cc85d5945dd5e07125f20feec4cf65b224513">schema</a>): the intent, the two miners and signals, the verdict and the fields that differed. Usage and disagreements are counted from the chain, not from our logs. Pass <code>"client": "your-app"</code> to be counted by name. <a href="api/feed">JSON</a>.</p>
     <p id="feed-sum">Loading…</p>
+    <div class="scroll"><table id="feed-intents"></table></div>
     <div class="scroll"><table id="feed"></table></div>
   </section>
 
@@ -343,6 +344,9 @@ const canonical = (v) => Array.isArray(v) ? `[${v.map(canonical).join(",")}]`
     const v = f.verdicts ?? {};
     const named = Object.entries(f.clients ?? {}).filter(([k]) => k !== "unnamed");
     document.getElementById("feed-sum").innerHTML = `<b>${esc(f.calls)}</b> second opinions on chain${f.since ? ` since ${esc(f.since.slice(0, 10))}` : ""}: ${esc(v.agree ?? 0)} agree, <b>${esc(v.disagree ?? 0)} disagree</b>, ${esc(v.insufficient ?? 0)} insufficient. Across ${esc(Object.keys(f.intents ?? {}).length)} intents${named.length ? `; clients: ${named.map(([k, n]) => `${esc(k)} (${esc(n)})`).join(", ")}` : ""}.`;
+    document.getElementById("feed-intents").innerHTML = Object.keys(f.by_intent ?? {}).length
+      ? `<thead><tr><th>Intent</th><th>Agree</th><th>Disagree</th><th>Insufficient</th></tr></thead><tbody>` + Object.entries(f.by_intent).sort((a, b) => (b[1].agree + b[1].disagree + b[1].insufficient) - (a[1].agree + a[1].disagree + a[1].insufficient)).map(([k, v]) => `<tr><td>${esc(k.replace(/_GENERAL$/, ""))}</td><td>${esc(v.agree)}</td><td>${esc(v.disagree)}</td><td>${esc(v.insufficient)}</td></tr>`).join("") + `</tbody>`
+      : "";
     document.getElementById("feed").innerHTML = f.disagreements?.length
       ? `<thead><tr><th>When</th><th>Intent</th><th>Miners</th><th>Differ on</th><th>Evidence</th></tr></thead><tbody>` + f.disagreements.map((d) => `<tr><td>${esc(d.at.slice(0, 16).replace("T", " "))}</td><td>${esc(d.intent.replace(/_GENERAL$/, ""))}</td><td>${esc(d.miners.join(" vs "))}</td><td>${esc(d.differ.join(", "))}</td><td>${d.signals.map((u, i) => `<a href="${esc(u)}">signal ${i + 1}</a>`).join(" · ")} · <a href="${esc(d.attestation)}">EAS</a></td></tr>`).join("") + `</tbody>`
       : "";

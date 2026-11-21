@@ -1,0 +1,13 @@
+name: live-smoke
+# Every night: the live site's free endpoints answer and return what they claim.
+on:
+  schedule: [{ cron: "41 21 * * *" }]
+  workflow_dispatch:
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node scripts/smoke.mjs

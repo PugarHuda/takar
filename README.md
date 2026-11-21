@@ -31,8 +31,8 @@ Reviewers: start at [JUDGE.md](JUDGE.md), which opens with what each app does **
 | Second opinion on any intent | `POST /api/second-opinion {intent, params, client?}`, the Minds Bazaar Skill "Takar Second Opinion", or `npx -y takar-mcp` (set `TAKAR_PAYER_KEY` to pay from your own escrow, no limit). Every call is an EAS attestation: `GET /api/feed`. |
 | Which miner to trust | `GET /api/reputation?intent=`; add your own evidence [on easscan](https://sepolia.easscan.org/attestation/attestWithSchema/0x351bc4ecf778660c8de0d42eb111e758469e1fe5ffc1b993899e399c9c056741). |
 | Why did my miner score that | `GET /api/miner?id=` (`&format=svg` for a README badge). |
-| Gold Rush dossier for a Queensland mine | [goldrush.html](https://takar-telegraph.vercel.app/goldrush.html), `GET /api/dossier?mine=`. |
-| Escrow that needs two resolvers and a dispute bond | [TakarSettle v3](https://sepolia.etherscan.io/address/0xf977660CD28704Fa97D8f6B72835646F62E2502b), `scripts/settle3.mjs`. |
+| Gold Rush dossier for a Queensland mine | [goldrush.html](https://takar-telegraph.vercel.app/goldrush.html) (8 mines, PDF/Markdown/signed JSON; tenure, native title category, real-terms gold price), `GET /api/dossier?mine=`. |
+| Escrow that needs two resolvers and a dispute bond | [TakarSettle v3](https://sepolia.etherscan.io/address/0xf977660CD28704Fa97D8f6B72835646F62E2502b) and v4 with escalation to the full panel ([0x2A61…2aBd](https://sepolia.etherscan.io/address/0x2A615f7D3E52e9Ee68AB8CaaE3385bcbACCB2aBd)), `scripts/settle3.mjs [--v4]`. Source verified on [Sourcify](https://repo.sourcify.dev/11155111/0x2A615f7D3E52e9Ee68AB8CaaE3385bcbACCB2aBd). |
 
 ## What it does
 
