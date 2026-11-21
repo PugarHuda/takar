@@ -68,7 +68,7 @@ async function decide(terms, run) {
     const one = async (minerId) => {
       try {
         const r = await ask({ intent: "EVENT_OUTCOME_RESOLUTION_GENERAL", params: { event: terms.question }, minerId, unit: "settle-m14", run, purpose: `mission14:settle ${terms.question.slice(0, 60)}` });
-        answers.push({ miner: r.ledger?.miner ?? { id: String(minerId) }, result: r.result_shape === "intent" ? r.result : null, signal: r.signal_hash ?? null });
+        answers.push({ miner: r.ledger?.miner ?? (minerId ? { id: String(minerId) } : null), result: r.result_shape === "intent" ? r.result : null, signal: r.signal_hash ?? null });
       } catch (e) { console.log(`  ask ${minerId ?? "routed"}: ${e.message.slice(0, 100)}`); }
     };
     await one(TAKAR_OUTCOME_ID);

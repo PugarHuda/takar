@@ -90,6 +90,20 @@ details summary { cursor: pointer; font-weight: 700; padding: 8px 0; }
 .scroll { overflow-x: auto; }
 .ledger table { border-collapse: collapse; font-size: .875rem; min-width: 760px; width: 100%; }
 .ledger th, .ledger td { text-align: left; padding: 5px 10px 5px 0; border-bottom: 1px solid var(--rule-soft); }
+.btn { font: 700 1rem/1 "Atkinson Hyperlegible", sans-serif; color: var(--sheet); background: var(--ink); border: 0; padding: 10px 16px; cursor: pointer; }
+.btn:disabled { opacity: .6; cursor: wait; }
+h3.sub { font: 600 1.3rem/1.2 "Barlow Semi Condensed", sans-serif; margin: 26px 0 6px; }
+.note { color: var(--muted); font-size: .9375rem; max-width: 76ch; margin: 0 0 10px; }
+.found table:not(.buys) { border-collapse: collapse; font-size: .9375rem; }
+.found table:not(.buys) th, .found table:not(.buys) td { text-align: left; padding: 5px 14px 5px 0; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+.try { display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: end; max-width: 760px; }
+.try label { flex-basis: 100%; color: var(--muted); }
+.try input { flex: 1 1 320px; font: inherit; color: var(--ink); background: var(--sheet); border: 1px solid var(--rule); padding: 8px 10px; min-width: 0; }
+.answer { margin: 16px 0 0; padding: 14px 16px; background: var(--sheet); border-left: 4px solid var(--rule); max-width: 760px; }
+.answer.yes { border-color: var(--go); } .answer.no { border-color: var(--abort); } .answer.unresolved { border-color: var(--hold); }
+.answer .big { font: 700 1.8rem/1 "Barlow Semi Condensed", sans-serif; }
+.answer blockquote { margin: 10px 0; padding-left: 12px; border-left: 2px solid var(--rule); }
+.ok { color: var(--go); font-weight: 700; } .bad { color: var(--abort); font-weight: 700; }
 footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--muted); font-size: .9375rem; }
 .empty { padding: 40px 0; color: var(--muted); }
 
@@ -131,6 +145,13 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
   <section class="found" aria-labelledby="score-h">
     <h2 id="score-h" class="display">Forecast scorecard (Mission 13)</h2>
     <p id="score-sum">Loading the scorecard…</p>
+    <p><button id="verify" type="button" class="btn">Verify the signature in this browser</button> <span id="verify-out" aria-live="polite"></span></p>
+    <h3 class="display sub">The miners, graded by the same receipts</h3>
+    <p class="note">Every market was asked of two miners: Takar Outcome by id, and whoever Telegraph's ranking routed to. A miner is right when its yes or no matches the market's own resolution.</p>
+    <div class="scroll"><table id="miners"></table></div>
+    <h3 class="display sub">Calibration</h3>
+    <p class="note">What the crowd said, against how often it happened, among the scored forecasts.</p>
+    <div class="scroll"><table id="calib"></table></div>
     <details>
       <summary>Show every forecast</summary>
       <div class="scroll"><table id="score"></table></div>
@@ -139,8 +160,20 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
 
   <section class="found" aria-labelledby="settle-h">
     <h2 id="settle-h" class="display">Conditional payments (Missions 14 and 06)</h2>
-    <p>Test USDC locked in <a href="https://sepolia.etherscan.io/address/0xfB5E39924F287d14a1833C58e50f466145e62808">TakarSettle</a> against a condition, settled once Telegraph answers. If the condition is met the payee is paid, otherwise the payer is refunded. Each settlement carries the signal it rests on.</p>
+    <p>Test USDC locked in <a href="https://sepolia.etherscan.io/address/0xcb35d51094335141a986a429bA546b7955705187">TakarSettle v2</a> against a condition. Takar buys the answer through Telegraph and <b>proposes</b> a settlement; the payer and the payee each get one dispute during a 10-minute window, and then anyone can finalize it. The contract refuses an event proposal backed by fewer than two Telegraph signals, so <b>two different miners must agree</b>. A drought cover also needs <b>NASA POWER</b>, a record independent of Telegraph's weather miners, to land on the same side of the trigger, or it holds.</p>
     <div class="scroll"><table id="settle"><tr><td>Loading…</td></tr></table></div>
+    <p class="note">Rows marked v1 settled on the first contract (<a href="https://sepolia.etherscan.io/address/0xfB5E39924F287d14a1833C58e50f466145e62808">0xfB5E…2808</a>), one answer and no dispute window.</p>
+  </section>
+
+  <section class="found" aria-labelledby="try-h">
+    <h2 id="try-h" class="display">Ask the outcome miner yourself</h2>
+    <p>No wallet, no signup. This calls Takar Outcome's own endpoint directly, the same one Telegraph routes EVENT_OUTCOME_RESOLUTION asks to. It answers from a settled Polymarket market or a sentence quoted word for word from Wikipedia, and says <i>unresolved</i> rather than guess.</p>
+    <form id="try" class="try">
+      <label for="try-q">A real-world event, as a question</label>
+      <input id="try-q" name="q" maxlength="500" required value="Did Argentina win the 2022 FIFA World Cup?">
+      <button type="submit" class="btn">Resolve</button>
+    </form>
+    <div id="try-out" aria-live="polite"></div>
   </section>
 
   <section class="ledger" aria-labelledby="ledger-h">
@@ -223,16 +256,63 @@ function unitRow(d, budget) {
 
 // Market URLs reach href attributes too, so only Manifold links become links.
 const MARKET = /^https:\/\/manifold\.markets\/[\w\-/]+$/;
+const PINNED_KEY = "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I=";
+/** The same canonical JSON lib/sign.mjs signs: keys sorted, no whitespace. */
+const canonical = (v) => Array.isArray(v) ? `[${v.map(canonical).join(",")}]`
+  : v && typeof v === "object" ? `{${Object.keys(v).sort().map((k) => `${JSON.stringify(k)}:${canonical(v[k])}`).join(",")}}`
+  : JSON.stringify(v ?? null);
+
+// Try it: the miner's own endpoint, free, rate-limited per IP on the server.
+document.getElementById("try").addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const q = document.getElementById("try-q").value.trim();
+  const out = document.getElementById("try-out");
+  const btn = ev.target.querySelector("button");
+  if (!q) return;
+  btn.disabled = true;
+  out.innerHTML = `<p class="note">Resolving… a fresh question can take up to 20 seconds.</p>`;
+  try {
+    const res = await fetch(`https://takar-outcome.vercel.app/api/resolve?event=${encodeURIComponent(q)}`);
+    const a = await res.json();
+    if (!res.ok) throw new Error(a.error ?? res.status);
+    const cls = ["yes", "no"].includes(a.outcome) ? a.outcome : "unresolved";
+    const src = (a.sources ?? []).filter((u) => /^https:\/\/(en\.wikipedia\.org|polymarket\.com)\//.test(u))
+      .map((u) => `<a href="${esc(u)}">${esc(decodeURIComponent(u.replace(/^https:\/\//, "")))}</a>`).join(" · ");
+    out.innerHTML = `<div class="answer ${cls}"><div class="big">${esc(a.outcome)}${a.winner ? `: ${esc(a.winner)}` : ""}</div>` +
+      (a.evidence ? `<blockquote>${esc(a.evidence)}</blockquote>` : `<p>${esc(a.note ?? "no source settles it")}</p>`) +
+      `<p class="note">Confidence <b>${esc(a.confidence ?? "—")}</b>. ${esc(a.resolution_rule ?? "")}${a.cached ? " (cached answer)" : ""}</p>` +
+      (src ? `<p class="note">Sources: ${src}</p>` : "") + `</div>`;
+  } catch (e) {
+    out.innerHTML = `<p class="bad">The miner did not answer (${esc(e.message)}).</p>`;
+  } finally {
+    btn.disabled = false;
+  }
+});
 
 (async () => {
   try {
     const rows = await jsonl("receipts/settlements.jsonl");
+    // Terms are written once, at the deal's first row; later rows (dispute, finalize) carry only the id.
+    const termsOf = new Map();
+    for (const s of rows) if (s.terms) termsOf.set(`${s.contract ?? "v1"}:${s.deal}`, s.terms);
+    const ACTION = { propose: "proposed", finalize: "finalized", dispute: "disputed", hold: "held" };
     document.getElementById("settle").innerHTML =
-      `<thead><tr><th>Deal</th><th>Mission</th><th>Condition</th><th>Result</th><th>Why</th><th>Proof</th></tr></thead><tbody>` +
-      rows.map((s) => {
-        const mission = s.terms?.kind === "weather" ? "06 drought cover" : "14 conditional escrow";
-        const cond = s.terms?.kind === "weather" ? `${esc(s.terms.location)}, ${esc(s.terms.from)} to ${esc(s.terms.to)}, under ${esc(s.terms.triggerMm)} mm` : esc(s.terms?.question);
-        return `<tr><td>${esc(s.deal)}</td><td>${mission}</td><td>${cond}</td><td>${s.met ? "paid the payee" : "refunded the payer"} (${esc(s.amount)} USDC)</td><td>${esc(s.why)}</td><td>${proofLinks(s.tx, s.signal)}</td></tr>`;
+      `<thead><tr><th>Deal</th><th>Mission</th><th>Condition</th><th>Step</th><th>Why</th><th>Proof</th></tr></thead><tbody>` +
+      rows.slice().reverse().map((s) => {
+        const t = s.terms ?? termsOf.get(`${s.contract ?? "v1"}:${s.deal}`) ?? {};
+        const mission = t.kind === "weather" ? "06 drought cover" : "14 conditional escrow";
+        const cond = t.kind === "weather" ? `${esc(t.location)}, ${esc(t.from)} to ${esc(t.to)}, under ${esc(t.triggerMm)} mm` : esc(t.question ?? "");
+        const pays = s.met ? "pay the payee" : "refund the payer";
+        const step = !s.action ? `<b>${s.met ? "paid the payee" : "refunded the payer"}</b> (${esc(s.amount)} USDC)`
+          : s.action === "propose" ? `<b>proposed</b>: ${pays}`
+          : s.action === "finalize" ? `<b>finalized</b>: ${s.met ? "paid the payee" : "refunded the payer"} (${esc(s.amount)} USDC)`
+          : s.action === "dispute" ? `<b class="bad">disputed</b> by the ${esc(s.by)}`
+          : `<b>${esc(ACTION[s.action] ?? s.action)}</b>`;
+        const why = s.action === "dispute" ? "the proposal is void; the next one must rest on other signals" : (s.why ?? "");
+        const sigs = s.signals ?? (s.signal ? [s.signal] : []);
+        const proof = [HASH.test(s.tx ?? "") ? `<a href="https://sepolia.etherscan.io/tx/${s.tx}">tx ${short(s.tx)}</a>` : "",
+          ...sigs.filter((g) => HASH.test(g)).map((g, i) => `<a href="https://devnode.telegraphprotocol.com/engine/v1/signal/${g}">signal ${i + 1}</a>`)].filter(Boolean).join(" · ") || "—";
+        return `<tr><td>${esc(s.deal)}${s.contract ? "" : " <span class=\"raw\">v1</span>"}</td><td>${mission}</td><td>${cond}</td><td>${step}</td><td>${esc(why)}</td><td>${proof}</td></tr>`;
       }).join("") + `</tbody>`;
   } catch (e) {
     document.getElementById("settle").innerHTML = `<tr><td>Could not load the settlements (${esc(e.message)}).</td></tr>`;
@@ -246,7 +326,33 @@ const MARKET = /^https:\/\/manifold\.markets\/[\w\-/]+$/;
     document.getElementById("score-sum").innerHTML =
       `For ${esc(s.forecasts)} resolved prediction markets, Takar read the crowd's probability ${esc(card.rows[0]?.forecast?.daysBefore ?? 7)} days before close, then bought the outcome through Telegraph and held it against the market's own resolution. ` +
       `<b>${esc(s.scored)}</b> confirmed, <b>${esc(s.contradicted)}</b> contradicted, <b>${esc(s.unverified)}</b> unverified. ` +
-      `Brier score <b>${esc(s.brier)}</b>, where always saying 50% scores ${esc(s.baseline)}. A second, independent fact-check agreed with <b>${esc(s.corroborated ?? 0)}</b> outcomes and disagreed with <b>${esc(s.fact_check_disagreed ?? 0)}</b>; the rest it could not settle. Signed with Ed25519; verify it with <code>npx -y takar-mcp</code> (tool <code>forecast_scorecard</code>).`;
+      (s.split != null ? `<b>${esc(s.split)}</b> where the two miners disagreed. ` : "") +
+      (s.confirmed_by_two_or_more != null ? `<b>${esc(s.confirmed_by_two_or_more)}</b> of the confirmed outcomes rest on two miners. ` : "") +
+      `Brier score <b>${esc(s.brier)}</b>, where always saying 50% scores ${esc(s.baseline)}` +
+      (s.brier_skill != null ? ` (skill <b>${esc(s.brier_skill)}</b>; log loss ${esc(s.log_loss)} against 0.693 for a coin flip)` : "") +
+      `. A second, independent fact-check agreed with <b>${esc(s.corroborated ?? 0)}</b> outcomes and disagreed with <b>${esc(s.fact_check_disagreed ?? 0)}</b>; the rest it could not settle. Signed with Ed25519: check it below, or with <code>npx -y takar-mcp</code> (tool <code>forecast_scorecard</code>).`;
+    document.getElementById("miners").innerHTML = s.miners?.length
+      ? `<thead><tr><th>Miner</th><th>Asked</th><th>Right</th><th>Wrong</th><th>No yes/no</th><th>Accuracy</th></tr></thead><tbody>` +
+        s.miners.map((m) => `<tr><td>${esc(m.miner)}</td><td>${esc(m.asked)}</td><td>${esc(m.right)}</td><td>${esc(m.wrong)}</td><td>${esc(m.no_answer)}</td><td>${m.accuracy == null ? "—" : `${esc(Math.round(m.accuracy * 100))}%`}</td></tr>`).join("") + `</tbody>`
+      : `<tr><td>This scorecard predates the miner index.</td></tr>`;
+    document.getElementById("calib").innerHTML = s.calibration?.length
+      ? `<thead><tr><th>Crowd said</th><th>Forecasts</th><th>Mean forecast</th><th>Happened</th></tr></thead><tbody>` +
+        s.calibration.map((c) => `<tr><td>${esc(c.bin)}</td><td>${esc(c.n)}</td><td>${c.said == null ? "—" : `${esc(Math.round(c.said * 100))}%`}</td><td>${c.happened == null ? "—" : `${esc(Math.round(c.happened * 100))}%`}</td></tr>`).join("") + `</tbody>`
+      : `<tr><td>This scorecard predates the calibration table.</td></tr>`;
+    // Verify the Ed25519 signature here, against the key pinned in this page (keys/takar-ed25519.pub),
+    // not the one the document carries: a card re-signed with another key fails.
+    document.getElementById("verify").addEventListener("click", async () => {
+      const out = document.getElementById("verify-out");
+      try {
+        const { attestation, ...doc } = card;
+        const b64 = (t) => Uint8Array.from(atob(t), (c) => c.charCodeAt(0));
+        const key = await crypto.subtle.importKey("spki", b64(PINNED_KEY), { name: "Ed25519" }, false, ["verify"]);
+        const ok = await crypto.subtle.verify({ name: "Ed25519" }, key, b64(attestation.signature), new TextEncoder().encode(canonical(doc)));
+        out.innerHTML = ok ? `<span class="ok">Verified.</span> This scorecard is exactly what Takar signed.` : `<span class="bad">Does not verify.</span> The scorecard was changed after signing.`;
+      } catch (e) {
+        out.textContent = `This browser cannot check Ed25519 signatures (${e.message}); use npx -y takar-mcp instead.`;
+      }
+    });
     document.getElementById("score").innerHTML =
       `<thead><tr><th>Market</th><th>Crowd</th><th>Resolved</th><th>Telegraph said</th><th>Fact-check</th><th>Brier</th><th>Proof</th></tr></thead><tbody>` +
       card.rows.map((r) => {
