@@ -60,13 +60,24 @@ Checked 2026-11-21T17:28:29.511Z within 500 m of the survey's point: **2** curre
 
 Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
 
+## Who is exploring within 20 km (Queensland register)
+
+18 exploration permits and applications. By holder: TRI-STAR GOLD PTY LTD (8 granted, 1 applied); SUPERIOR RESOURCES LIMITED (0 granted, 2 applied); LAKESIDE EXPLORATION PTY LTD (0 granted, 1 applied); PAVSTAR PTY LTD (1 granted); AU SINO GOLD PTY. LTD. (1 granted); COPPERX 1 PTY LTD (1 granted); NQ EX PTY LTD (1 granted); GREENVALE UTILITIES PTY LTD (1 granted); JUBILEE METALS LIMITED (1 granted).
+
+Newest:
+- EPM 29749 (EPM application), TRI-STAR GOLD PTY LTD, lodged 2026-11-02, AMOC
+- EPM 29203 (EPM granted), GREENVALE UTILITIES PTY LTD, granted 2026-09-14, AMOC
+- EPM 29063 (EPM granted), NQ EX PTY LTD, granted 2026-03-10, AMOC
+- EPM 28609 (EPM granted), TRI-STAR GOLD PTY LTD, granted 2025-11-25, AMOC
+- EPM 29338 (EPM application), LAKESIDE EXPLORATION PTY LTD, lodged 2025-11-17, AMOC
+
 ## Who held it
 
 - Kidston Gold Mines Limited (?–?, principal holder of mining lease 3347 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:479629] "Tenure: Principal Holder Name KIDSTON GOLD MINES LIMITED; MINING LEASE 3347"
 
 ## Company reports to read next
 
-- CR 70, CR 1022, CR 1852, CR 1999, CR 2146, CR 2254, CR 2255, CR 7003, CR 8196, CR 8772, CR 9282, CR 9854, CR 9855, CR 10547, CR 11381, CR 11382, CR 12820 [MINOCC-2017:Company reports:479629]
+- [CR 70](https://geoscience.data.qld.gov.au/data/report/cr000070), [CR 1022](https://geoscience.data.qld.gov.au/data/report/cr001022), [CR 1852](https://geoscience.data.qld.gov.au/data/report/cr001852), [CR 1999](https://geoscience.data.qld.gov.au/data/report/cr001999), [CR 2146](https://geoscience.data.qld.gov.au/data/report/cr002146), [CR 2254](https://geoscience.data.qld.gov.au/data/report/cr002254), [CR 2255](https://geoscience.data.qld.gov.au/data/report/cr002255), [CR 7003](https://geoscience.data.qld.gov.au/data/report/cr007003), [CR 8196](https://geoscience.data.qld.gov.au/data/report/cr008196), [CR 8772](https://geoscience.data.qld.gov.au/data/report/cr008772), [CR 9282](https://geoscience.data.qld.gov.au/data/report/cr009282), [CR 9854](https://geoscience.data.qld.gov.au/data/report/cr009854), [CR 9855](https://geoscience.data.qld.gov.au/data/report/cr009855), [CR 10547](https://geoscience.data.qld.gov.au/data/report/cr010547), [CR 11381](https://geoscience.data.qld.gov.au/data/report/cr011381), [CR 11382](https://geoscience.data.qld.gov.au/data/report/cr011382), [CR 12820](https://geoscience.data.qld.gov.au/data/report/cr012820) [MINOCC-2017:Company reports:479629]
 
 ## Open questions (what the records do not settle)
 

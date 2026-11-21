@@ -373,6 +373,104 @@
         }
       ]
     },
+    "nearby": {
+      "radius_km": 20,
+      "authorities": 18,
+      "holders": [
+        {
+          "holder": "LION MINING PTY LTD",
+          "granted": 3,
+          "applications": 0
+        },
+        {
+          "holder": "GCM Corporation Limited",
+          "granted": 3,
+          "applications": 0
+        },
+        {
+          "holder": "TERRAIN MINERALS LTD",
+          "granted": 3,
+          "applications": 0
+        },
+        {
+          "holder": "CATTLE CREEK COAL PTY LTD",
+          "granted": 3,
+          "applications": 0
+        },
+        {
+          "holder": "ASF COKING COAL PTY LTD",
+          "granted": 2,
+          "applications": 0
+        },
+        {
+          "holder": "THE JACARANDA MINING PTY LTD",
+          "granted": 0,
+          "applications": 1
+        },
+        {
+          "holder": "CENTRAL MINERALS PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "MDI (QUEENSLAND) PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "ENDOCOAL PTY LTD",
+          "granted": 1,
+          "applications": 0
+        }
+      ],
+      "newest": [
+        {
+          "id": "EPM 29463",
+          "kind": "EPM application",
+          "holder": "THE JACARANDA MINING PTY LTD",
+          "approved": null,
+          "lodged": "2026-03-05",
+          "expiry": null,
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29012",
+          "kind": "EPM granted",
+          "holder": "MDI (QUEENSLAND) PTY LTD",
+          "approved": "2025-02-17",
+          "lodged": "2024-03-15",
+          "expiry": "2030-02-16",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 28837",
+          "kind": "EPM granted",
+          "holder": "TERRAIN MINERALS LTD",
+          "approved": "2025-01-09",
+          "lodged": "2023-06-01",
+          "expiry": "2030-01-08",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 28719",
+          "kind": "EPM granted",
+          "holder": "TERRAIN MINERALS LTD",
+          "approved": "2024-10-17",
+          "lodged": "2023-02-20",
+          "expiry": "2029-10-16",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 28618",
+          "kind": "EPM granted",
+          "holder": "GCM Corporation Limited",
+          "approved": "2024-10-16",
+          "lodged": "2022-09-16",
+          "expiry": "2027-10-15",
+          "minerals": "AMOC"
+        }
+      ]
+    },
     "receipts_tie": {
       "checked": 8,
       "in_paid_answer": 0,
@@ -916,11 +1014,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T17:32:37.627Z",
+  "rederived_at": "2026-11-21T18:37:48.402Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "d737ccb560b17c33c5edff644e7fdd1bdb850a719da5c97e7d58668c7c0b33f2",
-    "signature": "qvOPSw3DLivAyXEvZoKcrsaZqqgHf/KnyLe1hC/qxBlN+TdmMYYzRCJNk1YGTI9WSWb5rIPbMcnd8OPuaUZPAw==",
+    "sha256": "e461d5ba2cdd4e5360c198e6180d265807b28058517aa4273620c1cbbe68f1a7",
+    "signature": "3bGBc2xPwsU1Hc4esP1KRxiewHvyygMAiYlrPuQnH4MS6g+13mEX949XWi1YTMTTLpO+MFj6DItEHR0yFsyiAA==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

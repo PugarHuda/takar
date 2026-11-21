@@ -734,6 +734,109 @@
         }
       ]
     },
+    "nearby": {
+      "radius_km": 20,
+      "authorities": 16,
+      "holders": [
+        {
+          "holder": "GBM RESOURCES LIMITED",
+          "granted": 4,
+          "applications": 0
+        },
+        {
+          "holder": "MT MORGAN SOUTH PTY LTD",
+          "granted": 2,
+          "applications": 1
+        },
+        {
+          "holder": "PTR RESOURCES PTY LTD",
+          "granted": 0,
+          "applications": 2
+        },
+        {
+          "holder": "CENTRAL QUEENSLAND METALS PTY LTD",
+          "granted": 0,
+          "applications": 1
+        },
+        {
+          "holder": "MT MORGAN PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "HERITAGE MINERALS PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "DEVONIAN GOLD PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "ROCKY COPPER PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "NORTH STAR EXPLORATION PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "RAPKI RESOURCES PTY LTD",
+          "granted": 1,
+          "applications": 0
+        }
+      ],
+      "newest": [
+        {
+          "id": "EPM 29490",
+          "kind": "EPM granted",
+          "holder": "RAPKI RESOURCES PTY LTD",
+          "approved": "2026-06-11",
+          "lodged": "2026-04-01",
+          "expiry": "2031-06-10",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29471",
+          "kind": "EPM granted",
+          "holder": "NORTH STAR EXPLORATION PTY LTD",
+          "approved": "2026-05-20",
+          "lodged": "2026-03-13",
+          "expiry": "2031-05-19",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29380",
+          "kind": "EPM granted",
+          "holder": "ROCKY COPPER PTY LTD",
+          "approved": "2026-04-16",
+          "lodged": "2026-01-20",
+          "expiry": "2031-04-15",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29487",
+          "kind": "EPM application",
+          "holder": "CENTRAL QUEENSLAND METALS PTY LTD",
+          "approved": null,
+          "lodged": "2026-04-01",
+          "expiry": null,
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29440",
+          "kind": "EPM application",
+          "holder": "MT MORGAN SOUTH PTY LTD",
+          "approved": null,
+          "lodged": "2026-03-02",
+          "expiry": null,
+          "minerals": "AMOC"
+        }
+      ]
+    },
     "receipts_tie": {
       "checked": 7,
       "in_paid_answer": 3,
@@ -1740,11 +1843,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T17:32:37.597Z",
+  "rederived_at": "2026-11-21T18:37:41.942Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "a5b9cd33ebd85503632debf18e55b400ba64fb61c4bbee933b1b108331a9fcb6",
-    "signature": "bAWIA+IDbpi7/itr829xcQrsjsq27B2DRlvRSE/GVNE6baNb1JXyQ+Lz6bdzPzodkAF0NT4cZoq7NMh9S0vWCg==",
+    "sha256": "0119ae11cdd0cfa8ba4170f8743c03fbbe2f4df18b48f0f9e216334bad3341cd",
+    "signature": "jplZSXiv5d2Ef7wbSJRRme30mBocFvXkw/yWPk70JrpQ8Ro/vPGmumkCDkWhDwUJdW+lYsfDHV2NGfeLRVXEDw==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

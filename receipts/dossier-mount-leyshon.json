@@ -452,6 +452,124 @@
         }
       ]
     },
+    "nearby": {
+      "radius_km": 20,
+      "authorities": 43,
+      "holders": [
+        {
+          "holder": "SUNSHINE (RAVENSWOOD) PTY LTD",
+          "granted": 9,
+          "applications": 2
+        },
+        {
+          "holder": "Ballymore Resources Limited",
+          "granted": 4,
+          "applications": 1
+        },
+        {
+          "holder": "CITIGOLD CORPORATION LIMITED",
+          "granted": 4,
+          "applications": 1
+        },
+        {
+          "holder": "DEMETALLICA OPERATIONS PTY LTD",
+          "granted": 5,
+          "applications": 0
+        },
+        {
+          "holder": "PINNACLE GOLD PTY LTD",
+          "granted": 5,
+          "applications": 0
+        },
+        {
+          "holder": "BLACKJACK MILLING PTY LTD",
+          "granted": 3,
+          "applications": 0
+        },
+        {
+          "holder": "SWEETROCK ENTERPRISES PTY LTD",
+          "granted": 0,
+          "applications": 2
+        },
+        {
+          "holder": "BGM INVESTMENTS PTY LTD",
+          "granted": 2,
+          "applications": 0
+        },
+        {
+          "holder": "PICCADILLY GOLD MINE HOLDINGS LIMITED",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "METALS & MINING PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "MOUNTAINBLUE MINERAL PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "NQ AUDITING PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "BLUM, Gerard Christopher",
+          "granted": 0,
+          "applications": 1
+        }
+      ],
+      "newest": [
+        {
+          "id": "ML 100599",
+          "kind": "ML application",
+          "holder": "SWEETROCK ENTERPRISES PTY LTD",
+          "approved": null,
+          "lodged": "2026-11-06",
+          "expiry": null,
+          "minerals": "AU"
+        },
+        {
+          "id": "EPM 29215",
+          "kind": "EPM granted",
+          "holder": "SUNSHINE (RAVENSWOOD) PTY LTD",
+          "approved": "2026-10-23",
+          "lodged": "2025-04-01",
+          "expiry": "2031-10-22",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29537",
+          "kind": "EPM application",
+          "holder": "Ballymore Resources Limited",
+          "approved": null,
+          "lodged": "2026-05-01",
+          "expiry": null,
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29541",
+          "kind": "EPM application",
+          "holder": "SWEETROCK ENTERPRISES PTY LTD",
+          "approved": null,
+          "lodged": "2026-05-01",
+          "expiry": null,
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29049",
+          "kind": "EPM granted",
+          "holder": "SUNSHINE (RAVENSWOOD) PTY LTD",
+          "approved": "2026-02-16",
+          "lodged": "2024-06-06",
+          "expiry": "2031-02-15",
+          "minerals": "AMOC"
+        }
+      ]
+    },
     "receipts_tie": {
       "checked": 14,
       "in_paid_answer": 1,
@@ -1332,11 +1450,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T17:32:37.620Z",
+  "rederived_at": "2026-11-21T18:37:45.186Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "97ee8da145ffbea86993d42de8d959c14180c8f320c3087c80aec9a1186696d8",
-    "signature": "RIYG1U5vTvEI1soeqpzkNmGf2llHj7pOEcoNK0tT9k6/McJXva85ghmaaLxNehH8t1LBTyoARKY2wCpfSEQODw==",
+    "sha256": "22311a13a820f98a4ad7dec5c5008d71edbb2a1049ef7151dd3207f2b905d01b",
+    "signature": "T8y8VZFUPiOimmIJCKV3AH3dk5FlbwaYorkBLyXUK9nek+seI1903vIyS/aILoJrMzdiz2ZaOvQ17TolBXpLDw==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

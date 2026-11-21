@@ -410,6 +410,89 @@
         }
       ]
     },
+    "nearby": {
+      "radius_km": 20,
+      "authorities": 15,
+      "holders": [
+        {
+          "holder": "MT COOLON GOLD MINES PTY LTD",
+          "granted": 8,
+          "applications": 1
+        },
+        {
+          "holder": "ADELAIDE EXPLORATION PTY LTD",
+          "granted": 2,
+          "applications": 0
+        },
+        {
+          "holder": "AUSTRAL DUTCH KAOLIN LIMITED",
+          "granted": 0,
+          "applications": 1
+        },
+        {
+          "holder": "NQM GOLD 2 PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "TARAGON VALLEY PTY LIMITED",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "ASF COKING COAL PTY LTD",
+          "granted": 1,
+          "applications": 0
+        }
+      ],
+      "newest": [
+        {
+          "id": "EPM 29726",
+          "kind": "EPM application",
+          "holder": "MT COOLON GOLD MINES PTY LTD",
+          "approved": null,
+          "lodged": "2026-10-01",
+          "expiry": null,
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 28713",
+          "kind": "EPM granted",
+          "holder": "TARAGON VALLEY PTY LIMITED",
+          "approved": "2025-04-17",
+          "lodged": "2023-02-13",
+          "expiry": "2030-04-16",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 27991",
+          "kind": "EPM granted",
+          "holder": "ADELAIDE EXPLORATION PTY LTD",
+          "approved": "2022-05-12",
+          "lodged": "2021-08-20",
+          "expiry": "2027-05-11",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 28322",
+          "kind": "EPM application",
+          "holder": "AUSTRAL DUTCH KAOLIN LIMITED",
+          "approved": null,
+          "lodged": "2022-03-02",
+          "expiry": null,
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 27598",
+          "kind": "EPM granted",
+          "holder": "MT COOLON GOLD MINES PTY LTD",
+          "approved": "2021-07-26",
+          "lodged": "2020-07-17",
+          "expiry": "2031-07-25",
+          "minerals": "AMOC"
+        }
+      ]
+    },
     "receipts_tie": {
       "checked": 6,
       "in_paid_answer": 1,
@@ -980,11 +1063,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T17:32:37.645Z",
+  "rederived_at": "2026-11-21T18:37:53.408Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "219712251a3cadc98e24e8b2cfda649e799b35ecb6e33c7fc849071ca493b687",
-    "signature": "AO4KcSaSSnpwYs19rOjg3WwhOu5DC+kc9imsrGBuD317m0ZIttw4KipyL0bSZcgvw1jTqJ+yCN72jj3RDnUSDQ==",
+    "sha256": "b18a1187dadeca4ce54e659388ad40e5409fdf99c5bb06df2d4691e01d57ef6c",
+    "signature": "maMj/4WiKWQLp+dFzSJ0H38IWLBMgAJ8r0CDYK60atriox8RKTE10l4bbiXOV607di0FWAaY6IsUZgEQgBhlAg==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

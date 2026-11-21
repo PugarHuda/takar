@@ -157,6 +157,104 @@
         }
       ]
     },
+    "nearby": {
+      "radius_km": 20,
+      "authorities": 38,
+      "holders": [
+        {
+          "holder": "JUBILEE METALS LIMITED",
+          "granted": 11,
+          "applications": 3
+        },
+        {
+          "holder": "QLD AUS GRAPHITE PTY LTD",
+          "granted": 5,
+          "applications": 1
+        },
+        {
+          "holder": "CROYDON CRITICAL MINERALS LIMITED",
+          "granted": 3,
+          "applications": 2
+        },
+        {
+          "holder": "PLETHORA PTY LTD",
+          "granted": 3,
+          "applications": 2
+        },
+        {
+          "holder": "SEBROF RESOURCES PTY LTD",
+          "granted": 2,
+          "applications": 1
+        },
+        {
+          "holder": "AURA EXPLORATION PTY LTD",
+          "granted": 2,
+          "applications": 0
+        },
+        {
+          "holder": "Bonney, Luke David",
+          "granted": 0,
+          "applications": 1
+        },
+        {
+          "holder": "AUS GRAPHITE PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "HB MINING PTY LTD",
+          "granted": 0,
+          "applications": 1
+        }
+      ],
+      "newest": [
+        {
+          "id": "ML 100600",
+          "kind": "ML application",
+          "holder": "CROYDON CRITICAL MINERALS LIMITED",
+          "approved": null,
+          "lodged": "2026-11-11",
+          "expiry": null,
+          "minerals": ""
+        },
+        {
+          "id": "ML 100592",
+          "kind": "ML application",
+          "holder": "HB MINING PTY LTD",
+          "approved": null,
+          "lodged": "2026-10-21",
+          "expiry": null,
+          "minerals": "AG,AU"
+        },
+        {
+          "id": "EPM 29579",
+          "kind": "EPM application",
+          "holder": "JUBILEE METALS LIMITED",
+          "approved": null,
+          "lodged": "2026-06-01",
+          "expiry": null,
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29587",
+          "kind": "EPM application",
+          "holder": "Bonney, Luke David",
+          "approved": null,
+          "lodged": "2026-06-01",
+          "expiry": null,
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29581",
+          "kind": "EPM application",
+          "holder": "SEBROF RESOURCES PTY LTD",
+          "approved": null,
+          "lodged": "2026-06-01",
+          "expiry": null,
+          "minerals": "AMOC"
+        }
+      ]
+    },
     "receipts_tie": {
       "checked": 2,
       "in_paid_answer": 2,
@@ -397,11 +495,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T17:32:37.633Z",
+  "rederived_at": "2026-11-21T18:37:50.044Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "90e55bd4a0f8bd165bd06fc553913b6c36c7be92ec2ea61beada3d1000a9cefc",
-    "signature": "lXPOZ00WVfJYIo/vFD6AwxoQRs5JeAdIvIaHu6ZQfMYximbMzeJSuD9ZpWompgL7/VPurJtDR/vkphEYPoxQDw==",
+    "sha256": "5ab245836ad6930b82425c3beecc84a0b31f0102b6277b255bda52692a28dc70",
+    "signature": "5S+8QGDH9N5dDe/8lV3y6PLJ34W40A0OqwloB7lMhGgyQ8CtBcakz5OPX2TNF2oFmaxndOpmjZMmfenH1GbzBg==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

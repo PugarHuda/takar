@@ -43,13 +43,24 @@ Checked 2026-11-21T17:30:15.406Z within 500 m of the survey's point: **2** curre
 
 Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
 
+## Who is exploring within 20 km (Queensland register)
+
+38 exploration permits and applications. By holder: JUBILEE METALS LIMITED (11 granted, 3 applied); QLD AUS GRAPHITE PTY LTD (5 granted, 1 applied); CROYDON CRITICAL MINERALS LIMITED (3 granted, 2 applied); PLETHORA PTY LTD (3 granted, 2 applied); SEBROF RESOURCES PTY LTD (2 granted, 1 applied); AURA EXPLORATION PTY LTD (2 granted); Bonney, Luke David (0 granted, 1 applied); AUS GRAPHITE PTY LTD (1 granted); HB MINING PTY LTD (0 granted, 1 applied).
+
+Newest:
+- ML 100600 (ML application), CROYDON CRITICAL MINERALS LIMITED, lodged 2026-11-11
+- ML 100592 (ML application), HB MINING PTY LTD, lodged 2026-10-21, AG,AU
+- EPM 29579 (EPM application), JUBILEE METALS LIMITED, lodged 2026-06-01, AMOC
+- EPM 29587 (EPM application), Bonney, Luke David, lodged 2026-06-01, AMOC
+- EPM 29581 (EPM application), SEBROF RESOURCES PTY LTD, lodged 2026-06-01, AMOC
+
 ## Who held it
 
 - Jko Mining Pty Limited (?–?, principal holder of mining lease 5108 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:479076] "Tenure: Principal Holder Name JKO MINING PTY LIMITED; MINING LEASE 5108"
 
 ## Company reports to read next
 
-- CR 2946, CR 4868, CR 9568, CR 20314, CR 20315, CR 20971 [MINOCC-2017:Company reports:479076]
+- [CR 2946](https://geoscience.data.qld.gov.au/data/report/cr002946), [CR 4868](https://geoscience.data.qld.gov.au/data/report/cr004868), [CR 9568](https://geoscience.data.qld.gov.au/data/report/cr009568), [CR 20314](https://geoscience.data.qld.gov.au/data/report/cr020314), [CR 20315](https://geoscience.data.qld.gov.au/data/report/cr020315), [CR 20971](https://geoscience.data.qld.gov.au/data/report/cr020971) [MINOCC-2017:Company reports:479076]
 
 ## Open questions (what the records do not settle)
 

@@ -301,6 +301,119 @@
         }
       ]
     },
+    "nearby": {
+      "radius_km": 20,
+      "authorities": 29,
+      "holders": [
+        {
+          "holder": "CITIGOLD CORPORATION LIMITED",
+          "granted": 5,
+          "applications": 1
+        },
+        {
+          "holder": "Ballymore Resources Limited",
+          "granted": 4,
+          "applications": 1
+        },
+        {
+          "holder": "BLACKJACK MILLING PTY LTD",
+          "granted": 5,
+          "applications": 0
+        },
+        {
+          "holder": "PINNACLE GOLD PTY LTD",
+          "granted": 2,
+          "applications": 0
+        },
+        {
+          "holder": "ACCESS AUSTRALIA MINING PTY LTD",
+          "granted": 2,
+          "applications": 0
+        },
+        {
+          "holder": "PICCADILLY GOLD MINE HOLDINGS LIMITED",
+          "granted": 2,
+          "applications": 0
+        },
+        {
+          "holder": "MOUNTAINBLUE MINERAL PTY LTD",
+          "granted": 2,
+          "applications": 0
+        },
+        {
+          "holder": "SUNSHINE (RAVENSWOOD) PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "MAYFAIR CORPORATIONS GROUP PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "METALS & MINING PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "ULARA RESOURCES PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "BGM INVESTMENTS PTY LTD",
+          "granted": 1,
+          "applications": 0
+        }
+      ],
+      "newest": [
+        {
+          "id": "EPM 29537",
+          "kind": "EPM application",
+          "holder": "Ballymore Resources Limited",
+          "approved": null,
+          "lodged": "2026-05-01",
+          "expiry": null,
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 28984",
+          "kind": "EPM granted",
+          "holder": "MOUNTAINBLUE MINERAL PTY LTD",
+          "approved": "2025-07-29",
+          "lodged": "2024-01-02",
+          "expiry": "2030-07-28",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 28986",
+          "kind": "EPM granted",
+          "holder": "MOUNTAINBLUE MINERAL PTY LTD",
+          "approved": "2025-02-06",
+          "lodged": "2024-01-02",
+          "expiry": "2030-02-05",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "ML 100404",
+          "kind": "ML application",
+          "holder": "CITIGOLD CORPORATION LIMITED",
+          "approved": null,
+          "lodged": "2024-07-25",
+          "expiry": null,
+          "minerals": "CU,PB,ZN,AG,AU"
+        },
+        {
+          "id": "EPM 28565",
+          "kind": "EPM granted",
+          "holder": "Ballymore Resources Limited",
+          "approved": "2024-05-02",
+          "lodged": "2022-07-01",
+          "expiry": "2029-05-01",
+          "minerals": "AMOC"
+        }
+      ]
+    },
     "receipts_tie": {
       "checked": 3,
       "in_paid_answer": 3,
@@ -638,11 +751,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T17:32:37.614Z",
+  "rederived_at": "2026-11-21T18:37:43.578Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "d39c4a4f51bf11a57a3fb11b4aabed1f15a5e74f5a3e39f59fd43d8284c0ce1c",
-    "signature": "cPx3SaM3BQlhSjGu7BnrzB75gYVV0b0wQnH6cNfvfbVaAR+qYvfc4JE64YU3bJzEc4LzcbZ3Los6TSQV4g12Bw==",
+    "sha256": "c505e7c9f99ad02d0023b5c61e1f4a0ffe40599c9b9886ee399c26f139a3ecac",
+    "signature": "NGD1eTBON6NTt8Vq3fv6NkBzBoElw98j+JK2bUQnjBUf9TdMdgQCxD9B1XvwOazgdbRoNw2rD+5mxLQ357u9Bg==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

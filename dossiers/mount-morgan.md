@@ -86,6 +86,17 @@ Checked 2026-11-21T17:17:59.345Z within 500 m of the survey's point: **24** curr
 
 Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
 
+## Who is exploring within 20 km (Queensland register)
+
+16 exploration permits and applications. By holder: GBM RESOURCES LIMITED (4 granted); MT MORGAN SOUTH PTY LTD (2 granted, 1 applied); PTR RESOURCES PTY LTD (0 granted, 2 applied); CENTRAL QUEENSLAND METALS PTY LTD (0 granted, 1 applied); MT MORGAN PTY LTD (1 granted); HERITAGE MINERALS PTY LTD (1 granted); DEVONIAN GOLD PTY LTD (1 granted); ROCKY COPPER PTY LTD (1 granted); NORTH STAR EXPLORATION PTY LTD (1 granted); RAPKI RESOURCES PTY LTD (1 granted).
+
+Newest:
+- EPM 29490 (EPM granted), RAPKI RESOURCES PTY LTD, granted 2026-06-11, AMOC
+- EPM 29471 (EPM granted), NORTH STAR EXPLORATION PTY LTD, granted 2026-05-20, AMOC
+- EPM 29380 (EPM granted), ROCKY COPPER PTY LTD, granted 2026-04-16, AMOC
+- EPM 29487 (EPM application), CENTRAL QUEENSLAND METALS PTY LTD, lodged 2026-04-01, AMOC
+- EPM 29440 (EPM application), MT MORGAN SOUTH PTY LTD, lodged 2026-03-02, AMOC
+
 ## Who held it
 
 - Norton Gold Fields Limited (?–?, principal holder of mining lease 5589, mining lease 5602, mining lease 5608, mining lease 5609, mining lease 5612, mining lease 5613, mining lease 5616, mining lease 5618, mining lease 5620, mining lease 5623, mining lease 5624, mining lease 5625, mining lease 5633, mining lease 5634, mining lease 5659, mining lease 5660, mining lease 6692 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:494270] "Tenure: Principal Holder Name NORTON GOLD FIELDS LIMITED; MINING LEASE 5589, MINING LEASE 5602, MINING LEASE 5608, MINING LEASE 5609, MINING LEASE 5612, MINING LEASE 5613, MINING LEASE 5616, MINING LEASE 5618, MINING LEASE 5620, MINING LEASE 5623, MINING LEASE 5624, MINING LEASE 5625, MINING LEASE 5633, MINING LEASE 5634, MINING LEASE 5659, MINING LEASE 5660, MINING LEASE 6692"

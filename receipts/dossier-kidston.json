@@ -335,6 +335,104 @@
         }
       ]
     },
+    "nearby": {
+      "radius_km": 20,
+      "authorities": 18,
+      "holders": [
+        {
+          "holder": "TRI-STAR GOLD PTY LTD",
+          "granted": 8,
+          "applications": 1
+        },
+        {
+          "holder": "SUPERIOR RESOURCES LIMITED",
+          "granted": 0,
+          "applications": 2
+        },
+        {
+          "holder": "LAKESIDE EXPLORATION PTY LTD",
+          "granted": 0,
+          "applications": 1
+        },
+        {
+          "holder": "PAVSTAR PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "AU SINO GOLD PTY. LTD.",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "COPPERX 1 PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "NQ EX PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "GREENVALE UTILITIES PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "JUBILEE METALS LIMITED",
+          "granted": 1,
+          "applications": 0
+        }
+      ],
+      "newest": [
+        {
+          "id": "EPM 29749",
+          "kind": "EPM application",
+          "holder": "TRI-STAR GOLD PTY LTD",
+          "approved": null,
+          "lodged": "2026-11-02",
+          "expiry": null,
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29203",
+          "kind": "EPM granted",
+          "holder": "GREENVALE UTILITIES PTY LTD",
+          "approved": "2026-09-14",
+          "lodged": "2025-03-05",
+          "expiry": "2031-09-13",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29063",
+          "kind": "EPM granted",
+          "holder": "NQ EX PTY LTD",
+          "approved": "2026-03-10",
+          "lodged": "2024-07-01",
+          "expiry": "2031-03-09",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 28609",
+          "kind": "EPM granted",
+          "holder": "TRI-STAR GOLD PTY LTD",
+          "approved": "2025-11-25",
+          "lodged": "2022-09-01",
+          "expiry": "2030-11-24",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29338",
+          "kind": "EPM application",
+          "holder": "LAKESIDE EXPLORATION PTY LTD",
+          "approved": null,
+          "lodged": "2025-11-17",
+          "expiry": null,
+          "minerals": "AMOC"
+        }
+      ]
+    },
     "receipts_tie": {
       "checked": 6,
       "in_paid_answer": 1,
@@ -885,11 +983,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T17:32:37.624Z",
+  "rederived_at": "2026-11-21T18:37:46.804Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "5847e6e656411d5be4909bcf826933bf640ee8d6851771b1a46a4712fd4b72e4",
-    "signature": "KomLRBnEhVOj3+BZYboqtxuqN2b4CLysf4XPnK6VW+YB/rOYSFB3e/SbibPYcnH8kkCX32ILxxfObbSDbF9xBg==",
+    "sha256": "895c241c62d43fd953c1de3220e3db7aa4be9a5b142a604f322d94f38a640b89",
+    "signature": "Rz22I75rPR/y2Kzr0lBEdi3W0NmzlHXEZo3hyfqkFBPp0gFfpx6bPgCQgapia2JV3w9y4P4gbGwLfxY1nLxTBg==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

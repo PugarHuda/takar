@@ -65,13 +65,24 @@ Checked 2026-11-21T17:32:03.388Z within 500 m of the survey's point: **5** curre
 
 Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
 
+## Who is exploring within 20 km (Queensland register)
+
+15 exploration permits and applications. By holder: MT COOLON GOLD MINES PTY LTD (8 granted, 1 applied); ADELAIDE EXPLORATION PTY LTD (2 granted); AUSTRAL DUTCH KAOLIN LIMITED (0 granted, 1 applied); NQM GOLD 2 PTY LTD (1 granted); TARAGON VALLEY PTY LIMITED (1 granted); ASF COKING COAL PTY LTD (1 granted).
+
+Newest:
+- EPM 29726 (EPM application), MT COOLON GOLD MINES PTY LTD, lodged 2026-10-01, AMOC
+- EPM 28713 (EPM granted), TARAGON VALLEY PTY LIMITED, granted 2025-04-17, AMOC
+- EPM 27991 (EPM granted), ADELAIDE EXPLORATION PTY LTD, granted 2022-05-12, AMOC
+- EPM 28322 (EPM application), AUSTRAL DUTCH KAOLIN LIMITED, lodged 2022-03-02, AMOC
+- EPM 27598 (EPM granted), MT COOLON GOLD MINES PTY LTD, granted 2021-07-26, AMOC
+
 ## Who held it
 
 - Mt Coolon Gold Mines Pty Ltd (?–?, principal holder of exploration permit mineral 15902, mining lease 1029, mining lease 1085, mining lease 1086 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:41615] "Tenure: Principal Holder Name MT COOLON GOLD MINES PTY LTD; EXPLORATION PERMIT MINERAL 15902, MINING LEASE 1029, MINING LEASE 1085, MINING LEASE 1086"
 
 ## Company reports to read next
 
-- CR 3596, CR 4078, CR 14682, CR 14809, CR 15476, CR 15568, CR 15893, CR 15969, CR 16449, CR 16567, CR 17105, CR 17474, CR 19239, CR 19248, CR 19358, CR 19881, CR 19995, CR 20003, CR 20310, CR 21042, CR 21430, CR 21431, CR 21789, CR 21966, CR 22128, CR 22178, CR 22720, CR 22837, CR 22921, CR 22922, CR 23595, CR 23936, CR 24218, CR 24782, CR 25511, CR 26876, CR 28591, CR 28592, CR 29784, CR 30767, CR 31648, CR 32792, CR 33251 [MINOCC-2017:Company reports:41615]
+- [CR 3596](https://geoscience.data.qld.gov.au/data/report/cr003596), [CR 4078](https://geoscience.data.qld.gov.au/data/report/cr004078), [CR 14682](https://geoscience.data.qld.gov.au/data/report/cr014682), [CR 14809](https://geoscience.data.qld.gov.au/data/report/cr014809), [CR 15476](https://geoscience.data.qld.gov.au/data/report/cr015476), [CR 15568](https://geoscience.data.qld.gov.au/data/report/cr015568), [CR 15893](https://geoscience.data.qld.gov.au/data/report/cr015893), [CR 15969](https://geoscience.data.qld.gov.au/data/report/cr015969), [CR 16449](https://geoscience.data.qld.gov.au/data/report/cr016449), [CR 16567](https://geoscience.data.qld.gov.au/data/report/cr016567), [CR 17105](https://geoscience.data.qld.gov.au/data/report/cr017105), [CR 17474](https://geoscience.data.qld.gov.au/data/report/cr017474), [CR 19239](https://geoscience.data.qld.gov.au/data/report/cr019239), [CR 19248](https://geoscience.data.qld.gov.au/data/report/cr019248), [CR 19358](https://geoscience.data.qld.gov.au/data/report/cr019358), [CR 19881](https://geoscience.data.qld.gov.au/data/report/cr019881), [CR 19995](https://geoscience.data.qld.gov.au/data/report/cr019995), [CR 20003](https://geoscience.data.qld.gov.au/data/report/cr020003), [CR 20310](https://geoscience.data.qld.gov.au/data/report/cr020310), [CR 21042](https://geoscience.data.qld.gov.au/data/report/cr021042), [CR 21430](https://geoscience.data.qld.gov.au/data/report/cr021430), [CR 21431](https://geoscience.data.qld.gov.au/data/report/cr021431), [CR 21789](https://geoscience.data.qld.gov.au/data/report/cr021789), [CR 21966](https://geoscience.data.qld.gov.au/data/report/cr021966), [CR 22128](https://geoscience.data.qld.gov.au/data/report/cr022128), [CR 22178](https://geoscience.data.qld.gov.au/data/report/cr022178), [CR 22720](https://geoscience.data.qld.gov.au/data/report/cr022720), [CR 22837](https://geoscience.data.qld.gov.au/data/report/cr022837), [CR 22921](https://geoscience.data.qld.gov.au/data/report/cr022921), [CR 22922](https://geoscience.data.qld.gov.au/data/report/cr022922), [CR 23595](https://geoscience.data.qld.gov.au/data/report/cr023595), [CR 23936](https://geoscience.data.qld.gov.au/data/report/cr023936), [CR 24218](https://geoscience.data.qld.gov.au/data/report/cr024218), [CR 24782](https://geoscience.data.qld.gov.au/data/report/cr024782), [CR 25511](https://geoscience.data.qld.gov.au/data/report/cr025511), [CR 26876](https://geoscience.data.qld.gov.au/data/report/cr026876), [CR 28591](https://geoscience.data.qld.gov.au/data/report/cr028591), [CR 28592](https://geoscience.data.qld.gov.au/data/report/cr028592), [CR 29784](https://geoscience.data.qld.gov.au/data/report/cr029784), [CR 30767](https://geoscience.data.qld.gov.au/data/report/cr030767), [CR 31648](https://geoscience.data.qld.gov.au/data/report/cr031648), [CR 32792](https://geoscience.data.qld.gov.au/data/report/cr032792), [CR 33251](https://geoscience.data.qld.gov.au/data/report/cr033251) [MINOCC-2017:Company reports:41615]
 
 ## Open questions (what the records do not settle)
 

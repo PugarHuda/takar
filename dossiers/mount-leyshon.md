@@ -73,6 +73,17 @@ Checked 2026-11-21T17:18:06.385Z within 500 m of the survey's point: **4** curre
 
 Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
 
+## Who is exploring within 20 km (Queensland register)
+
+43 exploration permits and applications. By holder: SUNSHINE \(RAVENSWOOD\) PTY LTD (9 granted, 2 applied); Ballymore Resources Limited (4 granted, 1 applied); CITIGOLD CORPORATION LIMITED (4 granted, 1 applied); DEMETALLICA OPERATIONS PTY LTD (5 granted); PINNACLE GOLD PTY LTD (5 granted); BLACKJACK MILLING PTY LTD (3 granted); SWEETROCK ENTERPRISES PTY LTD (0 granted, 2 applied); BGM INVESTMENTS PTY LTD (2 granted); PICCADILLY GOLD MINE HOLDINGS LIMITED (1 granted); METALS & MINING PTY LTD (1 granted); MOUNTAINBLUE MINERAL PTY LTD (1 granted); NQ AUDITING PTY LTD (1 granted); BLUM, Gerard Christopher (0 granted, 1 applied).
+
+Newest:
+- ML 100599 (ML application), SWEETROCK ENTERPRISES PTY LTD, lodged 2026-11-06, AU
+- EPM 29215 (EPM granted), SUNSHINE \(RAVENSWOOD\) PTY LTD, granted 2026-10-23, AMOC
+- EPM 29537 (EPM application), Ballymore Resources Limited, lodged 2026-05-01, AMOC
+- EPM 29541 (EPM application), SWEETROCK ENTERPRISES PTY LTD, lodged 2026-05-01, AMOC
+- EPM 29049 (EPM granted), SUNSHINE \(RAVENSWOOD\) PTY LTD, granted 2026-02-16, AMOC
+
 ## Who held it
 
 - Leyshon Resources Limited (?–?, principal holder of mining lease 10144 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:38940] "Tenure: Principal Holder Name LEYSHON RESOURCES LIMITED; MINING LEASE 10144"
@@ -80,7 +91,7 @@ Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov
 
 ## Company reports to read next
 
-- CR 497, CR 2823, CR 12412, CR 12413, CR 15066, CR 30415, CR 31111, CR 32302, CR 32990 [MINOCC-2017:Company reports:38940]
+- [CR 497](https://geoscience.data.qld.gov.au/data/report/cr000497), [CR 2823](https://geoscience.data.qld.gov.au/data/report/cr002823), [CR 12412](https://geoscience.data.qld.gov.au/data/report/cr012412), [CR 12413](https://geoscience.data.qld.gov.au/data/report/cr012413), [CR 15066](https://geoscience.data.qld.gov.au/data/report/cr015066), [CR 30415](https://geoscience.data.qld.gov.au/data/report/cr030415), [CR 31111](https://geoscience.data.qld.gov.au/data/report/cr031111), [CR 32302](https://geoscience.data.qld.gov.au/data/report/cr032302), [CR 32990](https://geoscience.data.qld.gov.au/data/report/cr032990) [MINOCC-2017:Company reports:38940]
 
 ## Open questions (what the records do not settle)
 

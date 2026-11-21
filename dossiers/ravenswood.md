@@ -47,13 +47,24 @@ Checked 2026-11-21T17:30:52.412Z within 500 m of the survey's point: **6** curre
 
 Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
 
+## Who is exploring within 20 km (Queensland register)
+
+28 exploration permits and applications. By holder: Ravenswood Gold Pty Ltd (9 granted); SUNSHINE \(RAVENSWOOD\) PTY LTD (5 granted); TRI-STAR GOLD PTY LTD (4 granted); WISHBONE GOLD PTY LTD (2 granted); DENJIM PTY LTD (2 granted); DISCOVERY RIDGE PTY LTD (0 granted, 1 applied); SUMMIT FUSION PTY LTD (0 granted, 1 applied); Ballymore Resources Limited (1 granted); ADELAIDE EXPLORATION PTY LTD (1 granted); QRDBD DEVELOPMENTS PTY LTD (1 granted); SUNSHINE \(TRIUMPH\) PTY LTD (1 granted).
+
+Newest:
+- EPM 29751 (EPM application), SUMMIT FUSION PTY LTD, lodged 2026-11-02, AMOC
+- EPM 29632 (EPM application), DISCOVERY RIDGE PTY LTD, lodged 2026-07-15, AMOC
+- EPM 29087 (EPM granted), SUNSHINE \(RAVENSWOOD\) PTY LTD, granted 2025-12-03, AMOC
+- EPM 28753 (EPM granted), TRI-STAR GOLD PTY LTD, granted 2025-01-09, AMOC
+- EPM 28619 (EPM granted), Ravenswood Gold Pty Ltd, granted 2024-11-05, AMOC
+
 ## Who held it
 
 - EMR Capital Group, Golden Energy and Resources Limited (?–?, company listed by Geoscience Australia \(status: operating mine\)) [GA-MINERALDEPOSITS-336045] "COMPANIES: EMR Capital Group, Golden Energy and Resources Limited"
 
 ## Company reports to read next
 
-- CR 6538 [MINOCC-2017:Company reports:481934]
+- [CR 6538](https://geoscience.data.qld.gov.au/data/report/cr006538) [MINOCC-2017:Company reports:481934]
 
 ## Open questions (what the records do not settle)
 

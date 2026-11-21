@@ -194,6 +194,114 @@
         }
       ]
     },
+    "nearby": {
+      "radius_km": 20,
+      "authorities": 28,
+      "holders": [
+        {
+          "holder": "Ravenswood Gold Pty Ltd",
+          "granted": 9,
+          "applications": 0
+        },
+        {
+          "holder": "SUNSHINE (RAVENSWOOD) PTY LTD",
+          "granted": 5,
+          "applications": 0
+        },
+        {
+          "holder": "TRI-STAR GOLD PTY LTD",
+          "granted": 4,
+          "applications": 0
+        },
+        {
+          "holder": "WISHBONE GOLD PTY LTD",
+          "granted": 2,
+          "applications": 0
+        },
+        {
+          "holder": "DENJIM PTY LTD",
+          "granted": 2,
+          "applications": 0
+        },
+        {
+          "holder": "DISCOVERY RIDGE PTY LTD",
+          "granted": 0,
+          "applications": 1
+        },
+        {
+          "holder": "SUMMIT FUSION PTY LTD",
+          "granted": 0,
+          "applications": 1
+        },
+        {
+          "holder": "Ballymore Resources Limited",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "ADELAIDE EXPLORATION PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "QRDBD DEVELOPMENTS PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "SUNSHINE (TRIUMPH) PTY LTD",
+          "granted": 1,
+          "applications": 0
+        }
+      ],
+      "newest": [
+        {
+          "id": "EPM 29751",
+          "kind": "EPM application",
+          "holder": "SUMMIT FUSION PTY LTD",
+          "approved": null,
+          "lodged": "2026-11-02",
+          "expiry": null,
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29632",
+          "kind": "EPM application",
+          "holder": "DISCOVERY RIDGE PTY LTD",
+          "approved": null,
+          "lodged": "2026-07-15",
+          "expiry": null,
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29087",
+          "kind": "EPM granted",
+          "holder": "SUNSHINE (RAVENSWOOD) PTY LTD",
+          "approved": "2025-12-03",
+          "lodged": "2024-08-02",
+          "expiry": "2030-12-02",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 28753",
+          "kind": "EPM granted",
+          "holder": "TRI-STAR GOLD PTY LTD",
+          "approved": "2025-01-09",
+          "lodged": "2023-03-23",
+          "expiry": "2030-01-08",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 28619",
+          "kind": "EPM granted",
+          "holder": "Ravenswood Gold Pty Ltd",
+          "approved": "2024-11-05",
+          "lodged": "2022-09-16",
+          "expiry": "2029-11-04",
+          "minerals": "AMOC"
+        }
+      ]
+    },
     "receipts_tie": {
       "checked": 2,
       "in_paid_answer": 2,
@@ -422,11 +530,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T17:32:37.640Z",
+  "rederived_at": "2026-11-21T18:37:51.797Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "e54dc87f36fb35843fb1794ad0e2a0674ae43d0aa0bef59f01fd66400a080204",
-    "signature": "L8Ljq6wr84AFNfexDirhoFgbFY/7lkHRx9ap4WZkMIEMYbhvfi4da68Y+8N+1JHMpk5pTFh8KU9SYftUwzR7Ag==",
+    "sha256": "eab526a6e42b3a41ebb69ae8992a2158fa722fb576d58ba73d5eb42c8454efff",
+    "signature": "5RkDbIJzHdLXHuz0ykczqzoSloqlwWEgqBel59mDRjtQYy8QhfLltp8HJ0AZGjIRCCflye6sFHR2N7jvDI87DQ==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

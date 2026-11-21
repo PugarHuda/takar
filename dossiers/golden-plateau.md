@@ -70,6 +70,17 @@ Checked 2026-11-21T17:29:37.389Z within 500 m of the survey's point: **6** curre
 
 Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
 
+## Who is exploring within 20 km (Queensland register)
+
+18 exploration permits and applications. By holder: LION MINING PTY LTD (3 granted); GCM Corporation Limited (3 granted); TERRAIN MINERALS LTD (3 granted); CATTLE CREEK COAL PTY LTD (3 granted); ASF COKING COAL PTY LTD (2 granted); THE JACARANDA MINING PTY LTD (0 granted, 1 applied); CENTRAL MINERALS PTY LTD (1 granted); MDI \(QUEENSLAND\) PTY LTD (1 granted); ENDOCOAL PTY LTD (1 granted).
+
+Newest:
+- EPM 29463 (EPM application), THE JACARANDA MINING PTY LTD, lodged 2026-03-05, AMOC
+- EPM 29012 (EPM granted), MDI \(QUEENSLAND\) PTY LTD, granted 2025-02-17, AMOC
+- EPM 28837 (EPM granted), TERRAIN MINERALS LTD, granted 2025-01-09, AMOC
+- EPM 28719 (EPM granted), TERRAIN MINERALS LTD, granted 2024-10-17, AMOC
+- EPM 28618 (EPM granted), GCM Corporation Limited, granted 2024-10-16, AMOC
+
 ## Who held it
 
 - Lion Mining Pty Ltd (?–?, principal holder of mining lease 3219, mining lease 3221, mining lease 3223, mining lease 3224, mining lease 3227, mining lease 3228, mining lease 3230, mining lease 3232, mining lease 3234, mining lease 80024 \(MINOCC Tenure table, as at the 2017 release; no dates recorded\)) [MINOCC-2017:Tenure:493636] "Tenure: Principal Holder Name LION MINING PTY LTD; MINING LEASE 3219, MINING LEASE 3221, MINING LEASE 3223, MINING LEASE 3224, MINING LEASE 3227, MINING LEASE 3228, MINING LEASE 3230, MINING LEASE 3232, MINING LEASE 3234, MINING LEASE 80024"
