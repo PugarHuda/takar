@@ -171,6 +171,21 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
     <p class="note">Rows marked v1 settled on the first contract (<a href="https://sepolia.etherscan.io/address/0xfB5E39924F287d14a1833C58e50f466145e62808">0xfB5E…2808</a>), one answer and no dispute window.</p>
   </section>
 
+  <section class="found" aria-labelledby="so-h">
+    <h2 id="so-h" class="display">A second opinion for any Telegraph intent</h2>
+    <p>Every team on Telegraph ends up writing its own cross-check, because the ranked route can send a question to the wrong specialist or come back confidently wrong. Takar does it once, for any intent: it asks <b>two different miners</b>, chosen by an <b>open on-chain record of who was right</b>, and compares their answers field by field. <i>agree</i>, <i>disagree</i> or <i>insufficient</i>, never an average. Free to call (Takar pays the asks in test USDC). Use it from any agent: <a href="openapi.json">OpenAPI spec</a> for HTTP tools such as Minds, or <code>npx -y takar-mcp</code> (tool <code>second_opinion</code>).</p>
+    <form id="so" class="try">
+      <label for="so-intent">Intent and params</label>
+      <input id="so-intent" value="EVENT_OUTCOME_RESOLUTION_GENERAL" aria-label="Intent name">
+      <input id="so-params" value='{"event": "Did France win the 2022 FIFA World Cup?"}' aria-label="Params as JSON">
+      <button type="submit" class="btn">Get a second opinion</button>
+    </form>
+    <div id="so-out" aria-live="polite"></div>
+    <h3 class="display sub">Who was right: the open record</h3>
+    <p class="note">Every check Takar bought is an <a href="https://sepolia.easscan.org/schema/view/0x351bc4ecf778660c8de0d42eb111e758469e1fe5ffc1b993899e399c9c056741">EAS attestation</a> on Ethereum Sepolia: the miner, the Telegraph signal as evidence, and whether the answer held up. Anyone can add evidence to the same schema. Paid asks are ordered only by attesters Takar trusts. An honest "unresolved" is coverage, not error.</p>
+    <div class="scroll"><table id="rep"><tr><td>Loading…</td></tr></table></div>
+  </section>
+
   <section class="found" aria-labelledby="try-h">
     <h2 id="try-h" class="display">Ask the outcome miner yourself</h2>
     <p>No wallet, no signup. This calls Takar Outcome's own endpoint directly, the same one Telegraph routes EVENT_OUTCOME_RESOLUTION asks to. It answers from a settled Polymarket market or a sentence quoted word for word from Wikipedia, and says <i>unresolved</i> rather than guess.</p>
@@ -285,6 +300,41 @@ const canonical = (v) => Array.isArray(v) ? `[${v.map(canonical).join(",")}]`
     document.getElementById("brief-sum").textContent = `Could not load the note (${e.message}).`;
   }
 })();
+
+(async () => {
+  try {
+    const r = await fetch("api/reputation?intent=EVENT_OUTCOME_RESOLUTION_GENERAL").then((x) => x.json());
+    document.getElementById("rep").innerHTML = `<thead><tr><th>Miner id</th><th>Right</th><th>Wrong</th><th>Unusable</th><th>Abstained</th><th>Coverage</th><th>Score</th></tr></thead><tbody>` +
+      (r.ranking ?? []).map((m) => `<tr><td>${esc(m.minerId)}</td><td>${esc(m.right)}</td><td>${esc(m.wrong)}</td><td>${esc(m.unusable + m.wrong_place)}</td><td>${esc(m.abstained)}</td><td>${m.coverage == null ? "—" : `${esc(Math.round(m.coverage * 100))}%`}</td><td>${esc(m.score)}</td></tr>`).join("") +
+      `</tbody><caption class="note">EVENT_OUTCOME_RESOLUTION, ${esc(r.attestations)} attestations on chain. Score is the Wilson lower bound of accuracy.</caption>`;
+  } catch (e) {
+    document.getElementById("rep").innerHTML = `<tr><td>Could not read the record (${esc(e.message)}).</td></tr>`;
+  }
+})();
+
+document.getElementById("so").addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const out = document.getElementById("so-out");
+  const btn = ev.target.querySelector("button");
+  let params;
+  try { params = JSON.parse(document.getElementById("so-params").value); } catch { out.innerHTML = `<p class="bad">Params must be JSON.</p>`; return; }
+  btn.disabled = true;
+  out.innerHTML = `<p class="note">Asking two miners… about 10 seconds.</p>`;
+  try {
+    const res = await fetch("api/second-opinion", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ intent: document.getElementById("so-intent").value.trim(), params }) });
+    const a = await res.json();
+    if (!res.ok) throw new Error(a.error ?? res.status);
+    const cls = a.verdict === "agree" ? "yes" : a.verdict === "disagree" ? "no" : "unresolved";
+    out.innerHTML = `<div class="answer ${cls}"><div class="big">${esc(a.verdict)}</div>` +
+      `<p>${(a.answers ?? []).map((x) => `${esc(x.miner?.name ?? x.miner?.id)}: ${x.usable ? esc(JSON.stringify(x.result).slice(0, 160)) : `<i>${esc(x.why)}</i>`}`).join("<br>")}</p>` +
+      (a.differ?.length ? `<p class="bad">Differ on: ${esc(a.differ.join(", "))}</p>` : "") +
+      `<p class="note">Compared: ${esc((a.compared ?? []).join(", ") || "nothing")}. Cost $${esc(a.costUsd)} test USDC. ${(a.signals ?? []).map((u, i) => `<a href="${esc(u)}">signal ${i + 1}</a>`).join(" · ")}</p></div>`;
+  } catch (e) {
+    out.innerHTML = `<p class="bad">No second opinion (${esc(e.message)}).</p>`;
+  } finally {
+    btn.disabled = false;
+  }
+});
 
 // Try it: the miner's own endpoint, free, rate-limited per IP on the server.
 document.getElementById("try").addEventListener("submit", async (ev) => {
