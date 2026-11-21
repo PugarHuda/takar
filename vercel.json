@@ -1,3 +1,13 @@
 {
-  "functions": { "api/resolve.js": { "maxDuration": 60 } }
+  "functions": {
+    "api/resolve.js": {
+      "maxDuration": 60
+    },
+    "api/second-opinion.js": {
+      "maxDuration": 60
+    },
+    "api/reputation.js": {
+      "maxDuration": 30
+    }
+  }
 }

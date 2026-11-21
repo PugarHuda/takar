@@ -7,7 +7,22 @@
 // resolved_yes, winner, resolved_at, sources, plus the verbatim evidence.
 // 400 for a bad request, 503 when no model is available (so the caller is not
 // charged for a non-answer). Resolution logic lives in lib/outcome.mjs.
-import { resolve, openrouter } from "../lib/outcome.mjs";
+import { ethers } from "ethers";
+import { resolve, openrouter, RULES } from "../lib/outcome.mjs";
+import { ask, ranked } from "../lib/telegraph.mjs";
+import { secondOpinion, quorumAnswer } from "../lib/second.mjs";
+import { reputationFor } from "./second-opinion.js";
+
+const SELF = "20261117"; // Takar Outcome's own node id: never ask ourselves
+const META_MS = 20_000;
+async function meta(event) {
+  if (!process.env.SERVER_PAYER_KEY) return null;
+  const signer = new ethers.Wallet(process.env.SERVER_PAYER_KEY, new ethers.JsonRpcProvider("https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true }));
+  const intent = "EVENT_OUTCOME_RESOLUTION_GENERAL";
+  const run = secondOpinion({ intent, params: { event } }, { ask: (a) => ask({ ...a, signer }), ranked, reputation: await reputationFor(intent).catch(() => []), exclude: [SELF], unit: "meta-miner" });
+  const so = await Promise.race([run, new Promise((r) => setTimeout(() => r(null), META_MS))]);
+  return so ? quorumAnswer(event, so, RULES.quorum) : null;
+}
 
 // Per-instance memory: serverless instances are short-lived, so this only
 // smooths repeats and bursts. The node's own cache_ttl_sec does the rest.
@@ -47,7 +62,13 @@ export default async function handler(req, res) {
   if (cached && Date.now() - cached.at < cached.ttl) { log(cached.answer.outcome, "cached"); return res.status(200).json({ ...cached.answer, cached: true }); }
 
   try {
-    const answer = await resolve(event, { llm: openrouter() });
+    let answer = await resolve(event, { llm: openrouter() });
+    // Meta-miner: our own sources could not settle it. For a past event asked over POST
+    // (the node's path; the browser try-it uses GET and stays free), ask two other
+    // miners and answer only if they agree.
+    if (answer.outcome === "unresolved" && req.method === "POST" && !/has not ended/.test(answer.note ?? "")) {
+      answer = (await meta(event).catch(() => null)) ?? answer;
+    }
     log(answer.outcome, answer.note ?? "");
     answer.resolver = "takar-outcome/0.1";
     answer.checked_at = new Date().toISOString();

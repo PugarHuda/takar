@@ -1,0 +1,75 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Takar Second Opinion",
+    "version": "1.0.0",
+    "description": "A second opinion for any Telegraph intent, in one call. Takar asks two different Telegraph miners, chosen by an open on-chain record of who was right (EAS on Ethereum Sepolia), and tells you whether they agree. It never averages: a disagreement comes back with both answers and the fields that differ. Free to call; Takar pays the asks in test USDC. Testnet only. Built for Telegraph Hackathon Season II, which pays cash prizes."
+  },
+  "servers": [{ "url": "https://takar-telegraph.vercel.app" }],
+  "paths": {
+    "/api/second-opinion": {
+      "post": {
+        "operationId": "secondOpinion",
+        "summary": "Ask two independent Telegraph miners the same question and compare their answers",
+        "description": "Use this before acting on intelligence from Telegraph: prices, weather, sanctions, event outcomes, on-chain facts, any intent. If verdict is 'agree', act on 'answer'. If 'disagree', do not act on either answer alone: report both and the differing fields. If 'insufficient', fewer than two usable answers were available.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["intent", "params"],
+                "properties": {
+                  "intent": { "type": "string", "description": "Exact Telegraph intent name, from https://devnode.telegraphprotocol.com/engine/v1/intents", "example": "EVENT_OUTCOME_RESOLUTION_GENERAL" },
+                  "params": { "type": "object", "description": "The intent's request params, as its schema defines them", "example": { "event": "Did Argentina win the 2022 FIFA World Cup?" } }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The comparison",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "verdict": { "type": "string", "enum": ["agree", "disagree", "insufficient"] },
+                    "answer": { "type": "object", "description": "The agreed answer (only when verdict is agree)" },
+                    "differ": { "type": "array", "items": { "type": "string" }, "description": "Fields on which the miners disagree" },
+                    "compared": { "type": "array", "items": { "type": "string" } },
+                    "answers": { "type": "array", "description": "Each miner's answer, its id and its Telegraph signal hash", "items": { "type": "object" } },
+                    "signals": { "type": "array", "items": { "type": "string" }, "description": "Public Telegraph records of each ask" },
+                    "costUsd": { "type": "number" }
+                  }
+                }
+              }
+            }
+          },
+          "400": { "description": "Bad intent or params" },
+          "429": { "description": "Rate limited" }
+        }
+      }
+    },
+    "/api/reputation": {
+      "get": {
+        "operationId": "minerReputation",
+        "summary": "Which Telegraph miner to trust for an intent, from the open on-chain record",
+        "parameters": [
+          { "name": "intent", "in": "query", "required": false, "schema": { "type": "string" }, "example": "EVENT_OUTCOME_RESOLUTION_GENERAL" },
+          { "name": "attester", "in": "query", "required": false, "schema": { "type": "string" }, "description": "Only count evidence from this attester address" }
+        ],
+        "responses": { "200": { "description": "Miners ranked by the Wilson lower bound of accuracy, with right / wrong / unusable / abstained counts" } }
+      }
+    },
+    "/api/resolve": {
+      "post": {
+        "operationId": "resolveEvent",
+        "summary": "Resolve a real-world event (Takar Outcome, Telegraph miner 20261117)",
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "type": "object", "required": ["event"], "properties": { "event": { "type": "string", "example": "Did Argentina win the 2022 FIFA World Cup?" } } } } } },
+        "responses": { "200": { "description": "outcome yes / no / unresolved, with the source it rests on" } }
+      }
+    }
+  }
+}
