@@ -11,15 +11,16 @@ import { ethers } from "ethers";
 import { resolve, openrouter, RULES } from "../lib/outcome.mjs";
 import { ask, ranked } from "../lib/telegraph.mjs";
 import { secondOpinion, quorumAnswer } from "../lib/second.mjs";
-import { reputationFor } from "./second-opinion.js";
+import { reputationFor, operatorOf, overBudget } from "./second-opinion.js";
 
 const SELF = "20261117"; // Takar Outcome's own node id: never ask ourselves
 const META_MS = 20_000;
-async function meta(event) {
+async function meta(event, ip) {
   if (!process.env.SERVER_PAYER_KEY) return null;
+  if (overBudget(`meta:${ip}`, 3, 150)) return null; // paid path: 3 a minute per caller, 150 a day per instance
   const signer = new ethers.Wallet(process.env.SERVER_PAYER_KEY, new ethers.JsonRpcProvider("https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true }));
   const intent = "EVENT_OUTCOME_RESOLUTION_GENERAL";
-  const run = secondOpinion({ intent, params: { event } }, { ask: (a) => ask({ ...a, signer }), ranked, reputation: await reputationFor(intent).catch(() => []), exclude: [SELF], unit: "meta-miner" });
+  const run = secondOpinion({ intent, params: { event } }, { ask: (a) => ask({ ...a, signer }), ranked, reputation: await reputationFor(intent).catch(() => []), exclude: [SELF], unit: "meta-miner", operatorOf: await operatorOf() });
   const so = await Promise.race([run, new Promise((r) => setTimeout(() => r(null), META_MS))]);
   return so ? quorumAnswer(event, so, RULES.quorum) : null;
 }
@@ -67,7 +68,7 @@ export default async function handler(req, res) {
     // (the node's path; the browser try-it uses GET and stays free), ask two other
     // miners and answer only if they agree.
     if (answer.outcome === "unresolved" && req.method === "POST" && !/has not ended/.test(answer.note ?? "")) {
-      answer = (await meta(event).catch(() => null)) ?? answer;
+      answer = (await meta(event, ip).catch(() => null)) ?? answer;
     }
     log(answer.outcome, answer.note ?? "");
     answer.resolver = "takar-outcome/0.1";

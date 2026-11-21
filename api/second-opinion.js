@@ -14,6 +14,33 @@ const PER_MIN = 6, PER_DAY = 300; // per IP, and per instance per day: the escro
 const hits = new Map();
 let day = { d: "", n: 0 };
 let repCache = { at: 0, atts: [] };
+let opCache = { at: 0, map: new Map() };
+
+// Only these attesters order paid asks: the schema is open, so anyone else's
+// attestations are shown by /api/reputation but never steer where money goes.
+export const TRUSTED = (process.env.TAKAR_TRUSTED_ATTESTERS ?? "0x39D2bae5EAedA9283535dDC98F1991c81eD5Cd7E").split(",").map((a) => a.trim().toLowerCase()).filter(Boolean);
+
+/** Miner id -> payout address, from the node's public registry (cached an hour). */
+export async function operatorOf() {
+  if (Date.now() - opCache.at > 3600_000) {
+    const list = await fetch("https://devnode.telegraphprotocol.com/api/miners", { signal: AbortSignal.timeout(10_000) }).then((r) => r.json()).catch(() => null);
+    if (Array.isArray(list)) opCache = { at: Date.now(), map: new Map(list.map((m) => [String(m.id), m.fee_address ?? m.wallet_address ?? null])) };
+  }
+  return (id) => opCache.map.get(String(id)) ?? null;
+}
+
+/** One spend guard for every paid path (second opinion and the meta-miner). */
+const spend = new Map();
+let spendDay = { d: "", n: 0 };
+export function overBudget(ip, perMin, perDay) {
+  const now = Date.now();
+  const recent = (spend.get(ip) ?? []).filter((t) => now - t < 60_000);
+  recent.push(now);
+  spend.set(ip, recent);
+  const d = new Date().toISOString().slice(0, 10);
+  if (spendDay.d !== d) spendDay = { d, n: 0 };
+  return recent.length > perMin || ++spendDay.n > perDay;
+}
 
 function limited(ip) {
   const now = Date.now();
@@ -29,7 +56,7 @@ export async function reputationFor(intent) {
   if (Date.now() - repCache.at > 10 * 60_000) {
     repCache = { at: Date.now(), atts: await readAttestations(SCHEMA_UID).catch(() => repCache.atts) };
   }
-  return rank(repCache.atts, { intent });
+  return rank(repCache.atts, { intent, attesters: TRUSTED });
 }
 
 export default async function handler(req, res) {
@@ -51,7 +78,7 @@ export default async function handler(req, res) {
   const t0 = Date.now();
   try {
     const reputation = await reputationFor(intent);
-    const out = await secondOpinion({ intent, params }, { ask: (a) => ask({ ...a, signer }), ranked, reputation });
+    const out = await secondOpinion({ intent, params }, { ask: (a) => ask({ ...a, signer }), ranked, reputation, operatorOf: await operatorOf() });
     console.log(JSON.stringify({ intent, verdict: out.verdict, ms: Date.now() - t0, cost: out.costUsd }));
     return res.status(200).json({
       ...out,
