@@ -24,6 +24,16 @@ Reviewers: start at [JUDGE.md](JUDGE.md), which opens with what each app does **
 
 > **Network:** Ethereum Sepolia testnet with test USDC. The fleet in `fleet.json` is **simulated**: the units, tasks and limits are illustrative. Every Telegraph purchase, settlement and airport-station reading in this repository is real.
 
+## For other teams (free, testnet)
+
+| Use | How |
+|---|---|
+| Second opinion on any intent | `POST /api/second-opinion {intent, params, client?}`, the Minds Bazaar Skill "Takar Second Opinion", or `npx -y takar-mcp` (set `TAKAR_PAYER_KEY` to pay from your own escrow, no limit). Every call is an EAS attestation: `GET /api/feed`. |
+| Which miner to trust | `GET /api/reputation?intent=`; add your own evidence [on easscan](https://sepolia.easscan.org/attestation/attestWithSchema/0x351bc4ecf778660c8de0d42eb111e758469e1fe5ffc1b993899e399c9c056741). |
+| Why did my miner score that | `GET /api/miner?id=` (`&format=svg` for a README badge). |
+| Gold Rush dossier for a Queensland mine | [goldrush.html](https://takar-telegraph.vercel.app/goldrush.html), `GET /api/dossier?mine=`. |
+| Escrow that needs two resolvers and a dispute bond | [TakarSettle v3](https://sepolia.etherscan.io/address/0xf977660CD28704Fa97D8f6B72835646F62E2502b), `scripts/settle3.mjs`. |
+
 ## What it does
 
 ```
@@ -125,6 +135,8 @@ It runs on free OpenRouter models, falling back to the next model in the list wh
 - Only one STORM_ALERT miner (PREFLIGHT) gave a usable answer for Indonesian places on 21 Nov, so drones that need two agreeing miners hold. That is the rule working, and a gap in the network.
 - Takar Outcome answers few of the scorecard's Manifold questions: it never guesses, and Wikipedia does not settle vague ones.
 - Ranking data comes from the node's public leaderboard, which only lists intents scored in a recent epoch. Takar walks back up to 12 epochs.
+- Settle v3's two resolver keys are both Takar's today; the contract accepts any set, so a partner can hold the second seat in a new instance. The contract cannot check on chain that a signal is Telegraph's.
+- The Gold Rush dossiers read goldrush-qld-history's structured record by a direct call to its registered endpoint (the paid Telegraph answer carries text only) and check which figures appear in the paid answer.
 - Testnet only. Test USDC has no value, and nothing here is paid production usage.
 
 ## Layout

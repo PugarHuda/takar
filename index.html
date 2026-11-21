@@ -169,6 +169,9 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
     <p>Test USDC locked in <a href="https://sepolia.etherscan.io/address/0xcb35d51094335141a986a429bA546b7955705187">TakarSettle v2</a> against a condition. Takar buys the answer through Telegraph and <b>proposes</b> a settlement; the payer and the payee each get one dispute during a 10-minute window, and then anyone can finalize it. The contract refuses an event proposal backed by fewer than two Telegraph signals, so <b>two different miners must agree</b>. A drought cover also needs <b>NASA POWER</b>, a record independent of Telegraph's weather miners, to land on the same side of the trigger, or it holds.</p>
     <div class="scroll"><table id="settle"><tr><td>Loading…</td></tr></table></div>
     <p class="note">Rows marked v1 settled on the first contract (<a href="https://sepolia.etherscan.io/address/0xfB5E39924F287d14a1833C58e50f466145e62808">0xfB5E…2808</a>), one answer and no dispute window.</p>
+    <h3 class="display sub">v3: two resolvers, and a dispute costs a bond</h3>
+    <p class="note"><a href="https://sepolia.etherscan.io/address/0xf977660CD28704Fa97D8f6B72835646F62E2502b">TakarSettle v3</a>: the dispute window opens only when two different resolvers back the same decision on the same evidence (the second re-checks both Telegraph signals and the partner check itself before it signs). A party that disputes posts a 0.5 test USDC bond, lost to the other party if the disputed decision stands. The first deals pay a supplier unless it is sanctioned: Takar's second opinion (two screening miners from different operators) and <a href="https://praman-desk.vercel.app">Praman</a>'s OFAC SDN screen (another team, over MCP) must land the same way, or the deal holds. Both resolver keys are Takar's today; the contract takes any set.</p>
+    <div class="scroll"><table id="settle3"><tr><td>Loading…</td></tr></table></div>
   </section>
 
   <section class="found" aria-labelledby="so-h">
@@ -346,6 +349,19 @@ const canonical = (v) => Array.isArray(v) ? `[${v.map(canonical).join(",")}]`
   } catch (e) {
     document.getElementById("feed-sum").textContent = `Could not read the feed (${e.message}).`;
   }
+})();
+
+// Settle v3: every action from the receipts file, by deal.
+(async () => {
+  try {
+    const rows = (await fetch("receipts/settlements3.jsonl").then((x) => x.text())).trim().split("\n").filter(Boolean).map((l) => JSON.parse(l));
+    const by = new Map();
+    for (const r of rows) { if (r.name) by.set(r.id, { ...(by.get(r.id) ?? {}), name: r.name }); by.set(r.id, { ...(by.get(r.id) ?? {}), steps: [...(by.get(r.id)?.steps ?? []), r] }); }
+    const tx = (h, t) => (h ? `<a href="https://sepolia.etherscan.io/tx/${esc(h)}">${esc(t)}</a>` : esc(t));
+    const step = (r) => r.action === "hold" ? `hold (${esc(r.hold)})` : r.action === "propose" ? tx(r.propose, `propose ${r.met ? "pay" : "refund"}: miners ${(r.miners ?? []).join(" + ")}, Praman ${r.praman?.matched ? "match" : "clear"}`) : r.action === "second" ? tx(r.second, "second") : r.action === "dispute" ? tx(r.tx, `dispute by the ${r.by}, bond ${r.by ? r.bond : ""}`) : r.action === "finalize" ? tx(r.tx, r.met ? "finalized: paid" : "finalized: refunded") : r.action === "open" ? tx(r.tx, "open") : esc(r.action);
+    document.getElementById("settle3").innerHTML = `<thead><tr><th>Deal</th><th>Supplier</th><th>What happened, in order</th></tr></thead><tbody>` +
+      [...by.entries()].map(([id, d]) => `<tr><td>${esc(id)}</td><td>${esc(d.name ?? "")}</td><td>${d.steps.map(step).join(" → ")}</td></tr>`).join("") + `</tbody>`;
+  } catch (e) { document.getElementById("settle3").innerHTML = `<tr><td>Could not read the v3 receipts (${esc(e.message)}).</td></tr>`; }
 })();
 
 // The contested-only scorecard: markets the crowd had not already called (10%–90%).

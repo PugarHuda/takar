@@ -29,7 +29,7 @@ Takar offers that check once, for any intent and any app:
 | Open record of who was right | [EAS schema on Sepolia](https://sepolia.easscan.org/schema/view/0x351bc4ecf778660c8de0d42eb111e758469e1fe5ffc1b993899e399c9c056741), `GET /api/reputation?intent=` | Every check Takar bought is an attestation: miner, Telegraph signal, verdict against an independent truth. 74 so far. Anyone can attest with their own wallet [on easscan](https://sepolia.easscan.org/attestation/attestWithSchema/0x351bc4ecf778660c8de0d42eb111e758469e1fe5ffc1b993899e399c9c056741); paid asks are ordered only by trusted attesters. |
 | Public record of every call | [feed schema](https://sepolia.easscan.org/schema/view/0xe0bad453487eee9668996b592e5cc85d5945dd5e07125f20feec4cf65b224513), `GET /api/feed` | Each second opinion is an EAS attestation as it happens: intent, both miners and signals, verdict, the fields that differed, the caller's self-declared `client`. Usage and disagreements are counted from the chain, not our logs. |
 | For miner operators | `GET /api/miner?id=<id or slug>` (`&format=svg` for a README badge) | Why a miner scored what it scored: per-epoch scores and failure reasons, spot checks, status, its paid record, and a flag on every 0 that came with no reason (bounties#225). |
-| Drop-in for agents | [`openapi.json`](https://takar-telegraph.vercel.app/openapi.json), `npx -y takar-mcp` (tools `second_opinion`, `miner_reputation`, `miner_report`), and a [Minds Bazaar Skill](https://hellominds.ai) ("Takar Second Opinion") | An HTTP tool for Minds and any agent framework. |
+| Drop-in for agents (no limit if you pay) | `npx -y takar-mcp` with `TAKAR_PAYER_KEY` set runs the same rules locally on your own Telegraph escrow (takar-mcp 0.4.0). Otherwise [`openapi.json`](https://takar-telegraph.vercel.app/openapi.json), `npx -y takar-mcp` (tools `second_opinion`, `miner_reputation`, `miner_report`), and a [Minds Bazaar Skill](https://hellominds.ai) ("Takar Second Opinion") | An HTTP tool for Minds and any agent framework. |
 | Meta-miner | Takar Outcome (20261117) | When its own sources cannot settle a past event, it answers only if two other miners agree. It never asks itself. |
 
 Watch it (1:38): [media/takar-second-opinion.mp4](media/takar-second-opinion.mp4). Try it: the board's "A second opinion for any Telegraph intent" box, or
@@ -109,6 +109,21 @@ The escalation tally counts confirmed claims only.
 | New input | write a brief JSON with your own claims (`id`, `kind`, `claim`, `question`) |
 | Check | `receipts/brief-india-pakistan-2025.json` (signed). Result: 2 confirmed, 1 contradicted, 1 disputed, 1 single-source, 1 unsupported, 2 forecasts. $0.18 total. |
 | Break | c6 is fabricated on purpose ("exchanged nuclear strikes"): contradicted by TxLens and FACT_CHECK. c4 is contested: disputed. |
+
+## Gold Rush dossiers (for Telegraph's own Gold Rush app)
+
+Ahmed asked the Gold Rush contributors for the verification side: show both figures, check whether they mean different periods, trace every finding to its record, and export a dossier. [goldrush.html](https://takar-telegraph.vercel.app/goldrush.html) does that from the two Gold Rush miners (goldrush-qld-history 7310050 and OathCast 64176), asked by id and paid through Telegraph.
+
+| Check | What it found |
+|---|---|
+| Sum check | Mount Morgan: the survey's dated rows add up to its own site total (294.1 t). |
+| Same-period conflict | Queensland Government 250 t vs survey 294 t for 1882–1990 (15% apart). Candidate explanation, offered and not applied: the survey includes 56 t from dump retreatment (1983–1990); without it, 238 t. |
+| Different periods | Wikipedia's 262 t (to 1981) is "close" to 250 t, not "agree"; Brilliant Lode's 22,843 oz (Brilliant Deeps, 1908–1916) and 51,483 kg (site, to 1917) are different workings. |
+| Size band | Each total against OathCast's live MINOCC band (Mount Morgan over 150 t, Brilliant Lode 50–150 t, Mount Leyshon 50–150 t): all inside. |
+| Closures | Mount Morgan closed in 1927 (fire, not geological), 1981 (end of the ore body, one source) and 1990 (no reason quoted). A closure with no quoted reason becomes an open question, never "exhausted". |
+| Receipts | Each structured figure is checked against the answer bought through Telegraph; the miner's rank sits next to the evidence. |
+
+Any mine: `GET /api/dossier?mine=…` (`&format=md` downloads). Tested on a site we had not looked at (Golden Plateau). Rules in `lib/dossier.mjs`, 21 offline checks; `npm run`-free: `node --env-file=.env scripts/dossier-run.mjs`.
 
 ## Missions 14 and 06: Takar Settle v2
 

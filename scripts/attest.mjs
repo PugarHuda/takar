@@ -10,7 +10,7 @@
 // record follows its wallet. Gas only, testnet.
 import { readFileSync, appendFileSync, existsSync } from "node:fs";
 import { ethers } from "ethers";
-import { EAS, SCHEMA_REGISTRY, SCHEMA, fromScorecard, fromFleet, dedupe, readAttestations } from "../lib/reputation.mjs";
+import { EAS, SCHEMA_REGISTRY, SCHEMA, fromScorecard, fromFleet, fromScreens, dedupe, readAttestations } from "../lib/reputation.mjs";
 
 const send = process.argv.includes("--send");
 const provider = new ethers.JsonRpcProvider(process.env.RPC ?? "https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true });
@@ -35,7 +35,13 @@ const decisions = readFileSync("receipts/decisions.jsonl", "utf8").trim().split(
 const mine = exists ? await readAttestations(uid, { attester: wallet.address }) : [];
 const logged = existsSync("receipts/attestations.jsonl") ? readFileSync("receipts/attestations.jsonl", "utf8").trim().split("\n").filter(Boolean).flatMap((l) => JSON.parse(l).signals ?? []) : [];
 const already = new Set([...mine.map((a) => String(a.signal)), ...logged].map((x) => x.toLowerCase()));
-const records = dedupe([...fromScorecard(card), ...fromFleet(decisions)], already);
+// Sanctions screens bought for Settle v3, held against what the lists say (checked 21 Nov 2026).
+const TRUTH = {
+  "Bank Rossiya": { listed: true, source: "US Treasury OFAC SDN list, UID 16681 (UKRAINE-EO13661), https://sanctionssearch.ofac.treas.gov/" },
+  "Siemens AG": { listed: false, source: "not on the US Treasury OFAC SDN list as of 21 Nov 2026, https://sanctionssearch.ofac.treas.gov/" },
+};
+const ledger = readFileSync("receipts/ledger.jsonl", "utf8").trim().split("\n").filter(Boolean).map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
+const records = dedupe([...fromScorecard(card), ...fromFleet(decisions), ...fromScreens(ledger, TRUTH)], already);
 console.log(`${records.length} new records (${already.size} signals already attested)`);
 
 // Miner id -> fee wallet, from the node's public registry.
