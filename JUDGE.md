@@ -40,7 +40,7 @@ curl -X POST https://takar-telegraph.vercel.app/api/second-opinion -H 'content-t
 
 ## Check it in five minutes, with no wallet
 
-1. `npm install && npm test` runs 278 offline checks: the payment signers (exact and escrow), the fleet, the outcome resolver, the scorecard, Settle and the Mission 05 note. `cd onchain && forge install foundry-rs/forge-std --no-git && forge test` runs the 11 contract tests. No network, no funds.
+1. `npm install && npm test` runs 347 offline checks: the payment signers (exact and escrow), the fleet, the outcome resolver, the scorecard, Settle and the Mission 05 note. `cd onchain && forge install foundry-rs/forge-std --no-git && forge test` runs the 25 contract tests. No network, no funds.
 2. On the site, press **Verify the signature in this browser** under the scorecard. It checks the Ed25519 signature against the key pinned in the page, with WebCrypto.
 3. On the site, use **Ask the outcome miner yourself**. It calls the miner's own endpoint, with no wallet.
 4. Open `receipts/ledger.jsonl` and pick a line with `"status":"paid"`.
