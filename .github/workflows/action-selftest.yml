@@ -1,0 +1,15 @@
+name: action-selftest
+# Runs this repo's own GitHub Action (action.yml) once by hand, so the README example is known to work.
+on: workflow_dispatch
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: so
+        uses: ./
+        with:
+          intent: SANCTIONS_SCREENING_MATCH_GENERAL
+          params: '{"name":"Bank Rossiya"}'
+          fields: '["matched"]'
+      - run: echo "verdict ${{ steps.so.outputs.verdict }}"

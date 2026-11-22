@@ -14,7 +14,7 @@ Watch (2:33, narrated): https://takar-telegraph.vercel.app/media/takar-overview.
 | Honest numbers | `receipts/scorecard-contested-2.json` | 37 contested markets, Brier 0.121 (0.076–0.176); our miner 15 right, 0 wrong |
 | For miner operators | `GET /api/miner?id=takar-outcome` | per-epoch scores, silent zeros flagged, routing check from the node's request counter |
 | Used by another team | `GET /api/reputation?intent=MINING_INTELLIGENCE_GENERAL&attester=0x98021b20Efdb7ae2C57366010a6E0fDE207b4466` | Praman Desk attested to our open schema with its own wallet ([EAS 0x33d85bed…](https://sepolia.easscan.org/attestation/view/0x33d85bed90eb3164c5124a7c26ca79be386003205265044d1425cea9b714e115)) and built its Gold Rush arbitrator on our dossier JSON; our dossiers call it back and it patched its scopes after our finding |
-| Price questions settled from data, measured honestly | `receipts/numeric-holdout-4.json` | the miner's FRED resolver on Manifold markets it never saw: 37 answered, 37 right; earlier rounds and their errors are kept too |
+| The miner answers from data, not a model, where it can | [docs/RESOLVERS.md](docs/RESOLVERS.md) | one card per source: prices from FRED (37/37 on unseen markets), dated games from ESPN (100/100 against openfootball), Wikipedia with a checked quote; every round, including the bad ones, in `receipts/` |
 
 Offline: `npm ci && npm test` (401 checks), `cd onchain && forge test` (25). Everything below is detail.
 
@@ -193,7 +193,7 @@ TakarSettle4 (0x2A615f7D3E52e9Ee68AB8CaaE3385bcbACCB2aBd) adds escalation: once 
 ## Miner: Takar Outcome
 
 - Endpoint: `POST https://takar-outcome.vercel.app/api/resolve {"event": "..."}`. Registration YAML: `miner/takar-outcome.yaml`. Node id 20261117.
-- It uses three sources, in order:
+- It uses four sources, in order:
   - **A settled Polymarket market.** An exact title match (ignoring a trailing "Resolution" or "Resolve this market"), or a dated fixture matched by slug, date and full event title. The market must be closed, with a final price of 0.99 or more.
   - **A published data series, for price and rate thresholds (since 22 Nov).** Bitcoin and Ether (Coinbase), S&P 500, WTI and Brent *spot*, US gasoline and US unemployment, from FRED, read by code with no model (`lib/numeric.mjs`). It does not take a deadline with no start date, a conditional, "again", a comparison with another series, oil without the word "spot" (futures can sit far from spot: Brent spot reached 138 in April 2026 while futures stayed under 100), or a window that was already past its threshold on day one. Within the series' margin of the threshold it answers `unresolved` (3% for crypto, 10% for "never crossed", since a daily close hides intraday wicks). FRED refuses data-centre IPs, so a GitHub Action copies FRED's own CSVs into `data/series/` daily and the miner reads that copy; an outage is answered `unresolved` with the reason.
     - Why: our own scorecard had left 23 of 38 contested questions unresolved, most of them prices. It now settles 15 of our 59 scorecard questions, all right.
@@ -206,6 +206,7 @@ TakarSettle4 (0x2A615f7D3E52e9Ee68AB8CaaE3385bcbACCB2aBd) adds escalation: once 
       | **Holdout 4, final rules, never seen** | **37** | **37** | **0** | |
 
       Two holdout-3 questions are still answered against the market ("Bitcoin below $80K in 2025?": it closed at 76,252 on 7 April 2025; the market was opened later). The node's questions carry no creation date, so that ambiguity cannot be removed.
+  - **ESPN's scoreboard, for dated games (since 22 Nov).** Football (top five leagues, UEFA, MLS), NBA, WNBA, NHL, NFL and MLB: win, avoid defeat, draw, spread and total, read by code (`lib/sports.mjs`). Exactly one game that day must name both teams; an unfinished game, a push, or a result after extra time or penalties is `unresolved`. Checked against openfootball, an independent source: 100 of 100 right (`receipts/sports-check.json`). Why: the node's recent EVENT_OUTCOME asks are mostly dated fixtures ("Did TSG Hoffenheim win the match against FSV Mainz 05 on 2024-12-01"), which Wikipedia prose does not settle; epochs 31 to 34 scored 0 while other miners scored 0.98.
   - **Wikipedia.** The prose plus the table rows that name the question's year or terms. Every yes or no carries a sentence or table row quoted word for word, checked in code; a quote may not run across two rows.
 - Every answer states `confidence` (`high` for a settled market or a data series, `medium` for a checked quote, `none` for unresolved) and the `resolution_rule` it rests on.
 - Network evidence: ranked #1 in epoch 16 at 0.9622, with every spot check passed. Epochs 18–28 scored 0: every graded ask came back `unresolved`. One cause was ours (the "Resolution" suffix, fixed 21 Nov). The other is asks that name no event at all, which no source can settle. Reported in [bounties#225](https://github.com/telegraphprotocol/bounties/issues/225), with data and without quoting graded material. After the fix, epoch 30 scored 0.9993 (rank #2). We do not pick epochs.

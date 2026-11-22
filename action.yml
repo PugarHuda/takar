@@ -1,0 +1,50 @@
+name: Takar second opinion
+description: Ask two Telegraph miners from different operators the same question and fail the job unless they agree.
+branding: { icon: check-circle, color: green }
+inputs:
+  intent:
+    description: Telegraph intent, e.g. SANCTIONS_SCREENING_MATCH_GENERAL
+    required: true
+  params:
+    description: The intent's parameters as JSON, e.g. {"name":"Bank Rossiya"}
+    required: true
+  fields:
+    description: JSON array of the fields that decide (both answers must fill them), e.g. ["matched"]
+    default: "[]"
+  fail-on:
+    description: Verdicts that fail the job, comma separated (agree, disagree, insufficient)
+    default: disagree,insufficient
+  endpoint:
+    default: https://takar-telegraph.vercel.app/api/second-opinion
+outputs:
+  verdict:
+    description: agree, disagree or insufficient
+    value: ${{ steps.ask.outputs.verdict }}
+  record:
+    description: The EAS attestation of this comparison, when one was written
+    value: ${{ steps.ask.outputs.record }}
+runs:
+  using: composite
+  steps:
+    - id: ask
+      shell: bash
+      env:
+        INTENT: ${{ inputs.intent }}
+        PARAMS: ${{ inputs.params }}
+        FIELDS: ${{ inputs.fields }}
+        FAIL_ON: ${{ inputs.fail-on }}
+        ENDPOINT: ${{ inputs.endpoint }}
+      run: |
+        # Inputs go through env and jq, never pasted into the shell, so a value cannot run as code.
+        body=$(jq -n --arg i "$INTENT" --argjson p "$PARAMS" --argjson f "$FIELDS" '{intent:$i, params:$p, fields:$f}')
+        res=$(curl -sS -m 90 -X POST "$ENDPOINT" -H 'content-type: application/json' -d "$body")
+        verdict=$(jq -r '.verdict // "error"' <<<"$res")
+        echo "verdict=$verdict" >> "$GITHUB_OUTPUT"
+        echo "record=$(jq -r '.record.uid // .record // empty' <<<"$res" | head -1)" >> "$GITHUB_OUTPUT"
+        {
+          echo "### Takar second opinion: $verdict"
+          echo
+          jq -r '"Intent: \(.intent)", "Compared: \(.compared // [] | join(", "))", "Differ: \(.differ // [] | join(", "))", (.signals // [] | map("- signal \(.)") | .[])' <<<"$res"
+        } >> "$GITHUB_STEP_SUMMARY"
+        if [ "$verdict" = error ]; then echo "::error::no verdict: $(head -c 300 <<<"$res")"; exit 1; fi
+        if [[ ",$FAIL_ON," == *",$verdict,"* ]]; then echo "::error::second opinion: $verdict"; exit 1; fi

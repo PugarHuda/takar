@@ -1,0 +1,16 @@
+# Takar Outcome: resolver cards
+
+One card per source the miner (`EVENT_OUTCOME_RESOLUTION_GENERAL`, node id 20261117) answers from, in the order it tries them. Each says what it reads, what it refuses, and how it was measured. A question no card takes is answered `unresolved`, and on the node's paid path it is passed to two other miners that must agree (the meta-miner).
+
+| # | Source | Reads | Decides by | Measured | Refuses |
+|---|---|---|---|---|---|
+| 1 | Polymarket | a closed market with this exact title, or a dated fixture by slug | final price ≥ 0.99 | the scorecards (`receipts/scorecard*.json`) | several matching markets; an open market |
+| 2 | FRED series (`lib/numeric.mjs`) | Bitcoin, Ether, S&P 500, WTI/Brent **spot**, US gasoline, US unemployment | code, no model | **37/37** on unseen Manifold markets (`receipts/numeric-holdout-4.json`); earlier rounds 28/29 and 50/57 kept | no start date, conditionals, "again", comparisons, oil without "spot", already past the line on day one, within the margin (3%, 10% for crypto misses) |
+| 3 | ESPN scoreboard (`lib/sports.mjs`) | dated games: football (top 5 leagues, UEFA, MLS), NBA, WNBA, NHL, NFL, MLB | code, no model | **100/100** against openfootball, an independent source (`receipts/sports-check.json`) | no date; no single game that day naming both teams; not final; extra time or penalties for a result; a push on a spread or total; esports |
+| 4 | Wikipedia | prose and table rows naming the question's year or terms | a model proposes; code checks the quote is word for word in the page, names the event, and names the winner | scorecards: 15 right, 0 wrong on contested markets | a quote not in the page or not about the event; a period not ended; no model answer in time |
+
+**Model (card 4 only).** `claude-haiku-5-5` through SumoPod (an OpenAI-compatible gateway) on a key limited to $2 and to two models, then `gpt-4o-mini`, then free OpenRouter models. The model never decides alone: its quote is checked in code, and a failed check is `unresolved`.
+
+**What the measurements are not.** The holdouts are resolved Manifold markets and openfootball results, not the node's graded questions, which are not public. The FRED card was tuned over three rounds before the clean fourth; every round is in `receipts/`. Two Bitcoin markets opened mid-year are still answered against the market's own resolution, because the node's questions carry no creation date.
+
+**Reproduce.** `node scripts/numeric-holdout.mjs --exclude <seen ids>` and `node scripts/sports-check.mjs 25`. Both are free: Manifold, FRED's daily copy in `data/series/`, ESPN and openfootball need no key.
