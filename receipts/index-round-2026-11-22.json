@@ -1,0 +1,578 @@
+{
+  "title": "Disagreement index measurement round (client takar-index)",
+  "generated_at": "2026-11-22T17:55:07.999Z",
+  "by_intent": {
+    "CRYPTO_PRICE_USD": {
+      "agree": 6,
+      "disagree": 0,
+      "insufficient": 0,
+      "error": 0
+    },
+    "STOCK_PRICE_US_EQUITY": {
+      "agree": 4,
+      "disagree": 0,
+      "insufficient": 1,
+      "error": 0
+    },
+    "WEATHER_CHECK_TEMPERATURE": {
+      "agree": 5,
+      "disagree": 0,
+      "insufficient": 0,
+      "error": 0
+    },
+    "GAS_PRICE_GENERAL": {
+      "agree": 3,
+      "disagree": 1,
+      "insufficient": 0,
+      "error": 0
+    },
+    "SANCTIONS_SCREENING_MATCH_GENERAL": {
+      "agree": 5,
+      "disagree": 0,
+      "insufficient": 0,
+      "error": 0
+    }
+  },
+  "cost_usd": 0.55,
+  "rows": [
+    {
+      "intent": "CRYPTO_PRICE_USD",
+      "params": {
+        "symbol": "BTC"
+      },
+      "fields": [
+        "price_usd"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "price_usd": 0
+      },
+      "independence": "operator",
+      "miners": [
+        "32002",
+        "6110114"
+      ],
+      "costUsd": 0.02,
+      "ms": 8050,
+      "error": null
+    },
+    {
+      "intent": "CRYPTO_PRICE_USD",
+      "params": {
+        "symbol": "ETH"
+      },
+      "fields": [
+        "price_usd"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "price_usd": 0.445
+      },
+      "independence": "operator",
+      "miners": [
+        "32002",
+        "6110114"
+      ],
+      "costUsd": 0.02,
+      "ms": 3911,
+      "error": null
+    },
+    {
+      "intent": "CRYPTO_PRICE_USD",
+      "params": {
+        "symbol": "SOL"
+      },
+      "fields": [
+        "price_usd"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "price_usd": 0
+      },
+      "independence": "operator",
+      "miners": [
+        "32002",
+        "6110114"
+      ],
+      "costUsd": 0.02,
+      "ms": 4031,
+      "error": null
+    },
+    {
+      "intent": "CRYPTO_PRICE_USD",
+      "params": {
+        "symbol": "XRP"
+      },
+      "fields": [
+        "price_usd"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "price_usd": 0
+      },
+      "independence": "operator",
+      "miners": [
+        "32002",
+        "6110114"
+      ],
+      "costUsd": 0.02,
+      "ms": 3871,
+      "error": null
+    },
+    {
+      "intent": "CRYPTO_PRICE_USD",
+      "params": {
+        "symbol": "DOGE"
+      },
+      "fields": [
+        "price_usd"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "price_usd": 0.0000046
+      },
+      "independence": "operator",
+      "miners": [
+        "32002",
+        "6110114"
+      ],
+      "costUsd": 0.02,
+      "ms": 3551,
+      "error": null
+    },
+    {
+      "intent": "CRYPTO_PRICE_USD",
+      "params": {
+        "symbol": "LINK"
+      },
+      "fields": [
+        "price_usd"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "price_usd": 0.0011
+      },
+      "independence": "operator",
+      "miners": [
+        "32002",
+        "6110114"
+      ],
+      "costUsd": 0.02,
+      "ms": 3757,
+      "error": null
+    },
+    {
+      "intent": "STOCK_PRICE_US_EQUITY",
+      "params": {
+        "ticker": "JPM"
+      },
+      "fields": [
+        "price_usd"
+      ],
+      "verdict": "insufficient",
+      "differ": [],
+      "spread": null,
+      "independence": null,
+      "miners": [
+        "20260828"
+      ],
+      "costUsd": 0.03,
+      "ms": 8480,
+      "error": "fewer than two usable answers"
+    },
+    {
+      "intent": "WEATHER_CHECK_TEMPERATURE",
+      "params": {
+        "location": "Jakarta, Indonesia"
+      },
+      "fields": [
+        "temperature_c"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "temperature_c": 0
+      },
+      "independence": "operator",
+      "miners": [
+        "20260828",
+        "7310043"
+      ],
+      "costUsd": 0.02,
+      "ms": 5281,
+      "error": null
+    },
+    {
+      "intent": "WEATHER_CHECK_TEMPERATURE",
+      "params": {
+        "location": "London, United Kingdom"
+      },
+      "fields": [
+        "temperature_c"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "temperature_c": 0
+      },
+      "independence": "operator",
+      "miners": [
+        "20260828",
+        "7310043"
+      ],
+      "costUsd": 0.02,
+      "ms": 5068,
+      "error": null
+    },
+    {
+      "intent": "WEATHER_CHECK_TEMPERATURE",
+      "params": {
+        "location": "Sydney, Australia"
+      },
+      "fields": [
+        "temperature_c"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "temperature_c": 0
+      },
+      "independence": "operator",
+      "miners": [
+        "20260828",
+        "7310043"
+      ],
+      "costUsd": 0.02,
+      "ms": 4979,
+      "error": null
+    },
+    {
+      "intent": "WEATHER_CHECK_TEMPERATURE",
+      "params": {
+        "location": "Nairobi, Kenya"
+      },
+      "fields": [
+        "temperature_c"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "temperature_c": 0
+      },
+      "independence": "operator",
+      "miners": [
+        "20260828",
+        "7310043"
+      ],
+      "costUsd": 0.02,
+      "ms": 4407,
+      "error": null
+    },
+    {
+      "intent": "WEATHER_CHECK_TEMPERATURE",
+      "params": {
+        "location": "Denver, Colorado"
+      },
+      "fields": [
+        "temperature_c"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "temperature_c": 0
+      },
+      "independence": "operator",
+      "miners": [
+        "20260828",
+        "7310043"
+      ],
+      "costUsd": 0.02,
+      "ms": 4379,
+      "error": null
+    },
+    {
+      "intent": "GAS_PRICE_GENERAL",
+      "params": {
+        "chain": "ethereum"
+      },
+      "fields": [
+        "gas_price_gwei"
+      ],
+      "verdict": "disagree",
+      "differ": [
+        "gas_price_gwei"
+      ],
+      "spread": {
+        "gas_price_gwei": 0.00432
+      },
+      "independence": "operator",
+      "miners": [
+        "4433",
+        "8453"
+      ],
+      "costUsd": 0.02,
+      "ms": 5606,
+      "error": null
+    },
+    {
+      "intent": "GAS_PRICE_GENERAL",
+      "params": {
+        "chain": "base"
+      },
+      "fields": [
+        "gas_price_gwei"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "gas_price_gwei": 0
+      },
+      "independence": "operator",
+      "miners": [
+        "4433",
+        "8453"
+      ],
+      "costUsd": 0.02,
+      "ms": 5450,
+      "error": null
+    },
+    {
+      "intent": "GAS_PRICE_GENERAL",
+      "params": {
+        "chain": "arbitrum"
+      },
+      "fields": [
+        "gas_price_gwei"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "gas_price_gwei": 0.000004
+      },
+      "independence": "operator",
+      "miners": [
+        "4433",
+        "8453"
+      ],
+      "costUsd": 0.02,
+      "ms": 6312,
+      "error": null
+    },
+    {
+      "intent": "GAS_PRICE_GENERAL",
+      "params": {
+        "chain": "polygon"
+      },
+      "fields": [
+        "gas_price_gwei"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "gas_price_gwei": 1.18
+      },
+      "independence": "operator",
+      "miners": [
+        "4433",
+        "8453"
+      ],
+      "costUsd": 0.02,
+      "ms": 5491,
+      "error": null
+    },
+    {
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "params": {
+        "name": "Sberbank"
+      },
+      "fields": [
+        "matched"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {},
+      "independence": "operator",
+      "miners": [
+        "78021",
+        "9002"
+      ],
+      "costUsd": 0.02,
+      "ms": 8548,
+      "error": null
+    },
+    {
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "params": {
+        "name": "Rosneft"
+      },
+      "fields": [
+        "matched"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {},
+      "independence": "operator",
+      "miners": [
+        "78021",
+        "9002"
+      ],
+      "costUsd": 0.02,
+      "ms": 9006,
+      "error": null
+    },
+    {
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "params": {
+        "name": "Siemens AG"
+      },
+      "fields": [
+        "matched"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {},
+      "independence": "operator",
+      "miners": [
+        "78021",
+        "9002"
+      ],
+      "costUsd": 0.02,
+      "ms": 5911,
+      "error": null
+    },
+    {
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "params": {
+        "name": "Nestle"
+      },
+      "fields": [
+        "matched"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {},
+      "independence": "operator",
+      "miners": [
+        "78021",
+        "9002"
+      ],
+      "costUsd": 0.02,
+      "ms": 5656,
+      "error": null
+    },
+    {
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "params": {
+        "name": "Banco Delta Asia"
+      },
+      "fields": [
+        "matched"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {},
+      "independence": "operator",
+      "miners": [
+        "78021",
+        "9002"
+      ],
+      "costUsd": 0.02,
+      "ms": 5950,
+      "error": null
+    },
+    {
+      "intent": "STOCK_PRICE_US_EQUITY",
+      "params": {
+        "ticker": "AAPL"
+      },
+      "fields": [
+        "price_usd"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "price_usd": 0.835
+      },
+      "independence": "operator",
+      "miners": [
+        "7323",
+        "20260828"
+      ],
+      "costUsd": 0.03,
+      "ms": 9196,
+      "error": null
+    },
+    {
+      "intent": "STOCK_PRICE_US_EQUITY",
+      "params": {
+        "ticker": "MSFT"
+      },
+      "fields": [
+        "price_usd"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "price_usd": 0.41
+      },
+      "independence": "operator",
+      "miners": [
+        "7323",
+        "20260828"
+      ],
+      "costUsd": 0.03,
+      "ms": 9319,
+      "error": null
+    },
+    {
+      "intent": "STOCK_PRICE_US_EQUITY",
+      "params": {
+        "ticker": "NVDA"
+      },
+      "fields": [
+        "price_usd"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "price_usd": 0
+      },
+      "independence": "operator",
+      "miners": [
+        "7323",
+        "20260828"
+      ],
+      "costUsd": 0.03,
+      "ms": 9366,
+      "error": null
+    },
+    {
+      "intent": "STOCK_PRICE_US_EQUITY",
+      "params": {
+        "ticker": "TSLA"
+      },
+      "fields": [
+        "price_usd"
+      ],
+      "verdict": "agree",
+      "differ": [],
+      "spread": {
+        "price_usd": 0
+      },
+      "independence": "operator",
+      "miners": [
+        "7323",
+        "20260828"
+      ],
+      "costUsd": 0.03,
+      "ms": 6856,
+      "error": null
+    }
+  ]
+}
