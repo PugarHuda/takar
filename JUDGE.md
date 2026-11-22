@@ -13,8 +13,10 @@ Watch (2:33, narrated): https://takar-telegraph.vercel.app/media/takar-overview.
 | Gold Rush dossiers for Telegraph's own Gold Rush | https://takar-telegraph.vercel.app/goldrush.html | Mount Morgan: 250 t vs 294 t explained by dump retreatment (offered, not applied); 24 leases past expiry yet "Granted"; an active native title claim the lease category does not show |
 | Honest numbers | `receipts/scorecard-contested-2.json` | 37 contested markets, Brier 0.121 (0.076–0.176); our miner 15 right, 0 wrong |
 | For miner operators | `GET /api/miner?id=takar-outcome` | per-epoch scores, silent zeros flagged, routing check from the node's request counter |
+| Used by another team | `GET /api/reputation?intent=MINING_INTELLIGENCE_GENERAL&attester=0x98021b20Efdb7ae2C57366010a6E0fDE207b4466` | Praman Desk attested to our open schema with its own wallet ([EAS 0x33d85bed…](https://sepolia.easscan.org/attestation/view/0x33d85bed90eb3164c5124a7c26ca79be386003205265044d1425cea9b714e115)) and built its Gold Rush arbitrator on our dossier JSON; our dossiers call it back and it patched its scopes after our finding |
+| Price questions settled from data, measured honestly | `receipts/numeric-holdout-4.json` | the miner's FRED resolver on Manifold markets it never saw: 37 answered, 37 right; earlier rounds and their errors are kept too |
 
-Offline: `npm ci && npm test` (364 checks), `cd onchain && forge test` (25). Everything below is detail.
+Offline: `npm ci && npm test` (401 checks), `cd onchain && forge test` (25). Everything below is detail.
 
 ---
 

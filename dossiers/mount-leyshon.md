@@ -120,10 +120,10 @@ Checked 2026-11-21T18:46:18.958Z. Contact details are on the registers, not copi
 
 1 of 14 production figures from the miner's structured record also appear word for word in the answer bought through Telegraph.
 
-- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x68944de8…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4), $0.01; node rank for the intent: #13 of 30
-- OathCast Queensland Gold Mines (64176), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x1fa7493e…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x1fa7493e51c2f540a2acf204bc682598bd4ecb8f4d4d20288b40bdcfa2fbdc1e), $0.01; node rank for the intent: #15 of 30
-- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x11a7dc78…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x11a7dc78b1471d5cb192730cebc7b3da72b75ee56145081d9667a28dcb1b8a18), $0.01; node rank for the intent: #13 of 30
-- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x537da18e…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x537da18e8c257b3ff46e883578d1bb18e97e5af07c77c2dcd2947d9069e1cb58), $0.01; node rank for the intent: #13 of 30
-- Gold Rush Queensland Mine History (7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x537da18e…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x537da18e8c257b3ff46e883578d1bb18e97e5af07c77c2dcd2947d9069e1cb58), $0.01
+- Gold Rush Queensland Mine History (Telegraph miner 7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x68944de8…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4), $0.01; node rank for the intent: #13 of 30
+- OathCast Queensland Gold Mines (Telegraph miner 64176), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x1fa7493e…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x1fa7493e51c2f540a2acf204bc682598bd4ecb8f4d4d20288b40bdcfa2fbdc1e), $0.01; node rank for the intent: #15 of 30
+- Gold Rush Queensland Mine History (Telegraph miner 7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x11a7dc78…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x11a7dc78b1471d5cb192730cebc7b3da72b75ee56145081d9667a28dcb1b8a18), $0.01; node rank for the intent: #13 of 30
+- Gold Rush Queensland Mine History (Telegraph miner 7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x537da18e…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x537da18e8c257b3ff46e883578d1bb18e97e5af07c77c2dcd2947d9069e1cb58), $0.01; node rank for the intent: #13 of 30
+- Gold Rush Queensland Mine History (Telegraph miner 7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x537da18e…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x537da18e8c257b3ff46e883578d1bb18e97e5af07c77c2dcd2947d9069e1cb58), $0.01
 
 Rank is shown next to the evidence, never in place of it.
