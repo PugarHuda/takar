@@ -17,6 +17,9 @@
     },
     "api/dossier.js": {
       "maxDuration": 120
+    },
+    "api/network.js": {
+      "maxDuration": 60
     }
   }
 }

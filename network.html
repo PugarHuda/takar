@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Telegraph network check</title>
+<meta name="description" content="Who really runs Telegraph's miners, how often independent miners disagree, and whether a signal is on the node, in Takar's ledger and anchored on EAS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --paper:#EEF2F0; --sheet:#F8FAF9; --ink:#1E2A33; --muted:#55656F; --rule:#8FA6B5; --rule-soft:#D3DDE2; --accent:#9A6A00; --bad:#B33A2E; --ok:#2E7D4F; --link:#1F5C8A; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#141C21; --sheet:#1B252B; --ink:#E3EAEE; --muted:#9AABB5; --rule:#4F6573; --rule-soft:#2C3A42; --accent:#E0B341; --bad:#E3705F; --ok:#6CC28F; --link:#7FB6E0; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font:400 1rem/1.55 "Atkinson Hyperlegible", system-ui, sans-serif; }
+a { color:var(--link); text-underline-offset:2px; }
+.wrap { max-width:980px; margin:0 auto; padding:0 16px 48px; }
+h1, h2 { font-family:"Barlow Semi Condensed", system-ui, sans-serif; line-height:1.2; }
+h1 { font-size:2.2rem; margin:28px 0 6px; }
+h2 { font-size:1.5rem; margin:36px 0 6px; }
+.lede, .note { color:var(--muted); max-width:72ch; }
+.note { font-size:.92rem; }
+section { background:var(--sheet); border:1px solid var(--rule-soft); border-radius:8px; padding:4px 20px 18px; margin-top:18px; }
+.big { font:700 2rem "Barlow Semi Condensed", sans-serif; color:var(--accent); }
+.scroll { overflow-x:auto; }
+table { border-collapse:collapse; font-size:.92rem; width:100%; }
+th, td { border-bottom:1px solid var(--rule-soft); padding:6px 8px; text-align:left; vertical-align:top; }
+th { font-family:"Barlow Semi Condensed", sans-serif; }
+td.n { text-align:right; font-variant-numeric:tabular-nums; }
+.bad { color:var(--bad); } .ok { color:var(--ok); }
+form { display:flex; flex-wrap:wrap; gap:8px; margin:10px 0; }
+input { font:inherit; padding:8px 10px; border:1px solid var(--rule); border-radius:6px; background:var(--paper); color:var(--ink); flex:1; min-width:240px; }
+button { font:600 1rem "Barlow Semi Condensed", sans-serif; padding:8px 14px; border:1px solid var(--rule); background:var(--sheet); color:var(--ink); border-radius:6px; cursor:pointer; }
+pre { white-space:pre-wrap; overflow-wrap:anywhere; font-size:.85rem; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>Telegraph network check</h1>
+  <p class="lede">Three things a buyer of Telegraph answers should know and cannot read from a leaderboard: who really runs the miners, how often two independent miners disagree, and whether a paid answer can be traced from the node to an on-chain anchor. Read live from the node's public registry and Takar's records on Ethereum Sepolia. <a href="./">Takar board</a> · API: <code>/api/network?view=operators|disagreement|signal</code></p>
+
+  <section aria-labelledby="ops-h">
+    <h2 id="ops-h">Who runs the miners</h2>
+    <p class="note">An operator here is a fee address. Miners that pay the same address count as one operator: that may be one team or a platform account, and the registry does not say which. A second opinion is only independent across operators.</p>
+    <p id="ops-sum">Loading the registry…</p>
+    <div class="scroll"><table id="ops-top"></table></div>
+    <h2>Independent choice per intent</h2>
+    <p class="note">How many operators actually serve each intent. <b>Effective operators</b> is the inverse Herfindahl index: the number of equal-sized operators the intent's miners amount to.</p>
+    <div class="scroll"><table id="ops-intents"></table></div>
+  </section>
+
+  <section aria-labelledby="dis-h">
+    <h2 id="dis-h">How often independent miners disagree</h2>
+    <p class="note">Every second opinion Takar gives compares two miners from different operators on the same question, and is recorded on EAS. Pairs where one answer was unusable are left out. The interval is a 95% Wilson interval.</p>
+    <p id="dis-sum">Loading the feed…</p>
+    <div class="scroll"><table id="dis"></table></div>
+  </section>
+
+  <section aria-labelledby="sig-h">
+    <h2 id="sig-h">Trace a signal</h2>
+    <p class="note">Paste any Telegraph signal hash. It is looked up on the node, in Takar's paid ledger, and in the Merkle roots of that ledger Takar anchors on EAS; the root is recomputed from the published file, so an edited or deleted receipt would not match.</p>
+    <form id="sig-form"><input id="sig" placeholder="0x… (64 hex characters)" aria-label="Signal hash" value="0xe8424ce5a626661442e8052cfe9e20650ad66ca32389503a2e52de7a63ce080f"><button type="submit">Trace</button></form>
+    <div id="sig-out" aria-live="polite"></div>
+  </section>
+  <p class="note">Built for Telegraph Hackathon Season II, which pays cash prizes. Code: <a href="https://github.com/PugarHuda/takar/blob/main/lib/network.mjs">lib/network.mjs</a> (tests in lib/network.test.mjs).</p>
+</main>
+<script>
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+const pct = (x) => (x == null ? "—" : `${(x * 100).toFixed(x < 0.1 ? 1 : 0)}%`);
+(async () => {
+  try {
+    const o = await fetch("api/network?view=operators").then((r) => r.json());
+    if (o.error) throw new Error(o.error);
+    document.getElementById("ops-sum").innerHTML = `<span class="big">${esc(o.miners)}</span> active miners pay out to <span class="big">${esc(o.operators)}</span> fee addresses. The two largest take <b>${pct(o.top_two_share)}</b> of all miners. Read ${esc(o.read_at)}.`;
+    document.getElementById("ops-top").innerHTML = `<thead><tr><th>Fee address</th><th>Miners</th><th>Share</th><th>Intents</th><th>Examples</th></tr></thead><tbody>` +
+      o.top_operators.map((x) => `<tr><td><a href="https://sepolia.etherscan.io/address/${esc(x.address)}">${esc(x.short)}</a></td><td class="n">${esc(x.miners)}</td><td class="n">${pct(x.share)}</td><td class="n">${esc(x.intents)}</td><td>${esc(x.sample.join(", "))}</td></tr>`).join("") + `</tbody>`;
+    document.getElementById("ops-intents").innerHTML = `<thead><tr><th>Intent</th><th>Miners</th><th>Operators</th><th>Largest operator</th><th>Effective operators</th></tr></thead><tbody>` +
+      o.intents.slice(0, 40).map((x) => `<tr><td>${esc(x.intent)}</td><td class="n">${esc(x.miners)}</td><td class="n ${x.operators < 2 ? "bad" : ""}">${esc(x.operators)}</td><td class="n">${pct(x.top_operator_share)}</td><td class="n">${esc(x.effective_operators)}</td></tr>`).join("") + `</tbody>`;
+  } catch (e) { document.getElementById("ops-sum").textContent = `Could not read the registry (${e.message}).`; }
+  try {
+    const d = await fetch("api/network?view=disagreement").then((r) => r.json());
+    if (d.error) throw new Error(d.error);
+    document.getElementById("dis-sum").innerHTML = `${esc(d.calls)} second opinions on EAS since ${esc(d.since)}.`;
+    document.getElementById("dis").innerHTML = `<thead><tr><th>Intent</th><th>Compared pairs</th><th>Disagree</th><th>Rate</th><th>95% interval</th><th>Unusable</th></tr></thead><tbody>` +
+      d.intents.map((x) => `<tr><td>${esc(x.intent)}</td><td class="n">${esc(x.compared)}</td><td class="n">${esc(x.disagree)}</td><td class="n"><b>${pct(x.rate)}</b></td><td class="n">${x.interval ? `${pct(x.interval[0])}–${pct(x.interval[1])}` : "—"}</td><td class="n">${esc(x.insufficient)}</td></tr>`).join("") + `</tbody>`;
+  } catch (e) { document.getElementById("dis-sum").textContent = `Could not read the feed (${e.message}).`; }
+})();
+document.getElementById("sig-form").addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const out = document.getElementById("sig-out");
+  out.textContent = "Tracing…";
+  try {
+    const s = await fetch(`api/network?view=signal&hash=${encodeURIComponent(document.getElementById("sig").value.trim())}`).then((r) => r.json());
+    if (s.error) throw new Error(s.error);
+    const yes = (b, t, f) => (b ? `<span class="ok">✔ ${t}</span>` : `<span class="bad">✘ ${f}</span>`);
+    out.innerHTML = `<p>${yes(s.on_node.found, `on the node (<a href="https://devnode.telegraphprotocol.com/engine/v1/signal/${esc(s.hash)}">open</a>)`, "not found on the node")}<br>` +
+      `${yes(s.in_takar_ledger, s.in_takar_ledger ? `in Takar's ledger, line ${esc(s.in_takar_ledger.line)}: ${esc(s.in_takar_ledger.intent)}, $${esc(s.in_takar_ledger.paid_usd)}, ${esc(s.in_takar_ledger.at)}` : "", "not a Takar purchase (other buyers' signals are not in our ledger)")}<br>` +
+      (s.anchored ? yes(s.anchored.matches, `anchored on EAS in <a href="https://sepolia.etherscan.io/tx/${esc(s.anchored.tx)}">${esc(s.anchored.tx.slice(0, 12))}…</a> (${esc(s.anchored.at)}), root over ${esc(s.anchored.count)} lines recomputed and equal`, `the anchored root does not match the published ledger`) : s.in_takar_ledger ? `<span class="note">not anchored yet: the next daily anchor will cover it</span>` : "") + `</p>`;
+  } catch (e) { out.textContent = `Could not trace it (${e.message}).`; }
+});
+</script>
+</body>
+</html>
