@@ -73,6 +73,9 @@ export default async function handler(req, res) {
   if (!params || typeof params !== "object" || Array.isArray(params) || JSON.stringify(params).length > 2000) return res.status(400).json({ error: "params must be an object of the intent's request params, at most 2,000 characters" });
   // Optional decision fields: only these decide the verdict, and both miners must fill them.
   const fields = req.body?.fields == null ? null : req.body.fields;
+  // escalate: a third opinion only when two disagree; maxUsd can only lower the server's cap of $0.03 a call.
+  const escalate = req.body?.escalate === true;
+  const maxUsd = Math.min(0.03, Number.isFinite(Number(req.body?.maxUsd)) && Number(req.body.maxUsd) > 0 ? Number(req.body.maxUsd) : 0.03);
   if (fields && (!Array.isArray(fields) || !fields.length || fields.length > 5 || !fields.every((f) => /^[a-z_][a-z0-9_.]{0,40}$/i.test(String(f))))) return res.status(400).json({ error: "fields is an optional list of up to 5 field names, e.g. [\"matched\"]" });
   const client = req.body?.client == null ? "" : String(req.body.client);
   if (client && !/^[\w .@\/-]{1,40}$/.test(client)) return res.status(400).json({ error: "client is an optional name for your app, at most 40 plain characters" });
@@ -84,7 +87,7 @@ export default async function handler(req, res) {
   const t0 = Date.now();
   try {
     const reputation = await reputationFor(intent);
-    const out = await secondOpinion({ intent, params }, { ask: (a) => ask({ ...a, signer }), ranked, reputation, operatorOf: await operatorOf(), strictOperators: true, fields });
+    const out = await secondOpinion({ intent, params }, { ask: (a) => ask({ ...a, signer }), ranked, reputation, operatorOf: await operatorOf(), strictOperators: true, fields, escalate, maxUsd });
     // Every call goes on the public record (EAS). A failed write never fails the answer.
     // ponytail: concurrent sends on one instance can collide on the nonce; that call just goes unrecorded.
     const record = await Promise.race([recordFeed(out, client, signer), new Promise((_, no) => setTimeout(() => no(new Error("timeout")), 8000))]).catch((e) => { console.log(JSON.stringify({ feed_error: String(e.message).slice(0, 120) })); return null; });

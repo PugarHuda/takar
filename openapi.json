@@ -55,6 +55,14 @@
                     "example": [
                       "matched"
                     ]
+                  },
+                  "escalate": {
+                    "type": "boolean",
+                    "description": "Optional: when the two answers disagree, buy one more independent opinion and report which side it matches (escalation.sides_with). The verdict stays 'disagree'. Agreement buys nothing extra."
+                  },
+                  "maxUsd": {
+                    "type": "number",
+                    "description": "Optional: a lower cost cap for this call in USD (the server's cap is 0.03)."
                   }
                 }
               }
