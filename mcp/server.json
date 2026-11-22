@@ -3,14 +3,14 @@
   "name": "io.github.PugarHuda/takar",
   "description": "Resolve real-world events with verbatim quotes, verify a forecast scorecard, rank Telegraph miners.",
   "repository": { "url": "https://github.com/PugarHuda/takar", "source": "github", "subfolder": "mcp" },
-  "version": "0.4.0",
+  "version": "0.5.0",
   "websiteUrl": "https://github.com/PugarHuda/takar/tree/main/mcp",
   "packages": [
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "takar-mcp",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "transport": { "type": "stdio" }
     }
   ]

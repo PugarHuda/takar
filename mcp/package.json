@@ -1,6 +1,6 @@
 {
   "name": "takar-mcp",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "A second opinion for any Telegraph intent: two independent miners, chosen by an open on-chain record of who was right. Plus event resolution with verbatim quotes and a signed forecast scorecard. No key, no wallet.",
   "keywords": [
     "mcp",

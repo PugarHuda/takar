@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Takar as an MCP server: three tools over stdio, no dependencies, no wallet.
+// Takar as an MCP server: seven tools over stdio, no dependencies, no wallet.
 //
 //   npx -y takar-mcp
 //   node mcp/server.mjs
@@ -107,6 +107,21 @@ const TOOLS = [
       "reason (often: never asked in the window). Also returns a README badge URL.",
     inputSchema: { type: "object", required: ["id"], properties: { id: { type: "string", description: "Miner id or slug, e.g. takar-outcome" } } },
   },
+  {
+    name: "network_check",
+    description:
+      "Three views of the Telegraph network. operators: miners grouped by the fee address they pay out to, and per intent how " +
+      "many independent operators a buyer can actually choose from (two miners on one address are one opinion). disagreement: " +
+      "how often miners from different operators disagree per intent, from Takar's comparisons on EAS, with 95% Wilson intervals. " +
+      "signal: one Telegraph signal hash checked on the node, in Takar's paid ledger, and inside the EAS-anchored Merkle root of that ledger.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        view: { type: "string", enum: ["operators", "disagreement", "signal"], default: "operators" },
+        hash: { type: "string", description: "Signal hash (0x + 64 hex), for view=signal" },
+      },
+    },
+  },
 ];
 
 /**
@@ -189,6 +204,13 @@ const CALLS = {
     if (intent) q.set("intent", String(intent));
     if (attester) q.set("attester", String(attester));
     return getJson(`${SITE}/api/reputation?${q}`);
+  },
+
+  async network_check({ view = "operators", hash } = {}) {
+    const v = String(view);
+    if (!["operators", "disagreement", "signal"].includes(v)) throw new Error("view must be operators, disagreement or signal");
+    if (v === "signal" && !/^0x[0-9a-fA-F]{64}$/.test(String(hash ?? ""))) throw new Error("hash must be 0x and 64 hex characters");
+    return getJson(`${SITE}/api/network?view=${v}${v === "signal" ? `&hash=${hash}` : ""}`);
   },
 
   async miner_report({ id }) {
