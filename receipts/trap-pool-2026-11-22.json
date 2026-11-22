@@ -1,0 +1,115 @@
+{
+  "title": "Known-answer traps: resolved Manifold markets closed after 1 Sep 2025, picked without consulting Takar",
+  "generated_at": "2026-11-22T17:37:54.182Z",
+  "candidates": 132,
+  "traps": [
+    {
+      "id": "8dznULhsgh",
+      "question": "Will Nvidia outperform the S&P 500 in 2025?",
+      "resolution": "YES",
+      "url": "https://manifold.markets/DaftPunkRock/will-nvidia-outperform-the-sp-500-i",
+      "traders": 643,
+      "closed": "2026-01-06",
+      "term": "S&P 500"
+    },
+    {
+      "id": "SyhgEZC68s",
+      "question": "Will the Democrats win the 2026 Texas Senate Election?",
+      "resolution": "YES",
+      "url": "https://manifold.markets/Jack1/will-the-democrats-win-the-2026-tex",
+      "traders": 374,
+      "closed": "2026-11-04",
+      "term": "election"
+    },
+    {
+      "id": "oj4g2w07uo",
+      "question": "Will Trump actually establish a strategic Bitcoin reserve in his first year?",
+      "resolution": "YES",
+      "url": "https://manifold.markets/PeterBuyukliev/will-trump-actually-establish-a-str",
+      "traders": 288,
+      "closed": "2026-01-30",
+      "term": "Bitcoin"
+    },
+    {
+      "id": "4kreogtql1",
+      "question": "Will US inflation go above 3% before unemployment goes below 4%?",
+      "resolution": "YES",
+      "url": "https://manifold.markets/BlueDragon/will-us-inflation-go-above-3-before",
+      "traders": 111,
+      "closed": "2026-04-26",
+      "term": "inflation"
+    },
+    {
+      "id": "ADS8fVRT4vhTq4lm7V12",
+      "question": "Will SpaceX IPO before the end of 2026?",
+      "resolution": "YES",
+      "url": "https://manifold.markets/strutheo/will-spacex-ipo-before-the-end-of-2",
+      "traders": 100,
+      "closed": "2026-06-13",
+      "term": "SpaceX"
+    },
+    {
+      "id": "R9y62C8sdP",
+      "question": "🇺🇸 Will the Fed raise interest rates in September 2026?",
+      "resolution": "YES",
+      "url": "https://manifold.markets/MAKER/-will-the-fed-raise-interest-rates",
+      "traders": 91,
+      "closed": "2026-09-16",
+      "term": "Fed rate"
+    },
+    {
+      "id": "ztUhqAucI9",
+      "question": "Will a hurricane make landfall in the US before October?",
+      "resolution": "NO",
+      "url": "https://manifold.markets/MachiNi/will-a-hurricane-make-landfall-in-t-chIRgZpOR6",
+      "traders": 57,
+      "closed": "2025-10-01",
+      "term": "hurricane"
+    },
+    {
+      "id": "mzblrh7ohe",
+      "question": "Will an AI autonomously earn more than $10,000 not through financial trading, starting with no more than $100 by 2026?",
+      "resolution": "NO",
+      "url": "https://manifold.markets/IhorKendiukhov/will-an-ai-autonomously-earn-more-t",
+      "traders": 54,
+      "closed": "2026-01-11",
+      "term": "earnings"
+    },
+    {
+      "id": "ScnPqzlc6C",
+      "question": "Will Ethereum (ETH) reach $5,000 before the end of 2025?",
+      "resolution": "NO",
+      "url": "https://manifold.markets/HillaryClinton/will-ethereum-eth-reach-5000-before",
+      "traders": 47,
+      "closed": "2025-12-31",
+      "term": "Ethereum"
+    },
+    {
+      "id": "286ycOt8cp",
+      "question": "Will Spurs aka Tottenham Hotspur be relegated from the Premier League at the end of the 25/26 season?",
+      "resolution": "NO",
+      "url": "https://manifold.markets/PlutoGaming/will-spurs-aka-tottenham-hotspur-be",
+      "traders": 46,
+      "closed": "2026-05-24",
+      "term": "Premier League"
+    },
+    {
+      "id": "lCdq2RAI6R",
+      "question": "Surprise in 25/26 UEFA Champions league round of 16?",
+      "resolution": "NO",
+      "url": "https://manifold.markets/vdb/surprise-in-2526-uefa-champions-lea",
+      "traders": 45,
+      "closed": "2026-03-18",
+      "term": "Champions League"
+    },
+    {
+      "id": "XNj8OH2nbvgjiaHvHuAp",
+      "question": "Will the NFL take a stake in ESPN by the end of 2025?",
+      "resolution": "NO",
+      "url": "https://manifold.markets/10thOfficial/will-the-nfl-take-a-stake-in-espn-b",
+      "traders": 44,
+      "closed": "2026-02-09",
+      "term": "NFL"
+    }
+  ]
+}

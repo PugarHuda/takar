@@ -51,7 +51,7 @@ if (existsSync("receipts/settlements3.jsonl")) {
 }
 const ledger = readFileSync("receipts/ledger.jsonl", "utf8").trim().split("\n").filter(Boolean).map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
 // Known-answer tests (scripts/trap-run.mjs) share the scorecard shape.
-const traps = readdirSync("receipts").filter((n) => /^trap-\d{4}-\d{2}-\d{2}\.json$/.test(n)).flatMap((n) => fromScorecard(JSON.parse(readFileSync(`receipts/${n}`, "utf8"))));
+const traps = readdirSync("receipts").filter((n) => /^trap-(hard-)?\d{4}-\d{2}-\d{2}\.json$/.test(n)).flatMap((n) => fromScorecard(JSON.parse(readFileSync(`receipts/${n}`, "utf8"))));
 const records = dedupe([...fromScorecard(card), ...traps, ...fromFleet(decisions), ...fromScreens(ledger, TRUTH)], already);
 console.log(`${records.length} new records (${already.size} signals already attested)`);
 

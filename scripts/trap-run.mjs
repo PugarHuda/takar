@@ -20,6 +20,9 @@ const TRAPS = [
 ];
 // URLs come from the holdout files, so a trap's truth is traceable to the market that settled it.
 import { readFileSync } from "node:fs";
+// --traps <file>: a harder set from scripts/trap-pick.mjs (recent markets, picked without consulting Takar).
+const ti = process.argv.indexOf("--traps");
+if (ti > 0) TRAPS.splice(0, TRAPS.length, ...JSON.parse(readFileSync(process.argv[ti + 1], "utf8")).traps.map((t) => ({ id: t.id, question: t.question, resolution: t.resolution, url: t.url })));
 for (const n of [4, 6]) for (const r of JSON.parse(readFileSync(`receipts/numeric-holdout-${n}.json`, "utf8")).rows) {
   const t = TRAPS.find((x) => x.question === r.question);
   if (t) t.url ??= r.url;
@@ -28,7 +31,7 @@ if (TRAPS.some((t) => !t.url)) throw new Error("a trap has no market url: " + TR
 
 const top = (await ranked("EVENT_OUTCOME_RESOLUTION_GENERAL")).slice(0, 4).map((m) => String(m.id));
 const miners = [...new Set([...top, TAKAR])];
-const run = `trap-${new Date().toISOString().slice(0, 10)}`;
+const run = `trap-${ti > 0 ? "hard-" : ""}${new Date().toISOString().slice(0, 10)}`;
 console.log(`${TRAPS.length} traps x ${miners.length} miners: ${miners.join(", ")}`);
 
 const rows = [];
