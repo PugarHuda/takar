@@ -4,7 +4,7 @@
 
 **Takar: never act on one answer from Telegraph.** It is the verification layer that tells you when two "independent" miners are really one operator, writes who was right on chain, and lets money move only when that record agrees. Ethereum Sepolia, test USDC.
 
-What it found by doing that: the node lists 2,189 active miners, but they pay out to 86 fee addresses, and one address alone holds 76% of them. EVENT_OUTCOME has 39 miners but only 7 operators. Two miners from different operators still disagreed on 34% of the outcome questions we compared (13 of 38; 95% interval 21–50%). See https://takar-telegraph.vercel.app/network.html.
+What it found by doing that: the node lists 2,189 active miners, but they pay out to 86 fee addresses, and one address alone holds 76% of them. EVENT_OUTCOME has 39 miners but only 7 operators. Two miners from different operators still disagreed on a third of the outcome questions we compared (13 of 40; 95% interval 20–48%), but on only 1 of 24 price, temperature, gas and sanctions questions (Ethereum gas, which moves every block): the second opinion matters most where the answer is a judgment about an event. When both providers name a source, Takar also checks it: "Did Argentina win the 2022 World Cup?" came back agreed by two operators that both read Wikipedia, which the reply reports as one source relayed twice. See https://takar-telegraph.vercel.app/network.html.
 
 Watch (3:12, narrated): https://takar-telegraph.vercel.app/media/takar-overview.mp4
 
