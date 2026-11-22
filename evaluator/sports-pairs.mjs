@@ -8,6 +8,7 @@
 // exactly one error a judge can see from the question and the answer alone, with no outside knowledge:
 // a winner that contradicts the score, the wrong date, the wrong opponent, a missing score,
 // an impossible value, or a finished game reported as not played.
+// (The upload form takes prompt, chosen and rejected only; the sources are named inside each answer.)
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 
 const dir = new URL("./data/", import.meta.url);
@@ -61,7 +62,7 @@ games.forEach((g, i) => {
 });
 
 mkdirSync(dir, { recursive: true });
-const out = (name, list) => writeFileSync(new URL(name, dir), list.map((p) => J({ prompt: p.prompt, chosen: p.chosen, rejected: p.rejected, source: p.source })).join("\n") + "\n");
+const out = (name, list) => writeFileSync(new URL(name, dir), list.map((p) => J({ prompt: p.prompt, chosen: p.chosen, rejected: p.rejected })).join("\n") + "\n");
 out("game-result.jsonl", gameResult);
 out("sports-score.jsonl", sportsScore);
 const tally = (l) => Object.entries(l.reduce((a, p) => ((a[p.note] = (a[p.note] ?? 0) + 1), a), {})).map(([k, v]) => `${k} ${v}`).join("; ");
