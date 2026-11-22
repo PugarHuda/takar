@@ -26,17 +26,23 @@ const PRAMAN = "https://praman-desk.vercel.app/api/mcp";
 const provider = new ethers.JsonRpcProvider(process.env.RPC ?? "https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true });
 const r1 = new ethers.Wallet(process.env.AGENT_PRIVATE_KEY, provider); // proposes, and is the payer of the demo deals
 const r2 = new ethers.Wallet(process.env.SERVER_PAYER_KEY, provider); // seconds
+// Third seat (panel3 only): a separate Takar key; a partner's seat is passed with --extra and signs itself.
+const r3 = process.env.TAKAR_RESOLVER3_KEY ? new ethers.Wallet(process.env.TAKAR_RESOLVER3_KEY, provider) : null;
 const party = { payer: r1, payee: new ethers.Wallet(process.env.TAKAR_COUNTERPARTY_KEY, provider) };
 // --v4: the same flow on TakarSettle4 (v3 plus escalation to the full panel once both parties disputed).
 const V4 = process.argv.includes("--v4");
-const ENV = V4 ? "TAKAR_SETTLE4" : "TAKAR_SETTLE3";
+// --panel3: a v4 instance with three resolvers, threshold 2, so escalation (both parties disputed)
+// needs all three. The third seat is TAKAR_RESOLVER3_KEY, or any address passed with --extra
+// (another team's key), which then signs on its own.
+const PANEL3 = process.argv.includes("--panel3");
+const ENV = PANEL3 ? "TAKAR_SETTLE4P" : V4 ? "TAKAR_SETTLE4" : "TAKAR_SETTLE3";
 const artifact = JSON.parse(readFileSync(new URL(`../onchain/TakarSettle${V4 ? 4 : 3}.artifact.json`, import.meta.url), "utf8"));
 const erc20 = (w) => new ethers.Contract(USDC, ["function approve(address,uint256) returns (bool)", "function allowance(address,address) view returns (uint256)"], w);
 const [cmd, ...rest] = process.argv.slice(2);
 const arg = (k, d) => { const i = rest.indexOf(`--${k}`); return i >= 0 ? rest[i + 1] : d; };
 const tx = (h) => `https://sepolia.etherscan.io/tx/${h}`;
 const STATES = ["open", "proposed", "settled", "reclaimed"];
-const log = (row) => { mkdirSync("receipts", { recursive: true }); appendFileSync(V4 ? "receipts/settlements4.jsonl" : "receipts/settlements3.jsonl", JSON.stringify({ at: new Date().toISOString(), ...row }) + "\n"); };
+const log = (row) => { mkdirSync("receipts", { recursive: true }); appendFileSync(PANEL3 ? "receipts/settlements4p.jsonl" : V4 ? "receipts/settlements4.jsonl" : "receipts/settlements3.jsonl", JSON.stringify({ at: new Date().toISOString(), ...row }) + "\n"); };
 const settle = (w = r1) => {
   if (!process.env[ENV]) throw new Error(`no ${ENV} in .env: run deploy first`);
   return new ethers.Contract(process.env[ENV], artifact.abi, w);
@@ -86,6 +92,15 @@ async function secondCheck(name, signals, met) {
   return null;
 }
 
+// Public RPC nodes can lag the block that holds the proposal, so a second can simulate against stale
+// state ("not proposed", "different proposal"). Retry a few times before giving up.
+async function secondWithRetry(w, id, hash) {
+  for (let i = 0; ; i++) {
+    try { const q = await settle(w).second(id, hash); await q.wait(); return q; }
+    catch (e) { if (i >= 5 || !/not proposed|different proposal/.test(e.shortMessage ?? e.message)) throw e; await new Promise((r) => setTimeout(r, 4000)); }
+  }
+}
+
 /** Resolver 2 checks for itself, then seconds. The hash is computed locally: RPC reads can lag a block. */
 async function back(id, name, signals, met, proposeTx) {
   const why = await secondCheck(name, signals, met);
@@ -96,9 +111,21 @@ async function back(id, name, signals, met, proposeTx) {
   for (let i = 0; i < 15 && Number(live.state) !== 1; i++) { await new Promise((r) => setTimeout(r, 2000)); live = await settle(r1).deal(id); }
   if (live.finalizesAt > 0n) { console.log(`deal ${id}: the threshold is met; the window is open`); return; }
   const hash = ethers.keccak256(ethers.AbiCoder.defaultAbiCoder().encode(["bool", "bytes32[]"], [met, signals]));
-  const q = await settle(r2).second(id, hash); await q.wait();
-  console.log(`deal ${id}: seconded by resolver 2 after its own check; dispute window open\n  second  ${tx(q.hash)}`);
+  const q = await secondWithRetry(r2, id, hash);
   log({ action: "second", id, hash, second: q.hash });
+  // Escalated (both parties disputed): the contract needs the whole panel. Resolver 3 checks for itself too.
+  const s = settle(r1);
+  if (V4 && r3 && (await s.deal(id)).finalizesAt === 0n) {
+    const need = Number(await s.required(id));
+    console.log(`deal ${id}: seconded by resolver 2; escalated, the full panel of ${need} must back it`);
+    const why3 = await secondCheck(name, signals, met);
+    if (why3) { console.log(`deal ${id}: resolver 3 declines: ${why3}`); log({ action: "declined", by: "resolver3", id, why: why3 }); return; }
+    const q3 = await secondWithRetry(r3, id, hash);
+    console.log(`deal ${id}: seconded by resolver 3 after its own check; dispute window open\n  second  ${tx(q3.hash)}`);
+    log({ action: "second", by: "resolver3", id, hash, second: q3.hash, required: need });
+    return;
+  }
+  console.log(`deal ${id}: seconded by resolver 2 after its own check; dispute window open\n  second  ${tx(q.hash)}`);
 }
 
 if (cmd === "deploy") {
@@ -107,10 +134,14 @@ if (cmd === "deploy") {
   const threshold = Number(arg("threshold", "2"));
   if (threshold < 2 && !process.argv.includes("--unsafe-single")) throw new Error("threshold < 2 makes the second check advisory; pass --unsafe-single to deploy it anyway");
   const f = new ethers.ContractFactory(artifact.abi, artifact.bytecode, r1);
-  const c = await f.deploy(USDC, [r1.address, r2.address], threshold, Number(arg("liveness", "10")) * 60, ethers.parseUnits(String(arg("bond", "0.5")), 6));
+  const extra = String(arg("extra", "")).split(",").filter(Boolean);
+  for (const a of extra) if (!ethers.isAddress(a)) throw new Error(`--extra ${a} is not an address`);
+  const panel = [r1.address, r2.address, ...(PANEL3 && r3 && !extra.length ? [r3.address] : []), ...extra];
+  const c = await f.deploy(USDC, panel, threshold, Number(arg("liveness", "10")) * 60, ethers.parseUnits(String(arg("bond", "0.5")), 6));
   await c.waitForDeployment();
   appendFileSync(".env", `\n${ENV}=${c.target}\n`);
-  console.log(`TakarSettle${V4 ? 4 : 3} at ${c.target}: resolvers ${r1.address}, ${r2.address}; threshold ${threshold}\n  ${tx(c.deploymentTransaction().hash)}`);
+  console.log(`TakarSettle${V4 ? 4 : 3} at ${c.target}: resolvers ${panel.join(", ")}; threshold ${threshold}\n  ${tx(c.deploymentTransaction().hash)}`);
+  log({ action: "deploy", contract: c.target, resolvers: panel, threshold, tx: c.deploymentTransaction().hash });
 } else if (cmd === "open-screen") {
   const name = arg("name");
   if (!name) throw new Error("--name required");

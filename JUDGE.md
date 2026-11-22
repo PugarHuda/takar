@@ -9,7 +9,7 @@ Watch (2:51, narrated): https://takar-telegraph.vercel.app/media/takar-overview.
 | Proof | Try it in one step | What to look for |
 |---|---|---|
 | A second opinion for any intent, every call on EAS | `curl -X POST https://takar-telegraph.vercel.app/api/second-opinion -H 'content-type: application/json' -d '{"intent":"SANCTIONS_SCREENING_MATCH_GENERAL","params":{"name":"Bank Rossiya"},"fields":["matched"]}'` | `agree`, two miners of different operators, two Telegraph signals, an EAS `record`; then `/api/feed` counts it |
-| Escrow that needs two resolvers and makes a wrong dispute cost | https://takar-telegraph.vercel.app/#settle-h | v3: the payer disputed a correct payment and its bond went to the supplier; v4: after both parties disputed, both resolvers had to sign. Contracts verified on Sourcify |
+| Escrow that needs two resolvers and makes a wrong dispute cost | https://takar-telegraph.vercel.app/#settle-h | v3: the payer disputed a correct payment and its bond went to the supplier; v4 with a panel of three (threshold 2): after both parties disputed, all three resolvers had to sign, each after its own check (22 Nov, deal 0 on ). Contracts verified on Sourcify |
 | Gold Rush dossiers for Telegraph's own Gold Rush | https://takar-telegraph.vercel.app/goldrush.html | Mount Morgan: 250 t vs 294 t explained by dump retreatment (offered, not applied); 24 leases past expiry yet "Granted"; an active native title claim the lease category does not show |
 | Honest numbers | `receipts/scorecard-contested-2.json` | 37 contested markets, Brier 0.121 (0.076–0.176); our miner 15 right, 0 wrong |
 | For miner operators | `GET /api/miner?id=takar-outcome` | per-epoch scores, silent zeros flagged, routing check from the node's request counter |
@@ -194,7 +194,9 @@ v1 (`0xfB5E…2808`) settled five deals on 20 Nov on one answer, with no window;
 
 Trust, stated plainly: the resolver key is ours. What limits it is the quorum, the second source, the window in which either party can dispute, and that every step points at public Telegraph signals.
 
-TakarSettle4 (0x2A615f7D3E52e9Ee68AB8CaaE3385bcbACCB2aBd) adds escalation: once both parties have disputed, every resolver must back the decision. The demo instance runs with threshold 1 so the escalation is visible (one resolver suffices until both parties dispute); at threshold 1 resolver 2's own check is advisory, so `scripts/settle3.mjs` refuses to deploy below 2 without `--unsafe-single`.
+TakarSettle4 (0x2A615f7D3E52e9Ee68AB8CaaE3385bcbACCB2aBd) adds escalation: once both parties have disputed, every resolver must back the decision. The first demo instance ran with threshold 1 to make the escalation visible; at threshold 1 resolver 2's own check is advisory, so `scripts/settle3.mjs` refuses to deploy below 2 without `--unsafe-single`.
+
+**Panel of three, threshold 2 (22 Nov):** [TakarSettle4 0xA8EC319EE7DA4cDA9B45723E167219B492E92e82](https://sepolia.etherscan.io/address/0xA8EC319EE7DA4cDA9B45723E167219B492E92e82) with resolvers Takar agent, Takar server and a third key (`scripts/settle3.mjs --v4 --panel3`, `receipts/settlements4p.jsonl`). One deal (Siemens AG, a sanctions screen) went the whole way: resolver 1 proposed, resolver 2 checked both Telegraph signals and Praman's OFAC screen itself and seconded (2 of 3, window open); the payer disputed with a 0.5 bond; the resolvers decided again (2 of 3); the payee disputed too, so the contract required the **whole panel**: resolver 2 seconded, the window stayed shut at 2 of 3, and resolver 3 ran its own check and seconded (3 of 3); after the window the contract paid the supplier and the screens were attested on EAS. Same bytecode as the v4 above, so Sourcify already matches it. The three keys are all Takar's today; `--extra <address>` seats another team's key, which then signs on its own, and we have offered Praman that seat.
 
 ## Miner: Takar Outcome
 
