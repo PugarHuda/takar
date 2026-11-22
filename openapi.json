@@ -246,6 +246,50 @@
           }
         }
       }
+    },
+    "/api/network": {
+      "get": {
+        "operationId": "networkCheck",
+        "summary": "Who runs the miners (fee addresses, independent operators per intent), how often miners from different operators disagree (from the EAS feed), or one signal traced to the node, Takar's ledger and its EAS anchor",
+        "parameters": [
+          {
+            "name": "view",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "operators",
+                "disagreement",
+                "signal"
+              ],
+              "default": "operators"
+            }
+          },
+          {
+            "name": "hash",
+            "in": "query",
+            "required": false,
+            "description": "Signal hash (0x + 64 hex), for view=signal",
+            "schema": {
+              "type": "string",
+              "pattern": "^0x[0-9a-fA-F]{64}$"
+            },
+            "example": "0xe3e293c9262f0c8f053eeb11ffc02356c006578f4f2099cc7bbacb5920d969b4"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The view"
+          },
+          "400": {
+            "description": "Unknown view or malformed hash"
+          },
+          "503": {
+            "description": "Registry or feed unreachable"
+          }
+        }
+      }
     }
   }
 }
