@@ -1,0 +1,14 @@
+{
+  "title": "Israel and Iran, June 2025: a country note priced per fact",
+  "customer": "An oil and shipping risk desk (Brent, tanker rates through the Strait of Hormuz, war-risk premiums) that must separate what happened from what was threatened before it moves a position.",
+  "note": "Claims written the way a desk analyst would put them in a note. Observations are checked through Telegraph; forecasts are listed and not bought. c6 is the failure case on purpose: Iran's parliament backed closing the Strait of Hormuz, but the strait was not closed, so a note that says it was is wrong in the way that costs money.",
+  "claims": [
+    { "id": "c1", "kind": "escalation", "claim": "Israel struck Iranian nuclear and military sites in June 2025.", "question": "Did Israel strike Iranian nuclear and military sites in June 2025?" },
+    { "id": "c2", "kind": "escalation", "claim": "The United States struck the Fordow uranium enrichment site in Iran in June 2025.", "question": "Did the United States strike the Fordow enrichment site in Iran in June 2025?" },
+    { "id": "c3", "kind": "escalation", "claim": "Iran launched ballistic missiles at Israel in June 2025.", "question": "Did Iran launch ballistic missiles at Israel in June 2025?" },
+    { "id": "c4", "kind": "escalation", "claim": "Iran fired missiles at the Al Udeid US air base in Qatar in June 2025.", "question": "Did Iran fire missiles at the Al Udeid air base in Qatar in June 2025?" },
+    { "id": "c5", "kind": "de-escalation", "claim": "Israel and Iran agreed a ceasefire in June 2025.", "question": "Did Israel and Iran agree a ceasefire in June 2025?" },
+    { "id": "c6", "kind": "escalation", "claim": "Iran closed the Strait of Hormuz to shipping in June 2025.", "question": "Did Iran close the Strait of Hormuz to shipping in June 2025?" },
+    { "id": "c7", "kind": "context", "claim": "Iran and the United States will sign a new nuclear agreement by the end of 2027.", "question": "Will Iran and the United States sign a new nuclear agreement by December 2027?" }
+  ]
+}

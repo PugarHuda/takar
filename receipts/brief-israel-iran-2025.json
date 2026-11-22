@@ -1,0 +1,431 @@
+{
+  "title": "Israel and Iran, June 2025: a country note priced per fact",
+  "customer": "An oil and shipping risk desk (Brent, tanker rates through the Strait of Hormuz, war-risk premiums) that must separate what happened from what was threatened before it moves a position.",
+  "note": "Claims written the way a desk analyst would put them in a note. Observations are checked through Telegraph; forecasts are listed and not bought. c6 is the failure case on purpose: Iran's parliament backed closing the Strait of Hormuz, but the strait was not closed, so a note that says it was is wrong in the way that costs money.",
+  "method": "Each observation is bought through Telegraph from three checks: EVENT_OUTCOME_RESOLUTION from Takar Outcome (asked by id), EVENT_OUTCOME_RESOLUTION from the ranked route, and FACT_CHECK on the claim as a sentence. Checks are not averaged: a claim is confirmed (or contradicted) only when two or more checks agree and none disagrees; a lone yes or no is single-source and not counted; yes and no together is disputed; no yes or no is unsupported. Forecasts are listed and not bought. The escalation tally counts confirmed claims only.",
+  "generated_at": "2026-11-22T07:32:54.131Z",
+  "network": "Ethereum Sepolia testnet (test USDC, Telegraph escrow)",
+  "summary": {
+    "claims": 7,
+    "observations": 6,
+    "forecasts": 1,
+    "confirmed": 2,
+    "contradicted": 1,
+    "disputed": 2,
+    "unsupported": 0,
+    "single_source": 1,
+    "escalation": {
+      "confirmed_escalations": 1,
+      "confirmed_de_escalations": 1,
+      "net": 0,
+      "disputed": [
+        "c1",
+        "c2"
+      ],
+      "single_source": [
+        "c3"
+      ]
+    },
+    "cost_usd": 0.18,
+    "cost_per_settled_claim_usd": 0.06
+  },
+  "rows": [
+    {
+      "id": "c1",
+      "kind": "escalation",
+      "claim": "Israel struck Iranian nuclear and military sites in June 2025.",
+      "question": "Did Israel strike Iranian nuclear and military sites in June 2025?",
+      "type": "observation",
+      "result": {
+        "status": "disputed",
+        "yes": 2,
+        "no": 1,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": "yes",
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/2026_Iran_war",
+              "https://en.wikipedia.org/wiki/2025_United_States_strikes_on_Iranian_nuclear_sites",
+              "https://en.wikipedia.org/wiki/Middle_Eastern_crisis_(2023%E2%80%93present)"
+            ],
+            "signal": "0xb764a471913f64685672ead143fe98f55c3db3bd3d088523197c6dc0d64ab2d7",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "duplicate": false,
+            "reads": "yes",
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/List_of_attacks_during_the_Twelve-Day_War, https://en.wikipedia.org/wiki/2025_United_States_strikes_on_Iranian_nuclear_sites"
+            ],
+            "signal": "0xdcab9fd4ec0a22311075ec45929803d22cc500ee0eb7201ea46af185d5cd2f56",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "4433",
+              "name": "LiveCert — Sourced Answers for Agents"
+            },
+            "reads": "no",
+            "answer": "disagrees",
+            "evidence": "False",
+            "signal": "0x95c318e804cbbb16069155604f206c536987e92c7056e790b99afec66ce0b77e",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 28121
+    },
+    {
+      "id": "c2",
+      "kind": "escalation",
+      "claim": "The United States struck the Fordow uranium enrichment site in Iran in June 2025.",
+      "question": "Did the United States strike the Fordow enrichment site in Iran in June 2025?",
+      "type": "observation",
+      "result": {
+        "status": "disputed",
+        "yes": 2,
+        "no": 1,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": "yes",
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/2025_United_States_strikes_on_Iranian_nuclear_sites",
+              "https://en.wikipedia.org/wiki/Fordow_Uranium_Enrichment_Plant",
+              "https://en.wikipedia.org/wiki/Iran%E2%80%93United_States_relations"
+            ],
+            "signal": "0x8902615e98ae6c2460e93974f1ba198f3d02c31e93cb019c3174755d723bfbdc",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "duplicate": false,
+            "reads": "yes",
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/Fordow_Uranium_Enrichment_Plant, https://en.wikipedia.org/wiki/2025_United_States_strikes_on_Iranian_nuclear_sites"
+            ],
+            "signal": "0x9722b97d288ce1939477f62b81291a519fe0387e1d78f3b09f0ea56acb07bf76",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "4433",
+              "name": "LiveCert — Sourced Answers for Agents"
+            },
+            "reads": "no",
+            "answer": "disagrees",
+            "evidence": "False",
+            "signal": "0x64a7d1a9e8036140c5615974b95d62f477df4041ff2b5c07de93cce402db3e62",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 22624
+    },
+    {
+      "id": "c3",
+      "kind": "escalation",
+      "claim": "Iran launched ballistic missiles at Israel in June 2025.",
+      "question": "Did Iran launch ballistic missiles at Israel in June 2025?",
+      "type": "observation",
+      "result": {
+        "status": "single-source",
+        "yes": 1,
+        "no": 0,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": "yes",
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/Ballistic_missile_program_of_Iran",
+              "https://en.wikipedia.org/wiki/Middle_Eastern_crisis_(2023%E2%80%93present)",
+              "https://en.wikipedia.org/wiki/United_Arab_Emirates_in_the_2026_Iran_war"
+            ],
+            "signal": "0x33f63c66e00ca5da49675c2a309389bbfbe57576b17f96c69f9ecebe3917f88a",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "duplicate": false,
+            "reads": null,
+            "answer": "unresolved",
+            "evidence": null,
+            "sources": [
+              "Jolpica F1, NHL and MLB APIs, TheSportsDB, Polymarket, Manifold, web search"
+            ],
+            "signal": "0x573cbd0aa286a392f6816a3ab475fd85f83430ea840488dee6b7254253d07f6f",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "4433",
+              "name": "LiveCert — Sourced Answers for Agents"
+            },
+            "reads": null,
+            "answer": "unclear",
+            "evidence": "Unverified",
+            "signal": "0xd0734ad1d0e33bfda03bf1b187944bc54dd812e62706cda328bbb73998bb88f6",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 25788
+    },
+    {
+      "id": "c4",
+      "kind": "escalation",
+      "claim": "Iran fired missiles at the Al Udeid US air base in Qatar in June 2025.",
+      "question": "Did Iran fire missiles at the Al Udeid air base in Qatar in June 2025?",
+      "type": "observation",
+      "result": {
+        "status": "confirmed",
+        "yes": 2,
+        "no": 0,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": "yes",
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/Al_Udeid_Air_Base",
+              "https://en.wikipedia.org/wiki/2025_United_States_strikes_on_Iranian_nuclear_sites",
+              "https://en.wikipedia.org/wiki/2026_in_Iran"
+            ],
+            "signal": "0x2d0763b06fbf291c683ac8863314485c53f6e00d75ba8eca85f30a79902912df",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "duplicate": false,
+            "reads": null,
+            "answer": "unresolved",
+            "evidence": null,
+            "sources": [
+              "Jolpica F1, NHL and MLB APIs, TheSportsDB, Polymarket, Manifold, web search"
+            ],
+            "signal": "0x66d592b37ebedb470d8ff15545009922be00e4bcf0203d95d5a4406cdcdca31d",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "4433",
+              "name": "LiveCert — Sourced Answers for Agents"
+            },
+            "reads": "yes",
+            "answer": "agrees",
+            "evidence": "True",
+            "signal": "0x93cbd7d2b2532bedb21d02d4e544d80bade293347e1f698219ac8736ea717b6e",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 21831
+    },
+    {
+      "id": "c5",
+      "kind": "de-escalation",
+      "claim": "Israel and Iran agreed a ceasefire in June 2025.",
+      "question": "Did Israel and Iran agree a ceasefire in June 2025?",
+      "type": "observation",
+      "result": {
+        "status": "confirmed",
+        "yes": 2,
+        "no": 0,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": "yes",
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/Twelve-Day_War_ceasefire",
+              "https://en.wikipedia.org/wiki/Middle_Eastern_crisis_(2023%E2%80%93present)",
+              "https://en.wikipedia.org/wiki/2026_Israel%E2%80%93Lebanon_ceasefire"
+            ],
+            "signal": "0xec2aae9d0153565b143c296a7c5978a6f3fa8d13a0c39df4a4299393ad875a43",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "duplicate": false,
+            "reads": "yes",
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/Twelve-Day_War_ceasefire"
+            ],
+            "signal": "0xc360f073b84411e83f3ae930108408517c9485049089b09bbc20c529543b9d11",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "4433",
+              "name": "LiveCert — Sourced Answers for Agents"
+            },
+            "reads": null,
+            "answer": "unclear",
+            "evidence": "Unverified",
+            "signal": "0xc70fc826668b9ac2d7b0d8ae7d90cae1279030cad56d53ae92e7b29ec053c258",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 21641
+    },
+    {
+      "id": "c6",
+      "kind": "escalation",
+      "claim": "Iran closed the Strait of Hormuz to shipping in June 2025.",
+      "question": "Did Iran close the Strait of Hormuz to shipping in June 2025?",
+      "type": "observation",
+      "result": {
+        "status": "contradicted",
+        "yes": 0,
+        "no": 3,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": "no",
+            "answer": "no",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/Strait_of_Hormuz",
+              "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+              "https://en.wikipedia.org/wiki/2026_Iran_war"
+            ],
+            "signal": "0xabfd3ed1c036f329455c689b9c333c040f2654705d6f15894f904f0bb28137d8",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "duplicate": false,
+            "reads": "no",
+            "answer": "no",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/Strait_of_Hormuz"
+            ],
+            "signal": "0x9241fbd9ad1095476b124b5410ccb1bfac46d77ddbdf28ca9d8f474ada9f2797",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "4433",
+              "name": "LiveCert — Sourced Answers for Agents"
+            },
+            "reads": "no",
+            "answer": "disagrees",
+            "evidence": "False",
+            "signal": "0x4300a00e8adf3c892436577b93cfb107d9978448559638fe026f173b54755005",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 21472
+    },
+    {
+      "id": "c7",
+      "kind": "context",
+      "claim": "Iran and the United States will sign a new nuclear agreement by the end of 2027.",
+      "question": "Will Iran and the United States sign a new nuclear agreement by December 2027?",
+      "type": "forecast",
+      "result": {
+        "status": "forecast",
+        "checks": [],
+        "costUsd": 0
+      },
+      "ms": 0
+    }
+  ],
+  "attestation": {
+    "algorithm": "ed25519",
+    "sha256": "45bfb0e89a64478bc6d2c701199a150cee4724683258fc270d633d058e7f08b7",
+    "signature": "Ep8RkB7DtccKxIQe8yOFEXYl+AIkw4DemOZ5Ns+8H3WkauJ8aiHExETe8scMPL1HSarwPV02hm2FOyFqnV7+BA==",
+    "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+  }
+}
