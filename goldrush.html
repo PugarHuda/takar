@@ -82,7 +82,9 @@ async function showProv(slug) {
     const value = e["takar:tonnes"] != null ? `${e["takar:tonnes"]} t (${e["takar:scope"] ?? ""}, ${e["takar:period"]})` : [e["prov:label"], e["takar:holder"] ?? e["takar:name"], e["takar:status"], e["takar:expiry"] && `expires ${e["takar:expiry"]}`, e["prov:value"]].filter(Boolean).join(" · ");
     const src = rel("wasDerivedFrom").filter((r) => r["prov:generatedEntity"] === id).map((r) => p.entity[r["prov:usedEntity"]]?.["prov:location"]).find(Boolean) ?? e["prov:location"];
     const ask = rel("wasGeneratedBy").filter((r) => r["prov:entity"] === id).map((r) => r["prov:activity"]).find((a) => /^tg:0x[0-9a-f]{64}$/i.test(a ?? ""));
-    const who = rel("wasAttributedTo").filter((r) => r["prov:entity"] === id).map((r) => p.agent?.[r["prov:agent"]]?.["prov:label"]).filter(Boolean).join("; ");
+    // A figure is attributed to its publisher; failing that, to the miner that answered the paid ask.
+    const who = rel("wasAttributedTo").filter((r) => r["prov:entity"] === id).map((r) => p.agent?.[r["prov:agent"]]?.["prov:label"]).filter(Boolean).join("; ")
+      || rel("wasAssociatedWith").filter((r) => r["prov:activity"] === ask).map((r) => p.agent?.[r["prov:agent"]]?.["prov:label"]).filter(Boolean).join("; ");
     const h = src && host(src);
     const cell = (x) => `<td style="border-bottom:1px solid var(--rule-soft);padding:6px 8px;vertical-align:top">${x}</td>`;
     return `<tr>${cell(kinds[e["prov:type"]])}${cell(esc(value))}${cell(h ? `<a rel="noopener" href="${esc(src)}">${esc(h)}</a>` : "—")}${cell(ask ? `<a rel="noopener" href="https://devnode.telegraphprotocol.com/engine/v1/signal/${ask.slice(3)}">${ask.slice(3, 13)}…</a> $${esc(p.activity?.[ask]?.["takar:costUsd"] ?? "")}` : "register read")}${cell(esc(who || "—"))}</tr>`;

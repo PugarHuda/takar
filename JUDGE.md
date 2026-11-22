@@ -2,7 +2,9 @@
 
 ## In one page
 
-**Takar: never act on one answer from Telegraph.** A verification layer: two miners from different operators compared field by field, an open on-chain record of who was right, and money that moves only when two independent sources agree. Ethereum Sepolia, test USDC.
+**Takar: never act on one answer from Telegraph.** It is the verification layer that tells you when two "independent" miners are really one operator, writes who was right on chain, and lets money move only when that record agrees. Ethereum Sepolia, test USDC.
+
+What it found by doing that: the node lists 2,189 active miners, but they pay out to 86 fee addresses, and one address alone holds 76% of them. EVENT_OUTCOME has 39 miners but only 7 operators. Two miners from different operators still disagreed on 34% of the outcome questions we compared (13 of 38; 95% interval 21–50%). See https://takar-telegraph.vercel.app/network.html.
 
 Watch (3:12, narrated): https://takar-telegraph.vercel.app/media/takar-overview.mp4
 
@@ -11,11 +13,25 @@ Watch (3:12, narrated): https://takar-telegraph.vercel.app/media/takar-overview.
 | A second opinion for any intent, every call on EAS | `curl -X POST https://takar-telegraph.vercel.app/api/second-opinion -H 'content-type: application/json' -d '{"intent":"SANCTIONS_SCREENING_MATCH_GENERAL","params":{"name":"Bank Rossiya"},"fields":["matched"]}'` | `agree`, two miners of different operators, two Telegraph signals, an EAS `record`; then `/api/feed` counts it |
 | Escrow that needs two resolvers and makes a wrong dispute cost | https://takar-telegraph.vercel.app/#settle-h | v3: the payer disputed a correct payment and its bond went to the supplier; v4 with a panel of three (threshold 2): after both parties disputed, all three resolvers had to sign, each after its own check (22 Nov, deal 0 on [0xA8EC…2e82](https://sepolia.etherscan.io/address/0xA8EC319EE7DA4cDA9B45723E167219B492E92e82)). Contracts verified on Sourcify |
 | Gold Rush dossiers for Telegraph's own Gold Rush | https://takar-telegraph.vercel.app/goldrush.html | Mount Morgan: 250 t vs 294 t explained by dump retreatment (offered, not applied); 24 leases past expiry yet "Granted"; an active native title claim the lease category does not show |
+| Who really runs the miners, and how often they disagree | https://takar-telegraph.vercel.app/network.html (API `/api/network?view=operators|disagreement|signal`) | 2,189 miners on 86 fee addresses; disagreement rate per intent from our EAS feed; paste a signal hash and see it on the node, in our ledger, and inside an EAS-anchored Merkle root recomputed from the file |
+| Known-answer test of the top outcome miners | `receipts/trap-2026-11-22.json`, `node --env-file=.env scripts/trap-run.mjs` | 6 settled markets put to the top-ranked miners and ours: 3 miners 6/6, one top-4 miner failed every ask ("Failed to get events endpoint"); results attested on the reputation schema |
 | Honest numbers | `receipts/scorecard-contested-2.json` | 37 contested markets, Brier 0.121 (0.076–0.176); our miner 15 right, 0 wrong |
 | For miner operators | `GET /api/miner?id=takar-outcome` | per-epoch scores, silent zeros flagged, routing check from the node's request counter |
 | Used by another team | `GET /api/reputation?intent=MINING_INTELLIGENCE_GENERAL&attester=0x98021b20Efdb7ae2C57366010a6E0fDE207b4466` | Praman Desk attested to our open schema with its own wallet ([EAS 0x33d85bed…](https://sepolia.easscan.org/attestation/view/0x33d85bed90eb3164c5124a7c26ca79be386003205265044d1425cea9b714e115)) and built its Gold Rush arbitrator on our dossier JSON; our dossiers call it back and it patched its scopes after our finding |
-| What it costs | [docs/ECONOMICS.md](docs/ECONOMICS.md) | from our own ledger: a second opinion /usr/bin/bash.017 (1.68 paid asks), a public dossier /usr/bin/bash.03–0.04 in about 40 s, a deep one at most /usr/bin/bash.17; a third opinion is bought only when two disagree, capped in code |
+| What it costs | [docs/ECONOMICS.md](docs/ECONOMICS.md) | from our own ledger: a second opinion $0.017 (1.68 paid asks), a public dossier $0.03–0.04 in about 40 s, a deep one at most $0.17; a third opinion is bought only when two disagree, capped in code |
 | The miner answers from data, not a model, where it can | [docs/RESOLVERS.md](docs/RESOLVERS.md) | one card per source: prices and Fed decisions from FRED (37/37 and 8/8 on unseen markets), dated games from ESPN (100/100 against openfootball), Wikipedia with a checked quote; every round, including the bad ones, in `receipts/` |
+
+### How this differs from checking with several miners
+
+Several Season II entries ask more than one miner. The difference is in what counts as independent, what is kept, and what the answer can move.
+
+| | Majority vote over N miners | Takar |
+|---|---|---|
+| Independence | N miners, wherever they come from | Different fee addresses; a pair from one operator is one opinion, and an unknown operator is not counted |
+| Disagreement | Outvoted | Reported field by field, never averaged; a third opinion only when asked and within a stated spend cap |
+| Memory | None, or a private log | Every comparison on EAS, plus an open schema of who was right that other teams attest to (Praman has) |
+| Money | Not involved | Escrow pays only when the evidence agrees; two resolvers, a bond on disputes, a panel of three on escalation |
+| The provider side | Not tested | Our own miner answers from official series by code, measured on unseen markets, and known-answer tests of the top miners go on chain |
 
 Offline: `npm ci && npm test` (472 checks; `npm run coverage`: 90.5% of lines, 79.2% of branches, 91.0% of functions in lib/, lowest in the network and payment layers telegraph.mjs and x402.mjs, which the paid ledger exercises instead), `cd onchain && forge test` (25). Everything below is detail.
 
@@ -115,7 +131,7 @@ Our own miner is honest but narrow here. On Manifold's vaguer questions ("Will G
 
 Two notes, framed the way the mission's build note asks: what can be proved about each claim and how firmly, with its cost and proof, never a verdict on a live event.
 - India and Pakistan, April to June 2025 (`briefs/india-pakistan-2025.json`), for a desk with South Asia exposure.
-- Israel and Iran, June 2025 (`briefs/israel-iran-2025.json`, added 22 Nov), for an oil and shipping desk: the planted false claim ("Iran closed the Strait of Hormuz"; its parliament backed a closure that never happened) came back **contradicted by all three checks**; the ceasefire and the Al Udeid strike were **confirmed**; the Israeli and US strikes, which Wikipedia documents, came back **disputed** because the FACT_CHECK miner (LiveCert, 4433) answered "False" against two outcome miners. The note keeps them out of the tally rather than overruling a source. /usr/bin/bash.18 in test USDC, /usr/bin/bash.06 per settled claim.
+- Israel and Iran, June 2025 (`briefs/israel-iran-2025.json`, added 22 Nov), for an oil and shipping desk: the planted false claim ("Iran closed the Strait of Hormuz"; its parliament backed a closure that never happened) came back **contradicted by all three checks**; the ceasefire and the Al Udeid strike were **confirmed**; the Israeli and US strikes, which Wikipedia documents, came back **disputed** because the FACT_CHECK miner (LiveCert, 4433) answered "False" against two outcome miners. The note keeps them out of the tally rather than overruling a source. $0.18 in test USDC, $0.06 per settled claim.
 
 Each note is written as claims.
 - **Observations** (a period that has ended) are bought from three checks: Takar Outcome by id, the ranked EVENT_OUTCOME route, and FACT_CHECK.
