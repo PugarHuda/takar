@@ -231,6 +231,10 @@ Details are in `evaluator/README.md`. Registration 156 was **rejected** on 20 No
 
 We did not capture or train on the node's pairs, and we did not seed the family's evaluation pool, because its hidden half grades adapters, ours included. It is kept as a documented negative result: the data, the training run and the rejection are all public. We do not claim it as a qualifying Evaluators entry.
 
+## Seen on Anjoman
+
+Anjoman's public Explore page lists every signal. On 22 Nov it showed our native asks to Takar Outcome the way another app would make them (`scripts/native-ask-example.mjs`): the first returned an error and cost $0.00 (our handler read GET parameters only from the query; fixed), the second succeeded for $0.01 with the Super Bowl LIX score in `data.scores` (signal 0xe8424c…ce080f). Screenshot: `media/anjoman-signal-feed.png`.
+
 ## What is not claimed
 
 Real machines, production traffic or paying customers. The fleet is simulated, and every purchase is testnet. The scorecard is 28 markets, plus 37 contested ones; both samples are small and the intervals say so. Settle has one resolver (Takar) and no dispute bond: a dispute costs the disputer nothing but gas, and the contract cannot check on chain that a signal is Telegraph's. The Mission 05 note is one brief with eight claims. Our miner answers few of the scorecard's markets; the confirmations there come mostly from PREFLIGHT, and the board shows it.
