@@ -8,3 +8,11 @@
 .sitebar nav a[aria-current="page"] { font-weight: 700; text-decoration: underline; text-decoration-color: #C9962B; text-decoration-thickness: 3px; text-underline-offset: 6px; }
 .sitebar a:focus-visible { outline: 3px solid #B0287A; outline-offset: 3px; }
 @media (max-width: 760px) { .sitebar { padding: 14px 16px; } .sitebar nav { gap: 4px 14px; font-size: .9rem; } }
+
+/* Gold Rush, network check and videos: the landing page's title, buttons and inputs. */
+.plain h1 { font-family: "Barlow Semi Condensed", system-ui, sans-serif; font-weight: 800; font-size: clamp(2.4rem, 5.5vw, 3.6rem); line-height: .98; letter-spacing: -.01em; margin: 26px 0 14px; }
+.plain form button { border: 0; border-radius: 999px; background: var(--ink); color: var(--paper); padding: 10px 20px; font-weight: 600; cursor: pointer; }
+.plain form button:hover { background: #8A6414; color: #fff; }
+.plain input { border-radius: 10px; padding: 9px 12px; }
+.plain nav.mines button { border-radius: 999px; padding: 7px 14px; }
+.plain section, .plain article { border-radius: 12px; }
