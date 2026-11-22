@@ -1,0 +1,518 @@
+{
+  "title": "The node's own EVENT_OUTCOME questions (receipts/questions.jsonl) replayed through the miner, 22 Nov",
+  "note": "No ground truth for most of these: this measures coverage and failure modes, not accuracy. Before the 22 Nov fixes the same 62 questions gave 25 yes/no, 26 unresolved and 11 errors.",
+  "generated_at": "2026-11-22T03:22:32.422Z",
+  "summary": {
+    "questions": 62,
+    "outcomes": {
+      "yes": 23,
+      "unresolved": 25,
+      "no": 14
+    },
+    "answered_by": {
+      "ESPN": 2,
+      "-": 25,
+      "FRED": 20,
+      "Wikipedia+model": 15
+    },
+    "max_ms": 12918
+  },
+  "rows": [
+    {
+      "question": "What was the final score of Brighton & Hove Albion at Liverpool (Premier League, 25 October 2026), and did the combined total go over 0.5 goals?",
+      "outcome": "yes",
+      "rule": "ESPN's public scoreboard for the named date, read by code, no model: one game naming both teams, final, no push",
+      "note": null,
+      "evidence": "ESPN scoreboard, 2026-10-25: Brighton & Hove Albion 0, Liverpool 2 (Full Time, FT).",
+      "ms": 707
+    },
+    {
+      "question": "Will Putin be out as Russia President by 2026?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "the period this event names has not ended yet",
+      "evidence": null,
+      "ms": 54
+    },
+    {
+      "question": "Did TSG Hoffenheim win the match against FSV Mainz 05 on 2024-12-01 in the 1. Fußball-Bundesliga 2024/2025?",
+      "outcome": "no",
+      "rule": "ESPN's public scoreboard for the named date, read by code, no model: one game naming both teams, final, no push",
+      "note": null,
+      "evidence": "ESPN scoreboard, 2024-12-01: TSG Hoffenheim 0, Mainz 2 (Full Time, FT).",
+      "ms": 906
+    },
+    {
+      "question": "XRP Up or Down - February 28",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "sources do not settle it",
+      "evidence": null,
+      "ms": 8095
+    },
+    {
+      "question": "Will Brazil win the 2030 FIFA World Cup final?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "the period this event names has not ended yet",
+      "evidence": null,
+      "ms": 66
+    },
+    {
+      "question": "Did Bitcoin close above 100,000 US dollars on December 31 2024?",
+      "outcome": "no",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "Bitcoin (Coinbase, USD, daily): 94383.59 on 2024-12-31, not above 100000.",
+      "ms": 523
+    },
+    {
+      "question": "Who won the 2022 FIFA World Cup final?",
+      "outcome": "yes",
+      "rule": "a sentence quoted word for word from the cited Wikipedia article, naming the event (and the winner, if one is named); checked in code",
+      "note": null,
+      "evidence": "Argentina won the ensuing penalty shoot-out 4–2 to win their third World Cup, and their first since 1986.",
+      "ms": 9521
+    },
+    {
+      "question": "Did SpaceX catch the Starship Super Heavy booster with the launch tower on October 13 2024?",
+      "outcome": "yes",
+      "rule": "a sentence quoted word for word from the cited Wikipedia article, naming the event (and the winner, if one is named); checked in code",
+      "note": null,
+      "evidence": "The booster landing and catch was successfully demonstrated for the first time on October 13, 2024, with the landing of Booster 12, and twice more with Boosters 14 and 15.",
+      "ms": 7996
+    },
+    {
+      "question": "Did Jannik Sinner win the 2025 Australian Open men's singles title?",
+      "outcome": "yes",
+      "rule": "a sentence quoted word for word from the cited Wikipedia article, naming the event (and the winner, if one is named); checked in code",
+      "note": null,
+      "evidence": "Defending champion Jannik Sinner defeated Alexander Zverev in the final, 6–3, 7–6(7–4), 6–3 to win the men's singles tennis title at the 2025 Australian Open.",
+      "ms": 8239
+    },
+    {
+      "question": "Did the US Federal Reserve cut its policy rate at the September 18 2024 FOMC meeting?",
+      "outcome": "yes",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2024-09-15 before, 5 on 2024-09-20 after, a change of -0.5 points.",
+      "ms": 403
+    },
+    {
+      "question": "Did the Labour Party win the July 2024 UK general election?",
+      "outcome": "yes",
+      "rule": "a sentence quoted word for word from the cited Wikipedia article, naming the event (and the winner, if one is named); checked in code",
+      "note": null,
+      "evidence": "The opposition Labour Party, led by Keir Starmer, won a landslide victory over the governing Conservative Party under Prime Minister Rishi Sunak, ending 14 years of Conservative-led government.",
+      "ms": 7462
+    },
+    {
+      "question": "Did England win UEFA Euro 2024?",
+      "outcome": "no",
+      "rule": "a sentence quoted word for word from the cited Wikipedia article, naming the event (and the winner, if one is named); checked in code",
+      "note": null,
+      "evidence": "In front of a crowd of 65,600, Spain won the match 2–1 for their record-breaking fourth UEFA European Championship title (after 1964, 2008 and 2012), surpassing Germany as the sole record-winners of the competition.",
+      "ms": 7570
+    },
+    {
+      "question": "Did the Kansas City Chiefs win Super Bowl LIX in February 2025?",
+      "outcome": "no",
+      "rule": "a sentence quoted word for word from the cited Wikipedia article, naming the event (and the winner, if one is named); checked in code",
+      "note": null,
+      "evidence": "In a rematch of Super Bowl LVII which was played two years prior, the Eagles defeated the Chiefs 40–22.",
+      "ms": 5851
+    },
+    {
+      "question": "Did Spain win UEFA Euro 2024?",
+      "outcome": "yes",
+      "rule": "a sentence quoted word for word from the cited Wikipedia article, naming the event (and the winner, if one is named); checked in code",
+      "note": null,
+      "evidence": "Spain went on to win the tournament for a record fourth time after defeating England 2–1 in the final.",
+      "ms": 7732
+    },
+    {
+      "question": "Did Borussia Dortmund win the 2024 UEFA Champions League final?",
+      "outcome": "no",
+      "rule": "a sentence quoted word for word from the cited Wikipedia article, naming the event (and the winner, if one is named); checked in code",
+      "note": null,
+      "evidence": "Real Madrid won the match 2–0 for a record-extending 15th title, and their sixth in eleven seasons.",
+      "ms": 3621
+    },
+    {
+      "question": "Did the Philadelphia Eagles win Super Bowl LIX in February 2025?",
+      "outcome": "yes",
+      "rule": "a sentence quoted word for word from the cited Wikipedia article, naming the event (and the winner, if one is named); checked in code",
+      "note": null,
+      "evidence": "In a rematch of Super Bowl LVII which was played two years prior, the Eagles defeated the Chiefs 40–22.",
+      "ms": 8900
+    },
+    {
+      "question": "Did Kamala Harris win the 2024 US presidential election?",
+      "outcome": "no",
+      "rule": "a sentence quoted word for word from the cited Wikipedia article, naming the event (and the winner, if one is named); checked in code",
+      "note": null,
+      "evidence": "Trump won the election over Harris, with 312 Electoral College votes to Harris's 226.",
+      "ms": 6739
+    },
+    {
+      "question": "Did Argentina win the 2022 FIFA World Cup?",
+      "outcome": "yes",
+      "rule": "a sentence quoted word for word from the cited Wikipedia article, naming the event (and the winner, if one is named); checked in code",
+      "note": null,
+      "evidence": "After extra time Argentina won 4–2 on penalties",
+      "ms": 8479
+    },
+    {
+      "question": "Counter-Strike Decider match between NAVI Junior and ALGO Esports in the United21 Group C",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "no source found",
+      "evidence": null,
+      "ms": 519
+    },
+    {
+      "question": "Did Donald Trump win the 2024 US presidential election?",
+      "outcome": "yes",
+      "rule": "a sentence quoted word for word from the cited Wikipedia article, naming the event (and the winner, if one is named); checked in code",
+      "note": null,
+      "evidence": "Trump became the first Republican candidate to win Michigan without carrying Kent County, home of Grand Rapids, since Charles Evans Hughes in 1916 and the first Republican to ever win the White House without it; Kent County had long been key to Republican victories in Michigan in past elections.",
+      "ms": 12601
+    },
+    {
+      "question": "Apple releases a touchscreen Macbook by the end of 2026?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "the period this event names has not ended yet",
+      "evidence": null,
+      "ms": 53
+    },
+    {
+      "question": "Will Apple announce new hardware at WWDC 2024?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "evidence does not mention the event",
+      "evidence": null,
+      "ms": 7420
+    },
+    {
+      "question": "Will Apple mention 'ChatGPT' at WWDC 2024?",
+      "outcome": "yes",
+      "rule": "a sentence quoted word for word from the cited Wikipedia article, naming the event (and the winner, if one is named); checked in code",
+      "note": null,
+      "evidence": "This release introduced Apple Intelligence, with a limited initial feature set focused on basic writing and image generation tools complemented by ChatGPT integration.",
+      "ms": 9349
+    },
+    {
+      "question": "Will the WTI Crude Oil Spot Price be above $100 on May 11, 2026?",
+      "outcome": "yes",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "WTI crude spot (USD/bbl, daily): 101.56 on 2026-05-11, above 100.",
+      "ms": 423
+    },
+    {
+      "question": "Will US average gas price exceed $4/gallon in March 2026?",
+      "outcome": "unresolved",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": "the highest value, 3.99 on 2026-03-30, is within 1% of 4; an intraday move may have crossed it",
+      "evidence": null,
+      "ms": 395
+    },
+    {
+      "question": "Will Apple announce a partnership with OpenAI regarding Siri during WWDC 2024?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "sources do not settle it",
+      "evidence": null,
+      "ms": 9674
+    },
+    {
+      "question": "Will Brent Crude Oil close above $120 on April 15th, 2026?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "sources do not settle it",
+      "evidence": null,
+      "ms": 9047
+    },
+    {
+      "question": "Will the WTI Crude Oil Spot Price be above $95 on March 20, 2026?",
+      "outcome": "yes",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "WTI crude spot (USD/bbl, daily): 98.71 on 2026-03-20, above 95.",
+      "ms": 52
+    },
+    {
+      "question": "Will the unemployment rate in Argentina be lower in Q4 2024 than Q4 2023?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "sources do not settle it",
+      "evidence": null,
+      "ms": 8343
+    },
+    {
+      "question": "37. Will the US unemployment rate (now 3.7%) be above 4% in November 2023?",
+      "outcome": "no",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "US unemployment rate (%, monthly): highest value in 2023-11-01..2023-11-30 was 3.7 on 2023-11-01, never above 4.",
+      "ms": 483
+    },
+    {
+      "question": "Will Brent Oil Price Exceed $120 per Barrel by end of March 31, 2026?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "sources do not settle it",
+      "evidence": null,
+      "ms": 12918
+    },
+    {
+      "question": "Will the price of Ethereum exceed $2.500,- in 2023?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "sources do not settle it",
+      "evidence": null,
+      "ms": 6830
+    },
+    {
+      "question": "Will Tesla provide (or be included in) an autonomous ride-hailing service before the end of 2026",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "the period this event names has not ended yet",
+      "evidence": null,
+      "ms": 62
+    },
+    {
+      "question": "Will Meta have a higher market cap than Tesla at the end of January 2023?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "sources do not settle it",
+      "evidence": null,
+      "ms": 7006
+    },
+    {
+      "question": "Will Nvidia's share price break $1000 in 2024?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "sources do not settle it",
+      "evidence": null,
+      "ms": 6845
+    },
+    {
+      "question": "Will Germany experience negative economic growth for two consecutive quarters in 2023? (Recession in Germany)",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "sources do not settle it",
+      "evidence": null,
+      "ms": 3658
+    },
+    {
+      "question": "Will the US enter a recession by first half of 2025? (Two quarters negative GDP growth)",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "sources do not settle it",
+      "evidence": null,
+      "ms": 6994
+    },
+    {
+      "question": "Will S&P 500 increase in May 2023?",
+      "outcome": "yes",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "S&P 500 (daily close): 4169.48 on 2023-04-28 (last before the window), 4179.83 on 2023-05-31 (last in it), 0.25%.",
+      "ms": 440
+    },
+    {
+      "question": "Will the S&P 500 close at an all time high in 2023?",
+      "outcome": "no",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "S&P 500 (daily close): highest close in 2023-01-01..2023-12-31 was 4783.35 on 2023-12-28; highest before it was 4796.56 on 2022-01-03 (FRED history from 2016-11-21).",
+      "ms": 1797
+    },
+    {
+      "question": "Will S&P 500 increase in April 2023?",
+      "outcome": "yes",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "S&P 500 (daily close): 4109.31 on 2023-03-31 (last before the window), 4169.48 on 2023-04-28 (last in it), 1.46%.",
+      "ms": 1795
+    },
+    {
+      "question": "Will the S&P 500 be above 5000 at the end of Feb 2024?",
+      "outcome": "yes",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "S&P 500 (daily close): 5096.27 on 2024-02-29, above 5000.",
+      "ms": 53
+    },
+    {
+      "question": "Will the S&P 500 increase in August 2023?",
+      "outcome": "no",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "S&P 500 (daily close): 4588.96 on 2023-07-31 (last before the window), 4507.66 on 2023-08-31 (last in it), -1.77%.",
+      "ms": 53
+    },
+    {
+      "question": "Will Congressional stock trades outperform the S&P 500 by more than 10 percentage points in 2023?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "no source found",
+      "evidence": null,
+      "ms": 458
+    },
+    {
+      "question": "Will the S&P 500 increase in Q3 2023?",
+      "outcome": "no",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "S&P 500 (daily close): 4450.38 on 2023-06-30 (last before the window), 4288.05 on 2023-09-29 (last in it), -3.65%.",
+      "ms": 53
+    },
+    {
+      "question": "32. Will the S&P 500 index reach a new all-time high in 2023?",
+      "outcome": "no",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "S&P 500 (daily close): highest close in 2023-01-01..2023-12-31 was 4783.35 on 2023-12-28; highest before it was 4796.56 on 2022-01-03 (FRED history from 2016-11-21).",
+      "ms": 129
+    },
+    {
+      "question": "Will Bitcoin hit $72K in March 2024?",
+      "outcome": "unresolved",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": "the highest value, 73098.48 on 2024-03-13, is within 3% of 72000; another benchmark or exchange may not have crossed it",
+      "evidence": null,
+      "ms": 62
+    },
+    {
+      "question": "Bitcoin $100K in 2024?",
+      "outcome": "yes",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 106136.99 on 2024-12-16, at or above 100000.",
+      "ms": 50
+    },
+    {
+      "question": "S&P 500 drops 8%+ by April 2025 post-Liberation Day?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "no source found",
+      "evidence": null,
+      "ms": 5521
+    },
+    {
+      "question": "Will the Price of Bitcoin be above 30.000,00$ before 1st Jan 2024?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "no source found",
+      "evidence": null,
+      "ms": 5050
+    },
+    {
+      "question": "Will Bitcoin trade at $65,000 or higher at any point in 2024?",
+      "outcome": "yes",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 106136.99 on 2024-12-16, at or above 65000.",
+      "ms": 1590
+    },
+    {
+      "question": "Will Bitcoin be above $100k at the close of December 2024?",
+      "outcome": "no",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "Bitcoin (Coinbase, USD, daily): 94383.59 on 2024-12-31, not above 100000.",
+      "ms": 51
+    },
+    {
+      "question": "Will Bitcoin hit $75K in March 2024?",
+      "outcome": "unresolved",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": "the highest daily close, 73098.48 on 2024-03-13, is within 10% of 75000; an intraday move may have crossed it",
+      "evidence": null,
+      "ms": 63
+    },
+    {
+      "question": "Will Bitcoin exceed 100,000 USD In 2024?",
+      "outcome": "yes",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 106136.99 on 2024-12-16, above 100000.",
+      "ms": 53
+    },
+    {
+      "question": "Will Bitcoin reach $90000 in 2024",
+      "outcome": "yes",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 106136.99 on 2024-12-16, at or above 90000.",
+      "ms": 53
+    },
+    {
+      "question": "Will Bitcoin be priced higher than $69,420 on April, 20th, 2024 at 4:20pm EST",
+      "outcome": "no",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "Bitcoin (Coinbase, USD, daily): 64905.95 on 2024-04-20, not above 69420.",
+      "ms": 56
+    },
+    {
+      "question": "Will Bitcoin hit $100K in 2024?",
+      "outcome": "yes",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "Bitcoin (Coinbase, USD, daily): highest value in 2024-01-01..2024-12-31 was 106136.99 on 2024-12-16, at or above 100000.",
+      "ms": 53
+    },
+    {
+      "question": "Will 1 bitcoin be worth $100,000 or more before 2025?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "sources do not settle it",
+      "evidence": null,
+      "ms": 8928
+    },
+    {
+      "question": "Do professional economic forecasters expect a US recession (two quarters negative GDP growth) to begin in 2025?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "sources do not settle it",
+      "evidence": null,
+      "ms": 6675
+    },
+    {
+      "question": "Will Ethereum close above $3000 at the end of 2024?",
+      "outcome": "yes",
+      "rule": "a published data series (FRED) read by code, no model: unresolved within the series' margin of the threshold, or before the window has ended and been published",
+      "note": null,
+      "evidence": "Ether (Coinbase, USD, daily): 3353.32 on 2024-12-31, above 3000.",
+      "ms": 65
+    },
+    {
+      "question": "Did France win the 2022 FIFA World Cup?",
+      "outcome": "no",
+      "rule": "a sentence quoted word for word from the cited Wikipedia article, naming the event (and the winner, if one is named); checked in code",
+      "note": null,
+      "evidence": "Argentina were crowned the champions after winning the final against the title holder France 4–2 on penalties following a 3–3 draw after extra time.",
+      "ms": 7777
+    },
+    {
+      "question": "Will Inkling 2 Mini launch by July?",
+      "outcome": "unresolved",
+      "rule": "no settled market and no source sentence settles it, or its period has not ended: unresolved rather than a guess",
+      "note": "sources do not settle it",
+      "evidence": null,
+      "ms": 11128
+    },
+    {
+      "question": "Did Sinner win Wimbledon 2025?",
+      "outcome": "yes",
+      "rule": "a sentence quoted word for word from the cited Wikipedia article, naming the event (and the winner, if one is named); checked in code",
+      "note": null,
+      "evidence": "Jannik Sinner defeated two-time defending champion Carlos Alcaraz in the final, 4–6, 6–4, 6–4, 6–4 to win the gentlemen's singles tennis title at the 2025 Wimbledon Championships.",
+      "ms": 7917
+    }
+  ]
+}

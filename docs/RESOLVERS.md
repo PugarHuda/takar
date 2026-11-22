@@ -11,6 +11,8 @@ One card per source the miner (`EVENT_OUTCOME_RESOLUTION_GENERAL`, node id 20261
 
 **Model (card 4 only).** `claude-haiku-5-5` through SumoPod (an OpenAI-compatible gateway) on a key limited to $2 and to two models, then `gpt-4o-mini`, then free OpenRouter models. The model never decides alone: its quote is checked in code, and a failed check is `unresolved`.
 
+**On the node's own questions.** The 62 distinct EVENT_OUTCOME questions in the node's public feed (logged in `receipts/questions.jsonl`) replayed through the miner on 22 Nov (`receipts/node-replay.json`): before that day's fixes, 25 answered, 26 unresolved and **11 errors** (one Wikipedia timeout failed the whole answer, which the node scores 0); after, **37 answered (20 from FRED, 2 from ESPN, 15 from Wikipedia with a checked quote), 25 unresolved, 0 errors**, slowest 13 s. Most of these have no public answer key, so this measures coverage and failure modes, not accuracy.
+
 **What the measurements are not.** The holdouts are resolved Manifold markets and openfootball results, not the node's graded questions, which are not public. The FRED card was tuned over three rounds before the clean fourth; every round is in `receipts/`. Two Bitcoin markets opened mid-year are still answered against the market's own resolution, because the node's questions carry no creation date.
 
 **Reproduce.** `node scripts/numeric-holdout.mjs --exclude <seen ids>` and `node scripts/sports-check.mjs 25`. Both are free: Manifold, FRED's daily copy in `data/series/`, ESPN and openfootball need no key.
