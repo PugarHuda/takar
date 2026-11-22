@@ -1,0 +1,915 @@
+{
+  "title": "lib/sports.mjs (ESPN) against openfootball, an independent source",
+  "generated_at": "2026-11-22T02:46:55.300Z",
+  "summary": {
+    "questions": 100,
+    "answered": 100,
+    "right": 100,
+    "wrong": 0,
+    "unresolved": 0,
+    "not_taken": 0,
+    "errors": 0
+  },
+  "rows": [
+    {
+      "league": "Bundesliga",
+      "question": "Did Borussia Mönchengladbach win the match against Bayer 04 Leverkusen on 2024-08-23 in the Bundesliga?",
+      "openfootball": "no",
+      "score": "2-3",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-08-23: Borussia Mönchengladbach 2, Bayer Leverkusen 3 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did Borussia Dortmund avoid defeat in the 2024-08-31 Bundesliga match against SV Werder Bremen?",
+      "openfootball": "yes",
+      "score": "0-0",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-08-31: Borussia Dortmund 0, Werder Bremen 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did the combined total of the Holstein Kiel and FC Bayern München game on 2024-09-14 go over 2.5 goals?",
+      "openfootball": "yes",
+      "score": "1-6",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-09-14: Holstein Kiel 1, Bayern Munich 6 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did Borussia Dortmund vs VfL Bochum 1848 end in a draw on 2024-09-27 (Bundesliga)?",
+      "openfootball": "no",
+      "score": "4-2",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-09-27: Borussia Dortmund 4, VfL Bochum 2 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did 1. FC Union Berlin win the match against Borussia Dortmund on 2024-10-05 in the Bundesliga?",
+      "openfootball": "yes",
+      "score": "2-1",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-10-05: 1. FC Union Berlin 2, Borussia Dortmund 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did 1. FC Union Berlin avoid defeat in the 2024-10-20 Bundesliga match against Holstein Kiel?",
+      "openfootball": "yes",
+      "score": "0-2",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-10-20: 1. FC Union Berlin 2, Holstein Kiel 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did the combined total of the FC Bayern München and 1. FC Union Berlin game on 2024-11-02 go over 2.5 goals?",
+      "openfootball": "yes",
+      "score": "3-0",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-11-02: Bayern Munich 3, 1. FC Union Berlin 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did FC St. Pauli 1910 vs FC Bayern München end in a draw on 2024-11-09 (Bundesliga)?",
+      "openfootball": "no",
+      "score": "0-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-11-09: St. Pauli 0, Bayern Munich 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did Holstein Kiel win the match against 1. FSV Mainz 05 on 2024-11-24 in the Bundesliga?",
+      "openfootball": "no",
+      "score": "0-3",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-11-24: Holstein Kiel 0, Mainz 3 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did 1. FC Heidenheim 1846 avoid defeat in the 2024-12-07 Bundesliga match against FC Bayern München?",
+      "openfootball": "no",
+      "score": "4-2",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-12-07: 1. FC Heidenheim 1846 2, Bayern Munich 4 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did the combined total of the FC St. Pauli 1910 and SV Werder Bremen game on 2024-12-14 go over 2.5 goals?",
+      "openfootball": "no",
+      "score": "0-2",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-12-14: St. Pauli 0, Werder Bremen 2 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did VfL Wolfsburg vs Borussia Dortmund end in a draw on 2024-12-22 (Bundesliga)?",
+      "openfootball": "no",
+      "score": "1-3",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-12-22: VfL Wolfsburg 1, Borussia Dortmund 3 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did Eintracht Frankfurt win the match against SC Freiburg on 2025-01-14 in the Bundesliga?",
+      "openfootball": "yes",
+      "score": "4-1",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-01-14: Eintracht Frankfurt 4, SC Freiburg 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did Borussia Mönchengladbach avoid defeat in the 2025-01-18 Bundesliga match against Bayer 04 Leverkusen?",
+      "openfootball": "no",
+      "score": "3-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-01-18: Borussia Mönchengladbach 1, Bayer Leverkusen 3 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did the combined total of the SV Werder Bremen and 1. FSV Mainz 05 game on 2025-01-31 go over 2.5 goals?",
+      "openfootball": "no",
+      "score": "1-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-01-31: Werder Bremen 1, Mainz 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did SC Freiburg vs 1. FC Heidenheim 1846 end in a draw on 2025-02-08 (Bundesliga)?",
+      "openfootball": "no",
+      "score": "1-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-02-08: SC Freiburg 1, 1. FC Heidenheim 1846 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did SV Werder Bremen win the match against TSG 1899 Hoffenheim on 2025-02-16 in the Bundesliga?",
+      "openfootball": "no",
+      "score": "1-3",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-02-16: Werder Bremen 1, TSG Hoffenheim 3 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did Borussia Dortmund avoid defeat in the 2025-03-01 Bundesliga match against FC St. Pauli 1910?",
+      "openfootball": "yes",
+      "score": "0-2",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-03-01: Borussia Dortmund 2, St. Pauli 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did the combined total of the FC Bayern München and VfL Bochum 1848 game on 2025-03-08 go over 2.5 goals?",
+      "openfootball": "yes",
+      "score": "2-3",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-03-08: Bayern Munich 2, VfL Bochum 3 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did 1. FC Heidenheim 1846 vs Holstein Kiel end in a draw on 2025-03-16 (Bundesliga)?",
+      "openfootball": "no",
+      "score": "3-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-03-16: 1. FC Heidenheim 1846 3, Holstein Kiel 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did 1. FC Heidenheim 1846 win the match against Bayer 04 Leverkusen on 2025-04-05 in the Bundesliga?",
+      "openfootball": "no",
+      "score": "0-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-04-05: 1. FC Heidenheim 1846 0, Bayer Leverkusen 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did FC St. Pauli 1910 avoid defeat in the 2025-04-12 Bundesliga match against Holstein Kiel?",
+      "openfootball": "yes",
+      "score": "1-2",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-04-12: St. Pauli 2, Holstein Kiel 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did the combined total of the FC St. Pauli 1910 and Bayer 04 Leverkusen game on 2025-04-20 go over 2.5 goals?",
+      "openfootball": "no",
+      "score": "1-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-04-20: St. Pauli 1, Bayer Leverkusen 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did RB Leipzig vs FC Bayern München end in a draw on 2025-05-03 (Bundesliga)?",
+      "openfootball": "yes",
+      "score": "3-3",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-05-03: RB Leipzig 3, Bayern Munich 3 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Bundesliga",
+      "question": "Did FC Bayern München win the match against Borussia Mönchengladbach on 2025-05-10 in the Bundesliga?",
+      "openfootball": "yes",
+      "score": "2-0",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-05-10: Bayern Munich 2, Borussia Mönchengladbach 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Manchester United FC win the match against Fulham FC on 2024-08-16 in the Premier League?",
+      "openfootball": "yes",
+      "score": "1-0",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-08-16: Manchester United 1, Fulham 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Everton FC avoid defeat in the 2024-08-24 Premier League match against Tottenham Hotspur FC?",
+      "openfootball": "no",
+      "score": "4-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-08-24: Everton 0, Tottenham Hotspur 4 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did the combined total of the Southampton FC and Manchester United FC game on 2024-09-14 go over 2.5 goals?",
+      "openfootball": "yes",
+      "score": "0-3",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-09-14: Southampton 0, Manchester United 3 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Southampton FC vs Ipswich Town FC end in a draw on 2024-09-21 (Premier League)?",
+      "openfootball": "yes",
+      "score": "1-1",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-09-21: Southampton 1, Ipswich Town 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Crystal Palace FC win the match against Liverpool FC on 2024-10-05 in the Premier League?",
+      "openfootball": "no",
+      "score": "0-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-10-05: Crystal Palace 0, Liverpool 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Arsenal FC avoid defeat in the 2024-10-19 Premier League match against AFC Bournemouth?",
+      "openfootball": "no",
+      "score": "2-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-10-19: Arsenal 0, AFC Bournemouth 2 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did the combined total of the AFC Bournemouth and Manchester City FC game on 2024-11-02 go over 2.5 goals?",
+      "openfootball": "yes",
+      "score": "2-1",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-11-02: AFC Bournemouth 2, Manchester City 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Manchester United FC vs Leicester City FC end in a draw on 2024-11-10 (Premier League)?",
+      "openfootball": "no",
+      "score": "3-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-11-10: Manchester United 3, Leicester City 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Brentford FC win the match against Leicester City FC on 2024-11-30 in the Premier League?",
+      "openfootball": "yes",
+      "score": "4-1",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-11-30: Brentford 4, Leicester City 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Manchester United FC avoid defeat in the 2024-12-04 Premier League match against Arsenal FC?",
+      "openfootball": "no",
+      "score": "2-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-12-04: Manchester United 0, Arsenal 2 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did the combined total of the Wolverhampton Wanderers FC and Ipswich Town FC game on 2024-12-14 go over 2.5 goals?",
+      "openfootball": "yes",
+      "score": "1-2",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-12-14: Wolverhampton Wanderers 1, Ipswich Town 2 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Manchester United FC vs AFC Bournemouth end in a draw on 2024-12-22 (Premier League)?",
+      "openfootball": "no",
+      "score": "0-3",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-12-22: Manchester United 0, AFC Bournemouth 3 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Fulham FC win the match against AFC Bournemouth on 2024-12-29 in the Premier League?",
+      "openfootball": "no",
+      "score": "2-2",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-12-29: Fulham 2, AFC Bournemouth 2 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Manchester United FC avoid defeat in the 2025-01-05 Premier League match against Liverpool FC?",
+      "openfootball": "yes",
+      "score": "2-2",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-01-05: Manchester United 2, Liverpool 2 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did the combined total of the Brentford FC and Liverpool FC game on 2025-01-18 go over 2.5 goals?",
+      "openfootball": "no",
+      "score": "0-2",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-01-18: Brentford 0, Liverpool 2 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Fulham FC vs Manchester United FC end in a draw on 2025-01-26 (Premier League)?",
+      "openfootball": "no",
+      "score": "0-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-01-26: Fulham 0, Manchester United 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did West Ham United FC win the match against Brentford FC on 2025-02-15 in the Premier League?",
+      "openfootball": "no",
+      "score": "0-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-02-15: West Ham United 0, Brentford 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Chelsea FC avoid defeat in the 2025-02-22 Premier League match against Aston Villa FC?",
+      "openfootball": "no",
+      "score": "2-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-02-22: Chelsea 1, Aston Villa 2 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did the combined total of the Crystal Palace FC and Ipswich Town FC game on 2025-03-08 go over 2.5 goals?",
+      "openfootball": "no",
+      "score": "1-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-03-08: Crystal Palace 1, Ipswich Town 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Leicester City FC vs Manchester United FC end in a draw on 2025-03-16 (Premier League)?",
+      "openfootball": "no",
+      "score": "0-3",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-03-16: Leicester City 0, Manchester United 3 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Brentford FC win the match against Chelsea FC on 2025-04-06 in the Premier League?",
+      "openfootball": "no",
+      "score": "0-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-04-06: Brentford 0, Chelsea 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Crystal Palace FC avoid defeat in the 2025-04-16 Premier League match against Newcastle United FC?",
+      "openfootball": "no",
+      "score": "5-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-04-16: Crystal Palace 0, Newcastle United 5 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did the combined total of the Newcastle United FC and Ipswich Town FC game on 2025-04-26 go over 2.5 goals?",
+      "openfootball": "yes",
+      "score": "3-0",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-04-26: Newcastle United 3, Ipswich Town 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Crystal Palace FC vs Nottingham Forest FC end in a draw on 2025-05-05 (Premier League)?",
+      "openfootball": "yes",
+      "score": "1-1",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-05-05: Crystal Palace 1, Nottingham Forest 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Premier League",
+      "question": "Did Brentford FC win the match against Fulham FC on 2025-05-18 in the Premier League?",
+      "openfootball": "no",
+      "score": "2-3",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-05-18: Brentford 2, Fulham 3 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did Athletic Club win the match against Getafe CF on 2024-08-15 in the La Liga?",
+      "openfootball": "no",
+      "score": "1-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-08-15: Athletic Club 1, Getafe 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did Rayo Vallecano de Madrid avoid defeat in the 2024-08-24 La Liga match against Getafe CF?",
+      "openfootball": "yes",
+      "score": "0-0",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-08-24: Rayo Vallecano 0, Getafe 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did the combined total of the FC Barcelona and Real Valladolid CF game on 2024-08-31 go over 2.5 goals?",
+      "openfootball": "yes",
+      "score": "7-0",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-08-31: Barcelona 7, Real Valladolid 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did RC Celta de Vigo vs Real Valladolid CF end in a draw on 2024-09-15 (La Liga)?",
+      "openfootball": "no",
+      "score": "3-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-09-15: Celta Vigo 3, Real Valladolid 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did Villarreal CF win the match against FC Barcelona on 2024-09-22 in the La Liga?",
+      "openfootball": "no",
+      "score": "1-5",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-09-22: Villarreal 1, Barcelona 5 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did FC Barcelona avoid defeat in the 2024-09-28 La Liga match against CA Osasuna?",
+      "openfootball": "no",
+      "score": "4-2",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-09-28: Barcelona 2, Osasuna 4 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did the combined total of the Sevilla FC and Real Betis Balompié game on 2024-10-06 go over 2.5 goals?",
+      "openfootball": "no",
+      "score": "1-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-10-06: Sevilla 1, Real Betis 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did UD Las Palmas vs Girona FC end in a draw on 2024-10-26 (La Liga)?",
+      "openfootball": "no",
+      "score": "1-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-10-26: Las Palmas 1, Girona 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did Rayo Vallecano de Madrid win the match against UD Las Palmas on 2024-11-08 in the La Liga?",
+      "openfootball": "no",
+      "score": "1-3",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-11-08: Rayo Vallecano 1, Las Palmas 3 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did Villarreal CF avoid defeat in the 2024-11-24 La Liga match against CA Osasuna?",
+      "openfootball": "yes",
+      "score": "2-2",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-11-24: Villarreal 2, Osasuna 2 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did the combined total of the Athletic Club and Real Madrid CF game on 2024-12-04 go over 2.5 goals?",
+      "openfootball": "yes",
+      "score": "2-1",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-12-04: Athletic Club 2, Real Madrid 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did Sevilla FC vs RC Celta de Vigo end in a draw on 2024-12-14 (La Liga)?",
+      "openfootball": "no",
+      "score": "1-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-12-14: Sevilla 1, Celta Vigo 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did Real Madrid CF win the match against Sevilla FC on 2024-12-22 in the La Liga?",
+      "openfootball": "yes",
+      "score": "4-2",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-12-22: Real Madrid 4, Sevilla 2 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did Club Atlético de Madrid avoid defeat in the 2025-01-18 La Liga match against CD Leganés?",
+      "openfootball": "no",
+      "score": "1-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-01-18: Atlético Madrid 0, Leganés 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did the combined total of the Athletic Club and CD Leganés game on 2025-01-26 go over 2.5 goals?",
+      "openfootball": "no",
+      "score": "0-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-01-26: Athletic Club 0, Leganés 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did Athletic Club vs Girona FC end in a draw on 2025-02-08 (La Liga)?",
+      "openfootball": "no",
+      "score": "3-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-02-08: Athletic Club 3, Girona 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did Real Valladolid CF win the match against Sevilla FC on 2025-02-16 in the La Liga?",
+      "openfootball": "no",
+      "score": "0-4",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-02-16: Real Valladolid 0, Sevilla 4 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did RC Celta de Vigo avoid defeat in the 2025-03-01 La Liga match against Girona FC?",
+      "openfootball": "yes",
+      "score": "2-2",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-03-01: Celta Vigo 2, Girona 2 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did the combined total of the Real Sociedad de Fútbol and Sevilla FC game on 2025-03-09 go over 2.5 goals?",
+      "openfootball": "no",
+      "score": "0-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-03-09: Real Sociedad 0, Sevilla 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did Deportivo Alavés vs Rayo Vallecano de Madrid end in a draw on 2025-03-29 (La Liga)?",
+      "openfootball": "no",
+      "score": "0-2",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-03-29: Alavés 0, Rayo Vallecano 2 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did Real Valladolid CF win the match against Getafe CF on 2025-04-06 in the La Liga?",
+      "openfootball": "no",
+      "score": "0-4",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-04-06: Real Valladolid 0, Getafe 4 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did Valencia CF avoid defeat in the 2025-04-19 La Liga match against Rayo Vallecano de Madrid?",
+      "openfootball": "yes",
+      "score": "1-1",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-04-19: Valencia 1, Rayo Vallecano 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did the combined total of the CA Osasuna and Sevilla FC game on 2025-04-24 go over 2.5 goals?",
+      "openfootball": "no",
+      "score": "1-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-04-24: Osasuna 1, Sevilla 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did UD Las Palmas vs Rayo Vallecano de Madrid end in a draw on 2025-05-09 (La Liga)?",
+      "openfootball": "no",
+      "score": "0-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-05-09: Las Palmas 0, Rayo Vallecano 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "La Liga",
+      "question": "Did Real Madrid CF win the match against RCD Mallorca on 2025-05-14 in the La Liga?",
+      "openfootball": "yes",
+      "score": "2-1",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-05-14: Real Madrid 2, Mallorca 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did Genoa CFC win the match against FC Internazionale Milano on 2024-08-17 in the Serie A?",
+      "openfootball": "no",
+      "score": "2-2",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-08-17: Genoa 2, Internazionale 2 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did Venezia FC avoid defeat in the 2024-08-25 Serie A match against ACF Fiorentina?",
+      "openfootball": "yes",
+      "score": "0-0",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-08-25: Venezia 0, Fiorentina 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did the combined total of the Udinese Calcio and Como 1907 game on 2024-09-01 go over 2.5 goals?",
+      "openfootball": "no",
+      "score": "1-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-09-01: Udinese 1, Como 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did US Lecce vs Parma Calcio 1913 end in a draw on 2024-09-21 (Serie A)?",
+      "openfootball": "yes",
+      "score": "2-2",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-09-21: Lecce 2, Parma 2 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did Parma Calcio 1913 win the match against Cagliari Calcio on 2024-09-30 in the Serie A?",
+      "openfootball": "no",
+      "score": "2-3",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-09-30: Parma 2, Cagliari 3 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did SSC Napoli avoid defeat in the 2024-10-20 Serie A match against Empoli FC?",
+      "openfootball": "yes",
+      "score": "0-1",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-10-20: Napoli 1, Empoli 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did the combined total of the ACF Fiorentina and AS Roma game on 2024-10-27 go over 2.5 goals?",
+      "openfootball": "yes",
+      "score": "5-1",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-10-27: Fiorentina 5, AS Roma 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did Torino FC vs ACF Fiorentina end in a draw on 2024-11-03 (Serie A)?",
+      "openfootball": "no",
+      "score": "0-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-11-03: Torino 0, Fiorentina 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did FC Internazionale Milano win the match against SSC Napoli on 2024-11-10 in the Serie A?",
+      "openfootball": "no",
+      "score": "1-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-11-10: Internazionale 1, Napoli 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did Genoa CFC avoid defeat in the 2024-12-01 Serie A match against Udinese Calcio?",
+      "openfootball": "yes",
+      "score": "0-2",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2024-12-01: Genoa 2, Udinese 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did the combined total of the Empoli FC and Torino FC game on 2024-12-13 go over 2.5 goals?",
+      "openfootball": "no",
+      "score": "0-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-12-13: Empoli 0, Torino 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did AS Roma vs Parma Calcio 1913 end in a draw on 2024-12-22 (Serie A)?",
+      "openfootball": "no",
+      "score": "5-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-12-22: AS Roma 5, Parma 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did Bologna FC 1909 win the match against Hellas Verona FC on 2024-12-30 in the Serie A?",
+      "openfootball": "no",
+      "score": "2-3",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2024-12-30: Bologna 2, Hellas Verona 3 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did AS Roma avoid defeat in the 2025-01-12 Serie A match against Bologna FC 1909?",
+      "openfootball": "yes",
+      "score": "2-2",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-01-12: AS Roma 2, Bologna 2 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did the combined total of the Como 1907 and Udinese Calcio game on 2025-01-20 go over 2.5 goals?",
+      "openfootball": "yes",
+      "score": "4-1",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-01-20: Como 4, Udinese 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did Bologna FC 1909 vs Como 1907 end in a draw on 2025-02-01 (Serie A)?",
+      "openfootball": "no",
+      "score": "2-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-02-01: Bologna 2, Como 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did US Lecce win the match against Bologna FC 1909 on 2025-02-09 in the Serie A?",
+      "openfootball": "no",
+      "score": "0-0",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-02-09: Lecce 0, Bologna 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did SS Lazio avoid defeat in the 2025-02-22 Serie A match against Venezia FC?",
+      "openfootball": "yes",
+      "score": "0-0",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-02-22: Lazio 0, Venezia 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did the combined total of the Genoa CFC and Empoli FC game on 2025-03-02 go over 2.5 goals?",
+      "openfootball": "no",
+      "score": "1-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-03-02: Genoa 1, Empoli 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did AC Monza vs Parma Calcio 1913 end in a draw on 2025-03-15 (Serie A)?",
+      "openfootball": "yes",
+      "score": "1-1",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-03-15: Monza 1, Parma 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did FC Internazionale Milano win the match against Udinese Calcio on 2025-03-30 in the Serie A?",
+      "openfootball": "yes",
+      "score": "2-1",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-03-30: Internazionale 2, Udinese 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did AC Milan avoid defeat in the 2025-04-11 Serie A match against Udinese Calcio?",
+      "openfootball": "yes",
+      "score": "0-4",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-04-11: AC Milan 4, Udinese 0 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did the combined total of the AC Milan and Atalanta BC game on 2025-04-20 go over 2.5 goals?",
+      "openfootball": "no",
+      "score": "0-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-04-20: AC Milan 0, Atalanta 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did Torino FC vs Venezia FC end in a draw on 2025-05-02 (Serie A)?",
+      "openfootball": "yes",
+      "score": "1-1",
+      "ours": "yes",
+      "evidence": "ESPN scoreboard, 2025-05-02: Torino 1, Venezia 1 (Full Time, FT).",
+      "right": true
+    },
+    {
+      "league": "Serie A",
+      "question": "Did Hellas Verona FC win the match against US Lecce on 2025-05-11 in the Serie A?",
+      "openfootball": "no",
+      "score": "1-1",
+      "ours": "no",
+      "evidence": "ESPN scoreboard, 2025-05-11: Hellas Verona 1, Lecce 1 (Full Time, FT).",
+      "right": true
+    }
+  ]
+}
