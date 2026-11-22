@@ -28,6 +28,7 @@ Reviewers: start at [JUDGE.md](JUDGE.md), which opens with what each app does **
 
 | Use | How |
 |---|---|
+| A second opinion inside your Mind (Minds agents) | Three messages, no key or wallet: [docs/MINDS.md](docs/MINDS.md). |
 | Second opinion on any intent | `POST /api/second-opinion {intent, params, client?}`, the Minds Bazaar Skill "Takar Second Opinion", or `npx -y takar-mcp` (set `TAKAR_PAYER_KEY` to pay from your own escrow, no limit). Every call is an EAS attestation: `GET /api/feed`. |
 | Event outcomes for your app (our miner) | Ask Takar Outcome by id through the node, paid like any ask: `POST https://devnode.telegraphprotocol.com/engine/v1/ask/20261117` with `{"intent":"EVENT_OUTCOME_RESOLUTION_GENERAL","params":{"event":"Did TSG Hoffenheim win the match against FSV Mainz 05 on 2024-12-01?"}}` (x402, $0.01 test USDC). Prices, Fed decisions, recessions and dated games are settled from data by code; anything it cannot prove comes back `unresolved`, never a guess (`docs/RESOLVERS.md`). Free to try without a wallet: `GET https://takar-outcome.vercel.app/api/resolve?event=...` |
 | Second opinion in CI (GitHub Action) | `- uses: PugarHuda/takar@main` with `intent`, `params` (JSON) and `fields`; the job fails unless two operators agree, and the step summary lists both Telegraph signals. Self-test: `.github/workflows/action-selftest.yml` (passed 22 Nov, verdict `agree`). |
