@@ -227,6 +227,7 @@ footer { border-top: 1px solid var(--rule-soft); margin-top: 24px; padding: 24px
     <h2 id="fleet-h" class="display">A fleet that buys checks before it moves <span class="mission">Mission 11</span></h2>
     <p>Each machine below had a budget for intelligence. Before moving, it bought the checks its task needed through <a href="https://telegraphprotocol.com">Telegraph</a>'s ranked market, compared them with the nearest airport weather station, and decided whether to go.</p>
     <p><strong>Simulated fleet, real purchases.</strong> The units are illustrative. Every purchase settled on Ethereum Sepolia testnet with test USDC, and every station reading is a published METAR report.</p>
+    <p><strong>With and without the second check.</strong> Across all 30 recorded decisions, a unit that acted on the first usable answer would have flown 17 times; with Takar's rules it flew 12. The 5 extra flights would each have rested on one miner's word: twice no second miner gave a usable answer, and three times a second miner disagreed. In those three, the dissenting miner was a space-weather service answering a weather question, so the holds were caution against an answer nobody could confirm, not proof of danger. <a href="https://github.com/PugarHuda/takar/blob/main/receipts/fleet-counterfactual.json">Every decision, both ways</a>.</p>
     <div class="runbar">
     <label>Run <select id="run" aria-label="Choose a fleet run"></select></label>
     <div class="tally" id="tally" aria-live="polite"></div>

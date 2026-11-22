@@ -1,0 +1,360 @@
+{
+  "title": "Fleet decisions with Takar's checks against one answer per check",
+  "generated_at": "2026-11-22T17:41:21.720Z",
+  "method": "A naive unit takes the first usable routed answer, skips the second miner, the place check and the station check, and goes unless that one answer says no. Classified from each decision's recorded reasons.",
+  "summary": {
+    "decisions": 30,
+    "takar_go": 12,
+    "naive_go": 17,
+    "went_on_one_answer": 5,
+    "why": [
+      {
+        "why": "only one miner gave a usable answer",
+        "n": 2
+      },
+      {
+        "why": "a second miner disagreed",
+        "n": 3
+      }
+    ]
+  },
+  "differ": [
+    {
+      "run": "2026-11-21T02:34:05.786Z",
+      "unit": "drone-palangkaraya-1",
+      "location": "Palangka Raya",
+      "takar": "HOLD",
+      "naive": "GO",
+      "why": [
+        "only one miner gave a usable answer"
+      ],
+      "spentUsd": 0.03
+    },
+    {
+      "run": "2026-11-21T02:34:05.786Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "takar": "HOLD",
+      "naive": "GO",
+      "why": [
+        "only one miner gave a usable answer"
+      ],
+      "spentUsd": 0.03
+    },
+    {
+      "run": "2026-11-22T09:54:21.257Z",
+      "unit": "drone-palangkaraya-1",
+      "location": "Palangka Raya",
+      "takar": "HOLD",
+      "naive": "GO",
+      "why": [
+        "a second miner disagreed"
+      ],
+      "spentUsd": 0.02
+    },
+    {
+      "run": "2026-11-22T13:00:18.708Z",
+      "unit": "drone-palangkaraya-1",
+      "location": "Palangka Raya",
+      "takar": "HOLD",
+      "naive": "GO",
+      "why": [
+        "a second miner disagreed"
+      ],
+      "spentUsd": 0.02
+    },
+    {
+      "run": "2026-11-22T13:00:18.708Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "takar": "HOLD",
+      "naive": "GO",
+      "why": [
+        "a second miner disagreed"
+      ],
+      "spentUsd": 0.02
+    }
+  ],
+  "rows": [
+    {
+      "run": "2026-11-17T06:01:27.960Z",
+      "unit": "drone-palangkaraya-1",
+      "location": "Palangka Raya",
+      "takar": "HOLD",
+      "naive": "HOLD",
+      "why": [],
+      "spentUsd": 0.01
+    },
+    {
+      "run": "2026-11-17T06:01:27.960Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "takar": "HOLD",
+      "naive": "HOLD",
+      "why": [],
+      "spentUsd": 0.01
+    },
+    {
+      "run": "2026-11-17T06:01:27.960Z",
+      "unit": "sprayer-bandung-1",
+      "location": "Bandung",
+      "takar": "HOLD",
+      "naive": "HOLD",
+      "why": [],
+      "spentUsd": 0.01
+    },
+    {
+      "run": "2026-11-17T06:01:27.960Z",
+      "unit": "rover-jakarta-1",
+      "location": "Jakarta",
+      "takar": "HOLD",
+      "naive": "HOLD",
+      "why": [],
+      "spentUsd": 0.02
+    },
+    {
+      "run": "2026-11-17T06:04:52.404Z",
+      "unit": "drone-palangkaraya-1",
+      "location": "Palangka Raya",
+      "takar": "HOLD",
+      "naive": "HOLD",
+      "why": [],
+      "spentUsd": 0.01
+    },
+    {
+      "run": "2026-11-17T06:04:52.404Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "takar": "GO",
+      "naive": "GO",
+      "why": [],
+      "spentUsd": 0.01
+    },
+    {
+      "run": "2026-11-17T06:04:52.404Z",
+      "unit": "sprayer-bandung-1",
+      "location": "Bandung",
+      "takar": "HOLD",
+      "naive": "HOLD",
+      "why": [],
+      "spentUsd": 0.01
+    },
+    {
+      "run": "2026-11-17T06:04:52.404Z",
+      "unit": "rover-jakarta-1",
+      "location": "Jakarta",
+      "takar": "GO",
+      "naive": "GO",
+      "why": [],
+      "spentUsd": 0.03
+    },
+    {
+      "run": "2026-11-20T06:02:48.310Z",
+      "unit": "drone-palangkaraya-1",
+      "location": "Palangka Raya",
+      "takar": "HOLD",
+      "naive": "HOLD",
+      "why": [],
+      "spentUsd": 0.01
+    },
+    {
+      "run": "2026-11-20T06:02:48.310Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "takar": "GO",
+      "naive": "GO",
+      "why": [],
+      "spentUsd": 0.01
+    },
+    {
+      "run": "2026-11-20T06:02:48.310Z",
+      "unit": "sprayer-bandung-1",
+      "location": "Bandung",
+      "takar": "HOLD",
+      "naive": "HOLD",
+      "why": [],
+      "spentUsd": 0.02
+    },
+    {
+      "run": "2026-11-20T06:02:48.310Z",
+      "unit": "rover-jakarta-1",
+      "location": "Jakarta",
+      "takar": "HOLD",
+      "naive": "HOLD",
+      "why": [],
+      "spentUsd": 0.02
+    },
+    {
+      "run": "2026-11-20T11:33:24.161Z",
+      "unit": "drone-palangkaraya-1",
+      "location": "Palangka Raya",
+      "takar": "GO",
+      "naive": "GO",
+      "why": [],
+      "spentUsd": 0.01
+    },
+    {
+      "run": "2026-11-20T11:33:24.161Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "takar": "GO",
+      "naive": "GO",
+      "why": [],
+      "spentUsd": 0.01
+    },
+    {
+      "run": "2026-11-20T11:33:24.161Z",
+      "unit": "sprayer-bandung-1",
+      "location": "Bandung",
+      "takar": "HOLD",
+      "naive": "HOLD",
+      "why": [],
+      "spentUsd": 0.02
+    },
+    {
+      "run": "2026-11-20T11:33:24.161Z",
+      "unit": "rover-jakarta-1",
+      "location": "Jakarta",
+      "takar": "GO",
+      "naive": "GO",
+      "why": [],
+      "spentUsd": 0.02
+    },
+    {
+      "run": "2026-11-20T11:47:36.311Z",
+      "unit": "drone-denpasar-1",
+      "location": "Denpasar",
+      "takar": "GO",
+      "naive": "GO",
+      "why": [],
+      "spentUsd": 0.01
+    },
+    {
+      "run": "2026-11-20T11:47:36.311Z",
+      "unit": "rover-surabaya-1",
+      "location": "Surabaya",
+      "takar": "HOLD",
+      "naive": "HOLD",
+      "why": [],
+      "spentUsd": 0.01
+    },
+    {
+      "run": "2026-11-21T02:34:05.786Z",
+      "unit": "drone-palangkaraya-1",
+      "location": "Palangka Raya",
+      "takar": "HOLD",
+      "naive": "GO",
+      "why": [
+        "only one miner gave a usable answer"
+      ],
+      "spentUsd": 0.03
+    },
+    {
+      "run": "2026-11-21T02:34:05.786Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "takar": "HOLD",
+      "naive": "GO",
+      "why": [
+        "only one miner gave a usable answer"
+      ],
+      "spentUsd": 0.03
+    },
+    {
+      "run": "2026-11-21T02:34:05.786Z",
+      "unit": "sprayer-bandung-1",
+      "location": "Bandung",
+      "takar": "HOLD",
+      "naive": "HOLD",
+      "why": [],
+      "spentUsd": 0.02
+    },
+    {
+      "run": "2026-11-21T02:34:05.786Z",
+      "unit": "rover-jakarta-1",
+      "location": "Jakarta",
+      "takar": "GO",
+      "naive": "GO",
+      "why": [],
+      "spentUsd": 0.02
+    },
+    {
+      "run": "2026-11-22T09:54:21.257Z",
+      "unit": "drone-palangkaraya-1",
+      "location": "Palangka Raya",
+      "takar": "HOLD",
+      "naive": "GO",
+      "why": [
+        "a second miner disagreed"
+      ],
+      "spentUsd": 0.02
+    },
+    {
+      "run": "2026-11-22T09:54:21.257Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "takar": "GO",
+      "naive": "GO",
+      "why": [],
+      "spentUsd": 0.03
+    },
+    {
+      "run": "2026-11-22T09:54:21.257Z",
+      "unit": "sprayer-bandung-1",
+      "location": "Bandung",
+      "takar": "HOLD",
+      "naive": "HOLD",
+      "why": [],
+      "spentUsd": 0.02
+    },
+    {
+      "run": "2026-11-22T09:54:21.257Z",
+      "unit": "rover-jakarta-1",
+      "location": "Jakarta",
+      "takar": "GO",
+      "naive": "GO",
+      "why": [],
+      "spentUsd": 0.02
+    },
+    {
+      "run": "2026-11-22T13:00:18.708Z",
+      "unit": "drone-palangkaraya-1",
+      "location": "Palangka Raya",
+      "takar": "HOLD",
+      "naive": "GO",
+      "why": [
+        "a second miner disagreed"
+      ],
+      "spentUsd": 0.02
+    },
+    {
+      "run": "2026-11-22T13:00:18.708Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "takar": "HOLD",
+      "naive": "GO",
+      "why": [
+        "a second miner disagreed"
+      ],
+      "spentUsd": 0.02
+    },
+    {
+      "run": "2026-11-22T13:00:18.708Z",
+      "unit": "sprayer-bandung-1",
+      "location": "Bandung",
+      "takar": "GO",
+      "naive": "GO",
+      "why": [],
+      "spentUsd": 0.02
+    },
+    {
+      "run": "2026-11-22T13:00:18.708Z",
+      "unit": "rover-jakarta-1",
+      "location": "Jakarta",
+      "takar": "GO",
+      "naive": "GO",
+      "why": [],
+      "spentUsd": 0.02
+    }
+  ]
+}
