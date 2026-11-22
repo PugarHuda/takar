@@ -506,6 +506,7 @@ document.getElementById("so").addEventListener("submit", async (ev) => {
     out.innerHTML = `<div class="answer ${cls}"><div class="big">${esc(a.verdict)}</div>` +
       `<p>${(a.answers ?? []).map((x) => `${esc(x.miner?.name ?? x.miner?.id)}: ${x.usable ? esc(JSON.stringify(x.result).slice(0, 160)) : `<i>${esc(x.why)}</i>`}`).join("<br>")}</p>` +
       (a.differ?.length ? `<p class="bad">Differ on: ${esc(a.differ.join(", "))}</p>` : "") +
+      (a.independence ? `<p>Independent by ${esc(a.independence.level)}${a.independence.shared ? ` (both read ${esc(a.independence.shared.join(", "))}, so this agreement is one source relayed twice)` : a.independence.level === "operator" ? " (the sources were not stated by both, so only the operators are known to differ)" : ` (${esc(a.independence.a.join(", "))} against ${esc(a.independence.b.join(", "))})`}.</p>` : "") +
       `<p class="note">Compared: ${esc((a.compared ?? []).join(", ") || "nothing")}. Cost $${esc(a.costUsd)} test USDC. ${(a.signals ?? []).map((u, i) => `<a href="${esc(u)}">signal ${i + 1}</a>`).join(" · ")}</p></div>`;
   } catch (e) {
     out.innerHTML = `<p class="bad">No second opinion (${esc(e.message)}).</p>`;
