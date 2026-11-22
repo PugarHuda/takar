@@ -16,7 +16,8 @@
     "scorecard": "node --env-file=.env scripts/scorecard-run.mjs",
     "settle": "node --env-file=.env scripts/settle.mjs",
     "brief": "node --env-file=.env scripts/brief-run.mjs",
-    "attest": "node --env-file=.env scripts/attest.mjs"
+    "attest": "node --env-file=.env scripts/attest.mjs",
+    "coverage": "node --test --experimental-test-coverage --test-coverage-exclude=lib/**/*.test.mjs --test-coverage-exclude=lib/test.mjs --test-coverage-exclude=node_modules/** lib/*.test.mjs lib/test.mjs"
   },
   "dependencies": {
     "ethers": "^6.13.0"

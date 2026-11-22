@@ -17,7 +17,7 @@ Watch (2:51, narrated): https://takar-telegraph.vercel.app/media/takar-overview.
 | What it costs | [docs/ECONOMICS.md](docs/ECONOMICS.md) | from our own ledger: a second opinion /usr/bin/bash.017 (1.68 paid asks), a public dossier /usr/bin/bash.03–0.04 in about 40 s, a deep one at most /usr/bin/bash.17; a third opinion is bought only when two disagree, capped in code |
 | The miner answers from data, not a model, where it can | [docs/RESOLVERS.md](docs/RESOLVERS.md) | one card per source: prices and Fed decisions from FRED (37/37 and 8/8 on unseen markets), dated games from ESPN (100/100 against openfootball), Wikipedia with a checked quote; every round, including the bad ones, in `receipts/` |
 
-Offline: `npm ci && npm test` (467 checks), `cd onchain && forge test` (25). Everything below is detail.
+Offline: `npm ci && npm test` (472 checks; `npm run coverage`: 90.5% of lines, 79.2% of branches, 91.0% of functions in lib/, lowest in the network and payment layers telegraph.mjs and x402.mjs, which the paid ledger exercises instead), `cd onchain && forge test` (25). Everything below is detail.
 
 ---
 
