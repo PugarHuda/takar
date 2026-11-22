@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-:root { --paper:#EEF2F0; --sheet:#F8FAF9; --ink:#1E2A33; --muted:#55656F; --rule:#8FA6B5; --rule-soft:#D3DDE2; --accent:#9A6A00; --bad:#B33A2E; --link:#1F5C8A; }
-@media (prefers-color-scheme: dark) { :root { --paper:#141C21; --sheet:#1B252B; --ink:#E3EAEE; --muted:#9AABB5; --rule:#4F6573; --rule-soft:#2C3A42; --accent:#E0B341; --bad:#E3705F; --link:#7FB6E0; } }
+:root { --paper:#EEF1EF; --sheet:#F8FAF9; --ink:#17222B; --muted:#55656F; --rule:#8FA6B5; --rule-soft:#D3DDE2; --accent:#9A6A00; --bad:#B33A2E; --link:#1F5C8A; }
+@media (prefers-color-scheme: dark) { :root { --paper:#121A1F; --sheet:#1B252B; --ink:#E3EAEE; --muted:#9AABB5; --rule:#4F6573; --rule-soft:#2C3A42; --accent:#E0B341; --bad:#E3705F; --link:#7FB6E0; } }
 * { box-sizing: border-box; }
 body { margin:0; background:var(--paper); color:var(--ink); font:400 1rem/1.55 "Atkinson Hyperlegible", system-ui, sans-serif; }
 a { color:var(--link); text-underline-offset:2px; }
@@ -32,8 +32,15 @@ article strong { color:var(--accent); }
 .bad { color:var(--bad); }
 @media print { :root { --paper:#fff; --sheet:#fff; --ink:#000; --muted:#333; --rule-soft:#ccc; --accent:#000; --link:#000; } nav.mines, form, .dl, .lede, .note, main > h1 { display:none; } article { border:0; padding:0; } a { text-decoration:none; } a[href^="http"]::after { content:" (" attr(href) ")"; font-size:.75em; word-break:break-all; } }
 </style>
+<link rel="stylesheet" href="site.css">
+<style>:root { --bar-max: 980px; --bar-pad: 16px; }</style>
 </head>
 <body>
+<div class="sitebar">
+  <a class="brand" href="./" aria-label="Takar home"><svg viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="6" fill="currentColor"/><rect x="4" y="16" width="18" height="4" rx="1" fill="#C9962B"/><rect x="11.5" y="5" width="3" height="11" style="fill:var(--paper)"/></svg>Takar</a>
+  <nav aria-label="Main"><a href="board.html">Board</a><a href="goldrush.html" aria-current="page">Gold Rush dossiers</a><a href="network.html">Network check</a><a href="videos.html">Videos</a><a href="https://github.com/PugarHuda/takar">GitHub</a></nav>
+</div>
+
 <main class="wrap">
   <h1>Gold Rush dossiers</h1>
   <p class="lede">Queensland historical gold mines, built from Telegraph's Gold Rush miners (goldrush-qld-history and OathCast, asked directly by id and paid through Telegraph). Takar adds the checks a reader would otherwise do by hand: do the dated rows add up, do two sources count the same period, does the total fit the survey's size band, which closures were geological and which were not. Figures are never merged or estimated. Every finding names its record, and every answer has its Telegraph receipt. The miner's rank is shown next to the evidence, not in place of it.</p>
