@@ -54,7 +54,10 @@ export default async function handler(req, res) {
 
   // Normalise once and use the same string for the cache key and for resolving,
   // so a cached answer is always the answer to exactly this text.
-  const event = String((req.method === "POST" ? req.body?.event : req.query?.event) ?? "").replace(/\s+/g, " ").trim();
+  // The node's native asks forward the payload as a JSON body even on GET (Gainsay-style askNative),
+  // so read the event from the body or the query, whichever carries it.
+  const body = typeof req.body === "string" ? (() => { try { return JSON.parse(req.body); } catch { return {}; } })() : req.body;
+  const event = String(body?.event ?? body?.payload?.event ?? req.query?.event ?? "").replace(/\s+/g, " ").trim();
   if (!event) return res.status(400).json({ error: "event is required", example: { event: "Did Max Verstappen win the 2025 Japanese Grand Prix?" } });
 
   // One line per ask, so a score can be traced to the questions behind it. The
