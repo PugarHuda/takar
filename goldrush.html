@@ -63,7 +63,7 @@ async function show(slug) {
   try {
     const md = await fetch(`dossiers/${slug}.md`).then((r) => { if (!r.ok) throw new Error(r.status); return r.text(); });
     render(md);
-    dl.innerHTML = `Download: <a href="dossiers/${slug}.pdf" download>PDF</a> · <a href="dossiers/${slug}.md" download>Markdown</a> · <a href="receipts/dossier-${slug}.json" download>signed JSON</a> (Ed25519, with every paid answer and the structured record)`;
+    dl.innerHTML = `Download: <a href="dossiers/${slug}.pdf" download>PDF</a> · <a href="dossiers/${slug}.md" download>Markdown</a> · <a href="receipts/dossier-${slug}.json" download>signed JSON</a> (Ed25519, with every paid answer and the structured record) · <a href="dossiers/${slug}.prov.json" download>provenance</a> (W3C PROV-JSON: every figure, the ask or register read behind it, and who supplied it)`;
     history.replaceState(null, "", `#${slug}`);
   } catch (e) { docEl.innerHTML = `<p class="bad">Could not load (${esc(e.message)}).</p>`; }
 }

@@ -129,3 +129,5 @@ Checked 2026-11-21T18:46:18.958Z. Contact details are on the registers, not copi
 - Gold Rush Queensland Mine History (Telegraph miner 7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x537da18e…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x537da18e8c257b3ff46e883578d1bb18e97e5af07c77c2dcd2947d9069e1cb58), $0.01
 
 Rank is shown next to the evidence, never in place of it.
+
+**Provenance:** every figure above is traced in W3C PROV-JSON (41 entities, 6 activities, 7 agents: the paid asks with their signal hashes, the direct register reads with their times, and the other teams' checks), in the signed JSON under `provenance` and as [mount-leyshon.prov.json](mount-leyshon.prov.json).

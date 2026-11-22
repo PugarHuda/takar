@@ -1,0 +1,716 @@
+{
+  "prefix": {
+    "prov": "http://www.w3.org/ns/prov#",
+    "takar": "https://takar-telegraph.vercel.app/ns#",
+    "tg": "https://devnode.telegraphprotocol.com/engine/v1/signal/"
+  },
+  "entity": {
+    "takar:production-minocc-2017-total-ores-prod-38940-1986-2002": {
+      "prov:type": "takar:ProductionFigure",
+      "takar:tonnes": 107.670417,
+      "takar:scope": "site_total",
+      "takar:period": "1986-2002",
+      "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+    },
+    "takar:source-minocc-2017-total-ores-prod-38940": {
+      "prov:type": "takar:CitedSource",
+      "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    },
+    "takar:production-minocc-2017-production-38940-1-1986-1991": {
+      "prov:type": "takar:ProductionFigure",
+      "takar:tonnes": 24.793,
+      "takar:scope": "period",
+      "takar:period": "1986-1991",
+      "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+    },
+    "takar:source-minocc-2017-production-38940-1": {
+      "prov:type": "takar:CitedSource",
+      "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    },
+    "takar:production-minocc-2017-production-38940-2-1991-1991": {
+      "prov:type": "takar:ProductionFigure",
+      "takar:tonnes": 6.115223,
+      "takar:scope": "period",
+      "takar:period": "1991-1991",
+      "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+    },
+    "takar:source-minocc-2017-production-38940-2": {
+      "prov:type": "takar:CitedSource",
+      "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    },
+    "takar:production-minocc-2017-production-38940-3-1992-1992": {
+      "prov:type": "takar:ProductionFigure",
+      "takar:tonnes": 6.719118000000001,
+      "takar:scope": "period",
+      "takar:period": "1992-1992",
+      "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+    },
+    "takar:source-minocc-2017-production-38940-3": {
+      "prov:type": "takar:CitedSource",
+      "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    },
+    "takar:production-minocc-2017-production-38940-4-1993-1993": {
+      "prov:type": "takar:ProductionFigure",
+      "takar:tonnes": 6.823469,
+      "takar:scope": "period",
+      "takar:period": "1993-1993",
+      "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+    },
+    "takar:source-minocc-2017-production-38940-4": {
+      "prov:type": "takar:CitedSource",
+      "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    },
+    "takar:production-minocc-2017-production-38940-5-1994-1994": {
+      "prov:type": "takar:ProductionFigure",
+      "takar:tonnes": 7.26327,
+      "takar:scope": "period",
+      "takar:period": "1994-1994",
+      "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+    },
+    "takar:source-minocc-2017-production-38940-5": {
+      "prov:type": "takar:CitedSource",
+      "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    },
+    "takar:production-minocc-2017-production-38940-6-1995-1995": {
+      "prov:type": "takar:ProductionFigure",
+      "takar:tonnes": 7.376169,
+      "takar:scope": "period",
+      "takar:period": "1995-1995",
+      "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+    },
+    "takar:source-minocc-2017-production-38940-6": {
+      "prov:type": "takar:CitedSource",
+      "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    },
+    "takar:production-minocc-2017-production-38940-7-1996-1996": {
+      "prov:type": "takar:ProductionFigure",
+      "takar:tonnes": 5.9716819999999995,
+      "takar:scope": "period",
+      "takar:period": "1996-1996",
+      "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+    },
+    "takar:source-minocc-2017-production-38940-7": {
+      "prov:type": "takar:CitedSource",
+      "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    },
+    "takar:production-minocc-2017-production-38940-8-1997-1997": {
+      "prov:type": "takar:ProductionFigure",
+      "takar:tonnes": 7.043771,
+      "takar:scope": "period",
+      "takar:period": "1997-1997",
+      "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+    },
+    "takar:source-minocc-2017-production-38940-8": {
+      "prov:type": "takar:CitedSource",
+      "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    },
+    "takar:production-minocc-2017-production-38940-9-1998-1998": {
+      "prov:type": "takar:ProductionFigure",
+      "takar:tonnes": 7.620235,
+      "takar:scope": "period",
+      "takar:period": "1998-1998",
+      "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+    },
+    "takar:source-minocc-2017-production-38940-9": {
+      "prov:type": "takar:CitedSource",
+      "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    },
+    "takar:production-minocc-2017-production-38940-10-1998-1999": {
+      "prov:type": "takar:ProductionFigure",
+      "takar:tonnes": 9.7842,
+      "takar:scope": "period",
+      "takar:period": "1998-1999",
+      "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+    },
+    "takar:source-minocc-2017-production-38940-10": {
+      "prov:type": "takar:CitedSource",
+      "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    },
+    "takar:production-minocc-2017-production-38940-11-1999-2000": {
+      "prov:type": "takar:ProductionFigure",
+      "takar:tonnes": 8.80174,
+      "takar:scope": "period",
+      "takar:period": "1999-2000",
+      "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+    },
+    "takar:source-minocc-2017-production-38940-11": {
+      "prov:type": "takar:CitedSource",
+      "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    },
+    "takar:production-minocc-2017-production-38940-12-2000-2001": {
+      "prov:type": "takar:ProductionFigure",
+      "takar:tonnes": 7.27078,
+      "takar:scope": "period",
+      "takar:period": "2000-2001",
+      "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+    },
+    "takar:source-minocc-2017-production-38940-12": {
+      "prov:type": "takar:CitedSource",
+      "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    },
+    "takar:production-minocc-2017-production-38940-13-2001-2002": {
+      "prov:type": "takar:ProductionFigure",
+      "takar:tonnes": 2.0877600000000003,
+      "takar:scope": "period",
+      "takar:period": "2001-2002",
+      "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+    },
+    "takar:source-minocc-2017-production-38940-13": {
+      "prov:type": "takar:CitedSource",
+      "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    },
+    "takar:tenure-ml-10144": {
+      "prov:type": "takar:Tenure",
+      "prov:label": "ML 10144",
+      "takar:holder": "Newmont Landco Pty Ltd",
+      "takar:status": "Granted",
+      "takar:expiry": "2029-09-30"
+    },
+    "takar:tenure-ml-10148": {
+      "prov:type": "takar:Tenure",
+      "prov:label": "ML 10148",
+      "takar:holder": "Newmont Landco Pty Ltd",
+      "takar:status": "Granted",
+      "takar:expiry": "2029-07-31"
+    },
+    "takar:tenure-ml-10172": {
+      "prov:type": "takar:Tenure",
+      "prov:label": "ML 10172",
+      "takar:holder": "Newmont Landco Pty Ltd",
+      "takar:status": "Granted",
+      "takar:expiry": "2029-04-30"
+    },
+    "takar:tenure-ml-10173": {
+      "prov:type": "takar:Tenure",
+      "prov:label": "ML 10173",
+      "takar:holder": "Newmont Landco Pty Ltd",
+      "takar:status": "Granted",
+      "takar:expiry": "2029-04-30"
+    },
+    "takar:native-title-qc2018-002-registered-claim": {
+      "prov:type": "takar:NativeTitleRecord",
+      "prov:label": "QC2018/002 (registered claim)",
+      "takar:name": "Jangga People #2",
+      "takar:status": "Active"
+    },
+    "takar:native-title-qc2023-001-registered-claim": {
+      "prov:type": "takar:NativeTitleRecord",
+      "prov:label": "QC2023/001 (registered claim)",
+      "takar:name": "Gudjala People #3",
+      "takar:status": "Active"
+    },
+    "takar:native-title-qc2018-002-claim-application": {
+      "prov:type": "takar:NativeTitleRecord",
+      "prov:label": "QC2018/002 (claim application)",
+      "takar:name": "Jangga People #2",
+      "takar:status": "Active"
+    },
+    "takar:native-title-qc2023-001-claim-application": {
+      "prov:type": "takar:NativeTitleRecord",
+      "prov:label": "QC2023/001 (claim application)",
+      "takar:name": "Gudjala People #3",
+      "takar:status": "Active"
+    },
+    "takar:native-title-qc2023-001-cultural-heritage-party": {
+      "prov:type": "takar:NativeTitleRecord",
+      "prov:label": "QC2023/001 (cultural heritage party)",
+      "takar:name": "Gudjala People",
+      "takar:status": "REGISTERED"
+    },
+    "takar:native-title-qc2018-002-cultural-heritage-party": {
+      "prov:type": "takar:NativeTitleRecord",
+      "prov:label": "QC2018/002 (cultural heritage party)",
+      "takar:name": "Jangga People #2",
+      "takar:status": "REGISTERED"
+    },
+    "takar:cross-check-praman": {
+      "prov:type": "takar:CrossCheck",
+      "prov:location": "https://praman-desk.vercel.app/api/gold-rush/aggregate",
+      "prov:value": "no usable consensus figure"
+    },
+    "takar:cross-check-nftking-land": {
+      "prov:type": "takar:CrossCheck",
+      "prov:location": "https://goldrush.up.railway.app/ask?question=land%20and%20rights%20at%20site%2038940",
+      "prov:value": "3 of our 4 tenure IDs within 500 m are also in theirs (6 rows to 2 km); not in theirs: ML 10148 (access-area leases, a register layer their reading does not cover); native title QC2018/002, QC2023/001 at the site in both; 3 expiry date(s) one day apart (ML 10144, ML 10172, ML 10173): the register stores midnight Brisbane time (UTC+10), so a date cut in UTC lands on the day before; ours are read in Brisbane time"
+    },
+    "takar:dossier": {
+      "prov:type": "takar:Dossier",
+      "prov:label": "Mount Leyshon",
+      "prov:generatedAtTime": "2026-11-22T07:09:06.500Z"
+    }
+  },
+  "activity": {
+    "tg:0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4": {
+      "prov:type": "takar:PaidTelegraphAsk",
+      "takar:intent": "RESEARCH_QUERY_GENERAL",
+      "takar:costUsd": 0.01,
+      "takar:rank": "#13 of 30"
+    },
+    "tg:0x1fa7493e51c2f540a2acf204bc682598bd4ecb8f4d4d20288b40bdcfa2fbdc1e": {
+      "prov:type": "takar:PaidTelegraphAsk",
+      "takar:intent": "RESEARCH_QUERY_GENERAL",
+      "takar:costUsd": 0.01,
+      "takar:rank": "#15 of 30"
+    },
+    "tg:0x11a7dc78b1471d5cb192730cebc7b3da72b75ee56145081d9667a28dcb1b8a18": {
+      "prov:type": "takar:PaidTelegraphAsk",
+      "takar:intent": "RESEARCH_QUERY_GENERAL",
+      "takar:costUsd": 0.01,
+      "takar:rank": "#13 of 30"
+    },
+    "tg:0x537da18e8c257b3ff46e883578d1bb18e97e5af07c77c2dcd2947d9069e1cb58": {
+      "prov:type": "takar:PaidTelegraphAsk",
+      "takar:intent": "RESEARCH_QUERY_GENERAL",
+      "takar:costUsd": 0.01,
+      "takar:rank": null
+    },
+    "takar:read-tenure": {
+      "prov:type": "takar:DirectRegisterRead",
+      "prov:location": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer",
+      "prov:startedAtTime": "2026-11-22T07:09:05.038Z",
+      "prov:label": "Queensland resource authorities within 500 m"
+    },
+    "takar:read-native-title": {
+      "prov:type": "takar:DirectRegisterRead",
+      "prov:location": "https://services2.arcgis.com/rzk7fNEt0xoEp3cX/arcgis/rest/services/NNTT_Custodial_AGOL/FeatureServer (National Native Title Tribunal)",
+      "prov:startedAtTime": "2026-11-21T18:46:18.958Z",
+      "prov:label": "Native title and cultural heritage at the site point"
+    }
+  },
+  "agent": {
+    "takar:takar": {
+      "prov:type": "prov:SoftwareAgent",
+      "prov:label": "Takar dossier builder (lib/dossier.mjs)"
+    },
+    "takar:miner-7310050": {
+      "prov:type": "prov:SoftwareAgent",
+      "prov:label": "Gold Rush Queensland Mine History (Telegraph miner 7310050)"
+    },
+    "takar:miner-64176": {
+      "prov:type": "prov:SoftwareAgent",
+      "prov:label": "OathCast Queensland Gold Mines (Telegraph miner 64176)"
+    },
+    "takar:publisher-queensland-government-department-of-resources": {
+      "prov:type": "prov:Organization",
+      "prov:label": "Queensland Government (Department of Resources)"
+    },
+    "takar:publisher-national-native-title-tribunal-and-queensland-government": {
+      "prov:type": "prov:Organization",
+      "prov:label": "National Native Title Tribunal and Queensland Government"
+    },
+    "takar:team-praman": {
+      "prov:type": "prov:SoftwareAgent",
+      "prov:label": "Praman Desk Gold Rush arbitrator (another hackathon team)"
+    },
+    "takar:team-nftking-land": {
+      "prov:type": "prov:SoftwareAgent",
+      "prov:label": "goldrush-qld-history land and rights, NFT KING (another hackathon team)"
+    }
+  },
+  "wasGeneratedBy": {
+    "_:r7": {
+      "prov:entity": "takar:production-minocc-2017-total-ores-prod-38940-1986-2002",
+      "prov:activity": "tg:0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4"
+    },
+    "_:r9": {
+      "prov:entity": "takar:production-minocc-2017-production-38940-1-1986-1991",
+      "prov:activity": "tg:0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4"
+    },
+    "_:r11": {
+      "prov:entity": "takar:production-minocc-2017-production-38940-2-1991-1991",
+      "prov:activity": "tg:0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4"
+    },
+    "_:r13": {
+      "prov:entity": "takar:production-minocc-2017-production-38940-3-1992-1992",
+      "prov:activity": "tg:0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4"
+    },
+    "_:r15": {
+      "prov:entity": "takar:production-minocc-2017-production-38940-4-1993-1993",
+      "prov:activity": "tg:0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4"
+    },
+    "_:r17": {
+      "prov:entity": "takar:production-minocc-2017-production-38940-5-1994-1994",
+      "prov:activity": "tg:0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4"
+    },
+    "_:r19": {
+      "prov:entity": "takar:production-minocc-2017-production-38940-6-1995-1995",
+      "prov:activity": "tg:0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4"
+    },
+    "_:r21": {
+      "prov:entity": "takar:production-minocc-2017-production-38940-7-1996-1996",
+      "prov:activity": "tg:0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4"
+    },
+    "_:r23": {
+      "prov:entity": "takar:production-minocc-2017-production-38940-8-1997-1997",
+      "prov:activity": "tg:0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4"
+    },
+    "_:r25": {
+      "prov:entity": "takar:production-minocc-2017-production-38940-9-1998-1998",
+      "prov:activity": "tg:0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4"
+    },
+    "_:r27": {
+      "prov:entity": "takar:production-minocc-2017-production-38940-10-1998-1999",
+      "prov:activity": "tg:0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4"
+    },
+    "_:r29": {
+      "prov:entity": "takar:production-minocc-2017-production-38940-11-1999-2000",
+      "prov:activity": "tg:0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4"
+    },
+    "_:r31": {
+      "prov:entity": "takar:production-minocc-2017-production-38940-12-2000-2001",
+      "prov:activity": "tg:0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4"
+    },
+    "_:r33": {
+      "prov:entity": "takar:production-minocc-2017-production-38940-13-2001-2002",
+      "prov:activity": "tg:0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4"
+    },
+    "_:r35": {
+      "prov:entity": "takar:tenure-ml-10144",
+      "prov:activity": "takar:read-tenure"
+    },
+    "_:r37": {
+      "prov:entity": "takar:tenure-ml-10148",
+      "prov:activity": "takar:read-tenure"
+    },
+    "_:r39": {
+      "prov:entity": "takar:tenure-ml-10172",
+      "prov:activity": "takar:read-tenure"
+    },
+    "_:r41": {
+      "prov:entity": "takar:tenure-ml-10173",
+      "prov:activity": "takar:read-tenure"
+    },
+    "_:r44": {
+      "prov:entity": "takar:native-title-qc2018-002-registered-claim",
+      "prov:activity": "takar:read-native-title"
+    },
+    "_:r46": {
+      "prov:entity": "takar:native-title-qc2023-001-registered-claim",
+      "prov:activity": "takar:read-native-title"
+    },
+    "_:r48": {
+      "prov:entity": "takar:native-title-qc2018-002-claim-application",
+      "prov:activity": "takar:read-native-title"
+    },
+    "_:r50": {
+      "prov:entity": "takar:native-title-qc2023-001-claim-application",
+      "prov:activity": "takar:read-native-title"
+    },
+    "_:r52": {
+      "prov:entity": "takar:native-title-qc2023-001-cultural-heritage-party",
+      "prov:activity": "takar:read-native-title"
+    },
+    "_:r54": {
+      "prov:entity": "takar:native-title-qc2018-002-cultural-heritage-party",
+      "prov:activity": "takar:read-native-title"
+    }
+  },
+  "wasAssociatedWith": {
+    "_:r1": {
+      "prov:activity": "tg:0x68944de83c280ca444a7784eaa4a49ccea52dddfa336143e91ecbda480173de4",
+      "prov:agent": "takar:miner-7310050"
+    },
+    "_:r2": {
+      "prov:activity": "tg:0x1fa7493e51c2f540a2acf204bc682598bd4ecb8f4d4d20288b40bdcfa2fbdc1e",
+      "prov:agent": "takar:miner-64176"
+    },
+    "_:r3": {
+      "prov:activity": "tg:0x11a7dc78b1471d5cb192730cebc7b3da72b75ee56145081d9667a28dcb1b8a18",
+      "prov:agent": "takar:miner-7310050"
+    },
+    "_:r4": {
+      "prov:activity": "tg:0x537da18e8c257b3ff46e883578d1bb18e97e5af07c77c2dcd2947d9069e1cb58",
+      "prov:agent": "takar:miner-7310050"
+    },
+    "_:r5": {
+      "prov:activity": "tg:0x537da18e8c257b3ff46e883578d1bb18e97e5af07c77c2dcd2947d9069e1cb58",
+      "prov:agent": "takar:miner-7310050"
+    },
+    "_:r34": {
+      "prov:activity": "takar:read-tenure",
+      "prov:agent": "takar:takar"
+    },
+    "_:r43": {
+      "prov:activity": "takar:read-native-title",
+      "prov:agent": "takar:takar"
+    }
+  },
+  "wasDerivedFrom": {
+    "_:r6": {
+      "prov:generatedEntity": "takar:production-minocc-2017-total-ores-prod-38940-1986-2002",
+      "prov:usedEntity": "takar:source-minocc-2017-total-ores-prod-38940"
+    },
+    "_:r8": {
+      "prov:generatedEntity": "takar:production-minocc-2017-production-38940-1-1986-1991",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-1"
+    },
+    "_:r10": {
+      "prov:generatedEntity": "takar:production-minocc-2017-production-38940-2-1991-1991",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-2"
+    },
+    "_:r12": {
+      "prov:generatedEntity": "takar:production-minocc-2017-production-38940-3-1992-1992",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-3"
+    },
+    "_:r14": {
+      "prov:generatedEntity": "takar:production-minocc-2017-production-38940-4-1993-1993",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-4"
+    },
+    "_:r16": {
+      "prov:generatedEntity": "takar:production-minocc-2017-production-38940-5-1994-1994",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-5"
+    },
+    "_:r18": {
+      "prov:generatedEntity": "takar:production-minocc-2017-production-38940-6-1995-1995",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-6"
+    },
+    "_:r20": {
+      "prov:generatedEntity": "takar:production-minocc-2017-production-38940-7-1996-1996",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-7"
+    },
+    "_:r22": {
+      "prov:generatedEntity": "takar:production-minocc-2017-production-38940-8-1997-1997",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-8"
+    },
+    "_:r24": {
+      "prov:generatedEntity": "takar:production-minocc-2017-production-38940-9-1998-1998",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-9"
+    },
+    "_:r26": {
+      "prov:generatedEntity": "takar:production-minocc-2017-production-38940-10-1998-1999",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-10"
+    },
+    "_:r28": {
+      "prov:generatedEntity": "takar:production-minocc-2017-production-38940-11-1999-2000",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-11"
+    },
+    "_:r30": {
+      "prov:generatedEntity": "takar:production-minocc-2017-production-38940-12-2000-2001",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-12"
+    },
+    "_:r32": {
+      "prov:generatedEntity": "takar:production-minocc-2017-production-38940-13-2001-2002",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-13"
+    },
+    "_:r59": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:production-minocc-2017-total-ores-prod-38940-1986-2002"
+    },
+    "_:r60": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:source-minocc-2017-total-ores-prod-38940"
+    },
+    "_:r61": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:production-minocc-2017-production-38940-1-1986-1991"
+    },
+    "_:r62": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-1"
+    },
+    "_:r63": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:production-minocc-2017-production-38940-2-1991-1991"
+    },
+    "_:r64": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-2"
+    },
+    "_:r65": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:production-minocc-2017-production-38940-3-1992-1992"
+    },
+    "_:r66": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-3"
+    },
+    "_:r67": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:production-minocc-2017-production-38940-4-1993-1993"
+    },
+    "_:r68": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-4"
+    },
+    "_:r69": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:production-minocc-2017-production-38940-5-1994-1994"
+    },
+    "_:r70": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-5"
+    },
+    "_:r71": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:production-minocc-2017-production-38940-6-1995-1995"
+    },
+    "_:r72": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-6"
+    },
+    "_:r73": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:production-minocc-2017-production-38940-7-1996-1996"
+    },
+    "_:r74": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-7"
+    },
+    "_:r75": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:production-minocc-2017-production-38940-8-1997-1997"
+    },
+    "_:r76": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-8"
+    },
+    "_:r77": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:production-minocc-2017-production-38940-9-1998-1998"
+    },
+    "_:r78": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-9"
+    },
+    "_:r79": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:production-minocc-2017-production-38940-10-1998-1999"
+    },
+    "_:r80": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-10"
+    },
+    "_:r81": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:production-minocc-2017-production-38940-11-1999-2000"
+    },
+    "_:r82": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-11"
+    },
+    "_:r83": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:production-minocc-2017-production-38940-12-2000-2001"
+    },
+    "_:r84": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-12"
+    },
+    "_:r85": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:production-minocc-2017-production-38940-13-2001-2002"
+    },
+    "_:r86": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:source-minocc-2017-production-38940-13"
+    },
+    "_:r87": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:tenure-ml-10144"
+    },
+    "_:r88": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:tenure-ml-10148"
+    },
+    "_:r89": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:tenure-ml-10172"
+    },
+    "_:r90": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:tenure-ml-10173"
+    },
+    "_:r91": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:native-title-qc2018-002-registered-claim"
+    },
+    "_:r92": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:native-title-qc2023-001-registered-claim"
+    },
+    "_:r93": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:native-title-qc2018-002-claim-application"
+    },
+    "_:r94": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:native-title-qc2023-001-claim-application"
+    },
+    "_:r95": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:native-title-qc2023-001-cultural-heritage-party"
+    },
+    "_:r96": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:native-title-qc2018-002-cultural-heritage-party"
+    },
+    "_:r97": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:cross-check-praman"
+    },
+    "_:r98": {
+      "prov:generatedEntity": "takar:dossier",
+      "prov:usedEntity": "takar:cross-check-nftking-land"
+    }
+  },
+  "wasAttributedTo": {
+    "_:r36": {
+      "prov:entity": "takar:tenure-ml-10144",
+      "prov:agent": "takar:publisher-queensland-government-department-of-resources"
+    },
+    "_:r38": {
+      "prov:entity": "takar:tenure-ml-10148",
+      "prov:agent": "takar:publisher-queensland-government-department-of-resources"
+    },
+    "_:r40": {
+      "prov:entity": "takar:tenure-ml-10172",
+      "prov:agent": "takar:publisher-queensland-government-department-of-resources"
+    },
+    "_:r42": {
+      "prov:entity": "takar:tenure-ml-10173",
+      "prov:agent": "takar:publisher-queensland-government-department-of-resources"
+    },
+    "_:r45": {
+      "prov:entity": "takar:native-title-qc2018-002-registered-claim",
+      "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+    },
+    "_:r47": {
+      "prov:entity": "takar:native-title-qc2023-001-registered-claim",
+      "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+    },
+    "_:r49": {
+      "prov:entity": "takar:native-title-qc2018-002-claim-application",
+      "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+    },
+    "_:r51": {
+      "prov:entity": "takar:native-title-qc2023-001-claim-application",
+      "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+    },
+    "_:r53": {
+      "prov:entity": "takar:native-title-qc2023-001-cultural-heritage-party",
+      "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+    },
+    "_:r55": {
+      "prov:entity": "takar:native-title-qc2018-002-cultural-heritage-party",
+      "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+    },
+    "_:r56": {
+      "prov:entity": "takar:cross-check-praman",
+      "prov:agent": "takar:team-praman"
+    },
+    "_:r57": {
+      "prov:entity": "takar:cross-check-nftking-land",
+      "prov:agent": "takar:team-nftking-land"
+    },
+    "_:r58": {
+      "prov:entity": "takar:dossier",
+      "prov:agent": "takar:takar"
+    }
+  },
+  "summary": {
+    "entities": 41,
+    "activities": 6,
+    "agents": 7,
+    "paid_asks": 5
+  }
+}

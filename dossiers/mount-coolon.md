@@ -120,3 +120,5 @@ Look a place up by its QHR number at [the register](https://qhr.detsi.qld.gov.au
 - Gold Rush Queensland Mine History (Telegraph miner 7310050), RESEARCH_QUERY_GENERAL: [Telegraph signal 0x97231263…](https://devnode.telegraphprotocol.com/engine/v1/signal/0x97231263a147668b8bbb07c9f877a0bbf00841f149d8c19b2b4c2ea47b646387), $0.01; node rank for the intent: #13 of 30
 
 Rank is shown next to the evidence, never in place of it.
+
+**Provenance:** every figure above is traced in W3C PROV-JSON (25 entities, 7 activities, 8 agents: the paid asks with their signal hashes, the direct register reads with their times, and the other teams' checks), in the signed JSON under `provenance` and as [mount-coolon.prov.json](mount-coolon.prov.json).

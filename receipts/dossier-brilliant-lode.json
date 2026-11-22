@@ -879,10 +879,473 @@
     }
   },
   "rederived_at": "2026-11-22T07:09:00.477Z",
+  "provenance": {
+    "prefix": {
+      "prov": "http://www.w3.org/ns/prov#",
+      "takar": "https://takar-telegraph.vercel.app/ns#",
+      "tg": "https://devnode.telegraphprotocol.com/engine/v1/signal/"
+    },
+    "entity": {
+      "takar:production-wp-ctshafts-1908-1916": {
+        "prov:type": "takar:ProductionFigure",
+        "takar:tonnes": 0.7104967205424,
+        "takar:scope": null,
+        "takar:period": "1908-1916",
+        "prov:label": "Charters Towers mine shafts (Wikipedia, Queensland Heritage Register text), revision 1367481111 of 2026-08-03"
+      },
+      "takar:source-wp-ctshafts": {
+        "prov:type": "takar:CitedSource",
+        "prov:location": "https://en.wikipedia.org/w/index.php?title=Charters_Towers_mine_shafts&oldid=1367481111"
+      },
+      "takar:production-minocc-2017-total-ores-prod-38722-x-1917": {
+        "prov:type": "takar:ProductionFigure",
+        "takar:tonnes": 51.482730000000004,
+        "takar:scope": "site_total",
+        "takar:period": "?-1917",
+        "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+      },
+      "takar:source-minocc-2017-total-ores-prod-38722": {
+        "prov:type": "takar:CitedSource",
+        "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+      },
+      "takar:production-minocc-2017-production-38722-1-x-1917": {
+        "prov:type": "takar:ProductionFigure",
+        "takar:tonnes": 51.482730000000004,
+        "takar:scope": "period",
+        "takar:period": "?-1917",
+        "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+      },
+      "takar:source-minocc-2017-production-38722-1": {
+        "prov:type": "takar:CitedSource",
+        "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+      },
+      "takar:tenure-epm-15964": {
+        "prov:type": "takar:Tenure",
+        "prov:label": "EPM 15964",
+        "takar:holder": "CITIGOLD CORPORATION LIMITED",
+        "takar:status": "Granted",
+        "takar:expiry": "2025-05-01"
+      },
+      "takar:tenure-ml-1499": {
+        "prov:type": "takar:Tenure",
+        "prov:label": "ML 1499",
+        "takar:holder": "CITIGOLD CORPORATION LIMITED",
+        "takar:status": "Granted",
+        "takar:expiry": "2035-12-31"
+      },
+      "takar:tenure-ml-10208": {
+        "prov:type": "takar:Tenure",
+        "prov:label": "ML 10208",
+        "takar:holder": "CITIGOLD CORPORATION LIMITED",
+        "takar:status": "Granted",
+        "takar:expiry": "2035-12-31"
+      },
+      "takar:native-title-qi2014-031-indigenous-land-use-agreement": {
+        "prov:type": "takar:NativeTitleRecord",
+        "prov:label": "QI2014/031 (Indigenous Land Use Agreement)",
+        "takar:name": "Gudjala People and Local Government ILUA",
+        "takar:status": null
+      },
+      "takar:native-title-qi2013-082-indigenous-land-use-agreement": {
+        "prov:type": "takar:NativeTitleRecord",
+        "prov:label": "QI2013/082 (Indigenous Land Use Agreement)",
+        "takar:name": "Gudjala People and Ergon Energy ILUA",
+        "takar:status": null
+      },
+      "takar:native-title-qcd2014-006-det-cultural-heritage-party": {
+        "prov:type": "takar:NativeTitleRecord",
+        "prov:label": "QCD2014/006 DET (cultural heritage party)",
+        "takar:name": "Gudjala People",
+        "takar:status": "DETERMINED"
+      },
+      "takar:native-title-clh000209-cultural-heritage-body": {
+        "prov:type": "takar:NativeTitleRecord",
+        "prov:label": "CLH000209 (cultural heritage body)",
+        "takar:name": "Gudjal Traditional Owners Aboriginal Corporation",
+        "takar:status": null
+      },
+      "takar:heritage-602801": {
+        "prov:type": "takar:HeritagePlace",
+        "prov:label": "ED Miles Mining Exchange (former)",
+        "takar:ref": "602801"
+      },
+      "takar:heritage-600402": {
+        "prov:type": "takar:HeritagePlace",
+        "prov:label": "School of Mines, Charters Towers",
+        "takar:ref": "600402"
+      },
+      "takar:heritage-600413": {
+        "prov:type": "takar:HeritagePlace",
+        "prov:label": "Venus State Battery",
+        "takar:ref": "600413"
+      },
+      "takar:heritage-602200": {
+        "prov:type": "takar:HeritagePlace",
+        "prov:label": "Day Dawn PC No.3 Shaft mine remains",
+        "takar:ref": "602200"
+      },
+      "takar:heritage-602221": {
+        "prov:type": "takar:HeritagePlace",
+        "prov:label": "Charters Towers Gold Mine Shafts and Remains",
+        "takar:ref": "602221"
+      },
+      "takar:cross-check-praman": {
+        "prov:type": "takar:CrossCheck",
+        "prov:location": "https://praman-desk.vercel.app/api/gold-rush/aggregate",
+        "prov:value": "matches none of the recorded totals"
+      },
+      "takar:cross-check-nftking-land": {
+        "prov:type": "takar:CrossCheck",
+        "prov:location": "https://goldrush.up.railway.app/ask?question=land%20and%20rights%20at%20site%2038722",
+        "prov:value": "3 of our 3 tenure IDs within 500 m are also in theirs (19 rows to 2 km, some layers cut at 25); their sub-status \"Renewal Lodged\" on 1 shared lease(s) confirms the renewal our reading inferred; 3 expiry date(s) one day apart (EPM 15964, ML 1499, ML 10208): the register stores midnight Brisbane time (UTC+10), so a date cut in UTC lands on the day before; ours are read in Brisbane time"
+      },
+      "takar:dossier": {
+        "prov:type": "takar:Dossier",
+        "prov:label": "Brilliant Lode",
+        "prov:generatedAtTime": "2026-11-22T07:09:00.477Z"
+      }
+    },
+    "activity": {
+      "tg:0x018bbe60ccae8ddeb6cd2949c9505c6aa5a4e8c5eb3c95663cca586090f9f286": {
+        "prov:type": "takar:PaidTelegraphAsk",
+        "takar:intent": "RESEARCH_QUERY_GENERAL",
+        "takar:costUsd": 0.01,
+        "takar:rank": "#13 of 30"
+      },
+      "tg:0x38d7c28746a6babf81ab5067605cdbecbc74732779e1156be2626a17672bcc90": {
+        "prov:type": "takar:PaidTelegraphAsk",
+        "takar:intent": "RESEARCH_QUERY_GENERAL",
+        "takar:costUsd": 0.01,
+        "takar:rank": "#15 of 30"
+      },
+      "tg:0xea63c14b735c8d026aec0c888999c79811053a5b00f4f6c807990710c8000480": {
+        "prov:type": "takar:PaidTelegraphAsk",
+        "takar:intent": "RESEARCH_QUERY_GENERAL",
+        "takar:costUsd": 0.01,
+        "takar:rank": "#13 of 30"
+      },
+      "tg:0x537da18e8c257b3ff46e883578d1bb18e97e5af07c77c2dcd2947d9069e1cb58": {
+        "prov:type": "takar:PaidTelegraphAsk",
+        "takar:intent": "RESEARCH_QUERY_GENERAL",
+        "takar:costUsd": 0.01,
+        "takar:rank": null
+      },
+      "takar:read-tenure": {
+        "prov:type": "takar:DirectRegisterRead",
+        "prov:location": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer",
+        "prov:startedAtTime": "2026-11-22T07:08:58.635Z",
+        "prov:label": "Queensland resource authorities within 500 m"
+      },
+      "takar:read-native-title": {
+        "prov:type": "takar:DirectRegisterRead",
+        "prov:location": "https://services2.arcgis.com/rzk7fNEt0xoEp3cX/arcgis/rest/services/NNTT_Custodial_AGOL/FeatureServer (National Native Title Tribunal)",
+        "prov:startedAtTime": "2026-11-21T18:46:16.254Z",
+        "prov:label": "Native title and cultural heritage at the site point"
+      },
+      "takar:read-heritage": {
+        "prov:type": "takar:DirectRegisterRead",
+        "prov:location": "https://www.data.qld.gov.au/dataset/the-queensland-heritage-register",
+        "prov:startedAtTime": null,
+        "prov:label": "Queensland Heritage Register (extract)"
+      }
+    },
+    "agent": {
+      "takar:takar": {
+        "prov:type": "prov:SoftwareAgent",
+        "prov:label": "Takar dossier builder (lib/dossier.mjs)"
+      },
+      "takar:miner-7310050": {
+        "prov:type": "prov:SoftwareAgent",
+        "prov:label": "Gold Rush Queensland Mine History (Telegraph miner 7310050)"
+      },
+      "takar:miner-64176": {
+        "prov:type": "prov:SoftwareAgent",
+        "prov:label": "OathCast Queensland Gold Mines (Telegraph miner 64176)"
+      },
+      "takar:publisher-queensland-government-department-of-resources": {
+        "prov:type": "prov:Organization",
+        "prov:label": "Queensland Government (Department of Resources)"
+      },
+      "takar:publisher-national-native-title-tribunal-and-queensland-government": {
+        "prov:type": "prov:Organization",
+        "prov:label": "National Native Title Tribunal and Queensland Government"
+      },
+      "takar:publisher-queensland-government-heritage-register": {
+        "prov:type": "prov:Organization",
+        "prov:label": "Queensland Government (Heritage Register)"
+      },
+      "takar:team-praman": {
+        "prov:type": "prov:SoftwareAgent",
+        "prov:label": "Praman Desk Gold Rush arbitrator (another hackathon team)"
+      },
+      "takar:team-nftking-land": {
+        "prov:type": "prov:SoftwareAgent",
+        "prov:label": "goldrush-qld-history land and rights, NFT KING (another hackathon team)"
+      }
+    },
+    "wasGeneratedBy": {
+      "_:r7": {
+        "prov:entity": "takar:production-wp-ctshafts-1908-1916",
+        "prov:activity": "tg:0x018bbe60ccae8ddeb6cd2949c9505c6aa5a4e8c5eb3c95663cca586090f9f286"
+      },
+      "_:r9": {
+        "prov:entity": "takar:production-minocc-2017-total-ores-prod-38722-x-1917",
+        "prov:activity": "tg:0x018bbe60ccae8ddeb6cd2949c9505c6aa5a4e8c5eb3c95663cca586090f9f286"
+      },
+      "_:r11": {
+        "prov:entity": "takar:production-minocc-2017-production-38722-1-x-1917",
+        "prov:activity": "tg:0x018bbe60ccae8ddeb6cd2949c9505c6aa5a4e8c5eb3c95663cca586090f9f286"
+      },
+      "_:r13": {
+        "prov:entity": "takar:tenure-epm-15964",
+        "prov:activity": "takar:read-tenure"
+      },
+      "_:r15": {
+        "prov:entity": "takar:tenure-ml-1499",
+        "prov:activity": "takar:read-tenure"
+      },
+      "_:r17": {
+        "prov:entity": "takar:tenure-ml-10208",
+        "prov:activity": "takar:read-tenure"
+      },
+      "_:r20": {
+        "prov:entity": "takar:native-title-qi2014-031-indigenous-land-use-agreement",
+        "prov:activity": "takar:read-native-title"
+      },
+      "_:r22": {
+        "prov:entity": "takar:native-title-qi2013-082-indigenous-land-use-agreement",
+        "prov:activity": "takar:read-native-title"
+      },
+      "_:r24": {
+        "prov:entity": "takar:native-title-qcd2014-006-det-cultural-heritage-party",
+        "prov:activity": "takar:read-native-title"
+      },
+      "_:r26": {
+        "prov:entity": "takar:native-title-clh000209-cultural-heritage-body",
+        "prov:activity": "takar:read-native-title"
+      },
+      "_:r29": {
+        "prov:entity": "takar:heritage-602801",
+        "prov:activity": "takar:read-heritage"
+      },
+      "_:r31": {
+        "prov:entity": "takar:heritage-600402",
+        "prov:activity": "takar:read-heritage"
+      },
+      "_:r33": {
+        "prov:entity": "takar:heritage-600413",
+        "prov:activity": "takar:read-heritage"
+      },
+      "_:r35": {
+        "prov:entity": "takar:heritage-602200",
+        "prov:activity": "takar:read-heritage"
+      },
+      "_:r37": {
+        "prov:entity": "takar:heritage-602221",
+        "prov:activity": "takar:read-heritage"
+      }
+    },
+    "wasAssociatedWith": {
+      "_:r1": {
+        "prov:activity": "tg:0x018bbe60ccae8ddeb6cd2949c9505c6aa5a4e8c5eb3c95663cca586090f9f286",
+        "prov:agent": "takar:miner-7310050"
+      },
+      "_:r2": {
+        "prov:activity": "tg:0x38d7c28746a6babf81ab5067605cdbecbc74732779e1156be2626a17672bcc90",
+        "prov:agent": "takar:miner-64176"
+      },
+      "_:r3": {
+        "prov:activity": "tg:0xea63c14b735c8d026aec0c888999c79811053a5b00f4f6c807990710c8000480",
+        "prov:agent": "takar:miner-7310050"
+      },
+      "_:r4": {
+        "prov:activity": "tg:0x537da18e8c257b3ff46e883578d1bb18e97e5af07c77c2dcd2947d9069e1cb58",
+        "prov:agent": "takar:miner-7310050"
+      },
+      "_:r5": {
+        "prov:activity": "tg:0x537da18e8c257b3ff46e883578d1bb18e97e5af07c77c2dcd2947d9069e1cb58",
+        "prov:agent": "takar:miner-7310050"
+      },
+      "_:r12": {
+        "prov:activity": "takar:read-tenure",
+        "prov:agent": "takar:takar"
+      },
+      "_:r19": {
+        "prov:activity": "takar:read-native-title",
+        "prov:agent": "takar:takar"
+      },
+      "_:r28": {
+        "prov:activity": "takar:read-heritage",
+        "prov:agent": "takar:takar"
+      }
+    },
+    "wasDerivedFrom": {
+      "_:r6": {
+        "prov:generatedEntity": "takar:production-wp-ctshafts-1908-1916",
+        "prov:usedEntity": "takar:source-wp-ctshafts"
+      },
+      "_:r8": {
+        "prov:generatedEntity": "takar:production-minocc-2017-total-ores-prod-38722-x-1917",
+        "prov:usedEntity": "takar:source-minocc-2017-total-ores-prod-38722"
+      },
+      "_:r10": {
+        "prov:generatedEntity": "takar:production-minocc-2017-production-38722-1-x-1917",
+        "prov:usedEntity": "takar:source-minocc-2017-production-38722-1"
+      },
+      "_:r42": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:production-wp-ctshafts-1908-1916"
+      },
+      "_:r43": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:source-wp-ctshafts"
+      },
+      "_:r44": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:production-minocc-2017-total-ores-prod-38722-x-1917"
+      },
+      "_:r45": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:source-minocc-2017-total-ores-prod-38722"
+      },
+      "_:r46": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:production-minocc-2017-production-38722-1-x-1917"
+      },
+      "_:r47": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:source-minocc-2017-production-38722-1"
+      },
+      "_:r48": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:tenure-epm-15964"
+      },
+      "_:r49": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:tenure-ml-1499"
+      },
+      "_:r50": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:tenure-ml-10208"
+      },
+      "_:r51": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:native-title-qi2014-031-indigenous-land-use-agreement"
+      },
+      "_:r52": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:native-title-qi2013-082-indigenous-land-use-agreement"
+      },
+      "_:r53": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:native-title-qcd2014-006-det-cultural-heritage-party"
+      },
+      "_:r54": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:native-title-clh000209-cultural-heritage-body"
+      },
+      "_:r55": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:heritage-602801"
+      },
+      "_:r56": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:heritage-600402"
+      },
+      "_:r57": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:heritage-600413"
+      },
+      "_:r58": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:heritage-602200"
+      },
+      "_:r59": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:heritage-602221"
+      },
+      "_:r60": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:cross-check-praman"
+      },
+      "_:r61": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:cross-check-nftking-land"
+      }
+    },
+    "wasAttributedTo": {
+      "_:r14": {
+        "prov:entity": "takar:tenure-epm-15964",
+        "prov:agent": "takar:publisher-queensland-government-department-of-resources"
+      },
+      "_:r16": {
+        "prov:entity": "takar:tenure-ml-1499",
+        "prov:agent": "takar:publisher-queensland-government-department-of-resources"
+      },
+      "_:r18": {
+        "prov:entity": "takar:tenure-ml-10208",
+        "prov:agent": "takar:publisher-queensland-government-department-of-resources"
+      },
+      "_:r21": {
+        "prov:entity": "takar:native-title-qi2014-031-indigenous-land-use-agreement",
+        "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+      },
+      "_:r23": {
+        "prov:entity": "takar:native-title-qi2013-082-indigenous-land-use-agreement",
+        "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+      },
+      "_:r25": {
+        "prov:entity": "takar:native-title-qcd2014-006-det-cultural-heritage-party",
+        "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+      },
+      "_:r27": {
+        "prov:entity": "takar:native-title-clh000209-cultural-heritage-body",
+        "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+      },
+      "_:r30": {
+        "prov:entity": "takar:heritage-602801",
+        "prov:agent": "takar:publisher-queensland-government-heritage-register"
+      },
+      "_:r32": {
+        "prov:entity": "takar:heritage-600402",
+        "prov:agent": "takar:publisher-queensland-government-heritage-register"
+      },
+      "_:r34": {
+        "prov:entity": "takar:heritage-600413",
+        "prov:agent": "takar:publisher-queensland-government-heritage-register"
+      },
+      "_:r36": {
+        "prov:entity": "takar:heritage-602200",
+        "prov:agent": "takar:publisher-queensland-government-heritage-register"
+      },
+      "_:r38": {
+        "prov:entity": "takar:heritage-602221",
+        "prov:agent": "takar:publisher-queensland-government-heritage-register"
+      },
+      "_:r39": {
+        "prov:entity": "takar:cross-check-praman",
+        "prov:agent": "takar:team-praman"
+      },
+      "_:r40": {
+        "prov:entity": "takar:cross-check-nftking-land",
+        "prov:agent": "takar:team-nftking-land"
+      },
+      "_:r41": {
+        "prov:entity": "takar:dossier",
+        "prov:agent": "takar:takar"
+      }
+    },
+    "summary": {
+      "entities": 21,
+      "activities": 7,
+      "agents": 8,
+      "paid_asks": 5
+    }
+  },
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "3fbc8332246c2093b255508c9d49add1d8033af03354241b3c964785b60f84ca",
-    "signature": "dQkm37wnmVCn/+nUjbri9u58Z6aBC7Z/Lym1tH4llHAeQ1ZTjr4jsDA0yLV7iPzntpHT+CJHRZqPNAvAdZwcAw==",
+    "sha256": "b5b6271407d758ec55841537db6da09126bcbeafdc52a9bd45493ae8b72c4606",
+    "signature": "89TWRppIORywQgdUJv5cKrbqfT/scE8tL4326M1OEnUl+/aH49JSVotAN4vNuCCQFv+g/vculhEoTSbulcRxDQ==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }
