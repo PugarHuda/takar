@@ -115,6 +115,12 @@ async function back(id, name, signals, met, proposeTx) {
   log({ action: "second", id, hash, second: q.hash });
   // Escalated (both parties disputed): the contract needs the whole panel. Resolver 3 checks for itself too.
   const s = settle(r1);
+  // A partner's seat (--extra) signs on its own: our third key backs a deal only if it sits on this panel.
+  if (V4 && (await s.deal(id)).finalizesAt === 0n && !(r3 && (await s.isResolver(r3.address)))) {
+    console.log(`deal ${id}: seconded by resolver 2; escalated, waiting for the partner's seat to second after its own check`);
+    log({ action: "awaiting", id, hash, required: Number(await s.required(id)) });
+    return;
+  }
   if (V4 && r3 && (await s.deal(id)).finalizesAt === 0n) {
     const need = Number(await s.required(id));
     console.log(`deal ${id}: seconded by resolver 2; escalated, the full panel of ${need} must back it`);
