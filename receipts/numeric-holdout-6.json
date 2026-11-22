@@ -1,0 +1,100 @@
+{
+  "title": "lib/numeric.mjs on resolved Manifold markets it was not tuned on",
+  "generated_at": "2026-11-22T03:11:50.548Z",
+  "terms": [
+    "Fed decision",
+    "Fed meeting",
+    "rate decision",
+    "interest rates",
+    "Fed lower rates",
+    "Fed raise",
+    "S&P 500 record",
+    "bitcoin price on",
+    "BTC close",
+    "ETH close"
+  ],
+  "excluded": 487,
+  "summary": {
+    "markets": 8,
+    "answered": 8,
+    "right": 8,
+    "wrong": 0,
+    "unresolved": 0,
+    "not_taken": 0,
+    "accuracy": 1
+  },
+  "rows": [
+    {
+      "id": "jU8NEFvgsdtQuutnZXPS",
+      "url": "https://manifold.markets/jack/will-the-fed-raise-the-fed-funds-ra-b7103e6f1fbf",
+      "question": "Will the Fed raise the fed funds rate in the March 2023 meeting?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Federal funds target range, upper bound (%, daily): 4.75 on 2023-02-28 before, 5 on 2023-03-31 after, a change of +0.25 points.",
+      "right": true
+    },
+    {
+      "id": "P8dR4xL8gUgdjIeU2cQr",
+      "url": "https://manifold.markets/jack/will-the-fed-raise-the-fed-funds-ra-b8303918df65",
+      "question": "Will the Fed raise the fed funds rate in the May 2023 meeting?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5 on 2023-04-30 before, 5.25 on 2023-05-31 after, a change of +0.25 points.",
+      "right": true
+    },
+    {
+      "id": "dtRI7FZVr8P7rn5UPiht",
+      "url": "https://manifold.markets/jack/will-the-fed-lower-the-fed-funds-ra-8d5470db968f",
+      "question": "Will the Fed lower the fed funds rate in the May 2023 meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5 on 2023-04-30 before, 5.25 on 2023-05-31 after, a change of +0.25 points.",
+      "right": true
+    },
+    {
+      "id": "FrzKn5knD72wiZBjmQYJ",
+      "url": "https://manifold.markets/SamE/will-bitcoin-be-priced-higher-than-6bf3b63f445c",
+      "question": "Will Bitcoin be priced higher than $69,420 on April, 20th, 2024 at 4:20pm EST",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 64905.95 on 2024-04-20, not above 69420.",
+      "right": true
+    },
+    {
+      "id": "PemZ9rAuvdO7Zfq9L8nH",
+      "url": "https://manifold.markets/BoltonBailey/will-the-price-of-bitcoin-be-above-650e73987abd",
+      "question": "Will the price of Bitcoin be above $35k at the end of 2023?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 42300.78 on 2023-12-31, above 35000.",
+      "right": true
+    },
+    {
+      "id": "fGcRITttlYUhJdr9hA0e",
+      "url": "https://manifold.markets/AmmonLam/will-bitcoin-price-be-above-50000-a",
+      "question": "Will Bitcoin price be above $50,000 at the end of 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 94383.59 on 2024-12-31, above 50000.",
+      "right": true
+    },
+    {
+      "id": "4YzNZweMvRoySsImSq8r",
+      "url": "https://manifold.markets/AmmonLam/will-bitcoin-price-be-above-55000-a",
+      "question": "Will Bitcoin price be above $55,000 at the end of 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 94383.59 on 2024-12-31, above 55000.",
+      "right": true
+    },
+    {
+      "id": "JSs6MXEbJgXUglYTrNFD",
+      "url": "https://manifold.markets/AmmonLam/will-bitcoin-price-be-above-45000-a",
+      "question": "Will Bitcoin price be above $45,000 at the end of 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 94383.59 on 2024-12-31, above 45000.",
+      "right": true
+    }
+  ]
+}

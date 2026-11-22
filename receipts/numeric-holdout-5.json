@@ -1,0 +1,487 @@
+{
+  "title": "lib/numeric.mjs on resolved Manifold markets it was not tuned on",
+  "generated_at": "2026-11-22T03:11:11.243Z",
+  "terms": [
+    "Fed rate cut",
+    "FOMC",
+    "Federal Reserve cut",
+    "Fed hike",
+    "Fed hold rates",
+    "Fed interest rate",
+    "bitcoin close",
+    "bitcoin end of year",
+    "ethereum end of",
+    "S&P 500 all time high"
+  ],
+  "excluded": 436,
+  "summary": {
+    "markets": 51,
+    "answered": 50,
+    "right": 46,
+    "wrong": 4,
+    "unresolved": 0,
+    "not_taken": 1,
+    "accuracy": 0.92
+  },
+  "rows": [
+    {
+      "id": "Pdn0dEgOhI",
+      "url": "https://manifold.markets/CalibratedGhosts/will-the-federal-reserve-cut-intere-qLLpItRzy9",
+      "question": "Will the Federal Reserve cut interest rates by 25bp or more at the June 17, 2026 FOMC meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 3.75 on 2026-06-14 before, 3.75 on 2026-06-19 after, a change of 0 points (asked about 0.25 points).",
+      "right": true
+    },
+    {
+      "id": "zlUUlUhq50",
+      "url": "https://manifold.markets/subhamsingh/will-fed-kevin-warsh-cut-interest-r",
+      "question": "Will Fed (Kevin Warsh) cut interest rates by July 2026?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 3.75 on 2026-06-30 before, 3.75 on 2026-07-31 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "8PtCSSg6sU",
+      "url": "https://manifold.markets/CalibratedGhosts/will-the-federal-reserve-cut-intere-dsghRLEz6Z",
+      "question": "Will the Federal Reserve cut interest rates at the April 29, 2026 FOMC meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 3.75 on 2026-04-26 before, 3.75 on 2026-05-01 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "ll85pQphz0",
+      "url": "https://manifold.markets/Terminator2/will-the-fed-cut-the-federal-funds",
+      "question": "Will the Fed cut the federal funds rate at its July 2026 FOMC meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 3.75 on 2026-06-30 before, 3.75 on 2026-07-31 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "PI9Cd8EnZh",
+      "url": "https://manifold.markets/ManiPart/will-the-fed-cut-rates-by-25-bps-at",
+      "question": "Will the Fed cut rates by 25 bps at the June 2026 FOMC meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 3.75 on 2026-05-31 before, 3.75 on 2026-06-30 after, a change of 0 points (asked about 0.25 points).",
+      "right": true
+    },
+    {
+      "id": "Up5R205Op6",
+      "url": "https://manifold.markets/CalibratedGhosts/will-the-fed-cut-rates-by-at-least-2hsQA2uq92",
+      "question": "Will the Fed cut rates by at least 25 bps at the July 29, 2026 FOMC meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 3.75 on 2026-07-26 before, 3.75 on 2026-07-31 after, a change of 0 points (asked about 0.25 points).",
+      "right": true
+    },
+    {
+      "id": "lqtROphAhp",
+      "url": "https://manifold.markets/CalibratedGhosts/will-the-fed-cut-rates-by-at-least",
+      "question": "Will the Fed cut rates by at least 25 bps at the Sept. 16, 2026 FOMC meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 3.75 on 2026-09-13 before, 4 on 2026-09-18 after, a change of +0.25 points (asked about 0.25 points).",
+      "right": true
+    },
+    {
+      "id": "udAUupudlE",
+      "url": "https://manifold.markets/CalibratedGhosts/will-the-fed-cut-rates-by-at-least-gsyCdSpcsg",
+      "question": "Will the Fed cut rates by at least 25 bps at the Oct. 28, 2026 FOMC meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 4 on 2026-10-25 before, 4 on 2026-10-30 after, a change of 0 points (asked about 0.25 points).",
+      "right": true
+    },
+    {
+      "id": "2IyO0gUAUd",
+      "url": "https://manifold.markets/subhamsingh/will-the-fed-cut-interest-rates-at",
+      "question": "Will the Fed cut interest rates at the next FOMC meeting (July/Sept 2026)?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 3.75 on 2026-08-31 before, 4 on 2026-09-30 after, a change of +0.25 points.",
+      "right": true
+    },
+    {
+      "id": "KWy1zy4UrkDJSaXvlEpV",
+      "url": "https://manifold.markets/itsTomekK/will-fed-cut-rates-at-their-septemb",
+      "question": "Will FED cut rates at their September 2024 meeting?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2024-08-31 before, 5 on 2024-09-30 after, a change of -0.5 points.",
+      "right": true
+    },
+    {
+      "id": "3uHa1kljfNWFdxjKIFEK",
+      "url": "https://manifold.markets/itsTomekK/will-fed-cut-rates-at-their-march-2",
+      "question": "Will FED cut rates at their March 2024 meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2024-02-29 before, 5.5 on 2024-03-31 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "G27J6b3k9rkS4ySh08ST",
+      "url": "https://manifold.markets/itsTomekK/will-fed-cut-rates-at-their-june-20",
+      "question": "Will FED cut rates at their June 2024 meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2024-05-31 before, 5.5 on 2024-06-30 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "vYYvtVK1ZBDxCZAJSIMH",
+      "url": "https://manifold.markets/itsTomekK/will-fed-cut-rates-at-their-decembe",
+      "question": "Will FED cut rates at their December 2024 meeting?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Federal funds target range, upper bound (%, daily): 4.75 on 2024-11-30 before, 4.5 on 2024-12-31 after, a change of -0.25 points.",
+      "right": true
+    },
+    {
+      "id": "RATVDC8VB5S20yIm5rID",
+      "url": "https://manifold.markets/jack/will-the-fed-lower-the-fed-funds-ra",
+      "question": "Will the Fed lower the fed funds rate in the March 2023 meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 4.75 on 2023-02-28 before, 5 on 2023-03-31 after, a change of +0.25 points.",
+      "right": true
+    },
+    {
+      "id": "DGbdnobHkCqYsnkrOO9h",
+      "url": "https://manifold.markets/itsTomekK/will-fed-cut-rates-at-their-july-20",
+      "question": "Will FED cut rates at their July 2024 meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2024-06-30 before, 5.5 on 2024-07-31 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "Lpy68pP3mc6TLCgqUQU2",
+      "url": "https://manifold.markets/itsTomekK/will-fed-cut-rates-at-their-aprilma",
+      "question": "Will FED cut rates at their April/May 2024 meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2024-04-30 before, 5.5 on 2024-05-31 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "kdoEGcSbporNw05I76xd",
+      "url": "https://manifold.markets/itsTomekK/will-fed-cut-rates-at-their-novembe",
+      "question": "Will FED cut rates at their November 2024 meeting?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5 on 2024-10-31 before, 4.75 on 2024-11-30 after, a change of -0.25 points.",
+      "right": true
+    },
+    {
+      "id": "YwqMqMSNkceSUQKlHERL",
+      "url": "https://manifold.markets/itsTomekK/will-fed-cut-rates-at-their-january",
+      "question": "Will FED cut rates at their January 2024 meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2023-12-31 before, 5.5 on 2024-01-31 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "Ah9LcRSgSg",
+      "url": "https://manifold.markets/polymathematic/will-the-fomc-cut-rates-at-their-ma",
+      "question": "Will the FOMC cut rates at their March 2025 meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 4.5 on 2025-02-28 before, 4.5 on 2025-03-31 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "6QPCZgCC0Q",
+      "url": "https://manifold.markets/Terminator2/will-the-fed-hike-rates-at-the-july",
+      "question": "Will the Fed hike rates at the July 2026 FOMC meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 3.75 on 2026-06-30 before, 3.75 on 2026-07-31 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "5Ozd5ylnsh",
+      "url": "https://manifold.markets/CheerForgeAdmin/-will-the-us-federal-reserve-cut-in",
+      "question": "🇺🇸📉 Will the US Federal Reserve cut interest rates at its October 2026 meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 4 on 2026-09-30 before, 4 on 2026-10-31 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "R9y62C8sdP",
+      "url": "https://manifold.markets/MAKER/-will-the-fed-raise-interest-rates",
+      "question": "🇺🇸 Will the Fed raise interest rates in September 2026?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Federal funds target range, upper bound (%, daily): 3.75 on 2026-08-31 before, 4 on 2026-09-30 after, a change of +0.25 points.",
+      "right": true
+    },
+    {
+      "id": "NP8P0g5Oql",
+      "url": "https://manifold.markets/Tiger/us-federal-reserve-cuts-interest-ra",
+      "question": "US Federal Reserve cuts interest rates in June 2025?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 4.5 on 2025-05-31 before, 4.5 on 2025-06-30 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "OqEUCA9tCN",
+      "url": "https://manifold.markets/MAKER/-will-the-fed-raise-interest-rates-Z62t6ZhEy5",
+      "question": "🇺🇸 Will the Fed raise interest rates in October 2026?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 4 on 2026-09-30 before, 4 on 2026-10-31 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "t5PQQLE0pS",
+      "url": "https://manifold.markets/DevonFritz/federal-reserve-cuts-interest-rates",
+      "question": "Federal Reserve cuts interest rates at June 2025 FOMC meeting",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 4.5 on 2025-05-31 before, 4.5 on 2025-06-30 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "vqDu5TH8gWhgk8sSVMKI",
+      "url": "https://manifold.markets/breck/will-the-fed-raise-interest-rates-a",
+      "question": "Will the Fed raise interest rates at the Sept 2023 meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2023-08-31 before, 5.5 on 2023-09-30 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "lWIbFHq2gV56j0pl1hSA",
+      "url": "https://manifold.markets/MP/will-the-federal-reserve-cut-rates",
+      "question": "Will the Federal Reserve cut rates by May 2025?",
+      "market": "yes",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 4.5 on 2025-04-30 before, 4.5 on 2025-05-31 after, a change of 0 points.",
+      "right": false
+    },
+    {
+      "id": "E4xZOmrVNUDhjDEYK4vj",
+      "url": "https://manifold.markets/chrisjbillington/will-the-fed-raise-interest-rates-i",
+      "question": "Will the Fed raise interest rates in the October-November 2023 meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2023-10-31 before, 5.5 on 2023-11-30 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "BtglLNaU4xhmq9knER7R",
+      "url": "https://manifold.markets/Lunar/will-the-fmoc-stay-with-their-march",
+      "question": "Will The FOMC Stay With Their March 2024 Indication In Their Statement Of Having 3 Rate Cuts During 2024?",
+      "market": "yes",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2024-02-29 before, 5.5 on 2024-03-31 after, a change of 0 points.",
+      "right": false
+    },
+    {
+      "id": "U3K6qpp4tvhO6ZeQY0VJ",
+      "url": "https://manifold.markets/Lunar/will-the-fmoc-stay-with-their-march-b00562c17f39",
+      "question": "Will The FOMC Stay With Their March 2024 Indication In Their Statement Of Penciling In 0.75% Total Rate Cut During 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2024-02-29 before, 5.5 on 2024-03-31 after, a change of 0 points (asked about 0.75 points).",
+      "right": true
+    },
+    {
+      "id": "sd5n540w5Xle5WYjlgpL",
+      "url": "https://manifold.markets/bigmac/will-the-federal-open-market-commit-e2fa4f1075a6",
+      "question": "Will the Federal Open Market Committee (FOMC) raise the federal fund rate at the next meeting on November 1st, 2023?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2023-10-29 before, 5.5 on 2023-11-03 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "2z2Q9zdN60",
+      "url": "https://manifold.markets/Plant/will-the-federal-reserve-cut-intere-p6AsIZ0ZhP",
+      "question": "Will the Federal Reserve cut interest rates in September 2025?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Federal funds target range, upper bound (%, daily): 4.5 on 2025-08-31 before, 4.25 on 2025-09-30 after, a change of -0.25 points.",
+      "right": true
+    },
+    {
+      "id": "u0OQnQC22Z",
+      "url": "https://manifold.markets/TrustMe/will-the-us-federal-reserve-issue-a",
+      "question": "Will the US Federal Reserve issue any rate cuts from May 2025 to end of 2025?",
+      "market": "yes",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 4.5 on 2025-04-30 before, 4.5 on 2025-05-31 after, a change of 0 points.",
+      "right": false
+    },
+    {
+      "id": "exnVdGu273rWrer3Dbvq",
+      "url": "https://manifold.markets/mirrorbot/kalshi-will-the-federal-reserve-cut-468f07e1bbc7",
+      "question": "[Kalshi] Will the Federal Reserve cut rates by May 01, 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2024-04-28 before, 5.5 on 2024-05-03 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "lCQDeW1W7fzo8Yzdc7ZE",
+      "url": "https://manifold.markets/Bruce54df/will-the-federal-reserve-cut-intere-588ffefbf1e2",
+      "question": "Will the Federal Reserve cut interest rates before June 13, 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2024-06-10 before, 5.5 on 2024-06-15 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "gQTGQp5hCAcfyi0v1bnQ",
+      "url": "https://manifold.markets/mirrorbot/kalshi-will-the-federal-reserve-cut-4c721449ad70",
+      "question": "[Kalshi] Will the Federal Reserve cut rates by June 12, 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2024-06-09 before, 5.5 on 2024-06-14 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "mNI8qOxpfMu0z0i7pvwy",
+      "url": "https://manifold.markets/mirrorbot/kalshi-will-the-federal-reserve-cut-1e31d4125a7b",
+      "question": "[Kalshi] Will the Federal Reserve cut rates by March 20, 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2024-03-17 before, 5.5 on 2024-03-22 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "g2xae67MCj0eJexnZmwR",
+      "url": "https://manifold.markets/mirrorbot/kalshi-will-the-federal-reserve-cut-7027ada32123",
+      "question": "[Kalshi] Will the Federal Reserve cut rates by July 31, 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2024-07-28 before, 5.5 on 2024-08-02 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "k81ncxjmu7Qt1FyaoU14",
+      "url": "https://manifold.markets/mirrorbot/kalshi-will-the-federal-reserve-cut-2b90a64d2710",
+      "question": "[Kalshi] Will the Federal Reserve cut rates by November 07, 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5 on 2024-11-04 before, 4.75 on 2024-11-09 after, a change of -0.25 points.",
+      "right": true
+    },
+    {
+      "id": "EFPGzUsUQ2iftVbJPvzF",
+      "url": "https://manifold.markets/mirrorbot/kalshi-will-the-federal-reserve-cut",
+      "question": "[Kalshi] Will the Federal Reserve cut rates by September 18, 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2024-09-15 before, 5 on 2024-09-20 after, a change of -0.5 points.",
+      "right": true
+    },
+    {
+      "id": "yTXsU8PCfYL9FHqmhwcV",
+      "url": "https://manifold.markets/BryceBowemd39/will-the-federal-reserve-cut-intere",
+      "question": "Will the next Federal Reserve interest rate cuts happen in March 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2024-02-29 before, 5.5 on 2024-03-31 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "msVkEPj2MvAcdpzs3dz2",
+      "url": "https://manifold.markets/KellyAllan/will-the-federal-reserve-announce-a",
+      "question": "Will the Federal Reserve announce an interest rate cut before March 31, 2024",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 5.5 on 2024-03-28 before, 5.5 on 2024-04-02 after, a change of 0 points.",
+      "right": true
+    },
+    {
+      "id": "3WVUxuLeKoXFcpcStlB4",
+      "url": "https://manifold.markets/Gigacasting/will-the-fed-hike-at-every-meeting-7598cf57d54d",
+      "question": "Will the Fed hike at every meeting through March 2023?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Federal funds target range, upper bound (%, daily): 4.75 on 2023-02-28 before, 5 on 2023-03-31 after, a change of +0.25 points.",
+      "right": true
+    },
+    {
+      "id": "ZWOn5cYpNET6FdyoKEwC",
+      "url": "https://manifold.markets/Gigacasting/will-the-fed-hike-at-every-meeting-9eb80c7ec835",
+      "question": "Will the Fed hike at every meeting through February 2023?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "Federal funds target range, upper bound (%, daily): 4.5 on 2023-01-31 before, 4.75 on 2023-02-28 after, a change of +0.25 points.",
+      "right": true
+    },
+    {
+      "id": "pTEAS44GZxZIlC2s6G4f",
+      "url": "https://manifold.markets/AmmonLam/will-the-fed-increase-interest-rate",
+      "question": "Will the Fed increase interest rates by 75 bps after its December 2022 meeting?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Federal funds target range, upper bound (%, daily): 4 on 2022-11-30 before, 4.5 on 2022-12-31 after, a change of +0.5 points (asked about 0.75 points).",
+      "right": true
+    },
+    {
+      "id": "pzyhqUcshn",
+      "url": "https://manifold.markets/MerleBtc/will-bitcoin-close-above-100k-in-de",
+      "question": "Will Bitcoin be above $100k at the close of December 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Bitcoin (Coinbase, USD, daily): 94383.59 on 2024-12-31, not above 100000.",
+      "right": true
+    },
+    {
+      "id": "lMjFBZh1kq1lsSrp6uPV",
+      "url": "https://manifold.markets/ACXBot/will-ethereum-above-5k-at-the-end-o",
+      "question": "13. Will Ethereum be above $5k at the end of 2022?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "Ether (Coinbase, USD, daily): 1195.27 on 2022-12-31, not above 5000.",
+      "right": true
+    },
+    {
+      "id": "HwoB8OteashLPScjzrNC",
+      "url": "https://manifold.markets/kian_spire/will-the-price-of-ethereum-exceed-2",
+      "question": "Will the price of Ethereum exceed $2.500,- in 2023?",
+      "market": "no",
+      "ours": "not taken",
+      "evidence": null,
+      "right": null
+    },
+    {
+      "id": "lzAh8Otp6y",
+      "url": "https://manifold.markets/elf/will-the-stock-market-sp-500-drop-2",
+      "question": "Will the Stock Market ( S&P 500 ) drop 25% below its current all time high in 2025? 🇺🇸📉🏦🤑",
+      "market": "no",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): highest close in 2025-01-01..2025-12-31 was 6932.05 on 2025-12-24; highest before it was 6090.27 on 2024-12-06 (FRED history from 2016-11-21).",
+      "right": false
+    },
+    {
+      "id": "udMMbaf4SzLnxzb3VS7j",
+      "url": "https://manifold.markets/BruceGrugett/will-the-sp-500-close-at-an-all-tim",
+      "question": "Will the S&P 500 close at an all time high in 2023?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "S&P 500 (daily close): highest close in 2023-01-01..2023-12-31 was 4783.35 on 2023-12-28; highest before it was 4796.56 on 2022-01-03 (FRED history from 2016-11-21).",
+      "right": true
+    },
+    {
+      "id": "MITfZeAcEYEGj94wWJeL",
+      "url": "https://manifold.markets/Lunar/will-the-sp-500-indexspinx-close-hi-725e2ec16f71",
+      "question": "🏛 Will The S&P 500 (INDEXSP:.INX) Close Higher Than Its All Time High Of 4,796.56 At Any Point During 2024?",
+      "market": "yes",
+      "ours": "yes",
+      "evidence": "S&P 500 (daily close): highest close in 2024-01-01..2024-12-31 was 6090.27 on 2024-12-06; highest before it was 4796.56 on 2022-01-03 (FRED history from 2016-11-21).",
+      "right": true
+    }
+  ]
+}
