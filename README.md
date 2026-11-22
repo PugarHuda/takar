@@ -90,6 +90,11 @@ Spending limits are enforced in code, not trusted to the server:
   - `https://sepolia.etherscan.io/tx/<settlementTx>`
   - `GET https://devnode.telegraphprotocol.com/engine/v1/signal/<signalHash>`
 - **Decisions:** `receipts/decisions.jsonl` records every fleet decision, with its reasons, the station reading, and the cost per operating hour.
+- **Against a frontier model:** `receipts/frontier-compare.json` (`scripts/frontier-compare.mjs`). On 67 settled questions (prices, Fed decisions, recessions, 2024-25 match results), each model got the bare question with no tools and could say unknown:
+  - Claude Opus 5.5: 57 right, 4 wrong.
+  - Takar Outcome: 57 right, 1 wrong, with the source row named for each answer.
+  - Claude Haiku 5.5: 17 right.
+- **Evaluation material:** `evaluator/*-pairs.mjs`. Preference pairs from public sources for six Telegraph intents whose pools were short of material: game results, sports scores, loan rates, storm alerts, URL safety and invoice reconciliation. 22 Nov, 617 rows sent.
 
 ## What the receipts found (17 Nov 2026)
 
