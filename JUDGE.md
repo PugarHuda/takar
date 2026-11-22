@@ -35,7 +35,7 @@ Several Season II entries ask more than one miner. The difference is in what cou
 | Money | Not involved | Escrow pays only when the evidence agrees; two resolvers, a bond on disputes, a panel of three on escalation |
 | The provider side | Not tested | Our own miner answers from official series by code, measured on unseen markets, and known-answer tests of the top miners go on chain |
 
-Offline: `npm ci && npm test` (494 checks; `npm run coverage`: 90.5% of lines, 79.2% of branches, 91.0% of functions in lib/, lowest in the network and payment layers telegraph.mjs and x402.mjs, which the paid ledger exercises instead), `cd onchain && forge test` (25). Everything below is detail.
+Offline: `npm ci && npm test` (504 checks; `npm run coverage`: 90.5% of lines, 79.2% of branches, 91.0% of functions in lib/, lowest in the network and payment layers telegraph.mjs and x402.mjs, which the paid ledger exercises instead), `cd onchain && forge test` (25). Everything below is detail.
 
 ---
 
