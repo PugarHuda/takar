@@ -25,9 +25,18 @@ export const TRUSTED = (process.env.TAKAR_TRUSTED_ATTESTERS ?? "0x39D2bae5EAedA9
 export async function operatorOf() {
   if (Date.now() - opCache.at > 3600_000) {
     const list = await fetch("https://devnode.telegraphprotocol.com/api/miners", { signal: AbortSignal.timeout(10_000) }).then((r) => r.json()).catch(() => null);
-    if (Array.isArray(list)) opCache = { at: Date.now(), map: new Map(list.map((m) => [String(m.id), m.fee_address ?? m.wallet_address ?? null])) };
+    if (Array.isArray(list)) {
+      const host = (u) => { try { return new URL(u).hostname; } catch { return null; } };
+      opCache = { at: Date.now(), map: new Map(list.map((m) => [String(m.id), m.fee_address ?? m.wallet_address ?? null])), hosts: new Map(list.map((m) => [String(m.id), host(m.base_url)])) };
+    }
   }
   return (id) => opCache.map.get(String(id)) ?? null;
+}
+
+/** Miner id -> the host its registry entry calls (api.coingecko.com for a CoinGecko wrapper). */
+export async function upstreamOf() {
+  await operatorOf();
+  return (id) => opCache.hosts?.get(String(id)) ?? null;
 }
 
 /** One spend guard for every paid path (second opinion and the meta-miner). */
@@ -87,7 +96,7 @@ export default async function handler(req, res) {
   const t0 = Date.now();
   try {
     const reputation = await reputationFor(intent);
-    const out = await secondOpinion({ intent, params }, { ask: (a) => ask({ ...a, signer }), ranked, reputation, operatorOf: await operatorOf(), strictOperators: true, fields, escalate, maxUsd });
+    const out = await secondOpinion({ intent, params }, { ask: (a) => ask({ ...a, signer }), ranked, reputation, operatorOf: await operatorOf(), upstreamOf: await upstreamOf(), strictOperators: true, fields, escalate, maxUsd });
     // Every call goes on the public record (EAS). A failed write never fails the answer.
     // ponytail: concurrent sends on one instance can collide on the nonce; that call just goes unrecorded.
     const record = await Promise.race([recordFeed(out, client, signer), new Promise((_, no) => setTimeout(() => no(new Error("timeout")), 8000))]).catch((e) => { console.log(JSON.stringify({ feed_error: String(e.message).slice(0, 120) })); return null; });

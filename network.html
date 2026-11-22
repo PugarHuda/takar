@@ -51,6 +51,9 @@ pre { white-space:pre-wrap; overflow-wrap:anywhere; font-size:.85rem; }
     <p class="note">An operator here is a fee address. Miners that pay the same address count as one operator: that may be one team or a platform account, and the registry does not say which. A second opinion is only independent across operators.</p>
     <p id="ops-sum">Loading the registry…</p>
     <div class="scroll"><table id="ops-top"></table></div>
+    <h2>Different operators, same upstream</h2>
+    <p class="note">The host each miner's registry entry calls. When miners on different payout addresses call the same API, two of them agreeing is one source relayed twice. Takar's second opinion reports this as "shared upstream".</p>
+    <div class="scroll"><table id="ops-hosts"></table></div>
     <h2>Independent choice per intent</h2>
     <p class="note">How many operators actually serve each intent. <b>Effective operators</b> is the inverse Herfindahl index: the number of equal-sized operators the intent's miners amount to.</p>
     <div class="scroll"><table id="ops-intents"></table></div>
@@ -81,6 +84,8 @@ const pct = (x) => (x == null ? "—" : `${(x * 100).toFixed(x < 0.1 ? 1 : 0)}%`
     document.getElementById("ops-sum").innerHTML = `<span class="big">${esc(o.miners)}</span> active miners pay out to <span class="big">${esc(o.operators)}</span> fee addresses. The two largest take <b>${pct(o.top_two_share)}</b> of all miners. Read ${esc(o.read_at)}.`;
     document.getElementById("ops-top").innerHTML = `<thead><tr><th>Fee address</th><th>Miners</th><th>Share</th><th>Intents</th><th>Examples</th></tr></thead><tbody>` +
       o.top_operators.map((x) => `<tr><td><a href="https://sepolia.etherscan.io/address/${esc(x.address)}">${esc(x.short)}</a></td><td class="n">${esc(x.miners)}</td><td class="n">${pct(x.share)}</td><td class="n">${esc(x.intents)}</td><td>${esc(x.sample.join(", "))}</td></tr>`).join("") + `</tbody>`;
+    document.getElementById("ops-hosts").innerHTML = `<thead><tr><th>Upstream host</th><th>Miners</th><th>Operators</th></tr></thead><tbody>` +
+      (o.shared_endpoints ?? []).slice(0, 15).map((x) => `<tr><td>${esc(x.host)}</td><td class="n">${esc(x.miners)}</td><td class="n">${esc(x.operators)}</td></tr>`).join("") + `</tbody>`;
     document.getElementById("ops-intents").innerHTML = `<thead><tr><th>Intent</th><th>Miners</th><th>Operators</th><th>Largest operator</th><th>Effective operators</th></tr></thead><tbody>` +
       o.intents.slice(0, 40).map((x) => `<tr><td>${esc(x.intent)}</td><td class="n">${esc(x.miners)}</td><td class="n ${x.operators < 2 ? "bad" : ""}">${esc(x.operators)}</td><td class="n">${pct(x.top_operator_share)}</td><td class="n">${esc(x.effective_operators)}</td></tr>`).join("") + `</tbody>`;
   } catch (e) { document.getElementById("ops-sum").textContent = `Could not read the registry (${e.message}).`; }
