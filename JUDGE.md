@@ -14,6 +14,7 @@ Watch (2:51, narrated): https://takar-telegraph.vercel.app/media/takar-overview.
 | Honest numbers | `receipts/scorecard-contested-2.json` | 37 contested markets, Brier 0.121 (0.076–0.176); our miner 15 right, 0 wrong |
 | For miner operators | `GET /api/miner?id=takar-outcome` | per-epoch scores, silent zeros flagged, routing check from the node's request counter |
 | Used by another team | `GET /api/reputation?intent=MINING_INTELLIGENCE_GENERAL&attester=0x98021b20Efdb7ae2C57366010a6E0fDE207b4466` | Praman Desk attested to our open schema with its own wallet ([EAS 0x33d85bed…](https://sepolia.easscan.org/attestation/view/0x33d85bed90eb3164c5124a7c26ca79be386003205265044d1425cea9b714e115)) and built its Gold Rush arbitrator on our dossier JSON; our dossiers call it back and it patched its scopes after our finding |
+| What it costs | [docs/ECONOMICS.md](docs/ECONOMICS.md) | from our own ledger: a second opinion /usr/bin/bash.017 (1.68 paid asks), a public dossier /usr/bin/bash.03–0.04 in about 40 s, a deep one at most /usr/bin/bash.17; a third opinion is bought only when two disagree, capped in code |
 | The miner answers from data, not a model, where it can | [docs/RESOLVERS.md](docs/RESOLVERS.md) | one card per source: prices and Fed decisions from FRED (37/37 and 8/8 on unseen markets), dated games from ESPN (100/100 against openfootball), Wikipedia with a checked quote; every round, including the bad ones, in `receipts/` |
 
 Offline: `npm ci && npm test` (467 checks), `cd onchain && forge test` (25). Everything below is detail.
