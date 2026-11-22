@@ -29,6 +29,7 @@ Reviewers: start at [JUDGE.md](JUDGE.md), which opens with what each app does **
 | Use | How |
 |---|---|
 | Second opinion on any intent | `POST /api/second-opinion {intent, params, client?}`, the Minds Bazaar Skill "Takar Second Opinion", or `npx -y takar-mcp` (set `TAKAR_PAYER_KEY` to pay from your own escrow, no limit). Every call is an EAS attestation: `GET /api/feed`. |
+| Second opinion in CI (GitHub Action) | `- uses: PugarHuda/takar@main` with `intent`, `params` (JSON) and `fields`; the job fails unless two operators agree, and the step summary lists both Telegraph signals. Self-test: `.github/workflows/action-selftest.yml` (passed 22 Nov, verdict `agree`). |
 | Which miner to trust | `GET /api/reputation?intent=`; add your own evidence [on easscan](https://sepolia.easscan.org/attestation/attestWithSchema/0x351bc4ecf778660c8de0d42eb111e758469e1fe5ffc1b993899e399c9c056741). |
 | Why did my miner score that | `GET /api/miner?id=` (`&format=svg` for a README badge). |
 | Gold Rush dossier for a Queensland mine | [goldrush.html](https://takar-telegraph.vercel.app/goldrush.html) (8 mines, PDF/Markdown/signed JSON; tenure, native title category, real-terms gold price), `GET /api/dossier?mine=`. |
