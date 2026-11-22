@@ -1,0 +1,4930 @@
+{
+  "title": "Takar Outcome vs frontier-family models on settled questions",
+  "generated_at": "2026-11-22T15:31:23.505Z",
+  "method": "Bare question, no tools, temperature 0, unknown allowed. Takar answers as recorded in each holdout run (data first, model only with a verbatim quote). Truth: the market's own resolution, or openfootball for games. Models called through SumoPod with thinking disabled (with it on they spent the token budget thinking and returned nothing); 19 Opus answers that still came back empty were retried once with a larger budget. Cost of the comparison: about 0.64 USD of SumoPod credit, including two discarded runs.",
+  "models": [
+    "claude-opus-5-5",
+    "claude-haiku-5-5"
+  ],
+  "summary": {
+    "questions": 67,
+    "takar": {
+      "right": 57,
+      "abstained": 9,
+      "wrong": 1
+    },
+    "claude-opus-5-5": {
+      "right": 57,
+      "abstained": 6,
+      "wrong": 4,
+      "confident_wrong": 1,
+      "tokens": 22775
+    },
+    "claude-haiku-5-5": {
+      "abstained": 47,
+      "right": 17,
+      "wrong": 3,
+      "confident_wrong": 2,
+      "tokens": 13638
+    }
+  },
+  "showcase": [
+    {
+      "question": "Will Ethereum trade above $20k at any point in 2024?",
+      "truth": "no",
+      "takar": "no",
+      "wrong": [
+        {
+          "model": "claude-haiku-5-5",
+          "said": "yes",
+          "confidence": null,
+          "reason": "{\"answer\":\"yes\",\"confidence\":0.8,\"reason\":\"Ethereum traded above $20,000 in March 2024 (reaching roughly $4,000 peak in March... ) — correction: Ethereum's 2024"
+        }
+      ]
+    },
+    {
+      "question": "Will the Fed increase interest rates by 75 bps after its December 2022 meeting?",
+      "truth": "no",
+      "takar": "no",
+      "wrong": [
+        {
+          "model": "claude-haiku-5-5",
+          "said": "yes",
+          "confidence": 0.97,
+          "reason": "The Fed raised the federal funds target range by 50 bps at its December 2022 meeting, not 75 bps, so a 75 bps increase did not occur."
+        }
+      ]
+    },
+    {
+      "question": "Did West Ham United FC win the match against Brentford FC on 2025-02-15 in the Premier League?",
+      "truth": "no",
+      "takar": "no",
+      "wrong": [
+        {
+          "model": "claude-opus-5-5",
+          "said": "yes",
+          "confidence": 0.8,
+          "reason": "I recall West Ham winning 1-0 away at Brentford on 15 February 2025, with Jarrod Bowen scoring under Graham Potter."
+        }
+      ]
+    },
+    {
+      "question": "Did Bologna FC 1909 win the match against Hellas Verona FC on 2024-12-30 in the Serie A?",
+      "truth": "no",
+      "takar": "no",
+      "wrong": [
+        {
+          "model": "claude-opus-5-5",
+          "said": "yes",
+          "confidence": 0.62,
+          "reason": "I recall Bologna winning 3-2 away at Verona on 30 December 2024 in Serie A, but I am not fully certain of the details."
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "set": "numeric-holdout-2",
+      "question": "Will Bitcoin BTC reach $130,000 in 2025?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/HillaryClinton/will-bitcoin-btc-reach-130000-in-20",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.8,
+          "reason": "As far as I know, Bitcoin's 2025 peak was about $126,000 in early October before it fell back sharply, so it never hit $130,000 that year.",
+          "ms": 2992,
+          "tokens": {
+            "completion_tokens": 200,
+            "prompt_tokens": 116,
+            "total_tokens": 316,
+            "completion_tokens_details": {
+              "reasoning_tokens": 125,
+              "text_tokens": 75
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 116,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.3,
+          "reason": "Bitcoin's price in 2025 depends on future market conditions that cannot be reliably predicted from my knowledge, and I lack current price data.",
+          "ms": 931,
+          "tokens": {
+            "completion_tokens": 73,
+            "prompt_tokens": 115,
+            "total_tokens": 188,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 73
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 115,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-2",
+      "question": "Will Bitcoin (BTC) increase by over 6% on any day in Mar 2024?",
+      "truth": "yes",
+      "takar": "unresolved",
+      "source": "https://manifold.markets/AmmonLam/will-bitcoin-btc-increase-by-over-6-42cc58f94dc1",
+      "takar_grade": "abstained",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.85,
+          "reason": "BTC had daily gains above 6% in March 2024, including about +8% on March 4 and roughly +9% on March 20 during the run to its all-time high.",
+          "ms": 3426,
+          "tokens": {
+            "completion_tokens": 239,
+            "prompt_tokens": 124,
+            "total_tokens": 363,
+            "completion_tokens_details": {
+              "reasoning_tokens": 164,
+              "text_tokens": 75
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 124,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "yes",
+          "confidence": 0.8,
+          "reason": "Bitcoin rose well over 6% on several days in March 2024 (e.g., around the March 5 and March 11-14 rallies to new all-time highs), though I cannot verify exact daily closes from memory.",
+          "ms": 994,
+          "tokens": {
+            "completion_tokens": 93,
+            "prompt_tokens": 123,
+            "total_tokens": 216,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 93
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 123,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-2",
+      "question": "🏛⬆️ Will The S&P 500 (INDEXSP:.INX) Close Lower Than 4,699.99 At Any Point During Q2-Q4 2024?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/Lunar/-will-the-sp-500-indexspinx-close-l-ea5228b39a64",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.93,
+          "reason": "The S&P 500's lowest close from April to December 2024 was about 4,967 on April 19, well above 4,699.99.",
+          "ms": 2127,
+          "tokens": {
+            "completion_tokens": 136,
+            "prompt_tokens": 153,
+            "total_tokens": 289,
+            "completion_tokens_details": {
+              "reasoning_tokens": 72,
+              "text_tokens": 64
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 153,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "no",
+          "confidence": 0.8,
+          "reason": "The S&P 500 traded well above 4,700 throughout Q2 through Q4 2024 (it was around 5,000–5,900), so it did not close below 4,699.99 in that window, though my knowledge of exact daily closes is approximate.",
+          "ms": 1020,
+          "tokens": {
+            "completion_tokens": 103,
+            "prompt_tokens": 152,
+            "total_tokens": 255,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 103
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 152,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-2",
+      "question": "Will the price of Ether (Ethereum / ETH) exceed $5,000 in 2024?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/BearMarket/will-the-price-of-ether-ethereum-et",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.93,
+          "reason": "ETH peaked at roughly $4,000–$4,100 in March and December 2024 and did not reach $5,000 that year.",
+          "ms": 2264,
+          "tokens": {
+            "completion_tokens": 159,
+            "prompt_tokens": 125,
+            "total_tokens": 284,
+            "completion_tokens_details": {
+              "reasoning_tokens": 94,
+              "text_tokens": 65
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 125,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "ETH's 2024 price path is beyond my reliable knowledge and depends on future market conditions, so I cannot determine whether it exceeded $5,000.",
+          "ms": 920,
+          "tokens": {
+            "completion_tokens": 77,
+            "prompt_tokens": 124,
+            "total_tokens": 201,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 77
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 124,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-2",
+      "question": "32. Will the S&P 500 index reach a new all-time high in 2023?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/ACXBot/32-will-the-sp-500-index-reach-a-ne",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.93,
+          "reason": "The S&P 500 ended 2023 at about 4,770, just short of its January 2022 record, and did not set a new all-time high until January 19, 2024.",
+          "ms": 5287,
+          "tokens": {
+            "completion_tokens": 200,
+            "prompt_tokens": 118,
+            "total_tokens": 318,
+            "completion_tokens_details": {
+              "reasoning_tokens": 126,
+              "text_tokens": 74
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 118,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.3,
+          "reason": "Whether the S&P 500 hit a new all-time high in 2023 depends on market performance I cannot verify from my own knowledge, and I'm not certain of the exact 2023 closing record relative to prior highs.",
+          "ms": 949,
+          "tokens": {
+            "completion_tokens": 95,
+            "prompt_tokens": 117,
+            "total_tokens": 212,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 95
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 117,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-2",
+      "question": "Will S&P 500 increase in April 2023?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "https://manifold.markets/XComhghall/will-sp-500-increase-in-april-2023",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.9,
+          "reason": "The S&P 500 closed March 2023 near 4,109 and April 2023 near 4,169, a gain of about 1.5%.",
+          "ms": 2201,
+          "tokens": {
+            "completion_tokens": 113,
+            "prompt_tokens": 109,
+            "total_tokens": 222,
+            "completion_tokens_details": {
+              "reasoning_tokens": 45,
+              "text_tokens": 68
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 109,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "April 2023 is a historical period I can recall only roughly, and I cannot verify the exact monthly close of the S&P 500 from memory with confidence.",
+          "ms": 918,
+          "tokens": {
+            "completion_tokens": 75,
+            "prompt_tokens": 108,
+            "total_tokens": 183,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 75
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 108,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-2",
+      "question": "Will the S&P 500 be above 5200 at the end of April 2024?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/Pedro/will-the-sp-500-be-above-5200-at-th-f923567a169e",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.9,
+          "reason": "The S&P 500 fell about 4% in April 2024 and closed near 5,036 on April 30, below 5,200.",
+          "ms": 2070,
+          "tokens": {
+            "completion_tokens": 133,
+            "prompt_tokens": 117,
+            "total_tokens": 250,
+            "completion_tokens_details": {
+              "reasoning_tokens": 70,
+              "text_tokens": 63
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 117,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I have no access to live or post-cutoff market data, and I can't verify the S&P 500 level at the end of April 2024 from my own knowledge with any reliability.",
+          "ms": 1070,
+          "tokens": {
+            "completion_tokens": 78,
+            "prompt_tokens": 116,
+            "total_tokens": 194,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 78
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 116,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-2",
+      "question": "Will the S&P 500 be above 5500 at the end of Apr 2024?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/AmmonLam/will-the-sp-500-be-above-5500-at-th-81a5d85f5e18",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.95,
+          "reason": "The S&P 500 closed April 2024 at roughly 5,035, well below 5,500, and did not first pass 5,500 until mid-2024.",
+          "ms": 2458,
+          "tokens": {
+            "completion_tokens": 131,
+            "prompt_tokens": 119,
+            "total_tokens": 250,
+            "completion_tokens_details": {
+              "reasoning_tokens": 59,
+              "text_tokens": 72
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 119,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I lack reliable knowledge of the S&P 500's level at the end of April 2024 and cannot verify its price from memory, so I shouldn't guess.",
+          "ms": 980,
+          "tokens": {
+            "completion_tokens": 76,
+            "prompt_tokens": 118,
+            "total_tokens": 194,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 76
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 118,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-3",
+      "question": "Will Bitcoin exceed $97,000 before noon (12:00 pm) on January 19, 2026?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/ShyriSkunk/will-bitcoin-exceed-97000-before-no",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "unknown",
+          "confidence": 0.3,
+          "reason": "I have no reliable data on Bitcoin's price in mid-January 2026, so I can't say whether it crossed $97,000 by then.",
+          "ms": 2889,
+          "tokens": {
+            "completion_tokens": 270,
+            "prompt_tokens": 129,
+            "total_tokens": 399,
+            "completion_tokens_details": {
+              "reasoning_tokens": 200,
+              "text_tokens": 70
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 129,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "abstained"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I have no access to live prices or data after my knowledge cutoff, so I cannot determine Bitcoin's price on January 19, 2026.",
+          "ms": 903,
+          "tokens": {
+            "completion_tokens": 71,
+            "prompt_tokens": 128,
+            "total_tokens": 199,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 71
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 128,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-3",
+      "question": "Will Bitcoin reach a new all time high in USD in 2024?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "https://manifold.markets/CrptoYeti/will-bitcoin-reach-a-new-all-time-h",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.97,
+          "reason": "Bitcoin set new all-time highs in 2024, passing about $73k in March and topping $100k in December.",
+          "ms": 2003,
+          "tokens": {
+            "completion_tokens": 104,
+            "prompt_tokens": 116,
+            "total_tokens": 220,
+            "completion_tokens_details": {
+              "reasoning_tokens": 44,
+              "text_tokens": 60
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 116,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "yes",
+          "confidence": 0.9,
+          "reason": "Bitcoin surpassed its previous all-time high of about $69,000 in March 2024 and reached new records above $73,000 that month, with further highs later in the year.",
+          "ms": 954,
+          "tokens": {
+            "completion_tokens": 78,
+            "prompt_tokens": 115,
+            "total_tokens": 193,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 78
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 115,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-3",
+      "question": "(BTC week: 7/31-8/6) Will bitcoin close above $29,230 on August 6, 2023?",
+      "truth": "no",
+      "takar": "unresolved",
+      "source": "https://manifold.markets/nick/btc-week-73186-will-bitcoin-close-a",
+      "takar_grade": "abstained",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.75,
+          "reason": "From memory, Bitcoin traded around $29,000–29,100 on August 6, 2023, just below the $29,230 threshold.",
+          "ms": 3855,
+          "tokens": {
+            "completion_tokens": 319,
+            "prompt_tokens": 131,
+            "total_tokens": 450,
+            "completion_tokens_details": {
+              "reasoning_tokens": 252,
+              "text_tokens": 67
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 131,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "I cannot verify bitcoin's closing price on August 6, 2023 from memory with enough precision to call it against the $29,230 threshold.",
+          "ms": 933,
+          "tokens": {
+            "completion_tokens": 72,
+            "prompt_tokens": 130,
+            "total_tokens": 202,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 72
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 130,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-3",
+      "question": "Bitcoin below $65K in 2026?",
+      "truth": "yes",
+      "takar": "unresolved",
+      "source": "https://manifold.markets/predyx_markets/bitcoin-below-65k-in-2026",
+      "takar_grade": "abstained",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "unknown",
+          "confidence": 0.3,
+          "reason": "Whether Bitcoin trades below $65K at some point in 2026 depends on price moves I can't reliably confirm without current data.",
+          "ms": 6854,
+          "tokens": {
+            "completion_tokens": 229,
+            "prompt_tokens": 108,
+            "total_tokens": 337,
+            "completion_tokens_details": {
+              "reasoning_tokens": 161,
+              "text_tokens": 68
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 108,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "abstained"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.1,
+          "reason": "I lack reliable knowledge of Bitcoin's price in 2026 and have no live market data to check.",
+          "ms": 926,
+          "tokens": {
+            "completion_tokens": 59,
+            "prompt_tokens": 107,
+            "total_tokens": 166,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 59
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 107,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-3",
+      "question": "Bitcoin below $75K in 2025?",
+      "truth": "no",
+      "takar": "unresolved",
+      "source": "https://manifold.markets/predyx_markets/bitcoin-below-75k-in-2025",
+      "takar_grade": "abstained",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": null,
+          "reason": "{\"answer\":\"yes\",\"confidence\":0.85,\"reason\":\"During the tariff-driven selloff around April 7, 2025, Bitcoin briefly fell to roughly $74,500, below $75K.\"",
+          "ms": 3014,
+          "tokens": {
+            "completion_tokens": 200,
+            "prompt_tokens": 108,
+            "total_tokens": 308,
+            "completion_tokens_details": {
+              "reasoning_tokens": 133,
+              "text_tokens": 67
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 108,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "wrong"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I lack reliable knowledge of Bitcoin's price throughout 2025 and cannot verify whether it traded below $75K at any point that year.",
+          "ms": 857,
+          "tokens": {
+            "completion_tokens": 73,
+            "prompt_tokens": 107,
+            "total_tokens": 180,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 73
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 107,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-3",
+      "question": "Will bitcoin drop below 38k in 2024",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/Quin/will-bitcoin-drop-below-38k-in-2024",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.85,
+          "reason": "Bitcoin's lowest 2024 price was about $38.5k on January 23, so it never fell below $38k that year.",
+          "ms": 2950,
+          "tokens": {
+            "completion_tokens": 215,
+            "prompt_tokens": 110,
+            "total_tokens": 325,
+            "completion_tokens_details": {
+              "reasoning_tokens": 152,
+              "text_tokens": 63
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 110,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "Bitcoin's 2024 price path depends on market conditions after my knowledge cutoff, so I cannot reliably forecast whether it falls below $38k.",
+          "ms": 918,
+          "tokens": {
+            "completion_tokens": 78,
+            "prompt_tokens": 109,
+            "total_tokens": 187,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 78
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 109,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-3",
+      "question": "Will Bitcoin go below $55K in July 2024?",
+      "truth": "yes",
+      "takar": "unresolved",
+      "source": "https://manifold.markets/predyx_markets/will-bitcoin-go-below-55k-in-july-2",
+      "takar_grade": "abstained",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.9,
+          "reason": "Bitcoin fell to roughly $53,500 around July 5, 2024, amid German government sales and Mt. Gox repayment fears.",
+          "ms": 2337,
+          "tokens": {
+            "completion_tokens": 160,
+            "prompt_tokens": 112,
+            "total_tokens": 272,
+            "completion_tokens_details": {
+              "reasoning_tokens": 89,
+              "text_tokens": 71
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 112,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "Bitcoin's July 2024 price path is a future-relative-to-my-knowledge question I cannot verify with certainty, and I have no reliable data confirming whether it dipped below $55K that month.",
+          "ms": 1028,
+          "tokens": {
+            "completion_tokens": 91,
+            "prompt_tokens": 111,
+            "total_tokens": 202,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 91
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 111,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-3",
+      "question": "Will Bitcoin go below $50K in March 2024?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/predyx_markets/will-bitcoin-go-below-50k-in-march",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.95,
+          "reason": "In March 2024 Bitcoin traded roughly between $60K and $73.8K, setting a then all-time high mid-month, and never fell below $50K.",
+          "ms": 2411,
+          "tokens": {
+            "completion_tokens": 144,
+            "prompt_tokens": 112,
+            "total_tokens": 256,
+            "completion_tokens_details": {
+              "reasoning_tokens": 70,
+              "text_tokens": 74
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 112,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "Whether Bitcoin fell below $50K in March 2024 depends on actual market prices I cannot verify, and my knowledge does not reliably cover that period's price action.",
+          "ms": 938,
+          "tokens": {
+            "completion_tokens": 81,
+            "prompt_tokens": 111,
+            "total_tokens": 192,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 81
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 111,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-4",
+      "question": "At any point during 2023 will bitcoin be worth over $100,000.00?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/NathanDickson/at-any-point-during-2023-will-bitco",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.97,
+          "reason": "Bitcoin's 2023 high was roughly $44,000–45,000 in December, and it did not pass $100,000 until December 2024.",
+          "ms": 2142,
+          "tokens": {
+            "completion_tokens": 100,
+            "prompt_tokens": 118,
+            "total_tokens": 218,
+            "completion_tokens_details": {
+              "reasoning_tokens": 31,
+              "text_tokens": 69
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 118,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "no",
+          "confidence": 0.9,
+          "reason": "Bitcoin's 2023 trading range was roughly $16,000 to $45,000, well below $100,000, so it never reached that level during 2023.",
+          "ms": 942,
+          "tokens": {
+            "completion_tokens": 72,
+            "prompt_tokens": 117,
+            "total_tokens": 189,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 72
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 117,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-4",
+      "question": "Bitcoin $180K in 2025?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/predyx_markets/bitcoin-180k-in-2025",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": null,
+          "reason": "{\"answer\":\"no\",\"confidence\":0.8,\"reason\":\"Bitcoin peaked around $126K in October 2025 and then fell below $90K, so it does not appear to have reached $180K, tho",
+          "ms": 2699,
+          "tokens": {
+            "completion_tokens": 200,
+            "prompt_tokens": 107,
+            "total_tokens": 307,
+            "completion_tokens_details": {
+              "reasoning_tokens": 128,
+              "text_tokens": 72
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 107,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "Bitcoin's price in 2025 is beyond my reliable knowledge, and I cannot check current market data.",
+          "ms": 886,
+          "tokens": {
+            "completion_tokens": 62,
+            "prompt_tokens": 106,
+            "total_tokens": 168,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 62
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 106,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-4",
+      "question": "Bitcoin $87,500 in September 2026?",
+      "truth": "no",
+      "takar": "unresolved",
+      "source": "https://manifold.markets/Jack1/bitcoin-87500-in-september-2026",
+      "takar_grade": "abstained",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "unknown",
+          "confidence": 0.9,
+          "reason": "Bitcoin's price in September 2026 is a future market outcome I cannot know or reliably predict.",
+          "ms": 2166,
+          "tokens": {
+            "completion_tokens": 113,
+            "prompt_tokens": 110,
+            "total_tokens": 223,
+            "completion_tokens_details": {
+              "reasoning_tokens": 54,
+              "text_tokens": 59
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 110,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I cannot know Bitcoin's price in September 2026 from my training knowledge, and I have no tools to check current or future prices.",
+          "ms": 881,
+          "tokens": {
+            "completion_tokens": 67,
+            "prompt_tokens": 109,
+            "total_tokens": 176,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 67
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 109,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-4",
+      "question": "Will Ethereum trade above $20k at any point in 2024?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/JimAusman/will-ethereum-trade-above-20k-at-an",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.97,
+          "reason": "Ethereum's 2024 high was roughly $4,000–$4,100, far below $20,000.",
+          "ms": 1945,
+          "tokens": {
+            "completion_tokens": 94,
+            "prompt_tokens": 114,
+            "total_tokens": 208,
+            "completion_tokens_details": {
+              "reasoning_tokens": 38,
+              "text_tokens": 56
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 114,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "yes",
+          "confidence": null,
+          "reason": "{\"answer\":\"yes\",\"confidence\":0.8,\"reason\":\"Ethereum traded above $20,000 in March 2024 (reaching roughly $4,000 peak in March... ) — correction: Ethereum's 2024",
+          "ms": 1394,
+          "tokens": {
+            "completion_tokens": 180,
+            "prompt_tokens": 113,
+            "total_tokens": 293,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 180
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 113,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "wrong"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-4",
+      "question": "Will the S&P 500 increase in 2024?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "https://manifold.markets/barak/will-the-sp-500-increase-in-2024",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.95,
+          "reason": "The S&P 500 rose roughly 23% in 2024, from about 4,770 to about 5,880.",
+          "ms": 2829,
+          "tokens": {
+            "completion_tokens": 110,
+            "prompt_tokens": 109,
+            "total_tokens": 219,
+            "completion_tokens_details": {
+              "reasoning_tokens": 51,
+              "text_tokens": 59
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 109,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future market performance cannot be known from my knowledge; I can't verify 2024 outcomes or predict them reliably.",
+          "ms": 980,
+          "tokens": {
+            "completion_tokens": 64,
+            "prompt_tokens": 108,
+            "total_tokens": 172,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 64
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 108,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-4",
+      "question": "Will S&P 500 increase by over 1.5% on any day in Apr 2024?",
+      "truth": "no",
+      "takar": "unresolved",
+      "source": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-15-on-fee1c3e9184e",
+      "takar_grade": "abstained",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": null,
+          "reason": "{\"answer\":\"no\",\"confidence\":0.85,\"reason\":\"The S&P 500 fell in April 2024, and its",
+          "ms": 2808,
+          "tokens": {
+            "completion_tokens": 200,
+            "prompt_tokens": 121,
+            "total_tokens": 321,
+            "completion_tokens_details": {
+              "reasoning_tokens": 162,
+              "text_tokens": 38
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 121,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.3,
+          "reason": "I lack reliable day-by-day S&P 500 price data for April 2024 and cannot verify whether any single day rose more than 1.5%.",
+          "ms": 903,
+          "tokens": {
+            "completion_tokens": 72,
+            "prompt_tokens": 120,
+            "total_tokens": 192,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 72
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 120,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-4",
+      "question": "Will S&P 500 increase by over 2% on any day in Apr 2024?",
+      "truth": "no",
+      "takar": "unresolved",
+      "source": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-2-on-a-f50263c02100",
+      "takar_grade": "abstained",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": null,
+          "reason": "{\"answer\":\"no\",\"confidence\":0.88,\"reason\":\"S&P 500 had no single-day gain above 2% in April 2024; its largest daily gains that",
+          "ms": 5127,
+          "tokens": {
+            "completion_tokens": 200,
+            "prompt_tokens": 119,
+            "total_tokens": 319,
+            "completion_tokens_details": {
+              "reasoning_tokens": 148,
+              "text_tokens": 52
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 119,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "no",
+          "confidence": 0.8,
+          "reason": "From my knowledge, the S&P 500 in April 2024 had no single-day gain above 2%; its largest daily move that month was roughly +1.2% on April 19, following a sharp sell-off earlier in the month.",
+          "ms": 1040,
+          "tokens": {
+            "completion_tokens": 94,
+            "prompt_tokens": 118,
+            "total_tokens": 212,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 94
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 118,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-4",
+      "question": "Will S&P 500 increase by over 2% on any day in Aug 2024?",
+      "truth": "yes",
+      "takar": "unresolved",
+      "source": "https://manifold.markets/AmmonLam/will-sp-500-increase-by-over-2-on-a-f1c4889333f1",
+      "takar_grade": "abstained",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.88,
+          "reason": "After the August 5, 2024 selloff, the S&P 500 rose about 2.3% on August 8, 2024, as I recall.",
+          "ms": 3723,
+          "tokens": {
+            "completion_tokens": 178,
+            "prompt_tokens": 119,
+            "total_tokens": 297,
+            "completion_tokens_details": {
+              "reasoning_tokens": 110,
+              "text_tokens": 68
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 119,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "yes",
+          "confidence": 0.8,
+          "reason": "The S&P 500 rose about 2.3% on August 8, 2024, rebounding sharply after the early-August volatility sell-off.",
+          "ms": 2597,
+          "tokens": {
+            "completion_tokens": 69,
+            "prompt_tokens": 118,
+            "total_tokens": 187,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 69
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 118,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-5",
+      "question": "Will the Federal Reserve cut interest rates by 25bp or more at the June 17, 2026 FOMC meeting?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/CalibratedGhosts/will-the-federal-reserve-cut-intere-qLLpItRzy9",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "The June 2026 FOMC decision is after my knowledge cutoff, and its outcome depends on economic data I can't see.",
+          "ms": 1494,
+          "tokens": {
+            "completion_tokens": 87,
+            "prompt_tokens": 134,
+            "total_tokens": 221,
+            "completion_tokens_details": {
+              "reasoning_tokens": 21,
+              "text_tokens": 66
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 134,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "A June 2026 FOMC decision depends on economic data and Fed guidance after my knowledge cutoff, so I cannot reliably forecast it.",
+          "ms": 982,
+          "tokens": {
+            "completion_tokens": 75,
+            "prompt_tokens": 133,
+            "total_tokens": 208,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 75
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 133,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-5",
+      "question": "Will the Fed cut rates by at least 25 bps at the Sept. 16, 2026 FOMC meeting?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/CalibratedGhosts/will-the-fed-cut-rates-by-at-least",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "The Sept. 16, 2026 FOMC decision is a future event that depends on economic data I don't have.",
+          "ms": 1597,
+          "tokens": {
+            "completion_tokens": 81,
+            "prompt_tokens": 132,
+            "total_tokens": 213,
+            "completion_tokens_details": {
+              "reasoning_tokens": 21,
+              "text_tokens": 60
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 132,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "A decision on a September 2026 FOMC meeting depends on future economic data and policy deliberations that I cannot know from my training knowledge.",
+          "ms": 977,
+          "tokens": {
+            "completion_tokens": 71,
+            "prompt_tokens": 131,
+            "total_tokens": 202,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 71
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 131,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-5",
+      "question": "Will FED cut rates at their December 2024 meeting?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "https://manifold.markets/itsTomekK/will-fed-cut-rates-at-their-decembe",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.97,
+          "reason": "At its December 17–18, 2024 meeting, the Fed cut the federal funds rate by 25 basis points to a 4.25%–4.50% target range.",
+          "ms": 2085,
+          "tokens": {
+            "completion_tokens": 116,
+            "prompt_tokens": 112,
+            "total_tokens": 228,
+            "completion_tokens_details": {
+              "reasoning_tokens": 40,
+              "text_tokens": 76
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 112,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "yes",
+          "confidence": 0.9,
+          "reason": "The Fed did cut the federal funds rate by 25 basis points at its December 17-18, 2024 meeting, as widely reported and as I recall from my training data.",
+          "ms": 1045,
+          "tokens": {
+            "completion_tokens": 77,
+            "prompt_tokens": 111,
+            "total_tokens": 188,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 77
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 111,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-5",
+      "question": "Will the Fed hike rates at the July 2026 FOMC meeting?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/Terminator2/will-the-fed-hike-rates-at-the-july",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "unknown",
+          "confidence": 0.3,
+          "reason": "The July 2026 FOMC decision is a future event beyond my knowledge, though the Fed's recent easing bias makes a hike look unlikely.",
+          "ms": 2551,
+          "tokens": {
+            "completion_tokens": 200,
+            "prompt_tokens": 118,
+            "total_tokens": 318,
+            "completion_tokens_details": {
+              "reasoning_tokens": 126,
+              "text_tokens": 74
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 118,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "A July 2026 FOMC decision is in the future relative to my knowledge and depends on economic data I cannot observe.",
+          "ms": 939,
+          "tokens": {
+            "completion_tokens": 64,
+            "prompt_tokens": 117,
+            "total_tokens": 181,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 64
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 117,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-5",
+      "question": "Will the Fed raise interest rates at the Sept 2023 meeting?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/breck/will-the-fed-raise-interest-rates-a",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.95,
+          "reason": "At its September 19-20, 2023 meeting the Fed held the federal funds rate steady at 5.25%-5.50%.",
+          "ms": 4074,
+          "tokens": {
+            "completion_tokens": 136,
+            "prompt_tokens": 118,
+            "total_tokens": 254,
+            "completion_tokens_details": {
+              "reasoning_tokens": 71,
+              "text_tokens": 65
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 118,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "no",
+          "confidence": 0.9,
+          "reason": "The Federal Reserve held the federal funds rate steady at its September 2023 meeting (20 Sept), keeping it at 5.25%-5.50% after the July 2023 hike.",
+          "ms": 1157,
+          "tokens": {
+            "completion_tokens": 84,
+            "prompt_tokens": 117,
+            "total_tokens": 201,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 84
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 117,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-5",
+      "question": "Will the Federal Reserve cut interest rates in September 2025?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "https://manifold.markets/Plant/will-the-federal-reserve-cut-intere-p6AsIZ0ZhP",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.85,
+          "reason": "As far as I know, the FOMC cut the federal funds rate by 25 basis points to 4.00–4.25% at its September 16–17, 2025 meeting.",
+          "ms": 2452,
+          "tokens": {
+            "completion_tokens": 146,
+            "prompt_tokens": 115,
+            "total_tokens": 261,
+            "completion_tokens_details": {
+              "reasoning_tokens": 68,
+              "text_tokens": 78
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 115,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.3,
+          "reason": "My knowledge does not reliably include the Fed's September 2025 decision, and rate outcomes depend on data released after my training.",
+          "ms": 1040,
+          "tokens": {
+            "completion_tokens": 66,
+            "prompt_tokens": 114,
+            "total_tokens": 180,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 66
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 114,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-5",
+      "question": "[Kalshi] Will the Federal Reserve cut rates by November 07, 2024?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "https://manifold.markets/mirrorbot/kalshi-will-the-federal-reserve-cut-2b90a64d2710",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.95,
+          "reason": "The Fed cut rates by 50bp on September 18, 2024 and by another 25bp on November 7, 2024.",
+          "ms": 1835,
+          "tokens": {
+            "completion_tokens": 141,
+            "prompt_tokens": 123,
+            "total_tokens": 264,
+            "completion_tokens_details": {
+              "reasoning_tokens": 78,
+              "text_tokens": 63
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 123,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "yes",
+          "confidence": 0.9,
+          "reason": "The Federal Reserve cut the federal funds target range by 50 basis points on September 18, 2024, and it cut again by 25 basis points on November 7, 2024, so a rate cut occurred on or before that date.",
+          "ms": 1194,
+          "tokens": {
+            "completion_tokens": 94,
+            "prompt_tokens": 122,
+            "total_tokens": 216,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 94
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 122,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-5",
+      "question": "Will the Fed increase interest rates by 75 bps after its December 2022 meeting?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/AmmonLam/will-the-fed-increase-interest-rate",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.97,
+          "reason": "At its December 13–14, 2022 meeting, the Fed raised rates by 50 bps to 4.25–4.50%, not 75 bps.",
+          "ms": 3261,
+          "tokens": {
+            "completion_tokens": 126,
+            "prompt_tokens": 122,
+            "total_tokens": 248,
+            "completion_tokens_details": {
+              "reasoning_tokens": 54,
+              "text_tokens": 72
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 122,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "yes",
+          "confidence": 0.97,
+          "reason": "The Fed raised the federal funds target range by 50 bps at its December 2022 meeting, not 75 bps, so a 75 bps increase did not occur.",
+          "ms": 1733,
+          "tokens": {
+            "completion_tokens": 76,
+            "prompt_tokens": 121,
+            "total_tokens": 197,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 76
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 121,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "wrong"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-6",
+      "question": "Will the Fed raise the fed funds rate in the March 2023 meeting?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "https://manifold.markets/jack/will-the-fed-raise-the-fed-funds-ra-b7103e6f1fbf",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.97,
+          "reason": "At its March 21-22, 2023 meeting the FOMC raised the target range by 25 basis points to 4.75%-5.00%, despite the banking turmoil.",
+          "ms": 2218,
+          "tokens": {
+            "completion_tokens": 138,
+            "prompt_tokens": 119,
+            "total_tokens": 257,
+            "completion_tokens_details": {
+              "reasoning_tokens": 59,
+              "text_tokens": 79
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 119,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "yes",
+          "confidence": 0.97,
+          "reason": "The FOMC raised the federal funds target range by 25 basis points to 4.50%-4.75% at its March 21-22, 2023 meeting.",
+          "ms": 1144,
+          "tokens": {
+            "completion_tokens": 73,
+            "prompt_tokens": 118,
+            "total_tokens": 191,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 73
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 118,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-6",
+      "question": "Will the Fed raise the fed funds rate in the May 2023 meeting?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "https://manifold.markets/jack/will-the-fed-raise-the-fed-funds-ra-b8303918df65",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.97,
+          "reason": "At its May 2–3, 2023 meeting the FOMC raised the federal funds target range by 25 basis points to 5.00–5.25%.",
+          "ms": 3897,
+          "tokens": {
+            "completion_tokens": 128,
+            "prompt_tokens": 119,
+            "total_tokens": 247,
+            "completion_tokens_details": {
+              "reasoning_tokens": 56,
+              "text_tokens": 72
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 119,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "yes",
+          "confidence": 0.9,
+          "reason": "The Fed did raise the federal funds target range by 25 basis points at its May 2–3, 2023 meeting, to 5.00–5.25%.",
+          "ms": 996,
+          "tokens": {
+            "completion_tokens": 73,
+            "prompt_tokens": 118,
+            "total_tokens": 191,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 73
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 118,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-6",
+      "question": "Will the Fed lower the fed funds rate in the May 2023 meeting?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/jack/will-the-fed-lower-the-fed-funds-ra-8d5470db968f",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.97,
+          "reason": "At its May 2–3, 2023 meeting the Fed raised the fed funds target range by 25 basis points to 5.00–5.25% rather than cutting it.",
+          "ms": 2280,
+          "tokens": {
+            "completion_tokens": 126,
+            "prompt_tokens": 119,
+            "total_tokens": 245,
+            "completion_tokens_details": {
+              "reasoning_tokens": 49,
+              "text_tokens": 77
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 119,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "no",
+          "confidence": 0.97,
+          "reason": "The FOMC raised the federal funds target range by 25 basis points to 5.00–5.25% at its May 2–3, 2023 meeting, so it did not lower rates.",
+          "ms": 954,
+          "tokens": {
+            "completion_tokens": 80,
+            "prompt_tokens": 118,
+            "total_tokens": 198,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 80
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 118,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-6",
+      "question": "Will Bitcoin be priced higher than $69,420 on April, 20th, 2024 at 4:20pm EST",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/SamE/will-bitcoin-be-priced-higher-than-6bf3b63f445c",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.88,
+          "reason": "Around the April 2024 halving, Bitcoin traded at roughly $63,000–65,000 on April 20, below $69,420.",
+          "ms": 4192,
+          "tokens": {
+            "completion_tokens": 146,
+            "prompt_tokens": 132,
+            "total_tokens": 278,
+            "completion_tokens_details": {
+              "reasoning_tokens": 79,
+              "text_tokens": 67
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 132,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "The question concerns a specific future-dated price, and I have no live market data; my knowledge does not include Bitcoin's price at that time on April 20, 2024.",
+          "ms": 4674,
+          "tokens": {
+            "completion_tokens": 76,
+            "prompt_tokens": 131,
+            "total_tokens": 207,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 76
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 131,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-6",
+      "question": "Will the price of Bitcoin be above $35k at the end of 2023?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "https://manifold.markets/BoltonBailey/will-the-price-of-bitcoin-be-above-650e73987abd",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.95,
+          "reason": "Bitcoin closed 2023 at roughly $42,000, well above $35k.",
+          "ms": 1959,
+          "tokens": {
+            "completion_tokens": 94,
+            "prompt_tokens": 117,
+            "total_tokens": 211,
+            "completion_tokens_details": {
+              "reasoning_tokens": 42,
+              "text_tokens": 52
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 117,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.3,
+          "reason": "Bitcoin's price at the end of 2023 is after my knowledge reliably extends and depends on market movements I cannot verify, so I cannot determine whether it was above $35k.",
+          "ms": 1044,
+          "tokens": {
+            "completion_tokens": 84,
+            "prompt_tokens": 116,
+            "total_tokens": 200,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 84
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 116,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-6",
+      "question": "Will Bitcoin price be above $50,000 at the end of 2024?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "https://manifold.markets/AmmonLam/will-bitcoin-price-be-above-50000-a",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.95,
+          "reason": "Bitcoin closed 2024 at roughly $93,000–$94,000, well above $50,000.",
+          "ms": 1845,
+          "tokens": {
+            "completion_tokens": 85,
+            "prompt_tokens": 117,
+            "total_tokens": 202,
+            "completion_tokens_details": {
+              "reasoning_tokens": 27,
+              "text_tokens": 58
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 117,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "yes",
+          "confidence": 0.9,
+          "reason": "Bitcoin traded well above $50,000 through late 2024, reaching new all-time highs above $90,000 by December 2024, so it was above $50,000 at year-end 2024.",
+          "ms": 980,
+          "tokens": {
+            "completion_tokens": 84,
+            "prompt_tokens": 116,
+            "total_tokens": 200,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 84
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 116,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-6",
+      "question": "Will Bitcoin price be above $55,000 at the end of 2024?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "https://manifold.markets/AmmonLam/will-bitcoin-price-be-above-55000-a",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.95,
+          "reason": "Bitcoin closed 2024 at roughly $93,000–$94,000, well above $55,000.",
+          "ms": 1592,
+          "tokens": {
+            "completion_tokens": 88,
+            "prompt_tokens": 117,
+            "total_tokens": 205,
+            "completion_tokens_details": {
+              "reasoning_tokens": 30,
+              "text_tokens": 58
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 117,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.1,
+          "reason": "Bitcoin's price at the end of 2024 is a future market outcome that I cannot reliably know from my training data, and I have no live price access.",
+          "ms": 995,
+          "tokens": {
+            "completion_tokens": 71,
+            "prompt_tokens": 116,
+            "total_tokens": 187,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 71
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 116,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-6",
+      "question": "Will Bitcoin price be above $45,000 at the end of 2024?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "https://manifold.markets/AmmonLam/will-bitcoin-price-be-above-45000-a",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.95,
+          "reason": "Bitcoin closed 2024 at roughly $93,000–$94,000, well above $45,000.",
+          "ms": 2235,
+          "tokens": {
+            "completion_tokens": 99,
+            "prompt_tokens": 117,
+            "total_tokens": 216,
+            "completion_tokens_details": {
+              "reasoning_tokens": 41,
+              "text_tokens": 58
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 117,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "Future Bitcoin prices are not predictable from my knowledge, and I cannot verify the end-of-2024 price with certainty.",
+          "ms": 888,
+          "tokens": {
+            "completion_tokens": 69,
+            "prompt_tokens": 116,
+            "total_tokens": 185,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 69
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 116,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-7",
+      "question": "US enter a recession in 2024? (Two quarters negative GDP growth)",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/jack/us-enter-a-recession-in-2024-two-qu",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.95,
+          "reason": "US real GDP grew in every quarter of 2024, roughly 1.4-3% annualized, with no negative quarters.",
+          "ms": 2404,
+          "tokens": {
+            "completion_tokens": 129,
+            "prompt_tokens": 118,
+            "total_tokens": 247,
+            "completion_tokens_details": {
+              "reasoning_tokens": 66,
+              "text_tokens": 63
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 118,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "no",
+          "confidence": 0.85,
+          "reason": "The U.S. did not record two consecutive quarters of negative real GDP growth in 2024; growth remained positive throughout the year, so the common two-quarter definition was not met.",
+          "ms": 984,
+          "tokens": {
+            "completion_tokens": 80,
+            "prompt_tokens": 117,
+            "total_tokens": 197,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 80
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 117,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-7",
+      "question": "Will Germany experience negative economic growth for two consecutive quarters in 2023? (Recession in Germany)",
+      "truth": "no",
+      "takar": "yes",
+      "source": "https://manifold.markets/MaxG/will-germany-experience-negative-ec",
+      "takar_grade": "wrong",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.6,
+          "reason": "Destatis revised Q1 2023 GDP to -0.3% after a -0.5% Q4 2022, putting Germany in a technical recession in 2023, though later revisions and whether both quarters must fall in 2023 add doubt.",
+          "ms": 6771,
+          "tokens": {
+            "completion_tokens": 658,
+            "prompt_tokens": 129,
+            "total_tokens": 787,
+            "completion_tokens_details": {
+              "reasoning_tokens": 556,
+              "text_tokens": 102
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 129,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "wrong"
+        },
+        "claude-haiku-5-5": {
+          "answer": "yes",
+          "confidence": 0.85,
+          "reason": "Germany's GDP contracted in both Q4 2022 and Q1 2023 (and by Destatis's revised figures, Q1 2023 was negative), which technically meets the two-consecutive-quarter recession definition in 2023.",
+          "ms": 936,
+          "tokens": {
+            "completion_tokens": 101,
+            "prompt_tokens": 128,
+            "total_tokens": 229,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 101
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 128,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "wrong"
+        }
+      }
+    },
+    {
+      "set": "numeric-holdout-7",
+      "question": "Will the US economy have a recession [two quarters of negative GDP growth] in 2024?",
+      "truth": "no",
+      "takar": "no",
+      "source": "https://manifold.markets/johnfloydcapitalcom/will-the-us-economy-have-a-recessio",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.95,
+          "reason": "US real GDP grew in every quarter of 2024 (roughly 1.4–3.1% annualized), so there were no two consecutive negative quarters.",
+          "ms": 2104,
+          "tokens": {
+            "completion_tokens": 149,
+            "prompt_tokens": 122,
+            "total_tokens": 271,
+            "completion_tokens_details": {
+              "reasoning_tokens": 76,
+              "text_tokens": 73
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 122,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Whether two consecutive quarters of negative US GDP growth occurred in 2024 depends on data I cannot verify from my own knowledge, and as far as I know 2024 did not show two negative quarters, but I cannot confirm final figures.",
+          "ms": 1036,
+          "tokens": {
+            "completion_tokens": 104,
+            "prompt_tokens": 121,
+            "total_tokens": 225,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 104
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 121,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Borussia Mönchengladbach win the match against Bayer 04 Leverkusen on 2024-08-23 in the Bundesliga?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": null,
+          "reason": "{\"answer\":\"no\",\"confidence\":0.93,\"reason\":\"Leverkusen won the 2024-25 Bundesliga opener 3-2 at Borussia-Park, with Florian Wirtz scoring a stoppage-time",
+          "ms": 2669,
+          "tokens": {
+            "completion_tokens": 200,
+            "prompt_tokens": 142,
+            "total_tokens": 342,
+            "completion_tokens_details": {
+              "reasoning_tokens": 124,
+              "text_tokens": 76
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 142,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I don't have reliable recall of the specific result of that Bundesliga fixture, and the 2024-08-23 date is outside what I can confidently verify.",
+          "ms": 859,
+          "tokens": {
+            "completion_tokens": 75,
+            "prompt_tokens": 141,
+            "total_tokens": 216,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 75
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 141,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did 1. FC Union Berlin win the match against Borussia Dortmund on 2024-10-05 in the Bundesliga?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": null,
+          "reason": "{\"answer\":\"yes\",\"confidence\":0.85,\"reason\":\"Union Berlin beat Borussia Dortmund 2-1 at home at the Stadion An der Alten Försterei on ",
+          "ms": 3133,
+          "tokens": {
+            "completion_tokens": 200,
+            "prompt_tokens": 137,
+            "total_tokens": 337,
+            "completion_tokens_details": {
+              "reasoning_tokens": 137,
+              "text_tokens": 63
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 137,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.3,
+          "reason": "I don't have reliable recall of the specific result of a Union Berlin vs. Borussia Dortmund match on 2024-10-05, and I won't guess.",
+          "ms": 970,
+          "tokens": {
+            "completion_tokens": 77,
+            "prompt_tokens": 136,
+            "total_tokens": 213,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 77
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 136,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Holstein Kiel win the match against 1. FSV Mainz 05 on 2024-11-24 in the Bundesliga?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.68,
+          "reason": "As I recall, Holstein Kiel's first Bundesliga win came after this date (against Augsburg around 30 November 2024), so they likely did not beat Mainz on 24 November.",
+          "ms": 6957,
+          "tokens": {
+            "completion_tokens": 667,
+            "prompt_tokens": 138,
+            "total_tokens": 805,
+            "completion_tokens_details": {
+              "reasoning_tokens": 583,
+              "text_tokens": 84
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 138,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I don't have reliable recall of the specific result of that Holstein Kiel vs. Mainz 05 match on 2024-11-24, so I can't confirm it.",
+          "ms": 991,
+          "tokens": {
+            "completion_tokens": 79,
+            "prompt_tokens": 137,
+            "total_tokens": 216,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 79
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 137,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Eintracht Frankfurt win the match against SC Freiburg on 2025-01-14 in the Bundesliga?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": null,
+          "reason": "{\"answer\":\"yes\",\"",
+          "ms": 2659,
+          "tokens": {
+            "completion_tokens": 200,
+            "prompt_tokens": 135,
+            "total_tokens": 335,
+            "completion_tokens_details": {
+              "reasoning_tokens": 191,
+              "text_tokens": 9
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 135,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I don't have reliable recall of the specific result of an Eintracht Frankfurt vs SC Freiburg Bundesliga match on 2025-01-14, and I can't verify it without browsing.",
+          "ms": 940,
+          "tokens": {
+            "completion_tokens": 90,
+            "prompt_tokens": 134,
+            "total_tokens": 224,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 90
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 134,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did SV Werder Bremen win the match against TSG 1899 Hoffenheim on 2025-02-16 in the Bundesliga?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.55,
+          "reason": "My vague recollection is that Werder Bremen were in a winless February 2025 run and did not beat Hoffenheim that weekend, but I'm not certain.",
+          "ms": 10591,
+          "tokens": {
+            "completion_tokens": 664,
+            "prompt_tokens": 140,
+            "total_tokens": 804,
+            "completion_tokens_details": {
+              "reasoning_tokens": 589,
+              "text_tokens": 75
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 140,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I don't have reliable recall of the result of a specific Bundesliga fixture on 2025-02-16, so I can't confirm it.",
+          "ms": 903,
+          "tokens": {
+            "completion_tokens": 69,
+            "prompt_tokens": 139,
+            "total_tokens": 208,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 69
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 139,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did 1. FC Heidenheim 1846 win the match against Bayer 04 Leverkusen on 2025-04-05 in the Bundesliga?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.8,
+          "reason": "As I recall, Leverkusen won 1-0 away at Heidenheim on that date with a late goal.",
+          "ms": 4022,
+          "tokens": {
+            "completion_tokens": 326,
+            "prompt_tokens": 145,
+            "total_tokens": 471,
+            "completion_tokens_details": {
+              "reasoning_tokens": 268,
+              "text_tokens": 58
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 145,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.3,
+          "reason": "I don't have reliable knowledge of the result of a specific match on 2025-04-05, so I can't confirm it.",
+          "ms": 928,
+          "tokens": {
+            "completion_tokens": 63,
+            "prompt_tokens": 144,
+            "total_tokens": 207,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 63
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 144,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Manchester United FC win the match against Fulham FC on 2024-08-16 in the Premier League?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.95,
+          "reason": "Manchester United beat Fulham 1-0 at Old Trafford in the 2024-25 season opener, with Joshua Zirkzee scoring late.",
+          "ms": 1855,
+          "tokens": {
+            "completion_tokens": 134,
+            "prompt_tokens": 128,
+            "total_tokens": 262,
+            "completion_tokens_details": {
+              "reasoning_tokens": 58,
+              "text_tokens": 76
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 128,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "yes",
+          "confidence": 0.8,
+          "reason": "Manchester United beat Fulham 1-0 at Old Trafford on 16 August 2024 (Premier League opening day), with Joshua Zirkzee... I recall the result as a United win, though my confidence in the exact details is moderate.",
+          "ms": 1101,
+          "tokens": {
+            "completion_tokens": 103,
+            "prompt_tokens": 127,
+            "total_tokens": 230,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 103
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 127,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Crystal Palace FC win the match against Liverpool FC on 2024-10-05 in the Premier League?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.93,
+          "reason": "Liverpool won 1-0 at Selhurst Park on 5 October 2024 with a Diogo Jota goal.",
+          "ms": 1848,
+          "tokens": {
+            "completion_tokens": 123,
+            "prompt_tokens": 131,
+            "total_tokens": 254,
+            "completion_tokens_details": {
+              "reasoning_tokens": 59,
+              "text_tokens": 64
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 131,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "no",
+          "confidence": 0.8,
+          "reason": "As I recall, Liverpool beat Crystal Palace 3-0 at Anfield on 5 October 2024 in the Premier League, though I can't verify the result without browsing.",
+          "ms": 972,
+          "tokens": {
+            "completion_tokens": 82,
+            "prompt_tokens": 130,
+            "total_tokens": 212,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 82
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 130,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Brentford FC win the match against Leicester City FC on 2024-11-30 in the Premier League?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.88,
+          "reason": "As I recall, Brentford beat Leicester City 4-1 at home on 30 November 2024.",
+          "ms": 3182,
+          "tokens": {
+            "completion_tokens": 231,
+            "prompt_tokens": 128,
+            "total_tokens": 359,
+            "completion_tokens_details": {
+              "reasoning_tokens": 174,
+              "text_tokens": 57
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 128,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I don't have reliable knowledge of the specific result of that fixture on 2024-11-30, so I can't confirm the outcome.",
+          "ms": 2486,
+          "tokens": {
+            "completion_tokens": 68,
+            "prompt_tokens": 127,
+            "total_tokens": 195,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 68
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 127,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Fulham FC win the match against AFC Bournemouth on 2024-12-29 in the Premier League?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.8,
+          "reason": "As I recall, Fulham and Bournemouth drew 2-2 at Craven Cottage on 29 December 2024, so Fulham did not win.",
+          "ms": 3365,
+          "tokens": {
+            "completion_tokens": 280,
+            "prompt_tokens": 130,
+            "total_tokens": 410,
+            "completion_tokens_details": {
+              "reasoning_tokens": 207,
+              "text_tokens": 73
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 130,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.3,
+          "reason": "I don't have reliable recall of the specific result of that fixture, so I can't confirm whether Fulham won.",
+          "ms": 894,
+          "tokens": {
+            "completion_tokens": 61,
+            "prompt_tokens": 129,
+            "total_tokens": 190,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 61
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 129,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did West Ham United FC win the match against Brentford FC on 2025-02-15 in the Premier League?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.8,
+          "reason": "I recall West Ham winning 1-0 away at Brentford on 15 February 2025, with Jarrod Bowen scoring under Graham Potter.",
+          "ms": 4526,
+          "tokens": {
+            "completion_tokens": 360,
+            "prompt_tokens": 128,
+            "total_tokens": 488,
+            "completion_tokens_details": {
+              "reasoning_tokens": 285,
+              "text_tokens": 75
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 128,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "wrong"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I don't have reliable knowledge of the specific result of a West Ham vs Brentford Premier League match on 15 February 2025.",
+          "ms": 837,
+          "tokens": {
+            "completion_tokens": 68,
+            "prompt_tokens": 127,
+            "total_tokens": 195,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 68
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 127,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Brentford FC win the match against Chelsea FC on 2025-04-06 in the Premier League?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.88,
+          "reason": "The Brentford vs Chelsea Premier League match on 6 April 2025 ended in a 0-0 draw.",
+          "ms": 2172,
+          "tokens": {
+            "completion_tokens": 140,
+            "prompt_tokens": 128,
+            "total_tokens": 268,
+            "completion_tokens_details": {
+              "reasoning_tokens": 78,
+              "text_tokens": 62
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 128,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I don't have reliable knowledge of the result of a Brentford vs Chelsea Premier League match on 2025-04-06, so I can't confirm it.",
+          "ms": 974,
+          "tokens": {
+            "completion_tokens": 76,
+            "prompt_tokens": 127,
+            "total_tokens": 203,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 76
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 127,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Athletic Club win the match against Getafe CF on 2024-08-15 in the La Liga?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.8,
+          "reason": "The 2024-25 La Liga opener between Athletic Club and Getafe at San Mamés on 15 August 2024 ended in a 1-1 draw.",
+          "ms": 4131,
+          "tokens": {
+            "completion_tokens": 316,
+            "prompt_tokens": 127,
+            "total_tokens": 443,
+            "completion_tokens_details": {
+              "reasoning_tokens": 240,
+              "text_tokens": 76
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 127,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I don't have reliable recall of the specific result of an Athletic Club vs Getafe CF match on 2024-08-15, and I can't check sources.",
+          "ms": 980,
+          "tokens": {
+            "completion_tokens": 74,
+            "prompt_tokens": 126,
+            "total_tokens": 200,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 74
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 126,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Villarreal CF win the match against FC Barcelona on 2024-09-22 in the La Liga?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.95,
+          "reason": "Barcelona beat Villarreal 5-1 away on 22 September 2024, the match in which Ter Stegen was injured.",
+          "ms": 2340,
+          "tokens": {
+            "completion_tokens": 159,
+            "prompt_tokens": 129,
+            "total_tokens": 288,
+            "completion_tokens_details": {
+              "reasoning_tokens": 93,
+              "text_tokens": 66
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 129,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "no",
+          "confidence": 0.6,
+          "reason": "Villarreal and Barcelona met in La Liga in September 2024, but my recollection of the exact result on that date is uncertain; I believe Barcelona won 5-2 at Villarreal around that time, though I can't fully verify it.",
+          "ms": 1091,
+          "tokens": {
+            "completion_tokens": 100,
+            "prompt_tokens": 128,
+            "total_tokens": 228,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 100
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 128,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Rayo Vallecano de Madrid win the match against UD Las Palmas on 2024-11-08 in the La Liga?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.72,
+          "reason": "As I recall, Las Palmas won that match at Vallecas, about 3-1, so Rayo did not win.",
+          "ms": 4248,
+          "tokens": {
+            "completion_tokens": 357,
+            "prompt_tokens": 137,
+            "total_tokens": 494,
+            "completion_tokens_details": {
+              "reasoning_tokens": 297,
+              "text_tokens": 60
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 137,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.3,
+          "reason": "I don't have reliable recall of the specific result of that La Liga fixture on 8 November 2024, so I can't confirm the outcome.",
+          "ms": 921,
+          "tokens": {
+            "completion_tokens": 70,
+            "prompt_tokens": 136,
+            "total_tokens": 206,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 70
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 136,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Real Madrid CF win the match against Sevilla FC on 2024-12-22 in the La Liga?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.93,
+          "reason": "Real Madrid beat Sevilla 4-2 at the Santiago Bernabéu on 22 December 2024, with goals from Mbappé, Valverde, Rodrygo and Brahim Díaz.",
+          "ms": 2419,
+          "tokens": {
+            "completion_tokens": 192,
+            "prompt_tokens": 130,
+            "total_tokens": 322,
+            "completion_tokens_details": {
+              "reasoning_tokens": 97,
+              "text_tokens": 95
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 130,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I don't have reliable recall of the specific result of a Real Madrid vs Sevilla La Liga match on 2024-12-22, so I can't confirm it.",
+          "ms": 921,
+          "tokens": {
+            "completion_tokens": 78,
+            "prompt_tokens": 129,
+            "total_tokens": 207,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 78
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 129,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Real Valladolid CF win the match against Sevilla FC on 2025-02-16 in the La Liga?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.75,
+          "reason": "Valladolid won very few matches in 2024-25, and I don't recall a win over Sevilla in mid-February 2025, though I'm not certain of the exact result.",
+          "ms": 5223,
+          "tokens": {
+            "completion_tokens": 479,
+            "prompt_tokens": 131,
+            "total_tokens": 610,
+            "completion_tokens_details": {
+              "reasoning_tokens": 402,
+              "text_tokens": 77
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 131,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I don't have reliable recall of the specific result of a Real Valladolid vs Sevilla La Liga match on 2025-02-16, so I can't confirm the outcome.",
+          "ms": 909,
+          "tokens": {
+            "completion_tokens": 82,
+            "prompt_tokens": 130,
+            "total_tokens": 212,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 82
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 130,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Real Valladolid CF win the match against Getafe CF on 2025-04-06 in the La Liga?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.75,
+          "reason": "Valladolid won very few games in the 2024-25 season, and I don't recall a win over Getafe in April 2025 during their run toward relegation, though I'm not certain of this specific result.",
+          "ms": 4684,
+          "tokens": {
+            "completion_tokens": 401,
+            "prompt_tokens": 130,
+            "total_tokens": 531,
+            "completion_tokens_details": {
+              "reasoning_tokens": 317,
+              "text_tokens": 84
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 130,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I don't have reliable recall of the specific result of a Real Valladolid vs Getafe La Liga match on 2025-04-06, so I can't confirm the outcome.",
+          "ms": 887,
+          "tokens": {
+            "completion_tokens": 81,
+            "prompt_tokens": 129,
+            "total_tokens": 210,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 81
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 129,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Genoa CFC win the match against FC Internazionale Milano on 2024-08-17 in the Serie A?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.92,
+          "reason": "The 2024-25 Serie A opener between Genoa and Inter on 17 August 2024 ended in a 2-2 draw, so Genoa did not win.",
+          "ms": 2641,
+          "tokens": {
+            "completion_tokens": 189,
+            "prompt_tokens": 132,
+            "total_tokens": 321,
+            "completion_tokens_details": {
+              "reasoning_tokens": 113,
+              "text_tokens": 76
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 132,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I don't have reliable knowledge of a Genoa vs Inter Serie A match on 2024-08-17 or its result, and the 2024-25 season fixtures are beyond what I can confirm.",
+          "ms": 984,
+          "tokens": {
+            "completion_tokens": 90,
+            "prompt_tokens": 131,
+            "total_tokens": 221,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 90
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 131,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Parma Calcio 1913 win the match against Cagliari Calcio on 2024-09-30 in the Serie A?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.75,
+          "reason": "As I recall, Cagliari won 3-2 away at Parma on 30 September 2024, so Parma did not win.",
+          "ms": 4590,
+          "tokens": {
+            "completion_tokens": 400,
+            "prompt_tokens": 135,
+            "total_tokens": 535,
+            "completion_tokens_details": {
+              "reasoning_tokens": 338,
+              "text_tokens": 62
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 135,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I don't have reliable recall of the specific result of that September 2024 Parma vs. Cagliari Serie A fixture, so I can't confirm the outcome.",
+          "ms": 912,
+          "tokens": {
+            "completion_tokens": 78,
+            "prompt_tokens": 134,
+            "total_tokens": 212,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 78
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 134,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did FC Internazionale Milano win the match against SSC Napoli on 2024-11-10 in the Serie A?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.9,
+          "reason": "Inter and Napoli drew 1-1 at San Siro on 10 November 2024, with McTominay scoring for Napoli and Calhanoglu equalizing before missing a late penalty.",
+          "ms": 2077,
+          "tokens": {
+            "completion_tokens": 155,
+            "prompt_tokens": 132,
+            "total_tokens": 287,
+            "completion_tokens_details": {
+              "reasoning_tokens": 68,
+              "text_tokens": 87
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 132,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": null,
+          "reason": "I don't have reliable knowledge of the specific result of that match. Inter vs Napoli in Serie A in November 2024 — I recall Napoli and Inter played around that",
+          "ms": 1090,
+          "tokens": {
+            "completion_tokens": 133,
+            "prompt_tokens": 131,
+            "total_tokens": 264,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 133
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 131,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did Bologna FC 1909 win the match against Hellas Verona FC on 2024-12-30 in the Serie A?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.62,
+          "reason": "I recall Bologna winning 3-2 away at Verona on 30 December 2024 in Serie A, but I am not fully certain of the details.",
+          "ms": 5240,
+          "tokens": {
+            "completion_tokens": 436,
+            "prompt_tokens": 134,
+            "total_tokens": 570,
+            "completion_tokens_details": {
+              "reasoning_tokens": 365,
+              "text_tokens": 71
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 134,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "wrong"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I don't have reliable recall of the specific result of a Bologna vs. Hellas Verona Serie A match on 2024-12-30, so I can't confirm the outcome.",
+          "ms": 948,
+          "tokens": {
+            "completion_tokens": 82,
+            "prompt_tokens": 133,
+            "total_tokens": 215,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 82
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 133,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did US Lecce win the match against Bologna FC 1909 on 2025-02-09 in the Serie A?",
+      "truth": "no",
+      "takar": "no",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "no",
+          "confidence": 0.6,
+          "reason": "From what I recall, Lecce did not beat Bologna in their February 2025 Serie A meeting, but I'm not sure of the exact result or date.",
+          "ms": 6886,
+          "tokens": {
+            "completion_tokens": 643,
+            "prompt_tokens": 130,
+            "total_tokens": 773,
+            "completion_tokens_details": {
+              "reasoning_tokens": 571,
+              "text_tokens": 72
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 130,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "retried": "max_tokens 900 after an empty answer at 200",
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I don't have reliable recall of the specific result of a Lecce vs Bologna Serie A match on 2025-02-09, so I can't confirm the outcome.",
+          "ms": 877,
+          "tokens": {
+            "completion_tokens": 78,
+            "prompt_tokens": 129,
+            "total_tokens": 207,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 78
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 129,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    },
+    {
+      "set": "sports-check",
+      "question": "Did FC Internazionale Milano win the match against Udinese Calcio on 2025-03-30 in the Serie A?",
+      "truth": "yes",
+      "takar": "yes",
+      "source": "openfootball 2024-25",
+      "takar_grade": "right",
+      "models": {
+        "claude-opus-5-5": {
+          "answer": "yes",
+          "confidence": 0.85,
+          "reason": "As I recall, Inter beat Udinese 2-1 at San Siro on 30 March 2025, with goals from Arnautović and Frattesi.",
+          "ms": 2900,
+          "tokens": {
+            "completion_tokens": 189,
+            "prompt_tokens": 133,
+            "total_tokens": 322,
+            "completion_tokens_details": {
+              "reasoning_tokens": 115,
+              "text_tokens": 74
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 133,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "right"
+        },
+        "claude-haiku-5-5": {
+          "answer": "unknown",
+          "confidence": 0.2,
+          "reason": "I don't have reliable knowledge of the specific result of an Inter vs Udinese Serie A match on 2025-03-30, so I can't confirm the outcome.",
+          "ms": 994,
+          "tokens": {
+            "completion_tokens": 79,
+            "prompt_tokens": 132,
+            "total_tokens": 211,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "text_tokens": 79
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 132,
+              "cache_write_tokens": 0,
+              "cache_creation_tokens": 0,
+              "cache_creation_token_details": {
+                "ephemeral_5m_input_tokens": 0,
+                "ephemeral_1h_input_tokens": 0
+              }
+            },
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "inference_geo": "global",
+            "speed": "standard",
+            "service_tier": "standard"
+          },
+          "grade": "abstained"
+        }
+      }
+    }
+  ]
+}
