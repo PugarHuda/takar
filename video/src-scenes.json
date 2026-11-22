@@ -89,6 +89,19 @@
     "voSec": 17.256
   },
   {
+    "id": "s11",
+    "kind": "card",
+    "title": "What it costs, measured",
+    "bullets": [
+      "Second opinion: $0.017 per decision (1.68 paid asks)",
+      "Public dossier: $0.03 to $0.04, about 40 s",
+      "Fleet: about $0.004 per operating hour, testnet USDC",
+      "Escrow panel of three: escalation needs every resolver"
+    ],
+    "vo": "What does it cost? From our own ledger, a second opinion costs about two cents per decision, a public dossier three or four cents in about forty seconds, and the fleet about half a cent per operating hour. All on testnet. And the escrow now runs a panel of three: once both parties dispute, all three resolvers must sign.",
+    "voSec": 19.896
+  },
+  {
     "id": "s09",
     "kind": "title",
     "title": "Use it today",

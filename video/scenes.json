@@ -80,6 +80,18 @@
     "vo": "Our own miner answers from data before it asks a model. Prices and Fed decisions come from FRED, dated games from ESPN, and both were measured on questions they had never seen. Another team now builds on our dossiers, and wrote its own evidence to our open record on chain."
   },
   {
+    "id": "s11",
+    "kind": "card",
+    "title": "What it costs, measured",
+    "bullets": [
+      "Second opinion: $0.017 per decision (1.68 paid asks)",
+      "Public dossier: $0.03 to $0.04, about 40 s",
+      "Fleet: about $0.004 per operating hour, testnet USDC",
+      "Escrow panel of three: escalation needs every resolver"
+    ],
+    "vo": "What does it cost? From our own ledger, a second opinion costs about two cents per decision, a public dossier three or four cents in about forty seconds, and the fleet about half a cent per operating hour. All on testnet. And the escrow now runs a panel of three: once both parties dispute, all three resolvers must sign."
+  },
+  {
     "id": "s09",
     "kind": "title",
     "title": "Use it today",
