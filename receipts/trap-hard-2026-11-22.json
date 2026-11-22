@@ -1,0 +1,669 @@
+{
+  "title": "Known-answer test, top EVENT_OUTCOME miners",
+  "generated_at": "2026-11-22T18:12:26.096Z",
+  "miners": [
+    "20260828",
+    "9002",
+    "59003",
+    "59010",
+    "20261117"
+  ],
+  "tally": {
+    "9002": {
+      "right": 4,
+      "wrong": 2,
+      "abstained": 6,
+      "unusable": 0
+    },
+    "59003": {
+      "right": 0,
+      "wrong": 1,
+      "abstained": 0,
+      "unusable": 11
+    },
+    "59010": {
+      "right": 0,
+      "wrong": 1,
+      "abstained": 0,
+      "unusable": 11
+    },
+    "20260828": {
+      "right": 12,
+      "wrong": 0,
+      "abstained": 0,
+      "unusable": 0
+    },
+    "20261117": {
+      "right": 9,
+      "wrong": 0,
+      "abstained": 3,
+      "unusable": 0
+    }
+  },
+  "rows": [
+    {
+      "market": {
+        "id": "8dznULhsgh",
+        "question": "Will Nvidia outperform the S&P 500 in 2025?",
+        "resolution": "YES",
+        "url": "https://manifold.markets/DaftPunkRock/will-nvidia-outperform-the-sp-500-i"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0xdde2cf3729553588604149103d379a6cc8374bef6e1ca9d3e47d553df6651eaa"
+          },
+          {
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "outcome": "unresolved",
+            "signal": "0x80296546c62f0092d601e3772dcf8e9996295a1c0b17e498b0ccdfaaa11cac0d"
+          },
+          {
+            "miner": {
+              "id": "59003",
+              "name": "Polymarket Public Search"
+            },
+            "outcome": "unreadable",
+            "signal": "0x9725c7127dd7ec0c45bb5f72c7e73847506c44ab1491a9fd643d30ff94e64a81"
+          },
+          {
+            "miner": {
+              "id": "59010",
+              "name": "Polymarket Search AI"
+            },
+            "outcome": "unreadable",
+            "signal": "0x44b1ff56dc6e216bd3185d074c8e48511b642c28039e3acde21419157fc349a6"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "yes",
+            "signal": "0x5784cae16a8495905be43a2e654946685597199c1af193989c73609d24f0f362"
+          }
+        ]
+      }
+    },
+    {
+      "market": {
+        "id": "SyhgEZC68s",
+        "question": "Will the Democrats win the 2026 Texas Senate Election?",
+        "resolution": "YES",
+        "url": "https://manifold.markets/Jack1/will-the-democrats-win-the-2026-tex"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0xf1d4fdf715e41302a87fb9958646e0296301be488dd89b4d5fb257220ee79cf5"
+          },
+          {
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "outcome": "unresolved",
+            "signal": "0x57661df8a17ea5b2cd10ce4d96ff81a54005e57357f53c7264ad92ea43f080cb"
+          },
+          {
+            "miner": {
+              "id": "59003",
+              "name": "Polymarket Public Search"
+            },
+            "outcome": "unreadable",
+            "signal": "0xa7fefa54f1670b1c1ee5c6eb55dc23867978d100f80a04f82c9380bdddde34a7"
+          },
+          {
+            "miner": {
+              "id": "59010",
+              "name": "Polymarket Search AI"
+            },
+            "outcome": "unreadable",
+            "signal": "0x8503e4b7a79bc6645fa9891317954a91bfe5f382fe06af7a73ad978ee5849d60"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0xedd679bdb85e8f975a9a875168bd3b7df434b5df273e986a3f7bfea9c437a782"
+          }
+        ]
+      }
+    },
+    {
+      "market": {
+        "id": "oj4g2w07uo",
+        "question": "Will Trump actually establish a strategic Bitcoin reserve in his first year?",
+        "resolution": "YES",
+        "url": "https://manifold.markets/PeterBuyukliev/will-trump-actually-establish-a-str"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x735963eb55bea6af950f919d788be84f4dae5b54d1eda4b1582cd44c90aa1017"
+          },
+          {
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "outcome": "no",
+            "signal": "0xa110a15610c22ef04c639ada498e43212e763ef91dd5a0f1661f2a16d41bb126"
+          },
+          {
+            "miner": {
+              "id": "59003",
+              "name": "Polymarket Public Search"
+            },
+            "outcome": "unreadable",
+            "signal": "0xe6441238b752b7cd3d86bb9146e6aae894e18a8c5a2591662afbd3bbb397c707"
+          },
+          {
+            "miner": {
+              "id": "59010",
+              "name": "Polymarket Search AI"
+            },
+            "outcome": "unreadable",
+            "signal": "0xccade88f1c6df87a0c330f54753809b1b251f96e19f1ca7319664131ac481f42"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "yes",
+            "signal": "0x3135475646b7e303ef721b36a58c7b73c466cb3328448e6b76094fb5666668bd"
+          }
+        ]
+      }
+    },
+    {
+      "market": {
+        "id": "4kreogtql1",
+        "question": "Will US inflation go above 3% before unemployment goes below 4%?",
+        "resolution": "YES",
+        "url": "https://manifold.markets/BlueDragon/will-us-inflation-go-above-3-before"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x6cb7896860cbbf6dab8f7d273ac4fa2a2fbb4e1db8c8de2525ba7e43fbe52e09"
+          },
+          {
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "outcome": "no",
+            "signal": "0x48620169c8c3411273640d6266783c08a9875797aaeccfab21475d188cef2232"
+          },
+          {
+            "miner": {
+              "id": "59003",
+              "name": "Polymarket Public Search"
+            },
+            "outcome": "unreadable",
+            "signal": "0x36cfae9c63441a985434cefe440d5134d4b9f9d371fd63938ecffecde45be0b1"
+          },
+          {
+            "miner": {
+              "id": "59010",
+              "name": "Polymarket Search AI"
+            },
+            "outcome": "unreadable",
+            "signal": "0xc4a7781089a63b173e8c769787cb59e16d5c460b241e2107b6c54d476ea805d6"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "yes",
+            "signal": "0xfcdff16f36323e21139bc22ef61d4dbf810fff8cc3a5da50477700a0302b868b"
+          }
+        ]
+      }
+    },
+    {
+      "market": {
+        "id": "ADS8fVRT4vhTq4lm7V12",
+        "question": "Will SpaceX IPO before the end of 2026?",
+        "resolution": "YES",
+        "url": "https://manifold.markets/strutheo/will-spacex-ipo-before-the-end-of-2"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x48bb9fe23e308009deedab118d495aad6e20b4e3fbf3e9269ea8345b4eff8b0a"
+          },
+          {
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "outcome": "unresolved",
+            "signal": "0xa941184973674870048b122ed821a940e59d767df8e17654a21d20649ee2691b"
+          },
+          {
+            "miner": {
+              "id": "59003",
+              "name": "Polymarket Public Search"
+            },
+            "outcome": "unreadable",
+            "signal": "0x52e13593c1a3e37ae2ecb8f4f45d1950c7dc7b5a6d642d3386108b7acbbb54b2"
+          },
+          {
+            "miner": {
+              "id": "59010",
+              "name": "Polymarket Search AI"
+            },
+            "outcome": "unreadable",
+            "signal": "0x4422c2b3f501797ca6b6d5c4ca6cb9ccc64536a85714371c7dad26702951078b"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0x07329e9b0794c901974ecfcdc946f98f1d774eaa8e37e63f03773d75be3bd32a"
+          }
+        ]
+      }
+    },
+    {
+      "market": {
+        "id": "R9y62C8sdP",
+        "question": "🇺🇸 Will the Fed raise interest rates in September 2026?",
+        "resolution": "YES",
+        "url": "https://manifold.markets/MAKER/-will-the-fed-raise-interest-rates"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x5b38f1636fdcb47027da1285b1d42ee7a450b123ec5fcc083e6426409675cab7"
+          },
+          {
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "outcome": "unresolved",
+            "signal": "0x5a9d41eb9560d0ca75f3ad9f00e9b3804e9bfb3ec8a645df286a6336d6ac9453"
+          },
+          {
+            "miner": {
+              "id": "59003",
+              "name": "Polymarket Public Search"
+            },
+            "outcome": "unreadable",
+            "signal": "0x209d91560939c0619315fc73780352f6c14490efecbf0308735f2050bf5c351c"
+          },
+          {
+            "miner": {
+              "id": "59010",
+              "name": "Polymarket Search AI"
+            },
+            "outcome": "unreadable",
+            "signal": "0x40c780e055610bbfc5512b0e73f4ab5136268913dc8dd953c915ca288d648786"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "yes",
+            "signal": "0x3d2264ce42c9b519d4f76a93bdecbe787f3607bc44c6822c7d0362db95cd818e"
+          }
+        ]
+      }
+    },
+    {
+      "market": {
+        "id": "ztUhqAucI9",
+        "question": "Will a hurricane make landfall in the US before October?",
+        "resolution": "NO",
+        "url": "https://manifold.markets/MachiNi/will-a-hurricane-make-landfall-in-t-chIRgZpOR6"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0xf34985d94c0130e433e1b52eb4822ba7479b506cfac46671931e94429f0cb733"
+          },
+          {
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "outcome": "unresolved",
+            "signal": "0x7865488cc2ea879ab1b7f5942fe4fdb8d2ba6a8b618b59307a753e9540376144"
+          },
+          {
+            "miner": {
+              "id": "59003",
+              "name": "Polymarket Public Search"
+            },
+            "outcome": "unreadable",
+            "signal": "0xf674779f455d7f338e531eefbc79d3cd6dcb4c72d124cefe8f3899f0676e287a"
+          },
+          {
+            "miner": {
+              "id": "59010",
+              "name": "Polymarket Search AI"
+            },
+            "outcome": "unreadable",
+            "signal": "0x68ade3e72bc398c7d40fdd80eb9f481978df03c9786d431a48bfbee05f272326"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0xb2cb75a66a6c73f112f116760e54d3f02820f8f7bbd544642dd28df359c01d9a"
+          }
+        ]
+      }
+    },
+    {
+      "market": {
+        "id": "mzblrh7ohe",
+        "question": "Will an AI autonomously earn more than $10,000 not through financial trading, starting with no more than $100 by 2026?",
+        "resolution": "NO",
+        "url": "https://manifold.markets/IhorKendiukhov/will-an-ai-autonomously-earn-more-t"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x677b93803152c45ce8a15411fa40a88b49432b73c018945525dbc349f22bb150"
+          },
+          {
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "outcome": "no",
+            "signal": "0x4c1aafe019f0617aa06d8e5670ebf0a34f2d5e4b2eaa53e5fce247370f5edc15"
+          },
+          {
+            "miner": {
+              "id": "59003",
+              "name": "Polymarket Public Search"
+            },
+            "outcome": "unreadable",
+            "signal": "0x858e9baa15cd1fb44e8535da7d33ccd031aab8ebabc3d5cbeb0ba0661666ecaf"
+          },
+          {
+            "miner": {
+              "id": "59010",
+              "name": "Polymarket Search AI"
+            },
+            "outcome": "unreadable",
+            "signal": "0xc7943852cf54896f3ef6ac374c1406a2fd9caf1921e8a18593cf0ff213ff9173"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "unresolved",
+            "signal": "0xed6c8e1fc0682ded1d9ec48d6aafe1cc9250a126b16a0f07ccf7a366e77c333f"
+          }
+        ]
+      }
+    },
+    {
+      "market": {
+        "id": "ScnPqzlc6C",
+        "question": "Will Ethereum (ETH) reach $5,000 before the end of 2025?",
+        "resolution": "NO",
+        "url": "https://manifold.markets/HillaryClinton/will-ethereum-eth-reach-5000-before"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x32dcf64807e998fe91fd151175291e6a22936e49591bfd5002c2b4956a4def8d"
+          },
+          {
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "outcome": "no",
+            "signal": "0xa031afd73909b4aa45744bf2484b6d125b4e646c6a5f47c95d1a3bb82e56c8a3"
+          },
+          {
+            "miner": {
+              "id": "59003",
+              "name": "Polymarket Public Search"
+            },
+            "outcome": "yes",
+            "signal": "0xada6f6b7806a174c77d1241f7df50937aecad3fdc4d7db60310dda11fe0c38b6"
+          },
+          {
+            "miner": {
+              "id": "59010",
+              "name": "Polymarket Search AI"
+            },
+            "outcome": "yes",
+            "signal": "0xd119e3a26ef46c9750342fb397dd0c78bd9ba00bc095949d160c86c70afe5bd6"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0x5d2d6367ab227845f762b4d741c121b649986e5f133981f46852f7cf3e2f931d"
+          }
+        ]
+      }
+    },
+    {
+      "market": {
+        "id": "286ycOt8cp",
+        "question": "Will Spurs aka Tottenham Hotspur be relegated from the Premier League at the end of the 25/26 season?",
+        "resolution": "NO",
+        "url": "https://manifold.markets/PlutoGaming/will-spurs-aka-tottenham-hotspur-be"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0xb21d0bb01893963cc5601e04bb3f90d4e6b992f8a80c1e335049b941d809af5d"
+          },
+          {
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "outcome": "unresolved",
+            "signal": "0x293dbb6928b4c5efd76ae0ffe6f65f35a37c41898ecca177532476ad61c3b110"
+          },
+          {
+            "miner": {
+              "id": "59003",
+              "name": "Polymarket Public Search"
+            },
+            "outcome": "unreadable",
+            "signal": "0x67ed0ebbb9a1cdcedc8feac66a31c4601ecd494ccf838f0dd859cc93c4814c49"
+          },
+          {
+            "miner": {
+              "id": "59010",
+              "name": "Polymarket Search AI"
+            },
+            "outcome": "unreadable",
+            "signal": "0x5a58b2c303dc1e4f8c223eebad4c837cfdeac1b04695fe259b0cb6bfa6dee8d6"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0xa931511d77235ecfa445a61e3be7f88b9874ebb689d3a9948667f31a6bc113f7"
+          }
+        ]
+      }
+    },
+    {
+      "market": {
+        "id": "lCdq2RAI6R",
+        "question": "Surprise in 25/26 UEFA Champions league round of 16?",
+        "resolution": "NO",
+        "url": "https://manifold.markets/vdb/surprise-in-2526-uefa-champions-lea"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x172e7ea819cd9db8460e505f6d2ea70572ad6f9a8e0e9c3555670e5d206d7173"
+          },
+          {
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "outcome": "no",
+            "signal": "0x587f0ed3a7c89f819a4fcefd2db1d06d2ab6acafbe82212f0e611620ff74433a"
+          },
+          {
+            "miner": {
+              "id": "59003",
+              "name": "Polymarket Public Search"
+            },
+            "outcome": "unreadable",
+            "signal": "0x673ae80e728ec16aa2409a83e7f9c6e49edc8da1b53f637dd15ca87028827e56"
+          },
+          {
+            "miner": {
+              "id": "59010",
+              "name": "Polymarket Search AI"
+            },
+            "outcome": "unreadable",
+            "signal": "0x2abc247e48841eebe34eb32d74a3271fc42c122ac6d76711923a69e5dcd0c5ea"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0x7e0ef895e707ffeede7ddd41a391229c60b38d0ce3f49a7d65e8d6120adac6a1"
+          }
+        ]
+      }
+    },
+    {
+      "market": {
+        "id": "XNj8OH2nbvgjiaHvHuAp",
+        "question": "Will the NFL take a stake in ESPN by the end of 2025?",
+        "resolution": "NO",
+        "url": "https://manifold.markets/10thOfficial/will-the-nfl-take-a-stake-in-espn-b"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x996e418902aba79c12b149b2359d644257976d90bc0336fea57dbf993b71cc91"
+          },
+          {
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "outcome": "no",
+            "signal": "0x2b1d1d94ff2b28a793ebbe58261c9cd0a4a11c3fde1188aab9d6a7a3f52fd140"
+          },
+          {
+            "miner": {
+              "id": "59003",
+              "name": "Polymarket Public Search"
+            },
+            "outcome": "unreadable",
+            "signal": "0x4bcd7b059387f14210fc694834623f77ab3a8e3740ae768abfeca5669d3ed2be"
+          },
+          {
+            "miner": {
+              "id": "59010",
+              "name": "Polymarket Search AI"
+            },
+            "outcome": "unreadable",
+            "signal": "0x1d8ebdc0e88ec6ad84d9aae8bebd0de41cd18db05adf4218b1b6b874e831b8fa"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0x17532bb55fea95bd24dde552b6ad978def971d537ce496d90eb1f0391a7b61fa"
+          }
+        ]
+      }
+    }
+  ]
+}
