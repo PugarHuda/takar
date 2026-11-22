@@ -81,16 +81,19 @@ async function showProv(slug) {
   const rows = Object.entries(p.entity).filter(([, e]) => kinds[e["prov:type"]]).map(([id, e]) => {
     const value = e["takar:tonnes"] != null ? `${e["takar:tonnes"]} t (${e["takar:scope"] ?? ""}, ${e["takar:period"]})` : [e["prov:label"], e["takar:holder"] ?? e["takar:name"], e["takar:status"], e["takar:expiry"] && `expires ${e["takar:expiry"]}`, e["prov:value"]].filter(Boolean).join(" · ");
     const src = rel("wasDerivedFrom").filter((r) => r["prov:generatedEntity"] === id).map((r) => p.entity[r["prov:usedEntity"]]?.["prov:location"]).find(Boolean) ?? e["prov:location"];
-    const ask = rel("wasGeneratedBy").filter((r) => r["prov:entity"] === id).map((r) => r["prov:activity"]).find((a) => /^tg:0x[0-9a-f]{64}$/i.test(a ?? ""));
+    const acts = rel("wasGeneratedBy").filter((r) => r["prov:entity"] === id).map((r) => r["prov:activity"]);
+    const ask = acts.find((a) => /^tg:0x[0-9a-f]{64}$/i.test(a ?? ""));
+    // Register reads carry their own time; a paid ask's time is on the node's signal page.
+    const read = acts.map((a) => p.activity?.[a]).find((x) => x?.["prov:type"] === "takar:DirectRegisterRead");
     // A figure is attributed to its publisher; failing that, to the miner that answered the paid ask.
     const who = rel("wasAttributedTo").filter((r) => r["prov:entity"] === id).map((r) => p.agent?.[r["prov:agent"]]?.["prov:label"]).filter(Boolean).join("; ")
       || rel("wasAssociatedWith").filter((r) => r["prov:activity"] === ask).map((r) => p.agent?.[r["prov:agent"]]?.["prov:label"]).filter(Boolean).join("; ");
     const h = src && host(src);
     const cell = (x) => `<td style="border-bottom:1px solid var(--rule-soft);padding:6px 8px;vertical-align:top">${x}</td>`;
-    return `<tr>${cell(kinds[e["prov:type"]])}${cell(esc(value))}${cell(h ? `<a rel="noopener" href="${esc(src)}">${esc(h)}</a>` : "—")}${cell(ask ? `<a rel="noopener" href="https://devnode.telegraphprotocol.com/engine/v1/signal/${ask.slice(3)}">${ask.slice(3, 13)}…</a> $${esc(p.activity?.[ask]?.["takar:costUsd"] ?? "")}` : "register read")}${cell(esc(who || "—"))}</tr>`;
+    return `<tr>${cell(kinds[e["prov:type"]])}${cell(esc(value))}${cell(h ? `<a rel="noopener" href="${esc(src)}">${esc(h)}</a>` : "—")}${cell(ask ? `<a rel="noopener" href="https://devnode.telegraphprotocol.com/engine/v1/signal/${ask.slice(3)}">${ask.slice(3, 13)}…</a> $${esc(p.activity?.[ask]?.["takar:costUsd"] ?? "")}` : read ? `register read ${esc(String(read["prov:startedAtTime"] ?? "").slice(0, 10))}` : "—")}${cell(esc(who || "—"))}</tr>`;
   });
   if (!rows.length) return;
-  t.innerHTML = `<thead><tr><th>Kind</th><th>Value</th><th>Source</th><th>Paid ask</th><th>Attributed to</th></tr></thead><tbody>${rows.join("")}</tbody>`;
+  t.innerHTML = `<thead><tr><th>Kind</th><th>Value</th><th>Source</th><th>Paid ask or read</th><th>Attributed to</th></tr></thead><tbody>${rows.join("")}</tbody>`;
   box.hidden = false;
 }
 // The list of dossiers comes from dossiers/index.json, written by scripts/dossier-run.mjs.
