@@ -22,12 +22,14 @@
   --hold: #B07A0C;
   --abort: #B33A2E;
   --link: #1F5C8A;
+  --brass: #C9962B; --brass-deep: #8A6414;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --paper: #121A1F; --sheet: #1B252B; --ink: #E3EAEE; --muted: #9AABB5;
     --rule: #4F6573; --rule-soft: #2C3A42; --airspace: #E06AAF;
     --go: #5BBF86; --hold: #E0A93A; --abort: #E3705F; --link: #7FB6E0;
+    --brass: #D6A33A; --brass-deep: #F0C46A;
   }
 }
 * { box-sizing: border-box; }
@@ -41,13 +43,26 @@ a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visib
 .display { font-family: "Barlow Semi Condensed", sans-serif; letter-spacing: .01em; }
 code, .raw { font: 0.8125rem/1.4 ui-monospace, "Cascadia Mono", Consolas, monospace; }
 
-header { padding: 40px 0 28px; border-bottom: 2px solid var(--ink); }
-header h1 { font: 700 clamp(2.4rem, 6vw, 4rem)/1 "Barlow Semi Condensed", sans-serif; margin: 0 0 12px; }
-header p { max-width: 64ch; margin: 0 0 8px; color: var(--muted); }
+header { padding-block: 36px 34px; }
+header h1 { font: 800 clamp(2.6rem, 6vw, 4.4rem)/.95 "Barlow Semi Condensed", sans-serif; letter-spacing: -.01em; margin: 0 0 14px; }
+header p { max-width: 70ch; margin: 0 0 8px; color: var(--muted); font-size: 1.05rem; }
+
+/* Two columns: a section index that stays in view, and the sections. */
+.layout { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 52px; align-items: start; }
+.layout > main { min-width: 0; }
+.toc { position: sticky; top: 18px; font-size: .93rem; padding-bottom: 24px; }
+.toc p { font: 600 .98rem "Barlow Semi Condensed", sans-serif; color: var(--muted); margin: 18px 0 6px; }
+.toc p:first-child { margin-top: 0; }
+.toc ul { list-style: none; margin: 0; padding: 0; }
+.toc a { display: block; padding: 5px 0 5px 12px; border-left: 2px solid var(--rule-soft); color: var(--ink); text-decoration: none; line-height: 1.3; }
+.toc a:hover { border-left-color: var(--rule); }
+.toc a.on { border-left-color: var(--brass); font-weight: 700; }
+h2[id] { scroll-margin-top: 16px; }
+.mission { display: inline-block; vertical-align: middle; margin-left: 10px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--rule-soft); background: var(--sheet); font: 600 .8rem/1.3 "Atkinson Hyperlegible", sans-serif; color: var(--muted); letter-spacing: 0; }
 header p strong { color: var(--ink); }
-.runbar { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--rule); }
+.runbar { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: baseline; padding: 14px 18px; margin: 22px 0 4px; background: var(--sheet); border: 1px solid var(--rule-soft); border-radius: 12px; }
 .runbar label { color: var(--muted); }
-.runbar select { font: inherit; color: var(--ink); background: var(--sheet); border: 1px solid var(--rule); padding: 4px 8px; }
+.runbar select { font: inherit; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; padding: 5px 10px; }
 .tally { display: flex; flex-wrap: wrap; gap: 6px 24px; }
 .tally b { font: 600 1.35rem/1 "Barlow Semi Condensed", sans-serif; }
 
@@ -63,7 +78,7 @@ header p strong { color: var(--ink); }
 
 /* The budget line: spent against the unit's cap, wasted spend hatched. */
 .budget { margin: 4px 0 14px; max-width: 520px; }
-.line { position: relative; height: 10px; background: var(--rule-soft); }
+.line { position: relative; height: 10px; background: var(--rule-soft); border-radius: 5px; overflow: hidden; }
 .line span { position: absolute; top: 0; bottom: 0; left: 0; }
 .line .spent { background: var(--ink); }
 .line .waste { background: repeating-linear-gradient(135deg, var(--airspace) 0 3px, transparent 3px 6px); }
@@ -81,16 +96,19 @@ header p strong { color: var(--ink); }
 .side .cost { font: 600 1.5rem/1 "Barlow Semi Condensed", sans-serif; }
 .side small { display: block; color: var(--muted); margin-top: 4px; }
 
-section.found { margin: 44px 0 0; padding: 28px 0; border-top: 2px solid var(--ink); }
-section.found h2, section.ledger h2 { font: 700 2rem/1.1 "Barlow Semi Condensed", sans-serif; margin: 0 0 16px; }
+section.found, section.ledger { margin: 0; padding: 40px 0 44px; border-top: 1px solid var(--rule-soft); }
+main > section:first-child { border-top: 0; padding-top: 4px; }
+section.found h2, section.ledger h2 { font: 700 clamp(1.7rem, 3vw, 2.3rem)/1.1 "Barlow Semi Condensed", sans-serif; margin: 0 0 16px; }
+section.found > p, section.ledger > p { max-width: 74ch; }
 .found ol { margin: 0; padding-left: 1.4rem; max-width: 76ch; }
 .found li { margin: 0 0 12px; }
-section.ledger { padding: 12px 0 48px; }
+
 details summary { cursor: pointer; font-weight: 700; padding: 8px 0; }
 .scroll { overflow-x: auto; }
 .ledger table { border-collapse: collapse; font-size: .875rem; min-width: 760px; width: 100%; }
 .ledger th, .ledger td { text-align: left; padding: 5px 10px 5px 0; border-bottom: 1px solid var(--rule-soft); }
-.btn { font: 700 1rem/1 "Atkinson Hyperlegible", sans-serif; color: var(--sheet); background: var(--ink); border: 0; padding: 10px 16px; cursor: pointer; }
+.btn { font: 600 1.05rem/1 "Barlow Semi Condensed", sans-serif; color: var(--paper); background: var(--ink); border: 0; border-radius: 999px; padding: 11px 20px; cursor: pointer; }
+.btn:hover { background: var(--brass-deep); color: #fff; }
 .btn:disabled { opacity: .6; cursor: wait; }
 h3.sub { font: 600 1.3rem/1.2 "Barlow Semi Condensed", sans-serif; margin: 26px 0 6px; }
 .note { color: var(--muted); font-size: .9375rem; max-width: 76ch; margin: 0 0 10px; }
@@ -98,16 +116,25 @@ h3.sub { font: 600 1.3rem/1.2 "Barlow Semi Condensed", sans-serif; margin: 26px 
 .found table:not(.buys) th, .found table:not(.buys) td { text-align: left; padding: 5px 14px 5px 0; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
 .try { display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: end; max-width: 760px; }
 .try label { flex-basis: 100%; color: var(--muted); }
-.try input { flex: 1 1 320px; font: inherit; color: var(--ink); background: var(--sheet); border: 1px solid var(--rule); padding: 8px 10px; min-width: 0; }
-.answer { margin: 16px 0 0; padding: 14px 16px; background: var(--sheet); border-left: 4px solid var(--rule); max-width: 760px; }
+.try input { flex: 1 1 320px; font: inherit; color: var(--ink); background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 9px 12px; min-width: 0; }
+.answer { margin: 16px 0 0; padding: 14px 16px; background: var(--sheet); border-left: 4px solid var(--rule); border-radius: 0 10px 10px 0; max-width: 760px; }
 .answer.yes { border-color: var(--go); } .answer.no { border-color: var(--abort); } .answer.unresolved { border-color: var(--hold); }
 .answer .big { font: 700 1.8rem/1 "Barlow Semi Condensed", sans-serif; }
 .answer blockquote { margin: 10px 0; padding-left: 12px; border-left: 2px solid var(--rule); }
 .ok { color: var(--go); font-weight: 700; } .bad { color: var(--abort); font-weight: 700; }
-footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--muted); font-size: .9375rem; }
+footer { border-top: 1px solid var(--rule-soft); margin-top: 24px; padding: 24px 0 44px; color: var(--muted); font-size: .9375rem; }
 .empty { padding: 40px 0; color: var(--muted); }
 
+@media (max-width: 900px) {
+  .layout { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .toc { position: static; display: flex; flex-wrap: wrap; gap: 6px 8px; padding: 0 0 12px; border-bottom: 1px solid var(--rule-soft); }
+  .toc p { display: none; }
+  .toc ul { display: contents; }
+  .toc a { border: 1px solid var(--rule-soft); border-radius: 999px; padding: 4px 11px; background: var(--sheet); }
+  .toc a.on { border-color: var(--brass); }
+}
 @media (max-width: 720px) {
+  .wrap { padding: 0 16px; }
   .unit { grid-template-columns: 1fr; }
   .verdict { font-size: 2.6rem; }
   .buys thead { display: none; }
@@ -131,8 +158,19 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
   </div>
 </header>
 
-<main class="wrap">
-  <section class="found" aria-labelledby="start-h">
+<div class="wrap layout">
+  <nav class="toc" aria-label="On this page">
+    <p>Start</p>
+    <ul><li><a href="#start-h">Start here</a></li></ul>
+    <p>Apps</p>
+    <ul><li><a href="#so-h">Second opinion</a></li><li><a href="#settle-h">Conditional payments</a></li><li><a href="#fleet-h">Fleet</a></li><li><a href="#score-h">Forecast scorecard</a></li><li><a href="#brief-h">Country notes</a></li><li><a href="#gr-h">Gold Rush dossiers</a></li></ul>
+    <p>Tools for other teams</p>
+    <ul><li><a href="#mr-h">Why did my miner score that?</a></li><li><a href="#try-h">Ask the outcome miner</a></li></ul>
+    <p>Records</p>
+    <ul><li><a href="#found-h">What the receipts showed</a></li><li><a href="#ledger-h">Every purchase</a></li></ul>
+  </nav>
+  <main>
+    <section class="found" aria-labelledby="start-h">
     <h2 id="start-h" class="display">Start here</h2>
     <video controls preload="metadata" src="media/takar-overview.mp4" style="width:100%;max-width:960px;border-radius:8px;background:#000"></video>
     <p class="note">3:12, narrated. <a href="videos.html">All videos</a> · <a href="JUDGE.md">reviewer guide</a> · <a href="https://github.com/PugarHuda/takar">code</a></p>
@@ -145,61 +183,7 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
     <p class="note">For other teams: <code>POST /api/second-opinion</code> (<a href="openapi.json">OpenAPI</a>), <code>npx -y takar-mcp</code>, the Minds Bazaar Skill "Takar Second Opinion", <code>GET /api/miner?id=</code>, <code>GET /api/dossier?mine=</code>.</p>
   </section>
 
-  <section class="found" aria-labelledby="fleet-h">
-    <h2 id="fleet-h" class="display">App: a fleet that buys checks before it moves (Mission 11)</h2>
-    <p>Each machine below had a budget for intelligence. Before moving, it bought the checks its task needed through <a href="https://telegraphprotocol.com">Telegraph</a>'s ranked market, compared them with the nearest airport weather station, and decided whether to go.</p>
-    <p><strong>Simulated fleet, real purchases.</strong> The units are illustrative. Every purchase settled on Ethereum Sepolia testnet with test USDC, and every station reading is a published METAR report.</p>
-  </section>
-
-  <div class="runbar">
-    <label>Run <select id="run" aria-label="Choose a fleet run"></select></label>
-    <div class="tally" id="tally" aria-live="polite"></div>
-  </div>
-  <div id="units"><p class="empty">Loading the receipts…</p></div>
-
-  <section class="found" aria-labelledby="found-h">
-    <h2 id="found-h" class="display">What the receipts showed</h2>
-    <ol>
-      <li><strong>The top-ranked storm miner ignores the place you ask about.</strong> Storm checks for Makassar, Palangka Raya and Bandung were routed to miner 37007, which answered every one with Tropical Cyclone AKVAN-26 in India. Once, that answer was shaped into a 296 km/h gust for Bandung. Reported with receipts in <a href="https://github.com/telegraphprotocol/bounties/issues/211">bounties#211</a>.</li>
-      <li><strong>A storm answer can be paid for and empty.</strong> The next-ranked miner answered Palangka Raya with every field blank, so the drone there held.</li>
-      <li><strong>A station can disagree with a recorded-weather answer.</strong> A miner gave Makassar a 31.9 °C high for 15 November; the Hasanuddin airport station recorded 34 °C across 49 reports.</li>
-      <li><strong>When two independent sources agree, the machine goes.</strong> The Makassar drone flew after the storm miner forecast a 22.3 km/h gust and the airport station measured 17 km/h.</li>
-    </ol>
-  </section>
-
-  <section class="found" aria-labelledby="score-h">
-    <h2 id="score-h" class="display">Forecast scorecard (Mission 13)</h2>
-    <p id="score-sum">Loading the scorecard…</p>
-    <p><button id="verify" type="button" class="btn">Verify the signature in this browser</button> <span id="verify-out" aria-live="polite"></span></p>
-    <h3 class="display sub">The miners, graded by the same receipts</h3>
-    <p class="note">Every market was asked of two miners: Takar Outcome by id, and whoever Telegraph's ranking routed to. A miner is right when its yes or no matches the market's own resolution.</p>
-    <div class="scroll"><table id="miners"></table></div>
-    <h3 class="display sub">Calibration</h3>
-    <p class="note">What the crowd said, against how often it happened, among the scored forecasts.</p>
-    <div class="scroll"><table id="calib"></table></div>
-    <details>
-      <summary>Show every forecast</summary>
-      <div class="scroll"><table id="score"></table></div>
-    </details>
-  </section>
-
-  <section class="found" aria-labelledby="brief-h">
-    <h2 id="brief-h" class="display">Country notes priced per fact (Mission 05)</h2>
-    <p>Each note states what can be proved about each claim and how firmly, with its cost and proof: provenance and confidence, never a verdict on a live event. Disagreement between checks stays visible and is never averaged in.</p>
-    <div id="briefs"><p>Loading the notes…</p></div>
-  </section>
-
-  <section class="found" aria-labelledby="settle-h">
-    <h2 id="settle-h" class="display">Conditional payments (Missions 14 and 06)</h2>
-    <p>Test USDC locked in <a href="https://sepolia.etherscan.io/address/0xcb35d51094335141a986a429bA546b7955705187">TakarSettle v2</a> against a condition. Takar buys the answer through Telegraph and <b>proposes</b> a settlement; the payer and the payee each get one dispute during a 10-minute window, and then anyone can finalize it. The contract refuses an event proposal backed by fewer than two Telegraph signals, so <b>two different miners must agree</b>. A drought cover also needs <b>NASA POWER</b>, a record independent of Telegraph's weather miners, to land on the same side of the trigger, or it holds.</p>
-    <div class="scroll"><table id="settle"><tr><td>Loading…</td></tr></table></div>
-    <p class="note">Rows marked v1 settled on the first contract (<a href="https://sepolia.etherscan.io/address/0xfB5E39924F287d14a1833C58e50f466145e62808">0xfB5E…2808</a>), one answer and no dispute window.</p>
-    <h3 class="display sub">v3: two resolvers, and a dispute costs a bond</h3>
-    <p class="note"><a href="https://sepolia.etherscan.io/address/0xf977660CD28704Fa97D8f6B72835646F62E2502b">TakarSettle v3</a>: the dispute window opens only when two different resolvers back the same decision on the same evidence (the second re-checks both Telegraph signals and the partner check itself before it signs). A party that disputes posts a 0.5 test USDC bond, lost to the other party if the disputed decision stands. The first deals pay a supplier unless it is sanctioned: Takar's second opinion (two screening miners from different operators) and <a href="https://praman-desk.vercel.app">Praman</a>'s OFAC SDN screen (another team, over MCP) must land the same way, or the deal holds. Both resolver keys are Takar's today; the contract takes any set.</p>
-    <div class="scroll"><table id="settle3"><tr><td>Loading…</td></tr></table></div>
-  </section>
-
-  <section class="found" aria-labelledby="so-h">
+    <section class="found" aria-labelledby="so-h">
     <h2 id="so-h" class="display">A second opinion for any Telegraph intent</h2>
     <p>Every team on Telegraph ends up writing its own cross-check, because the ranked route can send a question to the wrong specialist or come back confidently wrong. Takar does it once, for any intent: it asks <b>two different miners</b>, chosen by an <b>open on-chain record of who was right</b>, and compares their answers field by field. <i>agree</i>, <i>disagree</i> or <i>insufficient</i>, never an average. Free to call (Takar pays the asks in test USDC). Use it from any agent: <a href="openapi.json">OpenAPI spec</a> for HTTP tools such as Minds, or <code>npx -y takar-mcp</code> (tool <code>second_opinion</code>).</p>
     <form id="so" class="try">
@@ -220,7 +204,55 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
     <div class="scroll"><table id="feed"></table></div>
   </section>
 
-  <section class="found" aria-labelledby="mr-h">
+    <section class="found" aria-labelledby="settle-h">
+    <h2 id="settle-h" class="display">Conditional payments <span class="mission">Missions 14 and 06</span></h2>
+    <p>Test USDC locked in <a href="https://sepolia.etherscan.io/address/0xcb35d51094335141a986a429bA546b7955705187">TakarSettle v2</a> against a condition. Takar buys the answer through Telegraph and <b>proposes</b> a settlement; the payer and the payee each get one dispute during a 10-minute window, and then anyone can finalize it. The contract refuses an event proposal backed by fewer than two Telegraph signals, so <b>two different miners must agree</b>. A drought cover also needs <b>NASA POWER</b>, a record independent of Telegraph's weather miners, to land on the same side of the trigger, or it holds.</p>
+    <div class="scroll"><table id="settle"><tr><td>Loading…</td></tr></table></div>
+    <p class="note">Rows marked v1 settled on the first contract (<a href="https://sepolia.etherscan.io/address/0xfB5E39924F287d14a1833C58e50f466145e62808">0xfB5E…2808</a>), one answer and no dispute window.</p>
+    <h3 class="display sub">v3: two resolvers, and a dispute costs a bond</h3>
+    <p class="note"><a href="https://sepolia.etherscan.io/address/0xf977660CD28704Fa97D8f6B72835646F62E2502b">TakarSettle v3</a>: the dispute window opens only when two different resolvers back the same decision on the same evidence (the second re-checks both Telegraph signals and the partner check itself before it signs). A party that disputes posts a 0.5 test USDC bond, lost to the other party if the disputed decision stands. The first deals pay a supplier unless it is sanctioned: Takar's second opinion (two screening miners from different operators) and <a href="https://praman-desk.vercel.app">Praman</a>'s OFAC SDN screen (another team, over MCP) must land the same way, or the deal holds. Both v3 resolver keys are Takar's. On the v4 panel opened 22 Nov (<a href="https://sepolia.etherscan.io/address/0x310275e6D66818E068245326bB9e398822304248">0x3102…4248</a>), the third seat is another team's key, Praman Desk's, and their runner signs escalated deals only after its own checks.</p>
+    <div class="scroll"><table id="settle3"><tr><td>Loading…</td></tr></table></div>
+  </section>
+
+    <section class="found" aria-labelledby="fleet-h">
+    <h2 id="fleet-h" class="display">A fleet that buys checks before it moves <span class="mission">Mission 11</span></h2>
+    <p>Each machine below had a budget for intelligence. Before moving, it bought the checks its task needed through <a href="https://telegraphprotocol.com">Telegraph</a>'s ranked market, compared them with the nearest airport weather station, and decided whether to go.</p>
+    <p><strong>Simulated fleet, real purchases.</strong> The units are illustrative. Every purchase settled on Ethereum Sepolia testnet with test USDC, and every station reading is a published METAR report.</p>
+    <div class="runbar">
+    <label>Run <select id="run" aria-label="Choose a fleet run"></select></label>
+    <div class="tally" id="tally" aria-live="polite"></div>
+  </div>
+    <div id="units"><p class="empty">Loading the receipts…</p></div>
+  </section>
+
+    <section class="found" aria-labelledby="score-h">
+    <h2 id="score-h" class="display">Forecast scorecard <span class="mission">Mission 13</span></h2>
+    <p id="score-sum">Loading the scorecard…</p>
+    <p><button id="verify" type="button" class="btn">Verify the signature in this browser</button> <span id="verify-out" aria-live="polite"></span></p>
+    <h3 class="display sub">The miners, graded by the same receipts</h3>
+    <p class="note">Every market was asked of two miners: Takar Outcome by id, and whoever Telegraph's ranking routed to. A miner is right when its yes or no matches the market's own resolution.</p>
+    <div class="scroll"><table id="miners"></table></div>
+    <h3 class="display sub">Calibration</h3>
+    <p class="note">What the crowd said, against how often it happened, among the scored forecasts.</p>
+    <div class="scroll"><table id="calib"></table></div>
+    <details>
+      <summary>Show every forecast</summary>
+      <div class="scroll"><table id="score"></table></div>
+    </details>
+  </section>
+
+    <section class="found" aria-labelledby="brief-h">
+    <h2 id="brief-h" class="display">Country notes priced per fact <span class="mission">Mission 05</span></h2>
+    <p>Each note states what can be proved about each claim and how firmly, with its cost and proof: provenance and confidence, never a verdict on a live event. Disagreement between checks stays visible and is never averaged in.</p>
+    <div id="briefs"><p>Loading the notes…</p></div>
+  </section>
+
+    <section class="found" aria-labelledby="gr-h">
+    <h2 id="gr-h" class="display">Gold Rush dossiers <span class="mission">Mission 06</span></h2>
+    <p>For Telegraph's Gold Rush: one Queensland gold mine at a time, from the two Gold Rush miners (asked by id, paid through Telegraph), with the checks a reader would do by hand. At Mount Morgan the dated survey rows add up to 294 t, the Queensland Government says 250 t for the same years, and the gap is close to the 56 t the survey records from dump retreatment in 1983–1990: shown as a candidate explanation, not applied. It closed three times for three different reasons (fire in 1927, end of the ore body in 1981, and 1990 with no reason quoted). <a href="goldrush.html">Read or download the dossiers</a>, or build one for any mine: <code>GET /api/dossier?mine=…</code>.</p>
+  </section>
+
+    <section class="found" aria-labelledby="mr-h">
     <h2 id="mr-h" class="display">Why did my miner score that?</h2>
     <p>For miner operators: the scorer's own numbers per epoch, the spot checks and node status, next to the open record of how the miner's answers held up when someone paid for them. A 0 with no failure reason is flagged: it can mean the miner was never asked, not that it answered badly (<a href="https://github.com/telegraphprotocol/bounties/issues/225">bounties#225</a>).</p>
     <form id="mr" class="try">
@@ -231,12 +263,7 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
     <div id="mr-out" aria-live="polite"></div>
   </section>
 
-  <section class="found" aria-labelledby="gr-h">
-    <h2 id="gr-h" class="display">Gold Rush dossiers</h2>
-    <p>For Telegraph's Gold Rush: one Queensland gold mine at a time, from the two Gold Rush miners (asked by id, paid through Telegraph), with the checks a reader would do by hand. At Mount Morgan the dated survey rows add up to 294 t, the Queensland Government says 250 t for the same years, and the gap is close to the 56 t the survey records from dump retreatment in 1983–1990: shown as a candidate explanation, not applied. It closed three times for three different reasons (fire in 1927, end of the ore body in 1981, and 1990 with no reason quoted). <a href="goldrush.html">Read or download the dossiers</a>, or build one for any mine: <code>GET /api/dossier?mine=…</code>.</p>
-  </section>
-
-  <section class="found" aria-labelledby="try-h">
+    <section class="found" aria-labelledby="try-h">
     <h2 id="try-h" class="display">Ask the outcome miner yourself</h2>
     <p>No wallet, no signup. This calls Takar Outcome's own endpoint directly, the same one Telegraph routes EVENT_OUTCOME_RESOLUTION asks to. It answers from a settled Polymarket market or a sentence quoted word for word from Wikipedia, and says <i>unresolved</i> rather than guess.</p>
     <form id="try" class="try">
@@ -247,14 +274,25 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
     <div id="try-out" aria-live="polite"></div>
   </section>
 
-  <section class="ledger" aria-labelledby="ledger-h">
+    <section class="found" aria-labelledby="found-h">
+    <h2 id="found-h" class="display">What the receipts showed</h2>
+    <ol>
+      <li><strong>The top-ranked storm miner ignores the place you ask about.</strong> Storm checks for Makassar, Palangka Raya and Bandung were routed to miner 37007, which answered every one with Tropical Cyclone AKVAN-26 in India. Once, that answer was shaped into a 296 km/h gust for Bandung. Reported with receipts in <a href="https://github.com/telegraphprotocol/bounties/issues/211">bounties#211</a>.</li>
+      <li><strong>A storm answer can be paid for and empty.</strong> The next-ranked miner answered Palangka Raya with every field blank, so the drone there held.</li>
+      <li><strong>A station can disagree with a recorded-weather answer.</strong> A miner gave Makassar a 31.9 °C high for 15 November; the Hasanuddin airport station recorded 34 °C across 49 reports.</li>
+      <li><strong>When two independent sources agree, the machine goes.</strong> The Makassar drone flew after the storm miner forecast a 22.3 km/h gust and the airport station measured 17 km/h.</li>
+    </ol>
+  </section>
+
+    <section class="ledger" aria-labelledby="ledger-h">
     <h2 id="ledger-h" class="display">Every purchase</h2>
     <details>
       <summary id="ledger-sum">Show the purchase ledger</summary>
       <div class="scroll"><table id="ledger"></table></div>
     </details>
   </section>
-</main>
+  </main>
+</div>
 
 <footer>
   <div class="wrap">
@@ -263,6 +301,19 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
 </footer>
 
 <script>
+// Section index: mark the section whose heading is nearest the top of the screen.
+(() => {
+  const links = new Map([...document.querySelectorAll(".toc a")].map((a) => [a.getAttribute("href").slice(1), a]));
+  const seen = new Map();
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) seen.set(e.target.id, e.isIntersecting);
+    const first = [...links.keys()].find((id) => seen.get(id));
+    if (!first) return;
+    links.forEach((a, id) => a.classList.toggle("on", id === first));
+  }, { rootMargin: "0px 0px -70% 0px" });
+  links.forEach((_, id) => { const h = document.getElementById(id); if (h) io.observe(h); });
+  links.values().next().value?.classList.add("on");
+})();
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 // Ledger values reach href attributes, so only a well-formed 32-byte hash may become a link.
 const HASH = /^0x[0-9a-fA-F]{64}$/;
