@@ -30,6 +30,7 @@ Takar is entered in Telegraph Hackathon Season II, in all three tracks, from one
 | Country note priced per fact | Apps & Agents | Mission 05, Conflict Intelligence |
 | Takar Settle, conditional escrow | Apps & Agents | Mission 14, Web3 & DeFi |
 | Takar Settle, drought cover | Apps & Agents | Mission 06, Resources & Agriculture |
+| Gold Rush dossiers (the lead use) | Apps & Agents | Mission 06, Resources & Agriculture (gold mines) |
 | Takar Outcome miner | Miners / Providers | EVENT_OUTCOME_RESOLUTION_GENERAL |
 | Takar Outcome evaluator | Evaluators | EVENT_OUTCOME_RESOLUTION family (Hybrid). Rejected by the network; kept as a documented negative result |
 
@@ -112,7 +113,11 @@ Our own miner is honest but narrow here. On Manifold's vaguer questions ("Will G
 
 ## Mission 05: a country note priced per fact
 
-A risk desk's note on India and Pakistan, April to June 2025, is written as claims in `briefs/india-pakistan-2025.json`.
+Two notes, framed the way the mission's build note asks: what can be proved about each claim and how firmly, with its cost and proof, never a verdict on a live event.
+- India and Pakistan, April to June 2025 (`briefs/india-pakistan-2025.json`), for a desk with South Asia exposure.
+- Israel and Iran, June 2025 (`briefs/israel-iran-2025.json`, added 22 Nov), for an oil and shipping desk: the planted false claim ("Iran closed the Strait of Hormuz"; its parliament backed a closure that never happened) came back **contradicted by all three checks**; the ceasefire and the Al Udeid strike were **confirmed**; the Israeli and US strikes, which Wikipedia documents, came back **disputed** because the FACT_CHECK miner (LiveCert, 4433) answered "False" against two outcome miners. The note keeps them out of the tally rather than overruling a source. /usr/bin/bash.18 in test USDC, /usr/bin/bash.06 per settled claim.
+
+Each note is written as claims.
 - **Observations** (a period that has ended) are bought from three checks: Takar Outcome by id, the ranked EVENT_OUTCOME route, and FACT_CHECK.
 - **Forecasts** are listed and not bought.
 
@@ -137,7 +142,7 @@ The escalation tally counts confirmed claims only.
 - `scripts/smoke.mjs` checks the live site's free endpoints every night (`.github/workflows/smoke.yml`); `.github/workflows/served.yml` snapshots the node's request counter every two hours.
 - `scripts/anchor.mjs` puts the ledger's Merkle root and every dossier hash on EAS, every day from CI (`.github/workflows/anchor.yml`, a dedicated anchor wallet `0xf3ee…7bE5`); `--verify <count> <root>` recomputes a published root from the file.
 
-## Gold Rush dossiers (for Telegraph's own Gold Rush app)
+## Mission 06: Gold Rush dossiers (gold mines are one of the mission's named buyers; built for Telegraph's Gold Rush app)
 
 Ahmed asked the Gold Rush contributors for the verification side: show both figures, check whether they mean different periods, trace every finding to its record, and export a dossier. [goldrush.html](https://takar-telegraph.vercel.app/goldrush.html) does that from the two Gold Rush miners (goldrush-qld-history 7310050 and OathCast 64176), asked by id and paid through Telegraph.
 

@@ -176,9 +176,9 @@ footer { border-top: 1px solid var(--rule); padding: 20px 0 40px; color: var(--m
   </section>
 
   <section class="found" aria-labelledby="brief-h">
-    <h2 id="brief-h" class="display">A country note priced per fact (Mission 05)</h2>
-    <p id="brief-sum">Loading the note…</p>
-    <div class="scroll"><table id="brief"></table></div>
+    <h2 id="brief-h" class="display">Country notes priced per fact (Mission 05)</h2>
+    <p>Each note states what can be proved about each claim and how firmly, with its cost and proof: provenance and confidence, never a verdict on a live event. Disagreement between checks stays visible and is never averaged in.</p>
+    <div id="briefs"><p>Loading the notes…</p></div>
   </section>
 
   <section class="found" aria-labelledby="settle-h">
@@ -326,20 +326,28 @@ const canonical = (v) => Array.isArray(v) ? `[${v.map(canonical).join(",")}]`
   : JSON.stringify(v ?? null);
 
 (async () => {
+  const host = document.getElementById("briefs");
+  host.innerHTML = "";
+  for (const file of ["receipts/brief-israel-iran-2025.json", "receipts/brief-india-pakistan-2025.json"]) {
+  const sum = host.appendChild(document.createElement("p"));
+  const table = host.appendChild(document.createElement("div"));
+  table.className = "scroll";
+  table.innerHTML = "<table></table>";
   try {
-    const b = await fetch("receipts/brief-india-pakistan-2025.json", { cache: "no-store" }).then((r) => r.json());
+    const b = await fetch(file, { cache: "no-store" }).then((r) => r.json());
     const s = b.summary;
-    document.getElementById("brief-sum").innerHTML =
+    sum.innerHTML =
       `<b>${esc(b.title)}</b>. ${esc(b.customer)} Each factual claim was bought through Telegraph from three checks (Takar Outcome by id, the ranked route, and FACT_CHECK); forecasts are listed and not bought. ` +
       `<b>${esc(s.confirmed)}</b> confirmed, <b>${esc(s.contradicted)}</b> contradicted, <b>${esc(s.disputed)}</b> disputed, <b>${esc(s.single_source ?? 0)}</b> single-source, <b>${esc(s.unsupported)}</b> unsupported, <b>${esc(s.forecasts)}</b> forecasts. ` +
       `Escalation tally from confirmed claims only: <b>${esc(s.escalation.confirmed_escalations)}</b> escalation, <b>${esc(s.escalation.confirmed_de_escalations)}</b> de-escalation; disputed claims are listed, never averaged in. ` +
       `Total <b>$${esc(s.cost_usd)}</b> test USDC, $${esc(s.cost_per_settled_claim_usd)} per settled claim.`;
     const cls = { confirmed: "ok", contradicted: "bad", disputed: "bad" };
-    document.getElementById("brief").innerHTML =
+    table.firstChild.innerHTML =
       `<thead><tr><th>Claim</th><th>Kind</th><th>Status</th><th>What each check said</th><th>Cost</th></tr></thead><tbody>` +
       b.rows.map((r) => `<tr><td>${esc(r.claim)}</td><td>${esc(r.kind)}</td><td><span class="${cls[r.result.status] ?? ""}">${esc(r.result.status)}</span></td><td>${r.result.checks.map((k) => `${esc(k.via === "FACT_CHECK" ? "fact-check" : (k.miner?.name ?? "route"))}: ${esc(k.answer)}${k.duplicate ? " (same miner again)" : ""}${HASH.test(k.signal ?? "") ? ` <a href="https://devnode.telegraphprotocol.com/engine/v1/signal/${k.signal}">signal</a>` : ""}`).join("<br>") || "not bought: a forecast"}</td><td>$${esc(r.result.costUsd)}</td></tr>`).join("") + `</tbody>`;
   } catch (e) {
-    document.getElementById("brief-sum").textContent = `Could not load the note (${e.message}).`;
+    sum.textContent = `Could not load ${file} (${e.message}).`;
+  }
   }
 })();
 
