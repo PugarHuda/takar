@@ -16,7 +16,7 @@ Watch (2:51, narrated): https://takar-telegraph.vercel.app/media/takar-overview.
 | Used by another team | `GET /api/reputation?intent=MINING_INTELLIGENCE_GENERAL&attester=0x98021b20Efdb7ae2C57366010a6E0fDE207b4466` | Praman Desk attested to our open schema with its own wallet ([EAS 0x33d85bed…](https://sepolia.easscan.org/attestation/view/0x33d85bed90eb3164c5124a7c26ca79be386003205265044d1425cea9b714e115)) and built its Gold Rush arbitrator on our dossier JSON; our dossiers call it back and it patched its scopes after our finding |
 | The miner answers from data, not a model, where it can | [docs/RESOLVERS.md](docs/RESOLVERS.md) | one card per source: prices and Fed decisions from FRED (37/37 and 8/8 on unseen markets), dated games from ESPN (100/100 against openfootball), Wikipedia with a checked quote; every round, including the bad ones, in `receipts/` |
 
-Offline: `npm ci && npm test` (442 checks), `cd onchain && forge test` (25). Everything below is detail.
+Offline: `npm ci && npm test` (467 checks), `cd onchain && forge test` (25). Everything below is detail.
 
 ---
 

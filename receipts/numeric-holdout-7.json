@@ -1,0 +1,53 @@
+{
+  "title": "lib/numeric.mjs on resolved Manifold markets it was not tuned on",
+  "generated_at": "2026-11-22T07:26:47.542Z",
+  "terms": [
+    "recession two quarters",
+    "negative GDP growth",
+    "technical recession",
+    "Germany recession",
+    "US recession 2022",
+    "US recession 2023",
+    "GDP two consecutive quarters",
+    "German economy shrink"
+  ],
+  "excluded": 495,
+  "summary": {
+    "markets": 3,
+    "answered": 3,
+    "right": 2,
+    "wrong": 1,
+    "unresolved": 0,
+    "not_taken": 0,
+    "accuracy": 0.6667
+  },
+  "rows": [
+    {
+      "id": "7Pf1wriceBfA9BwBy9uz",
+      "url": "https://manifold.markets/jack/us-enter-a-recession-in-2024-two-qu",
+      "question": "US enter a recession in 2024? (Two quarters negative GDP growth)",
+      "market": "no",
+      "ours": "no",
+      "evidence": "US real GDP (quarterly, seasonally adjusted): no two consecutive falling quarters inside 2024-01-01..2024-12-31: 2024-01 0.36%, 2024-04 0.88%, 2024-07 0.78%, 2024-10 0.60%.",
+      "right": true
+    },
+    {
+      "id": "N4PwSuA7jH9c2y7ucaG2",
+      "url": "https://manifold.markets/MaxG/will-germany-experience-negative-ec",
+      "question": "Will Germany experience negative economic growth for two consecutive quarters in 2023? (Recession in Germany)",
+      "market": "no",
+      "ours": "yes",
+      "evidence": "Germany real GDP (quarterly, seasonally adjusted): two consecutive falling quarters inside 2023-01-01..2023-12-31: 2023-01 -0.68%, 2023-04 -0.10%, 2023-07 0.15%, 2023-10 -0.30%.",
+      "right": false
+    },
+    {
+      "id": "BeKv5I5fx1lnLc7RetfU",
+      "url": "https://manifold.markets/johnfloydcapitalcom/will-the-us-economy-have-a-recessio",
+      "question": "Will the US economy have a recession [two quarters of negative GDP growth] in 2024?",
+      "market": "no",
+      "ours": "no",
+      "evidence": "US real GDP (quarterly, seasonally adjusted): no two consecutive falling quarters inside 2024-01-01..2024-12-31: 2024-01 0.36%, 2024-04 0.88%, 2024-07 0.78%, 2024-10 0.60%.",
+      "right": true
+    }
+  ]
+}
