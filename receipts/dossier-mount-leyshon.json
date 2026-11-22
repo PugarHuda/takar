@@ -393,7 +393,7 @@
       }
     ],
     "tenure": {
-      "checked_at": "2026-11-21T17:18:06.385Z",
+      "checked_at": "2026-11-22T07:09:05.038Z",
       "source": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer (Queensland Government, open data), read directly",
       "authorities": 4,
       "holders": {
@@ -645,6 +645,40 @@
       "tonnes": null,
       "matches": [],
       "note": "no usable consensus figure"
+    },
+    "land_check": {
+      "source": "https://goldrush.up.railway.app/ask?question=land%20and%20rights%20at%20site%2038940",
+      "miner": "7310050 goldrush-qld-history (NFT KING)",
+      "tenure": {
+        "ours": 4,
+        "theirs": 6,
+        "both": 3,
+        "only_ours": [
+          "ML 10148"
+        ],
+        "at_point_missed_by_us": [],
+        "their_list_truncated": false,
+        "only_ours_are_access_leases": true
+      },
+      "expiry": {
+        "same": 0,
+        "one_day_apart": [
+          "ML 10144",
+          "ML 10172",
+          "ML 10173"
+        ]
+      },
+      "renewal_lodged": 0,
+      "native_title_at_point": {
+        "both": [
+          "QC2018/002",
+          "QC2023/001"
+        ],
+        "only_theirs": [],
+        "only_ours": []
+      },
+      "checked_at": "2026-11-22T07:09:55.173Z",
+      "note": "3 of our 4 tenure IDs within 500 m are also in theirs (6 rows to 2 km); not in theirs: ML 10148 (access-area leases, a register layer their reading does not cover); native title QC2018/002, QC2023/001 at the site in both; 3 expiry date(s) one day apart (ML 10144, ML 10172, ML 10173): the register stores midnight Brisbane time (UTC+10), so a date cut in UTC lands on the day before; ours are read in Brisbane time"
     },
     "receipts_tie": {
       "checked": 14,
@@ -1527,11 +1561,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T18:52:04.054Z",
+  "rederived_at": "2026-11-22T07:09:06.500Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "dbc73d57ab4ddc5fd64da027f26fd8c532bc3ed6b0ed471da7d4a150cd8d1819",
-    "signature": "Ubdxa1KfPd7twFEFPyvVpKa94mNSAuoNwQ0NuDIfBBROI4II4r9iFjvhgBTfPktBNwIKEolKIUHFw9yxZsalAQ==",
+    "sha256": "4c58a0bd687c5dd5fb311dfa779f84772cd6fe1fc1c3ba6ae3f9304a7130c3c5",
+    "signature": "AaJ6LpSdf61Z0JF4Yopy8XJV9fRHpOCBnqMesFa4dZnwksARQFsT/gXm+WcPQynEbfr4XsC+LXVbtRzjjNDzAg==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

@@ -30,7 +30,7 @@ A register's status is not a mining tenure: who holds the lease today needs the 
 
 ## Tenure today (Queensland register, read directly, not a Telegraph answer)
 
-Checked 2026-11-21T17:30:52.412Z within 500 m of the survey's point: **6** current authorities.
+Checked 2026-11-22T07:09:24.518Z within 500 m of the survey's point: **6** current authorities.
 
 - Holders: Ravenswood Gold Pty Ltd (6).
 - Types: EPM granted (1), ML granted (5).
@@ -45,6 +45,8 @@ Checked 2026-11-21T17:30:52.412Z within 500 m of the survey's point: **6** curre
 | ML 100148 | Ravenswood Gold Pty Ltd | Granted | 2039-05-31 | Section 24MD 6B Notification |
 | ML 100145 | Ravenswood Gold Pty Ltd | Granted | 2039-05-31 | Section 31 Agreement |
 | ML 1380 | Ravenswood Gold Pty Ltd | Granted | 2034-11-30 | 100% exclusive land |
+
+**Second reading, another team** ([NFT KING's goldrush-qld-history, land and rights](https://goldrush.up.railway.app/ask?question=land%20and%20rights%20at%20site%20481934), read 2026-11-22T07:09:56.147Z; a cross-check, not a record): 6 of our 6 tenure IDs within 500 m are also in theirs \(28 rows to 2 km, some layers cut at 25\); their sub-status "Renewal Lodged" on 1 shared lease\(s\) confirms the renewal our reading inferred; 6 expiry date\(s\) one day apart \(EPM 15099, ML 1395, ML 1753\): the register stores midnight Brisbane time \(UTC\+10\), so a date cut in UTC lands on the day before; ours are read in Brisbane time.
 
 Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
 

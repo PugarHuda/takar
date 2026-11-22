@@ -475,7 +475,7 @@
       }
     ],
     "tenure": {
-      "checked_at": "2026-11-21T17:17:59.345Z",
+      "checked_at": "2026-11-22T07:08:54.721Z",
       "source": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer (Queensland Government, open data), read directly",
       "authorities": 24,
       "holders": {
@@ -923,6 +923,59 @@
         }
       ],
       "note": "matches QLDGOV-MM (250 t, 1882–1990) and WP-MM (262 t, 1882–1981)"
+    },
+    "land_check": {
+      "source": "https://goldrush.up.railway.app/ask?question=land%20and%20rights%20at%20site%20494270",
+      "miner": "7310050 goldrush-qld-history (NFT KING)",
+      "tenure": {
+        "ours": 24,
+        "theirs": 26,
+        "both": 20,
+        "only_ours": [
+          "ML 5649",
+          "ML 5660",
+          "ML 6692",
+          "ML 5658"
+        ],
+        "at_point_missed_by_us": [],
+        "their_list_truncated": true,
+        "only_ours_are_access_leases": false
+      },
+      "expiry": {
+        "same": 0,
+        "one_day_apart": [
+          "ML 5612",
+          "ML 5613",
+          "ML 5614",
+          "ML 5615",
+          "ML 5616",
+          "ML 5618",
+          "ML 5619",
+          "ML 5621",
+          "ML 5623",
+          "ML 5624",
+          "ML 5625",
+          "ML 5633",
+          "ML 5634",
+          "ML 5648",
+          "ML 5608",
+          "ML 5609",
+          "ML 5617",
+          "ML 5622",
+          "ML 5626",
+          "ML 5627"
+        ]
+      },
+      "renewal_lodged": 20,
+      "native_title_at_point": {
+        "both": [
+          "QC2012/009"
+        ],
+        "only_theirs": [],
+        "only_ours": []
+      },
+      "checked_at": "2026-11-22T07:09:54.586Z",
+      "note": "20 of our 24 tenure IDs within 500 m are also in theirs (26 rows to 2 km, some layers cut at 25); not in theirs: ML 5649, ML 5660, ML 6692, ML 5658 (their list is cut, so absence there is not a disagreement); native title QC2012/009 at the site in both; their sub-status \"Renewal Lodged\" on 20 shared lease(s) confirms the renewal our reading inferred; 20 expiry date(s) one day apart (ML 5612, ML 5613, ML 5614): the register stores midnight Brisbane time (UTC+10), so a date cut in UTC lands on the day before; ours are read in Brisbane time"
     },
     "receipts_tie": {
       "checked": 7,
@@ -1932,11 +1985,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T18:52:03.209Z",
+  "rederived_at": "2026-11-22T07:08:55.147Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "0ee4c79b27870320362d71fccce9b3d5ec9008d4bc44e2683e061d28ddd4abc4",
-    "signature": "i2PRN9OGEyi4Y7EKX64xmG9LaGyYly4+q/wf1+hoAm/LHThsBJkzKrcZEmfShz0wwWuz0/9FrSzpHauPnqqXBg==",
+    "sha256": "9d9705bd52eae57bf98eea7d53ba058edb6c69bfc76b77b857c3fbf561765a0b",
+    "signature": "jQyKo6PVBQKbYtOy83nd3KWkU0JctLhZ1RGwqR2rNvNdbAytzpNmMHfxtFFcNS8LuK91oVzQdMXqDogaCzrUCg==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

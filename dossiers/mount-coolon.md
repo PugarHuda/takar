@@ -49,7 +49,7 @@ A register's status is not a mining tenure: who holds the lease today needs the 
 
 ## Tenure today (Queensland register, read directly, not a Telegraph answer)
 
-Checked 2026-11-21T17:32:03.388Z within 500 m of the survey's point: **5** current authorities.
+Checked 2026-11-22T07:09:29.327Z within 500 m of the survey's point: **5** current authorities.
 
 - Holders: MT COOLON GOLD MINES PTY LTD (5).
 - Types: EPM granted (1), ML granted (3), ML granted \(access\) (1).
@@ -62,6 +62,8 @@ Checked 2026-11-21T17:32:03.388Z within 500 m of the survey's point: **5** curre
 | ML 1085 | MT COOLON GOLD MINES PTY LTD | Granted | 2034-01-31 | 100% exclusive land |
 | ML 1086 | MT COOLON GOLD MINES PTY LTD | Granted | 2034-01-31 | 100% exclusive land |
 | ML 10227 | MT COOLON GOLD MINES PTY LTD | Granted | 2034-01-31 | 100% exclusive land |
+
+**Second reading, another team** ([NFT KING's goldrush-qld-history, land and rights](https://goldrush.up.railway.app/ask?question=land%20and%20rights%20at%20site%2041615), read 2026-11-22T07:09:56.393Z; a cross-check, not a record): 4 of our 5 tenure IDs within 500 m are also in theirs \(4 rows to 2 km\); not in theirs: ML 10227 \(access-area leases, a register layer their reading does not cover\); 4 expiry date\(s\) one day apart \(EPM 15902, ML 1029, ML 1085\): the register stores midnight Brisbane time \(UTC\+10\), so a date cut in UTC lands on the day before; ours are read in Brisbane time.
 
 Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
 

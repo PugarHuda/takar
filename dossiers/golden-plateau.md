@@ -52,7 +52,7 @@ A register's status is not a mining tenure: who holds the lease today needs the 
 
 ## Tenure today (Queensland register, read directly, not a Telegraph answer)
 
-Checked 2026-11-21T17:29:37.389Z within 500 m of the survey's point: **6** current authorities.
+Checked 2026-11-22T07:09:14.521Z within 500 m of the survey's point: **6** current authorities.
 
 - Holders: LION MINING PTY LTD (6).
 - Types: EPM granted (1), ML granted (5).
@@ -67,6 +67,8 @@ Checked 2026-11-21T17:29:37.389Z within 500 m of the survey's point: **6** curre
 | ML 3227 | LION MINING PTY LTD | Granted | 2028-06-30 | New private ILUA |
 | ML 3228 | LION MINING PTY LTD | Granted | 2028-07-31 | New private ILUA |
 | ML 3243 | LION MINING PTY LTD | Granted | 2025-04-30 | Private ILUA |
+
+**Second reading, another team** ([NFT KING's goldrush-qld-history, land and rights](https://goldrush.up.railway.app/ask?question=land%20and%20rights%20at%20site%20493636), read 2026-11-22T07:09:55.653Z; a cross-check, not a record): 6 of our 6 tenure IDs within 500 m are also in theirs \(16 rows to 2 km\); their sub-status "Renewal Lodged" on 1 shared lease\(s\) confirms the renewal our reading inferred; 6 expiry date\(s\) one day apart \(EPM 15981, ML 3230, ML 3221\): the register stores midnight Brisbane time \(UTC\+10\), so a date cut in UTC lands on the day before; ours are read in Brisbane time.
 
 Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
 

@@ -47,7 +47,7 @@ A register's status is not a mining tenure: who holds the lease today needs the 
 
 ## Tenure today (Queensland register, read directly, not a Telegraph answer)
 
-Checked 2026-11-21T17:28:29.511Z within 500 m of the survey's point: **2** current authorities.
+Checked 2026-11-22T07:09:09.978Z within 500 m of the survey's point: **2** current authorities.
 
 - Holders: JUBILEE METALS LIMITED (1), Kidston Gold Mines Pty Ltd (1).
 - Types: EPM granted (1), ML granted (1).
@@ -57,6 +57,8 @@ Checked 2026-11-21T17:28:29.511Z within 500 m of the survey's point: **2** curre
 |---|---|---|---|---|
 | EPM 27579 | JUBILEE METALS LIMITED | Granted | 2031-02-03 | Granted with Native Title Protection Conditions |
 | ML 3347 | Kidston Gold Mines Pty Ltd | Granted | 2031-06-30 | Granted before 1 January 1994 |
+
+**Second reading, another team** ([NFT KING's goldrush-qld-history, land and rights](https://goldrush.up.railway.app/ask?question=land%20and%20rights%20at%20site%20479629), read 2026-11-22T07:09:55.436Z; a cross-check, not a record): 2 of our 2 tenure IDs within 500 m are also in theirs \(2 rows to 2 km\); 2 expiry date\(s\) one day apart \(EPM 27579, ML 3347\): the register stores midnight Brisbane time \(UTC\+10\), so a date cut in UTC lands on the day before; ours are read in Brisbane time.
 
 Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
 

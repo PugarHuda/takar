@@ -58,7 +58,7 @@ A register's status is not a mining tenure: who holds the lease today needs the 
 
 ## Tenure today (Queensland register, read directly, not a Telegraph answer)
 
-Checked 2026-11-21T17:18:06.385Z within 500 m of the survey's point: **4** current authorities.
+Checked 2026-11-22T07:09:05.038Z within 500 m of the survey's point: **4** current authorities.
 
 - Holders: Newmont Landco Pty Ltd (4).
 - Types: ML granted (1), ML granted \(access\) (3).
@@ -70,6 +70,8 @@ Checked 2026-11-21T17:18:06.385Z within 500 m of the survey's point: **4** curre
 | ML 10148 | Newmont Landco Pty Ltd | Granted | 2029-07-31 | Granted before 1 January 1994 |
 | ML 10172 | Newmont Landco Pty Ltd | Granted | 2029-04-30 | Granted before 23 Dec 1996, intermediate period checked |
 | ML 10173 | Newmont Landco Pty Ltd | Granted | 2029-04-30 | Granted before 23 Dec 1996, intermediate period checked |
+
+**Second reading, another team** ([NFT KING's goldrush-qld-history, land and rights](https://goldrush.up.railway.app/ask?question=land%20and%20rights%20at%20site%2038940), read 2026-11-22T07:09:55.173Z; a cross-check, not a record): 3 of our 4 tenure IDs within 500 m are also in theirs \(6 rows to 2 km\); not in theirs: ML 10148 \(access-area leases, a register layer their reading does not cover\); native title QC2018/002, QC2023/001 at the site in both; 3 expiry date\(s\) one day apart \(ML 10144, ML 10172, ML 10173\): the register stores midnight Brisbane time \(UTC\+10\), so a date cut in UTC lands on the day before; ours are read in Brisbane time.
 
 Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
 

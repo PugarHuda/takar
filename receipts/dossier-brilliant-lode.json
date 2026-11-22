@@ -252,7 +252,7 @@
       }
     ],
     "tenure": {
-      "checked_at": "2026-11-21T17:18:02.912Z",
+      "checked_at": "2026-11-22T07:08:58.635Z",
       "source": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer (Queensland Government, open data), read directly",
       "authorities": 3,
       "holders": {
@@ -510,6 +510,35 @@
       "status": "SYNTHESIS_ARBITRATED",
       "matches": [],
       "note": "matches none of the recorded totals"
+    },
+    "land_check": {
+      "source": "https://goldrush.up.railway.app/ask?question=land%20and%20rights%20at%20site%2038722",
+      "miner": "7310050 goldrush-qld-history (NFT KING)",
+      "tenure": {
+        "ours": 3,
+        "theirs": 19,
+        "both": 3,
+        "only_ours": [],
+        "at_point_missed_by_us": [],
+        "their_list_truncated": true,
+        "only_ours_are_access_leases": false
+      },
+      "expiry": {
+        "same": 0,
+        "one_day_apart": [
+          "EPM 15964",
+          "ML 1499",
+          "ML 10208"
+        ]
+      },
+      "renewal_lodged": 1,
+      "native_title_at_point": {
+        "both": [],
+        "only_theirs": [],
+        "only_ours": []
+      },
+      "checked_at": "2026-11-22T07:09:54.932Z",
+      "note": "3 of our 3 tenure IDs within 500 m are also in theirs (19 rows to 2 km, some layers cut at 25); their sub-status \"Renewal Lodged\" on 1 shared lease(s) confirms the renewal our reading inferred; 3 expiry date(s) one day apart (EPM 15964, ML 1499, ML 10208): the register stores midnight Brisbane time (UTC+10), so a date cut in UTC lands on the day before; ours are read in Brisbane time"
     },
     "receipts_tie": {
       "checked": 3,
@@ -849,11 +878,11 @@
       "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
     }
   },
-  "rederived_at": "2026-11-21T18:52:03.766Z",
+  "rederived_at": "2026-11-22T07:09:00.477Z",
   "attestation": {
     "algorithm": "ed25519",
-    "sha256": "77ba36e3e1c6eeebf638a03870489b567df1237aed8ba2124a0a3662d418bf48",
-    "signature": "9IP4rZMJJ/Ys0jj6sS9741wd9zJGZW36F5iWwX99pbxrIjbnSZzawMgWZ/61wTgyPi95e7ZIOAqXERDXxSAOAw==",
+    "sha256": "3fbc8332246c2093b255508c9d49add1d8033af03354241b3c964785b60f84ca",
+    "signature": "dQkm37wnmVCn/+nUjbri9u58Z6aBC7Z/Lym1tH4llHAeQ1ZTjr4jsDA0yLV7iPzntpHT+CJHRZqPNAvAdZwcAw==",
     "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
   }
 }

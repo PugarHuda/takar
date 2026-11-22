@@ -63,7 +63,7 @@ A register's status is not a mining tenure: who holds the lease today needs the 
 
 ## Tenure today (Queensland register, read directly, not a Telegraph answer)
 
-Checked 2026-11-21T17:17:59.345Z within 500 m of the survey's point: **24** current authorities.
+Checked 2026-11-22T07:08:54.721Z within 500 m of the survey's point: **24** current authorities.
 
 - Holders: HERITAGE MINERALS PTY LTD (24).
 - Types: ML granted (14), ML granted \(access\) (10).
@@ -84,6 +84,8 @@ Checked 2026-11-21T17:17:59.345Z within 500 m of the survey's point: **24** curr
 | ML 5624 | HERITAGE MINERALS PTY LTD | Granted | 2025-08-31 | Granted before 1 January 1994 |
 | ML 5625 | HERITAGE MINERALS PTY LTD | Granted | 2025-08-31 | No Registered Native Title Claimants |
 | ML 5649 | HERITAGE MINERALS PTY LTD | Granted | 2025-08-31 | No Registered Native Title Claimants |
+
+**Second reading, another team** ([NFT KING's goldrush-qld-history, land and rights](https://goldrush.up.railway.app/ask?question=land%20and%20rights%20at%20site%20494270), read 2026-11-22T07:09:54.586Z; a cross-check, not a record): 20 of our 24 tenure IDs within 500 m are also in theirs \(26 rows to 2 km, some layers cut at 25\); not in theirs: ML 5649, ML 5660, ML 6692, ML 5658 \(their list is cut, so absence there is not a disagreement\); native title QC2012/009 at the site in both; their sub-status "Renewal Lodged" on 20 shared lease\(s\) confirms the renewal our reading inferred; 20 expiry date\(s\) one day apart \(ML 5612, ML 5613, ML 5614\): the register stores midnight Brisbane time \(UTC\+10\), so a date cut in UTC lands on the day before; ours are read in Brisbane time.
 
 Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
 

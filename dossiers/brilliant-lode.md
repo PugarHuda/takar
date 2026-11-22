@@ -49,7 +49,7 @@ A register's status is not a mining tenure: who holds the lease today needs the 
 
 ## Tenure today (Queensland register, read directly, not a Telegraph answer)
 
-Checked 2026-11-21T17:18:02.912Z within 500 m of the survey's point: **3** current authorities.
+Checked 2026-11-22T07:08:58.635Z within 500 m of the survey's point: **3** current authorities.
 
 - Holders: CITIGOLD CORPORATION LIMITED (3).
 - Types: EPM granted (1), ML granted (2).
@@ -61,6 +61,8 @@ Checked 2026-11-21T17:18:02.912Z within 500 m of the survey's point: **3** curre
 | EPM 15964 | CITIGOLD CORPORATION LIMITED | Granted | 2025-05-01 | Land subject to Native Title is excluded from the permit area |
 | ML 1499 | CITIGOLD CORPORATION LIMITED | Granted | 2035-12-31 | Granted before 23 Dec 1996, intermediate period checked |
 | ML 10208 | CITIGOLD CORPORATION LIMITED | Granted | 2035-12-31 | Granted before 23 Dec 1996, intermediate period checked |
+
+**Second reading, another team** ([NFT KING's goldrush-qld-history, land and rights](https://goldrush.up.railway.app/ask?question=land%20and%20rights%20at%20site%2038722), read 2026-11-22T07:09:54.932Z; a cross-check, not a record): 3 of our 3 tenure IDs within 500 m are also in theirs \(19 rows to 2 km, some layers cut at 25\); their sub-status "Renewal Lodged" on 1 shared lease\(s\) confirms the renewal our reading inferred; 3 expiry date\(s\) one day apart \(EPM 15964, ML 1499, ML 10208\): the register stores midnight Brisbane time \(UTC\+10\), so a date cut in UTC lands on the day before; ours are read in Brisbane time.
 
 Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
 

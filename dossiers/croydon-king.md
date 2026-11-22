@@ -29,7 +29,7 @@ A register's status is not a mining tenure: who holds the lease today needs the 
 
 ## Tenure today (Queensland register, read directly, not a Telegraph answer)
 
-Checked 2026-11-21T17:30:15.406Z within 500 m of the survey's point: **2** current authorities.
+Checked 2026-11-22T07:09:19.378Z within 500 m of the survey's point: **2** current authorities.
 
 - Holders: QLD AUS GRAPHITE PTY LTD (1), JUBILEE METALS LIMITED (1).
 - Types: EPM granted (1), ML granted (1).
@@ -40,6 +40,8 @@ Checked 2026-11-21T17:30:15.406Z within 500 m of the survey's point: **2** curre
 |---|---|---|---|---|
 | EPM 28270 | QLD AUS GRAPHITE PTY LTD | Granted | 2028-05-01 | Granted with Native Title Protection Conditions |
 | ML 5108 | JUBILEE METALS LIMITED | Granted | 2026-01-31 | Granted before 23rd Dec 1996 |
+
+**Second reading, another team** ([NFT KING's goldrush-qld-history, land and rights](https://goldrush.up.railway.app/ask?question=land%20and%20rights%20at%20site%20479076), read 2026-11-22T07:09:55.892Z; a cross-check, not a record): 2 of our 2 tenure IDs within 500 m are also in theirs \(7 rows to 2 km\); native title QCD2012/013 at the site in both; their sub-status "Renewal Lodged" on 1 shared lease\(s\) confirms the renewal our reading inferred; 2 expiry date\(s\) one day apart \(EPM 28270, ML 5108\): the register stores midnight Brisbane time \(UTC\+10\), so a date cut in UTC lands on the day before; ours are read in Brisbane time.
 
 Source: [Queensland MinesPermitsCurrent](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer). A register entry is not legal advice; native title and access need legal confirmation.
 
