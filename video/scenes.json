@@ -69,6 +69,17 @@
     "vo": "We check our own numbers too. Our first Brier score came mostly from easy markets, so we reran it on contested ones only, and show the interval. And every paid receipt is anchored on chain, so none can be deleted quietly."
   },
   {
+    "id": "s10",
+    "kind": "card",
+    "title": "Data before models, measured",
+    "bullets": [
+      "Prices and Fed decisions from FRED: 37/37 and 8/8 on unseen markets",
+      "Dated games from ESPN: 100/100 against openfootball",
+      "Another team builds on our dossiers and attested on our EAS schema"
+    ],
+    "vo": "Our own miner answers from data before it asks a model. Prices and Fed decisions come from FRED, dated games from ESPN, and both were measured on questions they had never seen. Another team now builds on our dossiers, and wrote its own evidence to our open record on chain."
+  },
+  {
     "id": "s09",
     "kind": "title",
     "title": "Use it today",

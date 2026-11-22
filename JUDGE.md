@@ -4,7 +4,7 @@
 
 **Takar: never act on one answer from Telegraph.** A verification layer: two miners from different operators compared field by field, an open on-chain record of who was right, and money that moves only when two independent sources agree. Ethereum Sepolia, test USDC.
 
-Watch (2:33, narrated): https://takar-telegraph.vercel.app/media/takar-overview.mp4
+Watch (2:51, narrated): https://takar-telegraph.vercel.app/media/takar-overview.mp4
 
 | Proof | Try it in one step | What to look for |
 |---|---|---|
