@@ -8,7 +8,7 @@
 // why). One attestation per Telegraph signal; signals already attested are skipped.
 // The recipient is the miner's fee wallet from the node's registry, so a miner's
 // record follows its wallet. Gas only, testnet.
-import { readFileSync, appendFileSync, existsSync } from "node:fs";
+import { readFileSync, appendFileSync, existsSync, readdirSync } from "node:fs";
 import { ethers } from "ethers";
 import { EAS, SCHEMA_REGISTRY, SCHEMA, fromScorecard, fromFleet, fromScreens, dedupe, readAttestations } from "../lib/reputation.mjs";
 
@@ -50,7 +50,9 @@ if (existsSync("receipts/settlements3.jsonl")) {
   }
 }
 const ledger = readFileSync("receipts/ledger.jsonl", "utf8").trim().split("\n").filter(Boolean).map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
-const records = dedupe([...fromScorecard(card), ...fromFleet(decisions), ...fromScreens(ledger, TRUTH)], already);
+// Known-answer tests (scripts/trap-run.mjs) share the scorecard shape.
+const traps = readdirSync("receipts").filter((n) => /^trap-\d{4}-\d{2}-\d{2}\.json$/.test(n)).flatMap((n) => fromScorecard(JSON.parse(readFileSync(`receipts/${n}`, "utf8"))));
+const records = dedupe([...fromScorecard(card), ...traps, ...fromFleet(decisions), ...fromScreens(ledger, TRUTH)], already);
 console.log(`${records.length} new records (${already.size} signals already attested)`);
 
 // Miner id -> fee wallet, from the node's public registry.

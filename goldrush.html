@@ -45,6 +45,7 @@ article strong { color:var(--accent); }
   </form>
   <p class="dl" id="dl"></p>
   <article id="doc" aria-live="polite"><p>Loading…</p></article>
+  <details id="prov" hidden style="margin-top:14px"><summary><b>Where each figure comes from</b>: each value with its source, the paid Telegraph ask that delivered it, and who published it (read from the W3C PROV file)</summary><div style="overflow-x:auto"><table id="prov-t" style="border-collapse:collapse;font-size:.9rem"></table></div></details>
   <p class="note">Code: <a href="https://github.com/PugarHuda/takar/blob/main/lib/dossier.mjs">lib/dossier.mjs</a> (rules, 21 offline checks) · API: <code>GET /api/dossier?mine=…</code> (JSON) or <code>&amp;format=md</code> (download) · <a href="./">Takar board</a>. Testnet; Takar pays the asks.</p>
 </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js" integrity="sha512-xeUh+KxNyTufZOje++oQHstlMQ8/rpyzPuM+gjMFYK3z5ILJGE7l2NvYL+XfliKURMpBIKKp1XoPN/qswlSMFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -65,7 +66,30 @@ async function show(slug) {
     render(md);
     dl.innerHTML = `Download: <a href="dossiers/${slug}.pdf" download>PDF</a> · <a href="dossiers/${slug}.md" download>Markdown</a> · <a href="receipts/dossier-${slug}.json" download>signed JSON</a> (Ed25519, with every paid answer and the structured record) · <a href="dossiers/${slug}.prov.json" download>provenance</a> (W3C PROV-JSON: every figure, the ask or register read behind it, and who supplied it)`;
     history.replaceState(null, "", `#${slug}`);
+    showProv(slug);
   } catch (e) { docEl.innerHTML = `<p class="bad">Could not load (${esc(e.message)}).</p>`; }
+}
+// The PROV file as a table: one row per figure, joined to its source, its paid ask and its publisher.
+async function showProv(slug) {
+  const box = document.getElementById("prov"), t = document.getElementById("prov-t");
+  box.hidden = true;
+  const p = await fetch(`dossiers/${slug}.prov.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  if (!p?.entity) return;
+  const rel = (k) => Object.values(p[k] ?? {});
+  const host = (u) => { try { const x = new URL(u); return /^https?:$/.test(x.protocol) ? x.hostname : null; } catch { return null; } };
+  const kinds = { "takar:ProductionFigure": "Production", "takar:Tenure": "Tenure", "takar:NativeTitleRecord": "Native title", "takar:CrossCheck": "Cross-check" };
+  const rows = Object.entries(p.entity).filter(([, e]) => kinds[e["prov:type"]]).map(([id, e]) => {
+    const value = e["takar:tonnes"] != null ? `${e["takar:tonnes"]} t (${e["takar:scope"] ?? ""}, ${e["takar:period"]})` : [e["prov:label"], e["takar:holder"] ?? e["takar:name"], e["takar:status"], e["takar:expiry"] && `expires ${e["takar:expiry"]}`, e["prov:value"]].filter(Boolean).join(" · ");
+    const src = rel("wasDerivedFrom").filter((r) => r["prov:generatedEntity"] === id).map((r) => p.entity[r["prov:usedEntity"]]?.["prov:location"]).find(Boolean) ?? e["prov:location"];
+    const ask = rel("wasGeneratedBy").filter((r) => r["prov:entity"] === id).map((r) => r["prov:activity"]).find((a) => /^tg:0x[0-9a-f]{64}$/i.test(a ?? ""));
+    const who = rel("wasAttributedTo").filter((r) => r["prov:entity"] === id).map((r) => p.agent?.[r["prov:agent"]]?.["prov:label"]).filter(Boolean).join("; ");
+    const h = src && host(src);
+    const cell = (x) => `<td style="border-bottom:1px solid var(--rule-soft);padding:6px 8px;vertical-align:top">${x}</td>`;
+    return `<tr>${cell(kinds[e["prov:type"]])}${cell(esc(value))}${cell(h ? `<a rel="noopener" href="${esc(src)}">${esc(h)}</a>` : "—")}${cell(ask ? `<a rel="noopener" href="https://devnode.telegraphprotocol.com/engine/v1/signal/${ask.slice(3)}">${ask.slice(3, 13)}…</a> $${esc(p.activity?.[ask]?.["takar:costUsd"] ?? "")}` : "register read")}${cell(esc(who || "—"))}</tr>`;
+  });
+  if (!rows.length) return;
+  t.innerHTML = `<thead><tr><th>Kind</th><th>Value</th><th>Source</th><th>Paid ask</th><th>Attributed to</th></tr></thead><tbody>${rows.join("")}</tbody>`;
+  box.hidden = false;
 }
 // The list of dossiers comes from dossiers/index.json, written by scripts/dossier-run.mjs.
 fetch("dossiers/index.json").then((r) => r.json()).then((idx) => {

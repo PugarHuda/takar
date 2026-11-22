@@ -1,0 +1,297 @@
+{
+  "title": "Known-answer test, top EVENT_OUTCOME miners",
+  "generated_at": "2026-11-22T10:50:06.885Z",
+  "miners": [
+    "20260828",
+    "4433",
+    "20261117",
+    "190010"
+  ],
+  "tally": {
+    "4433": {
+      "right": 6,
+      "wrong": 0,
+      "abstained": 0,
+      "unusable": 0
+    },
+    "190010": {
+      "right": 0,
+      "wrong": 0,
+      "abstained": 0,
+      "unusable": 6
+    },
+    "20260828": {
+      "right": 6,
+      "wrong": 0,
+      "abstained": 0,
+      "unusable": 0
+    },
+    "20261117": {
+      "right": 6,
+      "wrong": 0,
+      "abstained": 0,
+      "unusable": 0
+    }
+  },
+  "rows": [
+    {
+      "market": {
+        "id": "btc-100k-2023",
+        "question": "At any point during 2023 will bitcoin be worth over $100,000.00?",
+        "resolution": "NO",
+        "url": "https://manifold.markets/NathanDickson/at-any-point-during-2023-will-bitco"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x6ea88d20457309c07e63c91dcfc7e19d4502f384a6aceacd6694b99763b377a4"
+          },
+          {
+            "miner": {
+              "id": "4433",
+              "name": "LiveCert — Sourced Answers for Agents"
+            },
+            "outcome": "no",
+            "signal": "0xcec1a85d0664c0ffb2dad830ab93f1ad0db2681509f4ce66717269ba7d0c4704"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0x96ccf6d71c01ee8f0c94221dcdfbc13171e3299fdf477f991563954872417128"
+          },
+          {
+            "miner": {
+              "id": "190010",
+              "name": "Event Espn MLB Scoreboard"
+            },
+            "outcome": "unreadable",
+            "signal": "0x6cd42efbbe82033ca7ff3cef81b99a49d65e277ccd0af52570c33a37753cbb06"
+          }
+        ]
+      }
+    },
+    {
+      "market": {
+        "id": "eth-5k-2024",
+        "question": "Will Ethereum trade above $5k at any point in 2024?",
+        "resolution": "NO",
+        "url": "https://manifold.markets/xxxxx/will-ethereum-trade-above-5k-at-any-a299cbc76660"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x97b1491c7e405a8fed44bb580682dccaf7cccced27dd6ccc90a134c351373d0a"
+          },
+          {
+            "miner": {
+              "id": "4433",
+              "name": "LiveCert — Sourced Answers for Agents"
+            },
+            "outcome": "no",
+            "signal": "0x64db29cddd38d7e26e1725c0f722681aa636e06bcdd94fcff5d8bdb4134ba4a6"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0x02e3e611a76d42722732566b8aad13ac3901cc1ea20a479f0e5623f0af69d779"
+          },
+          {
+            "miner": {
+              "id": "190010"
+            },
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream error 400: {\"code\":400,\"message\":\"Failed to get events endpoint.\"}"
+          }
+        ]
+      }
+    },
+    {
+      "market": {
+        "id": "sp500-up-2024",
+        "question": "Will the S&P 500 increase in 2024?",
+        "resolution": "YES",
+        "url": "https://manifold.markets/barak/will-the-sp-500-increase-in-2024"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0xf213aacd02472ef29da5c120a183ad506fa39191ce154cfaa934128847a46e06"
+          },
+          {
+            "miner": {
+              "id": "4433",
+              "name": "LiveCert — Sourced Answers for Agents"
+            },
+            "outcome": "yes",
+            "signal": "0x637525cd5d80245cd231fe9966fc2cdd4635326fdab4936035bd39d4bbf8dec3"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "yes",
+            "signal": "0x349955defb0dc5784278005547ab0e74d718fdffd62a77977adea76419a9bdff"
+          },
+          {
+            "miner": {
+              "id": "190010"
+            },
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream error 400: {\"code\":400,\"message\":\"Failed to get events endpoint.\"}"
+          }
+        ]
+      }
+    },
+    {
+      "market": {
+        "id": "fed-hike-mar-2023",
+        "question": "Will the Fed raise the fed funds rate in the March 2023 meeting?",
+        "resolution": "YES",
+        "url": "https://manifold.markets/jack/will-the-fed-raise-the-fed-funds-ra-b7103e6f1fbf"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x9f23b5e63986a6e12cb77a75f4de1cc822a10c038990afa9240efbbbb9ea6999"
+          },
+          {
+            "miner": {
+              "id": "4433",
+              "name": "LiveCert — Sourced Answers for Agents"
+            },
+            "outcome": "yes",
+            "signal": "0x42d696383f871878a286c2b4a8e33b2d6b75a2d28388db3805d47d3af7828753"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "yes",
+            "signal": "0xdd05f8a09c0d71c9f61bb9d477cf6144ed48934715ad429cebda148052da376f"
+          },
+          {
+            "miner": {
+              "id": "190010"
+            },
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream error 400: {\"code\":400,\"message\":\"Failed to get events endpoint.\"}"
+          }
+        ]
+      }
+    },
+    {
+      "market": {
+        "id": "fed-cut-may-2023",
+        "question": "Will the Fed lower the fed funds rate in the May 2023 meeting?",
+        "resolution": "NO",
+        "url": "https://manifold.markets/jack/will-the-fed-lower-the-fed-funds-ra-8d5470db968f"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "no",
+            "signal": "0x2f73adaabaa24e85d14211e3a618cbce0c1b4230755e73b77353a43c007f1eb0"
+          },
+          {
+            "miner": {
+              "id": "4433",
+              "name": "LiveCert — Sourced Answers for Agents"
+            },
+            "outcome": "no",
+            "signal": "0x5d4fe79e0374d4b19c6611f43dea34b8107cb052f07c07b25cbf3bdc098fa7b2"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "no",
+            "signal": "0x9c867691e7594e5d80ad7cec95bff62851fb8547b5c5b0c0b0c862780815aad4"
+          },
+          {
+            "miner": {
+              "id": "190010"
+            },
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream error 400: {\"code\":400,\"message\":\"Failed to get events endpoint.\"}"
+          }
+        ]
+      }
+    },
+    {
+      "market": {
+        "id": "btc-50k-end-2024",
+        "question": "Will Bitcoin price be above $50,000 at the end of 2024?",
+        "resolution": "YES",
+        "url": "https://manifold.markets/AmmonLam/will-bitcoin-price-be-above-50000-a"
+      },
+      "verification": {
+        "attempts": [
+          {
+            "miner": {
+              "id": "20260828",
+              "name": "PREFLIGHT Infrastructure Signals"
+            },
+            "outcome": "yes",
+            "signal": "0x7df37e1c7566b9ada1a487ffcfa818b8f5589b991ab39c182d19c9ccdf013eb1"
+          },
+          {
+            "miner": {
+              "id": "4433",
+              "name": "LiveCert — Sourced Answers for Agents"
+            },
+            "outcome": "yes",
+            "signal": "0x2782abecd6387ba33f61b204d571428ba78469158718f55064b9bf1ed1c10081"
+          },
+          {
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "outcome": "yes",
+            "signal": "0x1e2251c0e177690b4ef78a21efe7c1455b6f7a7784633a66549c0990b94c92da"
+          },
+          {
+            "miner": {
+              "id": "190010"
+            },
+            "outcome": "error",
+            "error": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 500: upstream error 400: {\"code\":400,\"message\":\"Failed to get events endpoint.\"}"
+          }
+        ]
+      }
+    }
+  ]
+}
