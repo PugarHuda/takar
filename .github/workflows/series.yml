@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          for id in CBBTCUSD CBETHUSD SP500 DCOILWTICO DCOILBRENTEU GASREGW UNRATE CPIAUCNS; do
+          for id in CBBTCUSD CBETHUSD SP500 DCOILWTICO DCOILBRENTEU GASREGW UNRATE CPIAUCNS DFEDTARU; do
             from=2000-01-01; [ "$id" = CPIAUCNS ] && from=1913-01-01  # CPI back to closures in 1927 and 1981
             curl -sf -m 60 "https://fred.stlouisfed.org/graph/fredgraph.csv?id=$id&cosd=$from" -o "data/series/$id.tmp" && head -1 "data/series/$id.tmp" | grep -q observation_date && mv "data/series/$id.tmp" "data/series/$id.csv" || { echo "::warning::$id not fetched"; rm -f "data/series/$id.tmp"; }
           done
