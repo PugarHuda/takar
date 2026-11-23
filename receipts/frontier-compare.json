@@ -1,10 +1,11 @@
 {
   "title": "Takar Outcome vs frontier-family models on settled questions",
-  "generated_at": "2026-11-22T15:31:23.505Z",
-  "method": "Bare question, no tools, temperature 0, unknown allowed. Takar answers as recorded in each holdout run (data first, model only with a verbatim quote). Truth: the market's own resolution, or openfootball for games. Models called through SumoPod with thinking disabled (with it on they spent the token budget thinking and returned nothing); 19 Opus answers that still came back empty were retried once with a larger budget. Cost of the comparison: about 0.64 USD of SumoPod credit, including two discarded runs.",
+  "generated_at": "2026-11-23T00:50:11.187Z",
+  "method": "Bare question, no tools, temperature 0, unknown allowed. Takar answers as recorded in each holdout run (data first, model only with a verbatim quote). Truth: the market's own resolution, or openfootball for games.",
   "models": [
     "claude-opus-5-5",
-    "claude-haiku-5-5"
+    "claude-haiku-5-5",
+    "gpt-4o-mini"
   ],
   "summary": {
     "questions": 67,
@@ -26,6 +27,12 @@
       "wrong": 3,
       "confident_wrong": 2,
       "tokens": 13638
+    },
+    "gpt-4o-mini": {
+      "abstained": 66,
+      "right": 1,
+      "confident_wrong": 0,
+      "tokens": 7245
     }
   },
   "showcase": [
@@ -152,6 +159,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "The future price of Bitcoin is highly speculative and influenced by many unpredictable factors.",
+          "ms": 964,
+          "tokens": {
+            "completion_tokens": 29,
+            "prompt_tokens": 75,
+            "total_tokens": 104,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 27,
+              "engine_ttlt_ms": 202,
+              "pre_inference_ms": 83,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 208,
+              "service_ttlt_ms": 378,
+              "user_visible_ttft_ms": 125
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -225,6 +264,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Market conditions and factors influencing Bitcoin's price are unpredictable.",
+          "ms": 842,
+          "tokens": {
+            "completion_tokens": 25,
+            "prompt_tokens": 82,
+            "total_tokens": 107,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 23,
+              "engine_ttlt_ms": 187,
+              "pre_inference_ms": 78,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 175,
+              "service_ttlt_ms": 333,
+              "user_visible_ttft_ms": 97
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -297,6 +368,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Market predictions are uncertain and depend on various economic factors.",
+          "ms": 2500,
+          "tokens": {
+            "completion_tokens": 25,
+            "prompt_tokens": 101,
+            "total_tokens": 126,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 24,
+              "engine_ttlt_ms": 187,
+              "pre_inference_ms": 73,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 144,
+              "service_ttlt_ms": 301,
+              "user_visible_ttft_ms": 72
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -367,6 +470,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Cryptocurrency prices are highly volatile and influenced by many unpredictable factors.",
+          "ms": 798,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 82,
+            "total_tokens": 109,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 32,
+              "engine_ttlt_ms": 206,
+              "pre_inference_ms": 66,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 185,
+              "service_ttlt_ms": 348,
+              "user_visible_ttft_ms": 119
+            }
           },
           "grade": "abstained"
         }
@@ -441,6 +576,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Market conditions are unpredictable and can change rapidly.",
+          "ms": 640,
+          "tokens": {
+            "completion_tokens": 23,
+            "prompt_tokens": 82,
+            "total_tokens": 105,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 26,
+              "engine_ttlt_ms": 172,
+              "pre_inference_ms": 77,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 161,
+              "service_ttlt_ms": 290,
+              "user_visible_ttft_ms": 84
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -511,6 +678,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Market predictions are uncertain and depend on various economic factors.",
+          "ms": 1026,
+          "tokens": {
+            "completion_tokens": 25,
+            "prompt_tokens": 74,
+            "total_tokens": 99,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 8,
+              "engine_ttft_ms": 27,
+              "engine_ttlt_ms": 246,
+              "pre_inference_ms": 116,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 251,
+              "service_ttlt_ms": 412,
+              "user_visible_ttft_ms": 135
+            }
           },
           "grade": "abstained"
         }
@@ -585,6 +784,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Market predictions are highly uncertain and depend on various economic factors.",
+          "ms": 634,
+          "tokens": {
+            "completion_tokens": 26,
+            "prompt_tokens": 82,
+            "total_tokens": 108,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 26,
+              "engine_ttlt_ms": 186,
+              "pre_inference_ms": 72,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 139,
+              "service_ttlt_ms": 295,
+              "user_visible_ttft_ms": 66
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -655,6 +886,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Market predictions are highly uncertain and depend on various economic factors.",
+          "ms": 662,
+          "tokens": {
+            "completion_tokens": 26,
+            "prompt_tokens": 82,
+            "total_tokens": 108,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 26,
+              "engine_ttlt_ms": 181,
+              "pre_inference_ms": 78,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 144,
+              "service_ttlt_ms": 294,
+              "user_visible_ttft_ms": 66
+            }
           },
           "grade": "abstained"
         }
@@ -730,6 +993,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "The future price of Bitcoin is highly unpredictable and influenced by many factors.",
+          "ms": 683,
+          "tokens": {
+            "completion_tokens": 28,
+            "prompt_tokens": 86,
+            "total_tokens": 114,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 26,
+              "engine_ttlt_ms": 214,
+              "pre_inference_ms": 85,
+              "service_tbt_ms": 7,
+              "service_ttft_ms": 156,
+              "service_ttlt_ms": 338,
+              "user_visible_ttft_ms": 71
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -802,6 +1097,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Market conditions and investor sentiment are unpredictable.",
+          "ms": 653,
+          "tokens": {
+            "completion_tokens": 22,
+            "prompt_tokens": 77,
+            "total_tokens": 99,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 27,
+              "engine_ttlt_ms": 160,
+              "pre_inference_ms": 81,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 179,
+              "service_ttlt_ms": 307,
+              "user_visible_ttft_ms": 98
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -873,6 +1200,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Market conditions are unpredictable and can change rapidly.",
+          "ms": 615,
+          "tokens": {
+            "completion_tokens": 23,
+            "prompt_tokens": 92,
+            "total_tokens": 115,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 25,
+              "engine_ttlt_ms": 169,
+              "pre_inference_ms": 76,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 160,
+              "service_ttlt_ms": 280,
+              "user_visible_ttft_ms": 84
+            }
           },
           "grade": "abstained"
         }
@@ -948,6 +1307,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future Bitcoin prices are highly unpredictable and depend on various market factors.",
+          "ms": 839,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 72,
+            "total_tokens": 99,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 5,
+              "engine_ttft_ms": 22,
+              "engine_ttlt_ms": 162,
+              "pre_inference_ms": 103,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 173,
+              "service_ttlt_ms": 308,
+              "user_visible_ttft_ms": 70
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -1018,6 +1409,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future Bitcoin prices are highly unpredictable and depend on various market factors.",
+          "ms": 683,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 72,
+            "total_tokens": 99,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 24,
+              "engine_ttlt_ms": 199,
+              "pre_inference_ms": 100,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 168,
+              "service_ttlt_ms": 338,
+              "user_visible_ttft_ms": 68
+            }
           },
           "grade": "abstained"
         }
@@ -1093,6 +1516,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Market predictions for Bitcoin are highly uncertain and influenced by many factors.",
+          "ms": 745,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 73,
+            "total_tokens": 100,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 7,
+              "engine_ttft_ms": 26,
+              "engine_ttlt_ms": 220,
+              "pre_inference_ms": 91,
+              "service_tbt_ms": 7,
+              "service_ttft_ms": 171,
+              "service_ttlt_ms": 358,
+              "user_visible_ttft_ms": 80
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -1163,6 +1618,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future cryptocurrency prices are highly unpredictable.",
+          "ms": 729,
+          "tokens": {
+            "completion_tokens": 21,
+            "prompt_tokens": 75,
+            "total_tokens": 96,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 25,
+              "engine_ttlt_ms": 147,
+              "pre_inference_ms": 74,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 293,
+              "service_ttlt_ms": 407,
+              "user_visible_ttft_ms": 219
+            }
           },
           "grade": "abstained"
         }
@@ -1237,6 +1724,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Market conditions are unpredictable and can change rapidly.",
+          "ms": 608,
+          "tokens": {
+            "completion_tokens": 23,
+            "prompt_tokens": 75,
+            "total_tokens": 98,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 28,
+              "engine_ttlt_ms": 169,
+              "pre_inference_ms": 73,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 145,
+              "service_ttlt_ms": 280,
+              "user_visible_ttft_ms": 72
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -1309,6 +1828,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future cryptocurrency prices are highly unpredictable.",
+          "ms": 775,
+          "tokens": {
+            "completion_tokens": 21,
+            "prompt_tokens": 81,
+            "total_tokens": 102,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 23,
+              "engine_ttlt_ms": 151,
+              "pre_inference_ms": 82,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 299,
+              "service_ttlt_ms": 423,
+              "user_visible_ttft_ms": 217
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -1379,6 +1930,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future Bitcoin prices are highly speculative and uncertain.",
+          "ms": 739,
+          "tokens": {
+            "completion_tokens": 23,
+            "prompt_tokens": 71,
+            "total_tokens": 94,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 24,
+              "engine_ttlt_ms": 180,
+              "pre_inference_ms": 78,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 244,
+              "service_ttlt_ms": 384,
+              "user_visible_ttft_ms": 166
+            }
           },
           "grade": "abstained"
         }
@@ -1453,6 +2036,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future cryptocurrency prices are highly unpredictable.",
+          "ms": 594,
+          "tokens": {
+            "completion_tokens": 21,
+            "prompt_tokens": 73,
+            "total_tokens": 94,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 5,
+              "engine_ttft_ms": 21,
+              "engine_ttlt_ms": 129,
+              "pre_inference_ms": 87,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 153,
+              "service_ttlt_ms": 257,
+              "user_visible_ttft_ms": 66
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -1525,6 +2140,38 @@
             "service_tier": "standard"
           },
           "grade": "wrong"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future price movements of cryptocurrencies are highly unpredictable.",
+          "ms": 753,
+          "tokens": {
+            "completion_tokens": 23,
+            "prompt_tokens": 77,
+            "total_tokens": 100,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 29,
+              "engine_ttlt_ms": 171,
+              "pre_inference_ms": 113,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 236,
+              "service_ttlt_ms": 356,
+              "user_visible_ttft_ms": 123
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -1595,6 +2242,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Market predictions are uncertain and depend on various economic factors.",
+          "ms": 723,
+          "tokens": {
+            "completion_tokens": 25,
+            "prompt_tokens": 74,
+            "total_tokens": 99,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 7,
+              "engine_ttft_ms": 28,
+              "engine_ttlt_ms": 211,
+              "pre_inference_ms": 88,
+              "service_tbt_ms": 7,
+              "service_ttft_ms": 205,
+              "service_ttlt_ms": 383,
+              "user_visible_ttft_ms": 116
+            }
           },
           "grade": "abstained"
         }
@@ -1669,6 +2348,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future market movements are unpredictable.",
+          "ms": 610,
+          "tokens": {
+            "completion_tokens": 20,
+            "prompt_tokens": 84,
+            "total_tokens": 104,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 27,
+              "engine_ttlt_ms": 148,
+              "pre_inference_ms": 91,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 158,
+              "service_ttlt_ms": 275,
+              "user_visible_ttft_ms": 67
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -1741,6 +2452,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future market movements are unpredictable.",
+          "ms": 770,
+          "tokens": {
+            "completion_tokens": 20,
+            "prompt_tokens": 82,
+            "total_tokens": 102,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 5,
+              "engine_ttft_ms": 22,
+              "engine_ttlt_ms": 126,
+              "pre_inference_ms": 68,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 279,
+              "service_ttlt_ms": 378,
+              "user_visible_ttft_ms": 211
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -1813,6 +2556,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future market movements are unpredictable and depend on various factors.",
+          "ms": 624,
+          "tokens": {
+            "completion_tokens": 25,
+            "prompt_tokens": 82,
+            "total_tokens": 107,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 25,
+              "engine_ttlt_ms": 179,
+              "pre_inference_ms": 73,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 136,
+              "service_ttlt_ms": 285,
+              "user_visible_ttft_ms": 63
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -1883,6 +2658,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future interest rate decisions depend on economic conditions that cannot be predicted.",
+          "ms": 675,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 89,
+            "total_tokens": 116,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 30,
+              "engine_ttlt_ms": 186,
+              "pre_inference_ms": 75,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 144,
+              "service_ttlt_ms": 295,
+              "user_visible_ttft_ms": 69
+            }
           },
           "grade": "abstained"
         }
@@ -1957,6 +2764,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future monetary policy decisions depend on economic conditions that cannot be predicted.",
+          "ms": 623,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 89,
+            "total_tokens": 116,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 5,
+              "engine_ttft_ms": 22,
+              "engine_ttlt_ms": 161,
+              "pre_inference_ms": 68,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 134,
+              "service_ttlt_ms": 266,
+              "user_visible_ttft_ms": 66
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -2029,6 +2868,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future monetary policy decisions depend on economic conditions that are not predictable.",
+          "ms": 744,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 74,
+            "total_tokens": 101,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 29,
+              "engine_ttlt_ms": 202,
+              "pre_inference_ms": 83,
+              "service_tbt_ms": 7,
+              "service_ttft_ms": 169,
+              "service_ttlt_ms": 350,
+              "user_visible_ttft_ms": 86
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -2099,6 +2970,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future monetary policy decisions depend on economic conditions that cannot be predicted.",
+          "ms": 722,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 78,
+            "total_tokens": 105,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 26,
+              "engine_ttlt_ms": 192,
+              "pre_inference_ms": 85,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 155,
+              "service_ttlt_ms": 316,
+              "user_visible_ttft_ms": 71
+            }
           },
           "grade": "abstained"
         }
@@ -2173,6 +3076,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future decisions by the Fed depend on economic conditions and data available at the time.",
+          "ms": 805,
+          "tokens": {
+            "completion_tokens": 30,
+            "prompt_tokens": 76,
+            "total_tokens": 106,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 10,
+              "engine_ttft_ms": 22,
+              "engine_ttlt_ms": 345,
+              "pre_inference_ms": 69,
+              "service_tbt_ms": 11,
+              "service_ttft_ms": 162,
+              "service_ttlt_ms": 479,
+              "user_visible_ttft_ms": 93
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -2243,6 +3178,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future interest rate decisions depend on economic conditions that are unpredictable.",
+          "ms": 737,
+          "tokens": {
+            "completion_tokens": 26,
+            "prompt_tokens": 75,
+            "total_tokens": 101,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 7,
+              "engine_ttft_ms": 24,
+              "engine_ttlt_ms": 202,
+              "pre_inference_ms": 81,
+              "service_tbt_ms": 7,
+              "service_ttft_ms": 192,
+              "service_ttlt_ms": 366,
+              "user_visible_ttft_ms": 111
+            }
           },
           "grade": "abstained"
         }
@@ -2317,6 +3284,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future interest rate decisions depend on economic conditions that are uncertain.",
+          "ms": 801,
+          "tokens": {
+            "completion_tokens": 26,
+            "prompt_tokens": 81,
+            "total_tokens": 107,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 26,
+              "engine_ttlt_ms": 182,
+              "pre_inference_ms": 73,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 300,
+              "service_ttlt_ms": 439,
+              "user_visible_ttft_ms": 228
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -2389,6 +3388,38 @@
             "service_tier": "standard"
           },
           "grade": "wrong"
+        },
+        "gpt-4o-mini": {
+          "answer": "no",
+          "confidence": 0.9,
+          "reason": "The Fed increased rates by 75 bps in previous meetings but signaled a slowdown in rate hikes.",
+          "ms": 1080,
+          "tokens": {
+            "completion_tokens": 35,
+            "prompt_tokens": 81,
+            "total_tokens": 116,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 27,
+              "engine_ttlt_ms": 247,
+              "pre_inference_ms": 104,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 185,
+              "service_ttlt_ms": 401,
+              "user_visible_ttft_ms": 81
+            }
+          },
+          "grade": "right"
         }
       }
     },
@@ -2461,6 +3492,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future decisions by the Fed depend on economic conditions and data available at that time.",
+          "ms": 646,
+          "tokens": {
+            "completion_tokens": 30,
+            "prompt_tokens": 78,
+            "total_tokens": 108,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 5,
+              "engine_ttft_ms": 23,
+              "engine_ttlt_ms": 181,
+              "pre_inference_ms": 82,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 152,
+              "service_ttlt_ms": 304,
+              "user_visible_ttft_ms": 70
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -2533,6 +3596,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future monetary policy decisions are uncertain and depend on various economic factors.",
+          "ms": 677,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 78,
+            "total_tokens": 105,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 21,
+              "engine_ttlt_ms": 177,
+              "pre_inference_ms": 89,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 195,
+              "service_ttlt_ms": 347,
+              "user_visible_ttft_ms": 106
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -2605,6 +3700,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future monetary policy decisions are uncertain and depend on various economic factors.",
+          "ms": 660,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 78,
+            "total_tokens": 105,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 24,
+              "engine_ttlt_ms": 192,
+              "pre_inference_ms": 82,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 152,
+              "service_ttlt_ms": 314,
+              "user_visible_ttft_ms": 70
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -2675,6 +3802,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future cryptocurrency prices are highly unpredictable.",
+          "ms": 593,
+          "tokens": {
+            "completion_tokens": 21,
+            "prompt_tokens": 89,
+            "total_tokens": 110,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 5,
+              "engine_ttft_ms": 26,
+              "engine_ttlt_ms": 135,
+              "pre_inference_ms": 82,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 153,
+              "service_ttlt_ms": 256,
+              "user_visible_ttft_ms": 71
+            }
           },
           "grade": "abstained"
         }
@@ -2749,6 +3908,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Cryptocurrency prices are highly volatile and unpredictable.",
+          "ms": 687,
+          "tokens": {
+            "completion_tokens": 23,
+            "prompt_tokens": 80,
+            "total_tokens": 103,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 28,
+              "engine_ttlt_ms": 162,
+              "pre_inference_ms": 103,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 215,
+              "service_ttlt_ms": 344,
+              "user_visible_ttft_ms": 112
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -2821,6 +4012,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "The future price of Bitcoin is highly unpredictable and influenced by many factors.",
+          "ms": 664,
+          "tokens": {
+            "completion_tokens": 28,
+            "prompt_tokens": 79,
+            "total_tokens": 107,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 5,
+              "engine_ttft_ms": 23,
+              "engine_ttlt_ms": 170,
+              "pre_inference_ms": 98,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 174,
+              "service_ttlt_ms": 307,
+              "user_visible_ttft_ms": 75
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -2891,6 +4114,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Cryptocurrency prices are highly volatile and influenced by many unpredictable factors.",
+          "ms": 668,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 79,
+            "total_tokens": 106,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 27,
+              "engine_ttlt_ms": 182,
+              "pre_inference_ms": 75,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 190,
+              "service_ttlt_ms": 339,
+              "user_visible_ttft_ms": 115
+            }
           },
           "grade": "abstained"
         }
@@ -2965,6 +4220,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Future price predictions for Bitcoin are highly uncertain and depend on various market factors.",
+          "ms": 676,
+          "tokens": {
+            "completion_tokens": 29,
+            "prompt_tokens": 79,
+            "total_tokens": 108,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 30,
+              "engine_ttlt_ms": 221,
+              "pre_inference_ms": 75,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 158,
+              "service_ttlt_ms": 333,
+              "user_visible_ttft_ms": 83
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -3037,6 +4324,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Economic predictions are uncertain and depend on various factors.",
+          "ms": 654,
+          "tokens": {
+            "completion_tokens": 24,
+            "prompt_tokens": 78,
+            "total_tokens": 102,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 43,
+              "engine_ttlt_ms": 181,
+              "pre_inference_ms": 90,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 177,
+              "service_ttlt_ms": 311,
+              "user_visible_ttft_ms": 87
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -3110,6 +4429,38 @@
             "service_tier": "standard"
           },
           "grade": "wrong"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Economic forecasts can change rapidly and depend on various factors.",
+          "ms": 653,
+          "tokens": {
+            "completion_tokens": 25,
+            "prompt_tokens": 83,
+            "total_tokens": 108,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 21,
+              "engine_ttlt_ms": 180,
+              "pre_inference_ms": 68,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 140,
+              "service_ttlt_ms": 287,
+              "user_visible_ttft_ms": 72
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -3180,6 +4531,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0.5,
+          "reason": "Economic predictions are uncertain and depend on various factors.",
+          "ms": 605,
+          "tokens": {
+            "completion_tokens": 24,
+            "prompt_tokens": 82,
+            "total_tokens": 106,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 22,
+              "engine_ttlt_ms": 161,
+              "pre_inference_ms": 74,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 148,
+              "service_ttlt_ms": 272,
+              "user_visible_ttft_ms": 74
+            }
           },
           "grade": "abstained"
         }
@@ -3254,6 +4637,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events that occurred after October 2023.",
+          "ms": 729,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 91,
+            "total_tokens": 118,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 5,
+              "engine_ttft_ms": 20,
+              "engine_ttlt_ms": 161,
+              "pre_inference_ms": 62,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 231,
+              "service_ttlt_ms": 366,
+              "user_visible_ttft_ms": 168
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -3324,6 +4739,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events that occurred after October 2023.",
+          "ms": 804,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 87,
+            "total_tokens": 114,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 23,
+              "engine_ttlt_ms": 184,
+              "pre_inference_ms": 68,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 132,
+              "service_ttlt_ms": 287,
+              "user_visible_ttft_ms": 64
+            }
           },
           "grade": "abstained"
         }
@@ -3399,6 +4846,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events occurring after October 2023.",
+          "ms": 635,
+          "tokens": {
+            "completion_tokens": 26,
+            "prompt_tokens": 90,
+            "total_tokens": 116,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 25,
+              "engine_ttlt_ms": 184,
+              "pre_inference_ms": 77,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 153,
+              "service_ttlt_ms": 296,
+              "user_visible_ttft_ms": 77
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -3469,6 +4948,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events beyond October 2023.",
+          "ms": 720,
+          "tokens": {
+            "completion_tokens": 25,
+            "prompt_tokens": 85,
+            "total_tokens": 110,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 7,
+              "engine_ttft_ms": 23,
+              "engine_ttlt_ms": 200,
+              "pre_inference_ms": 93,
+              "service_tbt_ms": 7,
+              "service_ttft_ms": 204,
+              "service_ttlt_ms": 373,
+              "user_visible_ttft_ms": 111
+            }
           },
           "grade": "abstained"
         }
@@ -3544,6 +5055,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events beyond October 2023.",
+          "ms": 656,
+          "tokens": {
+            "completion_tokens": 25,
+            "prompt_tokens": 91,
+            "total_tokens": 116,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 20,
+              "engine_ttlt_ms": 169,
+              "pre_inference_ms": 69,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 176,
+              "service_ttlt_ms": 318,
+              "user_visible_ttft_ms": 107
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -3615,6 +5158,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events beyond October 2023.",
+          "ms": 681,
+          "tokens": {
+            "completion_tokens": 25,
+            "prompt_tokens": 95,
+            "total_tokens": 120,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 38,
+              "engine_ttlt_ms": 195,
+              "pre_inference_ms": 71,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 191,
+              "service_ttlt_ms": 343,
+              "user_visible_ttft_ms": 120
+            }
           },
           "grade": "abstained"
         }
@@ -3689,6 +5264,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events occurring after October 2023.",
+          "ms": 671,
+          "tokens": {
+            "completion_tokens": 28,
+            "prompt_tokens": 86,
+            "total_tokens": 114,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 27,
+              "engine_ttlt_ms": 206,
+              "pre_inference_ms": 81,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 150,
+              "service_ttlt_ms": 325,
+              "user_visible_ttft_ms": 69
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -3761,6 +5368,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events that occurred after October 2023.",
+          "ms": 692,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 85,
+            "total_tokens": 112,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 36,
+              "engine_ttlt_ms": 205,
+              "pre_inference_ms": 76,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 196,
+              "service_ttlt_ms": 361,
+              "user_visible_ttft_ms": 120
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -3832,6 +5471,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events occurring after October 2023.",
+          "ms": 703,
+          "tokens": {
+            "completion_tokens": 26,
+            "prompt_tokens": 86,
+            "total_tokens": 112,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 29,
+              "engine_ttlt_ms": 198,
+              "pre_inference_ms": 68,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 136,
+              "service_ttlt_ms": 300,
+              "user_visible_ttft_ms": 68
+            }
           },
           "grade": "abstained"
         }
@@ -3907,6 +5578,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events occurring after October 2023.",
+          "ms": 736,
+          "tokens": {
+            "completion_tokens": 26,
+            "prompt_tokens": 85,
+            "total_tokens": 111,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 28,
+              "engine_ttlt_ms": 191,
+              "pre_inference_ms": 66,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 222,
+              "service_ttlt_ms": 379,
+              "user_visible_ttft_ms": 156
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -3980,6 +5683,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events beyond October 2023.",
+          "ms": 702,
+          "tokens": {
+            "completion_tokens": 25,
+            "prompt_tokens": 87,
+            "total_tokens": 112,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 5,
+              "engine_ttft_ms": 19,
+              "engine_ttlt_ms": 141,
+              "pre_inference_ms": 87,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 196,
+              "service_ttlt_ms": 313,
+              "user_visible_ttft_ms": 109
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -4050,6 +5785,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events beyond October 2023.",
+          "ms": 638,
+          "tokens": {
+            "completion_tokens": 25,
+            "prompt_tokens": 85,
+            "total_tokens": 110,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 22,
+              "engine_ttlt_ms": 180,
+              "pre_inference_ms": 79,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 142,
+              "service_ttlt_ms": 296,
+              "user_visible_ttft_ms": 64
+            }
           },
           "grade": "abstained"
         }
@@ -4125,6 +5892,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events that occurred after October 2023.",
+          "ms": 665,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 85,
+            "total_tokens": 112,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 5,
+              "engine_ttft_ms": 26,
+              "engine_ttlt_ms": 171,
+              "pre_inference_ms": 72,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 184,
+              "service_ttlt_ms": 324,
+              "user_visible_ttft_ms": 112
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -4197,6 +5996,38 @@
             "service_tier": "standard"
           },
           "grade": "right"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events that occurred after October 2023.",
+          "ms": 683,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 85,
+            "total_tokens": 112,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 8,
+              "engine_ttft_ms": 26,
+              "engine_ttlt_ms": 251,
+              "pre_inference_ms": 65,
+              "service_tbt_ms": 8,
+              "service_ttft_ms": 134,
+              "service_ttlt_ms": 355,
+              "user_visible_ttft_ms": 69
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -4270,6 +6101,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events occurring after October 2023.",
+          "ms": 888,
+          "tokens": {
+            "completion_tokens": 26,
+            "prompt_tokens": 89,
+            "total_tokens": 115,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 30,
+              "engine_ttlt_ms": 198,
+              "pre_inference_ms": 92,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 317,
+              "service_ttlt_ms": 477,
+              "user_visible_ttft_ms": 225
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -4340,6 +6203,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events occurring after October 2023.",
+          "ms": 2830,
+          "tokens": {
+            "completion_tokens": 26,
+            "prompt_tokens": 85,
+            "total_tokens": 111,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 26,
+              "engine_ttlt_ms": 180,
+              "pre_inference_ms": 69,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 186,
+              "service_ttlt_ms": 336,
+              "user_visible_ttft_ms": 117
+            }
           },
           "grade": "abstained"
         }
@@ -4415,6 +6310,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events beyond October 2023.",
+          "ms": 981,
+          "tokens": {
+            "completion_tokens": 25,
+            "prompt_tokens": 85,
+            "total_tokens": 110,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 41,
+              "engine_ttlt_ms": 196,
+              "pre_inference_ms": 79,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 212,
+              "service_ttlt_ms": 360,
+              "user_visible_ttft_ms": 133
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -4488,6 +6415,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events beyond October 2023.",
+          "ms": 659,
+          "tokens": {
+            "completion_tokens": 25,
+            "prompt_tokens": 86,
+            "total_tokens": 111,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 29,
+              "engine_ttlt_ms": 180,
+              "pre_inference_ms": 83,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 155,
+              "service_ttlt_ms": 301,
+              "user_visible_ttft_ms": 72
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -4558,6 +6517,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events that occurred after October 2023.",
+          "ms": 831,
+          "tokens": {
+            "completion_tokens": 27,
+            "prompt_tokens": 88,
+            "total_tokens": 115,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 10,
+              "engine_ttft_ms": 30,
+              "engine_ttlt_ms": 297,
+              "pre_inference_ms": 113,
+              "service_tbt_ms": 10,
+              "service_ttft_ms": 194,
+              "service_ttlt_ms": 467,
+              "user_visible_ttft_ms": 81
+            }
           },
           "grade": "abstained"
         }
@@ -4633,6 +6624,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events occurring after October 2023.",
+          "ms": 799,
+          "tokens": {
+            "completion_tokens": 26,
+            "prompt_tokens": 91,
+            "total_tokens": 117,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 24,
+              "engine_ttlt_ms": 188,
+              "pre_inference_ms": 86,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 306,
+              "service_ttlt_ms": 465,
+              "user_visible_ttft_ms": 221
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -4703,6 +6726,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events occurring after October 2023.",
+          "ms": 670,
+          "tokens": {
+            "completion_tokens": 26,
+            "prompt_tokens": 86,
+            "total_tokens": 112,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 7,
+              "engine_ttft_ms": 26,
+              "engine_ttlt_ms": 208,
+              "pre_inference_ms": 87,
+              "service_tbt_ms": 7,
+              "service_ttft_ms": 158,
+              "service_ttlt_ms": 336,
+              "user_visible_ttft_ms": 71
+            }
           },
           "grade": "abstained"
         }
@@ -4778,6 +6833,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events occurring after October 2023.",
+          "ms": 654,
+          "tokens": {
+            "completion_tokens": 26,
+            "prompt_tokens": 89,
+            "total_tokens": 115,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 5,
+              "engine_ttft_ms": 21,
+              "engine_ttlt_ms": 152,
+              "pre_inference_ms": 78,
+              "service_tbt_ms": 5,
+              "service_ttft_ms": 185,
+              "service_ttlt_ms": 311,
+              "user_visible_ttft_ms": 107
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -4851,6 +6938,38 @@
             "service_tier": "standard"
           },
           "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events beyond October 2023.",
+          "ms": 674,
+          "tokens": {
+            "completion_tokens": 25,
+            "prompt_tokens": 88,
+            "total_tokens": 113,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 21,
+              "engine_ttlt_ms": 184,
+              "pre_inference_ms": 78,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 177,
+              "service_ttlt_ms": 334,
+              "user_visible_ttft_ms": 99
+            }
+          },
+          "grade": "abstained"
         }
       }
     },
@@ -4921,6 +7040,38 @@
             "inference_geo": "global",
             "speed": "standard",
             "service_tier": "standard"
+          },
+          "grade": "abstained"
+        },
+        "gpt-4o-mini": {
+          "answer": "unknown",
+          "confidence": 0,
+          "reason": "I do not have information on events beyond October 2023.",
+          "ms": 797,
+          "tokens": {
+            "completion_tokens": 25,
+            "prompt_tokens": 88,
+            "total_tokens": 113,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 26,
+              "engine_ttlt_ms": 173,
+              "pre_inference_ms": 74,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 142,
+              "service_ttlt_ms": 284,
+              "user_visible_ttft_ms": 68
+            }
           },
           "grade": "abstained"
         }
