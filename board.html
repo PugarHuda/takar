@@ -400,7 +400,7 @@ const canonical = (v) => Array.isArray(v) ? `[${v.map(canonical).join(",")}]`
 (async () => {
   const host = document.getElementById("briefs");
   host.innerHTML = "";
-  for (const file of ["receipts/brief-israel-iran-2025.json", "receipts/brief-india-pakistan-2025.json"]) {
+  for (const file of ["receipts/brief-israel-iran-2025.json", "receipts/brief-india-pakistan-2025.json", "receipts/brief-thailand-cambodia-2025.json"]) {
   const sum = host.appendChild(document.createElement("p"));
   const table = host.appendChild(document.createElement("div"));
   table.className = "scroll";
