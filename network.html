@@ -68,7 +68,7 @@ pre { white-space:pre-wrap; overflow-wrap:anywhere; font-size:.85rem; }
 
   <section aria-labelledby="mh-h">
     <h2 id="mh-h">Miner status, as a buyer sees it</h2>
-    <p class="note">Every miner Takar paid in the last 7 days, from its own ledger. <b>Answered</b> means a paid result came back; <b>complete</b> means every field the intent needs came back ok. The floor is the low end of the 95% interval, so three lucky asks do not outrank thirty steady ones. Measured by a paying client, not reported by the operator.</p>
+    <p class="note">Every miner Takar paid in the last 7 days, from its own ledger. <b>Answered</b> means a paid result came back; <b>usable</b> means no field came back rejected or unavailable and fewer than half its fields were empty (one field left empty for a reason, like no winner for an event that did not happen, is fine). The floor is the low end of the 95% interval, so three lucky asks do not outrank thirty steady ones. Measured by a paying client, not reported by the operator.</p>
     <p id="mh-sum">Loading the ledger…</p>
     <div class="scroll"><table id="mh"></table></div>
   </section>
@@ -114,7 +114,7 @@ const pct = (x) => (x == null ? "—" : `${(x * 100).toFixed(x < 0.1 ? 1 : 0)}%`
     const h = await fetch("api/network?view=miners").then((r) => r.json());
     if (h.error) throw new Error(h.error);
     document.getElementById("mh-sum").textContent = h.miners.length + " miners with at least 3 paid asks in the last 7 days.";
-    document.getElementById("mh").innerHTML = "<thead><tr><th>Miner</th><th>Asks</th><th>Answered</th><th>Complete</th><th>Floor</th><th>Last problem</th></tr></thead><tbody>" +
+    document.getElementById("mh").innerHTML = "<thead><tr><th>Miner</th><th>Asks</th><th>Answered</th><th>Usable</th><th>Floor</th><th>Last problem</th></tr></thead><tbody>" +
       h.miners.map((m) => "<tr><td>" + esc(m.name ?? "miner") + " (" + esc(m.id) + ")</td><td class=\"n\">" + esc(m.asks) + "</td><td class=\"n\">" + pct(m.answered_rate) + "</td><td class=\"n " + (m.complete_rate < 0.5 ? "bad" : "") + "\">" + pct(m.complete_rate) + "</td><td class=\"n\">" + pct(m.complete_floor) + "</td><td>" + esc(m.last_problem ?? "") + "</td></tr>").join("") + "</tbody>";
   } catch (e) { document.getElementById("mh-sum").textContent = "Could not read the ledger (" + e.message + ")."; }
 })();

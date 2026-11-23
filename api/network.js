@@ -55,7 +55,7 @@ export default async function handler(req, res) {
     if (view === "miners") {
       const ledgerText = await cached("ledger", 120_000, () => fetch(`${SITE}/receipts/ledger.jsonl`).then((r) => r.text()));
       res.setHeader("Cache-Control", "s-maxage=300");
-      return res.status(200).json({ source: "Takar's paid ledger, last 7 days", note: "Answered = the miner returned a paid result. Complete = every field the intent needs came back ok. Floor = lower bound of the 95% interval for complete. Measured by a paying client, not reported by the operator.", miners: minerHealth(ledgerText, { days: 7 }) });
+      return res.status(200).json({ source: "Takar's paid ledger, last 7 days", note: "Answered = the miner returned a paid result. Usable (complete_rate) = no field rejected or unavailable, and fewer than half the fields empty. Floor = lower bound of the 95% interval for complete. Measured by a paying client, not reported by the operator.", miners: minerHealth(ledgerText, { days: 7 }) });
     }
     return res.status(400).json({ error: "view must be operators, disagreement signal or miners" });
   } catch (err) {
