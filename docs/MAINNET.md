@@ -1,6 +1,6 @@
 # Moving Takar to mainnet
 
-Telegraph's co-founder said in #hackathon on 23 Nov 2026 that mainnet is planned for January. This page lists what changes for Takar when it does, what stays the same, and what a check would cost a paying user. Nothing here has run on mainnet yet.
+Telegraph's co-founder said in #hackathon on 23 Nov 2026 that mainnet is planned for December or January. This page lists what changes for Takar when it does, what stays the same, and what a check would cost a paying user. Nothing here has run on mainnet yet.
 
 ## What switches with configuration
 
