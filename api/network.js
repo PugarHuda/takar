@@ -4,7 +4,7 @@
 //                                   from the comparisons Takar recorded on EAS
 // GET /api/network?view=signal&hash=0x...  a signal on the node, in Takar's ledger, anchored on EAS
 // GET /api/network?view=miners       answered and complete rates per miner Takar bought from, last 7 days
-import { operatorMap, disagreementIndex, signalCheck, minerHealth } from "../lib/network.mjs";
+import { operatorMap, disagreementIndex, signalCheck, minerHealth, auditAnchors } from "../lib/network.mjs";
 import { readFeed, summariseFeed } from "../lib/feed.mjs";
 import { FEED_ATTESTERS } from "./feed.js";
 
@@ -43,6 +43,14 @@ export default async function handler(req, res) {
       const anchors = anchorsText.trim().split("\n").filter(Boolean).map((l) => JSON.parse(l));
       const out = await signalCheck(String(req.query?.hash ?? ""), { ledgerText, anchors, nodeFetch: (h) => fetch(`${NODE}/engine/v1/signal/${h}`, { signal: AbortSignal.timeout(15_000) }) });
       return res.status(200).json(out);
+    }
+    if (view === "audit") {
+      const [ledgerText, anchorsText] = await Promise.all([
+        cached("ledger", 120_000, () => fetch(`${SITE}/receipts/ledger.jsonl`).then((r) => r.text())),
+        cached("anchors", 120_000, () => fetch(`${SITE}/receipts/anchors.jsonl`).then((r) => r.text())),
+      ]);
+      res.setHeader("Cache-Control", "s-maxage=300");
+      return res.status(200).json({ note: "Every ledger root anchored on EAS, recomputed from today's ledger. A mismatch means an older line was edited, removed or reordered after it was anchored.", ...auditAnchors(ledgerText, anchorsText.trim().split("\n").filter(Boolean).map((l) => JSON.parse(l))) });
     }
     if (view === "miners") {
       const ledgerText = await cached("ledger", 120_000, () => fetch(`${SITE}/receipts/ledger.jsonl`).then((r) => r.text()));

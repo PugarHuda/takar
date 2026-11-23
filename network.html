@@ -78,6 +78,7 @@ pre { white-space:pre-wrap; overflow-wrap:anywhere; font-size:.85rem; }
     <p class="note">Paste any Telegraph signal hash. It is looked up on the node, in Takar's paid ledger, and in the Merkle roots of that ledger Takar anchors on EAS; the root is recomputed from the published file, so an edited or deleted receipt would not match.</p>
     <form id="sig-form"><input id="sig" placeholder="0x… (64 hex characters)" aria-label="Signal hash" value="0xe3e293c9262f0c8f053eeb11ffc02356c006578f4f2099cc7bbacb5920d969b4"><button type="submit">Trace</button></form>
     <div id="sig-out" aria-live="polite"></div>
+    <p id="audit" class="note">Checking that every anchored ledger root still matches…</p>
   </section>
   <p class="note">Built for Telegraph Hackathon Season II, which pays cash prizes. Code: <a href="https://github.com/PugarHuda/takar/blob/main/lib/network.mjs">lib/network.mjs</a> (tests in lib/network.test.mjs).</p>
 </main>
@@ -103,6 +104,12 @@ const pct = (x) => (x == null ? "—" : `${(x * 100).toFixed(x < 0.1 ? 1 : 0)}%`
     document.getElementById("dis").innerHTML = `<thead><tr><th>Intent</th><th>Compared pairs</th><th>Disagree</th><th>Rate</th><th>95% interval</th><th>Unusable</th></tr></thead><tbody>` +
       d.intents.map((x) => `<tr><td>${esc(x.intent)}</td><td class="n">${esc(x.compared)}</td><td class="n">${esc(x.disagree)}</td><td class="n"><b>${pct(x.rate)}</b></td><td class="n">${x.interval ? `${pct(x.interval[0])}–${pct(x.interval[1])}` : "—"}</td><td class="n">${esc(x.insufficient)}</td></tr>`).join("") + `</tbody>`;
   } catch (e) { document.getElementById("dis-sum").textContent = `Could not read the feed (${e.message}).`; }
+  try {
+    const au = await fetch("api/network?view=audit").then((r) => r.json());
+    if (au.error) throw new Error(au.error);
+    const bad = au.checks.filter((c) => !c.matches);
+    document.getElementById("audit").innerHTML = bad.length ? "<b>" + bad.length + " of " + au.anchors + " anchored roots no longer match the ledger</b>: " + esc(bad.map((c) => c.at + " (" + c.why + ")").join("; ")) : "Append-only check: all " + esc(au.anchors) + " ledger roots anchored on EAS still match today's ledger (" + esc(au.ledger_lines) + " lines), so no earlier line has been edited, removed or reordered.";
+  } catch (e) { document.getElementById("audit").textContent = "Could not run the append-only check (" + e.message + ")."; }
   try {
     const h = await fetch("api/network?view=miners").then((r) => r.json());
     if (h.error) throw new Error(h.error);
