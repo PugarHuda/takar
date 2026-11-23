@@ -54,7 +54,9 @@ const log = (row) => { mkdirSync(DIR, { recursive: true }); appendFileSync(`${DI
 
 // Miner pairs, each on two different payout operators (checked against /api/miners at run time).
 const VESSEL_MINERS = [8818818, 70068]; // Quay (terrestrial AIS network) | VesselWire v2 (Fintraffic Digitraffic)
-const INVOICE_MINERS = [302, 20260828]; // ChainSight | PREFLIGHT
+// TradeWire | ChainSight. PREFLIGHT (20260828) was the second miner until its model stopped answering in
+// time on 23 Nov (rounds 2-3 of case 1 show it); evidence files record which miners each round used.
+const INVOICE_MINERS = [7455, 302];
 const PORTS = { "Helsinki West Harbour": { lat: 60.1497, lon: 24.9155, radiusKm: 1.5 } };
 
 async function operators() {
@@ -93,12 +95,14 @@ async function evidence(t) {
   let payout = decision === "pay" ? t.amount : decision === "refund" ? 0n : null, reconcile = null;
   // Quantity deals: an invoice that does not match the goods-received note is paid for the accepted
   // part, when both miners and Praman's three-way reconciliation agree on the shortfall.
-  // Only goods that arrived from a clear supplier can be part-paid; anything else stays a refund.
-  if (t.qty && decision === "refund" && arrival === "pass" && sanctions === "pass") {
+  // Quantity deals are decided on the shortfall figure, not the reconciled flag (miners phrase a
+  // partial acceptance differently). Only goods that arrived from a clear supplier can be paid at all.
+  if (t.qty && arrival === "pass" && sanctions === "pass") {
     reconcile = await pramanTool("reconcile_invoice", { invoice_id: t.qty.invoiceId, po_number: t.qty.po, billed_qty: t.qty.billed, accepted_qty: t.qty.accepted, unit_price: t.qty.unitPrice, tax_rate_pct: 0, currency: "USD" }).catch((e) => ({ error: e.message }));
     const p = payable(t.amount, t.qty.billed * t.qty.unitPrice, invoice.map((x) => x.result?.discrepancy), reconcile?.details?.delta_total);
-    if (p === null) [decision, why, payout] = ["review", "the invoice does not match the goods-received note, but the miners and Praman do not agree on the shortfall", null];
-    else [decision, why, payout] = ["partial", `pay for the accepted units only: both reconcile miners and Praman put the shortfall at USD ${Math.abs(invoice[0].result.discrepancy)}`, p];
+    if (p !== null) [decision, why, payout] = ["partial", `pay for the accepted units only: both reconcile miners and Praman put the shortfall at USD ${Math.abs(Number(invoice[0].result.discrepancy))}`, p];
+    else if (inv === "pass" && reconcile?.reconciled === true) [decision, why, payout] = ["pay", "every unit accepted: both miners and Praman reconcile the invoice", t.amount];
+    else [decision, why, payout] = ["review", "the miners and Praman do not agree on what was accepted", null];
   }
   const signals = [...vessel, ...invoice, ...screens].map((x) => x.signal).filter(Boolean);
   return { decision, why, payout: payout === null ? null : String(payout), checks, vessel, invoice, sanctions: { takar: so.verdict, screens, praman }, reconcile, signals: [...new Set(signals)] };
@@ -203,7 +207,14 @@ if (cmd === "deploy") {
   console.log(`  proposed ${e.decision} with ${e.signals.length} signals\n  propose ${etherscan(p.hash)}`);
   log({ action: "propose", id, decision: e.decision, payout: String(payout), signals: e.signals, file, tx: p.hash });
   const live = await s.deal(id);
-  if (live.payerDisputed || live.payeeDisputed) {
+  if (V5 && (live.payerDisputed || live.payeeDisputed)) {
+    // TakarSettle5 needs every resolver once contested: Takar's second key checks and backs, and the
+    // window still cannot open without Praman's seat.
+    const b = await backBy(r2, id, payout, d.amount, e.signals, t);
+    console.log(b.declined ? `  resolver 2 declined: ${b.declined}` : `  seconded by resolver 2; contested, so the contract also needs Praman's seat (${Number(await s.required(id))} of 3)\n  second ${etherscan(b.tx)}`);
+    log({ action: b.declined ? "declined" : "second", id, ...b });
+    log({ action: "awaiting-independent", id, required: Number(await s.required(id)) });
+  } else if (live.payerDisputed || live.payeeDisputed) {
     console.log(`  contested deal: Takar's second key steps aside; the decision needs the independent seat (Praman) to back it after its own check`);
     log({ action: "awaiting-independent", id, required: Number(await s.required(id)) });
   } else {
@@ -211,6 +222,22 @@ if (cmd === "deploy") {
     console.log(b.declined ? `  resolver 2 declined: ${b.declined}` : `  seconded by resolver 2 after re-reading every signal; dispute window open 10 min\n  second ${etherscan(b.tx)}`);
     log({ action: b.declined ? "declined" : "second", id, ...b });
   }
+} else if (cmd === "panel") {
+  // A REVIEW goes to the panel: Takar proposes a decision on a round's evidence with its reason in
+  // the open, and Takar's second key does not back its own review call, so the window opens only
+  // when Praman's seat agrees after its own check.
+  const id = Number(arg("id")), file = arg("file"), reason = arg("reason");
+  if (!file || !reason || !["pay", "refund"].includes(arg("decision"))) throw new Error("panel --id N --file <evidence.json> --decision pay|refund --reason <text>");
+  const s = settle(r1);
+  const d = await s.deal(id);
+  const ev = JSON.parse(readFileSync(file, "utf8"));
+  if (ev.id !== id) throw new Error(`${file} is evidence for deal ${ev.id}, not ${id}`);
+  const payout = arg("decision") === "pay" ? d.amount : 0n;
+  const p = await s.propose(id, decisionArg(payout, d.amount), ev.signals, JSON.stringify({ panel: arg("decision"), reason, file }).slice(0, 900)); await p.wait();
+  const hash = proposalHash(payout, d.amount, ev.signals);
+  console.log(`deal ${id}: panel proposal ${arg("decision")} on ${ev.signals.length} signals; waiting for Praman's seat\n  hash ${hash}\n  propose ${etherscan(p.hash)}`);
+  log({ action: "panel-propose", id, decision: arg("decision"), payout: String(payout), reason, file, hash, signals: ev.signals, tx: p.hash });
+  log({ action: "awaiting-independent", id, required: Number(await s.required(id)) });
 } else if (cmd === "dispute") {
   const id = Number(arg("id")), who = arg("as");
   const w = who === "buyer" ? buyer : who === "supplier" ? supplier : null;

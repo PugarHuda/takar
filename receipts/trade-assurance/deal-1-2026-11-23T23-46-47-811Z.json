@@ -1,0 +1,145 @@
+{
+  "id": 1,
+  "at": "2026-11-23T23:46:47.811Z",
+  "ledger": "GRN-5530 dated 2026-11-23 for PO-7781 (dated 2026-11-16) and INV-2026-1107 (dated 2026-11-20): 1000 units x USD 12.40 = USD 12,400.00, goods received 1000 units in full on 2026-11-23",
+  "decision": "review",
+  "why": "checks disagree or are unusable: invoice",
+  "payout": null,
+  "checks": {
+    "arrival": "pass",
+    "invoice": "review",
+    "sanctions": "pass"
+  },
+  "vessel": [
+    {
+      "miner": 8818818,
+      "operator": "0xa0f6dc5e53185691f900397745f08f99f9ffb9e1",
+      "signal": "0x7909379ed8fc4d1570406d4fa3eb15bef257a1886ab624ec224f6e23565f6ab3",
+      "result": {
+        "vessel": "MEGASTAR",
+        "speed_knots": 0,
+        "latitude": 60.14800833333334,
+        "longitude": 24.914733333333334,
+        "course_deg": 16.3,
+        "observed_at": "2026-11-23T23:40:16.203Z"
+      },
+      "fieldStatus": {
+        "vessel": "ok",
+        "speed_knots": "ok",
+        "latitude": "ok",
+        "longitude": "ok",
+        "course_deg": "ok",
+        "observed_at": "ok"
+      },
+      "berth": {
+        "state": "berthed",
+        "km": 0.19,
+        "knots": 0,
+        "ageMin": 7
+      }
+    },
+    {
+      "miner": 70068,
+      "operator": "0x8b224783fe5b3c52b7db0cb9b1754f8812b75287",
+      "signal": "0xea657c85f7384097281fa12a2c46efa8c672f64d14254caaf34387f0461d71ea",
+      "result": {
+        "vessel": "MEGASTAR",
+        "speed_knots": 0,
+        "latitude": 60.14806,
+        "longitude": 24.914738,
+        "course_deg": 156.9,
+        "observed_at": "2026-11-23T23:46:15.851Z"
+      },
+      "fieldStatus": {
+        "vessel": "ok",
+        "speed_knots": "ok",
+        "latitude": "ok",
+        "longitude": "ok",
+        "course_deg": "ok",
+        "observed_at": "ok"
+      },
+      "berth": {
+        "state": "berthed",
+        "km": 0.19,
+        "knots": 0,
+        "ageMin": 1
+      }
+    }
+  ],
+  "invoice": [
+    {
+      "miner": 302,
+      "operator": "0xd4c73e9986c0b48eac22db24b5eef0c8ecef8ef9",
+      "signal": "0x3cc354476306ab73610d65cb1ff905d28299d505962e02da8902de112911101a",
+      "result": {
+        "reconciled": false,
+        "discrepancy": 0,
+        "explanation": "Date mismatch: invoice date 2026-11-20 vs ledger date 2026-11-23."
+      },
+      "fieldStatus": {
+        "reconciled": "ok",
+        "discrepancy": "ok",
+        "explanation": "ok"
+      }
+    },
+    {
+      "miner": 20260828,
+      "operator": "0x5c4b38cf6adb8c5a30242c3fc9124ce0197d2d52",
+      "signal": "0x60e5495aeb71319b7d0a6c1d5d8a2cbb206b5bbe887a2713ccb7c445c5f41ba5",
+      "result": {
+        "checked_at": "2026-11-23T23:46:43.970Z",
+        "confidence": 0.4,
+        "found": false,
+        "method": "language model",
+        "model": null,
+        "reason": "The language model did not return a usable answer in time, so the invoice and ledger reconciliation is not reported; nothing is guessed in its place.",
+        "verdict": "unavailable"
+      },
+      "fieldStatus": null
+    }
+  ],
+  "sanctions": {
+    "takar": "agree",
+    "screens": [
+      {
+        "miner": "302",
+        "signal": "0xf66298c6966a9a9d26bb8d4ee2dbecbeda6a102954f3463909c60224b30838a9",
+        "matched": false
+      },
+      {
+        "miner": "9002",
+        "signal": "0xf76e0117533d6ca5c046bbdad5d402483e87f75850757352ab39e3264d96ff7b",
+        "matched": false
+      }
+    ],
+    "praman": {
+      "screened": true,
+      "name": "Harju Metal OÜ (illustrative supplier)",
+      "matched": false,
+      "matches": [],
+      "lists": [
+        "US Treasury OFAC SDN"
+      ],
+      "match_score": 0,
+      "query_name": "Harju Metal OÜ (illustrative supplier)",
+      "match_found": false,
+      "match_count": 0,
+      "sdn_list_size": 19565,
+      "sdn_last_loaded": "2026-11-15T18:26:30.134Z",
+      "source": "US Treasury OFAC SDN List (treasury.gov/ofac)",
+      "source_url": "https://sanctionssearch.ofac.treas.gov/",
+      "summary": "VERDICT: NO SANCTIONS MATCH (CLEAN COUNTERPARTY). Screening of \"Harju Metal OÜ (illustrative supplier)\" against the US Treasury OFAC SDN list and Consolidated Sanctions List (19565 indexed records) returned zero sanctions matches. Counterparty is clear for standard commercial transaction processing as of 2026-11-23T23:46:18.131Z.",
+      "latency_ms": 1,
+      "cached": true
+    }
+  },
+  "reconcile": null,
+  "signals": [
+    "0x7909379ed8fc4d1570406d4fa3eb15bef257a1886ab624ec224f6e23565f6ab3",
+    "0xea657c85f7384097281fa12a2c46efa8c672f64d14254caaf34387f0461d71ea",
+    "0x3cc354476306ab73610d65cb1ff905d28299d505962e02da8902de112911101a",
+    "0x60e5495aeb71319b7d0a6c1d5d8a2cbb206b5bbe887a2713ccb7c445c5f41ba5",
+    "0xf66298c6966a9a9d26bb8d4ee2dbecbeda6a102954f3463909c60224b30838a9",
+    "0xf76e0117533d6ca5c046bbdad5d402483e87f75850757352ab39e3264d96ff7b"
+  ]
+}

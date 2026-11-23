@@ -1,0 +1,164 @@
+{
+  "id": 0,
+  "at": "2026-11-23T23:50:34.410Z",
+  "ledger": "GRN-5541 for PO-7790 and INV-2026-1201: 960 units accepted at USD 12.40 = USD 11,904.00; 40 units rejected",
+  "decision": "partial",
+  "why": "pay for the accepted units only: both reconcile miners and Praman put the shortfall at USD 496",
+  "payout": "960000",
+  "checks": {
+    "arrival": "pass",
+    "invoice": "review",
+    "sanctions": "pass"
+  },
+  "vessel": [
+    {
+      "miner": 8818818,
+      "operator": "0xa0f6dc5e53185691f900397745f08f99f9ffb9e1",
+      "signal": "0xe65167ca4a303d0124e60662b464a460f209a2aaf73f83e224cd5782d959d47e",
+      "result": {
+        "vessel": "MEGASTAR",
+        "speed_knots": 0,
+        "latitude": 60.14800833333334,
+        "longitude": 24.914733333333334,
+        "course_deg": 16.3,
+        "observed_at": "2026-11-23T23:40:16.203Z"
+      },
+      "fieldStatus": {
+        "vessel": "ok",
+        "speed_knots": "ok",
+        "latitude": "ok",
+        "longitude": "ok",
+        "course_deg": "ok",
+        "observed_at": "ok"
+      },
+      "berth": {
+        "state": "berthed",
+        "km": 0.19,
+        "knots": 0,
+        "ageMin": 10
+      }
+    },
+    {
+      "miner": 70068,
+      "operator": "0x8b224783fe5b3c52b7db0cb9b1754f8812b75287",
+      "signal": "0x3ad9c6c1a7819876831cd5cae5055c5e232d87e4be1ae7a98e8561f233386cfb",
+      "result": {
+        "vessel": "MEGASTAR",
+        "speed_knots": 0,
+        "latitude": 60.14801,
+        "longitude": 24.914733,
+        "course_deg": 211.5,
+        "observed_at": "2026-11-23T23:49:16.070Z"
+      },
+      "fieldStatus": {
+        "vessel": "ok",
+        "speed_knots": "ok",
+        "latitude": "ok",
+        "longitude": "ok",
+        "course_deg": "ok",
+        "observed_at": "ok"
+      },
+      "berth": {
+        "state": "berthed",
+        "km": 0.19,
+        "knots": 0,
+        "ageMin": 1
+      }
+    }
+  ],
+  "invoice": [
+    {
+      "miner": 7455,
+      "operator": "0x8b224783fe5b3c52b7db0cb9b1754f8812b75287",
+      "signal": "0xc44223f6c11ada8767e70324efee3fdb4f5abd7f342c233c8ed601f272d51a87",
+      "result": {
+        "reconciled": null,
+        "discrepancy": 496,
+        "explanation": null
+      },
+      "fieldStatus": {
+        "reconciled": "rejected",
+        "discrepancy": "ok",
+        "explanation": "rejected"
+      }
+    },
+    {
+      "miner": 302,
+      "operator": "0xd4c73e9986c0b48eac22db24b5eef0c8ecef8ef9",
+      "signal": "0x3bd84695537c1f0d0dcc5941eb7ebebfd6db581751b45bc2adf5279e8bcd6bd7",
+      "result": {
+        "reconciled": false,
+        "discrepancy": -496,
+        "explanation": "Units mismatch: invoice 1000 units vs ledger 960 units accepted. Amount mismatch: invoice USD 12,400.00 vs ledger USD 11,904.00."
+      },
+      "fieldStatus": {
+        "reconciled": "ok",
+        "discrepancy": "ok",
+        "explanation": "ok"
+      }
+    }
+  ],
+  "sanctions": {
+    "takar": "agree",
+    "screens": [
+      {
+        "miner": "302",
+        "signal": "0x3b15d8f9e6addd738fddf4ab11410b91f66f93b3ea9cc4390f971dc7478009fd",
+        "matched": false
+      },
+      {
+        "miner": "9002",
+        "signal": "0x070504401796375d59928f0fab77ba909d00f7a141132493f9f0671e05371c1e",
+        "matched": false
+      }
+    ],
+    "praman": {
+      "screened": true,
+      "name": "Harju Metal OÜ (illustrative supplier)",
+      "matched": false,
+      "matches": [],
+      "lists": [
+        "US Treasury OFAC SDN"
+      ],
+      "match_score": 0,
+      "query_name": "Harju Metal OÜ (illustrative supplier)",
+      "match_found": false,
+      "match_count": 0,
+      "sdn_list_size": 19565,
+      "sdn_last_loaded": "2026-11-15T18:26:30.134Z",
+      "source": "US Treasury OFAC SDN List (treasury.gov/ofac)",
+      "source_url": "https://sanctionssearch.ofac.treas.gov/",
+      "summary": "VERDICT: NO SANCTIONS MATCH (CLEAN COUNTERPARTY). Screening of \"Harju Metal OÜ (illustrative supplier)\" against the US Treasury OFAC SDN list and Consolidated Sanctions List (19565 indexed records) returned zero sanctions matches. Counterparty is clear for standard commercial transaction processing as of 2026-11-23T23:46:18.131Z.",
+      "latency_ms": 1,
+      "cached": true
+    }
+  },
+  "reconcile": {
+    "reconciled": false,
+    "discrepancy": "USD 496.00 (+40 units over-billed vs accepted receipt)",
+    "explanation": "Discrepancy detected. Invoice INV-2026-1201 bills 1000 units (USD 12,400 incl. 0% tax), whereas accepted receipt/ledger records 960 net accepted units (USD 11,904), resulting in an unapproved variance of USD 496.",
+    "details": {
+      "invoice_id": "INV-2026-1201",
+      "po_number": "PO-7790",
+      "currency": "USD",
+      "billed_qty": 1000,
+      "accepted_qty": 960,
+      "qty_variance": 40,
+      "unit_price": 12.4,
+      "tax_rate_pct": 0,
+      "invoice_total": 12400,
+      "ledger_total": 11904,
+      "delta_total": 496,
+      "canonical_invoice": "INV-2026-1201: 1000 units @ USD 12.4 + 0% tax = USD 12400",
+      "canonical_ledger": "Receipt/Ledger (PO-7790): 960 units net accepted @ USD 12.4 + 0% tax = USD 11904"
+    }
+  },
+  "signals": [
+    "0xe65167ca4a303d0124e60662b464a460f209a2aaf73f83e224cd5782d959d47e",
+    "0x3ad9c6c1a7819876831cd5cae5055c5e232d87e4be1ae7a98e8561f233386cfb",
+    "0xc44223f6c11ada8767e70324efee3fdb4f5abd7f342c233c8ed601f272d51a87",
+    "0x3bd84695537c1f0d0dcc5941eb7ebebfd6db581751b45bc2adf5279e8bcd6bd7",
+    "0x3b15d8f9e6addd738fddf4ab11410b91f66f93b3ea9cc4390f971dc7478009fd",
+    "0x070504401796375d59928f0fab77ba909d00f7a141132493f9f0671e05371c1e"
+  ]
+}

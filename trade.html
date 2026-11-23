@@ -80,7 +80,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<
 const when = (t) => new Date(t).toISOString().replace("T", " ").slice(0, 16) + " UTC";
 const tag = (k) => `<span class="tag ${esc(k)}">${esc(k)}</span>`;
 const usdc = (micro) => (Number(micro) / 1e6).toFixed(2);
-const WHO = { open: "Buyer locks the payment", hold: "Evidence round", review: "Evidence round", propose: "Evidence round", second: "Takar's second key backs it", declined: "Takar's second key declines", "awaiting-independent": "Waiting for the outside seat", dispute: "Dispute", finalize: "Settled" };
+const WHO = { "panel-propose": "Review goes to the panel", open: "Buyer locks the payment", hold: "Evidence round", review: "Evidence round", propose: "Evidence round", second: "Takar's second key backs it", declined: "Takar's second key declines", "awaiting-independent": "Waiting for the outside seat", dispute: "Dispute", finalize: "Settled" };
 
 function round(r) {
   const v = r.vessel.map((x) => `<tr><td>Ship arrived</td><td>${esc(x.miner)}</td><td>${esc(x.berth.state)}${x.berth.km != null ? `, ${x.berth.km} km from the berth, ${x.berth.knots} kn` : x.berth.why ? `: ${esc(x.berth.why)}` : ""}</td><td>${sig(x.signal)}</td></tr>`);
@@ -119,7 +119,8 @@ function round(r) {
       if (r.file) { try { body = round(await fetch(r.file, { cache: "no-store" }).then((x) => x.json())); } catch { body = `<p class="note">Evidence file ${esc(r.file)}</p>`; } }
       if (r.action === "open") body = `<p>${esc(t.order)}. ${usdc(1e6)} test USDC locked in the contract. ${tx(r.tx)}</p>`;
       if (r.action === "propose") body += `<p>A resolver proposed ${tag(r.decision)}${r.payout != null ? ` (${usdc(r.payout)} USDC to the supplier)` : ""} on ${r.signals.length} signals. ${tx(r.tx)}</p>`;
-      if (r.action === "second") body = `<p>Re-read every signal on the node, then backed the same decision. Dispute window open. ${tx(r.tx)}</p>`;
+      if (r.action === "panel-propose") body += `<p>The review went to the panel. Takar proposed ${tag(r.decision)} on that round's ${r.signals.length} signals, with its reason in the open: “${esc(r.reason)}” Takar's second key does not back its own review call, so the window opens only if Praman's seat agrees after its own check. ${tx(r.tx)}</p>`;
+      if (r.action === "second") body =`<p>Re-read every signal on the node, then backed the same decision. Dispute window open. ${tx(r.tx)}</p>`;
       if (r.action === "declined") body = `<p>${esc(r.declined)}</p>`;
       if (r.action === "awaiting-independent") body = `<p>The deal is contested, so Takar's second key steps aside. The decision needs Praman's seat to back it after its own check (the contract requires ${r.required} approvals; all three once both parties have disputed).</p>`;
       if (r.action === "dispute") body = `<p>The ${esc(r.by)} disputed and posted the bond${r.reason ? `: “${esc(r.reason)}”` : ""}. The proposal is cleared and cannot be proposed again on the same evidence. ${tx(r.tx)}</p>`;
