@@ -1,0 +1,168 @@
+{
+  "title": "Drone decisions against the weather the nearest airport reported in the task window",
+  "generated_at": "2026-11-23T00:35:39.241Z",
+  "method": "METAR reports from aviationweather.gov (7 days kept) for the station each decision used; bad = gust or wind above the unit's limit, or a thunderstorm reported, between the decision and the end of the task. The station is 10-20 km away, so this is evidence, not proof.",
+  "summary": {
+    "windows_scored": 8,
+    "observed_bad": 6,
+    "takar_flew_into_bad": 3,
+    "takar_held_in_bad": 3,
+    "naive_flew_into_bad": 5,
+    "differ_bad": 2,
+    "differ_calm": 0
+  },
+  "rows": [
+    {
+      "run": "2026-11-17T06:01:27.960Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "station": "WAAA",
+      "limit_kmh": 30,
+      "takar": "HOLD",
+      "naive": "HOLD",
+      "observed": {
+        "reports": 7,
+        "wind_kmh": 16.7,
+        "gust_kmh": 0,
+        "thunderstorm": true
+      },
+      "bad": true
+    },
+    {
+      "run": "2026-11-17T06:04:52.404Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "station": "WAAA",
+      "limit_kmh": 30,
+      "takar": "GO",
+      "naive": "GO",
+      "observed": {
+        "reports": 7,
+        "wind_kmh": 16.7,
+        "gust_kmh": 0,
+        "thunderstorm": true
+      },
+      "bad": true
+    },
+    {
+      "run": "2026-11-20T06:02:48.310Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "station": "WAAA",
+      "limit_kmh": 30,
+      "takar": "GO",
+      "naive": "GO",
+      "observed": {
+        "reports": 8,
+        "wind_kmh": 11.1,
+        "gust_kmh": 0,
+        "thunderstorm": true
+      },
+      "bad": true
+    },
+    {
+      "run": "2026-11-20T11:33:24.161Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "station": "WAAA",
+      "limit_kmh": 30,
+      "takar": "GO",
+      "naive": "GO",
+      "observed": {
+        "reports": 6,
+        "wind_kmh": 7.4,
+        "gust_kmh": 0,
+        "thunderstorm": true
+      },
+      "bad": true
+    },
+    {
+      "run": "2026-11-21T02:34:05.786Z",
+      "unit": "drone-palangkaraya-1",
+      "station": "model",
+      "outcome": "no reports in window"
+    },
+    {
+      "run": "2026-11-21T02:34:05.786Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "station": "WAAA",
+      "limit_kmh": 30,
+      "takar": "HOLD",
+      "naive": "GO",
+      "observed": {
+        "reports": 7,
+        "wind_kmh": 20.4,
+        "gust_kmh": 46.3,
+        "thunderstorm": true
+      },
+      "bad": true
+    },
+    {
+      "run": "2026-11-22T09:54:21.257Z",
+      "unit": "drone-palangkaraya-1",
+      "station": "model",
+      "outcome": "no reports in window"
+    },
+    {
+      "run": "2026-11-22T09:54:21.257Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "station": "WAAA",
+      "limit_kmh": 30,
+      "takar": "GO",
+      "naive": "GO",
+      "observed": {
+        "reports": 6,
+        "wind_kmh": 7.4,
+        "gust_kmh": 0,
+        "thunderstorm": false
+      },
+      "bad": false
+    },
+    {
+      "run": "2026-11-22T13:00:18.708Z",
+      "unit": "drone-palangkaraya-1",
+      "station": "model",
+      "outcome": "no reports in window"
+    },
+    {
+      "run": "2026-11-22T13:00:18.708Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "station": "WAAA",
+      "limit_kmh": 30,
+      "takar": "HOLD",
+      "naive": "GO",
+      "observed": {
+        "reports": 6,
+        "wind_kmh": 7.4,
+        "gust_kmh": 0,
+        "thunderstorm": true
+      },
+      "bad": true
+    },
+    {
+      "run": "2026-11-22T18:16:19.400Z",
+      "unit": "drone-palangkaraya-1",
+      "station": "model",
+      "outcome": "no reports in window"
+    },
+    {
+      "run": "2026-11-22T18:16:19.400Z",
+      "unit": "drone-makassar-2",
+      "location": "Makassar",
+      "station": "WAAA",
+      "limit_kmh": 30,
+      "takar": "GO",
+      "naive": null,
+      "observed": {
+        "reports": 6,
+        "wind_kmh": 7.4,
+        "gust_kmh": 0,
+        "thunderstorm": false
+      },
+      "bad": false
+    }
+  ]
+}

@@ -110,6 +110,7 @@ Every app here buys **more than one** answer before it acts. The same runs, read
 | Check | `receipts/decisions.jsonl`: the purchases behind each decision, the answers it rejected (`unusableMiners`), the station reading and the reasons. |
 | Inspect | the `ledger.jsonl` lines a decision's `receipts` name, then their signal. |
 | Break | Set a rover's `budgetUsd` to `0.01`: it must HOLD, "budget exhausted". Set a drone's `maxGustKmh` below the station wind: it must HOLD. |
+| Score afterwards | `node scripts/fleet-outcomes.mjs` → `receipts/fleet-outcomes.json`: each drone window against what the nearest airport's METAR reported during the task. Makassar (WAAA), 8 windows to 22 Nov: bad weather (gust over the limit or a thunderstorm) in 6. Takar held in 3 of them and flew in 3; a one-answer unit would have flown in 5. On 21 Nov, a window where Takar held and the one-answer unit would have flown, the airport reported a 46 km/h gust against a 30 km/h limit, plus a thunderstorm. The 3 flights into thunderstorms are Takar's misses: the storm miners said LOW and the station check read only wind. Since 23 Nov a thunderstorm in the station report holds the drone too (lib/fleet.mjs, 3 checks). Palangka Raya has no METAR station in range, so it is not scored |
 
 The rules, in order:
 - **A drone needs two different STORM_ALERT miners that agree**: on whether the risk level can fly, and on which side of the gust limit they are. It acts on the worst of each field (highest risk, highest gust; a missing gust fails closed).
