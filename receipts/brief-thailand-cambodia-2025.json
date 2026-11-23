@@ -1,0 +1,441 @@
+{
+  "title": "Thailand and Cambodia, July 2025: a country note priced per fact",
+  "customer": "A cross-border trade and travel-insurance desk (land crossings, factory supply runs through Poipet and Aranyaprathet, trip-cancellation claims) that must know which crossings were shut and whether fighting stopped before it pays claims or reroutes trucks.",
+  "note": "Claims written the way a desk analyst would put them in a note. Observations are checked through Telegraph; forecasts are listed and not bought. c6 is the failure case on purpose: Thailand declared martial law in eight border districts, it did not declare war, and a note that says it did would trigger the wrong policy clause.",
+  "method": "Each observation is bought through Telegraph from three checks: EVENT_OUTCOME_RESOLUTION from Takar Outcome (asked by id), EVENT_OUTCOME_RESOLUTION from the ranked route, and FACT_CHECK on the claim as a sentence. Checks are not averaged: a claim is confirmed (or contradicted) only when two or more checks agree and none disagrees; a lone yes or no is single-source and not counted; yes and no together is disputed; no yes or no is unsupported. Forecasts are listed and not bought. The escalation tally counts confirmed claims only.",
+  "generated_at": "2026-11-23T00:56:52.024Z",
+  "network": "Ethereum Sepolia testnet (test USDC, Telegraph escrow)",
+  "summary": {
+    "claims": 7,
+    "observations": 6,
+    "forecasts": 1,
+    "confirmed": 0,
+    "contradicted": 0,
+    "disputed": 2,
+    "unsupported": 1,
+    "single_source": 3,
+    "escalation": {
+      "confirmed_escalations": 0,
+      "confirmed_de_escalations": 0,
+      "net": 0,
+      "disputed": [
+        "c2",
+        "c4"
+      ],
+      "single_source": [
+        "c1",
+        "c3",
+        "c6"
+      ]
+    },
+    "cost_usd": 0.18,
+    "cost_per_settled_claim_usd": null
+  },
+  "rows": [
+    {
+      "id": "c1",
+      "kind": "escalation",
+      "claim": "Thai and Cambodian troops exchanged fire along their border in July 2025.",
+      "question": "Did Thai and Cambodian troops exchange fire along their border in July 2025?",
+      "type": "observation",
+      "result": {
+        "status": "single-source",
+        "yes": 1,
+        "no": 0,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": "yes",
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/2025_Cambodian%E2%80%93Thai_border_crisis",
+              "https://en.wikipedia.org/wiki/Vietnamese_border_raids_in_Thailand",
+              "https://en.wikipedia.org/wiki/Cambodian%E2%80%93Vietnamese_War"
+            ],
+            "signal": "0x2f36a734014fded2f38746a713bb1da529002c9716e32210c83fc73cf5b5279b",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": true,
+            "reads": null,
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/2025_Cambodian%E2%80%93Thai_border_crisis",
+              "https://en.wikipedia.org/wiki/Vietnamese_border_raids_in_Thailand",
+              "https://en.wikipedia.org/wiki/Cambodian%E2%80%93Vietnamese_War"
+            ],
+            "signal": "0x2c59cf4e0d8d3464f993001855e889cf9ba6de31d2b99bef30f33b3e5266af14",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "reads": null,
+            "answer": "unclear",
+            "evidence": "Unverified",
+            "signal": "0x31df60671182d2813c9d904c46d68e59a09362de6ba2a59eb2f6555e06df4932",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 34636
+    },
+    {
+      "id": "c2",
+      "kind": "escalation",
+      "claim": "Thailand used F-16 fighter jets to strike Cambodian military targets in July 2025.",
+      "question": "Did Thailand use F-16 jets to strike Cambodian military targets in July 2025?",
+      "type": "observation",
+      "result": {
+        "status": "disputed",
+        "yes": 1,
+        "no": 1,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": "yes",
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/General_Dynamics_F-16_Fighting_Falcon",
+              "https://en.wikipedia.org/wiki/2025_Cambodian%E2%80%93Thai_border_crisis",
+              "https://en.wikipedia.org/wiki/2025"
+            ],
+            "signal": "0x5e188db01f455607dc9d30e07e4a32919f843ddfec1433ffbcc08d5426e030d3",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": true,
+            "reads": null,
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/General_Dynamics_F-16_Fighting_Falcon",
+              "https://en.wikipedia.org/wiki/2025_Cambodian%E2%80%93Thai_border_crisis",
+              "https://en.wikipedia.org/wiki/2025"
+            ],
+            "signal": "0x76fe74d339b5f18b3f81e7cfd81fd6bae1f16f4f7b985fc9a219a1e11bd7ca97",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "reads": "no",
+            "answer": "disagrees",
+            "evidence": "False",
+            "signal": "0xc8734751ba4e29aae35a5eb70355d2aca42414ef9ecdecb7244808723bb3f806",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 45443
+    },
+    {
+      "id": "c3",
+      "kind": "escalation",
+      "claim": "Thailand closed its land border crossings with Cambodia in 2025.",
+      "question": "Did Thailand close its land border crossings with Cambodia in 2025?",
+      "type": "observation",
+      "result": {
+        "status": "single-source",
+        "yes": 0,
+        "no": 1,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": null,
+            "answer": "unresolved",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/2025_Cambodian%E2%80%93Thai_border_crisis",
+              "https://en.wikipedia.org/wiki/2008%E2%80%932011_Cambodian%E2%80%93Thai_border_crisis",
+              "https://en.wikipedia.org/wiki/Scam_centers_in_Cambodia"
+            ],
+            "signal": "0xaa847f5037d5cbd2fbf6487611cc78774f7290109aedf3bd4268789e1c949f5a",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": true,
+            "reads": null,
+            "answer": "unresolved",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/2025_Cambodian%E2%80%93Thai_border_crisis",
+              "https://en.wikipedia.org/wiki/2008%E2%80%932011_Cambodian%E2%80%93Thai_border_crisis",
+              "https://en.wikipedia.org/wiki/Scam_centers_in_Cambodia"
+            ],
+            "signal": "0x55db7eae4b76336c4bee8457facd206652e0984a5a132e6d881c8b9602ed65b5",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "reads": "no",
+            "answer": "disagrees",
+            "evidence": "False",
+            "signal": "0x8cfcaa9ab45dab6f3d57a23108d6e0b836026667e41623a9ac42137ac352e189",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 45963
+    },
+    {
+      "id": "c4",
+      "kind": "context",
+      "claim": "Thailand's Constitutional Court suspended Prime Minister Paetongtarn Shinawatra in July 2025 over a leaked call with Hun Sen.",
+      "question": "Did Thailand's Constitutional Court suspend Prime Minister Paetongtarn Shinawatra in July 2025?",
+      "type": "observation",
+      "result": {
+        "status": "disputed",
+        "yes": 1,
+        "no": 1,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": "yes",
+            "answer": "yes",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/2025_Thai_political_crisis",
+              "https://en.wikipedia.org/wiki/2025",
+              "https://en.wikipedia.org/wiki/2025_Cambodian%E2%80%93Thai_border_crisis"
+            ],
+            "signal": "0xf64e45b5cd897d37f973e47de868ad1054df124b7b0d4c5b44f8bc9f1fad0c39",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "59003",
+              "name": "Polymarket Public Search"
+            },
+            "duplicate": false,
+            "reads": null,
+            "answer": "unreadable",
+            "evidence": null,
+            "sources": [
+              "https://dune.xyz/rchen8/opensea"
+            ],
+            "signal": "0x7aaf5816ae3c8c0ca5093a374fa84619c6d0e8603dec12d4f9101a7d1bb0bf2c",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "reads": "no",
+            "answer": "disagrees",
+            "evidence": "False",
+            "signal": "0x64df776549c828dda8778fd8e4a19b5ceb37203d4de33583673fedeb6a9b9ebc",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 27157
+    },
+    {
+      "id": "c5",
+      "kind": "de-escalation",
+      "claim": "Thailand and Cambodia agreed a ceasefire at talks in Malaysia in July 2025.",
+      "question": "Did Thailand and Cambodia agree a ceasefire at talks in Malaysia in July 2025?",
+      "type": "observation",
+      "result": {
+        "status": "unsupported",
+        "yes": 0,
+        "no": 0,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": null,
+            "answer": "unresolved",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/2025_Cambodian%E2%80%93Thai_border_crisis",
+              "https://en.wikipedia.org/wiki/2025",
+              "https://en.wikipedia.org/wiki/List_of_wars_involving_Thailand"
+            ],
+            "signal": "0x81bbfa9f10f12d335283fa220ceaca5af009ee38d1417818715a7e0fe542433b",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": true,
+            "reads": null,
+            "answer": "unresolved",
+            "evidence": null,
+            "sources": [
+              "https://en.wikipedia.org/wiki/2025_Cambodian%E2%80%93Thai_border_crisis",
+              "https://en.wikipedia.org/wiki/2025",
+              "https://en.wikipedia.org/wiki/List_of_wars_involving_Thailand"
+            ],
+            "signal": "0xaa16ed47b2612d2e1bec5a6070be332690534ff961d78cc59228d5139ac8d0b1",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "reads": null,
+            "answer": "unclear",
+            "evidence": "Unverified",
+            "signal": "0x36ba8d065451f21243c8d9ed0beb951f7310ad7adcbbe9898277d327963108b7",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 44202
+    },
+    {
+      "id": "c6",
+      "kind": "escalation",
+      "claim": "Thailand formally declared war on Cambodia in July 2025.",
+      "question": "Did Thailand formally declare war on Cambodia in July 2025?",
+      "type": "observation",
+      "result": {
+        "status": "single-source",
+        "yes": 0,
+        "no": 1,
+        "checked": 3,
+        "checks": [
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": false,
+            "reads": "no",
+            "answer": "no",
+            "evidence": null,
+            "sources": [
+              "https://devnode.telegraphprotocol.com/engine/v1/signal/0x5dbd77a320c67dab9929a82df472d0b976f842db2af487255decdb248ca83437",
+              "https://devnode.telegraphprotocol.com/engine/v1/signal/0x3dab558b12d6243d2072b83e4e3b5727e389ae17e0f03637ccf4aab72490a7de"
+            ],
+            "signal": "0xd3158937ac8412540337b2daf432f800e062e9190418f37f83fa68b3c80defb4",
+            "costUsd": 0.01
+          },
+          {
+            "via": "EVENT_OUTCOME_RESOLUTION",
+            "miner": {
+              "id": "20261117",
+              "name": "Takar Outcome Resolver"
+            },
+            "duplicate": true,
+            "reads": null,
+            "answer": "no",
+            "evidence": null,
+            "sources": [
+              "https://devnode.telegraphprotocol.com/engine/v1/signal/0x5dbd77a320c67dab9929a82df472d0b976f842db2af487255decdb248ca83437",
+              "https://devnode.telegraphprotocol.com/engine/v1/signal/0x3dab558b12d6243d2072b83e4e3b5727e389ae17e0f03637ccf4aab72490a7de"
+            ],
+            "signal": "0x9bc5314024476ac261a5cffad4c74491ec86a8823c056aea6b82e8f975381c23",
+            "costUsd": 0.01
+          },
+          {
+            "via": "FACT_CHECK",
+            "miner": {
+              "id": "9002",
+              "name": "TxLens"
+            },
+            "reads": null,
+            "answer": "unclear",
+            "evidence": null,
+            "signal": "0xac8118e3f982b58b6406f7c903b72d27759e40ad8c70e92a2693b1a9a94ececc",
+            "costUsd": 0.01
+          }
+        ],
+        "costUsd": 0.03
+      },
+      "ms": 54078
+    },
+    {
+      "id": "c7",
+      "kind": "context",
+      "claim": "Thailand and Cambodia will settle their border dispute at the International Court of Justice by the end of 2027.",
+      "question": "Will Thailand and Cambodia settle their border dispute at the International Court of Justice by December 2027?",
+      "type": "forecast",
+      "result": {
+        "status": "forecast",
+        "checks": [],
+        "costUsd": 0
+      },
+      "ms": 0
+    }
+  ],
+  "attestation": {
+    "algorithm": "ed25519",
+    "sha256": "22b34b815547cafc83de74167eecb9ec391c703dafafb3b762aa4594a18d4008",
+    "signature": "4EnMTZYE8nutMwZlsBZJ+PVOG8OpY0e1XlSr8h3ooHADqoyC5I+l1E0I5m+RcYTiTEkmPWkdatXZRfL+xlrWDw==",
+    "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+  }
+}

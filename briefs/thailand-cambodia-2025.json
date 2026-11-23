@@ -1,0 +1,49 @@
+{
+  "title": "Thailand and Cambodia, July 2025: a country note priced per fact",
+  "customer": "A cross-border trade and travel-insurance desk (land crossings, factory supply runs through Poipet and Aranyaprathet, trip-cancellation claims) that must know which crossings were shut and whether fighting stopped before it pays claims or reroutes trucks.",
+  "note": "Claims written the way a desk analyst would put them in a note. Observations are checked through Telegraph; forecasts are listed and not bought. c6 is the failure case on purpose: Thailand declared martial law in eight border districts, it did not declare war, and a note that says it did would trigger the wrong policy clause.",
+  "claims": [
+    {
+      "id": "c1",
+      "kind": "escalation",
+      "claim": "Thai and Cambodian troops exchanged fire along their border in July 2025.",
+      "question": "Did Thai and Cambodian troops exchange fire along their border in July 2025?"
+    },
+    {
+      "id": "c2",
+      "kind": "escalation",
+      "claim": "Thailand used F-16 fighter jets to strike Cambodian military targets in July 2025.",
+      "question": "Did Thailand use F-16 jets to strike Cambodian military targets in July 2025?"
+    },
+    {
+      "id": "c3",
+      "kind": "escalation",
+      "claim": "Thailand closed its land border crossings with Cambodia in 2025.",
+      "question": "Did Thailand close its land border crossings with Cambodia in 2025?"
+    },
+    {
+      "id": "c4",
+      "kind": "context",
+      "claim": "Thailand's Constitutional Court suspended Prime Minister Paetongtarn Shinawatra in July 2025 over a leaked call with Hun Sen.",
+      "question": "Did Thailand's Constitutional Court suspend Prime Minister Paetongtarn Shinawatra in July 2025?"
+    },
+    {
+      "id": "c5",
+      "kind": "de-escalation",
+      "claim": "Thailand and Cambodia agreed a ceasefire at talks in Malaysia in July 2025.",
+      "question": "Did Thailand and Cambodia agree a ceasefire at talks in Malaysia in July 2025?"
+    },
+    {
+      "id": "c6",
+      "kind": "escalation",
+      "claim": "Thailand formally declared war on Cambodia in July 2025.",
+      "question": "Did Thailand formally declare war on Cambodia in July 2025?"
+    },
+    {
+      "id": "c7",
+      "kind": "context",
+      "claim": "Thailand and Cambodia will settle their border dispute at the International Court of Justice by the end of 2027.",
+      "question": "Will Thailand and Cambodia settle their border dispute at the International Court of Justice by December 2027?"
+    }
+  ]
+}

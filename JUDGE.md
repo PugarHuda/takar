@@ -135,9 +135,10 @@ Our own miner is honest but narrow here. On Manifold's vaguer questions ("Will G
 
 ## Mission 05: a country note priced per fact
 
-Two notes, framed the way the mission's build note asks: what can be proved about each claim and how firmly, with its cost and proof, never a verdict on a live event.
+Three notes, framed the way the mission's build note asks: what can be proved about each claim and how firmly, with its cost and proof, never a verdict on a live event.
 - India and Pakistan, April to June 2025 (`briefs/india-pakistan-2025.json`), for a desk with South Asia exposure.
 - Israel and Iran, June 2025 (`briefs/israel-iran-2025.json`, added 22 Nov), for an oil and shipping desk: the planted false claim ("Iran closed the Strait of Hormuz"; its parliament backed a closure that never happened) came back **contradicted by all three checks**; the ceasefire and the Al Udeid strike were **confirmed**; the Israeli and US strikes, which Wikipedia documents, came back **disputed** because the FACT_CHECK miner (LiveCert, 4433) answered "False" against two outcome miners. The note keeps them out of the tally rather than overruling a source. $0.18 in test USDC, $0.06 per settled claim.
+- Thailand and Cambodia, July 2025 (`briefs/thailand-cambodia-2025.json`, added 23 Nov), for a cross-border trade and travel-insurance desk. The weakest result of the three, kept as it came: **nothing was confirmed**. Our outcome miner answered yes to the border clashes, the F-16 strikes and the court suspending Thailand's prime minister, and no to the planted false claim ("Thailand declared war"; it declared martial law in border districts). But the ranked route sent the second ask back to our own miner, which counts as one source, and the FACT_CHECK miner disagreed with two claims that are on the record. A desk would get "single source" or "disputed" on every line, which is the honest answer when the network has one working outcome source for a region. Cost /usr/bin/bash.18.
 
 Each note is written as claims.
 - **Observations** (a period that has ended) are bought from three checks: Takar Outcome by id, the ranked EVENT_OUTCOME route, and FACT_CHECK.
