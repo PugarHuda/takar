@@ -1,0 +1,31 @@
+{
+  "title": "Identical precise values between miners on different payout addresses, in answers Takar bought",
+  "generated_at": "2026-11-23T00:39:42.126Z",
+  "method": "Pairs of answers to the same intent and params, different fee addresses, bought within 10 minutes; a field counts when both carry the same number with at least 3 decimals or 5 significant digits.",
+  "pairs": 408,
+  "identical": 0,
+  "by_intent": {
+    "STORM_ALERT_GENERAL": {
+      "pairs": 25,
+      "identical": 0
+    },
+    "EVENT_OUTCOME_RESOLUTION_GENERAL": {
+      "pairs": 277,
+      "identical": 0
+    },
+    "RESEARCH_QUERY_GENERAL": {
+      "pairs": 19,
+      "identical": 0
+    },
+    "SANCTIONS_SCREENING_MATCH_GENERAL": {
+      "pairs": 72,
+      "identical": 0
+    },
+    "CORPORATE_REGISTRY_LOOKUP_GENERAL": {
+      "pairs": 15,
+      "identical": 0
+    }
+  },
+  "by_pair": {},
+  "flagged": []
+}
