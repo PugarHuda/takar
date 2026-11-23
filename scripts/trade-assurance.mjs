@@ -28,22 +28,29 @@ import { ethers } from "ethers";
 import { ask, ranked, NODE, USDC } from "../lib/telegraph.mjs";
 import { secondOpinion } from "../lib/second.mjs";
 import { pramanTool } from "../lib/praman.mjs";
-import { berth, pair, decide } from "../lib/trade.mjs";
+import { berth, pair, decide, payable } from "../lib/trade.mjs";
 
 const provider = new ethers.JsonRpcProvider(process.env.RPC ?? "https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true });
 const r1 = new ethers.Wallet(process.env.AGENT_PRIVATE_KEY, provider); // proposes, pays for the evidence
 const r2 = new ethers.Wallet(process.env.SERVER_PAYER_KEY, provider); // seconds uncontested deals only
 const supplier = new ethers.Wallet(process.env.TAKAR_COUNTERPARTY_KEY, provider);
 const buyer = process.env.TAKAR_BUYER_KEY ? new ethers.Wallet(process.env.TAKAR_BUYER_KEY, provider) : null;
-const artifact = JSON.parse(readFileSync(new URL("../onchain/TakarSettle4.artifact.json", import.meta.url), "utf8"));
-const settle = (w = r1) => new ethers.Contract(process.env.TAKAR_SETTLE4P, artifact.abi, w);
+// --v5: TakarSettle5 (split settlement) for quantity disputes; default is the v4 panel (pay or refund).
+const V5 = process.argv.includes("--v5");
+const ENV = V5 ? "TAKAR_SETTLE5" : "TAKAR_SETTLE4P";
+const PRAMAN_SEAT = "0x98021b20Efdb7ae2C57366010a6E0fDE207b4466";
+const artifact = JSON.parse(readFileSync(new URL(`../onchain/TakarSettle${V5 ? 5 : 4}.artifact.json`, import.meta.url), "utf8"));
+const settle = (w = r1) => { if (!process.env[ENV]) throw new Error(`no ${ENV} in .env`); return new ethers.Contract(process.env[ENV], artifact.abi, w); };
+// The decision as the contract takes it: v4 a bool, v5 the payee's amount.
+const decisionArg = (payout, amount) => (V5 ? payout : payout === amount);
+const proposalHash = (payout, amount, signals) => ethers.keccak256(ethers.AbiCoder.defaultAbiCoder().encode([V5 ? "uint96" : "bool", "bytes32[]"], [decisionArg(payout, amount), signals]));
 const erc20 = (w) => new ethers.Contract(USDC, ["function approve(address,uint256) returns (bool)", "function allowance(address,address) view returns (uint256)", "function mint(address,uint256)", "function balanceOf(address) view returns (uint256)"], w);
 const [cmd, ...rest] = process.argv.slice(2);
 const arg = (k, d) => { const i = rest.indexOf(`--${k}`); return i >= 0 ? rest[i + 1] : d; };
 const etherscan = (h) => `https://sepolia.etherscan.io/tx/${h}`;
 const STATES = ["open", "proposed", "settled", "reclaimed"];
 const DIR = "receipts/trade-assurance";
-const log = (row) => { mkdirSync(DIR, { recursive: true }); appendFileSync(`${DIR}/log.jsonl`, JSON.stringify({ at: new Date().toISOString(), ...row }) + "\n"); };
+const log = (row) => { mkdirSync(DIR, { recursive: true }); appendFileSync(`${DIR}/log.jsonl`, JSON.stringify({ at: new Date().toISOString(), contract: process.env[ENV] ?? null, ...row }) + "\n"); };
 
 // Miner pairs, each on two different payout operators (checked against /api/miners at run time).
 const VESSEL_MINERS = [8818818, 70068]; // Quay (terrestrial AIS network) | VesselWire v2 (Fintraffic Digitraffic)
@@ -82,16 +89,25 @@ async function evidence(t) {
   const sanctions = takarClear === true && pramanClear === true ? "pass" : takarClear === false && pramanClear === false ? "fail" : "review";
   const screens = so.answers.filter((a) => a.usable).map((a) => ({ miner: a.miner?.id, signal: a.signal, matched: a.result?.matched }));
   const checks = { arrival, invoice: inv, sanctions };
-  const [decision, why] = decide(checks, t.port);
+  let [decision, why] = decide(checks, t.port);
+  let payout = decision === "pay" ? t.amount : decision === "refund" ? 0n : null, reconcile = null;
+  // Quantity deals: an invoice that does not match the goods-received note is paid for the accepted
+  // part, when both miners and Praman's three-way reconciliation agree on the shortfall.
+  if (t.qty && decision === "refund" && sanctions !== "fail") {
+    reconcile = await pramanTool("reconcile_invoice", { invoice_id: t.qty.invoiceId, po_number: t.qty.po, billed_qty: t.qty.billed, accepted_qty: t.qty.accepted, unit_price: t.qty.unitPrice, tax_rate_pct: 0, currency: "USD" }).catch((e) => ({ error: e.message }));
+    const p = payable(t.amount, t.qty.billed * t.qty.unitPrice, invoice.map((x) => x.result?.discrepancy), reconcile?.details?.delta_total);
+    if (p === null) [decision, why, payout] = ["review", "the invoice does not match the goods-received note, but the miners and Praman do not agree on the shortfall", null];
+    else [decision, why, payout] = ["partial", `pay for the accepted units only: both reconcile miners and Praman put the shortfall at USD ${Math.abs(invoice[0].result.discrepancy)}`, p];
+  }
   const signals = [...vessel, ...invoice, ...screens].map((x) => x.signal).filter(Boolean);
-  return { decision, why, checks, vessel, invoice, sanctions: { takar: so.verdict, screens, praman }, signals: [...new Set(signals)] };
+  return { decision, why, payout: payout === null ? null : String(payout), checks, vessel, invoice, sanctions: { takar: so.verdict, screens, praman }, reconcile, signals: [...new Set(signals)] };
 }
 
 /** Takar's second key re-reads every signal on the node before backing: each must be an answer to
  *  one of this deal's checks, paid by Takar's agent, asking about this deal's ship or invoice.
  *  ponytail: ties evidence to the deal, does not re-derive berthed/reconciled from raw miner
  *  responses (shapes differ per miner); add per-miner parsers if the second key must re-decide. */
-async function backBy(w, id, met, signals, t) {
+async function backBy(w, id, payout, amount, signals, t) {
   const expect = { VESSEL_TELEMETRY_VERIFY_GENERAL: t.vessel, INVOICE_LEDGER_RECONCILE_GENERAL: t.invoice.split(":")[0], SANCTIONS_SCREENING_MATCH_GENERAL: t.supplier };
   for (const s of signals) {
     const r = await fetch(`${NODE}/engine/v1/signal/${s}`, { signal: AbortSignal.timeout(15_000) });
@@ -101,7 +117,7 @@ async function backBy(w, id, met, signals, t) {
     if (String(p.wallet_address).toLowerCase() !== r1.address.toLowerCase()) return { declined: `signal ${s.slice(0, 10)} was not bought by Takar's agent` };
     if (!String(p.request ?? "").includes(expect[p.intent_id])) return { declined: `signal ${s.slice(0, 10)} asks about something other than this deal` };
   }
-  const hash = ethers.keccak256(ethers.AbiCoder.defaultAbiCoder().encode(["bool", "bytes32[]"], [met, signals]));
+  const hash = proposalHash(payout, amount, signals);
   for (let i = 0; ; i++) {
     try { const q = await settle(w).second(id, hash); await q.wait(); return { tx: q.hash, hash }; }
     catch (e) { if (i >= 5 || !/not proposed|different proposal/.test(e.shortMessage ?? e.message)) throw e; await new Promise((r) => setTimeout(r, 4000)); }
@@ -112,7 +128,17 @@ async function ensureAllowance(w, spender, amount) {
   if ((await erc20(w).allowance(w.address, spender)) < amount) await (await erc20(w).approve(spender, amount * 10n)).wait();
 }
 
-if (cmd === "setup") {
+if (cmd === "deploy") {
+  if (!V5) throw new Error("deploy is for --v5; the v4 panel already exists");
+  const f = new ethers.ContractFactory(artifact.abi, artifact.bytecode, r1);
+  const panel = [r1.address, r2.address, PRAMAN_SEAT];
+  const c = await f.deploy(USDC, panel, 2, 600, 500_000);
+  await c.waitForDeployment();
+  appendFileSync(".env", `\nTAKAR_SETTLE5=${c.target}\n`);
+  process.env.TAKAR_SETTLE5 = c.target;
+  console.log(`TakarSettle5 at ${c.target}: resolvers ${panel.join(", ")}; threshold 2, liveness 10 min, bond 0.5\n  ${etherscan(c.deploymentTransaction().hash)}`);
+  log({ action: "deploy", resolvers: panel, tx: c.deploymentTransaction().hash });
+} else if (cmd === "setup") {
   let key = process.env.TAKAR_BUYER_KEY;
   if (!key) { key = ethers.Wallet.createRandom().privateKey; appendFileSync(".env", `\nTAKAR_BUYER_KEY=${key}\n`); }
   const b = new ethers.Wallet(key, provider);
@@ -128,7 +154,18 @@ if (cmd === "setup") {
   const amount = ethers.parseUnits(String(arg("amount", "1")), 6);
   await ensureAllowance(buyer, s.target, amount);
   const vessel = arg("vessel", "MEGASTAR");
-  const terms = {
+  // --qty: the quantity case. The supplier invoices the full order; the buyer's goods-received note
+  // accepts part of it. The contract pays for accepted goods, so arrival alone never pays.
+  const qty = rest.includes("--qty") ? { invoiceId: "INV-2026-1201", po: "PO-7790", billed: 1000, accepted: Number(arg("accepted", "960")), unitPrice: 12.4 } : null;
+  const terms = qty ? {
+    kind: "trade", qty,
+    order: "PO-7790: 1,000 stainless fastener kits at USD 12.40, Tallinn -> Helsinki, paid on goods accepted at the buyer's warehouse",
+    supplier: arg("supplier", "Harju Metal OÜ (illustrative supplier)"),
+    vessel, port: "Helsinki West Harbour",
+    invoice: "INV-2026-1201: 1000 units x USD 12.40 = USD 12,400.00",
+    ledger: `GRN-5541 for PO-7790 and INV-2026-1201: ${qty.accepted} units accepted at USD 12.40 = USD ${(qty.accepted * 12.4).toLocaleString("en-US", { minimumFractionDigits: 2 })}; ${qty.billed - qty.accepted} units rejected`,
+    text: `Ship arrival is not delivery: the supplier is paid for the units the buyer's goods-received note accepts. Needs ${vessel} berthed (two vessel miners), the shortfall agreed by two reconcile miners and Praman's three-way reconciliation, and the supplier clear. Test USDC, scaled 1:12,400.`,
+  } : {
     kind: "trade",
     order: "PO-7781: 1,000 stainless fasteners kits at USD 12.40, Tallinn -> Helsinki, delivered (DAP Helsinki West Harbour)",
     supplier: arg("supplier", "Harju Metal OÜ (illustrative supplier)"),
@@ -150,25 +187,26 @@ if (cmd === "setup") {
   if (t.kind !== "trade") throw new Error(`deal ${id} is not a trade deal`);
   if (STATES[Number(d.state)] !== "open" && !(STATES[Number(d.state)] === "proposed" && d.finalizesAt === 0n)) throw new Error(`deal ${id} is ${STATES[Number(d.state)]}${d.finalizesAt ? " with its window open" : ""}`);
   // A buyer's dispute can come with a new goods-received note; it replaces the ledger for this round.
-  const e = await evidence({ ...t, ledger: arg("ledger", t.ledger) });
+  const e = await evidence({ ...t, amount: d.amount, ledger: arg("ledger", t.ledger) });
   const round = { id, at: new Date().toISOString(), ledger: arg("ledger", t.ledger), ...e };
   mkdirSync(DIR, { recursive: true });
   const file = `${DIR}/deal-${id}-${round.at.replace(/[:.]/g, "-")}.json`;
   writeFileSync(file, JSON.stringify(round, null, 2));
   console.log(`deal ${id}: ${e.decision.toUpperCase()}: ${e.why}\n  arrival ${e.checks.arrival} (${e.vessel.map((v) => `${v.miner}: ${v.berth.state}${v.berth.km != null ? ` ${v.berth.km} km, ${v.berth.knots} kn` : ""}`).join("; ")})\n  invoice ${e.checks.invoice} (${e.invoice.map((v) => `${v.miner}: ${v.result?.reconciled ?? v.error}`).join("; ")})\n  sanctions ${e.checks.sanctions} (Takar ${e.sanctions.takar}, Praman ${e.sanctions.praman.matched ?? e.sanctions.praman.error})\n  evidence ${file}`);
   if (e.decision === "hold" || e.decision === "review") { log({ action: e.decision, id, why: e.why, file }); process.exit(0); }
-  const met = e.decision === "pay";
+  const payout = BigInt(e.payout);
+  if (!V5 && payout !== 0n && payout !== d.amount) throw new Error("a split payout needs the v5 contract");
   if (e.signals.length < 2) throw new Error("fewer than two signals: nothing to propose");
   const evidenceText = JSON.stringify({ decision: e.decision, checks: e.checks, file }).slice(0, 900);
-  const p = await s.propose(id, met, e.signals, evidenceText); await p.wait();
+  const p = await s.propose(id, decisionArg(payout, d.amount), e.signals, evidenceText); await p.wait();
   console.log(`  proposed ${e.decision} with ${e.signals.length} signals\n  propose ${etherscan(p.hash)}`);
-  log({ action: "propose", id, decision: e.decision, signals: e.signals, file, tx: p.hash });
+  log({ action: "propose", id, decision: e.decision, payout: String(payout), signals: e.signals, file, tx: p.hash });
   const live = await s.deal(id);
   if (live.payerDisputed || live.payeeDisputed) {
     console.log(`  contested deal: Takar's second key steps aside; the decision needs the independent seat (Praman) to back it after its own check`);
     log({ action: "awaiting-independent", id, required: Number(await s.required(id)) });
   } else {
-    const b = await backBy(r2, id, met, e.signals, t);
+    const b = await backBy(r2, id, payout, d.amount, e.signals, t);
     console.log(b.declined ? `  resolver 2 declined: ${b.declined}` : `  seconded by resolver 2 after re-reading every signal; dispute window open 10 min\n  second ${etherscan(b.tx)}`);
     log({ action: b.declined ? "declined" : "second", id, ...b });
   }
@@ -185,15 +223,16 @@ if (cmd === "setup") {
   const id = Number(arg("id"));
   const d = await settle(r1).deal(id);
   const t = await settle(r1).finalize(id); await t.wait();
-  console.log(`deal ${id}: finalized, ${d.conditionMet ? "supplier paid" : "buyer refunded"}\n  ${etherscan(t.hash)}`);
-  log({ action: "finalize", id, met: d.conditionMet, tx: t.hash });
+  const paid = V5 ? d.payout : d.conditionMet ? d.amount : 0n;
+  console.log(`deal ${id}: finalized: supplier ${ethers.formatUnits(paid, 6)}, buyer refunded ${ethers.formatUnits(d.amount - paid, 6)}\n  ${etherscan(t.hash)}`);
+  log({ action: "finalize", id, toSupplier: String(paid), toBuyer: String(d.amount - paid), tx: t.hash });
 } else if (cmd === "status") {
   const s = settle(r1);
   for (let id = 0; id < Number(await s.count()); id++) {
     const d = await s.deal(id);
     let kind; try { kind = JSON.parse(d.terms).kind; } catch { kind = "?"; }
     if (kind !== "trade") continue;
-    console.log(`${id} ${STATES[Number(d.state)]} met=${d.conditionMet} approvals=${d.approvals}/${await s.required(id)} window=${d.finalizesAt ? new Date(Number(d.finalizesAt) * 1000).toISOString() : "-"} disputed buyer=${d.payerDisputed} supplier=${d.payeeDisputed}`);
+    console.log(`${id} ${STATES[Number(d.state)]} decision=${V5 ? ethers.formatUnits(d.payout, 6) : d.conditionMet} approvals=${d.approvals}/${await s.required(id)} window=${d.finalizesAt ? new Date(Number(d.finalizesAt) * 1000).toISOString() : "-"} disputed buyer=${d.payerDisputed} supplier=${d.payeeDisputed}`);
   }
 } else if (cmd) {
   console.log("commands: setup | open | check --id N | dispute --id N --as buyer|supplier | finalize --id N | status");

@@ -29,7 +29,7 @@ ol.time { list-style:none; padding:0; margin:0; }
 ol.time > li { border-left:3px solid var(--rule); padding:4px 0 14px 16px; position:relative; }
 ol.time > li::before { content:""; position:absolute; left:-7px; top:10px; width:11px; height:11px; border-radius:50%; background:var(--rule); }
 .tag { font:700 .85rem "Barlow Semi Condensed", sans-serif; letter-spacing:.04em; text-transform:uppercase; padding:1px 7px; border-radius:4px; border:1px solid currentColor; }
-.pay, .pass { color:var(--ok); } .refund, .fail { color:var(--bad); } .hold, .review { color:var(--warn); }
+.pay, .pass, .partial { color:var(--ok); } .refund, .fail { color:var(--bad); } .hold, .review { color:var(--warn); }
 .when { color:var(--muted); font-size:.88rem; }
 table { border-collapse:collapse; font-size:.9rem; width:100%; }
 th, td { border-bottom:1px solid var(--rule-soft); padding:5px 8px; text-align:left; vertical-align:top; }
@@ -54,65 +54,79 @@ code { font-size:.85rem; overflow-wrap:anywhere; }
   <section aria-labelledby="rules-h">
     <h2 id="rules-h">The conditions, and who checks them</h2>
     <div class="grid">
-      <div><h3>Delivered</h3><p class="note">Two vessel miners on different operators (Quay, a terrestrial AIS network; VesselWire, Fintraffic Digitraffic) both put the ship berthed at the destination port: within 1.5 km, under 1 knot, reading under 60 minutes old.</p></div>
-      <div><h3>Invoice matches</h3><p class="note">Two reconcile miners on different operators both say the invoice reconciles with the purchase order and the goods-received note.</p></div>
+      <div><h3>Ship arrived</h3><p class="note">Two vessel miners on different operators (Quay, a terrestrial AIS network; VesselWire, Fintraffic Digitraffic) both put the named ship berthed at the destination port: within 1.5 km, under 1 knot, a reading under 60 minutes old. <b>Arrival alone never pays.</b> It proves the ship is in port, not that the goods were delivered or accepted.</p></div>
+      <div><h3>Goods accepted</h3><p class="note">The buyer's goods-received note is the acceptance record. Two reconcile miners on different operators compare the supplier's invoice with the purchase order and that note. In the quantity case, Praman's own three-way reconciliation must land on the same shortfall.</p></div>
       <div><h3>Supplier clear</h3><p class="note">Two sanctions-screening miners on different operators agree, and Praman's own OFAC SDN screen lands the same way.</p></div>
     </div>
-    <p class="note"><b class="pay">Pay</b> when all three pass. <b class="hold">Hold</b> while both vessel miners agree the ship has not arrived. <b class="review">Review</b> when any pair disagrees or an answer is unusable: nothing is proposed. <b class="refund">Refund</b> when both reconcile miners say the invoice does not match, or the supplier is sanctioned. A proposal opens a 10-minute dispute window only after two of the three resolvers back the same decision on the same evidence. A party disputes by posting a 0.5 USDC bond, which goes to the other side if the decision stands.</p>
+    <p class="note"><b class="pay">Pay</b> when everything passes. <b class="hold">Hold</b> while both vessel miners agree the ship is not in port. <b class="review">Review</b> when any pair disagrees or an answer is unusable: nothing is proposed. <b class="partial">Partial</b> (quantity case) pays for the accepted units only, when both miners and Praman agree on the shortfall; the rest goes back to the buyer. <b class="refund">Refund</b> when nothing can be paid. A proposal opens a 10-minute dispute window only after two of the three resolvers back the same decision on the same evidence. A party disputes by posting a 0.5 USDC bond, lost to the other side if the payout it disputed stands. Once a party has disputed, Takar's own second key steps aside, so the decision needs Praman's seat.</p>
   </section>
 
-  <section aria-labelledby="case-h">
-    <h2 id="case-h">The case, step by step</h2>
-    <div id="terms" class="note">Loading the deal…</div>
-    <ol class="time" id="time"></ol>
-  </section>
+  <div id="cases"><section><p class="note">Loading the cases…</p></section></div>
 
   <section aria-labelledby="src-h">
     <h2 id="src-h">Check it yourself</h2>
-    <p class="note">Contract: <a href="https://sepolia.etherscan.io/address/0x310275e6D66818E068245326bB9e398822304248">TakarSettle4 0x3102…4304</a> (source verified on Sourcify). Resolvers: Takar's agent, Takar's server key, and Praman (0x9802…4466). Every paid answer has a signal hash that resolves on the Telegraph node at <code>/engine/v1/signal/&lt;hash&gt;</code>. Raw records: <a href="receipts/trade-assurance/log.jsonl">log.jsonl</a>. Code: <a href="https://github.com/PugarHuda/takar/blob/main/scripts/trade-assurance.mjs">scripts/trade-assurance.mjs</a>, rules tested in <code>lib/trade.test.mjs</code>.</p>
+    <p class="note">Case 1 contract: <a href="https://sepolia.etherscan.io/address/0x310275e6D66818E068245326bB9e398822304248">TakarSettle4 0x3102…4304</a> (pay or refund). Case 2 contract: <a href="https://sepolia.etherscan.io/address/0xa72A697C93Aa472d168A0619953b096EC03a5aE5">TakarSettle5 0xa72A…5aE5</a> (split settlement). Both are verified on Sourcify. Resolvers on both: Takar's agent, Takar's server key, and Praman (0x9802…4466). Every paid answer has a signal hash that resolves on the Telegraph node at <code>/engine/v1/signal/&lt;hash&gt;</code>. Raw records: <a href="receipts/trade-assurance/log.jsonl">log.jsonl</a>. Code: <a href="https://github.com/PugarHuda/takar/blob/main/scripts/trade-assurance.mjs">scripts/trade-assurance.mjs</a> and <a href="https://github.com/PugarHuda/takar/blob/main/onchain/src/TakarSettle5.sol">TakarSettle5.sol</a>; rules tested in <code>lib/trade.test.mjs</code> and <code>onchain/test/TakarSettle5.t.sol</code>.</p>
   </section>
 </main>
 
 <script>
 const NODE = "https://devnode.telegraphprotocol.com/engine/v1/signal/";
+const V4 = "0x310275e6D66818E068245326bB9e398822304248";
 const HASH = /^0x[0-9a-fA-F]{64}$/;
 const tx = (h) => HASH.test(h ?? "") ? `<a href="https://sepolia.etherscan.io/tx/${h}">${h.slice(0, 10)}…</a>` : "";
 const sig = (h) => HASH.test(h ?? "") ? `<a href="${NODE}${h}">${h.slice(0, 10)}…</a>` : "none";
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const when = (t) => new Date(t).toISOString().replace("T", " ").slice(0, 16) + " UTC";
 const tag = (k) => `<span class="tag ${esc(k)}">${esc(k)}</span>`;
-const WHO = { setup: "Setup", open: "Buyer locks the payment", hold: "Evidence round", review: "Evidence round", propose: "Evidence round", second: "Takar's second key backs it", declined: "Takar's second key declines", "awaiting-independent": "Waiting for the outside seat", dispute: "Dispute", finalize: "Settled" };
+const usdc = (micro) => (Number(micro) / 1e6).toFixed(2);
+const WHO = { open: "Buyer locks the payment", hold: "Evidence round", review: "Evidence round", propose: "Evidence round", second: "Takar's second key backs it", declined: "Takar's second key declines", "awaiting-independent": "Waiting for the outside seat", dispute: "Dispute", finalize: "Settled" };
 
 function round(r) {
-  const v = r.vessel.map((x) => `<tr><td>Delivered</td><td>${esc(x.miner)}</td><td>${esc(x.berth.state)}${x.berth.km != null ? `, ${x.berth.km} km from the berth, ${x.berth.knots} kn` : x.berth.why ? `: ${esc(x.berth.why)}` : ""}</td><td>${sig(x.signal)}</td></tr>`);
-  const i = r.invoice.map((x) => `<tr><td>Invoice</td><td>${esc(x.miner)}</td><td>${x.result ? `reconciled = ${esc(x.result.reconciled)}: ${esc(x.result.explanation)}` : esc(x.error)}</td><td>${sig(x.signal)}</td></tr>`);
-  const s = r.sanctions.screens.map((x) => `<tr><td>Supplier</td><td>${esc(x.miner)}</td><td>matched = ${esc(x.matched)}</td><td>${sig(x.signal)}</td></tr>`);
+  const v = r.vessel.map((x) => `<tr><td>Ship arrived</td><td>${esc(x.miner)}</td><td>${esc(x.berth.state)}${x.berth.km != null ? `, ${x.berth.km} km from the berth, ${x.berth.knots} kn` : x.berth.why ? `: ${esc(x.berth.why)}` : ""}</td><td>${sig(x.signal)}</td></tr>`);
+  const i = r.invoice.map((x) => `<tr><td>Goods accepted</td><td>${esc(x.miner)}</td><td>${x.result ? `reconciled = ${esc(x.result.reconciled)}${x.result.discrepancy != null ? `, discrepancy ${esc(x.result.discrepancy)}` : ""}: ${esc(x.result.explanation)}` : esc(x.error)}</td><td>${sig(x.signal)}</td></tr>`);
+  if (r.reconcile) i.push(`<tr><td>Goods accepted</td><td>Praman (MCP)</td><td>${r.reconcile.error ? esc(r.reconcile.error) : `three-way reconciliation: billed ${esc(r.reconcile.details?.billed_qty)}, accepted ${esc(r.reconcile.details?.accepted_qty)}, shortfall USD ${esc(r.reconcile.details?.delta_total)}`}</td><td>-</td></tr>`);
+  const s = r.sanctions.screens.map((x) => `<tr><td>Supplier clear</td><td>${esc(x.miner)}</td><td>matched = ${esc(x.matched)}</td><td>${sig(x.signal)}</td></tr>`);
   const p = r.sanctions.praman;
-  s.push(`<tr><td>Supplier</td><td>Praman (MCP)</td><td>${p.error ? esc(p.error) : `matched = ${esc(p.matched)}, SDN list loaded ${esc(p.sdn_last_loaded)}`}</td><td>-</td></tr>`);
-  return `<p>${tag(r.decision)} ${esc(r.why)}</p>
-    <p class="note">Delivered ${r.checks.arrival === "fail" ? '<span class="tag hold">not yet</span>' : tag(r.checks.arrival)} Invoice ${tag(r.checks.invoice)} Supplier ${tag(r.checks.sanctions)} · goods-received note used: “${esc(r.ledger)}”</p>
+  s.push(`<tr><td>Supplier clear</td><td>Praman (MCP)</td><td>${p.error ? esc(p.error) : `matched = ${esc(p.matched)}, SDN list loaded ${esc(p.sdn_last_loaded)}`}</td><td>-</td></tr>`);
+  return `<p>${tag(r.decision)} ${esc(r.why)}${r.payout != null && r.decision !== "hold" && r.decision !== "review" ? ` · proposed payout to the supplier: <b>${usdc(r.payout)} USDC</b>` : ""}</p>
+    <p class="note">Ship ${r.checks.arrival === "fail" ? '<span class="tag hold">not in port</span>' : r.checks.arrival === "pass" ? '<span class="tag pass">in port</span>' : tag(r.checks.arrival)} Goods ${tag(r.checks.invoice)} Supplier ${tag(r.checks.sanctions)} · goods-received note used: “${esc(r.ledger)}”</p>
     <div class="scroll"><table><tr><th>Check</th><th>Miner</th><th>Answer</th><th>Signal</th></tr>${[...v, ...i, ...s].join("")}</table></div>`;
 }
 
 (async () => {
   const rows = (await fetch("receipts/trade-assurance/log.jsonl", { cache: "no-store" }).then((r) => r.text())).split("\n").filter(Boolean).map((l) => JSON.parse(l));
-  const open = rows.find((r) => r.action === "open");
-  if (open) document.getElementById("terms").innerHTML = `<b>Deal ${open.id}</b>: ${esc(open.terms.order)}. Supplier: ${esc(open.terms.supplier)}. Ship: ${esc(open.terms.vessel)}, to ${esc(open.terms.port)}. Invoice: “${esc(open.terms.invoice)}”. Terms on chain: “${esc(open.terms.text)}”`;
-  const out = [];
-  for (const r of rows.filter((r) => r.action !== "setup")) {
-    let body = "";
-    if (r.file) { try { body = round(await fetch(r.file.replace(/^receipts\//, "receipts/"), { cache: "no-store" }).then((x) => x.json())); } catch { body = `<p class="note">Evidence file ${esc(r.file)}</p>`; } }
-    if (r.action === "open") body = `<p>${esc(open.terms.order)}. Payment locked in the contract. ${tx(r.tx)}</p>`;
-    if (r.action === "propose") body += `<p>A resolver proposed ${tag(r.decision)} on ${r.signals.length} signals. ${tx(r.tx)}</p>`;
-    if (r.action === "second") body = `<p>Re-read every signal on the node, then backed the same decision. Dispute window open. ${tx(r.tx)}</p>`;
-    if (r.action === "declined") body = `<p>${esc(r.declined)}</p>`;
-    if (r.action === "awaiting-independent") body = `<p>The deal is contested, so Takar's second key steps aside. The decision needs Praman's seat to back it after its own check (${r.required} approvals required by the contract once both parties dispute, 2 otherwise).</p>`;
-    if (r.action === "dispute") body = `<p>The ${esc(r.by)} disputed and posted the bond${r.reason ? `: “${esc(r.reason)}”` : ""}. The proposal is cleared and cannot be proposed again on the same evidence. ${tx(r.tx)}</p>`;
-    if (r.action === "finalize") body = `<p>${r.met ? "Supplier paid" : "Buyer refunded"}; bonds returned or forfeited per the contract. ${tx(r.tx)}</p>`;
-    out.push(`<li><h3>${esc(WHO[r.action] ?? r.action)}</h3><div class="when">${when(r.at)}</div>${body}</li>`);
+  const cases = new Map();
+  for (const r of rows) {
+    if (r.action === "setup" || r.action === "deploy") continue;
+    const k = `${(r.contract ?? V4).toLowerCase()}:${r.id}`;
+    if (!cases.has(k)) cases.set(k, []);
+    cases.get(k).push(r);
   }
-  document.getElementById("time").innerHTML = out.join("") || "<li>No steps yet.</li>";
-})().catch((e) => { document.getElementById("terms").textContent = `Could not load the case (${e.message}).`; });
+  const html = [];
+  let n = 0;
+  for (const [k, steps] of cases) {
+    const open = steps.find((r) => r.action === "open");
+    if (!open) continue;
+    n++;
+    const t = open.terms;
+    const title = t.qty ? `Case ${n}: the supplier says it delivered everything, the buyer accepted ${t.qty.accepted} of ${t.qty.billed}` : `Case ${n}: did the shipment arrive, and was it accepted?`;
+    const out = [];
+    for (const r of steps) {
+      let body = "";
+      if (r.file) { try { body = round(await fetch(r.file, { cache: "no-store" }).then((x) => x.json())); } catch { body = `<p class="note">Evidence file ${esc(r.file)}</p>`; } }
+      if (r.action === "open") body = `<p>${esc(t.order)}. ${usdc(1e6)} test USDC locked in the contract. ${tx(r.tx)}</p>`;
+      if (r.action === "propose") body += `<p>A resolver proposed ${tag(r.decision)}${r.payout != null ? ` (${usdc(r.payout)} USDC to the supplier)` : ""} on ${r.signals.length} signals. ${tx(r.tx)}</p>`;
+      if (r.action === "second") body = `<p>Re-read every signal on the node, then backed the same decision. Dispute window open. ${tx(r.tx)}</p>`;
+      if (r.action === "declined") body = `<p>${esc(r.declined)}</p>`;
+      if (r.action === "awaiting-independent") body = `<p>The deal is contested, so Takar's second key steps aside. The decision needs Praman's seat to back it after its own check (the contract requires ${r.required} approvals; all three once both parties have disputed).</p>`;
+      if (r.action === "dispute") body = `<p>The ${esc(r.by)} disputed and posted the bond${r.reason ? `: “${esc(r.reason)}”` : ""}. The proposal is cleared and cannot be proposed again on the same evidence. ${tx(r.tx)}</p>`;
+      if (r.action === "finalize") body = r.toSupplier != null ? `<p>Supplier received <b>${usdc(r.toSupplier)} USDC</b>, buyer refunded <b>${usdc(r.toBuyer)} USDC</b>; bonds returned or forfeited per the contract. ${tx(r.tx)}</p>` : `<p>${r.met ? "Supplier paid" : "Buyer refunded"}. ${tx(r.tx)}</p>`;
+      out.push(`<li><h3>${esc(WHO[r.action] ?? r.action)}</h3><div class="when">${when(r.at)}</div>${body}</li>`);
+    }
+    html.push(`<section><h2>${esc(title)}</h2><p class="note">Supplier: ${esc(t.supplier)}. Ship: ${esc(t.vessel)}, to ${esc(t.port)}. Invoice: “${esc(t.invoice)}”. Terms on chain: “${esc(t.text)}”</p><ol class="time">${out.join("")}</ol></section>`);
+  }
+  document.getElementById("cases").innerHTML = html.join("") || "<section><p>No cases yet.</p></section>";
+})().catch((e) => { document.getElementById("cases").innerHTML = `<section><p>Could not load the cases (${esc(e.message)}).</p></section>`; });
 </script>
 </body>
 </html>
