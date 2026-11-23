@@ -37,7 +37,23 @@ Reviewers: start at [JUDGE.md](JUDGE.md), which opens with what each app does **
 | Who really runs the miners | [network.html](https://takar-telegraph.vercel.app/network.html), `GET /api/network?view=operators` (miners grouped by fee address; per intent, how many operators a buyer can actually choose from), `view=disagreement` (how often miners from different operators disagree, from the EAS feed), `view=signal&hash=0x…` (a signal on the node, in our ledger, and inside an EAS-anchored Merkle root recomputed from the file). |
 | Known-answer test of the top miners | `node --env-file=.env scripts/trap-run.mjs` puts six settled markets to the top-ranked EVENT_OUTCOME miners and ours; `scripts/attest.mjs --send` writes the grades to the reputation schema. 22 Nov: three miners 6/6, one top-4 miner failed every ask (`receipts/trap-2026-11-22.json`). |
 | Gold Rush dossier for a Queensland mine | [goldrush.html](https://takar-telegraph.vercel.app/goldrush.html) (8 mines, PDF/Markdown/signed JSON; tenure, native title category, real-terms gold price), `GET /api/dossier?mine=`. |
+| Is our log still append-only | `GET /api/network?view=audit` recomputes every ledger root anchored on EAS; `?view=miners` gives answered and complete rates per miner from what Takar paid for. |
 | Escrow that needs two resolvers and a dispute bond | [TakarSettle v3](https://sepolia.etherscan.io/address/0xf977660CD28704Fa97D8f6B72835646F62E2502b) and v4 with escalation to the full panel ([0x2A61…2aBd](https://sepolia.etherscan.io/address/0x2A615f7D3E52e9Ee68AB8CaaE3385bcbACCB2aBd)), `scripts/settle3.mjs [--v4]`. Source verified on [Sourcify](https://repo.sourcify.dev/11155111/0x2A615f7D3E52e9Ee68AB8CaaE3385bcbACCB2aBd). |
+
+### Before your agent acts: ten lines
+
+```js
+const r = await fetch("https://takar-telegraph.vercel.app/api/second-opinion", {
+  method: "POST", headers: { "content-type": "application/json" },
+  body: JSON.stringify({ intent: "CRYPTO_PRICE_USD", params: { symbol: "ETH" }, fields: ["price_usd"], client: "your-app" }),
+}).then((x) => x.json());
+// agree: two operators gave the same answer; band is the range they span, so act on the cautious side.
+// disagree or insufficient: do not act on one answer. independence.level says whether the two even read different sources.
+if (r.verdict === "agree" && !/shared upstream|identical values/.test(r.independence.level)) act(r.band.price_usd.low);
+else hold(r.verdict, r.differ, r.independence);
+```
+
+Our miner is also used directly: Gainsay (another team's prediction-market checker) asks Takar Outcome for NFL and Champions League evidence since 22 Nov.
 
 ## What it does
 
