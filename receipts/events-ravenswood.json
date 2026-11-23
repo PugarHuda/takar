@@ -1,0 +1,3276 @@
+{
+  "title": "Ravenswood: events and people from original records",
+  "mine": "Ravenswood",
+  "method": "Every sentence of the Queensland Heritage Register entries matched to this mine (by name), plus sentences in other mining entries that name the mine, typed by fixed rules (lib/events.mjs). Quoted word for word with the record ID; nothing summarised. Each event is a capsule signed on its own (Ed25519 over canonical JSON); verify one with lib/sign.mjs verifyDoc(capsule.finding, capsule.attestation).",
+  "generated_at": "2026-11-23T10:43:18.551Z",
+  "summary": {
+    "events": 96,
+    "by_type": {
+      "people": 19,
+      "workforce": 11,
+      "flood or weather": 1,
+      "fire": 4,
+      "ownership": 34,
+      "closure": 19,
+      "restart": 18,
+      "strike or dispute": 3,
+      "accident or death": 1
+    },
+    "people_named": 46,
+    "records": [
+      "650038",
+      "600452",
+      "600457",
+      "601206",
+      "601207",
+      "602801",
+      "601848"
+    ]
+  },
+  "people": [
+    "Archibald Laurence Wilson",
+    "Merri Merriwa",
+    "Middle Camp",
+    "Lower Camp",
+    "Upper Camp",
+    "Lady Marian",
+    "Martin Braby",
+    "Tramway\nRichard King",
+    "Richard King",
+    "Machine Area",
+    "Court House",
+    "Arts Library",
+    "Barker Frew",
+    "Hugh Hawthorne Barton",
+    "Peter Macintyre",
+    "Robert Stewart",
+    "James Clark",
+    "A.L.Wilson",
+    "Eight Mile",
+    "Sunset Extended",
+    "C.Breitkreutz",
+    "Sunset No",
+    "Robert Burns",
+    "John Fritz",
+    "James Judge",
+    "General Grant",
+    "Henry John Bowrey",
+    "John Thomas Blackmore",
+    "Maxwell Partridge",
+    "William Ralston",
+    "John Danks Son",
+    "Percy Kean",
+    "Silver Horizons No",
+    "Burns Fritz Hardware",
+    "Leslie Cook",
+    "George Blackmore",
+    "Blanche Weinheimer",
+    "Isabel Kelly",
+    "Pamela Nance",
+    "Jane Lennon Associates",
+    "Howard Pearce",
+    "Conservation Management Plan",
+    "Peter Bell",
+    "Thomas Upton",
+    "Archibald Lawrence Wilson",
+    "John Bull"
+  ],
+  "gaps": [
+    "Political connections and donations are not in the register; not established."
+  ],
+  "capsules": [
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s41",
+        "types": [
+          "people"
+        ],
+        "year": 1852,
+        "people": [
+          "Archibald Laurence Wilson"
+        ],
+        "quote": "This boom occurred due to the efforts of Archibald Laurence Wilson (1852-1935).",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 41
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "c0de185c7a28bad4a891848aea88a93dd4b5ece4fe1ca3187c03ab4da6177de6",
+        "signature": "roYCGPZ6BLg1QshWuNZwkGvJ0Ac8CncFvFTvkVLV673q8cOXjDv4qF65biWXgfQ1xRJWYbPe36DPSDOBumiOAg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s10",
+        "types": [
+          "people"
+        ],
+        "year": 1864,
+        "people": [
+          "Merri Merriwa"
+        ],
+        "quote": "Pastoral stations were established up the valley of the Burdekin River, including Ravenswood and Merri Merriwa .[1] Townsville and Cardwell were both established north of Bowen in 1864.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 10
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "9672dc99aaf6e23225a04102ab3be77793c70e7a16809c46137d09102dc07121",
+        "signature": "HsCgsFAId2ORb3GtixoHarWjtHeP1mFWHiPAh+ZWlM0C7+/TnxfXhGu+9zh7g+1+JOUOUQtKEWvLu0ECdwGxDA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s11",
+        "types": [
+          "workforce"
+        ],
+        "year": 1865,
+        "people": [],
+        "quote": "However, mining, not pastoralism, proved to be the main catalyst for European settlement of north Queensland.[2] In 1865 the founders of Townsville offered a reward for the discovery of a payable goldfield, and gold rushes occurred in the region from 1866.[3] Mining employed 19.8% of the north Queensland population in 1868, and 50% by 1876, before dropping to 15% in 1911.[4] Although gold mining attracted people to north Queensland, alluvial finds of gold usually led to temporary townships, whereas underground reef mining held the promise of more stable and permanent settlements.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 11
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "7326811f5332b6e8a04eff6f113f3e0a41b8860c033f485cb9800040bb0243a5",
+        "signature": "VYkJPyU4BKD0kofZQ0eITIU4E0pfZti5LYuraQuRO+EqIQjHFI+8a4LxgH40WeMLOUwq7f5HMQcAc0YzlFESBw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s12",
+        "types": [
+          "workforce"
+        ],
+        "year": 1868,
+        "people": [
+          "Middle Camp",
+          "Lower Camp"
+        ],
+        "quote": "Alluvial gold and shallow reef mining (1868-72) \nAlluvial gold was discovered south of the later site of Ravenswood, in tributaries of Connolly Creek on Merri Merriwa Station, north of the Burdekin River, in late 1868.[5] Prospectors soon established Middle Camp (later Donnybrook) on Tucker s Creek, and Lower Camp on Trieste Creek, with about 700 miners on the field by early 1869.[6] Further north, in April 1869, the goldfield s richest alluvial discoveries were made in three dry creek beds close to the site of Ravenswood: Nolan s, Jessop s and Buchanan s gullies.[7] Despite these finds, many miners soon left for the rush to the Gilbert River (over 300km west of Townsville).[8] \nThe parent reefs of the alluvial gold found in April were located about the same time as the exodus to the Gilbert the General Grant being discovered first, followed by the Sunset.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 12
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "dcd1deaa3ded035c72354e54471f1dc05df267a1be97ab8b6d0eb64cf193d9f4",
+        "signature": "G3eZbtbiFIa2/sWaeAR/wwQCwZKeQbP8mGu14AftpBhn0hReuPQk0qobamvhamO6LAvj8Grae9JS9Vcj5y92Bw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s13",
+        "types": [
+          "flood or weather"
+        ],
+        "year": 1869,
+        "people": [
+          "Middle Camp",
+          "Upper Camp"
+        ],
+        "quote": "Both were visible above ground level, and both reefs would play an important part in the future prosperity of Ravenswood.[9] In the next 40 years, nearly 3 million of gold would come from the reefs in the little triangle between Buchanan s Gully [just east of Macrossan Street], Jessop s Gully [southwest of the town] and Elphinstone Creek .[10]\nOther reefs were soon found north of Elphinstone Creek, and in Nolan s Gully;[11] and meanwhile, reefs had been discovered at Middle Camp.[12] However, a lack of water meant that miners did not establish Upper Camp (later Ravenswood) near the General Grant and Sunset reefs until October 1869, after a storm temporarily resolved the water issue.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 13
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "9856e917f358ec4f97dbcdbb20810f4d81e6c61eef716d95505718b8877a913c",
+        "signature": "pxy9xTT6SkRolmrHWPSXIlwJuAz5mUKiHagsHg9HbB9+cHHWUGbIJHMQDGQG+/HmvTzs5g5SQs2pe5lMtptBDw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s14",
+        "types": [
+          "people"
+        ],
+        "year": 1870,
+        "people": [
+          "Upper Camp"
+        ],
+        "quote": "By this time, most miners had returned from the Gilbert.[13] The three camps on the goldfield had a population of 600 by January 1870, most in Upper Camp.[14] Work was slowed by a lack of water, until rains in February 1870 enabled panning and sluicing, the results of which confirmed that Ravenswood was the first significant reef mining goldfield in the northern half of Australia.[15]\nHowever, the miners needed to crush the quartz ore to extract gold.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 14
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "89cb59ba2a863334003082905a731ab44c05769566b8dc17cafc22b6c3fbfcb6",
+        "signature": "1WlqscEx9xJkkiIwVM98uoop79VCmY6jf/ZenZRnF0CzGsEXMWHqoJzdr6aZUMXa2k+78erIMAgScahpNlssAQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s15",
+        "types": [
+          "fire"
+        ],
+        "year": 1870,
+        "people": [
+          "Lady Marian",
+          "Upper Camp"
+        ],
+        "quote": "The first machinery for this purpose, WO Hodkinson s five stamp crushing battery, the Lady Marion (or Lady Marian) Mill, was operational at Burnt Point (south of Upper Camp) from 18 April 1870.[16] The first month s crushing results caused an even greater rush than that caused by the discovery of the alluvial gold .[17] A second battery was operational in Upper Camp in August 1870, when the goldfield s population was about 1200.[18]\nOfficial recognition of the goldfield and settlement soon followed.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 15
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "e1c506a0dada948a051e5bbaed808d6bcb91df7b9faf65e6a59b96f637d7de3d",
+        "signature": "RXuAqkmpJhtKAIqjAiKNKve4ZL9fY0aS5uE6OiOy7Mjk6ITvXPbJlamDxjzmacx59RS67H06aDoNc1H8HvZ8AQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s16",
+        "types": [
+          "people"
+        ],
+        "year": 1870,
+        "people": [
+          "Upper Camp",
+          "Middle Camp"
+        ],
+        "quote": "Government Geologist Richard Daintree visited Upper Camp in August 1870, and the Ravenswood goldfield (about 300 square miles) was proclaimed on 3 November 1870.[19] By this time, the goldfield had a population of about 2000, and Upper Camp had 10 public houses , with six public houses in Middle Camp.[20]\nThe Government Surveyor, John von Stieglitz, arrived in November 1870, but was too late to impose a regular grid pattern on the settlement.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 16
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "16b3449f2ebd02d02c060a46b161ffc6958eb029b3d50044866f2199028fb167",
+        "signature": "VD/R0djHMQQye6pEFpRJxJs4IqmAHj1pIqdNrMO/uIEm1p6CKbahKfnKLLXl+fKX4MzJ3W6v9ugYy6zklFsTBg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s19",
+        "types": [
+          "people"
+        ],
+        "year": 1871,
+        "people": [
+          "Upper Camp"
+        ],
+        "quote": "The resulting juxtaposition of mining, habitation and commerce gave the town its distinctive character.[21]\nThe town was proclaimed on 19 May 1871, with an area of one square mile (259ha).[22] This was later expanded to four square miles (1036ha) on 13 July 1883.[23] Although gold had been discovered on Merri Merriwa Station, the name Ravenswood, after the run located further southeast, downstream on the Burdekin River, was preferred.[24]\nIn 1871 the population of the goldfield was 900, with over half being in Upper Camp/Ravenswood,[25] and by the end of 1871 there were five machines in Ravenswood.[26] Hodgkinson s mill had been moved into town, to a site just north of Elphinstone Creek, and was renamed the Mabel Mill [QHR 601206].[27] In 1871 the town had 30 licensed hotels, although these were referred to as shanties and did not offer accommodation.[28]\nBy this time Ravenswood also had a Chinese population, due to an influx of Chinese miners who had been forcefully evicted from the Western Creek diggings near Gilberton in mid-1871.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 19
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "2930288826d656731b492667d305bea57d3ca1415fb2b8291e2ffbe6a6896512",
+        "signature": "x3+NUHsQMvpkNJHjUG9nrJmvj1cDeFmllWmFU7mb2bOIAKNKSGTJti5xMurm6k7zu2TP8cuh2zlBm5WUV8rcCg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s56",
+        "types": [
+          "ownership",
+          "closure",
+          "restart"
+        ],
+        "year": 1872,
+        "people": [],
+        "quote": "This was one of the early reefs discovered on the goldfield; and in 1872 it was identified by Warden TR Hackett as one of the 28 principal reefs.[88] It was worked in several episodes prior to the 1890s, and was re-opened in 1891, producing 1286oz of gold during 1891-95.[89] In 1908 the mine was taken over by the New Ravenswood Company, and was reorganised as an underlie shaft with haulage machinery from the Golden Hill mine, being worked in conjunction with the General Grant until 1917.[90]\nAlong with his modernisation of the goldfield s best mines, Wilson also abandoned chlorination at the Mabel Mill, increased the mill s crushing capacity to 30 stamps (by 1904), and introduced the first Wilfley tables to Queensland.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 56
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "b735e2f13187fd043581b1253a8c162600b5f3e4a8f1bdfc151f70f315d6e7ff",
+        "signature": "YtY4swvvyXdC6+PM4zbsfJHAslJKMz7v17MGRmD2O9j8qTJVBSYUIysZtVlnPtxW4riN3+9Bh65G1RhVngflAw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s24",
+        "types": [
+          "workforce"
+        ],
+        "year": 1877,
+        "people": [],
+        "quote": "The goldfield had a population of 950 in 1877 (with 50 Chinese), rising to 1100 in 1880 (including 250 Chinese), and 2000 in 1883 (including 300 Chinese; with 190 working the alluvial, and 10 quartz miners).[42]\nThe 1877 Pugh s Almanac listed one Chinese hotelkeeper (out of seven hotelkeepers) in Ravenswood, and one Chinese storekeeper.[43] The Chinese, as well as working alluvial claims and operating hotels and stores, were employed as wage labour in some mines; worked as roasters and chlorinators at the Mabel Mill; and operated 24 licensed gardens on the Ravenswood goldfield in 1883.[44] Chinese gardens were vital in providing fresh vegetables to north Queensland s goldfield populations.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 24
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "ff24db8e391a0685501b52f0dfe9e6dd717d0fe6944db2da6fe5c11dde6b798f",
+        "signature": "fXy7g7qKWd8r8DIGAd60I1KRJfkaaQ6l/ekqcgwdlM222tbhT7PqGv8zFUabxbkMSGoWyAh7xG7QUlKNHJ6/Aw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-600452-s20",
+        "types": [
+          "ownership"
+        ],
+        "year": 1881,
+        "people": [
+          "Martin Braby"
+        ],
+        "quote": "The land on which Thorp s Buildings stands was purchased in 1881 by Ah Pong, although the first person recorded as trading from the site was Martin Braby who acquired the property in 1885.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600452",
+          "entry": "Thorps Building",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600452",
+          "sentence": 20
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "eb6c31ecd3dded30d8e25e19741c8b06293579bf08472d148f7aaf8824caa39f",
+        "signature": "Amj72tbl3i482UhmK3y6sYKvRG7i+q7f2cLfoCFxXyvgcGfHiNiU84U2GXs39gNRxPxBJrqWc+WlYvKlQM6FCQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-600457-s23",
+        "types": [
+          "people"
+        ],
+        "year": 1882,
+        "people": [
+          "Tramway\nRichard King"
+        ],
+        "quote": "King s New Mill and Tramway\nRichard King, realizing that he needed capital to further develop his mine, launched the Ravenswood Silver Mining Company Limited with 60,000 capital in June 1882.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600457",
+          "entry": "Totley Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600457",
+          "sentence": 23
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "841af54162b3e66839f4e59a6c250d5f6aa77b8edc978d15ae038ffdb07c66ba",
+        "signature": "ql5i2hvhzSTm5ZJ9ecsdiQgzoP38iNT9FpyI5Vu9L/0gPSZ3iG+q6F8ZVwTSADm7Mu53n8VeOQN7hflsrD50CQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s35",
+        "types": [
+          "ownership"
+        ],
+        "year": 1882,
+        "people": [
+          "Richard King"
+        ],
+        "quote": "The silver mines opened c1879-80,[60] and Richard King floated the Ravenswood Silver Mining Company Ltd in 1882 the year of Ravenswood s lowest gold production between 1878 and 1898.[61] Silver prices were high during the 1880s, and the Totley mines encouraged the Queensland Government to approve a branch railway line (off the Northern Railway between Townsville and Charters Towers) to Ravenswood in 1882 (completed 1884).[62] The railway meant that some gold ores could be crushed, concentrated and sent for treatment at the Aldershot works just north of Maryborough or overseas to Swansea, in Wales.[63] However, all silver mining had stopped by 1891, due to falling silver prices and over-expenditure on treatment plants.[64]\nGold mining at Ravenswood continued during the 1880s and 1890s.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 35
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "1ff42cbe27781bfe871ef79d4c1d7fd4c6aa250d5f67ee09b59bea5668547811",
+        "signature": "sHaE3Cf0JdX029Ds285SwvMb2nmvtLuZxlBDpJCmLs64zAGsZgrYA8v27acAD3FKF4jLUc/TkzZe8dZV5RQLAQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601206-s12",
+        "types": [
+          "people"
+        ],
+        "year": 1883,
+        "people": [
+          "Machine Area"
+        ],
+        "quote": "The first reported description of the Mabel Mill site is in 1883, when a map shows the Mabel Mill as Machine Area no8 in the name of HH Barton; the site included a machine and crushing plant mill (a ten-stamp mill powered by one twenty-five horse power steam engine), furnace and stack, and a residence.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601206",
+          "entry": "Mabel Mill (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601206",
+          "sentence": 12
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "2b515e88b91be90fa2c3889884c8cef8b2e1d7d173d9b4720f0214d3aea2d7dd",
+        "signature": "aADW1olNxZ7KEAoz2gdArG+wWWXGw7q2r3lptBA7vgYurF29JNdQAw1bheHkNHfrIVsNtBX0ABct2IiELfU6BA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601206-s11",
+        "types": [
+          "people"
+        ],
+        "year": 1884,
+        "people": [
+          "Court House",
+          "Arts Library"
+        ],
+        "quote": "Despite the exodus, the town continued; with the building of government infrastructure, such as the opening of the railway from Townsville in 1884 (with the station located conveniently opposite the Mabel Mill), new Court House and Police Station (1882) [601206], new Post and Telegraph Office (1885), and Hospital (1887); and other public buildings such as the School of Arts Library (c1876; dem 1992) and Hall (c1880); whilst the economy of the town was funded by mining (on a reduced scale) and the establishment of silver mines at nearby Totley.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601206",
+          "entry": "Mabel Mill (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601206",
+          "sentence": 11
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "72349d2f855db4afc58e072d504face7c7e5c0972c61d6702cb0c409f79d8473",
+        "signature": "2FGAZmCA++UKSMDkhy87NoQmVHVBt+QFD5SdZ4SRmJO7+Sytph42iym6qAMCcVbD9Th7UqAwxk5zcDMWIU1oBA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601207-s11",
+        "types": [
+          "people"
+        ],
+        "year": 1884,
+        "people": [
+          "Court House",
+          "Arts Library"
+        ],
+        "quote": "Despite the exodus, the town continued; with the building of government infrastructure, which included the opening of the railway from Townsville in 1884, new Court House and Police Station (1882) [601204], new Post and Telegraph Office (1885), and Hospital (1887); and other public buildings such as the School of Arts Library (c1876; dem 1992) and Hall (c1880); whilst the economy of the town was funded by mining (on a reduced scale) and the establishment of silver mines at nearby Totley.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601207",
+          "entry": "London North Mine, Ravenswood",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601207",
+          "sentence": 11
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "1dffc8660d58bb555330b459950ffacc28d04a6a5c78f8cecb637e48d495f8e4",
+        "signature": "R/aO2rj0H7Wcwst6hLc9hFFfacoEHD/6YeqgjUDciJ3X8oXjaToFfBPF+sZPP9TdtYYmvzo7Wl9hzoQwfW8KDA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601206-s14",
+        "types": [
+          "ownership"
+        ],
+        "year": 1885,
+        "people": [],
+        "quote": "By 1885, the Mabel Mill was owned by Joske others , proprietors of the Ravenswood Gold Smelting Co, who had acquired some of the better mines in the town including the Grant, Excelsior, and Black Jack.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601206",
+          "entry": "Mabel Mill (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601206",
+          "sentence": 14
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "56e7b7ca2ea2906017f454017bd61cd2f2e3d9cdd23c7dacd652493e6778dbcf",
+        "signature": "DTkOHrYZUVAAeD78NK0BzR4yVieYoajQa75H59SYQXZvwPe7qB4Bm4Al7JD3tlOpzeQ3xpOv99kSawaVpdhTDg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-602801-s48",
+        "types": [
+          "people"
+        ],
+        "year": 1887,
+        "people": [
+          "Barker Frew"
+        ],
+        "quote": "Other mining exchanges were established elsewhere in Queensland including; Thorp in Ravenswood, Clifton Cohen Croydon and Barker Frew also in Croydon, all established in 1887.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602801",
+          "entry": "ED Miles Mining Exchange (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602801",
+          "sentence": 48
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "286e2ce5aedd5951ab414723e9a6ee56b0baf66c9fbca5ab69143a56249c989b",
+        "signature": "GRVwtaXbTvAHUg4cJSAgUtILwd9joWTjojtaZUP9OmOlVNAK7LC0J+YISaLxnfy9vbOu0rykkjU62ZTcGsNQDw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s36",
+        "types": [
+          "ownership"
+        ],
+        "year": 1887,
+        "people": [
+          "Hugh Hawthorne Barton"
+        ],
+        "quote": "Hugh Hawthorne Barton, who had operated Brothers Mill on Elphinstone Creek from the late 1870s, took over the General Grant, Sunset and Black Jack mines, and the Mabel Mill (and later the Melaneur and Duke of Edinburgh mines), and floated the Ravenswood Gold Mining Company in 1887, with 100,000 in capital.[65] From 1884 to 1896 Barton s group was the largest and most successful operation in Ravenswood, its profitability assisted by the railway, economies of scale, and flexibility in ore-treatment methods.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 36
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "919a4b13a652a0a1459c093387ddb1209de14a50c2c125248481285c23246834",
+        "signature": "Wkmap9ItMnPZp6Dl8M/ZCGAgWEokczwRPSczXyXPczAVNvxtQ8jE1rdSWDJ1Dl7pUSIDvc36Fsun8iroxTHLCw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s33",
+        "types": [
+          "closure"
+        ],
+        "year": 1888,
+        "people": [
+          "Peter Macintyre"
+        ],
+        "quote": "By 1888 a new company at One Mile Creek, formed by Duncan and Peter Macintyre, had adapted an abandoned Cassell s patent plant (a version of the chlorination process which was applied and failed in Ravenswood in 1886), to work on a secret process (cyaniding).[57]\nRavenswood mining continued to be viable, although only a (fluctuating) percentage of the gold was being recovered from the ore.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 33
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "9e32df44cfcaeb8b9e8ba6fdf8477e7fccd02e87471c4064bfe8b945ab99685b",
+        "signature": "BhbljWN1s7qvuS8XsBAL2F+AhsXdpCA38QxsR+iuws38tcnqvlMnwWDJqNAtWMxtqCo7NHFx3zb+XTW4d2qqCA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s37",
+        "types": [
+          "workforce"
+        ],
+        "year": 1889,
+        "people": [],
+        "quote": "Barton utilised roasting, chlorination (by 1889), and smelting, and employed Chinese workers at the Mabel Mill.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 37
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "2b85158523493d1ac885254d275125805ad200b57be5cfb794f801c5186ebaae",
+        "signature": "8OfEBIgQnWVRPowenCL0ewOBuHdwN2u6WiVwSULb3+QQDyt0Wo6Aywy2D5Px1wmgRw+L4sQVn9GA630tKtnYDA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-600452-s22",
+        "types": [
+          "ownership"
+        ],
+        "year": 1894,
+        "people": [
+          "Robert Stewart",
+          "James Clark"
+        ],
+        "quote": "In 1894 the property was purchased by Robert Stewart and James Clark and was probably leased out by them as commercial premises.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600452",
+          "entry": "Thorps Building",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600452",
+          "sentence": 22
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "18d2dcfb0bf8f8d2ccebbe0a585dd618c8130d27e630383ec5d7de507b7eda74",
+        "signature": "BMDPVXh+ahde8ChBGzMhL6OVzY8pLuUfxUUJPFP0cNP/PhZCSig6iXE3aCDg8W5MqqaxR+SHREQ8TcXPfUTLCw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s54",
+        "types": [
+          "closure",
+          "restart"
+        ],
+        "year": 1895,
+        "people": [],
+        "quote": "By 1895 returns had diminished, due to the small size of the reef and its highly refractory ore.[82] In 1900, the General Grant had a vertical shaft to 110ft (34m), and then an underlie of 610ft (186m), the bottom of the latter being 450ft (137m) below the level of the shaft mouth; but operations were almost completely suspended as the New Ravenswood Company concentrated on the Sunset reef.[83] To 1900 the General Grant had produced 23,651oz of gold; and after crushing of ore from the mine resumed at the beginning of 1903, it was treated with ore from the Sunset.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 54
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "b7183ecd1b2e1eb8c373c6108c3a878df37aeb5ee11ce7f728e34fb1fe8954ce",
+        "signature": "A29ySDa5RvyUiyHy3GVRD+4R/XgpZJHcHrC9BOyGzFbjHeZECJVjWcKWnhsF7i+wjBpqhFJoC6oX6Nr39F3MDg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s44",
+        "types": [
+          "ownership"
+        ],
+        "year": 1898,
+        "people": [],
+        "quote": "As manager of the John Bull mine at Sandy Creek in the mid-1890s, he raised capital in London and installed a cyanide plant.[70]\nWilson later travelled to London in 1898, where he floated both the Donnybrook Blocks Mining Syndicate and the New Ravenswood Company in 1899.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 44
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "e9c9a0e7281ac9d2f5a8f545fb8b1351d45960672617b0d5ae4c61858c4ddac7",
+        "signature": "vu71jY0QhXzaZ46OBoVgN5mKEY1iXNw7FZMGitfhZbKQJqrmN2gO7NYAqCvhXZlZcH/rue6YmJtJwNb5onNUCA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-600452-s23",
+        "types": [
+          "ownership",
+          "restart"
+        ],
+        "year": 1899,
+        "people": [
+          "A.L.Wilson"
+        ],
+        "quote": "In 1899, the New Ravenswood Company was formed by A.L.Wilson who raised overseas capital, reopened old mines and used modern methods to rework tailings more efficiently.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600452",
+          "entry": "Thorps Building",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600452",
+          "sentence": 23
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "89f7137dc5074d3aa0d61d86f52d3901cd58a4e69186c0c7195d749000b959ee",
+        "signature": "clFhf68Zm6e5V1C5FKJj3JFsZNJ/xz6ff3mRaoqX0eoQ/ME3+xbP8hCw71xuqoH4+zfaulna5Im0BDZ32hLbDA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601206-s24",
+        "types": [
+          "ownership"
+        ],
+        "year": 1899,
+        "people": [
+          "Archibald Laurence Wilson"
+        ],
+        "quote": "In 1899, another of Ravenswood s entrepreneurs, Archibald Laurence Wilson, floated the New Ravenswood Co to acquire the assets of Barton s Ravenswood Gold Co. The new company with a capital of 50,000 had its directors in London, but was managed by Wilson.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601206",
+          "entry": "Mabel Mill (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601206",
+          "sentence": 24
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "21890691f8bdd8701478e167d41619e6c9c17652d130653baa66bd195f96469a",
+        "signature": "9TNIxXcGqbIsnYcK+vHQts4kMYMiiCzMA0IV2sRn/psH80mq+JkJhYPr3nGxewjvir5PRDEwwxxmhUwM724tDg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s40",
+        "types": [
+          "restart"
+        ],
+        "year": 1899,
+        "people": [
+          "Eight Mile"
+        ],
+        "quote": "The tributers refused to employ Barton s experienced Chinese workers at the Mabel Mill, leading to disastrous attempts at chlorination.[68] However, the goldfield s production was boosted in the late 1890s when work resumed on the Donnybrook reefs for the first time in 20 years, and the Hillsborough (Eight Mile) reefs were taken up.[69]\nThe New Ravenswood Company era (1899-1917) \nRavenswood s boom period of gold production (c1900-08, with 1905 the year of highest production) is reflected in the town s surviving mining infrastructure and commercial and public buildings.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 40
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "fd0d516558492478997159e6a2bc4384038f95cdc1f42eb6f4a3828111f0939d",
+        "signature": "zHsA5A+bNIbu9MbT1jOHSOANhgX9bSSIfqN5ymKcw0C42rQoj5cqXhfdacFhuf2rkfFv2ZWQNPnP12tz+aWwDQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s60",
+        "types": [
+          "ownership"
+        ],
+        "year": 1899,
+        "people": [],
+        "quote": "Gold recovery increased from 18,016oz in 1899 to 24,832oz in 1900 and to 42,465oz in 1905.[97] The New Ravenswood Company paid impressive 50% dividends to its shareholders in 1901, 1902 and 1904; and 75% in 1903.[98]\nThe productivity of Ravenswood s mines during the New Ravenswood Company era was also reflected in the goldfield s population, which rose from 3420 in 1901 to its peak of 4707 in 1903.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 60
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "59b975f8e3861e3746b609f0b520bb955e8680a03e9b094cdc60f2f05ca39767",
+        "signature": "czZsuHvNsxBPlVxtflxeMzZpMHbGqIgTSzlFpK6NAJdzkYOiUg7YmOH9nPMrThqj1BEjXnV06QfMC+jbT+1vBw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601206-s35",
+        "types": [
+          "ownership"
+        ],
+        "year": 1900,
+        "people": [],
+        "quote": "Other work included a dam which was put in just below the Mill with the wall made of stone from the Ravenswood Deep Mine acquired by Wilson in 1900; the erection of a 70 foot (21.2 meters) high circular brick chimney stack; addition of new boilers to the steaming power of the battery; and an increase in capacity of the mill to thirty head.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601206",
+          "entry": "Mabel Mill (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601206",
+          "sentence": 35
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "3114b44605df47306ab8a667da0a57eb67fa3e974b1f90886de657541142cd19",
+        "signature": "PPkpXvTzuH1yr3m7LTZanvpN056Y9T2k/gmR7irsfMYpFKZQw79zDXEzgaYoBjdzJfITkfcwxVyR3EZOXHS7CA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601848-s4",
+        "types": [
+          "closure"
+        ],
+        "year": 1900,
+        "people": [],
+        "quote": "It is not known when the battery ceased operations, but Breitkreutz owned the Three Sisters and Sisters Extended Mines on the Kirk River to the east and they were working between 1900 and 1916.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601848",
+          "entry": "Pandanus Creek Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601848",
+          "sentence": 4
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "6a56b97ad6ffca05efbe687c561118c172196e05cf785b1339dffedf3ba74e3a",
+        "signature": "XhJF4xQ35eU9EHcNkcTBSHh/7QjS+Q9EupJFuzXpxUOem1XtF5R88XMw3kLB7tw6MpTPDRhMbqzRFgtdWriuBQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s6",
+        "types": [
+          "restart"
+        ],
+        "year": 1900,
+        "people": [],
+        "quote": "The place contains important surviving evidence of: ore extraction (from underground shafts) and metallurgical extraction (separation of gold from the ore) conducted on and near the Ravenswood goldfield s most productive reefs during the boom period of the town s prosperity (1900-08); later attempts to re-treat the mullock heaps and tailings dumps from these mines; and Ravenswood s early Chinese community, which made an important contribution to the viability of the isolated settlement and was located along Deighton Street and Elphinstone Creek.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 6
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "27aebef2cb9ca02050707ea96747f9f7c2f048e83136c53632fcb07510ce1181",
+        "signature": "Shnm+Ct4kc5f6gH7Xpec/2AksLPowW3Ue1fePdQzpCkhccobggRDmtXg2hmH0N0ziQESNjBSpoLqoSBxSRuWDg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s57",
+        "types": [
+          "restart"
+        ],
+        "year": 1900,
+        "people": [],
+        "quote": "Crushing resumed in January 1900.[91] Wilson improved metallurgical extraction by postponing amalgamation of the free gold till the great bulk of the sulphides [had] been removed by concentration .[92] The ore was crushed in stampers without using mercury.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 57
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "6164f793f043032e238b130cd0e51010d05310d6d1d06aea77d474f3b0738519",
+        "signature": "lRz1HLJX1KtqDaqgw9XQE4xgRSbeHdPKPMvK8fURg9tN/x6zWAfsaIutcUSXsmotEjZ8hRwvB0gXg8sOLPIkCg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s71",
+        "types": [
+          "ownership"
+        ],
+        "year": 1900,
+        "people": [],
+        "quote": "The Grand Junction Consolidated Gold Mining Company was formed in 1900, and a shaft was sunk in 1901 (probably the No.1 shaft on the Grand Junction Lease No.520).",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 71
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "8c95f9b54bb841192c34cd2141a836b0189b745b53a5926a33efe950a2e0b1fa",
+        "signature": "Ctjg96xlXbbiIXx3W60EofAuShYfmE1EdMPctw9/GXA0O9nl3iwuTLuuTDCkUB1UHg4b8r+cKB+LlP0F51T4Bg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-602801-s50",
+        "types": [
+          "fire"
+        ],
+        "year": 1901,
+        "people": [],
+        "quote": "His Ravenswood exchange burnt down in 1901 and he replaced the building in 1903, although he appears to have not operated a mining exchange from the new building (QHR 600452).",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602801",
+          "entry": "ED Miles Mining Exchange (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602801",
+          "sentence": 50
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "f16b5f22d1cfa6bef4dd6a437109d09e5198980fde9cc9cea963981442315d34",
+        "signature": "CkJd36YzcX2H53QaGmn1R+5KX4DGo6mTMSix5DKdMk00gFycLijtrGc0rPB2rblnIn+VoVKM/BsrvHw90lytBg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-600452-s28",
+        "types": [
+          "fire"
+        ],
+        "year": 1901,
+        "people": [],
+        "quote": "This building was destroyed by fire in August 1901, a year of both destruction and construction in Ravenswood as the New Ravenswood Company rebuilt mining infrastructure, business improved and new commercial buildings went up following two large fires which destroyed whole blocks of the commercial area.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600452",
+          "entry": "Thorps Building",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600452",
+          "sentence": 28
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "81c39954e07bf844e7f7a43883f24102fbf939470f661f094824219cd3660782",
+        "signature": "GZcTVZ82zQND2rN+EJu+HYayywi+VtJMRfSy1OCbjMQgImKUYg7jsGQSCnPGDMjFjnLFofFCnFH0Hl7+l79IBw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601206-s26",
+        "types": [
+          "ownership"
+        ],
+        "year": 1901,
+        "people": [],
+        "quote": "Wilson s approach to his companies was reportedly high handed, but produced substantial (in 1901 and 1902, 50%) dividends for shareholders.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601206",
+          "entry": "Mabel Mill (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601206",
+          "sentence": 26
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "f1907b318fef246b222332e7b4fac4e54739d03cbdd7f453d077bef5b74155e2",
+        "signature": "OxkL4e/XcONB+4t4lBgdMfuWRAAvyDEN0XYZdwV2iT2YEOJ/JWE5ztsseHLLmjoojVf7DQzh76JLRNomLDvaDQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s63",
+        "types": [
+          "fire"
+        ],
+        "year": 1901,
+        "people": [],
+        "quote": "Hundreds of new houses, the town s first two brick hotels the Imperial hotel [1901; QHR 600446] and the Railway Hotel [c1902; QHR 600443] as well as brick shops such as Thorp s Building [1903; QHR 600452], and the brick Ravenswood Ambulance Station [1904; QHR 600445] were constructed in this period; the use of brick being spurred by the threat of fire.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 63
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "2552ec54ce5380a548118fa22d5ff5dd0015585b21bd9495b9185401f3f971e9",
+        "signature": "ZlDo+tveqwoRGjR9Sg2PhjPAZ7HX9SE3QNbmFVZrhKrpN2/MhsylIRBxnOZXAQy7Sp/i7musBxH8z+J8vYhVDg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-600452-s30",
+        "types": [
+          "ownership"
+        ],
+        "year": 1902,
+        "people": [],
+        "quote": "In 1902, Thorp purchased land opposite these new buildings.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600452",
+          "entry": "Thorps Building",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600452",
+          "sentence": 30
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "63f4b644fca9c244aadc830d43f94e3cfe3f27a6098ad0efb44ece464f7c3c42",
+        "signature": "eKJb7Hs7K6uGgYluD5MrACE+5CK9pWOJSHu2WgaFG6mi/QKsq02+pnKCyGh5h4Yq1vjPH3iGsYhSoO7SmOKAAg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s65",
+        "types": [
+          "ownership"
+        ],
+        "year": 1902,
+        "people": [],
+        "quote": "In 1902 he floated Deep Mines Ltd, with a capital of 100,000,[102] to sink a shaft east of the New Ravenswood Company s leases.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 65
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "0178032cc8740cb4955f96b7a2a75bdd2f69cc26ef63de72acec5937e4cd3b79",
+        "signature": "HDqdo2pKuivF+8lUDQhpsgIcLR790fFRhaVkUixPIlnWPgmoewWV0iUeX2Ki+bERbu9M5AzFgJiakkV2ZHZ/Ag==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s68",
+        "types": [
+          "closure"
+        ],
+        "year": 1902,
+        "people": [],
+        "quote": "The shaft was started in late 1902-early 1903, and construction work on the buildings and machinery was completed later in 1903.[103] The mine reached 512m, the deepest on the goldfield, with extensive crosscutting and driving, but only about 240oz of gold was recovered.[104] No ore was crushed at all in 1908.[105] By 1910 a new shaft was being sunk near the western boundary ; but the mine was abandoned in 1911, and never worked again.[106] Wilson s London investors lost at least 65,000.[107]\nThe Deep s mill, built nearby and operational by 1906, was a smaller version of the Mabel Mill, with gravity stamps, Wilfley tables, and a cyanide plant.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 68
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "fa8bea176ee25cbd7e94eca4f17d216451ae267e8e292da359fa30997bb106e0",
+        "signature": "Cn7l2PjVIfW3bu9itkr/SWImikxqVuGOpAiYENfkqd62hzhooVuqVobV53ra0g5pI5FQ7l+UKvhkeRyV0n9dAA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s73",
+        "types": [
+          "ownership"
+        ],
+        "year": 1902,
+        "people": [
+          "Sunset Extended"
+        ],
+        "quote": "This was a deep shaft sunk by the Grant and Sunset Extended Gold Mining Company, a Charters Towers-owned company with Wilson as its local director.[112] During the 19th century, small mines had been operated in the Rob Roy reef, to the southeast.[113] The Grant and Sunset Extended was floated in 1902,[114] the intent being to locate the General Grant and Sunset reefs south of Buck Reef.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 73
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "b50bf7ae170896a49e31985976820e9b5ad926eaf113fea55b552b6258c3c564",
+        "signature": "rpTL+n7dF4MhsLfo0r3t57oTbEv5ecVwCTnlduY1ZfsQfozwHH3tXg3SxCV7hqMvGK99orpNvRoJAZCMYSyCBg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s74",
+        "types": [
+          "closure",
+          "workforce"
+        ],
+        "year": 1902,
+        "people": [],
+        "quote": "The plant and buildings of the Yellow Jack mine, southeast of Ravenswood, were re-erected on the site.[115] The shaft was down 70ft (21m) in 1902 and 930ft (283m) by 1908, with 50 men employed at the mine by the later date.[116] The mine closed by 1910, but was worked on tribute until 1917, with about 15,000oz of gold obtained over 1904-18.[117]\nThe boom period at Ravenswood did not last.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 74
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "ef69f61e4667ec31b5b7c15fdb4ee5779f8f1fc0c2587139fc14d22e0d990b50",
+        "signature": "DwLG05aaTICxx4RzYeKDEZ2ocGJd9G/C2aPv3jEYr6l7tH6JIbPQGIaKHuf8aHrPMl98Ur1rH4D4T8NXqG0ECQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s49",
+        "types": [
+          "workforce"
+        ],
+        "year": 1903,
+        "people": [],
+        "quote": "These became the key earners for the New Ravenswood Company; by 1903 the two mines employed about 205 men, and were the backbone of [the] town .[75]\nThe Sunset reef, which runs roughly northwest-southeast through the Ravenswood Mining Landscape, was the largest producer on the goldfield (almost a quarter of the total).",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 49
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "d552525b9434eecbcd70b9f7bdcf4110cc38fd897bdb13341b93d3d3c7a4f91a",
+        "signature": "LL2NSGwPgOx1X1qza9f6EiR9Asjg/4IfPwQ1/cBiOoxAHHXjsZIDhF7+JtsV8mTKq6JOiuWtftR+AIGIjaA1Bg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601848-s1",
+        "types": [
+          "people"
+        ],
+        "year": 1904,
+        "people": [
+          "C.Breitkreutz"
+        ],
+        "quote": "The Pandanus Creek battery was relocated by C.Breitkreutz from Rochford in 1904 where it had been known as the Hadleigh Castle Mill.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601848",
+          "entry": "Pandanus Creek Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601848",
+          "sentence": 1
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "66f6f6d1b7ea95d7b0e0c0bb9b040dfcf28bbc9de08967d3b4345d305d443575",
+        "signature": "Lpj5c3SebGFQxp068EmQ09WEC4T8lfCsPPW9YbZE2CJsZXHG+H8WKdX9iv3DPmK6X4yoorb0xlV+C2bzj0LZCQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s76",
+        "types": [
+          "closure"
+        ],
+        "year": 1904,
+        "people": [],
+        "quote": "Although Wilson experimented with flotation (agitating crushed ore in oil and water, and extracting fine gold particles on the surface of air bubbles) and cyanide processes at the Mabel Mill, it was too late to save his company.[118] The Shelmalier had closed by 1904, the Black Jack in 1909, and the Melaneur in 1910.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 76
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "18bdfabdc88acbec27430ee15cd678563dc4c87848b57a8db3eeab9068fcca96",
+        "signature": "1tlZ7hJITYOmyYaW5X7Gm7HWXJwZFodHrwv88vj/o2BM6QpNJ3zvbg3E0fA2XrN/5CFtX8j5ft7TGbGPKPlJBw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s53",
+        "types": [
+          "workforce"
+        ],
+        "year": 1905,
+        "people": [
+          "Sunset No"
+        ],
+        "quote": "In 1905 an average of 170 men were employed at the mine.[79] In 1908 the reef was being worked by the main underlie shaft, 900ft (274m) deep (Sunset No.1); and a vertical shaft, 556ft (169m) deep (Sunset No.2).[80] As the Sunset reef was worked in conjunction with the General Grant and the Duke of Edinburgh reefs in the New Ravenswood Company era, its exact total production of gold is hard to calculate; but from 1876 to 1912 the reef probably produced about 177,000oz of gold; and probably most of the 22,000oz that the company extracted from 1912-17.[81]\nThe General Grant, one of the most productive reefs on the goldfield, running roughly north-south just east of the Sunset reef, was worked almost continuously to the late 1880s, and periodically thereafter.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 53
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "b693c5bec750746bf9d31d2e8c17ab382345ebea3afb213c1dce6238a738fb0b",
+        "signature": "dsTibwEqSW666QKFK5Z5MqjrCbQrP6FGO6aACLZzD3vaoeM3I73j3+YrGOfc0XOaWOXkMOINXDMTKHGUFUlQCw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s55",
+        "types": [
+          "workforce"
+        ],
+        "year": 1905,
+        "people": [],
+        "quote": "[84] On average, 40 men were employed on the mine in 1905.[85] In 1908 the power house for both the Sunset and the General Grant mines was situated on the General Grant lease, with three Cornish boilers.[86] By 1912 the General Grant had produced about 36,000oz of gold.[87]\nTo the east of the General Grant was the Duke of Edinburgh reef, running roughly northwest-southeast.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 55
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "42e3ee85d4a089c840fbb93815f6e4d3e009dcd646f1f192df5698dae75299fe",
+        "signature": "+KVs/jCRzFqqHLwq5932Tf/n/X0mTo6MxdhQ2CGi85aeynjMzKXraO5k2k3ADr+1OL+ZaRrek2tuKK0M1pFmBw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s75",
+        "types": [
+          "closure"
+        ],
+        "year": 1906,
+        "people": [],
+        "quote": "As well as losing money on the Deep and Grand Junction mines, the New Ravenswood Company faced the closure of the Aldershot works in 1906, and declining yields from 1908 to 1912.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 75
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "38b3e13aeb9ef461b98e1e4ef1ed34e85981c933596080be296e6be43fb4cfdd",
+        "signature": "vYysQmcpw0DTT8DyrBG0ZgOs1cbE+8fC3IUdDE4mHGGJt4o5yooHdgmh1eVcDGFPJgDh6FSbagWyeCHrC9t0BA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601207-s23",
+        "types": [
+          "ownership"
+        ],
+        "year": 1907,
+        "people": [],
+        "quote": "In 1907, the venture was sold to a local syndicate of Ravenswood investors who placed the mine with a tribute party.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601207",
+          "entry": "London North Mine, Ravenswood",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601207",
+          "sentence": 23
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "7035a3e85778a58e7fdbf4573784464e41770a79888d8fb12300bfdfba7a358c",
+        "signature": "B1zd0958HnDyoummH3pe3P0rtZ8FnfTrwxw43/ezwNAcv1yXbUtVzxRhT1mF1LJw3GSM6ooPGPb/zstC+VGOBQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s79",
+        "types": [
+          "closure"
+        ],
+        "year": 1908,
+        "people": [],
+        "quote": "The hospital closed in 1908.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 79
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "bbf3ea3ce13eb9b2984123f49a1b833dc8eff51a09bf60274aaf191aed1b3617",
+        "signature": "s9HyW8Fu6mGWPvzX/iaIi8/w21COMEUVXSp6fIyPgstEsyZs2k2hEXgKbTvaohrUiE3Yg4yQfi7+7cmRpKKcCQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601207-s25",
+        "types": [
+          "ownership"
+        ],
+        "year": 1910,
+        "people": [],
+        "quote": "In 1910, the leases were purchased by the New Ravenswood Co; the workings were re-equipped but without any apparent increase in profitability.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601207",
+          "entry": "London North Mine, Ravenswood",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601207",
+          "sentence": 25
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "282b396010379f504cf715d58d2eb0986f8789ff80fe8f3d24bf06dc6574c5c2",
+        "signature": "6RetOxtbrMvUiNiKNcFBKRmNIYww4yE5Q1yTDqI9y9y69G9XiAnNyC938CKfayflHGyUcas1Ayb9EafNJPs0Dg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601206-s38",
+        "types": [
+          "strike or dispute"
+        ],
+        "year": 1912,
+        "people": [],
+        "quote": "The great strike in Ravenswood of 1912/1913 left a bitterly divided community; the mines continued to decline and the outbreak of war in 1914 lead to an increase in costs and a scarcity of labour.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601206",
+          "entry": "Mabel Mill (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601206",
+          "sentence": 38
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "55dfce6b06b83a768596086b8bd89fa59e53d9c43a550fe4724dea7887276bd1",
+        "signature": "4qDMJdYHjvSqenmiaCUlEwxAfFqNnUnNgkn2F2k+vEVLj7F6lGLSK8CCZr45Ispi+t+e+8mZgg3hciFNR1DhBw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s81",
+        "types": [
+          "strike or dispute"
+        ],
+        "year": 1912,
+        "people": [],
+        "quote": "During a miner s strike between December 1912 and July 1913, over lay-offs, the fresh vegetables and business loans provided by Ravenswood s Chinese community helped keep the town going.[121] Although the miners won, it was a hollow victory, as the company could only afford to re-employ a few of the men.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 81
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "32bf9c112d40159a37a6a581a42f20864e5a037b23ca5f38c17cc17465f64caf",
+        "signature": "fC1KAFj96WidkHCyNuUKuWhHOY7OOH0855H+9YPKQf93lLG4lDuFnrze/eM1R5M8So8WIBnDY0fKaguJ3czrDw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s80",
+        "types": [
+          "strike or dispute"
+        ],
+        "year": 1914,
+        "people": [],
+        "quote": "That year the goldfield s population consisted of 4141 Europeans (including 2625 women and children) and 181 Chinese (including 94 alluvial miners).[119] This dropped to 2581, including 92 Chinese, by 1914.[120]\nIncreased costs and industrial disputes in the 1910s hastened the end of the New Ravenswood Company era.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 80
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "583bd303ffa095ec99e549369acd41a16338439eede66c18ad092f450c0ec8e2",
+        "signature": "OxJH8S29QqWZpLlMeEXqDdafOpmedK3NFVKpgaBWsLhGAmx/XeNpeIJ6JpWfOkUaFj3N1b5l0qxOrkzsxg0OBw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601207-s28",
+        "types": [
+          "closure"
+        ],
+        "year": 1915,
+        "people": [],
+        "quote": "In 1915, the London North Mine was closed.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601207",
+          "entry": "London North Mine, Ravenswood",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601207",
+          "sentence": 28
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "49006eeb17688d6251ff3059c1ee324ccaa299580692375bee75d7e28d42017d",
+        "signature": "9FkNjmIkszaaTZDQ+z2fplT0Rz+9yClpmlcefuRObVy3uo8zpd7UHCJxJL0sQLStSnoAkMz8wJR2DIPcCHqZCQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s83",
+        "types": [
+          "closure"
+        ],
+        "year": 1915,
+        "people": [],
+        "quote": "The London North mine closed in 1915, and on 24 March 1917 the New Ravenswood Company ceased operations; ending large-scale mining in Ravenswood for the next 70 years.[122]\nBy 1917, the Ravenswood goldfield had produced over 850,000oz of gold (nearly a quarter coming from the Sunset mine), and 1,000,000oz of silver;[123] making it the fifth largest gold producer in Queensland, after Charters Towers, Mount Morgan, Gympie and the Palmer goldfield.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 83
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "b4dd300d6d7f08f9609ef802941a48642239c655d662a06698d23f3a009388a3",
+        "signature": "+7r/Z6xJsi9vYPBmvx7tbF3dsD9OyE1an+IhUM0e1jpL/xvZ9dgSkkSeQAz7P2h75pYPGJC1NgO3H8LtBkzzAA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-600452-s40",
+        "types": [
+          "closure"
+        ],
+        "year": 1917,
+        "people": [],
+        "quote": "In 1917 the New Ravenswood Company closed.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600452",
+          "entry": "Thorps Building",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600452",
+          "sentence": 40
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "0ac8da93eb868dd678e4290e3423ae0a735eadd38a9cec32c7564d2e34d3f2ac",
+        "signature": "kK1jL4u5hNg9i3Cx5w8BVJTG7+vN7RO8gi0K+5P9D83EcR6MLkMawNQ8kyLRS8b7HSKHxMzY88kudcvZIA9CDQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601206-s40",
+        "types": [
+          "ownership"
+        ],
+        "year": 1917,
+        "people": [],
+        "quote": "In 1917, the New Ravenswood Co went into liquidation, after which it is believed that much of the equipment and buildings were sold by the liquidators.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601206",
+          "entry": "Mabel Mill (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601206",
+          "sentence": 40
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "6bd2e78c88c7ec5d641ca739be5a9f7f5e2a9e458e7c25962ebe5aec74850595",
+        "signature": "Gem0XCDSxYTFC+vg70vhOl3E0pG2xUDaw/5pY2aaJdwou7KDz8RoQyp35LOB1TPpuGt6YU1BhftorEDULdpXCw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601206-s42",
+        "types": [
+          "closure"
+        ],
+        "year": 1918,
+        "people": [],
+        "quote": "In 1918, a new company, Ravenswood Gold Mines Ltd, took up a portion of the abandoned mining leases of New Ravenswood; ore was sent to the Venus State Battery [600413] at Charters Towers for treatment.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601206",
+          "entry": "Mabel Mill (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601206",
+          "sentence": 42
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "15796d9e99c78901f024352744ec85e3b4ec8c676e02d45a8122c1d428746f1c",
+        "signature": "5LrKlxe9b8ZGQEdOhq//bEv5c2ODf916d+L3+nZTffKTv4zYgSx8REwhelJHPisUHyTBvBNCz1LN0XF/BwnLAA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s84",
+        "types": [
+          "restart"
+        ],
+        "year": 1919,
+        "people": [],
+        "quote": "Ravenswood was also the second largest producer of reef gold in north Queensland, after Charters Towers.[124]\nSmall scale mining and re-treatment (1919-60s) \nAfter 1917 the Ravenswood goldfield entered a period of hibernation, with intermittent small-scale attempts at mining.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 84
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "fec09254b3255fe946882502e304db38406dca8619686f6e41a55d3dbbe456f2",
+        "signature": "QyzGYe0CI3G4JLf07Fo6DjBYIwIUxrwLuRwxhfhov7xfK4UMa6Wt/rpXzl67SvGKDm1g8UvVKZgG9//zekoEDA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s85",
+        "types": [
+          "ownership"
+        ],
+        "year": 1919,
+        "people": [],
+        "quote": "In 1919, Ravenswood Gold Mines Ltd took over some of Wilson s leases and renovated the Deep mine s mill, but obtained poor returns.[125] Ravenswood Gold Mines also worked the Duke of Edinburgh from c1919 to 1930, with good returns reported in 1924.[126] The General Grant and Sunset were also worked on a small scale from 1919-21,[127] while the Mabel Mill continued to provide crushing services for the limited local mining.[128]\nConsequently, Ravenswood s population declined and the town shrank physically.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 85
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "8cda2ceb9864b2003751d2dbeea2307b87528845cb73f83b8183a6e7d35c5c1e",
+        "signature": "sHcFK5UMFPTeStze628cQh3XgtmLdUaegAOJia6SfDKYvkAbGqza2dq51rG7vldue/mhqVYwjTMt/Au11tXfDw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601206-s44",
+        "types": [
+          "people"
+        ],
+        "year": 1920,
+        "people": [
+          "Machine Area"
+        ],
+        "quote": "A 1920 map shows the Mabel Mill (renumbered as Machine Area 203) with a significantly reduced area of 3 roods 8 perches.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601206",
+          "entry": "Mabel Mill (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601206",
+          "sentence": 44
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "649660c4caf10fa5c27ccbb275b3c179232e80217eb4da8874fa1e7a7be99b3b",
+        "signature": "pKFidplsIBp34UxUpBdk9zXqopEi4TCeanxsIXl64JLdWrHvZmDQWmGpyrn4iNlCEqESENKipVvn611Dah7SAg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s86",
+        "types": [
+          "closure"
+        ],
+        "year": 1921,
+        "people": [],
+        "quote": "In 1921 the town s population fell below 1000, and by 1923 there were 530 people left, including 8 Chinese.[129] During the 1920s, prior to the closure of the railway branch line to Ravenswood in 1930,[130] hundreds of the town s timber buildings were dismantled and railed away.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 86
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "da28e44155d712d5ca2a162114f66e4a2dacf7c80c4d2d7eb41904197e7e0a3d",
+        "signature": "nlMPbNj1L+mixmG7ENr4VKNaK0QU3sZngpejA0gr3pgtckLsj/jUFOY1zsyFiE56PbdfGkCkaQo7S2ZViRJYBQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-600452-s43",
+        "types": [
+          "restart"
+        ],
+        "year": 1932,
+        "people": [
+          "Robert Burns",
+          "John Fritz"
+        ],
+        "quote": "Mining had a modest revival in the 1930s and in 1932 Robert Burns, previously a manager of Hollimans, leased the building in conjunction with a partner, John Fritz.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600452",
+          "entry": "Thorps Building",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600452",
+          "sentence": 43
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "a99f943885969b9b641aa694c3cd36e53ac63eb1dd5ae9cdcabb80034dce0d05",
+        "signature": "YsCuSrnwxfwBC95ZeT+YzgykGD0ZcUrHkuRw8uj6e2KwP7tRfvbcL6h+x5noIV47wJVBIBsQbWugWaw+cvlwDQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s90",
+        "types": [
+          "ownership",
+          "restart",
+          "workforce"
+        ],
+        "year": 1933,
+        "people": [
+          "James Judge",
+          "Sunset Extended",
+          "General Grant",
+          "Henry John Bowrey",
+          "John Thomas Blackmore"
+        ],
+        "quote": "In 1933, the North Queensland Gold Mining Development Company took up leases along Buck Reef and reopened the Golden Hill mine, and the following year their operations were taken over by Gold Mines of Australia Ltd. The 1870s Eureka mine (near the Imperial Hotel) was revived by James Judge in 1934.[135] In 1935 the Ravenswood Concentrates Syndicate began re-treating the Grant mullock heaps in the remaining stampers at the Mabel Mill, and dewatering the Sunset No.2 shaft; while the Sunset Extended Gold Mining Company, with James Judge as manager, dewatered the Grant and Sunset Extended shafts (which connected to the Sunset, General Grant and Duke of Edinburgh shafts), and re-timbered the Grant and Sunset Extended, General Grant, and Sunset underlie (No.1) shafts.[136] The London North mine was reopened by RJ Hedlefs in 1937,[137] and Basque miners were working the Sunset No. 2 shaft at this time.[138]\nThe Little Grand Junction mine, located at the intersection of Siggers Street and School Street, on the old Grand Junction Lease No.520,[139] was operated from 1937-1942 by local miners Henry John Bowrey and John Thomas Blackmore.[140] Five men were employed at the mine in 1940.[141] The shaft had apparently been sunk previously by the Grand Junction Consolidated Gold Mining Company; and Bowrey and Party reconditioned it and extended the existing workings.[142]\nIn 1938, Archibald and Heuir set up a mill on the bank of One Mile Creek to treat mullock dumps, and the Ravenswood Gold Mining Syndicate (formed 1937, with James Judge as manager) began treating the mullock dumps of the Sunset mine in late 1938.[143] The same syndicate also dewatered and reopened part of the Grant and Sunset Extended;[144] and the Grand Junction mine was reopened by Judge c1939-1942.[145]\nThe Ravenswood Gold Mining Syndicate s (Judge s) mill initially consisted of 10 head of stamps obtained from the Mother Lode Mill at Mount Wright (northwest of Ravenswood), powered by a diesel engine.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 90
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "95398cdf16a855996ee473b7793487642e4c2941f1db49946e16861f878c175b",
+        "signature": "vIt3QEV/2J31SWexCqtGbo92djaAyOqdK4k06cbZXj7v8s1Gx/gn/h497WAUcIzPj6E20rwYzCSSktNnO7L1Dw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s48",
+        "types": [
+          "people"
+        ],
+        "year": 1934,
+        "people": [
+          "General Grant"
+        ],
+        "quote": "Wilson was known as the uncrowned king of Ravenswood .[73] He was also Chairman of the Ravenswood Shire Council for some years, and was later on the Dalrymple Shire Council, until he resigned from poor health in 1934.[74]\nFrom 1900, both the Sunset and General Grant (also known as the Grant) mines were redeveloped by Wilson.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 48
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "6ffcbb776b3d6160c7d7ff60696d60e1d527bc6fb21fa1f777f8646b366c65fd",
+        "signature": "stoa26C6A2jDmDTgcrVPJt4RxFklmixBocUS5UHDpnfuYLD0xUaJs/qaCXYxGXUrF+0r8+ma0rVyH5jitNk9BA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601207-s31",
+        "types": [
+          "restart"
+        ],
+        "year": 1935,
+        "people": [],
+        "quote": "A small revival occurred during the 1930s (an attempt was made in 1935 to rework the London North lease, but bad air and heavy expenses in keeping water down led to its abandonment) and early 1940s and later revivals as new technology allowed for economical mining of lower grade ores, but Ravenswood never returned to the prosperity of the early 1900s and was not rebuilt.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601207",
+          "entry": "London North Mine, Ravenswood",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601207",
+          "sentence": 31
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "6a83316ea074ba3f94a70b0780dbbb4ea152c098757e94f0c21afa50f9572b8f",
+        "signature": "8k6gfT8gVM29ql0/J1OHLMhQztMgSfBE1RS96WVDURH1dMWEc+eztFCY/HzdxH/5Fwdkwbli/RLaGpx6/g9SAQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s92",
+        "types": [
+          "closure",
+          "restart"
+        ],
+        "year": 1939,
+        "people": [
+          "Maxwell Partridge",
+          "William Ralston"
+        ],
+        "quote": "Initial success with some rich ore led to enlargement of the mill to 30 stamps in 1939-40.[146] A Stirling boiler and a 250hp engine were also obtained from the Burdekin meatworks (Sellheim), and a rock breaker, elevator and conveyor were installed.[147] However, the upgraded mill proved to be overpowered and required a lot of timber fuel; the brick foundations used for the machinery were not strong enough; and the best ore from the Sunset had already been treated, so the mill closed early in 1942 and the plant was moved to Cloncurry.[148]\nAlso in 1938, Maxwell Partridge and William Ralston installed a new plant south of Elphinstone Creek, to the immediate west of the Mabel Mill s old cyanide works, to re-treat the old tailings with cyanide.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 92
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "e3fe0c91fc1a0a0790f263eaed2b5dab0fdad3f3369ac2fba21a292af8d22e54",
+        "signature": "NYgpoulRIFRvjI8o9ls3wC8B2L/SEE80FkKgmTzTzX1E1cnKfiv46Dou+QSs9ZLRbzvwEGL3IgHaA+Vj67hVAw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s93",
+        "types": [
+          "ownership",
+          "closure"
+        ],
+        "year": 1939,
+        "people": [],
+        "quote": "A ball mill, filter and other plant were purchased from the Golden Mile, Cracow in 1939, while later that year a suction gas engine and flotation machine were also installed.[149] This operation closed c1942,[150] and the coloured sands on the site today are residues from the flotation process: the yellow sand is from the floatation of iron pyrites; the grey sands are copper tailings; and the black material is zinc tailings.[151]\nThere was limited activity on the goldfield in the late 1940s to early 1960s.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 93
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "26aef1573fdfa2e687dfbe9004e4b0324c91817f4b042897fa0e045519f7e8a9",
+        "signature": "zGj+owZjObwkBAAeg5kF4nyQ7GYqZfsiRQqs+ogx1MEa0XnkDx2Qek+iu57qDJ9//BUd7Etqr2qVeN3uAzTPAQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s94",
+        "types": [
+          "ownership",
+          "closure",
+          "restart"
+        ],
+        "year": 1946,
+        "people": [
+          "John Danks Son",
+          "Percy Kean",
+          "Silver Horizons No"
+        ],
+        "quote": "The Empire Gold Mining Syndicate treated mullock dumps from The Irish Girl, London, and Sunset mines from 1946 to 1949, as well as some of the dumps from the Grand Junction (1947).[152] The Duke of Edinburgh mine was briefly reopened by Cuevas and Wilson in 1947, and the Cornish boilers on the site (one with the maker s mark John Danks Son Pty Ltd makers Melbourne)[153] may relate to this (unsuccessful) operation.[154] Percy Kean reopened the Great Extended mine at Totley in 1947, and later purchased Partridge s mill in 1951 to use it as a flotation plant to treat the silver-lead ore from Totley, adding a diesel engine, stonebreaker, Wilfley tables and classifier.[155] The Totley mines closed in 1954,[156] although the Great Extended mine was briefly sub-leased by Silver Horizons No Liability, in 1964.[157] Partridge s mill was closed c1965.[158]\nOther attempts were made in the early 1950s to rework old sites.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 94
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "173cfd2e9015cb9d13001463827e3e72bc626bc60173d84f35e7a63de0a13dec",
+        "signature": "gVDaA2XZR6Ps7ZM7cL+1MkH+DMMa8LFBpRkVR/Z46ca7XwabkPboPCGMA18weXX77DVgDlA9EVpSpvFJIqOICA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-600452-s44",
+        "types": [
+          "ownership"
+        ],
+        "year": 1948,
+        "people": [
+          "Burns Fritz Hardware"
+        ],
+        "quote": "They operated as Burns Fritz Hardware also selling groceries and eventually purchased the building from Hollimans in 1948.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600452",
+          "entry": "Thorps Building",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600452",
+          "sentence": 44
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "44c3b52b5ba4b7de749939b12c9ce857051e37714ebe8e2d750c056c0a5b0395",
+        "signature": "kNnes18ETL8YTVusVHRKcUpiqkU6nkcC5hqTdEyqaBaCtIw6/PxW/pzYt3LLlJyEh4ve2dX9zujiuHRGOCEPAA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s95",
+        "types": [
+          "ownership",
+          "closure",
+          "restart"
+        ],
+        "year": 1951,
+        "people": [
+          "Leslie Cook",
+          "George Blackmore",
+          "James Judge"
+        ],
+        "quote": "A Townsville syndicate led by Leslie Cook and George Blackmore reopened the Grand Junction mine in 1951, but it soon closed.[159] James Judge also recommenced gold mining at Donnybrook, but closed in 1954;[160] while 900 tons of tailings from the Deep mine s mill site were taken for re-treatment at Heuir s cyanide plant in the early 1950s.[161]\nA new industry \nIn the 1960 and 1970s, Ravenswood s population shrank to its nadir of about 70 people.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 95
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "2b007715e10232b95f6e74b56b76419c24f977e5a824620a695e442ad57b98e8",
+        "signature": "sjAQ1PCEsPUWY47jDZ2RQJAz0SNwjJ/0+biTK06Y4ylePyVV+ufD8c/A2nMu9WapZSCZJh0AhNNH86jsKDzZDw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-600452-s45",
+        "types": [
+          "accident or death"
+        ],
+        "year": 1957,
+        "people": [
+          "Blanche Weinheimer"
+        ],
+        "quote": "In 1957, following the death of Fritz, the building was sold to Frank and Blanche Weinheimer.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600452",
+          "entry": "Thorps Building",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600452",
+          "sentence": 45
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "e9633f42812dbb724c734d0b5a0ef12cdf94607d757185de2716769a1ac97b2c",
+        "signature": "Jq2QbnfriI5VZiG1JoZ187MiI6BsA2SMRLCwwmY2WMMoK9ZNsYJAQZcZJ/7DjQPP9lo+daqLB+psdTDjqr0iAg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s97",
+        "types": [
+          "closure"
+        ],
+        "year": 1968,
+        "people": [],
+        "quote": "In 1968 the landscape of Ravenswood was described in romantic terms: Mute testimonials are the numerous mullock heaps which dot the countryside; the rusty remains of steam engines; stampers which were used to crush stone; and collapsed cyanide vats Derelict poppet-heads stand above deep, abandoned shafts.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 97
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "dc4cc4cd87a2c0e399082e6eeb0d08e553735483c8e36852a208b01aa225033d",
+        "signature": "dTYznaWeHvKNZLELTueKz1LhhALKlvbYxXGBd7ce06vl7N9deyUyJNXmfcZdwJ1J7mb6qmjKCfm0B9/8rEfKAg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-600452-s48",
+        "types": [
+          "ownership"
+        ],
+        "year": 1973,
+        "people": [
+          "Isabel Kelly",
+          "Pamela Nance"
+        ],
+        "quote": "In 1973 the building was acquired by Sidney and Isabel Kelly but had been vacant for some time before being purchased in 1987 and renovated as an arts centre by Trevor and Pamela Nance.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600452",
+          "entry": "Thorps Building",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600452",
+          "sentence": 48
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "ed899e6beb9670189aad0fdba497ff71e8f37cfbffb0714f167ef647dac68b0b",
+        "signature": "rI7th2SXUdEa8qm5yv6El47Ti9XJvjc1JrFgMZPiS9ziOARJY1R/q3pypw9rqcbub/DlozHhnE5yS8840OCTDw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s105",
+        "types": [
+          "restart"
+        ],
+        "year": 1983,
+        "people": [],
+        "quote": "Modern operations \nHowever, gold mining recommenced at Ravenswood in the 1980s, due to a rise in the gold price and the efficiencies gained from open cut mining and modern cyanide metallurgical extraction processes.[166] From 1983-86 the Northern Queensland Gold Company Ltd conducted agglomeration heap-leaching (spraying a sodium cyanide solution on previously mined material heaped on a plastic membrane), in the process removing a landmark tailings dump at King s mine in Totley, and mullock heaps from the Grant and Sunset mines.[167] In 1987 Carpentaria Gold commenced open cut mining of the Buck reef (the Buck Reef West pit) near the old Grant and Sunset mines on the south side of the town.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 105
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "ed998b7457f61e1d16af6721457265ae3de500b77d8b68a082248411876b9388",
+        "signature": "1/OYiy/xlo5r9hcqvqB0w8X2uz7NvQp9gE7Toc9DaUzz8ANBrrgHWgeVLA4vnC2w2QZt4vcm/G1eVgnZ371DCg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s3",
+        "types": [
+          "restart"
+        ],
+        "year": 1987,
+        "people": [],
+        "quote": "Its main mining periods, prior to modern open cut operations (1987 onwards), were: alluvial gold and shallow reef mining (1868-72); attempts to extract gold from sulphide ores below the water table (c1872-98); the New Ravenswood Company era (1899-1917); and small scale mining and re-treatment of old mullock heaps and tailings dumps (1919-60s).",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 3
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "8a8e0653be0e1153079224d152aa482d00103c5eabe50b328e7a1e016fdbffaa",
+        "signature": "myVpokKrhdnclLjoReMbFG5PZv/fXejjjsVDM1MNBhBRxx8qc0hTSyMaLe49cUW/vhbPDxgEk4svkYXSiO6VAg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s108",
+        "types": [
+          "people"
+        ],
+        "year": 1988,
+        "people": [
+          "Sunset Extended"
+        ],
+        "quote": "The old headframe at the Grant and Sunset Extended was demolished in 1988, and replaced with a new steel headframe, which was used until 1993 and then removed.[168] The Melaneur-Shelmalier-Black Jack-Overlander reef complex, on the north side of the town, was mined as an open cut 1990-91, before being backfilled as a golf course.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 108
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "22575d563c54cb0083f8ab06b37d1e2cb9f7a2895da7bbcfdb4b46a01aa06fb3",
+        "signature": "IlsBM5FYyurZcQQBDDHRPPuDqYO4H8oUQcYTQ0g5j+XlXB643Mul/EkXVNm12QU1QiROpgeT3D7yHMlvnE8oBw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s109",
+        "types": [
+          "restart"
+        ],
+        "year": 1993,
+        "people": [],
+        "quote": "The Nolan s Gully open cut commenced in 1993.[169]\nAlthough modern mining revived the economy of the town, it did not replicate the building boom of the early 20th century.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 109
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "5e08c94322ecaaddd4b097c2b7f8f3e60b66c1d7d3ffbae798c265bb5fa1ab1f",
+        "signature": "26gB1Aivl/ybTFFVM0N4+yQBDgcKiGv8DSazOuI/nDOgFm6vJ/LRpzQVrjHy1FerqfWtn3hgRggYmbo22h3XCQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s110",
+        "types": [
+          "people"
+        ],
+        "year": 1996,
+        "people": [
+          "Jane Lennon Associates",
+          "Howard Pearce",
+          "Conservation Management Plan",
+          "Peter Bell"
+        ],
+        "quote": "The heritage significance of Ravenswood s surviving mining infrastructure was recognised in a 1996 Queensland Mining Heritage Places Study by Jane Lennon Associates and Howard Pearce; and a 2000 Conservation Management Plan by Peter Bell.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 110
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "2e42c01551f5b7ea05d9f4078189be791a516036ce306ec211f0206458700a1a",
+        "signature": "ePLFx2LaQjKtpNPovEw0lPXziE4MRq8vuMVhlHpNrH5isOr+nmrseyF08fj2WoYxTBUCZ/sRh799dlQL6kwJCw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s4",
+        "types": [
+          "people"
+        ],
+        "year": 2016,
+        "people": [
+          "Sunset No",
+          "General Grant"
+        ],
+        "quote": "In 2016 the Ravenswood Mining Landscape and Chinese Settlement Area contains surface structures from eight mines: the Grand Junction, Little Grand Junction, Sunset No.1 and Sunset No.2, Deep, General Grant, Duke of Edinburgh, and Grant and Sunset Extended mines, as well as the mill associated with the Deep mine, and the Mabel Mill tailings treatment plant (most structures dating from the New Ravenswood Company era).",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 4
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "ec494bb69f4464c9bd87aa284e29daefddcc8fcb20dc93092a0c07ed47eddbf5",
+        "signature": "mAEDviNvgTR4aftO6T2v+C/8+zwd+A2Npp57Vw4GK/FMi+vFCl9wjQJ4ArOSb7/ErWLEXVL5b+yvx6ppsYF+DQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-600452-s24",
+        "types": [
+          "ownership"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "The shareholders recouped their investment in the first two years and this drew world-wide interest.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600452",
+          "entry": "Thorps Building",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600452",
+          "sentence": 24
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "0103710d84eed232103098774af7db95e0ec8eb07a8944bb8cdb1a426bb079df",
+        "signature": "u/5Q69hRlkqsEoROrRGAXsXyO2aZjce7Y7xmUxzyjmkKc3kUcKVmjd2sNXX82Do/UP4wj4PTInxBkZxXmgbkCA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-600452-s32",
+        "types": [
+          "ownership"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "He was a shareholder in Hollimans Limited, a company that had been established in Charters Towers for some time, supplying the mining industry with household goods, guns and sporting equipment, as well as being agents for such mining essentials as steam engines, pumps, conveyors, compressors and parts for stamper batteries.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600452",
+          "entry": "Thorps Building",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600452",
+          "sentence": 32
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "49425d1d9dd25eb9a4404be4521a6461c9e67b7eef6c19ca0208c37686bd9634",
+        "signature": "T5Tusjof86r9bruPccHYVUKWE8+WDgFP8NKswd8zdxJIvlEN2niYCrQc7YlQrvGLQ1NSSc+SbbuX17eT4rs6Aw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-600457-s31",
+        "types": [
+          "ownership"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "Following favourable official assessments of the ore potential in King s freehold, a Melbourne syndicate bought into the Ravenswood Silver Mining Company and refloated it, under the same name, on the English market.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600457",
+          "entry": "Totley Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600457",
+          "sentence": 31
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "22d1dc7a147f0276b2e7a13c78491fc4ef4f92f77dd5aafc592dba989f6876a0",
+        "signature": "cW5SPohGcwqY7LxmRvWbSLNrlg/uSLuwvKza+dvgVQ9uiZKTpp14JTBGFOc/UADDiIGG0xGCkD5LW5TD4tHeAw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601206-s18",
+        "types": [
+          "workforce"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "Two years later, however, the Mining Warden reported that the methods employed by the Ravenswood Gold Smelting Co had failed and the company s capital was exhausted.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601206",
+          "entry": "Mabel Mill (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601206",
+          "sentence": 18
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "4899bee1705fb95fb2d057d96914258310272a4dbd47d77c16dc462f706af85a",
+        "signature": "S6bS6BxwPSKLRC6UNzOEqffn/cYxSj6y3liDsG4A8Nt560WHT+zwX4xs5aPlp1ekY1pJ5pZIue6i6Avr82piBw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601206-s19",
+        "types": [
+          "ownership"
+        ],
+        "year": null,
+        "people": [
+          "Machine Area",
+          "General Grant"
+        ],
+        "quote": "The Mill (now renumbered Machine Area 28) was transferred to the Ravenswood Gold Co Ltd, under the management of previous owner, HH Barton, who also acquired the Sunset, General Grant, and Black Jack mines, and later the Melaneur and Duke of Edinburgh.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601206",
+          "entry": "Mabel Mill (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601206",
+          "sentence": 19
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "1519f7df0036d309a5243f2cee448e911bb60ae29e811d60bd95429cfca4f5a6",
+        "signature": "OyMeBQBfKVjQs1GYHjLgsGd+gidGoa0qTDSJg7RJ+Gxq28cVsDJNdlKCtlNiaxm0UqcV73CkmggmN+H9dC2HAA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601206-s23",
+        "types": [
+          "ownership"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "Barton was in financial difficulties with the Banks, who took over the mill and his other extensive mining interests.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601206",
+          "entry": "Mabel Mill (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601206",
+          "sentence": 23
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "d04e67a0959fc8523d3523afbeb86cbde0d66819b8772e5cc57f842a86fd4c29",
+        "signature": "/MFQveEmz51Or8D2bkHRYbNlXoi9lFB6SEChtX9pqZ2dDg/ymL/tmF4P7D9RJBLQ8Ws0U7GjJTwbVbuOn8S2Aw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601206-s47",
+        "types": [
+          "restart"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "A small revival occurred during the 1930s (Partridge and Ralston established a mill on the southern side of the creek of the Mabel Mill site to treat old tailings) and early 1940s and later revivals as new technology allowed for economical mining of lower grade ores, but Ravenswood never returned to the prosperity of the early 1900s and was not rebuilt.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601206",
+          "entry": "Mabel Mill (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601206",
+          "sentence": 47
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "a1071efedafd6eeca32f63e575c67f17e640fa70ac1a67126cb1cdbc1b21f27c",
+        "signature": "CWy324+Y3lBxTS2oVXvaOkfqwgXKEpcDeGDwieqm1lw+vhDjkiJtkmpBg/aCvR2y/m0hHnrFu9MFqPRrWvTIDg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601207-s12",
+        "types": [
+          "ownership"
+        ],
+        "year": null,
+        "people": [
+          "Archibald Laurence Wilson"
+        ],
+        "quote": "During the 1890s, profitable mining was undertaken in the town but Ravenswood s second boom was not to occur until the turn of the century when Archibald Laurence Wilson floated the New Ravenswood Co. Funded by substantial British investment, the company acquired numerous mining interests in the town and undertook a major refurbishment introducing new technology to overcome the mundic problem.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601207",
+          "entry": "London North Mine, Ravenswood",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601207",
+          "sentence": 12
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "0d9a375311b40e2ee74d723314e6f6ce733d13f2636286956f770823b8a1f49f",
+        "signature": "eBfUf+1wdLT4tUOxhC61Xt/T7KoPdL8mvbDtqbEQYa/eNP6TePtc5ZkXKgx1YdoU0maIk9U77T2San4sP6NPBg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601207-s14",
+        "types": [
+          "people"
+        ],
+        "year": null,
+        "people": [
+          "Thomas Upton"
+        ],
+        "quote": "In the same year, a Charters Towers group headed, according to the Mining Warden, by Thomas Upton, promoted the London North Mine with the intention of working the London Reef.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601207",
+          "entry": "London North Mine, Ravenswood",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601207",
+          "sentence": 14
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "2ce3d1dc4d0b2a53c598a357944a92f1381822c25c99f86207031eca660bd383",
+        "signature": "NGFkDId8mNgCs7mbr/bbqWrNAt04xVd/CDuKJkYP2m2IjlZtRI+EgteNNhvwAqOJdPJ0RhD9KpwPz5LXjvykDw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-601207-s18",
+        "types": [
+          "workforce"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "Apparently due to this lack of space, pigsties (a particularly Australian method of support more usually employed in the underground shafts) were erected to contain the mullock.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601207",
+          "entry": "London North Mine, Ravenswood",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601207",
+          "sentence": 18
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "95e324d9c7329bc9fb7a62b9af22a77289cb166f9184eaa4d5e530619d764668",
+        "signature": "1/xNxi9mL7+PMpgO8P+52szu9UQaI+3MwSrFJZ05xW88sQkK3GMtHqGtsPYqcKEJm3/6cIuebJF0ZfWkNtndBw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s8",
+        "types": [
+          "people"
+        ],
+        "year": null,
+        "people": [
+          "Archibald Lawrence Wilson"
+        ],
+        "quote": "It is an evocative reminder of the precarious and short-lived nature of north Queensland s mining booms, and has a special association with Archibald Lawrence Wilson, who established the New Ravenswood Company and improved both ore and metallurgical extraction processes on the goldfield.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 8
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "e982877194ca64aea67190bde9707e1f72e54066362021b74ba6a9e38c4ee894",
+        "signature": "SYvPFwKOjP4b6y8pkv6tYWu4AaPjMYkXenUGfsiJBsQ4VijpJUXk2Vs2swe/PtiMhDhGo5EQil0Wo6dgFVf9Bw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s34",
+        "types": [
+          "people"
+        ],
+        "year": null,
+        "people": [
+          "John Bull"
+        ],
+        "quote": "In the mid-1880s there was even a temporary increase in the goldfield s production, due to good returns from the Sandy Creek mines on the John Bull reef.[58] For the next eight years, the principal producers of the district were the General Grant, Sunset, New England, Wild Irish Girl, Melaneur and John Bull reefs, plus the silver lodes of the One Mile (at Totley).[59]\nRavenswood s economy survived the 1880s due to the development of silver mines at Totley [QHR 600457], a township established about 2km north of Ravenswood.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 34
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "01ae06fa508b905eb8940a30330e107057d6a33b36ad020ad9a1922b96c064d6",
+        "signature": "0Lf8NqHqyjAXJPwdyEg6V/7LYx12F1IwNC9u+ItgRHon0H0oIun2Rl7kTUchG7OegXUvrKDYf9qPjkl6ycnjBw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s46",
+        "types": [
+          "ownership",
+          "restart"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "Registered with a capital of 50,000, the company purchased the General Grant, Sunset, Black Jack, Melaneur, and Shelmalier mines, and the Mabel Mill, from the Queensland National Bank (and later obtained the Saratoga, Duke of Edinburgh and London North mines),[72] and initiated a new era in ore and metallurgical extraction.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 46
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "8e3c65dc5483ded534d3c74bd302a4d484fa3fb18d727ec12c8ef8286a3703b3",
+        "signature": "5C2qpgrTiXcsRB1lglT0+QI8gotVgy3V1JfFs1tLfdwFidHK4aAbGar2GP3/RvkBX0AK53ZCVWZOzBpjYAqeDA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Ravenswood",
+        "site_no": 481934,
+        "id": "qhr-650038-s103",
+        "types": [
+          "ownership"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "A policy of all that is necessary but as little as possible must be strongly pursued .[164] The increased population of north Queensland, longer paid holidays, improved roads and the rise of car ownership after World War II, all increased visitation to Ravenswood, as did the completion of a road past Ravenswood to the Burdekin Dam, in the 1980s.[165] As a result, the town and its mining landscape have been represented in brochures, art and photography.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 103
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "e8d839cebdc11b6b6759a0f141a3025e9a76490dbb9af8ca9851e20adc56af89",
+        "signature": "07w6chNffrD/ihxZBtCAB/s2kuxvtl+mK/faeAQCSAhimzzgf6RREAKfsBCjlMlPzk69BdygZqcDRoFid8mZCw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    }
+  ]
+}

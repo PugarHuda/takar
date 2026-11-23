@@ -1,0 +1,1226 @@
+{
+  "title": "Mount Morgan: events and people from original records",
+  "mine": "Mount Morgan",
+  "method": "Every sentence of the Queensland Heritage Register entries matched to this mine (by name), plus sentences in other mining entries that name the mine, typed by fixed rules (lib/events.mjs). Quoted word for word with the record ID; nothing summarised. Each event is a capsule signed on its own (Ed25519 over canonical JSON); verify one with lib/sign.mjs verifyDoc(capsule.finding, capsule.attestation).",
+  "generated_at": "2026-11-23T10:43:18.532Z",
+  "summary": {
+    "events": 36,
+    "by_type": {
+      "ownership": 14,
+      "people": 5,
+      "closure": 14,
+      "restart": 4,
+      "workforce": 2,
+      "fire": 4,
+      "flood or weather": 1,
+      "strike or dispute": 1
+    },
+    "people_named": 10,
+    "records": [
+      "645613",
+      "600751",
+      "601363",
+      "650038",
+      "602723"
+    ]
+  },
+  "people": [
+    "Adolphus William",
+    "Ned Morgan",
+    "William Knox D'arcy",
+    "William Pattison",
+    "John Moffat",
+    "James Smith Reid",
+    "Charles William Chapman",
+    "Alexander Campbell",
+    "Adam Alexander Boyd",
+    "Hugh Robinson"
+  ],
+  "gaps": [
+    "No accident or death is recorded in the register entries; that is not evidence that none happened.",
+    "Political connections and donations are not in the register; not established."
+  ],
+  "capsules": [
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-645613-s20",
+        "types": [
+          "ownership"
+        ],
+        "year": 1870,
+        "people": [],
+        "quote": "The year of actual discovery is not known, but rights to mine copper here were acquired by the Scottish Australian Mining Company in 1870 (Christmas c.1980:1).",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "645613",
+          "entry": "Adolphus William Copper Smelter and Dee Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
+          "sentence": 20
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "4ff64cec657ad52b95290282462a30f53a7f6dc425a3102da46095a4b3fba8f5",
+        "signature": "pIByAiqOneJ2lyMtcTxb1ih4xvxH/pYg8IA+2O6pwfxBpk/3gUssdm/X+wd8g1r2cJZIR43naqdLeeRkz415Dw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-645613-s25",
+        "types": [
+          "people"
+        ],
+        "year": 1874,
+        "people": [
+          "Adolphus William"
+        ],
+        "quote": "A smelter was constructed at Adolphus William in about 1874.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "645613",
+          "entry": "Adolphus William Copper Smelter and Dee Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
+          "sentence": 25
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "8cdb275b4687335807e11538c870ac5451bf369ac859276d8be0ad228c1b8ac6",
+        "signature": "9EAA3yEuhg08gYkKx+irjaZN0HeQWq8fpNEpjq8NGOBZa0Bzmwrcx0tPGE3XbkN0YZhK7j1pyeeVerBjoMRnAw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-645613-s45",
+        "types": [
+          "closure",
+          "restart"
+        ],
+        "year": 1874,
+        "people": [],
+        "quote": "Flanagan's at Kariboe Creek and Great Blackall quickly ceased smelting in 1874, Mount Clara (and possibly Mount Coora as well) by 1875, and Mount Perry by 1877 (Mount Perry was revived again in the late 1880s).",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "645613",
+          "entry": "Adolphus William Copper Smelter and Dee Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
+          "sentence": 45
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "4dc00b2860399c3d23ef27ffa8bd42910ae61e808810b63d4b4fdb6598228250",
+        "signature": "2/vAmoMxNO7IAiXkdr8JVyDhZuXbG9ztx2K1vpEL5O/3x7FfxgrF+vaJM8D0zwWfm1+aM9gO10Vf9zXsuV3JCw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-645613-s46",
+        "types": [
+          "closure"
+        ],
+        "year": 1876,
+        "people": [],
+        "quote": "The Adolphus William Copper Mine, and probably the smelter, had closed by 1876 (Pearson 1994b:27-28) though one account by Christmas (c.1980:2) suggests that the mine continued operations until 1879.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "645613",
+          "entry": "Adolphus William Copper Smelter and Dee Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
+          "sentence": 46
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "f8f7c131e9d5e647c8735d0b492b2d310ec5100fdca410c6a0971c3feee5ad7b",
+        "signature": "cq2Duu6wJcw+WcLIG4zzA+8aakXOQxJ3vyJ+TfrIhL+pODpNvV7USXrTUhctDgaria0hLRxHv7zsC3oJ2AEyCA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-645613-s42",
+        "types": [
+          "closure"
+        ],
+        "year": 1879,
+        "people": [],
+        "quote": "Most mines, smelters and associated settlements from the initial 'copper rush' period closed down before the end of the same decade, as international copper prices fell to near UK 60 per ton in 1879.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "645613",
+          "entry": "Adolphus William Copper Smelter and Dee Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
+          "sentence": 42
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "5bc4c410372e2ee373b745e43c8a74d95b4e7a2e47065d7af04add73af5bc12e",
+        "signature": "C/ABh82Fl209ol8GLwSa4+R8fVQLtcZP6si2W7mTnG+PlzcUSKIHrMxNdW3akh7U9ucAmLqaVZ1PYSMNGvJwDw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-645613-s47",
+        "types": [
+          "closure"
+        ],
+        "year": 1879,
+        "people": [],
+        "quote": "By 1879 a weekly mail service to the area from Rockhampton had ceased and the site appears to have been deserted at this time.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "645613",
+          "entry": "Adolphus William Copper Smelter and Dee Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
+          "sentence": 47
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "012776c8ffdc5019aa9fcaa2e9e036a099aa7158bbb5ca565ac68ba45eb98ec6",
+        "signature": "bpDNbQG375JwXKzAb+I1HEeNVuRjsr8aU/MuD2d+845Oyx8y16JCmeBTOXij7DDAfu/ERtljLPJPbWdCgWPzDQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-600751-s6",
+        "types": [
+          "people"
+        ],
+        "year": 1882,
+        "people": [
+          "Ned Morgan",
+          "William Knox D'arcy",
+          "William Pattison"
+        ],
+        "quote": "The first formal mining agreement was drawn up in 1882 between Fred, Tom and Ned Morgan along with three Rockhampton businessmen; Thomas Skarrat Hall, William Knox D'arcy and William Pattison.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600751",
+          "entry": "Mount Morgan Mine Site",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600751",
+          "sentence": 6
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "2844f80c16454702b69bfd0e74c1e0ae2d2eca51f54a17c8d143ea6d05bae463",
+        "signature": "hMX/iSGMWuDWGM2L8vQjL3W8I8a77MfO7v3jY5SOBoXU7FvNlZbcViNmF7DCPNdoRQAIdq6F17sa3BUjX7a1Bw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-600751-s7",
+        "types": [
+          "ownership"
+        ],
+        "year": 1886,
+        "people": [],
+        "quote": "In 1886 after the Morgan brothers sold their shares and other people became partners, a formal company, the Mount Morgan Gold Mining Company Limited was registered on 1 October 1886.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600751",
+          "entry": "Mount Morgan Mine Site",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600751",
+          "sentence": 7
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "4af0b22acaf47163a0d5574dc007899f6ed5ee73ff3deb8e6f50971972e61737",
+        "signature": "X3LG+KyfN776xp3OZr+HzYoV5jKrWtO25vHeTPVd/HWX9t5F7DecS4rCcS+TeWGkPAKUi1HiB7sEhHsqojx0DQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-601363-s18",
+        "types": [
+          "people"
+        ],
+        "year": 1897,
+        "people": [
+          "John Moffat",
+          "James Smith Reid",
+          "Charles William Chapman"
+        ],
+        "quote": "In 1897, while the Mount Lyell (Queenstown Tasmania), Broken Hill, Mount Morgan and Western Australian mining successes were exciting Melbourne and London speculators, John Moffat, James Smith Reid and Charles William Chapman devised a grandiose scheme for the exploitation of the Chillagoe district.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601363",
+          "entry": "OK Mine & Smelter",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601363",
+          "sentence": 18
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "373d01ae20769699567d224e041a6c996807512ef0638515120b87882cbcbcaf",
+        "signature": "FJL3ETnpoBHZpxXm9IlwrEZcbcCxiZDods9tZUDdmvIqRskrIhyV36Mn4Z2jXK2HEUBsTAlTjVVgbsXqnDooDw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-600751-s22",
+        "types": [
+          "ownership"
+        ],
+        "year": 1914,
+        "people": [],
+        "quote": "In July 1914, shareholders of the company approved the establishment of a Melbourne board of directors.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600751",
+          "entry": "Mount Morgan Mine Site",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600751",
+          "sentence": 22
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "93ced3280fea4bd64671bdc1e2513f2ac1ef5a2b32b567d87a7de08fea8c1ec9",
+        "signature": "kiDApRlrbY8+XV5hNfmjYAvLPdY5+24UyMQOe6dmJJEUnpn5OOhk6VwCUDKDNmneK1MFARvrP2HXqD/9PuezDw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-650038-s83",
+        "types": [
+          "closure"
+        ],
+        "year": 1915,
+        "people": [],
+        "quote": "The London North mine closed in 1915, and on 24 March 1917 the New Ravenswood Company ceased operations; ending large-scale mining in Ravenswood for the next 70 years.[122]\nBy 1917, the Ravenswood goldfield had produced over 850,000oz of gold (nearly a quarter coming from the Sunset mine), and 1,000,000oz of silver;[123] making it the fifth largest gold producer in Queensland, after Charters Towers, Mount Morgan, Gympie and the Palmer goldfield.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "650038",
+          "entry": "Ravenswood Mining Landscape and Chinese Settlement Area",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
+          "sentence": 83
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "f3f8ad8b56481ad2be76f5783706bf113ac0dfd033af35114fb135362f8d119a",
+        "signature": "Q7AH4YcLu7UzCC4+QgPQy8cphXjj9I3yblkA2KEWG1ccrPB40IToK35+DEc+srdE8HmgkEobItVlskMP8OeQCQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-602723-s20",
+        "types": [
+          "workforce"
+        ],
+        "year": 1921,
+        "people": [
+          "Alexander Campbell"
+        ],
+        "quote": "By 1921, under the management of Alexander Campbell, the company was mining the Dunstan Seam and sending coal to the boilers at Mount Morgan mine from three tunnels at the rate of 150 tons a day, with over 90 men employed.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602723",
+          "entry": "Dawson Valley Colliery (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602723",
+          "sentence": 20
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "3aebdb3f59e69bb60be46e2839aea2cfe746af012d84ee97d398e41d2503ff37",
+        "signature": "R5NwaIn8t5DDs3GJ0j0h5JjdqLpnifHYlZoVFM3b65/XN39XfDL9KyBBQoXI0Rnebynd/IgHNvH9NkCN39d1CA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-645613-s53",
+        "types": [
+          "ownership",
+          "closure"
+        ],
+        "year": 1926,
+        "people": [],
+        "quote": "It is unclear when mining of copper at Dee River Mine finally ceased, though Mount Morgan Gold Mining Company Ltd took up three leases in the Dee River area in 1926 - these did not proceed due to the company's liquidation.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "645613",
+          "entry": "Adolphus William Copper Smelter and Dee Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
+          "sentence": 53
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "76ecee4fbf05dcf57ebb664abafb617f77c21409f4fecbb5aa187db9db95cdea",
+        "signature": "SSEbCSGHiy7QuBNL4JzAS1kf5svrkXJ8+EoSU5x8DoRiliDYs7h29BdUv4NdfHbHFRhv6r6tk5Bf7QGx6UHiBg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-600751-s24",
+        "types": [
+          "fire",
+          "flood or weather",
+          "strike or dispute",
+          "closure"
+        ],
+        "year": 1927,
+        "people": [],
+        "quote": "The 1920s signalled a period of unrest at the mine, and this, combined with a fire and subsequent flooding of the underground works led to the demise of the Mount Morgan Gold Mining Company Limited in 1927.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600751",
+          "entry": "Mount Morgan Mine Site",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600751",
+          "sentence": 24
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "f59f370702e4cfe280978db751d5f1a16719b9fb6ef56e91873406c78e0412e2",
+        "signature": "05D1qbhn0SBxIe8eb3httzJggRpnSNsNQbpHSoQEzxAQX5NOsIVAHPZO/kzpUI6ha/ekcEaipBIL0yO7a7W3Ag==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-600751-s25",
+        "types": [
+          "ownership",
+          "restart"
+        ],
+        "year": 1928,
+        "people": [
+          "Adam Alexander Boyd"
+        ],
+        "quote": "In 1928, Adam Alexander Boyd, a former manager of the mine, formed a new company, Mount Morgan Limited, and a new era in the development of the Mount Morgan mine began.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600751",
+          "entry": "Mount Morgan Mine Site",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600751",
+          "sentence": 25
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "aab9bcdbaeb9fe2a2aae9caf0b52377326a08865961e475bcf1a7cf783bc5b82",
+        "signature": "4IWFCVxtzZgbGvdq9QTUQLLcumw5lLGvz2QU7+3ePx416PljqDi4GLhsp/24NzOq/FXfwtu+1WBgF3XHKO3cDQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-602723-s21",
+        "types": [
+          "ownership",
+          "closure",
+          "restart"
+        ],
+        "year": 1929,
+        "people": [],
+        "quote": "The mine temporarily closed in 1929 due to the liquidation of the old Mount Morgan Company, but was re-opened in 1932 by local independent miners working as the Dawson Valley Coal Company on tribute to the new company, Mount Morgan Limited.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602723",
+          "entry": "Dawson Valley Colliery (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602723",
+          "sentence": 21
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "8f4ae3fa6b8041da191d6a76af304c9bca3e2299866093e50974c567d86ed5a9",
+        "signature": "CCfgKE7Y3rnC1xgmAZncL2ZdKKhqEH2IRDusMEaiHQDLLb0BkU0/ttJ+qTfxOB02l9HHb8iwXLnQOSFpNUC6Ag==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-600751-s28",
+        "types": [
+          "ownership"
+        ],
+        "year": 1929,
+        "people": [],
+        "quote": "The onset of the Great Depression in 1929 meant that liquidation again looked certain.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600751",
+          "entry": "Mount Morgan Mine Site",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600751",
+          "sentence": 28
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "06115e2cbd8f19f87b0bad102111be7c2e3be3e1d52925cb6f6694fe5086200b",
+        "signature": "hOqjbgNqn1/TQnMZnub6+nuU66S04feLOXBJ5N3njx8Jz7743FNkjY6WDXEWUoP4JUE82SV+2nYxSfFpczQdDQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-602723-s22",
+        "types": [
+          "restart"
+        ],
+        "year": 1936,
+        "people": [],
+        "quote": "Mount Morgan resumed control of operations in 1936, improving ventilation and modernising machinery.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602723",
+          "entry": "Dawson Valley Colliery (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602723",
+          "sentence": 22
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "adcc786fc025e44be8dbd596a53ae220b06f024cacc66cd5605184861e0dfeeb",
+        "signature": "R4dslXtXW1k+0xtA1EEV9HH2DFHcNq/tuoGQHBB3sYUDGDFOfeZ09E8Eb+wgin8LffRHDT9Xj/bNFPwfebGSBQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-645613-s61",
+        "types": [
+          "people"
+        ],
+        "year": 1942,
+        "people": [
+          "Adolphus William"
+        ],
+        "quote": "With an increased need for copper during World War Two, the Dee River and old Adolphus William workings were again considered for re-mining, but it was concluded that mining would not appreciably increase the production of copper nor would it be profitable (Ridgway 1942:2).",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "645613",
+          "entry": "Adolphus William Copper Smelter and Dee Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
+          "sentence": 61
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "f5182c203a99870b194c43b7a86266577bc39586cb7942ece0b20d9e04dc74c1",
+        "signature": "SPyo/xYw8QGWP7IqSL85Tm9qHDTgaDHPAys/1DcStPbOKt2jR121cjipDqIYXBEKvaeam1CP7iwrPugWDsNQDQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-602723-s44",
+        "types": [
+          "ownership",
+          "closure"
+        ],
+        "year": 1968,
+        "people": [],
+        "quote": "Mount Morgan Limited was acquired by Peko Wallsend Ltd in 1968, which closed the colliery on 9 March 1969.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602723",
+          "entry": "Dawson Valley Colliery (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602723",
+          "sentence": 44
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "2f43f7906c3cac2f9430d09cb9a6c9a668c72260a9cf3bf82b604e83b4cc363e",
+        "signature": "1pnIfte2ROhYR/kSi5utj8l/1gmPedUuevTZAxduZmbOfAOtMD0k2Ao5XGb8qovFUXVSfqxJBpsEMILbhmjzCg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-602723-s26",
+        "types": [
+          "closure"
+        ],
+        "year": 1969,
+        "people": [],
+        "quote": "Mount Morgan Limited (later its subsidiary Morgan Mining and Industrial Company Pty Ltd) then closed operations in tunnels two, three and four and moved to the new number seven tunnel, continuing operations until 1969.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602723",
+          "entry": "Dawson Valley Colliery (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602723",
+          "sentence": 26
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "2bc673220a0a16dd381b3001aee5a946f6456c965ad75ef03978115b8d925822",
+        "signature": "w+urZ8P6G2+9Jict4IA8s2V2btM9GFzFoMgOBBD/WipDpvwBHbM0zbUyFo9JUqmWy409WNIxQMO3TW1B3CLkCg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-602723-s42",
+        "types": [
+          "closure"
+        ],
+        "year": 1969,
+        "people": [],
+        "quote": "Work ceased at the mine in 1969, with the conversion of the Mount Morgan reverberatory furnace to oil firing, and the development of better situated export coal mines.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602723",
+          "entry": "Dawson Valley Colliery (former)",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602723",
+          "sentence": 42
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "760db7991e6355db54d9e7d6c35c8ab809b67504d08eba9f1d8501d2b7c42866",
+        "signature": "voe00roySQmc9ohte2WbkNv4Ee/s1z+4vrfc9fI9CRVJi8AGn4eCqF1F4CLopSK8JPrIzjyANlWGvmZPhfo9Cw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-600751-s69",
+        "types": [
+          "ownership"
+        ],
+        "year": 1976,
+        "people": [],
+        "quote": "An announcement to shareholders that mining would cease before the end of 1976 was made and on 13 February of the same year, staff numbers at the mine were reduced to below 500 [the day is known as Black Friday].",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600751",
+          "entry": "Mount Morgan Mine Site",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600751",
+          "sentence": 69
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "1ab1f8231731c22703c80db26fa21fdd4edebd932d5bbd283bce85300108e664",
+        "signature": "PyOLtAmdaG4AWiOy8xo9FgnOKblEhmrZ57EJUn/3R4+n+PkfuXfDYag0X96VH3Qr3Ro5icpSGTmZGpgeTBm+DQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-600751-s70",
+        "types": [
+          "closure"
+        ],
+        "year": 1981,
+        "people": [],
+        "quote": "Hard rock mining ceased in 1981.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600751",
+          "entry": "Mount Morgan Mine Site",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600751",
+          "sentence": 70
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "85cab1af42642f90c18cb0e76300d37e3a05ce66448bdd1a9ccb142dc9f3ca6f",
+        "signature": "wmcD54ZxdK65I9EzuAIKghav0ucsVHsbKugnHVeDBKGXul9w9na1JBLtWBXHnWLGpzI2HZ43lrKYfj4qNZ1BDw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-645613-s38",
+        "types": [
+          "fire"
+        ],
+        "year": 1986,
+        "people": [
+          "Adolphus William"
+        ],
+        "quote": "The furnaces at Adolphus William were constructed from firebricks made in Cumbernauld, Dunbartonshire, Scotland by the Cumbernauld Fire-Clay Company (Gemmell 1986:39, Lewis n.d.).",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "645613",
+          "entry": "Adolphus William Copper Smelter and Dee Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
+          "sentence": 38
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "0a060c863c861e8f745644a9f1751c428d6189a2706520fada202d848dbf9d77",
+        "signature": "N2ZktuIaeJjYlaIzeZLhhYDGHSKMM3j1D6kkEyPloSb6izmUzV6E0HhaCD7gSxAu5aOMDJFsP7hsq/Vg/sQTBA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-600751-s4",
+        "types": [
+          "ownership"
+        ],
+        "year": 1993,
+        "people": [],
+        "quote": "Ownership of the mine changed hands several times until a Joint Venture was formed between Perilya and Aumin and Mount Morgan Limited in June 1993.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600751",
+          "entry": "Mount Morgan Mine Site",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600751",
+          "sentence": 4
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "b2964df33176bad556e6525ec689a55e1131e74c8f298e6184d944d11e847a6a",
+        "signature": "cb4O7VgcVnte1gpgagi72cWhz2Wqv4xBvoaVTELpJ2b8kBYXmbHPTqcuDBv6ihULKh45Y/Gt5fT76JPNUxrwAg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-600751-s72",
+        "types": [
+          "ownership"
+        ],
+        "year": 1993,
+        "people": [],
+        "quote": "By 1993, ownership of the mine passed from Mount Morgan Limited to the state.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600751",
+          "entry": "Mount Morgan Mine Site",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600751",
+          "sentence": 72
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "081c3515dd41908844c1e19e754faa564d8d3261f81a89a38b925ef8dc2fdd47",
+        "signature": "7GnCOilTqg6YeRGSU8cbJLukZ0RkKwgjxgAQwGMyw4cia/eptadPT7+ON4WpeITJYFHjwQT7aCeC6CZkD8iAAA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-645613-s33",
+        "types": [
+          "fire"
+        ],
+        "year": 1994,
+        "people": [],
+        "quote": "Finely crushed and concentrated copper ore is mixed with the flux (chemicals or other substances added to a load of ore and fuel) and spread on the hearth, under which an intense fire is lit in a firebox situated at one end of the furnace, allowing a flame to pass over the ore (Bell and McCarthy 1994:3; Ritchie and Hooker 1997:20).",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "645613",
+          "entry": "Adolphus William Copper Smelter and Dee Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
+          "sentence": 33
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "419cb952ecd9373d0a9d6ea6beb99ca7c1e15267f4f51dc2430c4fe30079dc02",
+        "signature": "sY8X+Y0kd3tVPf0c1v1ScREDOjTOhWIfs5+a6D+qw6zvI5AWkW9hq4tu9dStJ4JUfYhydZV95UwD6TDHakYWBg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-645613-s34",
+        "types": [
+          "fire"
+        ],
+        "year": 1994,
+        "people": [],
+        "quote": "Common practice from the period was to fire the furnace for up to twenty-four hours, following which the matte (the intermediate product of the smelting process consisting of 40-55% copper) and slag were extracted from separate openings and at different levels on the sides of the furnace (Bell and McCarthy 1994:3; Ritchie and Hooker 1997:20).",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "645613",
+          "entry": "Adolphus William Copper Smelter and Dee Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
+          "sentence": 34
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "23df2b26054b99fc091e2e30f72ad59d97674d84293e98b42bf2465683280100",
+        "signature": "m8QrpnD/L4npetIum4XtxhhtggR6JKUrg6leFVU0GHPB275QCwTthIaLW5NJCNmNEJVVfizQedi7q4sNgvbODA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-645613-s4",
+        "types": [
+          "closure"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "Little information exists for the associated Dee Township, which is believed to have been occupied during the 1870s boom period and was quickly abandoned when the mine and smelter closed for the first time.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "645613",
+          "entry": "Adolphus William Copper Smelter and Dee Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
+          "sentence": 4
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "a5dd8b8b027fcf27e2f6edee23249f8d2f626d454d99daa7859486a49fb5db05",
+        "signature": "a3ZB7cht8qjFbMlniHZ6kh+CZUmT48coesVFgUEr+CkTd8Z6NV3212Q/SormsTDclLsvPUKABRTMhKhvxPNcAg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-645613-s18",
+        "types": [
+          "people"
+        ],
+        "year": null,
+        "people": [
+          "Hugh Robinson"
+        ],
+        "quote": "Copper had been found close to Oaky Creek (sometimes also spelt Oakey Creek), southwest of Mount Morgan by William MacKinlay, head stockman of the pastoral run over the area Calliungal, held by Hugh Robinson.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "645613",
+          "entry": "Adolphus William Copper Smelter and Dee Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
+          "sentence": 18
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "1ce7b2d1c2b96e9006b7a40f3229987848382235b85336eae502bceb6404de23",
+        "signature": "F2kTNjGuDyxQMc7lD58nfcpXNcNxNTbuty1PhQzY9l3Z910Dh3IRH92oTggl4S42Hxu40iudLPvfpgOST2FsAw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-645613-s24",
+        "types": [
+          "closure"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "It is not clear when the nearby and associated Dee Township site was first occupied, but it is likely that it was utilised during the 1870s boom - bust period, and then quickly abandoned (Pearson 1994b:31).",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "645613",
+          "entry": "Adolphus William Copper Smelter and Dee Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
+          "sentence": 24
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "3a6eb4f9c9c13fc09fcb659e639f38bf4f966010e16d0c2cc55065a1c09b047a",
+        "signature": "aEoSUjlrCgZ+oqL7gIIFQrYq5mF/DoXjFNHAcl0CvgNWLq3CvieK9KliLDNniV4jNy1cHFif2R3tNSCyrgSjBw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-645613-s49",
+        "types": [
+          "ownership"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "A number of these mines were taken over by overseas capital in this period.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "645613",
+          "entry": "Adolphus William Copper Smelter and Dee Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
+          "sentence": 49
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "35d2551f9ec4078e68c955da12d2d1657344e61e327f61952034b4a55c998b1d",
+        "signature": "k+o/jn2Dxmiwd3Ak4BDOw5LY2orN02nXThd2uc76MmCiugXzXKfcaqN/32JXyo87FLjLI2cwAkpQy6Xw+Zq4CA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-600751-s5",
+        "types": [
+          "ownership"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "The Mount Morgan Mine is now in the ownership of the Queensland Department of Natural Resources and Mines.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600751",
+          "entry": "Mount Morgan Mine Site",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600751",
+          "sentence": 5
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "c0cbb3d8c429a4a01e7caacf8a78d0835b7438a32b085670de7d9e4fcd40fe92",
+        "signature": "K2mSVzdOYVT80U2t4evwwoQHggg50MyEz+j1FyOtrJc4/zIucYcqakUQ56NjUiEiQAwIGduxs+jGxmJylWZoDg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-600751-s21",
+        "types": [
+          "ownership"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "Along with fluctuating productivity, the ownership of the company changed several times over the years.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600751",
+          "entry": "Mount Morgan Mine Site",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600751",
+          "sentence": 21
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "925b0597a36492544669d1108bf6cd892dc78eba627225e5886b31603143c88f",
+        "signature": "Q6w4LR/R3cdOST693iYMk7fPVeJuW/9WtKqoePNnzdL4WbC32/kj2Beq8Fc/JZrRwetArZcwoVIC1eA5wUo/CA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Morgan",
+        "site_no": 494270,
+        "id": "qhr-600751-s41",
+        "types": [
+          "workforce"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "Mount Morgan Mine provided for a range of activities [including technology employed to treat the ore, such as chlorination] resulting in a diverse and complex site.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600751",
+          "entry": "Mount Morgan Mine Site",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600751",
+          "sentence": 41
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "a18a651f3626e43e26e0bf83dde78b9c3c34756797f847db2d68b47f94983ed6",
+        "signature": "vMVnVzPUNwEt+BOKGBNRdYwFQ0l959beRSyUoWfK+5ywjrvylC8uWi+TzIzPYyxOVs6p/kC0Gv/tELP60fTMDg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    }
+  ]
+}

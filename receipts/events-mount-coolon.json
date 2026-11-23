@@ -1,0 +1,466 @@
+{
+  "title": "Mount Coolon: events and people from original records",
+  "mine": "Mount Coolon",
+  "method": "Every sentence of the Queensland Heritage Register entries matched to this mine (by name), plus sentences in other mining entries that name the mine, typed by fixed rules (lib/events.mjs). Quoted word for word with the record ID; nothing summarised. Each event is a capsule signed on its own (Ed25519 over canonical JSON); verify one with lib/sign.mjs verifyDoc(capsule.finding, capsule.attestation).",
+  "generated_at": "2026-11-23T10:43:18.518Z",
+  "summary": {
+    "events": 13,
+    "by_type": {
+      "people": 5,
+      "ownership": 1,
+      "flood or weather": 1,
+      "strike or dispute": 4,
+      "closure": 1,
+      "restart": 1
+    },
+    "people_named": 7,
+    "records": [
+      "602242"
+    ]
+  },
+  "people": [
+    "Luke Reynolds",
+    "James Barclay",
+    "Doug Hunt",
+    "B.J.Dalton",
+    "James Cook University",
+    "L.F.White",
+    "Cec Hammond"
+  ],
+  "gaps": [
+    "No accident or death is recorded in the register entries; that is not evidence that none happened.",
+    "Political connections and donations are not in the register; not established."
+  ],
+  "capsules": [
+    {
+      "finding": {
+        "mine": "Mount Coolon",
+        "site_no": 41615,
+        "id": "qhr-602242-s2",
+        "types": [
+          "people"
+        ],
+        "year": 1913,
+        "people": [
+          "Luke Reynolds"
+        ],
+        "quote": "Luke Reynolds, a jackeroo from Yacamunda station, discovered gold there in 1913.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602242",
+          "entry": "Barclay's Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
+          "sentence": 2
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "bdf23cb9554e20a8beb3aaf71d1e2860e811e03579f9881a08b020fb5c7884d0",
+        "signature": "AcaMeiXqs5ti7cM2E68nhalCK83tZp7oMiNEKnPrk8PCjjiDlI61yShbud3ih36euzFZ8nqgzDqJjdgfWXYMAg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Coolon",
+        "site_no": 41615,
+        "id": "qhr-602242-s3",
+        "types": [
+          "people"
+        ],
+        "year": 1914,
+        "people": [
+          "James Barclay"
+        ],
+        "quote": "Thomas Coolon was the first to peg a claim in 1914, but other claims were quickly taken up, including one of the most active prospectors, James Barclay.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602242",
+          "entry": "Barclay's Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
+          "sentence": 3
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "27c634b41be734376b9cff7dffb4e318da88b7de793631f13759c72bc0229850",
+        "signature": "n8lEKjA4iuNQh7E39iPlrbEyPzdLiICPdbnheHp3hRdPJeg3GAjHE7b540CgTOlIZdFttUVpu6jgwBmGqm2nAg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Coolon",
+        "site_no": 41615,
+        "id": "qhr-602242-s4",
+        "types": [
+          "people"
+        ],
+        "year": 1914,
+        "people": [
+          "James Barclay"
+        ],
+        "quote": "James Barclay mined gold, at what became the Native Bear lease, from 1914 when he constructed a 5 head battery on the present site at Police Creek, 2.4km from the mine.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602242",
+          "entry": "Barclay's Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
+          "sentence": 4
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "6a9f6db130e31a6aa66e0a189794f143c00e460c62b762d1fb751195f0634f8f",
+        "signature": "ZS8unQ5NnNXZhLXIZq94f2K4aqx4ZicNIk39xB5txQga6l7NBjGDnBC2mG8LiTDdxW5g4e4I4FyIQLqxYoMSCQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Coolon",
+        "site_no": 41615,
+        "id": "qhr-602242-s20",
+        "types": [
+          "ownership"
+        ],
+        "year": 1932,
+        "people": [],
+        "quote": "By June 1932 Mount Coolon Gold Mines had taken over all the batteries and mines on the lode and built a new dam (the existing one) on Police Creek.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602242",
+          "entry": "Barclay's Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
+          "sentence": 20
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "a00082e6dfb72ff0014dcb196c055b4a554892162265a04e2a22b4efda80982a",
+        "signature": "/n1K6tVKZvejULN5pPOkbJJCh1j6eBZty1Mg8b2DH+fNRyF+S4V6fv+ysenYStXigEKy++UFXcPX/u41027SAA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Coolon",
+        "site_no": 41615,
+        "id": "qhr-602242-s28",
+        "types": [
+          "flood or weather"
+        ],
+        "year": 1934,
+        "people": [],
+        "quote": "The trouble was exacerbated by the oppressive living conditions of this semi-arid region, compounded by the severe drought during the summer of 1934-35.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602242",
+          "entry": "Barclay's Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
+          "sentence": 28
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "d8c6a554408c166f3e9bcb6e9b1a1d579a75c60985cc4ad47f90c29d75702af1",
+        "signature": "tT4g+D0vcIuYkTUZc8rzvRP8jJOH5UAnx6x0U9au/ZXKe/qc7FnlM280sXRBTDHXFuRb13rBdWJ9H86Ct9BbDg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Coolon",
+        "site_no": 41615,
+        "id": "qhr-602242-s14",
+        "types": [
+          "people"
+        ],
+        "year": 1935,
+        "people": [
+          "Doug Hunt",
+          "B.J.Dalton",
+          "James Cook University"
+        ],
+        "quote": "(Doug Hunt, Industrial Conflict at Mount Coolon, 1935 , in B.J.Dalton, ed., Lectures on North Queensland History No.5, James Cook University, 1996, pp.36-37.)\nIn 1921 over 2100 ounces of gold were produced and by 1922 there were 12 adjacent leases on the Mount Coolon lode.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602242",
+          "entry": "Barclay's Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
+          "sentence": 14
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "15df5807d5a7053e7791df013053a81bbac11b017c0fd9de038f545c648ae58e",
+        "signature": "AEcYJdZLPSwZQHMR6Z/04n8shhMba9Dm+M8RJ1dMHU/1qJFxo50E6C37YeeMoVPRDapvzddVWe8SkXfef81YAw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Coolon",
+        "site_no": 41615,
+        "id": "qhr-602242-s27",
+        "types": [
+          "strike or dispute"
+        ],
+        "year": 1935,
+        "people": [],
+        "quote": "This industrial action had been initiated by local action in April 1935, without any reference to the union organisation or leadership at either the district or state level.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602242",
+          "entry": "Barclay's Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
+          "sentence": 27
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "ffb03fca4eb32da61b96215fd2c9ef8c56c8a3bb4083a34e7903bafd1e879d29",
+        "signature": "oky6AUlBmezKmphBTMZJeLSXCjbq88Ck0xuI4jEnLjNl5bT9cCXcbqjt9a4J1me9lNifKkf5BHvi0hbWIoTrAQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Coolon",
+        "site_no": 41615,
+        "id": "qhr-602242-s30",
+        "types": [
+          "closure"
+        ],
+        "year": 1941,
+        "people": [],
+        "quote": "However, by 1941 those operators left on the field had disposed of most of their machinery and abandoned their leases.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602242",
+          "entry": "Barclay's Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
+          "sentence": 30
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "5696ef50bffc1a9e94cfc9f9ff3fc7e164c0ebb1171250b430415c972532d1ad",
+        "signature": "w/Z2duwUJ2cYyo+Y9oj8glKYsebYJCALXJJC4ewQQvX6aZX6vJonzj7rcc+3PPi99cK4s6DZ2MG2YwnDWrHnCA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Coolon",
+        "site_no": 41615,
+        "id": "qhr-602242-s31",
+        "types": [
+          "restart"
+        ],
+        "year": 1947,
+        "people": [
+          "L.F.White"
+        ],
+        "quote": "In 1947 prospecting recommenced for alluvial gold and bismuth, and alluvial gold was treated in new plant installed by L.F.White.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602242",
+          "entry": "Barclay's Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
+          "sentence": 31
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "26de0a134ad1d9731b2a964e37f3a292d32af8b7adb19315ece57cf3fd41bed3",
+        "signature": "PVoTXHuP6m/xYXTKGMWVVPtcKlXN6MIBJZwqo+qFzXBrbv4lYgjHtGf2tYF5o4pChT7UAiRrfZZoVyoanvx8BQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Coolon",
+        "site_no": 41615,
+        "id": "qhr-602242-s21",
+        "types": [
+          "people"
+        ],
+        "year": null,
+        "people": [
+          "Cec Hammond"
+        ],
+        "quote": "Mr Cec Hammond, a teamster carting lime and wood to the company s plant, lived in the cottage near the weir.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602242",
+          "entry": "Barclay's Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
+          "sentence": 21
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "91d084267eb944d7839b07e2ec0d2fd78102defecf9a6d1f0cda43a6e5e708ec",
+        "signature": "Ku2NY2vnpdnOk/2m4khGyzvHPpdpcjOT3C5gK279lk0FWWQi67XZ4UPKoj8lMdX9hPoE2WJ+poqvxq3eOgW4Bw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Coolon",
+        "site_no": 41615,
+        "id": "qhr-602242-s24",
+        "types": [
+          "strike or dispute"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "Analysis of the events leading up to and during this strike ably reveals many of the difficulties and tensions associated with isolated mining operations in semi-arid Australia.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602242",
+          "entry": "Barclay's Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
+          "sentence": 24
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "ae5da62df53d8f13555b2b5f3969cd7a8e9272e597ef92e0ec1bb082d5978a96",
+        "signature": "QwY7DIFgFCKGgr93dCanFgB/IUsJJU7aKzy0XJ6Ff1mY2IDSI8wUyzyLDfXgfX5zt1UFDOWs9nM2P1qquDzlBw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Coolon",
+        "site_no": 41615,
+        "id": "qhr-602242-s25",
+        "types": [
+          "strike or dispute"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "The dispute, which involved only some one hundred employees, also throws a glimmer of light on management tactics; relations between the Australian Workers Union (AWU) and employers; collaboration among mining companies; and the alignment of ideological forces in the Queensland labour movement in the 1930s.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602242",
+          "entry": "Barclay's Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
+          "sentence": 25
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "7d35c540fbef0e98bacb1f764fc428f63d2868471c42d37bef40bbad629e81b6",
+        "signature": "euvfQQXdyjK43/KaLNCfehhVjS9GtKEt51B4EcHLAPbkxcX/1GarWmUeT0pw0AW731pc0dbvdG/RqmJVQdMMDQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Mount Coolon",
+        "site_no": 41615,
+        "id": "qhr-602242-s26",
+        "types": [
+          "strike or dispute"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "(Hunt, op.cit., p.36.)\nThis strike was to acquire all the hallmarks of a bitter and drawn our industrial action in which rank and file unionists were pitted against not only the mine s management, but also other workers, and more particularly their own union - Australian Workers Union (AWU).",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "602242",
+          "entry": "Barclay's Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
+          "sentence": 26
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "154defdbee13cc98c5b65d14fcc6d6e9d960b48beaf05d54d14fbdfe0c0b8732",
+        "signature": "DqPR0kGYJzjGRQYVc4hhJDoafmia5SNB21QDSyXFJAfnL7/PeHAwhkSTBMnDtDgMo6otQJUPzo0YKM3BnA+vAg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    }
+  ]
+}

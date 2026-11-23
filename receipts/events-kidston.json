@@ -1,0 +1,460 @@
+{
+  "title": "Kidston: events and people from original records",
+  "mine": "Kidston",
+  "method": "Every sentence of the Queensland Heritage Register entries matched to this mine (by name), plus sentences in other mining entries that name the mine, typed by fixed rules (lib/events.mjs). Quoted word for word with the record ID; nothing summarised. Each event is a capsule signed on its own (Ed25519 over canonical JSON); verify one with lib/sign.mjs verifyDoc(capsule.finding, capsule.attestation).",
+  "generated_at": "2026-11-23T10:43:18.514Z",
+  "summary": {
+    "events": 13,
+    "by_type": {
+      "people": 1,
+      "closure": 3,
+      "ownership": 3,
+      "accident or death": 2,
+      "workforce": 1,
+      "restart": 1,
+      "strike or dispute": 2
+    },
+    "people_named": 4,
+    "records": [
+      "601172",
+      "600506",
+      "600679"
+    ]
+  },
+  "people": [
+    "Aramac Councillors",
+    "Theodore Lindner",
+    "Alf Hooley",
+    "Diester Overstrom"
+  ],
+  "gaps": [
+    "Political connections and donations are not in the register; not established."
+  ],
+  "capsules": [
+    {
+      "finding": {
+        "mine": "Kidston",
+        "site_no": 479629,
+        "id": "qhr-601172-s12",
+        "types": [
+          "people"
+        ],
+        "year": 1906,
+        "people": [
+          "Aramac Councillors"
+        ],
+        "quote": "Ten years later, in 1906, a deputation of Aramac Councillors visited the Premier, William Kidston, seeking his support for the railway.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "601172",
+          "entry": "Aramac Tramway Museum",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=601172",
+          "sentence": 12
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "114c32a02ad0eb0d056867fa49d07623ab5d868a31c773e082b54957a6044503",
+        "signature": "5RkOwinuqKZJmC8CIM/AdIZOmtqEuAv9/kF3nu7vUk7Gpes03qu06B0ZMGnGnk2WiF8AC2gSsehmFet/bgVaAQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Kidston",
+        "site_no": 479629,
+        "id": "qhr-600506-s13",
+        "types": [
+          "closure"
+        ],
+        "year": 1914,
+        "people": [],
+        "quote": "Kidston settled into systematic mining and was not directly effected by World War I or the closure of the Chillagoe smelters from March 1914 until January 1920.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600506",
+          "entry": "Kidston State Battery & Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600506",
+          "sentence": 13
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "62146c0aa3381916a343cccecbf036bc8fbf311fc0509056ab6846441b39bb6b",
+        "signature": "xhZLFiBWLeJArE5L7t1sN8WJQesRc2O1m50rqXtD7VBbcIaqhB/G2Cvme8ju16rRFwN730ivCYfrIFyXnDmRCg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Kidston",
+        "site_no": 479629,
+        "id": "qhr-600506-s22",
+        "types": [
+          "ownership"
+        ],
+        "year": 1915,
+        "people": [],
+        "quote": "Labor politicians regarded State enterprise as 'State capitalism' rather than 'State socialism'.[1]\nIn the period 1915-25 the Queensland Government, as part of this broad, pragmatic Labor platform that advocated State intervention in the private sector to protect individuals against capitalist exploitation, instituted or acquired a diversity of business enterprises.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600506",
+          "entry": "Kidston State Battery & Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600506",
+          "sentence": 22
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "b419352111f5a66c7a9919c6a18ef050d1dd7f44d9cc1d46dfc794117476ecf3",
+        "signature": "GmP9fr/jeFYjz3350WhoecJrlblavhZNcl97mEwvXha613zPD0T4YRAKTm8L50rU00S24YtbjzdtzOIAkCxDAA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Kidston",
+        "site_no": 479629,
+        "id": "qhr-600506-s62",
+        "types": [
+          "accident or death"
+        ],
+        "year": 1917,
+        "people": [],
+        "quote": "Kidston cemetery is located about 2 km north of the township and contains 25 identifiable graves, including 10 with headstones.[3] The earliest headstone marks the grave of John Joseph Hall, who died on 28 January 1917 at 4 years 3 months.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600506",
+          "entry": "Kidston State Battery & Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600506",
+          "sentence": 62
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "d41fafb2567f9d8cadbd630a86d1f631e6c67b94882ab7fafbaecdd3abb6f1e0",
+        "signature": "On5WnpLY7Ypeb/WpU/Ormk+uWgdySq+XqD9Ba/pWI7pKKsLvHK759sne0UXC4no4IE8GBBqBa0UYGL3su90VCA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Kidston",
+        "site_no": 479629,
+        "id": "qhr-600506-s18",
+        "types": [
+          "workforce"
+        ],
+        "year": 1922,
+        "people": [],
+        "quote": "Between 11 and 18 men were employed establishing a sawmill, supplying the timber and constructing the battery, which commenced operations in May 1922.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600506",
+          "entry": "Kidston State Battery & Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600506",
+          "sentence": 18
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "6b3a161464c3a04c4996f7914a39e3fe6e19eb940ae3b43fbd80ebd09a0da63a",
+        "signature": "scH3nYcI62up/OsMZL/GCa3hlxJJqMP7tLFrkCUCSAEOIlp7EdRMFyfgp5emlH/oUK4metMNs1wVlXPSWAtRCw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Kidston",
+        "site_no": 479629,
+        "id": "qhr-600506-s38",
+        "types": [
+          "closure"
+        ],
+        "year": 1930,
+        "people": [],
+        "quote": "The school closed in 1930, but 15 buildings still remained in the township.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600506",
+          "entry": "Kidston State Battery & Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600506",
+          "sentence": 38
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "c05a3001b53c98d13f77ce35e4a103eda8773955c166e29fd13bebc1c634aa61",
+        "signature": "EIgz0iHwcaHKhUSjHq7z0E2QTPa4M9qtBDHiPqeC8cvrLH35zZMlyht8XC3y5TBCjzmDQjTW0UlEosTVNaGKCw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Kidston",
+        "site_no": 479629,
+        "id": "qhr-600506-s63",
+        "types": [
+          "accident or death"
+        ],
+        "year": 1939,
+        "people": [
+          "Theodore Lindner"
+        ],
+        "quote": "The latest headstone marks the grave of Theodore Lindner, who died in 1939 aged 53 years.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600506",
+          "entry": "Kidston State Battery & Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600506",
+          "sentence": 63
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "2f1ec2e1a5322f9bc96ee1b354a5872c2e714b91cb387d53ac762d827c5f6fdb",
+        "signature": "sviZadVK5mMC64yWzW8uomJ57PzJ/H4O6zLHD8ctzsYAt/JT+R2jcEtrll6QI+TXFdGs6FWqQ+J9lfiZG1bLBQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Kidston",
+        "site_no": 479629,
+        "id": "qhr-600506-s54",
+        "types": [
+          "restart"
+        ],
+        "year": 1947,
+        "people": [
+          "Alf Hooley"
+        ],
+        "quote": "The battery was reopened in 1947 with Alf Hooley as manager and 1,238 tons of stone were treated for a yield of 94 oz of gold.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600506",
+          "entry": "Kidston State Battery & Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600506",
+          "sentence": 54
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "26537b8e9c0f073b31bc60165aa6452f5fad20211b18cfc253f5912ef81d2af1",
+        "signature": "CIUm6q3M2t6RCHNPjBW1Z0gZsE4aXoshBcSvp10hqiKgaqBM7L7Ieg7Kngls3jCvyRzsWamhXXI/J0pnEkwdBg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Kidston",
+        "site_no": 479629,
+        "id": "qhr-600506-s56",
+        "types": [
+          "closure"
+        ],
+        "year": 1949,
+        "people": [],
+        "quote": "Crushing ceased early in 1949 and the battery did not operate after 1950.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600506",
+          "entry": "Kidston State Battery & Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600506",
+          "sentence": 56
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "269e33f6b731afee4e945d53526f76c71a83b5dcc2aa73a672e0b1797a310272",
+        "signature": "1lPfGS3EDQWOwJXWgrFVN4iNeUw6n1pyourA9sxhswB4EuOm3tWNrgcyacQ1iK5c+pOVhc6UT1ncGYdB0nroAA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Kidston",
+        "site_no": 479629,
+        "id": "qhr-600679-s43",
+        "types": [
+          "ownership"
+        ],
+        "year": 1951,
+        "people": [
+          "Diester Overstrom",
+          "Alf Hooley"
+        ],
+        "quote": "In 1951 Diester Overstrom tables were introduced after Alf Hooley, an experienced manager from Kidston and Chillagoe took over.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600679",
+          "entry": "Irvinebank State Treatment Works",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600679",
+          "sentence": 43
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "cc42ac6e92780fe9e1e7f71a36e0bae2fb4815242c41b665bb6354c366c24193",
+        "signature": "bBpJ8wJLoybQHxtnM+HtOAfqHoAzGVfDuSiuSCDvLzce1nCNLqO8/xR35LfMaRRlIbD9MUAld3wi+//DFw2fBQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Kidston",
+        "site_no": 479629,
+        "id": "qhr-600506-s12",
+        "types": [
+          "strike or dispute"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "Union activity was more evident and Kidston became more radical than other gold-mining towns in the Etheridge.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600506",
+          "entry": "Kidston State Battery & Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600506",
+          "sentence": 12
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "a6d3f3cda0917c1a267322bfcd437c86c7469b567e4eab446218547b744e442b",
+        "signature": "yw9FZqaXIirloQCeE032M45yq/cw9Ebu+sz6fU3srbDlrZEHzE0SETe7LeYXqu3l0CXSsP5V/slzCpWk3c0XBg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Kidston",
+        "site_no": 479629,
+        "id": "qhr-600506-s17",
+        "types": [
+          "strike or dispute"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "By September the Union Battery at Percyville was being dismantled and the machinery moved to Kidston, while other machinery was obtained from the Big Reef (Castleton).",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600506",
+          "entry": "Kidston State Battery & Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600506",
+          "sentence": 17
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "7163ef719028524911152ae2ca077e959e2c2626e43a1305630d3bbeb751de36",
+        "signature": "0Zd6zKTF0fh7vLEhvJCfZAl601btW1w4osYf1VjbheM/8/u91TppAGal+xu7OtM2T6CLhILPkFmH7T31wPvyAQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Kidston",
+        "site_no": 479629,
+        "id": "qhr-600506-s20",
+        "types": [
+          "ownership"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "The Labor party in general and Ryan and his Treasurer, EG Theodore, in particular, advocated public ownership of key economic activities, in competition with private enterprise, but at fair prices.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600506",
+          "entry": "Kidston State Battery & Township",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600506",
+          "sentence": 20
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "e6faad30e8e92375e22fced425f24331178314ae1ee81e518a0eaac69a2edfe3",
+        "signature": "loOe7MBtwripnNRHD3ANOVPrtP5uKQpY5xHwPjALWaeQjwUcBPA1vWjZyfJCAn0WWO2iN1DtufLGVklS3qb+Dw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    }
+  ]
+}

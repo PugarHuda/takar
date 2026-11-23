@@ -1,0 +1,71 @@
+{
+  "title": "Croydon King: events and people from original records",
+  "mine": "Croydon King",
+  "method": "Every sentence of the Queensland Heritage Register entries matched to this mine (by name), plus sentences in other mining entries that name the mine, typed by fixed rules (lib/events.mjs). Quoted word for word with the record ID; nothing summarised. Each event is a capsule signed on its own (Ed25519 over canonical JSON); verify one with lib/sign.mjs verifyDoc(capsule.finding, capsule.attestation).",
+  "generated_at": "2026-11-23T10:43:18.506Z",
+  "summary": {
+    "events": 1,
+    "by_type": {
+      "people": 1
+    },
+    "people_named": 7,
+    "records": [
+      "645605"
+    ]
+  },
+  "people": [
+    "Golden Gate",
+    "Twelve Mile",
+    "Homeward Bound",
+    "Mark Twain",
+    "Lower Twelve Mile",
+    "Morning Light",
+    "Alluvial Springs"
+  ],
+  "gaps": [
+    "No accident or death is recorded in the register entries; that is not evidence that none happened.",
+    "Political connections and donations are not in the register; not established."
+  ],
+  "capsules": [
+    {
+      "finding": {
+        "mine": "Croydon King",
+        "site_no": 479076,
+        "id": "qhr-645605-s18",
+        "types": [
+          "people"
+        ],
+        "year": null,
+        "people": [
+          "Golden Gate",
+          "Twelve Mile",
+          "Homeward Bound",
+          "Mark Twain",
+          "Lower Twelve Mile",
+          "Morning Light",
+          "Alluvial Springs"
+        ],
+        "quote": "From the mid-1880s satellite communities were established at many of the outlying reefs, with townships being formed at Golden Gate, Tabletop, Gorge Creek, Golden Valley, Goldstone, Carron and Twelve Mile, and campsites at Homeward Bound, Croydon King, Mark Twain, Lower Twelve Mile, Mulligan s, Flanagan s, Morning Light, Moonstone and Alluvial Springs.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "645605",
+          "entry": "Golden Gate Mining and Town Complex",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645605",
+          "sentence": 18
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "911dbad7baf1817104fd5be9b45667e115c6073baa3d1cc81310a009fdb8b7de",
+        "signature": "87pryXOlnBp6ILXwIZauTqbtJdbpMsMyusUXobw9so9B5f+TLGE03N5RtAOs6CDJeZuYtFnp8nQTOHAo/MlrCg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    }
+  ]
+}

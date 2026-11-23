@@ -1,0 +1,18 @@
+{
+  "title": "Golden Plateau: events and people from original records",
+  "mine": "Golden Plateau",
+  "method": "Every sentence of the Queensland Heritage Register entries matched to this mine (by name), plus sentences in other mining entries that name the mine, typed by fixed rules (lib/events.mjs). Quoted word for word with the record ID; nothing summarised. Each event is a capsule signed on its own (Ed25519 over canonical JSON); verify one with lib/sign.mjs verifyDoc(capsule.finding, capsule.attestation).",
+  "generated_at": "2026-11-23T10:43:18.508Z",
+  "summary": {
+    "events": 0,
+    "by_type": {},
+    "people_named": 0,
+    "records": []
+  },
+  "people": [],
+  "gaps": [
+    "No Queensland Heritage Register entry tells this mine's story, and no other mining entry names it: events and people are not established from this register. Trove newspapers and mining journals are the next source.",
+    "Political connections and donations are not in the register; not established."
+  ],
+  "capsules": []
+}
