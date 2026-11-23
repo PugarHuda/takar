@@ -1,0 +1,1868 @@
+{
+ "source": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?eventlist=TC",
+ "fetched": "2026-11-23",
+ "events": [
+  {
+   "id": 1001230,
+   "name": "Tropical Cyclone MELISSA-25",
+   "alert": "Red",
+   "from": "2025-10-21T15:00:00",
+   "to": "2025-10-31T15:00:00",
+   "countries": [
+    "Jamaica",
+    "Cuba",
+    "Bermuda",
+    "Haiti",
+    "Canada"
+   ]
+  },
+  {
+   "id": 1001231,
+   "name": "Tropical Cyclone SONIA-25",
+   "alert": "Green",
+   "from": "2025-10-24T21:00:00",
+   "to": "2025-10-29T09:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001232,
+   "name": "Tropical Cyclone MONTHA-25",
+   "alert": "Orange",
+   "from": "2025-10-26T12:00:00",
+   "to": "2025-10-29T00:00:00",
+   "countries": [
+    "India"
+   ]
+  },
+  {
+   "id": 1001228,
+   "name": "Tropical Cyclone CHENGE-26",
+   "alert": "Green",
+   "from": "2025-10-18T06:00:00",
+   "to": "2025-10-25T18:00:00",
+   "countries": [
+    "British Indian Ocean Territory"
+   ]
+  },
+  {
+   "id": 1001229,
+   "name": "Tropical Cyclone FENGSHEN-25",
+   "alert": "Orange",
+   "from": "2025-10-18T00:00:00",
+   "to": "2025-10-23T00:00:00",
+   "countries": [
+    "China",
+    "Cambodia",
+    "Philippines",
+    "Laos",
+    "Thailand"
+   ]
+  },
+  {
+   "id": 1001227,
+   "name": "Tropical Cyclone LORENZO-25",
+   "alert": "Green",
+   "from": "2025-10-13T09:00:00",
+   "to": "2025-10-15T21:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001224,
+   "name": "Tropical Cyclone NAKRI-25",
+   "alert": "Green",
+   "from": "2025-10-08T06:00:00",
+   "to": "2025-10-14T12:00:00",
+   "countries": [
+    "Japan"
+   ]
+  },
+  {
+   "id": 1001225,
+   "name": "Tropical Cyclone RAYMOND-25",
+   "alert": "Green",
+   "from": "2025-10-09T15:00:00",
+   "to": "2025-10-12T03:00:00",
+   "countries": [
+    "Mexico"
+   ]
+  },
+  {
+   "id": 1001223,
+   "name": "Tropical Cyclone JERRY-25",
+   "alert": "Green",
+   "from": "2025-10-07T15:00:00",
+   "to": "2025-10-11T21:00:00",
+   "countries": [
+    "Montserrat",
+    "Anguilla",
+    "Guadeloupe",
+    "Dominica",
+    "Martinique"
+   ]
+  },
+  {
+   "id": 1001226,
+   "name": "Tropical Cyclone KAREN-25",
+   "alert": "Green",
+   "from": "2025-10-10T03:00:00",
+   "to": "2025-10-10T21:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001222,
+   "name": "Tropical Cyclone PRISCILLA-25",
+   "alert": "Green",
+   "from": "2025-10-04T21:00:00",
+   "to": "2025-10-10T21:00:00",
+   "countries": [
+    "Mexico"
+   ]
+  },
+  {
+   "id": 1001221,
+   "name": "Tropical Cyclone HALONG-25",
+   "alert": "Green",
+   "from": "2025-10-04T12:00:00",
+   "to": "2025-10-09T18:00:00",
+   "countries": [
+    "Japan"
+   ]
+  },
+  {
+   "id": 1001217,
+   "name": "Tropical Cyclone OCTAVE-25",
+   "alert": "Green",
+   "from": "2025-09-30T09:00:00",
+   "to": "2025-10-09T15:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001220,
+   "name": "Tropical Cyclone SHAKHTI-25",
+   "alert": "Green",
+   "from": "2025-10-03T00:00:00",
+   "to": "2025-10-06T12:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001219,
+   "name": "Tropical Cyclone MATMO-25",
+   "alert": "Red",
+   "from": "2025-10-01T06:00:00",
+   "to": "2025-10-05T18:00:00",
+   "countries": [
+    "China",
+    "Philippines"
+   ]
+  },
+  {
+   "id": 1001216,
+   "name": "Tropical Cyclone IMELDA-25",
+   "alert": "Green",
+   "from": "2025-09-26T21:00:00",
+   "to": "2025-10-02T15:00:00",
+   "countries": [
+    "Bermuda",
+    "Cuba"
+   ]
+  },
+  {
+   "id": 1001218,
+   "name": "Tropical Cyclone ONE-25",
+   "alert": "Orange",
+   "from": "2025-10-01T06:00:00",
+   "to": "2025-10-02T12:00:00",
+   "countries": [
+    "India"
+   ]
+  },
+  {
+   "id": 1001215,
+   "name": "Tropical Cyclone HUMBERTO-25",
+   "alert": "Green",
+   "from": "2025-09-24T21:00:00",
+   "to": "2025-10-01T15:00:00",
+   "countries": [
+    "Bermuda"
+   ]
+  },
+  {
+   "id": 1001213,
+   "name": "Tropical Cyclone NARDA-25",
+   "alert": "Green",
+   "from": "2025-09-21T21:00:00",
+   "to": "2025-09-29T03:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001212,
+   "name": "Tropical Cyclone NEOGURI-25",
+   "alert": "Green",
+   "from": "2025-09-18T12:00:00",
+   "to": "2025-09-29T00:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001214,
+   "name": "Tropical Cyclone BUALOI-25",
+   "alert": "Red",
+   "from": "2025-09-23T12:00:00",
+   "to": "2025-09-28T18:00:00",
+   "countries": [
+    "Philippines",
+    "Laos"
+   ]
+  },
+  {
+   "id": 1001210,
+   "name": "Tropical Cyclone GABRIELLE-25",
+   "alert": "Green",
+   "from": "2025-09-17T09:00:00",
+   "to": "2025-09-26T15:00:00",
+   "countries": [
+    "Portugal",
+    "Spain"
+   ]
+  },
+  {
+   "id": 1001211,
+   "name": "Tropical Cyclone RAGASA-25",
+   "alert": "Red",
+   "from": "2025-09-18T12:00:00",
+   "to": "2025-09-24T12:00:00",
+   "countries": [
+    "Philippines",
+    "China"
+   ]
+  },
+  {
+   "id": 1001209,
+   "name": "Tropical Cyclone MITAG-25",
+   "alert": "Green",
+   "from": "2025-09-16T06:00:00",
+   "to": "2025-09-19T06:00:00",
+   "countries": [
+    "Philippines",
+    "China"
+   ]
+  },
+  {
+   "id": 1001208,
+   "name": "Tropical Cyclone MARIO-25",
+   "alert": "Green",
+   "from": "2025-09-11T21:00:00",
+   "to": "2025-09-17T03:00:00",
+   "countries": [
+    "Mexico"
+   ]
+  },
+  {
+   "id": 1001207,
+   "name": "Tropical Cyclone BLOSSOM-26",
+   "alert": "Green",
+   "from": "2025-09-09T06:00:00",
+   "to": "2025-09-11T12:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001203,
+   "name": "Tropical Cyclone KIKO-25",
+   "alert": "Green",
+   "from": "2025-08-31T09:00:00",
+   "to": "2025-09-10T15:00:00",
+   "countries": [
+    "United States"
+   ]
+  },
+  {
+   "id": 1001206,
+   "name": "Tropical Cyclone TAPAH-25",
+   "alert": "Orange",
+   "from": "2025-09-06T06:00:00",
+   "to": "2025-09-08T00:00:00",
+   "countries": [
+    "China"
+   ]
+  },
+  {
+   "id": 1001205,
+   "name": "Tropical Cyclone PEIPAH-25",
+   "alert": "Green",
+   "from": "2025-09-03T12:00:00",
+   "to": "2025-09-05T12:00:00",
+   "countries": [
+    "Japan"
+   ]
+  },
+  {
+   "id": 1001204,
+   "name": "Tropical Cyclone LORENA-25",
+   "alert": "Green",
+   "from": "2025-09-02T03:00:00",
+   "to": "2025-09-05T09:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001202,
+   "name": "Tropical Cyclone NONGFA-25",
+   "alert": "Green",
+   "from": "2025-08-28T06:00:00",
+   "to": "2025-08-30T12:00:00",
+   "countries": [
+    "China",
+    "Laos",
+    "Thailand"
+   ]
+  },
+  {
+   "id": 1001200,
+   "name": "Tropical Cyclone FERNAND-25",
+   "alert": "Green",
+   "from": "2025-08-23T21:00:00",
+   "to": "2025-08-28T09:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001201,
+   "name": "Tropical Cyclone JULIETTE-25",
+   "alert": "Green",
+   "from": "2025-08-24T21:00:00",
+   "to": "2025-08-28T09:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001199,
+   "name": "Tropical Cyclone KAJIKI-25",
+   "alert": "Red",
+   "from": "2025-08-22T12:00:00",
+   "to": "2025-08-25T12:00:00",
+   "countries": [
+    "China",
+    "Laos"
+   ]
+  },
+  {
+   "id": 1001196,
+   "name": "Tropical Cyclone ERIN-25",
+   "alert": "Green",
+   "from": "2025-08-11T15:00:00",
+   "to": "2025-08-22T21:00:00",
+   "countries": [
+    "Puerto Rico",
+    "Dominican Republic",
+    "United States",
+    "Canada",
+    "Bermuda",
+    "Anguilla",
+    "Iceland",
+    "Ireland",
+    "United Kingdom"
+   ]
+  },
+  {
+   "id": 1001198,
+   "name": "Tropical Cyclone LINGLING-25",
+   "alert": "Green",
+   "from": "2025-08-19T06:00:00",
+   "to": "2025-08-22T00:00:00",
+   "countries": [
+    "Japan"
+   ]
+  },
+  {
+   "id": 1001197,
+   "name": "Tropical Cyclone SEVENTEEN-25",
+   "alert": "Green",
+   "from": "2025-08-18T06:00:00",
+   "to": "2025-08-18T18:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001194,
+   "name": "Tropical Cyclone PODUL-25",
+   "alert": "Orange",
+   "from": "2025-08-07T00:00:00",
+   "to": "2025-08-13T18:00:00",
+   "countries": [
+    "Taiwan",
+    "China"
+   ]
+  },
+  {
+   "id": 1001191,
+   "name": "Tropical Cyclone HENRIETTE-25",
+   "alert": "Green",
+   "from": "2025-08-04T09:00:00",
+   "to": "2025-08-13T09:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001193,
+   "name": "Tropical Cyclone IVO-25",
+   "alert": "Green",
+   "from": "2025-08-06T21:00:00",
+   "to": "2025-08-11T15:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001195,
+   "name": "Tropical Cyclone AWO-26",
+   "alert": "Green",
+   "from": "2025-08-07T00:00:00",
+   "to": "2025-08-08T06:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001189,
+   "name": "Tropical Cyclone DEXTER-25",
+   "alert": "Green",
+   "from": "2025-08-04T03:00:00",
+   "to": "2025-08-07T15:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001192,
+   "name": "Tropical Cyclone FIFTEEN-25",
+   "alert": "Green",
+   "from": "2025-08-06T00:00:00",
+   "to": "2025-08-07T00:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001188,
+   "name": "Tropical Cyclone BAILU-25",
+   "alert": "Green",
+   "from": "2025-08-02T00:00:00",
+   "to": "2025-08-06T00:00:00",
+   "countries": [
+    "Japan"
+   ]
+  },
+  {
+   "id": 1001190,
+   "name": "Tropical Cyclone FOURTEEN-25",
+   "alert": "Green",
+   "from": "2025-08-04T00:00:00",
+   "to": "2025-08-04T12:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001184,
+   "name": "Tropical Cyclone KROSA-25",
+   "alert": "Green",
+   "from": "2025-07-23T18:00:00",
+   "to": "2025-08-03T18:00:00",
+   "countries": [
+    "Japan"
+   ]
+  },
+  {
+   "id": 1001187,
+   "name": "Tropical Cyclone GIL-25",
+   "alert": "Green",
+   "from": "2025-07-31T09:00:00",
+   "to": "2025-08-03T15:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001185,
+   "name": "Tropical Cyclone ONE-C-25",
+   "alert": "Green",
+   "from": "2025-07-27T09:00:00",
+   "to": "2025-08-02T03:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001186,
+   "name": "Tropical Cyclone TWO-C-25",
+   "alert": "Green",
+   "from": "2025-07-28T15:00:00",
+   "to": "2025-07-30T21:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001183,
+   "name": "Tropical Cyclone CO-MAY-25",
+   "alert": "Orange",
+   "from": "2025-07-23T00:00:00",
+   "to": "2025-07-30T12:00:00",
+   "countries": [
+    "Philippines",
+    "Japan",
+    "China"
+   ]
+  },
+  {
+   "id": 1001182,
+   "name": "Tropical Cyclone FRANCISCO-25",
+   "alert": "Green",
+   "from": "2025-07-22T06:00:00",
+   "to": "2025-07-25T12:00:00",
+   "countries": [
+    "Japan",
+    "China",
+    "Taiwan"
+   ]
+  },
+  {
+   "id": 1001181,
+   "name": "Tropical Cyclone WIPHA-25",
+   "alert": "Orange",
+   "from": "2025-07-18T12:00:00",
+   "to": "2025-07-22T06:00:00",
+   "countries": [
+    "China",
+    "Philippines"
+   ]
+  },
+  {
+   "id": 1001180,
+   "name": "Tropical Cyclone 01-20252026-26",
+   "alert": "Green",
+   "from": "2025-07-17T06:00:00",
+   "to": "2025-07-18T12:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001179,
+   "name": "Tropical Cyclone EIGHT-25",
+   "alert": "Green",
+   "from": "2025-07-15T00:00:00",
+   "to": "2025-07-15T18:00:00",
+   "countries": [
+    "Japan"
+   ]
+  },
+  {
+   "id": 1001177,
+   "name": "Tropical Cyclone NARI-25",
+   "alert": "Green",
+   "from": "2025-07-11T00:00:00",
+   "to": "2025-07-14T18:00:00",
+   "countries": [
+    "Japan"
+   ]
+  },
+  {
+   "id": 1001178,
+   "name": "Tropical Cyclone SEVEN-25",
+   "alert": "Green",
+   "from": "2025-07-12T18:00:00",
+   "to": "2025-07-14T00:00:00",
+   "countries": [
+    "Japan"
+   ]
+  },
+  {
+   "id": 1001175,
+   "name": "Tropical Cyclone DANAS-25",
+   "alert": "Green",
+   "from": "2025-07-04T00:00:00",
+   "to": "2025-07-08T18:00:00",
+   "countries": [
+    "Taiwan",
+    "China"
+   ]
+  },
+  {
+   "id": 1001174,
+   "name": "Tropical Cyclone MUN-25",
+   "alert": "Green",
+   "from": "2025-07-01T18:00:00",
+   "to": "2025-07-08T00:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001176,
+   "name": "Tropical Cyclone CHANTAL-25",
+   "alert": "Green",
+   "from": "2025-07-04T21:00:00",
+   "to": "2025-07-06T15:00:00",
+   "countries": [
+    "United States"
+   ]
+  },
+  {
+   "id": 1001173,
+   "name": "Tropical Cyclone FLOSSIE-25",
+   "alert": "Green",
+   "from": "2025-06-29T09:00:00",
+   "to": "2025-07-03T21:00:00",
+   "countries": [
+    "Mexico"
+   ]
+  },
+  {
+   "id": 1001172,
+   "name": "Tropical Cyclone BARRY-25",
+   "alert": "Green",
+   "from": "2025-06-28T21:00:00",
+   "to": "2025-06-30T09:00:00",
+   "countries": [
+    "Mexico"
+   ]
+  },
+  {
+   "id": 1001169,
+   "name": "Tropical Cyclone SEPAT-25",
+   "alert": "Green",
+   "from": "2025-06-22T12:00:00",
+   "to": "2025-06-26T06:00:00",
+   "countries": [
+    "Japan"
+   ]
+  },
+  {
+   "id": 1001171,
+   "name": "Tropical Cyclone THREE-25",
+   "alert": "Green",
+   "from": "2025-06-25T06:00:00",
+   "to": "2025-06-26T06:00:00",
+   "countries": [
+    "China"
+   ]
+  },
+  {
+   "id": 1001170,
+   "name": "Tropical Cyclone ANDREA-25",
+   "alert": "Green",
+   "from": "2025-06-24T15:00:00",
+   "to": "2025-06-25T03:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001168,
+   "name": "Tropical Cyclone ERICK-25",
+   "alert": "Red",
+   "from": "2025-06-16T21:00:00",
+   "to": "2025-06-20T03:00:00",
+   "countries": [
+    "Mexico"
+   ]
+  },
+  {
+   "id": 1001167,
+   "name": "Tropical Cyclone DALILA-25",
+   "alert": "Green",
+   "from": "2025-06-12T21:00:00",
+   "to": "2025-06-16T03:00:00",
+   "countries": [
+    "Mexico"
+   ]
+  },
+  {
+   "id": 1001166,
+   "name": "Tropical Cyclone WUTIP-25",
+   "alert": "Orange",
+   "from": "2025-06-10T12:00:00",
+   "to": "2025-06-14T06:00:00",
+   "countries": [
+    "China"
+   ]
+  },
+  {
+   "id": 1001165,
+   "name": "Tropical Cyclone COSME-25",
+   "alert": "Green",
+   "from": "2025-06-08T15:00:00",
+   "to": "2025-06-11T15:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001164,
+   "name": "Tropical Cyclone BARBARA-25",
+   "alert": "Green",
+   "from": "2025-06-08T09:00:00",
+   "to": "2025-06-11T03:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001163,
+   "name": "Tropical Cyclone ALVIN-25",
+   "alert": "Green",
+   "from": "2025-05-28T21:00:00",
+   "to": "2025-05-31T15:00:00",
+   "countries": [
+    "Mexico"
+   ]
+  },
+  {
+   "id": 1001162,
+   "name": "Tropical Cyclone THIRTYTWO-25",
+   "alert": "Green",
+   "from": "2025-05-11T06:00:00",
+   "to": "2025-05-12T00:00:00",
+   "countries": [
+    "Indonesia"
+   ]
+  },
+  {
+   "id": 1001160,
+   "name": "Tropical Cyclone THIRTYONE-25",
+   "alert": "Green",
+   "from": "2025-04-18T06:00:00",
+   "to": "2025-04-22T12:00:00",
+   "countries": [
+    "Australia",
+    "Indonesia"
+   ]
+  },
+  {
+   "id": 1001161,
+   "name": "Tropical Cyclone KANTO-25",
+   "alert": "Green",
+   "from": "2025-04-17T00:00:00",
+   "to": "2025-04-21T00:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001158,
+   "name": "Tropical Cyclone ERROL-25",
+   "alert": "Green",
+   "from": "2025-04-11T18:00:00",
+   "to": "2025-04-18T12:00:00",
+   "countries": [
+    "Australia"
+   ]
+  },
+  {
+   "id": 1001159,
+   "name": "Tropical Cyclone TAM-25",
+   "alert": "Green",
+   "from": "2025-04-14T06:00:00",
+   "to": "2025-04-15T12:00:00",
+   "countries": [
+    "Vanuatu",
+    "New Caledonia"
+   ]
+  },
+  {
+   "id": 1001156,
+   "name": "Tropical Cyclone COURTNEY-25",
+   "alert": "Green",
+   "from": "2025-03-24T12:00:00",
+   "to": "2025-04-01T06:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001157,
+   "name": "Tropical Cyclone DIANNE-25",
+   "alert": "Green",
+   "from": "2025-03-28T00:00:00",
+   "to": "2025-03-28T18:00:00",
+   "countries": [
+    "Australia"
+   ]
+  },
+  {
+   "id": 1001155,
+   "name": "Tropical Cyclone TWENTYSIX-25",
+   "alert": "Green",
+   "from": "2025-03-18T18:00:00",
+   "to": "2025-03-20T18:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001154,
+   "name": "Tropical Cyclone JUDE-25",
+   "alert": "Red",
+   "from": "2025-03-08T18:00:00",
+   "to": "2025-03-16T00:00:00",
+   "countries": [
+    "Mozambique",
+    "Madagascar"
+   ]
+  },
+  {
+   "id": 1001153,
+   "name": "Tropical Cyclone IVONE-25",
+   "alert": "Green",
+   "from": "2025-03-08T06:00:00",
+   "to": "2025-03-11T18:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001147,
+   "name": "Tropical Cyclone ALFRED-25",
+   "alert": "Green",
+   "from": "2025-02-22T06:00:00",
+   "to": "2025-03-08T00:00:00",
+   "countries": [
+    "Australia"
+   ]
+  },
+  {
+   "id": 1001152,
+   "name": "Tropical Cyclone HONDE-25",
+   "alert": "Orange",
+   "from": "2025-02-25T18:00:00",
+   "to": "2025-03-05T06:00:00",
+   "countries": [
+    "Madagascar"
+   ]
+  },
+  {
+   "id": 1001151,
+   "name": "Tropical Cyclone GARANCE-25",
+   "alert": "Red",
+   "from": "2025-02-25T00:00:00",
+   "to": "2025-03-02T00:00:00",
+   "countries": [
+    "La Reunion"
+   ]
+  },
+  {
+   "id": 1001150,
+   "name": "Tropical Cyclone SERU-25",
+   "alert": "Green",
+   "from": "2025-02-24T18:00:00",
+   "to": "2025-02-28T00:00:00",
+   "countries": [
+    "Vanuatu",
+    "New Caledonia"
+   ]
+  },
+  {
+   "id": 1001149,
+   "name": "Tropical Cyclone BIANCA-25",
+   "alert": "Green",
+   "from": "2025-02-23T06:00:00",
+   "to": "2025-02-26T18:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001148,
+   "name": "Tropical Cyclone RAE-25",
+   "alert": "Green",
+   "from": "2025-02-22T12:00:00",
+   "to": "2025-02-25T18:00:00",
+   "countries": [
+    "Fiji"
+   ]
+  },
+  {
+   "id": 1001141,
+   "name": "Tropical Cyclone TALIAH-25",
+   "alert": "Green",
+   "from": "2025-02-02T00:00:00",
+   "to": "2025-02-18T18:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001145,
+   "name": "Tropical Cyclone ZELIA-25",
+   "alert": "Green",
+   "from": "2025-02-11T06:00:00",
+   "to": "2025-02-14T06:00:00",
+   "countries": [
+    "Australia"
+   ]
+  },
+  {
+   "id": 1001143,
+   "name": "Tropical Cyclone VINCE-25",
+   "alert": "Green",
+   "from": "2025-02-01T06:00:00",
+   "to": "2025-02-12T06:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001144,
+   "name": "Tropical Cyclone SIXTEEN-25",
+   "alert": "Green",
+   "from": "2025-02-11T00:00:00",
+   "to": "2025-02-12T00:00:00",
+   "countries": [
+    "New Caledonia"
+   ]
+  },
+  {
+   "id": 1001142,
+   "name": "Tropical Cyclone FIFTEEN-25",
+   "alert": "Green",
+   "from": "2025-02-02T12:00:00",
+   "to": "2025-02-05T00:00:00",
+   "countries": [
+    "Vanuatu",
+    "New Caledonia"
+   ]
+  },
+  {
+   "id": 1001138,
+   "name": "Tropical Cyclone FAIDA-25",
+   "alert": "Green",
+   "from": "2025-01-30T00:00:00",
+   "to": "2025-02-03T18:00:00",
+   "countries": [
+    "Madagascar",
+    "Mozambique",
+    "Zimbabwe"
+   ]
+  },
+  {
+   "id": 1001139,
+   "name": "Tropical Cyclone ELVIS-25",
+   "alert": "Green",
+   "from": "2025-01-28T12:00:00",
+   "to": "2025-01-31T06:00:00",
+   "countries": [
+    "Madagascar"
+   ]
+  },
+  {
+   "id": 1001137,
+   "name": "Tropical Cyclone SEAN-25",
+   "alert": "Green",
+   "from": "2025-01-18T00:00:00",
+   "to": "2025-01-23T06:00:00",
+   "countries": [
+    "Australia"
+   ]
+  },
+  {
+   "id": 1001135,
+   "name": "Tropical Cyclone DIKELEDI-25",
+   "alert": "Orange",
+   "from": "2025-01-08T00:00:00",
+   "to": "2025-01-17T12:00:00",
+   "countries": [
+    "Madagascar",
+    "Mozambique",
+    "Comoros"
+   ]
+  },
+  {
+   "id": 1001136,
+   "name": "Tropical Cyclone PITA-25",
+   "alert": "Green",
+   "from": "2025-01-11T00:00:00",
+   "to": "2025-01-12T00:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001134,
+   "name": "Tropical Cyclone SIX-24",
+   "alert": "Green",
+   "from": "2024-12-29T06:00:00",
+   "to": "2024-12-30T00:00:00",
+   "countries": [
+    "Fiji"
+   ]
+  },
+  {
+   "id": 1001133,
+   "name": "Tropical Cyclone FIVE-24",
+   "alert": "Green",
+   "from": "2024-12-27T00:00:00",
+   "to": "2024-12-28T06:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001132,
+   "name": "Tropical Cyclone PABUK-24",
+   "alert": "Green",
+   "from": "2024-12-22T12:00:00",
+   "to": "2024-12-25T06:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001131,
+   "name": "Tropical Cyclone CHIDO-25",
+   "alert": "Red",
+   "from": "2024-12-09T18:00:00",
+   "to": "2024-12-16T12:00:00",
+   "countries": [
+    "Mozambique",
+    "Madagascar",
+    "Comoros",
+    "Mayotte"
+   ]
+  },
+  {
+   "id": 1001130,
+   "name": "Tropical Cyclone FENGAL-24",
+   "alert": "Orange",
+   "from": "2024-11-29T18:00:00",
+   "to": "2024-12-01T06:00:00",
+   "countries": [
+    "India"
+   ]
+  },
+  {
+   "id": 1001129,
+   "name": "Tropical Cyclone ROBYN-24",
+   "alert": "Green",
+   "from": "2024-11-27T12:00:00",
+   "to": "2024-11-29T12:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001128,
+   "name": "Tropical Cyclone BHEKI-25",
+   "alert": "Green",
+   "from": "2024-11-14T00:00:00",
+   "to": "2024-11-22T06:00:00",
+   "countries": [
+    "Mauritius"
+   ]
+  },
+  {
+   "id": 1001124,
+   "name": "Tropical Cyclone MAN-YI-24",
+   "alert": "Red",
+   "from": "2024-11-09T00:00:00",
+   "to": "2024-11-19T12:00:00",
+   "countries": [
+    "Philippines",
+    "China",
+    "Guam"
+   ]
+  },
+  {
+   "id": 1001127,
+   "name": "Tropical Cyclone SARA-24",
+   "alert": "Green",
+   "from": "2024-11-13T21:00:00",
+   "to": "2024-11-18T09:00:00",
+   "countries": [
+    "Honduras",
+    "Guatemala",
+    "Nicaragua",
+    "Mexico",
+    "Belize"
+   ]
+  },
+  {
+   "id": 1001126,
+   "name": "Tropical Cyclone USAGI-24",
+   "alert": "Red",
+   "from": "2024-11-11T00:00:00",
+   "to": "2024-11-16T06:00:00",
+   "countries": [
+    "Philippines",
+    "Taiwan"
+   ]
+  },
+  {
+   "id": 1001125,
+   "name": "Tropical Cyclone TORAJI-24",
+   "alert": "Orange",
+   "from": "2024-11-09T06:00:00",
+   "to": "2024-11-14T00:00:00",
+   "countries": [
+    "Philippines",
+    "China"
+   ]
+  },
+  {
+   "id": 1001121,
+   "name": "Tropical Cyclone YINXING-24",
+   "alert": "Red",
+   "from": "2024-11-03T06:00:00",
+   "to": "2024-11-12T12:00:00",
+   "countries": [
+    "Philippines"
+   ]
+  },
+  {
+   "id": 1001122,
+   "name": "Tropical Cyclone RAFAEL-24",
+   "alert": "Orange",
+   "from": "2024-11-03T21:00:00",
+   "to": "2024-11-10T21:00:00",
+   "countries": [
+    "Cuba",
+    "Jamaica"
+   ]
+  },
+  {
+   "id": 1001123,
+   "name": "Tropical Cyclone FOURTEEN-E-24",
+   "alert": "Green",
+   "from": "2024-11-06T15:00:00",
+   "to": "2024-11-07T21:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001120,
+   "name": "Tropical Cyclone PATTY-24",
+   "alert": "Green",
+   "from": "2024-11-02T09:00:00",
+   "to": "2024-11-04T15:00:00",
+   "countries": [
+    "Portugal"
+   ]
+  },
+  {
+   "id": 1001119,
+   "name": "Tropical Cyclone LANE-24",
+   "alert": "Green",
+   "from": "2024-11-01T21:00:00",
+   "to": "2024-11-03T15:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001118,
+   "name": "Tropical Cyclone KONG-REY-24",
+   "alert": "Red",
+   "from": "2024-10-25T00:00:00",
+   "to": "2024-11-01T18:00:00",
+   "countries": [
+    "Philippines",
+    "Taiwan",
+    "China",
+    "Japan"
+   ]
+  },
+  {
+   "id": 1001115,
+   "name": "Tropical Cyclone TRAMI-24",
+   "alert": "Orange",
+   "from": "2024-10-20T12:00:00",
+   "to": "2024-10-28T18:00:00",
+   "countries": [
+    "China",
+    "Philippines",
+    "Cambodia",
+    "Laos",
+    "Taiwan"
+   ]
+  },
+  {
+   "id": 1001116,
+   "name": "Tropical Cyclone KRISTY-24",
+   "alert": "Green",
+   "from": "2024-10-21T21:00:00",
+   "to": "2024-10-27T15:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001117,
+   "name": "Tropical Cyclone DANA-24",
+   "alert": "Red",
+   "from": "2024-10-23T06:00:00",
+   "to": "2024-10-25T00:00:00",
+   "countries": [
+    "India"
+   ]
+  },
+  {
+   "id": 1001114,
+   "name": "Tropical Cyclone OSCAR-24",
+   "alert": "Orange",
+   "from": "2024-10-19T15:00:00",
+   "to": "2024-10-22T18:00:00",
+   "countries": [
+    "Cuba",
+    "United States"
+   ]
+  },
+  {
+   "id": 1001113,
+   "name": "Tropical Cyclone NADINE-24",
+   "alert": "Orange",
+   "from": "2024-10-18T21:00:00",
+   "to": "2024-10-20T15:00:00",
+   "countries": [
+    "Guatemala",
+    "Mexico",
+    "Belize",
+    "Honduras",
+    "Nicaragua"
+   ]
+  },
+  {
+   "id": 1001110,
+   "name": "Tropical Cyclone LESLIE-24",
+   "alert": "Green",
+   "from": "2024-10-02T15:00:00",
+   "to": "2024-10-12T15:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001111,
+   "name": "Tropical Cyclone MILTON-24",
+   "alert": "Orange",
+   "from": "2024-10-05T15:00:00",
+   "to": "2024-10-10T21:00:00",
+   "countries": [
+    "Mexico",
+    "United States"
+   ]
+  },
+  {
+   "id": 1001112,
+   "name": "Tropical Cyclone BARIJAT-24",
+   "alert": "Green",
+   "from": "2024-10-06T06:00:00",
+   "to": "2024-10-10T06:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001107,
+   "name": "Tropical Cyclone KIRK-24",
+   "alert": "Green",
+   "from": "2024-09-29T21:00:00",
+   "to": "2024-10-07T15:00:00",
+   "countries": [
+    "Portugal",
+    "Spain",
+    "France",
+    "United Kingdom",
+    "Belgium",
+    "Luxembourg",
+    "Germany"
+   ]
+  },
+  {
+   "id": 1001109,
+   "name": "Tropical Cyclone ELEVEN-E-24",
+   "alert": "Green",
+   "from": "2024-10-01T21:00:00",
+   "to": "2024-10-03T21:00:00",
+   "countries": [
+    "Mexico"
+   ]
+  },
+  {
+   "id": 1001105,
+   "name": "Tropical Cyclone KRATHON-24",
+   "alert": "Orange",
+   "from": "2024-09-27T06:00:00",
+   "to": "2024-10-03T18:00:00",
+   "countries": [
+    "China",
+    "Philippines",
+    "Taiwan"
+   ]
+  },
+  {
+   "id": 1001104,
+   "name": "Tropical Cyclone JEBI-24",
+   "alert": "Green",
+   "from": "2024-09-26T12:00:00",
+   "to": "2024-10-02T06:00:00",
+   "countries": [
+    "Japan",
+    "United States"
+   ]
+  },
+  {
+   "id": 1001108,
+   "name": "Tropical Cyclone ANCHA-25",
+   "alert": "Green",
+   "from": "2024-10-01T18:00:00",
+   "to": "2024-10-02T00:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001106,
+   "name": "Tropical Cyclone JOYCE-24",
+   "alert": "Green",
+   "from": "2024-09-27T15:00:00",
+   "to": "2024-10-01T03:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001103,
+   "name": "Tropical Cyclone ISAAC-24",
+   "alert": "Green",
+   "from": "2024-09-26T03:00:00",
+   "to": "2024-09-30T15:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001101,
+   "name": "Tropical Cyclone HELENE-24",
+   "alert": "Red",
+   "from": "2024-09-23T15:00:00",
+   "to": "2024-09-27T21:00:00",
+   "countries": [
+    "United States",
+    "Mexico",
+    "Belize"
+   ]
+  },
+  {
+   "id": 1001100,
+   "name": "Tropical Cyclone JOHN-24",
+   "alert": "Orange",
+   "from": "2024-09-22T21:00:00",
+   "to": "2024-09-27T21:00:00",
+   "countries": [
+    "Mexico"
+   ]
+  },
+  {
+   "id": 1001102,
+   "name": "Tropical Cyclone CIMARON-24",
+   "alert": "Green",
+   "from": "2024-09-24T12:00:00",
+   "to": "2024-09-27T00:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001099,
+   "name": "Tropical Cyclone SEVENTEEN-24",
+   "alert": "Green",
+   "from": "2024-09-20T18:00:00",
+   "to": "2024-09-22T06:00:00",
+   "countries": [
+    "China",
+    "Taiwan"
+   ]
+  },
+  {
+   "id": 1001097,
+   "name": "Tropical Cyclone PULASAN-24",
+   "alert": "Green",
+   "from": "2024-09-16T18:00:00",
+   "to": "2024-09-21T12:00:00",
+   "countries": [
+    "Japan",
+    "China"
+   ]
+  },
+  {
+   "id": 1001098,
+   "name": "Tropical Cyclone SOULIK-24",
+   "alert": "Green",
+   "from": "2024-09-18T06:00:00",
+   "to": "2024-09-19T06:00:00",
+   "countries": [
+    "China"
+   ]
+  },
+  {
+   "id": 1001094,
+   "name": "Tropical Cyclone GORDON-24",
+   "alert": "Green",
+   "from": "2024-09-11T15:00:00",
+   "to": "2024-09-17T15:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001093,
+   "name": "Tropical Cyclone BEBINCA-24",
+   "alert": "Orange",
+   "from": "2024-09-10T00:00:00",
+   "to": "2024-09-16T00:00:00",
+   "countries": [
+    "China",
+    "Japan",
+    "Guam"
+   ]
+  },
+  {
+   "id": 1001095,
+   "name": "Tropical Cyclone ILEANA-24",
+   "alert": "Green",
+   "from": "2024-09-12T15:00:00",
+   "to": "2024-09-15T15:00:00",
+   "countries": [
+    "Mexico"
+   ]
+  },
+  {
+   "id": 1001092,
+   "name": "Tropical Cyclone FRANCINE-24",
+   "alert": "Green",
+   "from": "2024-09-08T21:00:00",
+   "to": "2024-09-12T15:00:00",
+   "countries": [
+    "United States",
+    "Mexico"
+   ]
+  },
+  {
+   "id": 1001090,
+   "name": "Tropical Cyclone YAGI-24",
+   "alert": "Red",
+   "from": "2024-09-01T12:00:00",
+   "to": "2024-09-07T06:00:00",
+   "countries": [
+    "China",
+    "Philippines"
+   ]
+  },
+  {
+   "id": 1001091,
+   "name": "Tropical Cyclone LEEPI-24",
+   "alert": "Green",
+   "from": "2024-09-04T00:00:00",
+   "to": "2024-09-06T18:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001087,
+   "name": "Tropical Cyclone HONE-24",
+   "alert": "Green",
+   "from": "2024-08-22T15:00:00",
+   "to": "2024-09-01T21:00:00",
+   "countries": [
+    "United States"
+   ]
+  },
+  {
+   "id": 1001089,
+   "name": "Tropical Cyclone ASNA-24",
+   "alert": "Orange",
+   "from": "2024-08-30T00:00:00",
+   "to": "2024-09-01T12:00:00",
+   "countries": [
+    "Pakistan",
+    "India"
+   ]
+  },
+  {
+   "id": 1001086,
+   "name": "Tropical Cyclone SHANSHAN-24",
+   "alert": "Green",
+   "from": "2024-08-21T12:00:00",
+   "to": "2024-09-01T12:00:00",
+   "countries": [
+    "Japan"
+   ]
+  },
+  {
+   "id": 1001084,
+   "name": "Tropical Cyclone GILMA-24",
+   "alert": "Green",
+   "from": "2024-08-18T15:00:00",
+   "to": "2024-08-30T03:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001088,
+   "name": "Tropical Cyclone HECTOR-24",
+   "alert": "Green",
+   "from": "2024-08-25T21:00:00",
+   "to": "2024-08-29T09:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001085,
+   "name": "Tropical Cyclone JONGDARI-24",
+   "alert": "Green",
+   "from": "2024-08-19T00:00:00",
+   "to": "2024-08-20T18:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001080,
+   "name": "Tropical Cyclone ERNESTO-24",
+   "alert": "Green",
+   "from": "2024-08-11T21:00:00",
+   "to": "2024-08-20T15:00:00",
+   "countries": [
+    "Bermuda",
+    "Canada",
+    "Dominican Republic",
+    "Montserrat",
+    "Dominica"
+   ]
+  },
+  {
+   "id": 1001082,
+   "name": "Tropical Cyclone AMPIL-24",
+   "alert": "Red",
+   "from": "2024-08-12T12:00:00",
+   "to": "2024-08-18T06:00:00",
+   "countries": [
+    "Japan"
+   ]
+  },
+  {
+   "id": 1001083,
+   "name": "Tropical Cyclone WUKONG-24",
+   "alert": "Green",
+   "from": "2024-08-13T00:00:00",
+   "to": "2024-08-15T00:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001081,
+   "name": "Tropical Cyclone SON-TINH-24",
+   "alert": "Green",
+   "from": "2024-08-12T06:00:00",
+   "to": "2024-08-13T12:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001079,
+   "name": "Tropical Cyclone MARIA-24",
+   "alert": "Green",
+   "from": "2024-08-07T00:00:00",
+   "to": "2024-08-12T18:00:00",
+   "countries": [
+    "Japan"
+   ]
+  },
+  {
+   "id": 1001075,
+   "name": "Tropical Cyclone DEBBY-24",
+   "alert": "Green",
+   "from": "2024-08-02T15:00:00",
+   "to": "2024-08-09T03:00:00",
+   "countries": [
+    "United States",
+    "Cuba"
+   ]
+  },
+  {
+   "id": 1001077,
+   "name": "Tropical Cyclone EMILIA-24",
+   "alert": "Green",
+   "from": "2024-08-04T15:00:00",
+   "to": "2024-08-09T03:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001078,
+   "name": "Tropical Cyclone FABIO-24",
+   "alert": "Green",
+   "from": "2024-08-05T15:00:00",
+   "to": "2024-08-07T21:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001076,
+   "name": "Tropical Cyclone DANIEL-24",
+   "alert": "Green",
+   "from": "2024-08-03T15:00:00",
+   "to": "2024-08-06T03:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001074,
+   "name": "Tropical Cyclone CARLOTTA-24",
+   "alert": "Green",
+   "from": "2024-07-31T15:00:00",
+   "to": "2024-08-06T03:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001073,
+   "name": "Tropical Cyclone BUD-24",
+   "alert": "Green",
+   "from": "2024-07-24T21:00:00",
+   "to": "2024-07-26T21:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001072,
+   "name": "Tropical Cyclone GAEMI-24",
+   "alert": "Red",
+   "from": "2024-07-19T18:00:00",
+   "to": "2024-07-25T12:00:00",
+   "countries": [
+    "Japan",
+    "Taiwan",
+    "China",
+    "Philippines"
+   ]
+  },
+  {
+   "id": 1001071,
+   "name": "Tropical Cyclone PRAPIROON-24",
+   "alert": "Green",
+   "from": "2024-07-19T18:00:00",
+   "to": "2024-07-23T00:00:00",
+   "countries": [
+    "China"
+   ]
+  },
+  {
+   "id": 1001070,
+   "name": "Tropical Cyclone THREE-24",
+   "alert": "Green",
+   "from": "2024-07-14T18:00:00",
+   "to": "2024-07-15T06:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001067,
+   "name": "Tropical Cyclone BERYL-24",
+   "alert": "Red",
+   "from": "2024-06-28T21:00:00",
+   "to": "2024-07-09T09:00:00",
+   "countries": [
+    "Haiti",
+    "Grenada",
+    "Jamaica",
+    "Mexico",
+    "Belize",
+    "United States"
+   ]
+  },
+  {
+   "id": 1001069,
+   "name": "Tropical Cyclone ALETTA-24",
+   "alert": "Green",
+   "from": "2024-07-04T15:00:00",
+   "to": "2024-07-06T03:00:00",
+   "countries": [
+    "Mexico"
+   ]
+  },
+  {
+   "id": 1001068,
+   "name": "Tropical Cyclone CHRIS-24",
+   "alert": "Green",
+   "from": "2024-06-30T21:00:00",
+   "to": "2024-07-01T15:00:00",
+   "countries": [
+    "Mexico"
+   ]
+  },
+  {
+   "id": 1001066,
+   "name": "Tropical Cyclone ALBERTO-24",
+   "alert": "Orange",
+   "from": "2024-06-17T21:00:00",
+   "to": "2024-06-20T21:00:00",
+   "countries": [
+    "Guatemala",
+    "Mexico",
+    "United States",
+    "Belize"
+   ]
+  },
+  {
+   "id": 1001065,
+   "name": "Tropical Cyclone MALIKSI-24",
+   "alert": "Green",
+   "from": "2024-05-31T00:00:00",
+   "to": "2024-05-31T18:00:00",
+   "countries": [
+    "China"
+   ]
+  },
+  {
+   "id": 1001063,
+   "name": "Tropical Cyclone EWINIAR-24",
+   "alert": "Green",
+   "from": "2024-05-24T18:00:00",
+   "to": "2024-05-31T00:00:00",
+   "countries": [
+    "Philippines",
+    "Japan"
+   ]
+  },
+  {
+   "id": 1001064,
+   "name": "Tropical Cyclone REMAL-24",
+   "alert": "Orange",
+   "from": "2024-05-25T12:00:00",
+   "to": "2024-05-26T18:00:00",
+   "countries": [
+    "Bangladesh",
+    "India",
+    "Bhutan"
+   ]
+  },
+  {
+   "id": 1001061,
+   "name": "Tropical Cyclone IALY-24",
+   "alert": "Green",
+   "from": "2024-05-16T12:00:00",
+   "to": "2024-05-22T06:00:00",
+   "countries": [
+    "Somalia",
+    "Kenya",
+    "Tanzania"
+   ]
+  },
+  {
+   "id": 1001060,
+   "name": "Tropical Cyclone HIDAYA-24",
+   "alert": "Orange",
+   "from": "2024-05-01T00:00:00",
+   "to": "2024-05-04T12:00:00",
+   "countries": [
+    "Tanzania",
+    "Seychelles",
+    "Comoros"
+   ]
+  },
+  {
+   "id": 1001059,
+   "name": "Tropical Cyclone PAUL-24",
+   "alert": "Green",
+   "from": "2024-04-10T18:00:00",
+   "to": "2024-04-12T00:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001058,
+   "name": "Tropical Cyclone OLGA-24",
+   "alert": "Green",
+   "from": "2024-04-05T18:00:00",
+   "to": "2024-04-10T18:00:00",
+   "countries": [
+    "Australia"
+   ]
+  },
+  {
+   "id": 1001057,
+   "name": "Tropical Cyclone GAMANE-24",
+   "alert": "Orange",
+   "from": "2024-03-25T18:00:00",
+   "to": "2024-03-28T00:00:00",
+   "countries": [
+    "Madagascar"
+   ]
+  },
+  {
+   "id": 1001055,
+   "name": "Tropical Cyclone NEVILLE-24",
+   "alert": "Green",
+   "from": "2024-03-11T06:00:00",
+   "to": "2024-03-24T12:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001056,
+   "name": "Tropical Cyclone MEGAN-24",
+   "alert": "Green",
+   "from": "2024-03-15T12:00:00",
+   "to": "2024-03-18T06:00:00",
+   "countries": [
+    "Australia"
+   ]
+  },
+  {
+   "id": 1001053,
+   "name": "Tropical Cyclone FILIPO-24",
+   "alert": "Orange",
+   "from": "2024-03-03T06:00:00",
+   "to": "2024-03-14T12:00:00",
+   "countries": [
+    "Mozambique",
+    "South Africa",
+    "Eswatini",
+    "Zimbabwe",
+    "Malawi"
+   ]
+  },
+  {
+   "id": 1001050,
+   "name": "Tropical Cyclone LINCOLN-24",
+   "alert": "Green",
+   "from": "2024-02-15T18:00:00",
+   "to": "2024-02-24T06:00:00",
+   "countries": [
+    "Australia"
+   ]
+  },
+  {
+   "id": 1001052,
+   "name": "Tropical Cyclone ELEANOR-24",
+   "alert": "Green",
+   "from": "2024-02-19T00:00:00",
+   "to": "2024-02-23T18:00:00",
+   "countries": [
+    "Mauritius"
+   ]
+  },
+  {
+   "id": 1001049,
+   "name": "Tropical Cyclone DJOUNGOU-24",
+   "alert": "Green",
+   "from": "2024-02-15T12:00:00",
+   "to": "2024-02-19T12:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001051,
+   "name": "Tropical Cyclone FIFTEEN-24",
+   "alert": "Green",
+   "from": "2024-02-15T18:00:00",
+   "to": "2024-02-17T00:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001048,
+   "name": "Tropical Cyclone TWELVE-24",
+   "alert": "Green",
+   "from": "2024-02-08T00:00:00",
+   "to": "2024-02-11T06:00:00",
+   "countries": [
+    "Vanuatu"
+   ]
+  },
+  {
+   "id": 1001047,
+   "name": "Tropical Cyclone OSAI-24",
+   "alert": "Green",
+   "from": "2024-02-06T18:00:00",
+   "to": "2024-02-08T12:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001046,
+   "name": "Tropical Cyclone NAT-24",
+   "alert": "Green",
+   "from": "2024-02-05T12:00:00",
+   "to": "2024-02-08T06:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001045,
+   "name": "Tropical Cyclone 05-20232024-24",
+   "alert": "Green",
+   "from": "2024-01-30T18:00:00",
+   "to": "2024-02-02T06:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001043,
+   "name": "Tropical Cyclone KIRRILY-24",
+   "alert": "Green",
+   "from": "2024-01-23T00:00:00",
+   "to": "2024-02-02T06:00:00",
+   "countries": [
+    "Australia"
+   ]
+  },
+  {
+   "id": 1001042,
+   "name": "Tropical Cyclone ANGGREK-24",
+   "alert": "Green",
+   "from": "2024-01-15T06:00:00",
+   "to": "2024-01-31T06:00:00",
+   "countries": []
+  },
+  {
+   "id": 1001044,
+   "name": "Tropical Cyclone CANDICE-24",
+   "alert": "Green",
+   "from": "2024-01-24T06:00:00",
+   "to": "2024-01-27T06:00:00",
+   "countries": [
+    "Mauritius"
+   ]
+  },
+  {
+   "id": 1001041,
+   "name": "Tropical Cyclone BELAL-24",
+   "alert": "Orange",
+   "from": "2024-01-12T16:00:00",
+   "to": "2024-01-19T04:00:00",
+   "countries": [
+    "Mauritius",
+    "Madagascar"
+   ]
+  },
+  {
+   "id": 1001040,
+   "name": "Tropical Cyclone ALVARO-24",
+   "alert": "Green",
+   "from": "2023-12-31T12:00:00",
+   "to": "2024-01-04T16:00:00",
+   "countries": [
+    "Madagascar"
+   ]
+  }
+ ]
+}
