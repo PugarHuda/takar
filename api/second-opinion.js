@@ -5,7 +5,7 @@
 // Free to call; Takar pays the two asks ($0.02 test USDC) from a separate testnet
 // wallet whose escrow balance is the hard spending cap. Testnet only.
 import { ethers } from "ethers";
-import { ask, ranked } from "../lib/telegraph.mjs";
+import { ask, ranked, RPC, CHAIN_ID } from "../lib/telegraph.mjs";
 import { secondOpinion } from "../lib/second.mjs";
 import { readAttestations, rank } from "../lib/reputation.mjs";
 import { recordFeed } from "../lib/feed.mjs";
@@ -92,7 +92,7 @@ export default async function handler(req, res) {
   if (limited(ip)) return res.status(429).json({ error: `rate limit: ${PER_MIN} per minute per caller` });
   if (!process.env.SERVER_PAYER_KEY) return res.status(503).json({ error: "payer not configured" });
 
-  const signer = new ethers.Wallet(process.env.SERVER_PAYER_KEY, new ethers.JsonRpcProvider("https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true }));
+  const signer = new ethers.Wallet(process.env.SERVER_PAYER_KEY, new ethers.JsonRpcProvider(RPC, CHAIN_ID, { staticNetwork: true }));
   const t0 = Date.now();
   try {
     const reputation = await reputationFor(intent);

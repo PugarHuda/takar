@@ -5,7 +5,7 @@
 // side, open questions listed, signed. Takar pays the asks (about $0.04 test USDC), so it is
 // rate limited. Testnet only.
 import { ethers } from "ethers";
-import { ask, ranked } from "../lib/telegraph.mjs";
+import { ask, ranked, RPC, CHAIN_ID } from "../lib/telegraph.mjs";
 import { gatherDossier } from "../lib/goldrush.mjs";
 import { renderMarkdown } from "../lib/dossier.mjs";
 import { signDoc } from "../lib/sign.mjs";
@@ -24,7 +24,7 @@ export default async function handler(req, res) {
     const ip = String(req.headers["x-forwarded-for"] ?? "").split(",")[0].trim() || "unknown";
     if (overBudget(`dossier:${ip}`, 2, 60)) return res.status(429).json({ error: "rate limit: 2 dossiers a minute per caller" });
     if (!process.env.SERVER_PAYER_KEY) return res.status(503).json({ error: "payer not configured" });
-    const signer = new ethers.Wallet(process.env.SERVER_PAYER_KEY, new ethers.JsonRpcProvider("https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true }));
+    const signer = new ethers.Wallet(process.env.SERVER_PAYER_KEY, new ethers.JsonRpcProvider(RPC, CHAIN_ID, { staticNetwork: true }));
     try {
       const g = await gatherDossier(mine, { ask: (a) => ask({ ...a, signer }), ranked, unit: "dossier-api", deep: false }) // the public path buys 3-4 asks, never the registry/research fan-out;
       out = process.env.TAKAR_SIGNING_KEY ? { ...g.doc, attestation: signDoc(g.doc, process.env.TAKAR_SIGNING_KEY) } : g.doc;
