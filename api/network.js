@@ -3,7 +3,8 @@
 // GET /api/network?view=disagreement how often miners from different operators disagree, per intent,
 //                                   from the comparisons Takar recorded on EAS
 // GET /api/network?view=signal&hash=0x...  a signal on the node, in Takar's ledger, anchored on EAS
-import { operatorMap, disagreementIndex, signalCheck } from "../lib/network.mjs";
+// GET /api/network?view=miners       answered and complete rates per miner Takar bought from, last 7 days
+import { operatorMap, disagreementIndex, signalCheck, minerHealth } from "../lib/network.mjs";
 import { readFeed, summariseFeed } from "../lib/feed.mjs";
 import { FEED_ATTESTERS } from "./feed.js";
 
@@ -43,7 +44,12 @@ export default async function handler(req, res) {
       const out = await signalCheck(String(req.query?.hash ?? ""), { ledgerText, anchors, nodeFetch: (h) => fetch(`${NODE}/engine/v1/signal/${h}`, { signal: AbortSignal.timeout(15_000) }) });
       return res.status(200).json(out);
     }
-    return res.status(400).json({ error: "view must be operators, disagreement or signal" });
+    if (view === "miners") {
+      const ledgerText = await cached("ledger", 120_000, () => fetch(`${SITE}/receipts/ledger.jsonl`).then((r) => r.text()));
+      res.setHeader("Cache-Control", "s-maxage=300");
+      return res.status(200).json({ source: "Takar's paid ledger, last 7 days", note: "Answered = the miner returned a paid result. Complete = every field the intent needs came back ok. Floor = lower bound of the 95% interval for complete. Measured by a paying client, not reported by the operator.", miners: minerHealth(ledgerText, { days: 7 }) });
+    }
+    return res.status(400).json({ error: "view must be operators, disagreement signal or miners" });
   } catch (err) {
     return res.status(err.status === 400 ? 400 : 503).json({ error: String(err.message).slice(0, 200) });
   }
