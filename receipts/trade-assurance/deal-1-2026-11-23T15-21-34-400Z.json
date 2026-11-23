@@ -1,0 +1,141 @@
+{
+  "id": 1,
+  "at": "2026-11-23T15:21:34.400Z",
+  "ledger": "PO-7781: 1000 units x USD 12.40 = USD 12,400.00; goods received 1000 units",
+  "decision": "review",
+  "why": "checks disagree or are unusable: invoice",
+  "checks": {
+    "arrival": "fail",
+    "invoice": "review",
+    "sanctions": "pass"
+  },
+  "vessel": [
+    {
+      "miner": 8818818,
+      "operator": "0xa0f6dc5e53185691f900397745f08f99f9ffb9e1",
+      "signal": "0xac126ad8408b31f4fe358ad56a917331be29635b7285703592f9f84cf7bb6b95",
+      "result": {
+        "vessel": "MEGASTAR",
+        "speed_knots": 23,
+        "latitude": 59.78020166666667,
+        "longitude": 24.810643333333335,
+        "course_deg": 13.7,
+        "observed_at": "2026-11-23T15:20:02.646Z"
+      },
+      "fieldStatus": {
+        "vessel": "ok",
+        "speed_knots": "ok",
+        "latitude": "ok",
+        "longitude": "ok",
+        "course_deg": "ok",
+        "observed_at": "ok"
+      },
+      "berth": {
+        "state": "away",
+        "km": 41.5,
+        "knots": 23,
+        "ageMin": 2
+      }
+    },
+    {
+      "miner": 70068,
+      "operator": "0x8b224783fe5b3c52b7db0cb9b1754f8812b75287",
+      "signal": "0xc3047648fe22bbb631dc589ee72f6dec8e7d898a73448af6a1c6752e9eaa2774",
+      "result": {
+        "vessel": "MEGASTAR",
+        "speed_knots": 23,
+        "latitude": 59.788648,
+        "longitude": 24.814792,
+        "course_deg": 13,
+        "observed_at": "2026-11-23T15:21:24.926Z"
+      },
+      "fieldStatus": {
+        "vessel": "ok",
+        "speed_knots": "ok",
+        "latitude": "ok",
+        "longitude": "ok",
+        "course_deg": "ok",
+        "observed_at": "ok"
+      },
+      "berth": {
+        "state": "away",
+        "km": 40.54,
+        "knots": 23,
+        "ageMin": 0
+      }
+    }
+  ],
+  "invoice": [
+    {
+      "miner": 302,
+      "operator": "0xd4c73e9986c0b48eac22db24b5eef0c8ecef8ef9",
+      "signal": "0x0e84f300f96a906a1245977c7a56dbf9b94fb09279d8eecad14f9a3975fc57c6",
+      "result": {
+        "reconciled": false,
+        "discrepancy": 0,
+        "explanation": "Reference mismatch: invoice INV-2026-1107 has no matching ledger entry; ledger entry PO-7781 does not correspond to the invoice."
+      },
+      "fieldStatus": {
+        "reconciled": "ok",
+        "discrepancy": "ok",
+        "explanation": "ok"
+      }
+    },
+    {
+      "miner": 20260828,
+      "operator": "0x5c4b38cf6adb8c5a30242c3fc9124ce0197d2d52",
+      "signal": "0xe4ba07ce3acee4944ce0dd6e3c65fc44c001e9f7b9e7048644beda69dc9827f1",
+      "result": {
+        "reconciled": true,
+        "discrepancy": 0,
+        "explanation": "Invoice INV-2026-1107 and ledger PO-7781 match in quantity (1000 units), unit price (USD 12.40), total amount (USD 12,400.00), currency (USD), and goods received status."
+      },
+      "fieldStatus": {
+        "reconciled": "ok",
+        "discrepancy": "ok",
+        "explanation": "ok"
+      }
+    }
+  ],
+  "sanctions": {
+    "takar": "agree",
+    "screens": [
+      {
+        "miner": "9002",
+        "signal": "0x1a3a6562d77f5ffe19af5aa7d049773509846cfb20ead0d4e56b47d7a3fc0be1",
+        "matched": false
+      },
+      {
+        "miner": "710637",
+        "signal": "0xcf1ff969389458180b16ab5fe5ab1f5678465b766597c8523024ea09d6a1d457",
+        "matched": false
+      }
+    ],
+    "praman": {
+      "screened": true,
+      "name": "Harju Metal OÜ (illustrative supplier)",
+      "matched": false,
+      "matches": [],
+      "lists": [
+        "US Treasury OFAC SDN"
+      ],
+      "match_score": 0,
+      "query_name": "Harju Metal OÜ (illustrative supplier)",
+      "match_found": false,
+      "match_count": 0,
+      "sdn_list_size": 19565,
+      "sdn_last_loaded": "2026-11-15T18:26:30.134Z",
+      "source": "US Treasury OFAC SDN List (treasury.gov/ofac)",
+      "source_url": "https://sanctionssearch.ofac.treas.gov/",
+      "summary": "VERDICT: NO SANCTIONS MATCH (CLEAN COUNTERPARTY). Screening of \"Harju Metal OÜ (illustrative supplier)\" against the US Treasury OFAC SDN list and Consolidated Sanctions List (19565 indexed records) returned zero sanctions matches. Counterparty is clear for standard commercial transaction processing as of 2026-11-23T15:21:25.244Z."
+    }
+  },
+  "signals": [
+    "0xac126ad8408b31f4fe358ad56a917331be29635b7285703592f9f84cf7bb6b95",
+    "0xc3047648fe22bbb631dc589ee72f6dec8e7d898a73448af6a1c6752e9eaa2774",
+    "0x0e84f300f96a906a1245977c7a56dbf9b94fb09279d8eecad14f9a3975fc57c6",
+    "0xe4ba07ce3acee4944ce0dd6e3c65fc44c001e9f7b9e7048644beda69dc9827f1",
+    "0x1a3a6562d77f5ffe19af5aa7d049773509846cfb20ead0d4e56b47d7a3fc0be1",
+    "0xcf1ff969389458180b16ab5fe5ab1f5678465b766597c8523024ea09d6a1d457"
+  ]
+}

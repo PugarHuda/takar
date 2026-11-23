@@ -1,0 +1,913 @@
+{
+  "title": "Tyrconnel: events and people from original records",
+  "mine": "Tyrconnel",
+  "method": "Every sentence of the Queensland Heritage Register entries matched to this mine (by name), plus sentences in other mining entries that name the mine, typed by fixed rules (lib/events.mjs). Quoted word for word with the record ID; nothing summarised. People are candidate names picked from the quoted sentences by a rule (a run of capitalised words that is not a place, a working or a company); a mine or place name can slip through, so each name keeps its sentence. Each event is a capsule signed on its own (Ed25519 over canonical JSON); verify one with lib/sign.mjs verifyDoc(capsule.finding, capsule.attestation).",
+  "generated_at": "2026-11-23T15:25:20.517Z",
+  "summary": {
+    "events": 20,
+    "by_type": {
+      "people": 7,
+      "ownership": 7,
+      "closure": 4,
+      "flood or weather": 1,
+      "restart": 1,
+      "fire": 1
+    },
+    "people_named": 10,
+    "records": [
+      "600687",
+      "600682"
+    ],
+    "checked_by_miners": 5,
+    "corroborated": 0,
+    "contradicted": 0,
+    "disputed": 1
+  },
+  "people": [
+    "A.Forsythe",
+    "John Warde",
+    "Thomas E.White",
+    "William Keating Snr",
+    "W.Craven",
+    "David Morgan",
+    "T.Harley",
+    "William Keating",
+    "Oliver Reece",
+    "Amos Jones"
+  ],
+  "gaps": [
+    "No accident or death is recorded in the register entries; that is not evidence that none happened.",
+    "Political connections and donations are not in the register; not established."
+  ],
+  "capsules": [
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s3",
+        "types": [
+          "people"
+        ],
+        "year": 1876,
+        "people": [
+          "A.Forsythe"
+        ],
+        "quote": "The first battery erected at the mine was Warde and Company s in November 1876, evidently financed by A.Forsythe in Brisbane, from whom this expensive ten head stamp battery took its name.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 3
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "73f6c3a164e7be35c4b84462649303bc0fe40ae15b3fafdf5d2358c3124ccb5b",
+        "signature": "pgY+O5IR6mOSzMTVU1/sbUrU1WRs/kvqb+flgs49CUEGecCFoFR9LcU3/I7d8/fXdz11cTqoChKmChGbn4ovCA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s4",
+        "types": [
+          "people"
+        ],
+        "year": 1877,
+        "people": [
+          "John Warde",
+          "Thomas E.White"
+        ],
+        "quote": "This battery began crushing in February 1877 and the local proprietors, John Warde and Thomas E.White, renamed it the Brisbane in March 1877.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 4
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "f4494e9ee422cf9ab8f2ab26e2f34416bb085b1390c65d5270513ca27f233a0e",
+        "signature": "gl50/Q5oaa0EU3XKJJP3OYoKOAC+UeLLDxsgIAjRc9JNuO7xV4oYLtE8WoaNf0jdqv04FlGAO6/wwHzwW+iIAA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600682-s20",
+        "types": [
+          "ownership"
+        ],
+        "year": 1884,
+        "people": [],
+        "quote": "The Vulcan battery was purchased by the Tyrconnel Gold Mining Company in 1884 and relocated to Sam the Roman s camp in 1895.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600682",
+          "entry": "Kingsborough Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600682",
+          "sentence": 20
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "39189a51a56eedbe2af12c222e726715b53d2b002394d1e608f1bd7af9b8546d",
+        "signature": "bAmvN96Z+cmqShVv3rp+Vh6RAMeBdzO8Byd8cMwkaAPkFi4d3qZQdO8jgLL/PBwCKL+CnKOeXRFDRUYhl+JvBQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s6",
+        "types": [
+          "closure"
+        ],
+        "year": 1888,
+        "people": [],
+        "quote": "The Tyrconnel shaft was down to 128 metes in 1888 when it closed in the hands of the bank.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 6
+        },
+        "status": "register only (fewer than two usable answers)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Did mining at Tyrconnel in Queensland stop or close in 1888?",
+          "kind": "closure",
+          "at": "2026-11-23T15:25:40.353Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xfe14fed5ae500da327c01dfa1d3fe1b6a1f881fd7251ce6c8cb096199641dbef",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x1f166ae0c570712497a587682be1b8a0234355e6664d41e6389fb89a7850c51b",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Event NHL Schedule",
+              "miner_id": "190015",
+              "usable": false,
+              "outcome": null,
+              "signal": "0x0ca15887aca9d3fa68fa7cb2284655b7592647944ff8026848deac89180cdfac",
+              "why": "no usable answer in the intent's shape"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xb51eb3823ecca6825f5ca401df725ae9e9c716df7b6d437a6a3f1ef78c3ed685",
+              "why": "abstained (unresolved)"
+            }
+          ],
+          "cost_usd": 0.04
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "a12ba4363c6b31c639df685ce134159bb33cfe71de25b0dd6f252321e3332af0",
+        "signature": "JK/FX/vCLXwnDftdDZwacrdJ3/+Dx0GASCZRURTQQCfBsxON0eepO+XlmaZK4SCksGPFRIQBMKVcigFtHAvKCQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s10",
+        "types": [
+          "ownership"
+        ],
+        "year": 1898,
+        "people": [],
+        "quote": "It was sold to a Sydney syndicate who floated it and the Sweet William mine at Mount Molloy on the English market 4,000 cash and 1,000 shares in 1898.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 10
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "5f1129fd3f041baf500fc97a17abf894f6f2b66fdb71a577bbd42daee4d2aeb3",
+        "signature": "lfqgnPW2+3ZqLWlXmzPknCd4MAiF7lGgLu+s+cc0+/q6r6+qUX7iuudzivpotzzz0zQ0wQl/6R20DqlU04DnDw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s13",
+        "types": [
+          "flood or weather"
+        ],
+        "year": 1899,
+        "people": [
+          "William Keating Snr"
+        ],
+        "quote": "Because of water flooding, the lease holder, William Keating Snr, worked a new shaft to obtain good samples of which he sent a ton of four to six ounce stone to the 1899 Colonial Exhibition.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 13
+        },
+        "status": "register only (fewer than two usable answers)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Was the Tyrconnel mine in Queensland flooded or damaged by weather in 1899?",
+          "kind": "flood or weather",
+          "at": "2026-11-23T15:25:40.353Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xe25b3a11af4692d099560efcd223d0491ed5cd692b3c41d242dcbe8ef277a150",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x344da531da57a92a1360488cff0eb3c02945c6050d94b2994bed05cfa42fb90c",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Event NHL Schedule",
+              "miner_id": "190015",
+              "usable": false,
+              "outcome": null,
+              "signal": "0x0806152f50ed78f2c4c0d5cd87f76b55d43573116d1be4e3e68ccd3a0a728a50",
+              "why": "no usable answer in the intent's shape"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x363d9f638fcb655cc1ff30ad9dc5ed936bd8ae3295182994f82caaf770995b0b",
+              "why": "abstained (unresolved)"
+            }
+          ],
+          "cost_usd": 0.04
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "d68718727d13e0e04d5e96a91e34901f84ddc9a9b2c1960a26a227fef4ed3078",
+        "signature": "lQCsgpc23e95Erv7myJV9VsLPSmW+3yyvg1a1xe80E5xfidG4QdMOVWpw23BmoXeLC8CVkPBM03pgQjZbOYnDw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s15",
+        "types": [
+          "ownership"
+        ],
+        "year": 1899,
+        "people": [],
+        "quote": "He offered it to a Melbourne syndicate in 1899.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 15
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "e25b8aae04172aa0b03afc2172267de1a2f7a3efd07265e98d2e687a2f494884",
+        "signature": "XWztvAKNfmUpHUEGZcQn9KBcCjjfiflGS+m2/MiQSuJsLgqLiivdE4WBa4ozjCUGq59KmfXBL34K+x2sHpiYAg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s16",
+        "types": [
+          "ownership",
+          "restart"
+        ],
+        "year": 1912,
+        "people": [],
+        "quote": "A new company was formed in 1912 and the mine reopened after many years.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 16
+        },
+        "status": "register only (fewer than two usable answers)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Was mining at Tyrconnel in Queensland restarted or reopened in 1912?",
+          "kind": "restart",
+          "at": "2026-11-23T15:25:40.353Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xcd67535f5a81ba8a126cc041dc72623435b8bd74c5605c732a00fb31cb9b1e09",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xaa4c8afcff5871a606aad5a925bd1a57d279b3a64b2f8c8883f2bc824a3c7a8f",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Event NHL Schedule",
+              "miner_id": "190015",
+              "usable": false,
+              "outcome": null,
+              "signal": "0xac60909e963c4d70412136d29f114f1132e7b30bb1b9dca5ee5a1f81e41a2391",
+              "why": "no usable answer in the intent's shape"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x15b7ab9481aac42a4bcb9ffc2472b7356db4de2b43b543f211059ec6c33cec3e",
+              "why": "abstained (unresolved)"
+            }
+          ],
+          "cost_usd": 0.04
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "adc8ec24ed363bef05f8a5dd2ac0f9ed667954092cedd5135a87641c80d29d11",
+        "signature": "6ALVKRn6//6I33zvoNeP8b8jzoUQU1PhddLBOhkCr1B8ze1Yasca5d+0+8VmJWrkps7mWvG3tAIFXudENpoLDg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s37",
+        "types": [
+          "ownership"
+        ],
+        "year": 1917,
+        "people": [],
+        "quote": "The Tyrconnel Gold Mines Limted bought the Cecil Syndicate battery at the General Grant mine and re-erected it at the Tyrconnel mine in 1917.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 37
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "493808b8cfc11ed8ad7db05ae889522894a01f0e06dc510cf5a7f0e90d7f159e",
+        "signature": "Z+MXLBQA3Ze6qh+BceR8C8MhZC6nb53f4IKQfcMFM7ExKiWIsuRiuDzGIM+DldijKfnhWSLzJnkzZGvYnrywBQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s46",
+        "types": [
+          "closure"
+        ],
+        "year": 1924,
+        "people": [],
+        "quote": "Operations were suspended in 1924.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 46
+        },
+        "status": "register only (fewer than two usable answers)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Did mining at Tyrconnel in Queensland stop or close in 1924?",
+          "kind": "closure",
+          "at": "2026-11-23T15:25:40.353Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x17ea42d30265788600c9906f825628418e2211329b090d473ffdbd9e2759ff25",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x0c29fcd8c4b69878f155e091a3f4366409dbce5bb32491e4b545a2afc3e9bd08",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Event NHL Schedule",
+              "miner_id": "190015",
+              "usable": false,
+              "outcome": null,
+              "signal": "0xb3930fd208637a2553a4252f7b7a0429c2e9228841c53b093a1fee0122218c52",
+              "why": "no usable answer in the intent's shape"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xd77dd3e92fe701c388a696463e4ab3530c3110196f4a3edae2e69e2ec00c128a",
+              "why": "abstained (unresolved)"
+            }
+          ],
+          "cost_usd": 0.04
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "120dfb6075d29618ddf1e3ce6018d5ee7f90288494eedb4d2a4b93b12ecd9de8",
+        "signature": "XsQWZ2W8EZUHrpNSL8WTwEpRU8c3p4KNal7dZPPSIW61GSk/9aPcKeWeCejZeHKcReyruCndiVrJVI5XH6qVCw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s49",
+        "types": [
+          "people"
+        ],
+        "year": 1934,
+        "people": [
+          "W.Craven"
+        ],
+        "quote": "W.Craven treated 700 tons of old sands for 216 ounces of bullion gold valued at 190.14.7 in 1934.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 49
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "1a764c2f36d5f8f1add6d573aa618e4b47d8c49278ba4a7fd223024e18509a9b",
+        "signature": "wIj5Sxzn0/HvIno4wAh1LQoPKoTrrxBw+vLhmPTOGhQejCauqdyJZSJaf+j8vbSfSCkyg23JsyFL2d6h903cDw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s54",
+        "types": [
+          "ownership"
+        ],
+        "year": 1936,
+        "people": [],
+        "quote": "The Hodgkinson Gold Development Syndicate Limited erected a new battery in 1936 and an Ingersoll Rand drill was purchased.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 54
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "59168ca3749d41feac8f11363b49e5ac4ee0223d007afb6b50bbc96cfa38c0b4",
+        "signature": "0eVHXpPD1cDRst6aClZggubuMyvTjgsJzvVbpHaAqajoS6vVSPZpaAVNqxEOd5ddc88MkqRh8vsHtYGjqmtCBw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s56",
+        "types": [
+          "closure"
+        ],
+        "year": 1937,
+        "people": [],
+        "quote": "This company ceased operations on 22 July 1937 for lack of capital.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 56
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "e936812db42a9e268b8ab76c49f67328a157d5fd23d74305b9c46d6faa368173",
+        "signature": "Yi43tA3glWetMosd14w7oqtiu30L+lgMoKdJ5OocLnzZDedQSshMOiUyKvZJp8TfQg3HpaEqbshqm3/58UT+AA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s65",
+        "types": [
+          "fire"
+        ],
+        "year": 1984,
+        "people": [],
+        "quote": "However a fire destroyed the timberwork of the winding engine and part of the headframe in 1984.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 65
+        },
+        "status": "disputed (the two miners disagree)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Was there a fire at the Tyrconnel mine in Queensland in 1984?",
+          "kind": "fire",
+          "at": "2026-11-23T15:25:40.353Z",
+          "verdict": "disagree",
+          "independence": "operator",
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xba279b2ffef42fa26d7be22e1ccc78fd45c4a9f7028589dd65f18db27d848381",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": true,
+              "outcome": "no",
+              "signal": "0xfd34b77126ca0071d3ab7b0fd2d9791b34e4e805d7a8c23b8f99b0b891467ccc",
+              "why": null
+            },
+            {
+              "miner": "event-nhl-schedule",
+              "miner_id": "190015",
+              "usable": false,
+              "outcome": null,
+              "signal": null,
+              "why": "ask EVENT_OUTCOME_RESOLUTION_GENERAL -> 503: no_compatible_miner"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": true,
+              "outcome": "yes",
+              "signal": "0xc6a16b3a6a70ad354005db00796a0babda67220478a1dc53925b6b388cdd140d",
+              "why": null
+            }
+          ],
+          "cost_usd": 0.03
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "1a29f14587241a13d343e3ec148d4c19f04e48212aac0c0adbb2df2fb0e46ca7",
+        "signature": "mf1cyrk2rIRsGq6aOam/w6Jd+nB350VgDYRPcrOI/c7IOkmRcZvvoan2GVznaVCJCI5tAcEFDDK8lZUMo+tJBA==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s17",
+        "types": [
+          "people"
+        ],
+        "year": null,
+        "people": [
+          "David Morgan"
+        ],
+        "quote": "A Victorian mine manager, David Morgan, was appointed as the new Tyrconnel mine manager.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 17
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "dde9d59b91d6dd93cc7fd962a6fc39b5c99b02932cf292488de9f070ae250f35",
+        "signature": "lxlqFpua41cSLo+BUEHSQRnQYfXEK4JoqdNUGBajh7yUE9wn277XXdppp8QjAOuiwRb7xF6aFQ1lgsTK3giAAg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s20",
+        "types": [
+          "people"
+        ],
+        "year": null,
+        "people": [
+          "T.Harley"
+        ],
+        "quote": "T.Harley, engineer-in-charge, had the contract for 80 to transport the battery to its new position.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 20
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "398ec89cba3c6b973908e9a6102db8c83301166090f4107f0996f29b25b2e3fb",
+        "signature": "gKBSixOGhj85vQvvaHAsSWx5KYm6zmnt7+UeQYdsgyGZ0cj5uyEg+trdOcHjTY1WbHgXs7O0CqVnK7OhRYbGDw==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s28",
+        "types": [
+          "people"
+        ],
+        "year": null,
+        "people": [
+          "William Keating"
+        ],
+        "quote": "The company was doing very well through Morgan s careful management and William Keating s confidence.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 28
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "05c91dbc4d39a23f5d31cf13e0848ce361be63dd61c50ac80f1b970acdb61e82",
+        "signature": "B4/++i85rjV6IshhvECPnB1vy3IXDfp+oX7sU5pEtNilahIHAMYHSpyAalumW2JMo6dh5QuwamV7kRVftt8YCQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s52",
+        "types": [
+          "ownership"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "The Queensland Gold Development Syndicate Limited reconditioned the mine, erected a new headframe and a 10 head battery, classifying and flotation machinery were installed.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 52
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "f7802356df40de0a125802b856b398e4b677f2da3807df5f6ef302bed9389eaf",
+        "signature": "Dl/V9kzs21AoVcjiOj+68gSAx9YhdWobHhpQzgT83HWD4nEa7dPA+6Xat2FtvC8xUZ2rUZJNlU4lhRuuBFk0AQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s60",
+        "types": [
+          "closure"
+        ],
+        "year": null,
+        "people": [],
+        "quote": "By the end of the war all the mines on the Hodgkinson Goldfield were closed.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 60
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "9d10c8ae30f2eb5ad9d0bcd7277468b53e16ca37780e45a9a97e8d46ea7d3e5c",
+        "signature": "HNk5WIq+hhAp1slG3hulHmehgqTkObSSPWIqFnR0Ni/Fzn7xIVXpv9l798rsYuqbr0hRw+dRHLKwrCEfxSmvAQ==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    },
+    {
+      "finding": {
+        "mine": "Tyrconnel",
+        "site_no": 43836,
+        "id": "qhr-600687-s61",
+        "types": [
+          "people"
+        ],
+        "year": null,
+        "people": [
+          "Oliver Reece",
+          "Amos Jones"
+        ],
+        "quote": "Oliver Reece, an American, owned the New Tyrconnel, General Grant and Cecil and had a caretaker, Amos Jones, in charge.",
+        "source": {
+          "register": "Queensland Heritage Register",
+          "record_id": "600687",
+          "entry": "Tyrconnel Mine and Battery",
+          "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600687",
+          "sentence": 61
+        },
+        "status": "recorded (one register entry)",
+        "source_snapshot": {
+          "file": "data/heritage-history.json",
+          "extracted_at": "2026-11-23",
+          "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        }
+      },
+      "attestation": {
+        "algorithm": "ed25519",
+        "sha256": "44c81ad2fb123f71b3839163290287fde7f91c8102313ff2fd1a6c291afa736b",
+        "signature": "bVJyFSIRgvA5CV94GbNrlU3YQ2AAm8l7L8wrXEZT+vUQ3G7GumSLDhL2FXtaAan19ADmST0ecQ3QdfqDWcaxAg==",
+        "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+      }
+    }
+  ]
+}

@@ -1,0 +1,1234 @@
+{
+  "title": "Gold Rush dossier: Tyrconnel",
+  "method": "Telegraph miners asked directly by id; structured rows from goldrush-qld-history's registered endpoint, tied to the paid answer; checks by Takar (lib/dossier.mjs). Figures are never merged or estimated.",
+  "generated_at": "2026-11-23T15:22:15.997Z",
+  "network": "Ethereum Sepolia testnet (test USDC)",
+  "dossier": {
+    "mine": "Tyrconnel",
+    "identity": {
+      "history_site_no": 43836,
+      "survey_site_no": 43836,
+      "same_site": true,
+      "name": "Tyrconnel",
+      "location": "3.0 KM ENE OF THORNBOROUGH.",
+      "status": "ABANDONED MINE",
+      "nearby_workings": 74,
+      "size_band": "0.5 - 5 TONNES"
+    },
+    "production": {
+      "gold": [
+        {
+          "t": 1.8193,
+          "amount": 1819.3,
+          "unit": "kg",
+          "from": null,
+          "to": 1988,
+          "entity": "Tyrconnel",
+          "scope": "site_total",
+          "source": "MINOCC-2017:Total_Ores_Prod:43836",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 43836",
+          "quote": "Total_Ores_Prod: 1819.3 KG Au (Ore Amount 50888 tonnes)"
+        },
+        {
+          "t": 1.8193,
+          "amount": 1819.3,
+          "unit": "kg",
+          "from": null,
+          "to": 1988,
+          "entity": "Tyrconnel",
+          "scope": "period",
+          "source": "MINOCC-2017:Production:43836:1",
+          "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+          "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+          "record": "SITE_NO 43836, row 1",
+          "quote": "Production: 1819.3 KG GOLD BULLION 0.4 T SCHEELITE CONCENTRATE (Ore Amount 50888 T; Ore Type HARD ROCK ORE (OR REEF))"
+        }
+      ],
+      "sums": [
+        {
+          "register": "MINOCC-2017",
+          "rows": 1,
+          "sum_t": 1.8,
+          "site_total_t": 1.8,
+          "consistent": true,
+          "to": 1988
+        }
+      ],
+      "pairs": [],
+      "cumulative": [],
+      "band": {
+        "band": "small, 0.5-5 t",
+        "range_t": [
+          0.5,
+          5
+        ],
+        "total_t": 1.8,
+        "consistent": true
+      },
+      "band_source": "OathCast (live MINOCC)"
+    },
+    "closures": [],
+    "years_worked": [],
+    "ownership": [
+      {
+        "owner": "Bell",
+        "role": "principal holder of mining lease 4880, mining lease 4912, mining lease 20340 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
+        "from": null,
+        "to": null,
+        "entity": "Tyrconnel",
+        "source": "MINOCC-2017:Tenure:43836",
+        "quote": "Tenure: Principal Holder Name BELL; MINING LEASE 4880, MINING LEASE 4912, MINING LEASE 20340"
+      },
+      {
+        "owner": "Gold Copper Exploration Ltd",
+        "role": "exploration tenure  (MINOCC Explorer table)",
+        "from": 1987,
+        "to": 1989,
+        "entity": "Tyrconnel",
+        "source": "MINOCC-2017:Explorer:43836:1",
+        "quote": "Explorer: , Start_Year 1987, End_Year 1989, Company Name GOLD COPPER EXPLORATION LTD, ML, 1987-1989"
+      },
+      {
+        "owner": "Wmc Ltd",
+        "role": "exploration tenure EPM 4130 (MINOCC Explorer table)",
+        "from": 1985,
+        "to": 1988,
+        "entity": "Tyrconnel",
+        "source": "MINOCC-2017:Explorer:43836:2",
+        "quote": "Explorer: EPM 4130, Start_Year 1985, End_Year 1988, Company Name WMC LTD"
+      },
+      {
+        "owner": "Stannary Mining Pty Ltd",
+        "role": "exploration tenure  (MINOCC Explorer table)",
+        "from": 1982,
+        "to": 1987,
+        "entity": "Tyrconnel",
+        "source": "MINOCC-2017:Explorer:43836:3",
+        "quote": "Explorer: , Start_Year 1982, End_Year 1987, Company Name STANNARY MINING PTY LTD, ML, 1982-1987"
+      }
+    ],
+    "references": [
+      {
+        "cr_numbers": [
+          12774,
+          13470,
+          15336,
+          15760,
+          16303,
+          16609
+        ],
+        "source_ref": "MINOCC-2017:Company reports:43836",
+        "source_table": "Company reports",
+        "record_id": "SITE_NO 43836",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Company reports: CR 12774, CR 13470, CR 15336, CR 15760, CR 16303, CR 16609"
+      }
+    ],
+    "gold_price": null,
+    "control": [
+      {
+        "company": "Gold Copper Exploration Ltd",
+        "verdict": "insufficient",
+        "active": null,
+        "legal_name": null,
+        "registration_id": null,
+        "other_differences": [],
+        "why": "fewer than two usable answers",
+        "miners": [],
+        "signals": [],
+        "cost": 0.02
+      },
+      {
+        "company": "Wmc Ltd",
+        "verdict": "insufficient",
+        "active": null,
+        "legal_name": null,
+        "registration_id": null,
+        "other_differences": [],
+        "why": "fewer than two usable answers",
+        "miners": [
+          "20260828"
+        ],
+        "signals": [
+          "0x6606dd4decc56bde50632638158040e4df874a76eb2af259a48176ae38f72b97"
+        ],
+        "cost": 0.02
+      },
+      {
+        "company": "Stannary Mining Pty Ltd",
+        "verdict": "insufficient",
+        "active": null,
+        "legal_name": null,
+        "registration_id": null,
+        "other_differences": [],
+        "why": "fewer than two usable answers",
+        "miners": [],
+        "signals": [],
+        "cost": 0.02
+      }
+    ],
+    "closure_research": [],
+    "tenure": {
+      "checked_at": "2026-11-23T15:24:29.283Z",
+      "source": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer (Queensland Government, open data), read directly",
+      "authorities": 2,
+      "holders": {
+        "Beamond, Adrian Peter": 1,
+        "CLG Properties Pty Ltd": 1
+      },
+      "kinds": {
+        "EPM granted": 1,
+        "ML granted": 1
+      },
+      "native_title": {
+        "State ILUA - Opt in": 1,
+        "ASP Grant": 1
+      },
+      "expired_but_granted": 0,
+      "note": null,
+      "rows": [
+        {
+          "id": "EPM 26276",
+          "kind": "EPM granted",
+          "status": "Granted",
+          "holder": "Beamond, Adrian Peter",
+          "approved": "2017-01-09",
+          "expiry": "2027-01-08",
+          "native_title": "State ILUA - Opt in",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "ML 20340",
+          "kind": "ML granted",
+          "status": "Granted",
+          "holder": "CLG Properties Pty Ltd",
+          "approved": "2003-04-24",
+          "expiry": "2028-04-30",
+          "native_title": "ASP Grant",
+          "minerals": "AG,AU"
+        }
+      ]
+    },
+    "nearby": {
+      "radius_km": 20,
+      "authorities": 53,
+      "holders": [
+        {
+          "holder": "WALLACE, Brian Richard",
+          "granted": 0,
+          "applications": 5
+        },
+        {
+          "holder": "TERRITORY MINERALS LTD",
+          "granted": 4,
+          "applications": 0
+        },
+        {
+          "holder": "PLACER GOLD PTY LTD",
+          "granted": 2,
+          "applications": 1
+        },
+        {
+          "holder": "STIBNIGHT SB QUEENSLAND PTY LTD",
+          "granted": 2,
+          "applications": 1
+        },
+        {
+          "holder": "CLARA RESOURCES AUSTRALIA LTD",
+          "granted": 0,
+          "applications": 3
+        },
+        {
+          "holder": "IN SITU GOLD PTY LTD",
+          "granted": 3,
+          "applications": 0
+        },
+        {
+          "holder": "AU SB MINERALS PTY LTD",
+          "granted": 3,
+          "applications": 0
+        },
+        {
+          "holder": "TTTP 2 Pty Ltd",
+          "granted": 0,
+          "applications": 2
+        },
+        {
+          "holder": "HARDROCK MINERAL EXPLORATION PTY LTD",
+          "granted": 0,
+          "applications": 2
+        },
+        {
+          "holder": "Shepherd, Robert Alexander",
+          "granted": 2,
+          "applications": 0
+        },
+        {
+          "holder": "Beamond, Adrian Peter",
+          "granted": 2,
+          "applications": 0
+        },
+        {
+          "holder": "SAUNDERS, Wayne Thomas",
+          "granted": 2,
+          "applications": 0
+        },
+        {
+          "holder": "Lowe, Cameron John",
+          "granted": 1,
+          "applications": 1
+        },
+        {
+          "holder": "WOLSTENCROFT PTY LTD",
+          "granted": 0,
+          "applications": 2
+        },
+        {
+          "holder": "COPPER GREEN PTY LTD",
+          "granted": 0,
+          "applications": 1
+        },
+        {
+          "holder": "EQ RESOURCES EXPLORATION (QLD) PTY LTD",
+          "granted": 0,
+          "applications": 1
+        },
+        {
+          "holder": "GRAINER, Desmond Kenneth",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "Griffiths, Brendan James",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "Aurum Vale Pty Ltd",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "NATIVE MINERAL RESOURCES PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "James, Cody Joseph",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "Davis, Scott Troy",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "EQ Resources Limited",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "Peacock, Wayne David",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "TTTP 1 PTY LTD",
+          "granted": 1,
+          "applications": 0
+        },
+        {
+          "holder": "LEVEL UP INTERNATIONAL PTY LTD",
+          "granted": 0,
+          "applications": 1
+        },
+        {
+          "holder": "PRATT, William Joseph",
+          "granted": 0,
+          "applications": 1
+        },
+        {
+          "holder": "SITARA HOLDINGS PTY LTD",
+          "granted": 0,
+          "applications": 1
+        },
+        {
+          "holder": "FAIRFIELD COPPER-GOLD PTY LTD",
+          "granted": 0,
+          "applications": 1
+        }
+      ],
+      "newest": [
+        {
+          "id": "EPM 29697",
+          "kind": "EPM application",
+          "holder": "HARDROCK MINERAL EXPLORATION PTY LTD",
+          "approved": null,
+          "lodged": "2026-09-01",
+          "expiry": null,
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29239",
+          "kind": "EPM granted",
+          "holder": "Peacock, Wayne David",
+          "approved": "2026-08-04",
+          "lodged": "2025-05-06",
+          "expiry": "2031-08-03",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29242",
+          "kind": "EPM granted",
+          "holder": "PLACER GOLD PTY LTD",
+          "approved": "2026-07-29",
+          "lodged": "2025-05-12",
+          "expiry": "2031-07-28",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29241",
+          "kind": "EPM granted",
+          "holder": "PLACER GOLD PTY LTD",
+          "approved": "2026-07-27",
+          "lodged": "2025-05-10",
+          "expiry": "2031-07-26",
+          "minerals": "AMOC"
+        },
+        {
+          "id": "EPM 29623",
+          "kind": "EPM application",
+          "holder": "EQ RESOURCES EXPLORATION (QLD) PTY LTD",
+          "approved": null,
+          "lodged": "2026-07-02",
+          "expiry": null,
+          "minerals": "AMOC"
+        }
+      ]
+    },
+    "native_title": {
+      "checked_at": "2026-11-23T15:24:34.783Z",
+      "sources": [
+        "https://services2.arcgis.com/rzk7fNEt0xoEp3cX/arcgis/rest/services/NNTT_Custodial_AGOL/FeatureServer (National Native Title Tribunal)",
+        "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Boundaries/CulturalHeritageBoundaries/MapServer (Queensland Government)"
+      ],
+      "entries": [
+        {
+          "kind": "determination",
+          "name": "Djungan People #2",
+          "id": "QCD2012/004",
+          "status": null,
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Djungan Small Scale Miners ILUA",
+          "id": "QI2015/040",
+          "status": null,
+          "lodged": "2015-07-16",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Djungan Small Scale Mining and Exploration",
+          "id": "QI2003/045",
+          "status": null,
+          "lodged": "2004-06-03",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Djungan People & Tablelands Regional Council ",
+          "id": "QI2012/087",
+          "status": null,
+          "lodged": "2012-10-12",
+          "determined": null
+        },
+        {
+          "kind": "Indigenous Land Use Agreement",
+          "name": "Djungan People and Ergon Energy ILUA",
+          "id": "QI2012/091",
+          "status": null,
+          "lodged": "2012-11-06",
+          "determined": null
+        },
+        {
+          "kind": "registered native title body corporate",
+          "name": null,
+          "id": null,
+          "status": null,
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "representative body area",
+          "name": "Northern Queensland Region",
+          "id": null,
+          "status": null,
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage party",
+          "name": "Djungan People #2",
+          "id": "QCD2012/004 DET",
+          "status": "DETERMINED",
+          "lodged": null,
+          "determined": null
+        },
+        {
+          "kind": "cultural heritage body",
+          "name": "Nguddaboolgan Native Title Aboriginal\r\nCorporation",
+          "id": "CHB021004",
+          "status": null,
+          "lodged": null,
+          "determined": "2022-01-11"
+        }
+      ],
+      "errors": [],
+      "active_claims": 0,
+      "note": null
+    },
+    "heritage": [
+      {
+        "ref": "600687",
+        "name": "Tyrconnel Mine and Battery",
+        "suburb": "MAREEBA",
+        "entered": "1992-10-21",
+        "why": "name"
+      }
+    ],
+    "cross_check": {
+      "source": "https://praman-desk.vercel.app/api/gold-rush/aggregate",
+      "claim": "Verified",
+      "tonnes": null,
+      "matches": [],
+      "note": "no usable consensus figure"
+    },
+    "land_check": {
+      "source": "https://goldrush.up.railway.app/ask?question=land%20and%20rights%20at%20site%2043836",
+      "miner": "7310050 goldrush-qld-history (NFT KING)",
+      "tenure": {
+        "ours": 2,
+        "theirs": 23,
+        "both": 2,
+        "only_ours": [],
+        "at_point_missed_by_us": [],
+        "their_list_truncated": false,
+        "only_ours_are_access_leases": false
+      },
+      "expiry": {
+        "same": 2,
+        "one_day_apart": []
+      },
+      "renewal_lodged": 0,
+      "native_title_at_point": {
+        "both": [
+          "QCD2012/004"
+        ],
+        "only_theirs": [],
+        "only_ours": []
+      },
+      "checked_at": "2026-11-23T15:24:45.370Z",
+      "note": "2 of our 2 tenure IDs within 500 m are also in theirs (23 rows to 2 km); native title QCD2012/004 at the site in both; 2 expiry dates identical"
+    },
+    "receipts_tie": {
+      "checked": 2,
+      "in_paid_answer": 2,
+      "rows": [
+        {
+          "source": "MINOCC-2017:Total_Ores_Prod:43836",
+          "amount": 1819.3,
+          "unit": "kg",
+          "in_paid_answer": true
+        },
+        {
+          "source": "MINOCC-2017:Production:43836:1",
+          "amount": 1819.3,
+          "unit": "kg",
+          "in_paid_answer": true
+        }
+      ]
+    },
+    "open_questions": [
+      "identity: the name matched GSQ site 43836, one of 75 historical workings within 5 km; if you meant the field or a larger operation, ask for it by its site number",
+      "closure: no closure year or reason in the sources indexed for this site",
+      "production rests on one register (MINOCC-2017); no second source to check it against",
+      "heritage: 1 heritage-listed places belong to this mine or its town; works on them need heritage approval",
+      "who controls it: Gold Copper Exploration Ltd could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly",
+      "who controls it: Wmc Ltd could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly",
+      "who controls it: Stannary Mining Pty Ltd could not be confirmed in two company registers (fewer than two usable answers); check ASIC directly"
+    ],
+    "miner_conflicts": []
+  },
+  "receipts": [
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0x233e89fcb92c8bf12f45071281ba67f176ed487e273074ac364af56b86b45c9e",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#17 of 32"
+    },
+    {
+      "miner": "OathCast Queensland Gold Mines",
+      "id": "64176",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0x69e0530b804ad65f88f604140f7b64a96f51c56ec7615f924733e1c14b918399",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#23 of 32"
+    },
+    {
+      "miner": "Gold Rush Queensland Mine History",
+      "id": "7310050",
+      "intent": "RESEARCH_QUERY_GENERAL",
+      "signal": "0x9e4b6e994cf9ff393c7068d9d0ef9d56c18a04d958ce169e6aa1c8db460bf1e2",
+      "cost": 0.01,
+      "shape": "intent",
+      "rank": "#17 of 32"
+    }
+  ],
+  "paid_answers": {
+    "history": {
+      "answer": "Tyrconnel (GSQ site 43836, 3.0 km ene of thornborough) is recorded by the Geological Survey of Queensland as abandoned mine, gold size band small, 0.5 - 5 t. Reported production: 1,819.3 kg gold, about 58,492 oz troy (converted here; the survey records 1,819.3 kg) (to 1988, Tyrconnel, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 43836)); 50,888 tonnes ore (to 1988, Tyrconnel, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 43836)). GSQ MINOCC 2017 also lists 1 dated Production row (gold: 1,819.3 kg to 1988); see production. Ownership and tenure: Bell per GSQ MINOCC 2017 (Tenure, SITE_NO 43836); Gold Copper Exploration Ltd (1987 to 1989) per GSQ MINOCC 2017 (Explorer, SITE_NO 43836, row 1); Wmc Ltd (1985 to 1988) per GSQ MINOCC 2017 (Explorer, SITE_NO 43836, row 2); Stannary Mining Pty Ltd (1982 to 1987) per GSQ MINOCC 2017 (Explorer, SITE_NO 43836, row 3). GSQ MINOCC 2017 lists 6 company reports for this site: CR 12774, CR 13470, CR 15336, CR 15760, CR 16303, CR 16609. Not found: closure: no closure year or reason in the sources indexed for this site.",
+      "source_count": 2,
+      "sources": [
+        "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D43836&outFields=%2A&f=json",
+        "https://geoscience.data.qld.gov.au/dataset/ds000004"
+      ],
+      "brief": "Tyrconnel (GSQ site 43836, 3.0 km ene of thornborough) is recorded by the Geological Survey of Queensland as abandoned mine, gold size band small, 0.5 - 5 t. Reported production: 1,819.3 kg gold, about 58,492 oz troy (converted here; the survey records 1,819.3 kg) (to 1988, Tyrconnel, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 43836)); 50,888 tonnes ore (to 1988, Tyrconnel, per GSQ MINOCC 2017"
+    },
+    "survey": {
+      "answer": "Tyrconnel (Geological Survey of Queensland site 43836) is recorded as an abandoned mine on the Rumula 1:100,000 sheet (3.0 km ene of thornborough.), at -16.9343, 145.0352, located to within 100 m. The survey classes its gold as small, 0.5-5 t, and also records tungsten (very small). Within 5 km it records 74 other historical workings, 74 of them with gold; other commodities nearby: antimony, silver, tungsten. The record gives a size band, not production figures, and holds no owners or closure dates.",
+      "source_count": 2,
+      "sources": [
+        "Geological Survey of Queensland, MINOCC historical workings (CC BY 4.0, State of Queensland), site 43836: https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D43836&outFields=%2A&f=json",
+        "https://geoscience.data.qld.gov.au/dataset/ds000004"
+      ],
+      "brief": "Tyrconnel: abandoned mine, gold small"
+    }
+  },
+  "structured_record": {
+    "answer": "Tyrconnel (GSQ site 43836, 3.0 km ene of thornborough) is recorded by the Geological Survey of Queensland as abandoned mine, gold size band small, 0.5 - 5 t. Reported production: 1,819.3 kg gold, about 58,492 oz troy (converted here; the survey records 1,819.3 kg) (to 1988, Tyrconnel, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 43836)); 50,888 tonnes ore (to 1988, Tyrconnel, per GSQ MINOCC 2017 (Total_Ores_Prod, SITE_NO 43836)). GSQ MINOCC 2017 also lists 1 dated Production row (gold: 1,819.3 kg to 1988); see production. Ownership and tenure: Bell per GSQ MINOCC 2017 (Tenure, SITE_NO 43836); Gold Copper Exploration Ltd (1987 to 1989) per GSQ MINOCC 2017 (Explorer, SITE_NO 43836, row 1); Wmc Ltd (1985 to 1988) per GSQ MINOCC 2017 (Explorer, SITE_NO 43836, row 2); Stannary Mining Pty Ltd (1982 to 1987) per GSQ MINOCC 2017 (Explorer, SITE_NO 43836, row 3). GSQ MINOCC 2017 lists 6 company reports for this site: CR 12774, CR 13470, CR 15336, CR 15760, CR 16303, CR 16609. Not found: closure: no closure year or reason in the sources indexed for this site.",
+    "source_count": 2,
+    "sources": [
+      "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D43836&outFields=%2A&f=json",
+      "https://geoscience.data.qld.gov.au/dataset/ds000004"
+    ],
+    "brief": "Tyrconnel: gold 1,819.3 kg (+1 more)",
+    "site_no": 43836,
+    "site_name": "Tyrconnel",
+    "matched_by": "name",
+    "gsq_record": {
+      "source_ref": "GSQ-MINOCC",
+      "source_url": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation/MiningResources/MapServer/16/query?where=site_no%3D43836&outFields=%2A&f=json",
+      "mine_status": "ABANDONED MINE",
+      "size_band": "SMALL",
+      "size_definition": "0.5 - 5 TONNES",
+      "latitude": -16.9343,
+      "longitude": 145.035218,
+      "location_accuracy_m": 100,
+      "locality": "3.0 KM ENE OF THORNBOROUGH.",
+      "map_sheet_100k": "RUMULA",
+      "commodities": "Au(s);W(vs)",
+      "record_current_to": "2008-11-11"
+    },
+    "production": [
+      {
+        "commodity": "gold",
+        "amount": 1819.3,
+        "unit": "kg",
+        "period_from": null,
+        "period_to": 1988,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Tyrconnel",
+        "scope": "site_total",
+        "commodity_code": "AU",
+        "ore_class": "ore (hard rock, dumps, tailings and other)",
+        "converted": {
+          "amount": 58492,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 1819.3 kg"
+        },
+        "source_ref": "MINOCC-2017:Total_Ores_Prod:43836",
+        "source_table": "Total_Ores_Prod",
+        "record_id": "SITE_NO 43836",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Total_Ores_Prod: 1819.3 KG Au (Ore Amount 50888 tonnes)"
+      },
+      {
+        "commodity": "ore",
+        "amount": 50888,
+        "unit": "t",
+        "period_from": null,
+        "period_to": 1988,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Tyrconnel",
+        "scope": "site_total",
+        "commodity_code": "ORE",
+        "ore_class": "ore (hard rock, dumps, tailings and other)",
+        "source_ref": "MINOCC-2017:Total_Ores_Prod:43836",
+        "source_table": "Total_Ores_Prod",
+        "record_id": "SITE_NO 43836",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Total_Ores_Prod: 1819.3 KG Au (Ore Amount 50888 tonnes)"
+      },
+      {
+        "commodity": "gold",
+        "amount": 1819.3,
+        "unit": "kg",
+        "period_from": null,
+        "period_to": 1988,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Tyrconnel",
+        "scope": "period",
+        "form": "bullion",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "50888 T",
+        "comment": "Production in 1876-1914, 1924, 1930-1942, 1946, 1955, 1958, 1978 and 1982-1988.",
+        "converted": {
+          "amount": 58492,
+          "unit": "troy oz",
+          "basis": "explicit conversion for reading only: 1 troy oz = 31.1034768 g; the recorded value is 1819.3 kg"
+        },
+        "source_ref": "MINOCC-2017:Production:43836:1",
+        "source_table": "Production",
+        "record_id": "SITE_NO 43836, row 1",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 1819.3 KG GOLD BULLION 0.4 T SCHEELITE CONCENTRATE (Ore Amount 50888 T; Ore Type HARD ROCK ORE (OR REEF))"
+      },
+      {
+        "commodity": "scheelite",
+        "amount": 0.4,
+        "unit": "t",
+        "period_from": null,
+        "period_to": 1988,
+        "basis": "reported",
+        "qualifier": null,
+        "entity": "Tyrconnel",
+        "scope": "period",
+        "form": "concentrate",
+        "ore_class": "HARD ROCK ORE (OR REEF)",
+        "ore_recorded": "50888 T",
+        "comment": "Production in 1876-1914, 1924, 1930-1942, 1946, 1955, 1958, 1978 and 1982-1988.",
+        "source_ref": "MINOCC-2017:Production:43836:1",
+        "source_table": "Production",
+        "record_id": "SITE_NO 43836, row 1",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Production: 1819.3 KG GOLD BULLION 0.4 T SCHEELITE CONCENTRATE (Ore Amount 50888 T; Ore Type HARD ROCK ORE (OR REEF))"
+      }
+    ],
+    "closure": [],
+    "years_worked": [],
+    "ownership": [
+      {
+        "owner": "Bell",
+        "role": "principal holder of mining lease 4880, mining lease 4912, mining lease 20340 (MINOCC Tenure table, as at the 2017 release; no dates recorded)",
+        "period_from": null,
+        "period_to": null,
+        "entity": "Tyrconnel",
+        "source_ref": "MINOCC-2017:Tenure:43836",
+        "source_table": "Tenure",
+        "record_id": "SITE_NO 43836",
+        "tenures": [
+          {
+            "type": "MINING LEASE",
+            "number": 4880
+          },
+          {
+            "type": "MINING LEASE",
+            "number": 4912
+          },
+          {
+            "type": "MINING LEASE",
+            "number": 20340
+          }
+        ],
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Tenure: Principal Holder Name BELL; MINING LEASE 4880, MINING LEASE 4912, MINING LEASE 20340"
+      },
+      {
+        "owner": "Gold Copper Exploration Ltd",
+        "role": "exploration tenure  (MINOCC Explorer table)",
+        "period_from": 1987,
+        "period_to": 1989,
+        "entity": "Tyrconnel",
+        "source_ref": "MINOCC-2017:Explorer:43836:1",
+        "source_table": "Explorer",
+        "record_id": "SITE_NO 43836, row 1",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Explorer: , Start_Year 1987, End_Year 1989, Company Name GOLD COPPER EXPLORATION LTD, ML, 1987-1989"
+      },
+      {
+        "owner": "Wmc Ltd",
+        "role": "exploration tenure EPM 4130 (MINOCC Explorer table)",
+        "period_from": 1985,
+        "period_to": 1988,
+        "entity": "Tyrconnel",
+        "source_ref": "MINOCC-2017:Explorer:43836:2",
+        "source_table": "Explorer",
+        "record_id": "SITE_NO 43836, row 2",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Explorer: EPM 4130, Start_Year 1985, End_Year 1988, Company Name WMC LTD"
+      },
+      {
+        "owner": "Stannary Mining Pty Ltd",
+        "role": "exploration tenure  (MINOCC Explorer table)",
+        "period_from": 1982,
+        "period_to": 1987,
+        "entity": "Tyrconnel",
+        "source_ref": "MINOCC-2017:Explorer:43836:3",
+        "source_table": "Explorer",
+        "record_id": "SITE_NO 43836, row 3",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Explorer: , Start_Year 1982, End_Year 1987, Company Name STANNARY MINING PTY LTD, ML, 1982-1987"
+      }
+    ],
+    "references": [
+      {
+        "cr_numbers": [
+          12774,
+          13470,
+          15336,
+          15760,
+          16303,
+          16609
+        ],
+        "source_ref": "MINOCC-2017:Company reports:43836",
+        "source_table": "Company reports",
+        "record_id": "SITE_NO 43836",
+        "source_title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "source_url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "quote": "Company reports: CR 12774, CR 13470, CR 15336, CR 15760, CR 16303, CR 16609"
+      }
+    ],
+    "conflicts": [],
+    "not_found": [
+      "closure: no closure year or reason in the sources indexed for this site"
+    ],
+    "other_sites_with_same_name": [],
+    "dataset": {
+      "gsq_minocc_fetched": "2026-11-20",
+      "index_built": "2026-11-20",
+      "minocc_2017": {
+        "title": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)",
+        "url": "https://geoscience.data.qld.gov.au/dataset/ds000004",
+        "licence": "CC BY 4.0 (as listed on the GSQ Open Data Portal / data.qld.gov.au dataset listing); (c) State of Queensland (Department of Natural Resources and Mines). The download's own PDFs state no licence."
+      },
+      "licence_note": "GSQ MINOCC: CC BY 4.0, State of Queensland; evidence records carry their own source licence"
+    }
+  },
+  "provenance": {
+    "prefix": {
+      "prov": "http://www.w3.org/ns/prov#",
+      "takar": "https://takar-telegraph.vercel.app/ns#",
+      "tg": "https://devnode.telegraphprotocol.com/engine/v1/signal/"
+    },
+    "entity": {
+      "takar:production-minocc-2017-total-ores-prod-43836-x-1988": {
+        "prov:type": "takar:ProductionFigure",
+        "takar:tonnes": 1.8193,
+        "takar:scope": "site_total",
+        "takar:period": "?-1988",
+        "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+      },
+      "takar:source-minocc-2017-total-ores-prod-43836": {
+        "prov:type": "takar:CitedSource",
+        "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+      },
+      "takar:production-minocc-2017-production-43836-1-x-1988": {
+        "prov:type": "takar:ProductionFigure",
+        "takar:tonnes": 1.8193,
+        "takar:scope": "period",
+        "takar:period": "?-1988",
+        "prov:label": "Queensland Mineral Occurrence Data, MINOCC 2017 (Queensland Mineral Occurrence Data, ds000004; digital data version April 2017)"
+      },
+      "takar:source-minocc-2017-production-43836-1": {
+        "prov:type": "takar:CitedSource",
+        "prov:location": "https://geoscience.data.qld.gov.au/dataset/ds000004"
+      },
+      "takar:tenure-epm-26276": {
+        "prov:type": "takar:Tenure",
+        "prov:label": "EPM 26276",
+        "takar:holder": "Beamond, Adrian Peter",
+        "takar:status": "Granted",
+        "takar:expiry": "2027-01-08"
+      },
+      "takar:tenure-ml-20340": {
+        "prov:type": "takar:Tenure",
+        "prov:label": "ML 20340",
+        "takar:holder": "CLG Properties Pty Ltd",
+        "takar:status": "Granted",
+        "takar:expiry": "2028-04-30"
+      },
+      "takar:native-title-qcd2012-004-determination": {
+        "prov:type": "takar:NativeTitleRecord",
+        "prov:label": "QCD2012/004 (determination)",
+        "takar:name": "Djungan People #2",
+        "takar:status": null
+      },
+      "takar:native-title-qi2015-040-indigenous-land-use-agreement": {
+        "prov:type": "takar:NativeTitleRecord",
+        "prov:label": "QI2015/040 (Indigenous Land Use Agreement)",
+        "takar:name": "Djungan Small Scale Miners ILUA",
+        "takar:status": null
+      },
+      "takar:native-title-qi2003-045-indigenous-land-use-agreement": {
+        "prov:type": "takar:NativeTitleRecord",
+        "prov:label": "QI2003/045 (Indigenous Land Use Agreement)",
+        "takar:name": "Djungan Small Scale Mining and Exploration",
+        "takar:status": null
+      },
+      "takar:native-title-qi2012-087-indigenous-land-use-agreement": {
+        "prov:type": "takar:NativeTitleRecord",
+        "prov:label": "QI2012/087 (Indigenous Land Use Agreement)",
+        "takar:name": "Djungan People & Tablelands Regional Council ",
+        "takar:status": null
+      },
+      "takar:native-title-qi2012-091-indigenous-land-use-agreement": {
+        "prov:type": "takar:NativeTitleRecord",
+        "prov:label": "QI2012/091 (Indigenous Land Use Agreement)",
+        "takar:name": "Djungan People and Ergon Energy ILUA",
+        "takar:status": null
+      },
+      "takar:native-title-qcd2012-004-det-cultural-heritage-party": {
+        "prov:type": "takar:NativeTitleRecord",
+        "prov:label": "QCD2012/004 DET (cultural heritage party)",
+        "takar:name": "Djungan People #2",
+        "takar:status": "DETERMINED"
+      },
+      "takar:native-title-chb021004-cultural-heritage-body": {
+        "prov:type": "takar:NativeTitleRecord",
+        "prov:label": "CHB021004 (cultural heritage body)",
+        "takar:name": "Nguddaboolgan Native Title Aboriginal\r\nCorporation",
+        "takar:status": null
+      },
+      "takar:heritage-600687": {
+        "prov:type": "takar:HeritagePlace",
+        "prov:label": "Tyrconnel Mine and Battery",
+        "takar:ref": "600687"
+      },
+      "takar:cross-check-praman": {
+        "prov:type": "takar:CrossCheck",
+        "prov:location": "https://praman-desk.vercel.app/api/gold-rush/aggregate",
+        "prov:value": "no usable consensus figure"
+      },
+      "takar:cross-check-nftking-land": {
+        "prov:type": "takar:CrossCheck",
+        "prov:location": "https://goldrush.up.railway.app/ask?question=land%20and%20rights%20at%20site%2043836",
+        "prov:value": "2 of our 2 tenure IDs within 500 m are also in theirs (23 rows to 2 km); native title QCD2012/004 at the site in both; 2 expiry dates identical"
+      },
+      "takar:dossier": {
+        "prov:type": "takar:Dossier",
+        "prov:label": "Tyrconnel",
+        "prov:generatedAtTime": "2026-11-23T15:22:15.997Z"
+      }
+    },
+    "activity": {
+      "tg:0x233e89fcb92c8bf12f45071281ba67f176ed487e273074ac364af56b86b45c9e": {
+        "prov:type": "takar:PaidTelegraphAsk",
+        "takar:intent": "RESEARCH_QUERY_GENERAL",
+        "takar:costUsd": 0.01,
+        "takar:rank": "#17 of 32"
+      },
+      "tg:0x69e0530b804ad65f88f604140f7b64a96f51c56ec7615f924733e1c14b918399": {
+        "prov:type": "takar:PaidTelegraphAsk",
+        "takar:intent": "RESEARCH_QUERY_GENERAL",
+        "takar:costUsd": 0.01,
+        "takar:rank": "#23 of 32"
+      },
+      "tg:0x9e4b6e994cf9ff393c7068d9d0ef9d56c18a04d958ce169e6aa1c8db460bf1e2": {
+        "prov:type": "takar:PaidTelegraphAsk",
+        "takar:intent": "RESEARCH_QUERY_GENERAL",
+        "takar:costUsd": 0.01,
+        "takar:rank": "#17 of 32"
+      },
+      "takar:read-tenure": {
+        "prov:type": "takar:DirectRegisterRead",
+        "prov:location": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Economy/MinesPermitsCurrent/MapServer",
+        "prov:startedAtTime": "2026-11-23T15:24:29.283Z",
+        "prov:label": "Queensland resource authorities within 500 m"
+      },
+      "takar:read-native-title": {
+        "prov:type": "takar:DirectRegisterRead",
+        "prov:location": "https://services2.arcgis.com/rzk7fNEt0xoEp3cX/arcgis/rest/services/NNTT_Custodial_AGOL/FeatureServer (National Native Title Tribunal)",
+        "prov:startedAtTime": "2026-11-23T15:24:34.783Z",
+        "prov:label": "Native title and cultural heritage at the site point"
+      },
+      "takar:read-heritage": {
+        "prov:type": "takar:DirectRegisterRead",
+        "prov:location": "https://www.data.qld.gov.au/dataset/the-queensland-heritage-register",
+        "prov:startedAtTime": null,
+        "prov:label": "Queensland Heritage Register (extract)"
+      }
+    },
+    "agent": {
+      "takar:takar": {
+        "prov:type": "prov:SoftwareAgent",
+        "prov:label": "Takar dossier builder (lib/dossier.mjs)"
+      },
+      "takar:miner-7310050": {
+        "prov:type": "prov:SoftwareAgent",
+        "prov:label": "Gold Rush Queensland Mine History (Telegraph miner 7310050)"
+      },
+      "takar:miner-64176": {
+        "prov:type": "prov:SoftwareAgent",
+        "prov:label": "OathCast Queensland Gold Mines (Telegraph miner 64176)"
+      },
+      "takar:publisher-queensland-government-department-of-resources": {
+        "prov:type": "prov:Organization",
+        "prov:label": "Queensland Government (Department of Resources)"
+      },
+      "takar:publisher-national-native-title-tribunal-and-queensland-government": {
+        "prov:type": "prov:Organization",
+        "prov:label": "National Native Title Tribunal and Queensland Government"
+      },
+      "takar:publisher-queensland-government-heritage-register": {
+        "prov:type": "prov:Organization",
+        "prov:label": "Queensland Government (Heritage Register)"
+      },
+      "takar:team-praman": {
+        "prov:type": "prov:SoftwareAgent",
+        "prov:label": "Praman Desk Gold Rush arbitrator (another hackathon team)"
+      },
+      "takar:team-nftking-land": {
+        "prov:type": "prov:SoftwareAgent",
+        "prov:label": "goldrush-qld-history land and rights, NFT KING (another hackathon team)"
+      }
+    },
+    "wasGeneratedBy": {
+      "_:r5": {
+        "prov:entity": "takar:production-minocc-2017-total-ores-prod-43836-x-1988",
+        "prov:activity": "tg:0x233e89fcb92c8bf12f45071281ba67f176ed487e273074ac364af56b86b45c9e"
+      },
+      "_:r7": {
+        "prov:entity": "takar:production-minocc-2017-production-43836-1-x-1988",
+        "prov:activity": "tg:0x233e89fcb92c8bf12f45071281ba67f176ed487e273074ac364af56b86b45c9e"
+      },
+      "_:r9": {
+        "prov:entity": "takar:tenure-epm-26276",
+        "prov:activity": "takar:read-tenure"
+      },
+      "_:r11": {
+        "prov:entity": "takar:tenure-ml-20340",
+        "prov:activity": "takar:read-tenure"
+      },
+      "_:r14": {
+        "prov:entity": "takar:native-title-qcd2012-004-determination",
+        "prov:activity": "takar:read-native-title"
+      },
+      "_:r16": {
+        "prov:entity": "takar:native-title-qi2015-040-indigenous-land-use-agreement",
+        "prov:activity": "takar:read-native-title"
+      },
+      "_:r18": {
+        "prov:entity": "takar:native-title-qi2003-045-indigenous-land-use-agreement",
+        "prov:activity": "takar:read-native-title"
+      },
+      "_:r20": {
+        "prov:entity": "takar:native-title-qi2012-087-indigenous-land-use-agreement",
+        "prov:activity": "takar:read-native-title"
+      },
+      "_:r22": {
+        "prov:entity": "takar:native-title-qi2012-091-indigenous-land-use-agreement",
+        "prov:activity": "takar:read-native-title"
+      },
+      "_:r24": {
+        "prov:entity": "takar:native-title-qcd2012-004-det-cultural-heritage-party",
+        "prov:activity": "takar:read-native-title"
+      },
+      "_:r26": {
+        "prov:entity": "takar:native-title-chb021004-cultural-heritage-body",
+        "prov:activity": "takar:read-native-title"
+      },
+      "_:r29": {
+        "prov:entity": "takar:heritage-600687",
+        "prov:activity": "takar:read-heritage"
+      }
+    },
+    "wasAssociatedWith": {
+      "_:r1": {
+        "prov:activity": "tg:0x233e89fcb92c8bf12f45071281ba67f176ed487e273074ac364af56b86b45c9e",
+        "prov:agent": "takar:miner-7310050"
+      },
+      "_:r2": {
+        "prov:activity": "tg:0x69e0530b804ad65f88f604140f7b64a96f51c56ec7615f924733e1c14b918399",
+        "prov:agent": "takar:miner-64176"
+      },
+      "_:r3": {
+        "prov:activity": "tg:0x9e4b6e994cf9ff393c7068d9d0ef9d56c18a04d958ce169e6aa1c8db460bf1e2",
+        "prov:agent": "takar:miner-7310050"
+      },
+      "_:r8": {
+        "prov:activity": "takar:read-tenure",
+        "prov:agent": "takar:takar"
+      },
+      "_:r13": {
+        "prov:activity": "takar:read-native-title",
+        "prov:agent": "takar:takar"
+      },
+      "_:r28": {
+        "prov:activity": "takar:read-heritage",
+        "prov:agent": "takar:takar"
+      }
+    },
+    "wasDerivedFrom": {
+      "_:r4": {
+        "prov:generatedEntity": "takar:production-minocc-2017-total-ores-prod-43836-x-1988",
+        "prov:usedEntity": "takar:source-minocc-2017-total-ores-prod-43836"
+      },
+      "_:r6": {
+        "prov:generatedEntity": "takar:production-minocc-2017-production-43836-1-x-1988",
+        "prov:usedEntity": "takar:source-minocc-2017-production-43836-1"
+      },
+      "_:r34": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:production-minocc-2017-total-ores-prod-43836-x-1988"
+      },
+      "_:r35": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:source-minocc-2017-total-ores-prod-43836"
+      },
+      "_:r36": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:production-minocc-2017-production-43836-1-x-1988"
+      },
+      "_:r37": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:source-minocc-2017-production-43836-1"
+      },
+      "_:r38": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:tenure-epm-26276"
+      },
+      "_:r39": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:tenure-ml-20340"
+      },
+      "_:r40": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:native-title-qcd2012-004-determination"
+      },
+      "_:r41": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:native-title-qi2015-040-indigenous-land-use-agreement"
+      },
+      "_:r42": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:native-title-qi2003-045-indigenous-land-use-agreement"
+      },
+      "_:r43": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:native-title-qi2012-087-indigenous-land-use-agreement"
+      },
+      "_:r44": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:native-title-qi2012-091-indigenous-land-use-agreement"
+      },
+      "_:r45": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:native-title-qcd2012-004-det-cultural-heritage-party"
+      },
+      "_:r46": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:native-title-chb021004-cultural-heritage-body"
+      },
+      "_:r47": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:heritage-600687"
+      },
+      "_:r48": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:cross-check-praman"
+      },
+      "_:r49": {
+        "prov:generatedEntity": "takar:dossier",
+        "prov:usedEntity": "takar:cross-check-nftking-land"
+      }
+    },
+    "wasAttributedTo": {
+      "_:r10": {
+        "prov:entity": "takar:tenure-epm-26276",
+        "prov:agent": "takar:publisher-queensland-government-department-of-resources"
+      },
+      "_:r12": {
+        "prov:entity": "takar:tenure-ml-20340",
+        "prov:agent": "takar:publisher-queensland-government-department-of-resources"
+      },
+      "_:r15": {
+        "prov:entity": "takar:native-title-qcd2012-004-determination",
+        "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+      },
+      "_:r17": {
+        "prov:entity": "takar:native-title-qi2015-040-indigenous-land-use-agreement",
+        "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+      },
+      "_:r19": {
+        "prov:entity": "takar:native-title-qi2003-045-indigenous-land-use-agreement",
+        "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+      },
+      "_:r21": {
+        "prov:entity": "takar:native-title-qi2012-087-indigenous-land-use-agreement",
+        "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+      },
+      "_:r23": {
+        "prov:entity": "takar:native-title-qi2012-091-indigenous-land-use-agreement",
+        "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+      },
+      "_:r25": {
+        "prov:entity": "takar:native-title-qcd2012-004-det-cultural-heritage-party",
+        "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+      },
+      "_:r27": {
+        "prov:entity": "takar:native-title-chb021004-cultural-heritage-body",
+        "prov:agent": "takar:publisher-national-native-title-tribunal-and-queensland-government"
+      },
+      "_:r30": {
+        "prov:entity": "takar:heritage-600687",
+        "prov:agent": "takar:publisher-queensland-government-heritage-register"
+      },
+      "_:r31": {
+        "prov:entity": "takar:cross-check-praman",
+        "prov:agent": "takar:team-praman"
+      },
+      "_:r32": {
+        "prov:entity": "takar:cross-check-nftking-land",
+        "prov:agent": "takar:team-nftking-land"
+      },
+      "_:r33": {
+        "prov:entity": "takar:dossier",
+        "prov:agent": "takar:takar"
+      }
+    },
+    "summary": {
+      "entities": 17,
+      "activities": 6,
+      "agents": 8,
+      "paid_asks": 3
+    }
+  },
+  "attestation": {
+    "algorithm": "ed25519",
+    "sha256": "dee177712bbec58d9a7ffa72420231b06a48f675c810216a76bfb2917fd400ca",
+    "signature": "iRNsYvczAWQ0QmE1KBOOfGkdN4ee1cAe5Aaoj2d250B4o7OVSYqNMlXPAu5+AI+5G0ZjPXJO0U5zWHW42PjHAA==",
+    "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
+  }
+}
