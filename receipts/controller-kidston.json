@@ -1,0 +1,72 @@
+{
+  "title": "Who controls Kidston today",
+  "mine": "Kidston",
+  "method": "Current tenure holders from the Queensland register (MinesPermitsCurrent), each resolved by Sadiq's identity miner 731005 and screened by 731002, direct asks by id.",
+  "scope": "current registered entity only; the historical company chain is not established here",
+  "generated_at": "2026-11-23T15:55:16.005Z",
+  "controller_identity": [
+    {
+      "holder_name": "JUBILEE METALS LIMITED",
+      "legal_name": null,
+      "entity_id": null,
+      "jurisdiction": null,
+      "status": null,
+      "screened": {
+        "result": "no match",
+        "match_score": 0,
+        "lists": [
+          "US OFAC SDN and non-SDN Consolidated lists (published 2026-11-09)",
+          "UN Security Council Consolidated List (published 2026-11-12)",
+          "EU Consolidated Financial Sanctions List (published 2026-10-23)",
+          "UK Sanctions List (published 2026-11-10)"
+        ],
+        "note": "lists as published; not ownership or adverse media"
+      },
+      "source_ref": "miner:731005+731002",
+      "receipts": [
+        {
+          "miner": 731005,
+          "signal": "0x2b773f5d2070f805bf90ac42cb14454dcac5ed662b61604baf8e593b16d32b08"
+        },
+        {
+          "miner": 731002,
+          "signal": "0x901f8e274d2c779ef862913e1d0a624e8d0c37fc4a10c59d56a0f6cdc14eb23b"
+        }
+      ],
+      "checked_at": "2026-11-23T15:54:58.423Z",
+      "headquarters": null
+    },
+    {
+      "holder_name": "Kidston Gold Mines Pty Ltd",
+      "legal_name": null,
+      "entity_id": null,
+      "jurisdiction": null,
+      "status": null,
+      "screened": {
+        "result": "no match",
+        "match_score": 0,
+        "lists": [
+          "US OFAC SDN and non-SDN Consolidated lists (published 2026-11-09)",
+          "UN Security Council Consolidated List (published 2026-11-12)",
+          "EU Consolidated Financial Sanctions List (published 2026-10-23)",
+          "UK Sanctions List (published 2026-11-10)"
+        ],
+        "note": "lists as published; not ownership or adverse media"
+      },
+      "source_ref": "miner:731005+731002",
+      "receipts": [
+        {
+          "miner": 731005,
+          "signal": "0x9af52cce6b7d2f93df5e319cc72bb4c35d8e107251bb6473f06e78709edf262a"
+        },
+        {
+          "miner": 731002,
+          "signal": "0x2aa21b9690312550287d537fc144fdcd1f1a37104638b7fcf52cc1cf48c2421c"
+        }
+      ],
+      "checked_at": "2026-11-23T15:55:05.232Z",
+      "headquarters": null
+    }
+  ],
+  "gaps": []
+}

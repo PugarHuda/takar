@@ -1,0 +1,47 @@
+{
+  "title": "Who controls Tyrconnel today",
+  "mine": "Tyrconnel",
+  "method": "Current tenure holders from the Queensland register (MinesPermitsCurrent), each resolved by Sadiq's identity miner 731005 and screened by 731002, direct asks by id.",
+  "scope": "current registered entity only; the historical company chain is not established here",
+  "generated_at": "2026-11-23T15:56:35.927Z",
+  "controller_identity": [
+    {
+      "holder_name": "an individual (name withheld)",
+      "individual": true,
+      "note": "an individual holds this tenure: not resolved to a company and not screened",
+      "checked_at": "2026-11-23T15:56:28.524Z"
+    },
+    {
+      "holder_name": "CLG Properties Pty Ltd",
+      "legal_name": null,
+      "entity_id": null,
+      "jurisdiction": null,
+      "status": null,
+      "screened": {
+        "result": "no match",
+        "match_score": 0,
+        "lists": [
+          "US OFAC SDN and non-SDN Consolidated lists (published 2026-11-09)",
+          "UN Security Council Consolidated List (published 2026-11-12)",
+          "EU Consolidated Financial Sanctions List (published 2026-10-23)",
+          "UK Sanctions List (published 2026-11-10)"
+        ],
+        "note": "lists as published; not ownership or adverse media"
+      },
+      "source_ref": "miner:731005+731002",
+      "receipts": [
+        {
+          "miner": 731005,
+          "signal": "0xbd5cf236db26047cce5a79d347c7eb74edb294c9b18d15ecbe4fecd7ccce43b1"
+        },
+        {
+          "miner": 731002,
+          "signal": "0xb5ed53ff00bcba241f29840501f181859ed3ca8d2fd54603b5b3c74908c8c782"
+        }
+      ],
+      "checked_at": "2026-11-23T15:56:28.525Z",
+      "headquarters": null
+    }
+  ],
+  "gaps": []
+}

@@ -6,8 +6,9 @@ import {IERC20} from "./TakarSettle.sol";
 /// @title TakarSettle v5: v4 with split settlement. A decision is the amount the payee receives
 /// (0 to the full deal amount); the rest goes back to the payer. Built for quantity disputes:
 /// the supplier says it delivered everything, the buyer accepted only part, and the panel pays
-/// for what the evidence shows was accepted. Escalation as v4: once both parties have disputed,
-/// a decision needs EVERY resolver.
+/// for what the evidence shows was accepted. Escalation is stricter than v4: once EITHER party has
+/// disputed, a decision needs EVERY resolver, so a contested deal cannot be settled by the
+/// resolvers of one operator alone.
 /// @notice A payer locks tokens for a payee against a condition in plain words. After
 /// `resolveAfter`, one resolver proposes a settlement with the Telegraph signal hashes it rests
 /// on; the dispute window opens only once `threshold` DIFFERENT resolvers have seconded the same
@@ -142,10 +143,10 @@ contract TakarSettle5 {
         _back(id, d);
     }
 
-    /// @notice Approvals a decision on this deal needs: the threshold, or the whole panel once both parties disputed.
+    /// @notice Approvals a decision on this deal needs: the threshold, or the whole panel once EITHER party has disputed.
     function required(uint256 id) public view returns (uint8) {
         Deal storage d = deals[id];
-        return d.payerDisputed && d.payeeDisputed ? uint8(resolvers.length) : threshold;
+        return d.payerDisputed || d.payeeDisputed ? uint8(resolvers.length) : threshold;
     }
 
     function _back(uint256 id, Deal storage d) internal {

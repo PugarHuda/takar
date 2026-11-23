@@ -1,0 +1,41 @@
+{
+  "title": "Who controls Mount Coolon today",
+  "mine": "Mount Coolon",
+  "method": "Current tenure holders from the Queensland register (MinesPermitsCurrent), each resolved by Sadiq's identity miner 731005 and screened by 731002, direct asks by id.",
+  "scope": "current registered entity only; the historical company chain is not established here",
+  "generated_at": "2026-11-23T15:55:25.565Z",
+  "controller_identity": [
+    {
+      "holder_name": "MT COOLON GOLD MINES PTY LTD",
+      "legal_name": null,
+      "entity_id": null,
+      "jurisdiction": null,
+      "status": null,
+      "screened": {
+        "result": "no match",
+        "match_score": 0,
+        "lists": [
+          "US OFAC SDN and non-SDN Consolidated lists (published 2026-11-09)",
+          "UN Security Council Consolidated List (published 2026-11-12)",
+          "EU Consolidated Financial Sanctions List (published 2026-10-23)",
+          "UK Sanctions List (published 2026-11-10)"
+        ],
+        "note": "lists as published; not ownership or adverse media"
+      },
+      "source_ref": "miner:731005+731002",
+      "receipts": [
+        {
+          "miner": 731005,
+          "signal": "0xbbfc028836923bc51da76b35cdb65907b6b6c2ee7dbb215aeca68663e3e8327d"
+        },
+        {
+          "miner": 731002,
+          "signal": "0x9fdbdc05bffb0d3c703672ceabd9bd28119360b5cf66d1b25cae1cefb1b4594f"
+        }
+      ],
+      "checked_at": "2026-11-23T15:55:16.009Z",
+      "headquarters": null
+    }
+  ],
+  "gaps": []
+}

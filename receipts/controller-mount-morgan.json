@@ -1,0 +1,41 @@
+{
+  "title": "Who controls Mount Morgan today",
+  "mine": "Mount Morgan",
+  "method": "Current tenure holders from the Queensland register (MinesPermitsCurrent), each resolved by Sadiq's identity miner 731005 and screened by 731002, direct asks by id.",
+  "scope": "current registered entity only; the historical company chain is not established here",
+  "generated_at": "2026-11-23T15:55:42.558Z",
+  "controller_identity": [
+    {
+      "holder_name": "HERITAGE MINERALS PTY LTD",
+      "legal_name": "HERITAGE MINERALS PTY LTD",
+      "entity_id": "894500NPROXAZEPP4L94",
+      "jurisdiction": "AU",
+      "status": "ACTIVE",
+      "screened": {
+        "result": "no match",
+        "match_score": 0,
+        "lists": [
+          "US OFAC SDN and non-SDN Consolidated lists (published 2026-11-09)",
+          "UN Security Council Consolidated List (published 2026-11-12)",
+          "EU Consolidated Financial Sanctions List (published 2026-10-23)",
+          "UK Sanctions List (published 2026-11-10)"
+        ],
+        "note": "lists as published; not ownership or adverse media"
+      },
+      "source_ref": "miner:731005+731002",
+      "receipts": [
+        {
+          "miner": 731005,
+          "signal": "0x616af73823d5bedb86967f3265d288a062d5c2ff16da373bdd276e416b42a7c1"
+        },
+        {
+          "miner": 731002,
+          "signal": "0x3285fe6091bc9fdafa843af19518c51b8b4a138569362b7852ed03e9c78616b4"
+        }
+      ],
+      "checked_at": "2026-11-23T15:55:35.290Z",
+      "headquarters": "Rockhampton, AU"
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Who controls Ravenswood today",
+  "mine": "Ravenswood",
+  "method": "Current tenure holders from the Queensland register (MinesPermitsCurrent), each resolved by Sadiq's identity miner 731005 and screened by 731002, direct asks by id.",
+  "scope": "current registered entity only; the historical company chain is not established here",
+  "generated_at": "2026-11-23T15:55:52.871Z",
+  "controller_identity": [
+    {
+      "holder_name": "Ravenswood Gold Pty Ltd",
+      "legal_name": "RAVENSWOOD GOLD PTY LTD",
+      "entity_id": "254900R8954IR7VLL897",
+      "jurisdiction": "AU",
+      "status": "ACTIVE",
+      "screened": {
+        "result": "no match",
+        "match_score": 0,
+        "lists": [
+          "US OFAC SDN and non-SDN Consolidated lists (published 2026-11-09)",
+          "UN Security Council Consolidated List (published 2026-11-12)",
+          "EU Consolidated Financial Sanctions List (published 2026-10-23)",
+          "UK Sanctions List (published 2026-11-10)"
+        ],
+        "note": "lists as published; not ownership or adverse media"
+      },
+      "source_ref": "miner:731005+731002",
+      "receipts": [
+        {
+          "miner": 731005,
+          "signal": "0xa004f73601a9d062c4020bdb50163cba0c18771c9e5a2a6792247d53030de503"
+        },
+        {
+          "miner": 731002,
+          "signal": "0x347dcb7b384951d154c19ce13a367c10e854be219786e79a25acac9281894f7e"
+        }
+      ],
+      "checked_at": "2026-11-23T15:55:42.560Z",
+      "headquarters": "RAVENSWOOD, AU"
+    }
+  ],
+  "gaps": []
+}

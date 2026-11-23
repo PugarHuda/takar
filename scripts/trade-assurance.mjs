@@ -93,7 +93,8 @@ async function evidence(t) {
   let payout = decision === "pay" ? t.amount : decision === "refund" ? 0n : null, reconcile = null;
   // Quantity deals: an invoice that does not match the goods-received note is paid for the accepted
   // part, when both miners and Praman's three-way reconciliation agree on the shortfall.
-  if (t.qty && decision === "refund" && sanctions !== "fail") {
+  // Only goods that arrived from a clear supplier can be part-paid; anything else stays a refund.
+  if (t.qty && decision === "refund" && arrival === "pass" && sanctions === "pass") {
     reconcile = await pramanTool("reconcile_invoice", { invoice_id: t.qty.invoiceId, po_number: t.qty.po, billed_qty: t.qty.billed, accepted_qty: t.qty.accepted, unit_price: t.qty.unitPrice, tax_rate_pct: 0, currency: "USD" }).catch((e) => ({ error: e.message }));
     const p = payable(t.amount, t.qty.billed * t.qty.unitPrice, invoice.map((x) => x.result?.discrepancy), reconcile?.details?.delta_total);
     if (p === null) [decision, why, payout] = ["review", "the invoice does not match the goods-received note, but the miners and Praman do not agree on the shortfall", null];

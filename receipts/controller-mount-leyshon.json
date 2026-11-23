@@ -1,0 +1,41 @@
+{
+  "title": "Who controls Mount Leyshon today",
+  "mine": "Mount Leyshon",
+  "method": "Current tenure holders from the Queensland register (MinesPermitsCurrent), each resolved by Sadiq's identity miner 731005 and screened by 731002, direct asks by id.",
+  "scope": "current registered entity only; the historical company chain is not established here",
+  "generated_at": "2026-11-23T15:55:35.287Z",
+  "controller_identity": [
+    {
+      "holder_name": "Newmont Landco Pty Ltd",
+      "legal_name": null,
+      "entity_id": null,
+      "jurisdiction": null,
+      "status": null,
+      "screened": {
+        "result": "no match",
+        "match_score": 0,
+        "lists": [
+          "US OFAC SDN and non-SDN Consolidated lists (published 2026-11-09)",
+          "UN Security Council Consolidated List (published 2026-11-12)",
+          "EU Consolidated Financial Sanctions List (published 2026-10-23)",
+          "UK Sanctions List (published 2026-11-10)"
+        ],
+        "note": "lists as published; not ownership or adverse media"
+      },
+      "source_ref": "miner:731005+731002",
+      "receipts": [
+        {
+          "miner": 731005,
+          "signal": "0xa25a5d2f12b50aef29628da80c47143912e3d267d97ee7139511abf543ceae2b"
+        },
+        {
+          "miner": 731002,
+          "signal": "0x3bd249ce12799f121740ce30c751b96da62dad3de5cf991c19bc0a15a1fd621a"
+        }
+      ],
+      "checked_at": "2026-11-23T15:55:25.571Z",
+      "headquarters": null
+    }
+  ],
+  "gaps": []
+}

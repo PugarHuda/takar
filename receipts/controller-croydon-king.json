@@ -1,0 +1,72 @@
+{
+  "title": "Who controls Croydon King today",
+  "mine": "Croydon King",
+  "method": "Current tenure holders from the Queensland register (MinesPermitsCurrent), each resolved by Sadiq's identity miner 731005 and screened by 731002, direct asks by id.",
+  "scope": "current registered entity only; the historical company chain is not established here",
+  "generated_at": "2026-11-23T15:54:44.762Z",
+  "controller_identity": [
+    {
+      "holder_name": "QLD AUS GRAPHITE PTY LTD",
+      "legal_name": null,
+      "entity_id": null,
+      "jurisdiction": null,
+      "status": null,
+      "screened": {
+        "result": "no match",
+        "match_score": 0,
+        "lists": [
+          "US OFAC SDN and non-SDN Consolidated lists (published 2026-11-09)",
+          "UN Security Council Consolidated List (published 2026-11-12)",
+          "EU Consolidated Financial Sanctions List (published 2026-10-23)",
+          "UK Sanctions List (published 2026-11-10)"
+        ],
+        "note": "lists as published; not ownership or adverse media"
+      },
+      "source_ref": "miner:731005+731002",
+      "receipts": [
+        {
+          "miner": 731005,
+          "signal": "0xc0c46cce07c20ca8786923fb8419b9647cbe15d8b6cd6140004ac01dcab350e2"
+        },
+        {
+          "miner": 731002,
+          "signal": "0x194b245161608294c0f803608893201bda9b1f306b0935d3219ba2427f56cf91"
+        }
+      ],
+      "checked_at": "2026-11-23T15:54:25.879Z",
+      "headquarters": null
+    },
+    {
+      "holder_name": "JUBILEE METALS LIMITED",
+      "legal_name": null,
+      "entity_id": null,
+      "jurisdiction": null,
+      "status": null,
+      "screened": {
+        "result": "no match",
+        "match_score": 0,
+        "lists": [
+          "US OFAC SDN and non-SDN Consolidated lists (published 2026-11-09)",
+          "UN Security Council Consolidated List (published 2026-11-12)",
+          "EU Consolidated Financial Sanctions List (published 2026-10-23)",
+          "UK Sanctions List (published 2026-11-10)"
+        ],
+        "note": "lists as published; not ownership or adverse media"
+      },
+      "source_ref": "miner:731005+731002",
+      "receipts": [
+        {
+          "miner": 731005,
+          "signal": "0x7cc4a2fa3bc486e6a892447e37db08c1ae44c06ca170b1e991efa43f7f784233"
+        },
+        {
+          "miner": 731002,
+          "signal": "0xa7e7799cf5460f072639bbb84eaa0161c2d736b1d4f9f54139fbadfe5ecd083f"
+        }
+      ],
+      "checked_at": "2026-11-23T15:54:34.909Z",
+      "headquarters": null
+    }
+  ],
+  "gaps": []
+}

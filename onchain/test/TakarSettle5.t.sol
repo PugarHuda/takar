@@ -68,6 +68,8 @@ contract TakarSettle5Test is Test {
         bytes32[] memory b = _sig("c", "d");
         vm.prank(r1); s.propose(id, 9.6e6, b, "same payout, fresh evidence");
         vm.prank(r2); s.second(id, _h(9.6e6, b));
+        assertEq(s.deal(id).finalizesAt, 0, "one dispute already needs the whole panel: two seats of one operator cannot settle it");
+        vm.prank(r3); s.second(id, _h(9.6e6, b));
         vm.warp(block.timestamp + 10 minutes);
         s.finalize(id);
         assertEq(usdc.balanceOf(payer), 100e6 - 10e6 + 0.4e6 + 1e6, "supplier disputed 9.6 and 9.6 stood: its bond goes to the buyer");

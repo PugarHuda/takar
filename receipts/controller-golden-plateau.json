@@ -1,0 +1,41 @@
+{
+  "title": "Who controls Golden Plateau today",
+  "mine": "Golden Plateau",
+  "method": "Current tenure holders from the Queensland register (MinesPermitsCurrent), each resolved by Sadiq's identity miner 731005 and screened by 731002, direct asks by id.",
+  "scope": "current registered entity only; the historical company chain is not established here",
+  "generated_at": "2026-11-23T15:54:58.417Z",
+  "controller_identity": [
+    {
+      "holder_name": "LION MINING PTY LTD",
+      "legal_name": null,
+      "entity_id": null,
+      "jurisdiction": null,
+      "status": null,
+      "screened": {
+        "result": "no match",
+        "match_score": 0,
+        "lists": [
+          "US OFAC SDN and non-SDN Consolidated lists (published 2026-11-09)",
+          "UN Security Council Consolidated List (published 2026-11-12)",
+          "EU Consolidated Financial Sanctions List (published 2026-10-23)",
+          "UK Sanctions List (published 2026-11-10)"
+        ],
+        "note": "lists as published; not ownership or adverse media"
+      },
+      "source_ref": "miner:731005+731002",
+      "receipts": [
+        {
+          "miner": 731005,
+          "signal": "0x43b2e3d85a359ed53ff99fb9e939b71662b8a5f4a45dc1cc6c3cd99ec705c1cb"
+        },
+        {
+          "miner": 731002,
+          "signal": "0x3ada12a6470786f016e89b3f13a25921cf8afc403d96b16897de184fd31a15f1"
+        }
+      ],
+      "checked_at": "2026-11-23T15:54:44.772Z",
+      "headquarters": null
+    }
+  ],
+  "gaps": []
+}

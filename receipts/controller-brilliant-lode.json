@@ -1,0 +1,41 @@
+{
+  "title": "Who controls Brilliant Lode today",
+  "mine": "Brilliant Lode",
+  "method": "Current tenure holders from the Queensland register (MinesPermitsCurrent), each resolved by Sadiq's identity miner 731005 and screened by 731002, direct asks by id.",
+  "scope": "current registered entity only; the historical company chain is not established here",
+  "generated_at": "2026-11-23T15:54:25.877Z",
+  "controller_identity": [
+    {
+      "holder_name": "CITIGOLD CORPORATION LIMITED",
+      "legal_name": "CITIGOLD CORPORATION LIMITED",
+      "entity_id": "529900C4YHWJ2XJ8A350",
+      "jurisdiction": "AU",
+      "status": "ACTIVE",
+      "screened": {
+        "result": "no match",
+        "match_score": 0,
+        "lists": [
+          "US OFAC SDN and non-SDN Consolidated lists (published 2026-11-09)",
+          "UN Security Council Consolidated List (published 2026-11-12)",
+          "EU Consolidated Financial Sanctions List (published 2026-10-23)",
+          "UK Sanctions List (published 2026-11-10)"
+        ],
+        "note": "lists as published; not ownership or adverse media"
+      },
+      "source_ref": "miner:731005+731002",
+      "receipts": [
+        {
+          "miner": 731005,
+          "signal": "0x41806328e2fac0955fe21fe60c2eb57e21c54285621e4b92b16aa65bf41c56c1"
+        },
+        {
+          "miner": 731002,
+          "signal": "0x67db007c6b27a8174caf60c4235af5adcc08d0da79ee21ef3ce236527ff93d1a"
+        }
+      ],
+      "checked_at": "2026-11-23T15:54:15.999Z",
+      "headquarters": "Fortitude Valley, AU"
+    }
+  ],
+  "gaps": []
+}
