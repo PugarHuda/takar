@@ -75,8 +75,9 @@ code { font-size:.85rem; overflow-wrap:anywhere; }
 
 <script>
 const NODE = "https://devnode.telegraphprotocol.com/engine/v1/signal/";
-const tx = (h) => `<a href="https://sepolia.etherscan.io/tx/${h}">${h.slice(0, 10)}…</a>`;
-const sig = (h) => h ? `<a href="${NODE}${h}">${h.slice(0, 10)}…</a>` : "none";
+const HASH = /^0x[0-9a-fA-F]{64}$/;
+const tx = (h) => HASH.test(h ?? "") ? `<a href="https://sepolia.etherscan.io/tx/${h}">${h.slice(0, 10)}…</a>` : "";
+const sig = (h) => HASH.test(h ?? "") ? `<a href="${NODE}${h}">${h.slice(0, 10)}…</a>` : "none";
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const when = (t) => new Date(t).toISOString().replace("T", " ").slice(0, 16) + " UTC";
 const tag = (k) => `<span class="tag ${esc(k)}">${esc(k)}</span>`;

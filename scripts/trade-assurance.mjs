@@ -72,11 +72,12 @@ async function evidence(t) {
     secondOpinion({ intent: "SANCTIONS_SCREENING_MATCH_GENERAL", params: { name: t.supplier } }, { ask: (a) => ask({ ...a, unit: "trade-assurance" }), ranked, operatorOf: opOf, strictOperators: true, maxAsks: 6, unit: "trade-assurance", fields: ["matched"] }),
     pramanTool("screen_sanctions", { name: t.supplier }).catch((e) => ({ error: e.message })),
   ]);
-  for (const v of vessel) v.berth = v.result ? berth(v.result, port) : { state: "unusable", why: v.error };
+  for (const v of vessel) v.berth = v.result ? berth(v.result, port, Date.now(), t.vessel) : { state: "unusable", why: v.error };
   const arrival = pair(vessel[0].berth.state, vessel[1].berth.state, "berthed", "away");
   const inv = pair(invoice[0].result?.reconciled, invoice[1].result?.reconciled, true, false);
-  const yes = (v) => v === true || /^(true|yes|match|matched|1)$/i.test(String(v));
-  const takarClear = so.verdict === "agree" && so.compared.includes("matched") ? !yes(so.answer?.matched) : null;
+  // Fail closed: clear only on an explicit no-match, a hit only on an explicit match; anything else is review.
+  const verdictOf = (v) => v === false || /^(false|no|0|clear)$/i.test(String(v)) ? true : v === true || /^(true|yes|match|matched|1)$/i.test(String(v)) ? false : null;
+  const takarClear = so.verdict === "agree" && so.compared.includes("matched") ? verdictOf(so.answer?.matched) : null;
   const pramanClear = typeof praman.matched === "boolean" && praman.sdn_last_loaded ? !praman.matched : null;
   const sanctions = takarClear === true && pramanClear === true ? "pass" : takarClear === false && pramanClear === false ? "fail" : "review";
   const screens = so.answers.filter((a) => a.usable).map((a) => ({ miner: a.miner?.id, signal: a.signal, matched: a.result?.matched }));
@@ -86,11 +87,19 @@ async function evidence(t) {
   return { decision, why, checks, vessel, invoice, sanctions: { takar: so.verdict, screens, praman }, signals: [...new Set(signals)] };
 }
 
-/** Takar's second key re-reads every signal on the node before backing. */
-async function backBy(w, id, met, signals) {
+/** Takar's second key re-reads every signal on the node before backing: each must be an answer to
+ *  one of this deal's checks, paid by Takar's agent, asking about this deal's ship or invoice.
+ *  ponytail: ties evidence to the deal, does not re-derive berthed/reconciled from raw miner
+ *  responses (shapes differ per miner); add per-miner parsers if the second key must re-decide. */
+async function backBy(w, id, met, signals, t) {
+  const expect = { VESSEL_TELEMETRY_VERIFY_GENERAL: t.vessel, INVOICE_LEDGER_RECONCILE_GENERAL: t.invoice.split(":")[0], SANCTIONS_SCREENING_MATCH_GENERAL: t.supplier };
   for (const s of signals) {
     const r = await fetch(`${NODE}/engine/v1/signal/${s}`, { signal: AbortSignal.timeout(15_000) });
     if (!r.ok) return { declined: `signal ${s.slice(0, 10)} not found on the node (${r.status})` };
+    const p = (await r.json()).payload ?? {};
+    if (!(p.intent_id in expect)) return { declined: `signal ${s.slice(0, 10)} answers ${p.intent_id}, not one of this deal's checks` };
+    if (String(p.wallet_address).toLowerCase() !== r1.address.toLowerCase()) return { declined: `signal ${s.slice(0, 10)} was not bought by Takar's agent` };
+    if (!String(p.request ?? "").includes(expect[p.intent_id])) return { declined: `signal ${s.slice(0, 10)} asks about something other than this deal` };
   }
   const hash = ethers.keccak256(ethers.AbiCoder.defaultAbiCoder().encode(["bool", "bytes32[]"], [met, signals]));
   for (let i = 0; ; i++) {
@@ -159,7 +168,7 @@ if (cmd === "setup") {
     console.log(`  contested deal: Takar's second key steps aside; the decision needs the independent seat (Praman) to back it after its own check`);
     log({ action: "awaiting-independent", id, required: Number(await s.required(id)) });
   } else {
-    const b = await backBy(r2, id, met, e.signals);
+    const b = await backBy(r2, id, met, e.signals, t);
     console.log(b.declined ? `  resolver 2 declined: ${b.declined}` : `  seconded by resolver 2 after re-reading every signal; dispute window open 10 min\n  second ${etherscan(b.tx)}`);
     log({ action: b.declined ? "declined" : "second", id, ...b });
   }
