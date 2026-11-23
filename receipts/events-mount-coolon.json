@@ -16,7 +16,11 @@
     "people_named": 7,
     "records": [
       "602242"
-    ]
+    ],
+    "checked_by_miners": 4,
+    "corroborated": 0,
+    "contradicted": 0,
+    "disputed": 0
   },
   "people": [
     "Luke Reynolds",
@@ -184,17 +188,59 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
           "sentence": 28
         },
-        "status": "recorded (one register entry)",
+        "status": "register only (fewer than two usable answers)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Was the Mount Coolon mine in Queensland flooded or damaged by weather in 1934?",
+          "kind": "flood or weather",
+          "at": "2026-11-23T10:49:08.443Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x900790fb12ab3f298eb85ef16b95584577121a1b94a31bf658bd260420c55fe4",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xb0624c7472d49294537c773df6a6150ec45b563158107992b5d4c23e2729f0bc",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": true,
+              "outcome": "yes",
+              "signal": "0x9581409f505b1cadce4a319588845e75b22d902dd6ba4587e1a870c6de382d47",
+              "why": null
+            },
+            {
+              "miner": "Polymarket Public Search",
+              "miner_id": "59003",
+              "usable": false,
+              "outcome": null,
+              "signal": "0x9ab436c6d81d845a035045105ee7c3cdf0aacdba8bb9c81d7f4d2e10fec6025a",
+              "why": "no usable answer in the intent's shape"
+            }
+          ],
+          "cost_usd": 0.04
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "d8c6a554408c166f3e9bcb6e9b1a1d579a75c60985cc4ad47f90c29d75702af1",
-        "signature": "tT4g+D0vcIuYkTUZc8rzvRP8jJOH5UAnx6x0U9au/ZXKe/qc7FnlM280sXRBTDHXFuRb13rBdWJ9H86Ct9BbDg==",
+        "sha256": "1f479abfbd33206bf3eb2a4cfcc82a3813f4762849d1f4d92c74a3da8570fe84",
+        "signature": "HkKGSNFKELYr2spvd/ubTVo1g/SqBnbt4oruMHYIIdRDO220QsRhJ8ja17Z88sBp+QwrFJDJhDq0+5Yd278aCg==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },
@@ -252,17 +298,59 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
           "sentence": 27
         },
-        "status": "recorded (one register entry)",
+        "status": "register only (fewer than two usable answers)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Was there a strike or industrial dispute at the Mount Coolon mine in Queensland in 1935?",
+          "kind": "strike or dispute",
+          "at": "2026-11-23T10:49:08.443Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xda162aacdcdbd5c20ffb83646b7fa9f15ab1a4364779d3fede5efcf552495565",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xd05bb25dade20a36224511f71a9623843ad5a3c327fee2f4eafca1113fda7543",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": true,
+              "outcome": "no",
+              "signal": "0x495d503dd300e2df4b4158b4df965963490b59342448e9231dcbf43b4f5a8574",
+              "why": null
+            },
+            {
+              "miner": "Polymarket Public Search",
+              "miner_id": "59003",
+              "usable": false,
+              "outcome": null,
+              "signal": "0x6c1d6b9ecc19e08de3f79bf1e32f94d7769d42371120cb812c2260777729a744",
+              "why": "no filled field in common with the other answer"
+            }
+          ],
+          "cost_usd": 0.04
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "ffb03fca4eb32da61b96215fd2c9ef8c56c8a3bb4083a34e7903bafd1e879d29",
-        "signature": "oky6AUlBmezKmphBTMZJeLSXCjbq88Ck0xuI4jEnLjNl5bT9cCXcbqjt9a4J1me9lNifKkf5BHvi0hbWIoTrAQ==",
+        "sha256": "7196d35f0983788f2dbef2ed7cb863bbea1fe28eec05cb29554d2798d8b6bde8",
+        "signature": "XdScw5HDFvmKS+tEWS9fvcvPn1GHsO8g7DwXW65nvYWbP1MYZMUbR+ZHyPr7XmU1CB1P5KJpw5Hg0NYDryy/Bw==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },
@@ -284,17 +372,59 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
           "sentence": 30
         },
-        "status": "recorded (one register entry)",
+        "status": "register only (fewer than two usable answers)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Did mining at Mount Coolon in Queensland stop or close in 1941?",
+          "kind": "closure",
+          "at": "2026-11-23T10:49:08.443Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x9ef42d60ee42b99360164fe80005aab7ed344493aeb67379c5f16f93908d92bd",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x01ce8ed62854b3df18dd4bc12b03be226a01a5f14b0dd44305fe3e1c6e2c896e",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": true,
+              "outcome": null,
+              "signal": "0xc833f6af2d517acafe62bb53baa91ce6d571a9ed0ba3cc9340301a1cfebd9d75",
+              "why": null
+            },
+            {
+              "miner": "Polymarket Public Search",
+              "miner_id": "59003",
+              "usable": false,
+              "outcome": null,
+              "signal": "0x24f13594242eccacc7d58aa0c46d37cf6a8f6d6a3537e3fbf1d77f01b61a2045",
+              "why": "no usable answer in the intent's shape"
+            }
+          ],
+          "cost_usd": 0.04
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "5696ef50bffc1a9e94cfc9f9ff3fc7e164c0ebb1171250b430415c972532d1ad",
-        "signature": "w/Z2duwUJ2cYyo+Y9oj8glKYsebYJCALXJJC4ewQQvX6aZX6vJonzj7rcc+3PPi99cK4s6DZ2MG2YwnDWrHnCA==",
+        "sha256": "670daefa91a71b1be935acfd39530ebe0387de5277c6112c30f9b6dfc3e35fdb",
+        "signature": "9/eW3bvd8N8CRoEeyfzf2oNOpFHcLAo97RT4zdiEaRzgOnJrIurlnKPhvr8UdHQZD8h5NmMCQQiI6K/NpnTqBQ==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },
@@ -318,17 +448,59 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=602242",
           "sentence": 31
         },
-        "status": "recorded (one register entry)",
+        "status": "register only (fewer than two usable answers)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Was mining at Mount Coolon in Queensland restarted or reopened in 1947?",
+          "kind": "restart",
+          "at": "2026-11-23T10:49:08.443Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x706e213b863c460cb53fccdde5dece1a7ed05b3fb0874c71770dfbebe0462074",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xe08bf84ebc2a48ef181b159ee2251a421f064f23d5589e5bdcf259978d59b83e",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": true,
+              "outcome": "no",
+              "signal": "0x69a774081725ae5256afa4bee071ef5696fa572c1a87106f41aabcca78e02c07",
+              "why": null
+            },
+            {
+              "miner": "Polymarket Public Search",
+              "miner_id": "59003",
+              "usable": false,
+              "outcome": null,
+              "signal": "0x1a2605742b4154cf03721e772a7c88ce0909684c43eeabb3c58500c2b4fdb023",
+              "why": "no usable answer in the intent's shape"
+            }
+          ],
+          "cost_usd": 0.04
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "26de0a134ad1d9731b2a964e37f3a292d32af8b7adb19315ece57cf3fd41bed3",
-        "signature": "PVoTXHuP6m/xYXTKGMWVVPtcKlXN6MIBJZwqo+qFzXBrbv4lYgjHtGf2tYF5o4pChT7UAiRrfZZoVyoanvx8BQ==",
+        "sha256": "b5e433ccd18907ee4ee786a481e64c8457cd9f9258d64be42bff29af34886174",
+        "signature": "c5dQgJX66h9BpakDYnlnTeeZ+44WVTONx2E4mEcYiGorBqTqZmtSPuHtctsF5Cnhl0DqcK46qGTWojzeWbbqAw==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },

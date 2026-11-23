@@ -1,8 +1,8 @@
 {
   "title": "Mount Morgan: events and people from original records",
   "mine": "Mount Morgan",
-  "method": "Every sentence of the Queensland Heritage Register entries matched to this mine (by name), plus sentences in other mining entries that name the mine, typed by fixed rules (lib/events.mjs). Quoted word for word with the record ID; nothing summarised. Each event is a capsule signed on its own (Ed25519 over canonical JSON); verify one with lib/sign.mjs verifyDoc(capsule.finding, capsule.attestation).",
-  "generated_at": "2026-11-23T10:43:18.532Z",
+  "method": "Every sentence of the Queensland Heritage Register entries matched to this mine (by name), plus sentences in other mining entries that name the mine, typed by fixed rules (lib/events.mjs). Quoted word for word with the record ID; nothing summarised. People are candidate names picked from the quoted sentences by a rule (a run of capitalised words that is not a place, a working or a company); a mine or place name can slip through, so each name keeps its sentence. Each event is a capsule signed on its own (Ed25519 over canonical JSON); verify one with lib/sign.mjs verifyDoc(capsule.finding, capsule.attestation).",
+  "generated_at": "2026-11-23T10:46:53.470Z",
   "summary": {
     "events": 36,
     "by_type": {
@@ -22,7 +22,11 @@
       "601363",
       "650038",
       "602723"
-    ]
+    ],
+    "checked_by_miners": 5,
+    "corroborated": 1,
+    "contradicted": 0,
+    "disputed": 1
   },
   "people": [
     "Adolphus William",
@@ -492,17 +496,51 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600751",
           "sentence": 24
         },
-        "status": "recorded (one register entry)",
+        "status": "disputed (the two miners disagree)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Was there a fire at the Mount Morgan mine in Queensland in 1927?",
+          "kind": "fire",
+          "at": "2026-11-23T10:46:55.312Z",
+          "verdict": "disagree",
+          "independence": "operator",
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x88fd98c1a808be141930b46352dbf0969ec482b7aa8393c7cb226df02590444e",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": true,
+              "outcome": "yes",
+              "signal": "0xe856314fa510aec4659e43e4596f8cb823d8297f763afa010f563e0332ea32d9",
+              "why": null
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": true,
+              "outcome": "no",
+              "signal": "0x9e80d9bf23f5dd2db67d26965f2e3b1fe28277cf558a41b0d78adf77ae1afdd2",
+              "why": null
+            }
+          ],
+          "cost_usd": 0.03
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "f59f370702e4cfe280978db751d5f1a16719b9fb6ef56e91873406c78e0412e2",
-        "signature": "05D1qbhn0SBxIe8eb3httzJggRpnSNsNQbpHSoQEzxAQX5NOsIVAHPZO/kzpUI6ha/ekcEaipBIL0yO7a7W3Ag==",
+        "sha256": "38f499dfeed7eb3dcc27951f5b76f550504dc9220b80576f5b274c94c2472dc8",
+        "signature": "lb1Sn13jG5ijAflwUjJdY2ow2zqBlEU2oa2SsH0i4UVIfvaCDyAGm6FKhnYFjoj4yzBz7m1V4laKsWTnSOOXDg==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },
@@ -527,17 +565,59 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600751",
           "sentence": 25
         },
-        "status": "recorded (one register entry)",
+        "status": "register only (fewer than two usable answers)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Was mining at Mount Morgan in Queensland restarted or reopened in 1928?",
+          "kind": "restart",
+          "at": "2026-11-23T10:46:55.312Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xbcac006cee81e04617cc67c1b89befc34345dba35682caa20f41ad6b09811e7e",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x52bf6a0f62d7e943727e36e8573b7d50eecea7ecea31198611ebf0e5a3fe3a88",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": true,
+              "outcome": "no",
+              "signal": "0xb7cde3c8fe24de31f48f41f5eefe492be1a18e7b39fad5b89de3822e08f97835",
+              "why": null
+            },
+            {
+              "miner": "Polymarket Public Search",
+              "miner_id": "59003",
+              "usable": false,
+              "outcome": null,
+              "signal": "0xb7b65d591ed714070c4156cbaf48c91d4af899e08660d98d0bbff1ad4dea174f",
+              "why": "no usable answer in the intent's shape"
+            }
+          ],
+          "cost_usd": 0.04
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "aab9bcdbaeb9fe2a2aae9caf0b52377326a08865961e475bcf1a7cf783bc5b82",
-        "signature": "4IWFCVxtzZgbGvdq9QTUQLLcumw5lLGvz2QU7+3ePx416PljqDi4GLhsp/24NzOq/FXfwtu+1WBgF3XHKO3cDQ==",
+        "sha256": "1349fc83b6e08dd746a8521ac7c4649de498ae7e5feb4ce3a42fefd28662f7d6",
+        "signature": "MbdgYE4HcNQuZXUaQkRXLRMnAsPJCYc2Faw0uQSZRox5DUDJO/ECKWepd0xm7cSf0wF6oMPDbw7X0vn89EEJBA==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },
@@ -820,17 +900,59 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600751",
           "sentence": 70
         },
-        "status": "recorded (one register entry)",
+        "status": "register only (fewer than two usable answers)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Did mining at Mount Morgan in Queensland stop or close in 1981?",
+          "kind": "closure",
+          "at": "2026-11-23T10:46:55.312Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xfb34da3e2e557bf9da581b3d046601dd092aec4940c7b02f954737c4c4058d7e",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x1d11fdef1e9d78525a340d55f995ed3f7f374ee288d9e60585f8fc9a5ae86d7a",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": true,
+              "outcome": "no",
+              "signal": "0xa05544936d8fd31f9bcefb09935f1966df93989267d18064e2bbee2817e6915c",
+              "why": null
+            },
+            {
+              "miner": "Polymarket Public Search",
+              "miner_id": "59003",
+              "usable": false,
+              "outcome": null,
+              "signal": "0x278fc90718fcd91750a59887187e2b1d043254f5fc496e3ac7bdad6c6b4ee15c",
+              "why": "no usable answer in the intent's shape"
+            }
+          ],
+          "cost_usd": 0.04
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "85cab1af42642f90c18cb0e76300d37e3a05ce66448bdd1a9ccb142dc9f3ca6f",
-        "signature": "wmcD54ZxdK65I9EzuAIKghav0ucsVHsbKugnHVeDBKGXul9w9na1JBLtWBXHnWLGpzI2HZ43lrKYfj4qNZ1BDw==",
+        "sha256": "2a3163131d8179c92a5323a7606a90f161c67898b3d87ab0b39a2e9d76e7c2a9",
+        "signature": "4NBpjhiTXj4jeEQUiqwcaHD9xqXohaAQe+ScRyLUZN5+TIv8cC1JEV7uYjr3QB7xPnkPrkanVS5hL9RWFgoLDw==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },
@@ -854,17 +976,59 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
           "sentence": 38
         },
-        "status": "recorded (one register entry)",
+        "status": "register only (fewer than two usable answers)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Was there a fire at the Mount Morgan mine in Queensland in 1986?",
+          "kind": "fire",
+          "at": "2026-11-23T10:46:55.312Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x1293135fb5cbbe26ad64b933bf2dd4f3b473282a006afcb8188d3d3d66a714de",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xcf80bdcc93440d976990c1dcf74eea202357a7b08e2732c6b36c1377b2261da0",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": true,
+              "outcome": "no",
+              "signal": "0x718bf1f1adaeee7b5ee66400ea9e811fece8e34fc110bd17c39432cb844fab1e",
+              "why": null
+            },
+            {
+              "miner": "Polymarket Public Search",
+              "miner_id": "59003",
+              "usable": false,
+              "outcome": null,
+              "signal": "0xcacd79ca90c79259eddbd50f9dd31a32a7b01f94cd5eec1b0e8cde0fb324b8ef",
+              "why": "no filled field in common with the other answer"
+            }
+          ],
+          "cost_usd": 0.04
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "0a060c863c861e8f745644a9f1751c428d6189a2706520fada202d848dbf9d77",
-        "signature": "N2ZktuIaeJjYlaIzeZLhhYDGHSKMM3j1D6kkEyPloSb6izmUzV6E0HhaCD7gSxAu5aOMDJFsP7hsq/Vg/sQTBA==",
+        "sha256": "b02ba68f88ef89285b4119e651d8dc9e78c502d16bc55dac0505abc2c8a219c5",
+        "signature": "88RZDdwNX4rtLACLOyqfi5ckqiuhKKdByiTcDV1RG7FHN/OSfGIYZ9ogOMy3AUDectaPpBdFE1LJkSP/sW+CCQ==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },
@@ -950,17 +1114,51 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=645613",
           "sentence": 33
         },
-        "status": "recorded (one register entry)",
+        "status": "corroborated (register and two independent miners)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Was there a fire at the Mount Morgan mine in Queensland in 1994?",
+          "kind": "fire",
+          "at": "2026-11-23T10:46:55.312Z",
+          "verdict": "agree",
+          "independence": "operator",
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x97f6cc74401147277739fe6ac47f90375469691e8404abdc73abc9bdcfffa834",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": true,
+              "outcome": "yes",
+              "signal": "0x82fc6bfb10cb2e1448ce90ad63fe5a3a614b8ef5def786508eb04952415d5649",
+              "why": null
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": true,
+              "outcome": "yes",
+              "signal": "0xbdc798ca43e18b695126756ca350f4415ffcc93ebcce9119fd560a56e558fed6",
+              "why": null
+            }
+          ],
+          "cost_usd": 0.03
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "419cb952ecd9373d0a9d6ea6beb99ca7c1e15267f4f51dc2430c4fe30079dc02",
-        "signature": "sY8X+Y0kd3tVPf0c1v1ScREDOjTOhWIfs5+a6D+qw6zvI5AWkW9hq4tu9dStJ4JUfYhydZV95UwD6TDHakYWBg==",
+        "sha256": "63766d2b1c11dc935fb971d825065e7c776947deaeb1b5ab7c3f0e397c657bdd",
+        "signature": "F2SK/UuTGmOe1nIt0eQCdt0JI67ewvM3Z+y+xCeP5WiNYWvdudWexE+R4spPrWOv7CdTzFOSXzoY21ZexyXNBA==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },

@@ -25,7 +25,11 @@
       "601207",
       "602801",
       "601848"
-    ]
+    ],
+    "checked_by_miners": 4,
+    "corroborated": 0,
+    "contradicted": 0,
+    "disputed": 1
   },
   "people": [
     "Archibald Laurence Wilson",
@@ -235,17 +239,59 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
           "sentence": 13
         },
-        "status": "recorded (one register entry)",
+        "status": "register only (fewer than two usable answers)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Was the Ravenswood mine in Queensland flooded or damaged by weather in 1869?",
+          "kind": "flood or weather",
+          "at": "2026-11-23T10:49:08.443Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x37f8a48060d9d4170dd1918c330d38479d1f8789db861550dc11db6ce9118db9",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x9321f84917174f85d7a9254eb987f06d2ec0f7648fca4feee9b059e1258fb1a8",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x6ad0766fcebbcc7c25b721c9ca1a1c0c90229c8e078e7d1570d71411256e3f26",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Polymarket Public Search",
+              "miner_id": "59003",
+              "usable": false,
+              "outcome": null,
+              "signal": "0xb8d9e701afbbb020a696dddba1fdc6a9970085d8d34fe7fc20b80384104a3d2d",
+              "why": "no usable answer in the intent's shape"
+            }
+          ],
+          "cost_usd": 0.04
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "9856e917f358ec4f97dbcdbb20810f4d81e6c61eef716d95505718b8877a913c",
-        "signature": "pxy9xTT6SkRolmrHWPSXIlwJuAz5mUKiHagsHg9HbB9+cHHWUGbIJHMQDGQG+/HmvTzs5g5SQs2pe5lMtptBDw==",
+        "sha256": "190ec81927bc3e0e20289faf3906f4b18edc2594845efb7ef3a890182e18a30f",
+        "signature": "FNqprbLAp2OUje9C8Uq+3+CwAkc5tFQ3lvWDG++HaZXa5kEpIsOJAN6R7EWrQ+bNpG2sQr303p0T2PXQQtK7Bg==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },
@@ -304,17 +350,59 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
           "sentence": 15
         },
-        "status": "recorded (one register entry)",
+        "status": "register only (fewer than two usable answers)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Was there a fire at the Ravenswood mine in Queensland in 1870?",
+          "kind": "fire",
+          "at": "2026-11-23T10:49:08.443Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xa535b49929827921ed64dea0949da7a5d6cea6b868d4321cc28ebde75c2b4cc5",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xe1a3a1c3cdf7a88aa91d0d98ff7dec987d33ad087359f1a2f72e161c47671eae",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": true,
+              "outcome": "no",
+              "signal": "0xd2bc5708cafe4a479f68376a4f6047da03c21a45b644aa6117b97c717be35ded",
+              "why": null
+            },
+            {
+              "miner": "Polymarket Public Search",
+              "miner_id": "59003",
+              "usable": false,
+              "outcome": null,
+              "signal": "0x64e363275df45e6d18d34c6375648915d1bd26aa254f412fcf65741e57362c31",
+              "why": "no filled field in common with the other answer"
+            }
+          ],
+          "cost_usd": 0.04
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "e1c506a0dada948a051e5bbaed808d6bcb91df7b9faf65e6a59b96f637d7de3d",
-        "signature": "RXuAqkmpJhtKAIqjAiKNKve4ZL9fY0aS5uE6OiOy7Mjk6ITvXPbJlamDxjzmacx59RS67H06aDoNc1H8HvZ8AQ==",
+        "sha256": "b5d5821c52028f2593ee6367dd97175a47c4b3ea26195875080e5495035c87f5",
+        "signature": "2P+q7HgG5Z/SIQ0e53Svo36iDq2Y3IEN17Pd9T4+2XN6Hvxlsjv9MrMOoYy1sCPDGMcEYyKsn91ACMIlk2hQAg==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },
@@ -1334,17 +1422,59 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
           "sentence": 63
         },
-        "status": "recorded (one register entry)",
+        "status": "register only (fewer than two usable answers)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Was there a fire at the Ravenswood mine in Queensland in 1901?",
+          "kind": "fire",
+          "at": "2026-11-23T10:49:08.443Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xb510b68243cfcc9e414a6d2093299a03d465fc13f0bf94ae64cc5ee10cd7a144",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x2b7280da20e761b9a64ca87daddd7686fa13610f16f85b0590fff8f676614bab",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": true,
+              "outcome": "no",
+              "signal": "0xc38a14ab106232dd6353fae86e9ab0960ee92676cad9a2fa552bc424c4ed0ff7",
+              "why": null
+            },
+            {
+              "miner": "Polymarket Public Search",
+              "miner_id": "59003",
+              "usable": false,
+              "outcome": null,
+              "signal": "0x30fed15e521e9c532770395494bca078ba2a803d660fc9481cdad318e1a53ab3",
+              "why": "no filled field in common with the other answer"
+            }
+          ],
+          "cost_usd": 0.04
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "2552ec54ce5380a548118fa22d5ff5dd0015585b21bd9495b9185401f3f971e9",
-        "signature": "ZlDo+tveqwoRGjR9Sg2PhjPAZ7HX9SE3QNbmFVZrhKrpN2/MhsylIRBxnOZXAQy7Sp/i7musBxH8z+J8vYhVDg==",
+        "sha256": "ddc11e993af8a3fff44b854500d2b0df3b19a127a66d025196b7f774de3f6118",
+        "signature": "RqfLRBhgjnQ6uzkWofB4G1jOiPU2bLtnabd1OOZcha7GFYMf6gcUkmhQlvzRGF0xkRLfI0zb7qWJBFV3y+GfAw==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },
@@ -1853,17 +1983,51 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=650038",
           "sentence": 81
         },
-        "status": "recorded (one register entry)",
+        "status": "disputed (the two miners disagree)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Was there a strike or industrial dispute at the Ravenswood mine in Queensland in 1912?",
+          "kind": "strike or dispute",
+          "at": "2026-11-23T10:49:08.443Z",
+          "verdict": "disagree",
+          "independence": "operator",
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x78d28423e66d962259c26fe89a234edf03fbad076c0a74503723bc41d16bc99e",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": true,
+              "outcome": "yes",
+              "signal": "0xf9c6aab9fbd2286d9868e66978e00fd5a39a3e035506ca3a37c21ade8976e4f4",
+              "why": null
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": true,
+              "outcome": "no",
+              "signal": "0x53630a8ef74de98b8be07e3b24eb08807ff4aff533c4662e1adb573d9242e133",
+              "why": null
+            }
+          ],
+          "cost_usd": 0.03
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "32bf9c112d40159a37a6a581a42f20864e5a037b23ca5f38c17cc17465f64caf",
-        "signature": "fC1KAFj96WidkHCyNuUKuWhHOY7OOH0855H+9YPKQf93lLG4lDuFnrze/eM1R5M8So8WIBnDY0fKaguJ3czrDw==",
+        "sha256": "850cddcf257bc88ec19e54b68cfafbbb42d86e63911ef4dc48199cdb82b3dd81",
+        "signature": "7sWACJ+lR2+DtLTTQRB+BDF6KNGTZfid1mH84XaL8jnMw1ff6QDSxU+VN/VWuNCHWK3f4pFojJ+wsWN9Ke69BQ==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },

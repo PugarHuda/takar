@@ -19,7 +19,11 @@
       "601172",
       "600506",
       "600679"
-    ]
+    ],
+    "checked_by_miners": 4,
+    "corroborated": 0,
+    "contradicted": 0,
+    "disputed": 0
   },
   "people": [
     "Aramac Councillors",
@@ -83,17 +87,59 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600506",
           "sentence": 13
         },
-        "status": "recorded (one register entry)",
+        "status": "register only (fewer than two usable answers)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Did mining at Kidston in Queensland stop or close in 1914?",
+          "kind": "closure",
+          "at": "2026-11-23T10:49:08.443Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x3ee8fbc44859919995a827bec45975366d98627f8f4f98cb2587effdd5958450",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x05d27c2dff386da55fa5d0d2e05c9334a792be4869021cc202f32a794ccbb3b5",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xf4d87493f2254447709d93b2a11f386f800f81dbb777598d0c51ec7d9e30197e",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Polymarket Public Search",
+              "miner_id": "59003",
+              "usable": false,
+              "outcome": null,
+              "signal": "0x7a3f1adf4f52548f4926ae3cec2226bdc0164419a852dc6b65b3938190fe2176",
+              "why": "no usable answer in the intent's shape"
+            }
+          ],
+          "cost_usd": 0.04
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "62146c0aa3381916a343cccecbf036bc8fbf311fc0509056ab6846441b39bb6b",
-        "signature": "xhZLFiBWLeJArE5L7t1sN8WJQesRc2O1m50rqXtD7VBbcIaqhB/G2Cvme8ju16rRFwN730ivCYfrIFyXnDmRCg==",
+        "sha256": "dd4a6d40533c040d57ee9bbd483ef1e3595559567fa272b33002ef2b66dec814",
+        "signature": "/51onyinU/J87JejUwOCQV+bP/7O1GttYT2HpkDRdiS9cFj4zTNWo5c8iMKewwdGzYRiv3AnEYkE50hOkjOADQ==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },
@@ -147,17 +193,59 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600506",
           "sentence": 62
         },
-        "status": "recorded (one register entry)",
+        "status": "register only (fewer than two usable answers)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Were miners killed or injured in an accident at the Kidston mine in Queensland in 1917?",
+          "kind": "accident or death",
+          "at": "2026-11-23T10:49:08.443Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x97a01a82bc4d8ca4d3b558b2af31eb56bac9312af4d67d16a7c21e72dc44b295",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x40be258c8df91475f02a2ae024fd86d961103c31f7d6cc598903292d44c122a1",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x3a0582e209cfde5e70a47fa319a49ba13bf43f2285169c41a32f507ef54ff517",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Polymarket Public Search",
+              "miner_id": "59003",
+              "usable": false,
+              "outcome": null,
+              "signal": "0x12b6725b5705dc9b8faa31f972083ffa457d5a0a66c342f815cc79aa1b18464f",
+              "why": "no usable answer in the intent's shape"
+            }
+          ],
+          "cost_usd": 0.04
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "d41fafb2567f9d8cadbd630a86d1f631e6c67b94882ab7fafbaecdd3abb6f1e0",
-        "signature": "On5WnpLY7Ypeb/WpU/Ormk+uWgdySq+XqD9Ba/pWI7pKKsLvHK759sne0UXC4no4IE8GBBqBa0UYGL3su90VCA==",
+        "sha256": "3f77a72b2747ad084291ea731f2ee4185e929c6c4b6b7a7ba09c57c1120801a6",
+        "signature": "IPOi5BS7JR5FhQM4Q1m8NI7ZsQa+C57ydSGHpRUCAf3++lvSB9rlZqkYA6NVggNQqhS03EMKIBSCss6yh2fNBQ==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },
@@ -245,17 +333,59 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600506",
           "sentence": 63
         },
-        "status": "recorded (one register entry)",
+        "status": "register only (fewer than two usable answers)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Were miners killed or injured in an accident at the Kidston mine in Queensland in 1939?",
+          "kind": "accident or death",
+          "at": "2026-11-23T10:49:08.443Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x8cbcfa06c2c6b6c0704b5db6a27b312432c19955ef06c50cee5d4bbca4defeac",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xf8580cf22aab18ab03352cffd543339d64644b6930478a61791233bbdc2d22f2",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0xe06742630cf47ae71a950b5139b872c8077af6c934cbcee8938ea33c4ef1d8ab",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Polymarket Public Search",
+              "miner_id": "59003",
+              "usable": false,
+              "outcome": null,
+              "signal": "0x90df498bd31910b8d19530becd2a4c4a1578d7a4cc5b81deb262a354af79d309",
+              "why": "no usable answer in the intent's shape"
+            }
+          ],
+          "cost_usd": 0.04
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "2f1ec2e1a5322f9bc96ee1b354a5872c2e714b91cb387d53ac762d827c5f6fdb",
-        "signature": "sviZadVK5mMC64yWzW8uomJ57PzJ/H4O6zLHD8ctzsYAt/JT+R2jcEtrll6QI+TXFdGs6FWqQ+J9lfiZG1bLBQ==",
+        "sha256": "d9efa4ba5d7c646889284eafe723a7453b78e8f0bfb8b8b432a5316810e18b28",
+        "signature": "HEP5IADV32ZK5ZxwMuBrNgq9QqBtgdR5rpwQ1n5w9VQAxjTBaZ4eEozhOH+IZ+s5HIVXgKU56kaZB+rnGS7LCA==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },
@@ -279,17 +409,59 @@
           "url": "https://apps.des.qld.gov.au/heritage-register/detail/?id=600506",
           "sentence": 54
         },
-        "status": "recorded (one register entry)",
+        "status": "register only (fewer than two usable answers)",
         "source_snapshot": {
           "file": "data/heritage-history.json",
           "extracted_at": "2026-11-23",
           "from": "https://data.des.qld.gov.au/__data/assets/xml_file/0024/404970/heritage-register-2025.xml"
+        },
+        "corroboration": {
+          "question": "Was mining at Kidston in Queensland restarted or reopened in 1947?",
+          "kind": "restart",
+          "at": "2026-11-23T10:49:08.443Z",
+          "verdict": "insufficient",
+          "independence": null,
+          "answers": [
+            {
+              "miner": "PREFLIGHT Infrastructure Signals",
+              "miner_id": "20260828",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x03d406bd5a88b788ef907a049553ff1750160b88740d32eeac721bbbdac1f50f",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "Takar Outcome Resolver",
+              "miner_id": "20261117",
+              "usable": false,
+              "outcome": "unresolved",
+              "signal": "0x5807aac1c8f2eb43da613487fc249ad85188c2ba08e59fb289c1946bfab18f33",
+              "why": "abstained (unresolved)"
+            },
+            {
+              "miner": "TxLens",
+              "miner_id": "9002",
+              "usable": true,
+              "outcome": "no",
+              "signal": "0x68be999b6a954d79b70ea0654f788516132110bed005323a89f5c6f3a4370833",
+              "why": null
+            },
+            {
+              "miner": "Polymarket Public Search",
+              "miner_id": "59003",
+              "usable": false,
+              "outcome": null,
+              "signal": "0xd13284bb0d5c3b0026105ba1598de09b901785b68a71be41f88cab03988b7f34",
+              "why": "no usable answer in the intent's shape"
+            }
+          ],
+          "cost_usd": 0.04
         }
       },
       "attestation": {
         "algorithm": "ed25519",
-        "sha256": "26537b8e9c0f073b31bc60165aa6452f5fad20211b18cfc253f5912ef81d2af1",
-        "signature": "CIUm6q3M2t6RCHNPjBW1Z0gZsE4aXoshBcSvp10hqiKgaqBM7L7Ieg7Kngls3jCvyRzsWamhXXI/J0pnEkwdBg==",
+        "sha256": "c2c5a6024dd69b42bb89440a8970302de967b97e0bc30fd1103e60d9c70dc647",
+        "signature": "yTE4t9cACSHK15H3++2UdOnQ3p70OWIkxMc2XH2Srz6L8qhWC5rhsnYD6dkSFI4JWg3zfT4sGUL8lEBwbNHpDw==",
         "public_key": "MCowBQYDK2VwAyEA3Hx7R/RFow5HcbXTPXlbw0gS4eX7xliuos4D9uyQa5I="
       }
     },
