@@ -13,6 +13,7 @@
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#121A1F; --sheet:#1B252B; --ink:#E3EAEE; --muted:#9AABB5; --rule:#4F6573; --rule-soft:#2C3A42; --accent:#E0B341; --bad:#E3705F; --ok:#6CC28F; --warn:#E0B341; --link:#7FB6E0; } }
 :root[data-theme="dark"] { --paper:#121A1F; --sheet:#1B252B; --ink:#E3EAEE; --muted:#9AABB5; --rule:#4F6573; --rule-soft:#2C3A42; --accent:#E0B341; --bad:#E3705F; --ok:#6CC28F; --warn:#E0B341; --link:#7FB6E0; }
 * { box-sizing: border-box; }
+blockquote { margin:.5rem 0; padding:.25rem 0 .25rem .9rem; border-left:3px solid var(--rule); color:var(--muted); max-width:70ch; }
 body { margin:0; background:var(--paper); color:var(--ink); font:400 1rem/1.55 "Atkinson Hyperlegible", system-ui, sans-serif; }
 a { color:var(--link); text-underline-offset:2px; overflow-wrap:anywhere; }
 .wrap { max-width:980px; margin:0 auto; padding:0 16px 48px; }
@@ -119,10 +120,12 @@ function round(r) {
       if (r.file) { try { body = round(await fetch(r.file, { cache: "no-store" }).then((x) => x.json())); } catch { body = `<p class="note">Evidence file ${esc(r.file)}</p>`; } }
       if (r.action === "open") body = `<p>${esc(t.order)}. ${usdc(1e6)} test USDC locked in the contract. ${tx(r.tx)}</p>`;
       if (r.action === "propose") body += `<p>A resolver proposed ${tag(r.decision)}${r.payout != null ? ` (${usdc(r.payout)} USDC to the supplier)` : ""} on ${r.signals.length} signals. ${tx(r.tx)}</p>`;
-      if (r.action === "panel-propose") body += `<p>The review went to the panel. Takar proposed ${tag(r.decision)} on that round's ${r.signals.length} signals, with its reason in the open: “${esc(r.reason)}” Takar's second key does not back its own review call, so the window opens only if Praman's seat agrees after its own check. ${tx(r.tx)}</p>`;
+      if (r.action === "panel-propose") body = `<p>Takar proposed ${tag(r.decision)} on the ${r.signals.length} signals of the evidence round above, with its reason in the open:</p><blockquote>${esc(r.reason)}</blockquote><p>Takar's second key does not back its own review call, so the dispute window opens only if Praman's seat agrees after its own check. ${tx(r.tx)}</p>`;
       if (r.action === "second") body =`<p>Re-read every signal on the node, then backed the same decision. Dispute window open. ${tx(r.tx)}</p>`;
       if (r.action === "declined") body = `<p>${esc(r.declined)}</p>`;
-      if (r.action === "awaiting-independent") body = `<p>The deal is contested, so Takar's second key steps aside. The decision needs Praman's seat to back it after its own check (the contract requires ${r.required} approvals; all three once both parties have disputed).</p>`;
+      if (r.action === "awaiting-independent") body = steps.some((s) => s.action === "dispute")
+        ? `<p>The deal is contested, so the decision needs Praman's seat to back it after its own check. The contract requires ${r.required} of 3 approvals${r.required === 3 ? " (on TakarSettle5 any dispute makes all three required); both Takar seats have backed it" : ""}.</p>`
+        : `<p>This is a review call, so Takar's second key steps aside. The contract requires ${r.required} of 3 approvals: Takar's proposal plus Praman's seat, after its own check.</p>`;
       if (r.action === "dispute") body = `<p>The ${esc(r.by)} disputed and posted the bond${r.reason ? `: “${esc(r.reason)}”` : ""}. The proposal is cleared and cannot be proposed again on the same evidence. ${tx(r.tx)}</p>`;
       if (r.action === "finalize") body = r.toSupplier != null ? `<p>Supplier received <b>${usdc(r.toSupplier)} USDC</b>, buyer refunded <b>${usdc(r.toBuyer)} USDC</b>; bonds returned or forfeited per the contract. ${tx(r.tx)}</p>` : `<p>${r.met ? "Supplier paid" : "Buyer refunded"}. ${tx(r.tx)}</p>`;
       out.push(`<li><h3>${esc(WHO[r.action] ?? r.action)}</h3><div class="when">${when(r.at)}</div>${body}</li>`);
