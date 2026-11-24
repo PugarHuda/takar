@@ -79,24 +79,13 @@ cek `status` + `status --v5`; kalau approvals sudah cukup dan `finalizesAt` lewa
 
 ## 6. Belum selesai / TODO
 
-1. **Rapikan langkah panel di trade.html — sudah diedit lokal, BELUM di-deploy & BELUM di-commit** (lihat bagian 7).
+1. ~~Rapikan langkah panel di trade.html~~ — selesai, live & di-push (commit caa315d).
 2. Tunggu Praman second → finalize kedua kasus → DM Ahmed link tx.
 3. Kasus 1 belum punya ronde **HOLD** (kapal di laut, semua cek lain beres). Tambahkan saat MEGASTAR berlayar lagi (sandar ±1 jam sebelum berangkat; putaran Tallinn–Helsinki ±4 jam).
 4. Video walkthrough kedua kasus, dibuat setelah settlement.
 5. Heads-up ke operator miner 6164 (INVOICE_LEDGER_RECONCILE) sudah disebut di DM Praman: ledger total dibaca sebagai harga satuan (USD 12.40).
 6. Season II Telegraph berakhir **1 Des 2026** — lihat `../SUBMISSION-S2.md` dan `../S2-ANALYSIS.md` (di luar repo ini, ikut disalin kalau perlu).
 
-## 7. Perubahan lokal yang belum di-push (per handoff ini)
+## 7. Perubahan terakhir (sudah live & di-push)
 
-`trade.html`:
-- Langkah "Review goes to the panel" tidak lagi mengulang tabel bukti ronde sebelumnya; hanya proposal + alasan (blockquote) + tx.
-- "Waiting for the outside seat" dibedakan: kasus review (2 dari 3: proposal Takar + Praman) vs kasus dispute (TakarSettle5: ketiga resolver).
-- CSS `blockquote` ditambahkan.
-
-Sebelum pindah device, jalankan di device lama:
-```bash
-cd "C:\Hackathons\Telegraph Hackathon\takar"
-npm test && vercel deploy --prod --yes
-git add trade.html HANDOFF.md && git commit -m "trade.html: tidy panel step, handoff" && git push
-```
-Lalu cek https://takar-telegraph.vercel.app/trade.html bagian "Review goes to the panel".
+`trade.html`: langkah "Review goes to the panel" hanya menampilkan proposal + alasan (blockquote) + tx, tanpa mengulang tabel bukti; "Waiting for the outside seat" membedakan review call (2 dari 3) dan deal yang di-dispute (TakarSettle5: 3 dari 3). Tidak ada perubahan lokal yang tertinggal.
