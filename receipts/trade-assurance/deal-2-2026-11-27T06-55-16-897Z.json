@@ -1,0 +1,149 @@
+{
+  "id": 2,
+  "at": "2026-11-27T06:55:16.897Z",
+  "ledger": "GRN-5530 for PO-7781 and INV-2026-1107: 1000 units x USD 12.40 = USD 12,400.00, goods received 1000 units in good order",
+  "decision": "hold",
+  "why": "the ship is not berthed at Helsinki West Harbour yet (both vessel miners agree)",
+  "payout": null,
+  "checks": {
+    "arrival": "fail",
+    "invoice": "pass",
+    "sanctions": "pass"
+  },
+  "vessel": [
+    {
+      "miner": 8818818,
+      "operator": "0xa0f6dc5e53185691f900397745f08f99f9ffb9e1",
+      "signal": "0x6c69befaff099a47416524a71698081a2a88d0211c6b963fa2ff6d82b10613de",
+      "result": {
+        "vessel": "MEGASTAR",
+        "speed_knots": 22.1,
+        "latitude": 59.615916666666664,
+        "longitude": 24.665905000000002,
+        "course_deg": 184.1,
+        "observed_at": "2026-11-27T06:54:40.935Z"
+      },
+      "fieldStatus": {
+        "vessel": "ok",
+        "speed_knots": "ok",
+        "latitude": "ok",
+        "longitude": "ok",
+        "course_deg": "ok",
+        "observed_at": "ok"
+      },
+      "berth": {
+        "state": "away",
+        "km": 60.97,
+        "knots": 22.1,
+        "ageMin": 1
+      }
+    },
+    {
+      "miner": 70068,
+      "operator": "0x8b224783fe5b3c52b7db0cb9b1754f8812b75287",
+      "signal": "0xf50a2e61c5b9167a946cc5b615f8f073f31316fe74fa24d846cd19cb2c6222b3",
+      "result": {
+        "vessel": "MEGASTAR",
+        "speed_knots": 22.1,
+        "latitude": 59.615917,
+        "longitude": 24.665905,
+        "course_deg": 184.1,
+        "observed_at": "2026-11-27T06:54:41.024Z"
+      },
+      "fieldStatus": {
+        "vessel": "ok",
+        "speed_knots": "ok",
+        "latitude": "ok",
+        "longitude": "ok",
+        "course_deg": "ok",
+        "observed_at": "ok"
+      },
+      "berth": {
+        "state": "away",
+        "km": 60.97,
+        "knots": 22.1,
+        "ageMin": 1
+      }
+    }
+  ],
+  "invoice": [
+    {
+      "miner": 7455,
+      "operator": "0x8b224783fe5b3c52b7db0cb9b1754f8812b75287",
+      "signal": "0x30cce483231496fe8d1e85048e953fc8b5f247396b08792b7d28dc487e99d4d0",
+      "result": {
+        "reconciled": true,
+        "discrepancy": null,
+        "explanation": "Reconciled. The invoice total of USD 12,400.00 matches the ledger amount for GRN-5530 under PO-7781, with both showing 1,000 units received in good order."
+      },
+      "fieldStatus": {
+        "reconciled": "ok",
+        "discrepancy": "missing",
+        "explanation": "ok"
+      }
+    },
+    {
+      "miner": 6164,
+      "operator": "0x98021b20efdb7ae2c57366010a6e0fde207b4466",
+      "signal": "0xa66816f1e66a24c19a30fda9eddf52c610a486c58caaa4ed1c90f8e60f35b892",
+      "result": {
+        "reconciled": true,
+        "discrepancy": 0,
+        "explanation": "RECONCILIATION STATUS: RECONCILED. Invoice INV-2026-1107 total (USD 12400.00) ties out perfectly to authorized PO PO-7781 line-item equation (1000 units x USD 12.40 = USD 12400.00)."
+      },
+      "fieldStatus": {
+        "reconciled": "ok",
+        "discrepancy": "ok",
+        "explanation": "ok"
+      }
+    }
+  ],
+  "sanctions": {
+    "takar": "agree",
+    "screens": [
+      {
+        "miner": "302",
+        "signal": "0x317af9b58938b6a41b331d3580165260a84601b241ad079f445a23a62d846570",
+        "matched": false
+      },
+      {
+        "miner": "774921",
+        "signal": "0x4f907ed12ae1458642b04f255c4a467b5e871e413d6267db0b0398094d7bd19f",
+        "matched": false
+      }
+    ],
+    "praman": {
+      "screened": true,
+      "name": "Harju Metal OÜ (illustrative supplier)",
+      "matched": false,
+      "near_miss": false,
+      "review_required": false,
+      "verdict": "CLEAR",
+      "confidence": 1,
+      "matches": [],
+      "potential_matches": [],
+      "lists": [
+        "US Treasury OFAC SDN"
+      ],
+      "match_score": 0,
+      "query_name": "Harju Metal OÜ (illustrative supplier)",
+      "match_found": false,
+      "match_count": 0,
+      "near_miss_count": 0,
+      "sdn_list_size": 19565,
+      "sdn_last_loaded": "2026-11-15T18:26:30.134Z",
+      "source": "US Treasury OFAC SDN List (treasury.gov/ofac)",
+      "source_url": "https://sanctionssearch.ofac.treas.gov/",
+      "summary": "VERDICT: NO SANCTIONS MATCH (CLEAN COUNTERPARTY). Screening of \"Harju Metal OÜ (illustrative supplier)\" against the US Treasury OFAC SDN list and Consolidated Sanctions List (19565 indexed records) returned zero sanctions matches. Counterparty is clear for standard commercial transaction processing as of 2026-11-27T06:55:02.589Z."
+    }
+  },
+  "reconcile": null,
+  "signals": [
+    "0x6c69befaff099a47416524a71698081a2a88d0211c6b963fa2ff6d82b10613de",
+    "0xf50a2e61c5b9167a946cc5b615f8f073f31316fe74fa24d846cd19cb2c6222b3",
+    "0x30cce483231496fe8d1e85048e953fc8b5f247396b08792b7d28dc487e99d4d0",
+    "0xa66816f1e66a24c19a30fda9eddf52c610a486c58caaa4ed1c90f8e60f35b892",
+    "0x317af9b58938b6a41b331d3580165260a84601b241ad079f445a23a62d846570",
+    "0x4f907ed12ae1458642b04f255c4a467b5e871e413d6267db0b0398094d7bd19f"
+  ]
+}

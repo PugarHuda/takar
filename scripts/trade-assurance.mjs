@@ -56,7 +56,8 @@ const log = (row) => { mkdirSync(DIR, { recursive: true }); appendFileSync(`${DI
 const VESSEL_MINERS = [8818818, 70068]; // Quay (terrestrial AIS network) | VesselWire v2 (Fintraffic Digitraffic)
 // TradeWire | ChainSight. PREFLIGHT (20260828) was the second miner until its model stopped answering in
 // time on 23 Nov (rounds 2-3 of case 1 show it); evidence files record which miners each round used.
-const INVOICE_MINERS = [7455, 302];
+// TAKAR_INVOICE_MINERS="a,b" swaps the pair when one stops answering (302 returned upstream 404s on 27 Nov).
+const INVOICE_MINERS = process.env.TAKAR_INVOICE_MINERS ? process.env.TAKAR_INVOICE_MINERS.split(",").map(Number) : [7455, 302];
 const PORTS = { "Helsinki West Harbour": { lat: 60.1497, lon: 24.9155, radiusKm: 1.5 } };
 
 async function operators() {
