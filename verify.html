@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verify it yourself</title>
+<meta name="description" content="Re-decide every Takar Trade Assurance round in your browser with the same code the tests run, recompute any Telegraph signal hash from its payload, and check a Countersign memo's signature. Nothing here trusts Takar's server.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --paper:#EEF1EF; --sheet:#F8FAF9; --ink:#17222B; --muted:#55656F; --rule:#8FA6B5; --rule-soft:#D3DDE2; --accent:#9A6A00; --bad:#B33A2E; --ok:#2E7D4F; --link:#1F5C8A; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#121A1F; --sheet:#1B252B; --ink:#E3EAEE; --muted:#9AABB5; --rule:#4F6573; --rule-soft:#2C3A42; --accent:#E0B341; --bad:#E3705F; --ok:#6CC28F; --link:#7FB6E0; } }
+:root[data-theme="dark"] { --paper:#121A1F; --sheet:#1B252B; --ink:#E3EAEE; --muted:#9AABB5; --rule:#4F6573; --rule-soft:#2C3A42; --accent:#E0B341; --bad:#E3705F; --ok:#6CC28F; --link:#7FB6E0; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font:400 1rem/1.55 "Atkinson Hyperlegible", system-ui, sans-serif; }
+a { color:var(--link); text-underline-offset:2px; overflow-wrap:anywhere; }
+.wrap { max-width:980px; margin:0 auto; padding:0 16px 48px; }
+h1, h2 { font-family:"Barlow Semi Condensed", system-ui, sans-serif; line-height:1.2; }
+h1 { font-size:2.2rem; margin:28px 0 6px; }
+h2 { font-size:1.5rem; margin:24px 0 6px; }
+.lede, .note { color:var(--muted); max-width:72ch; }
+.note { font-size:.92rem; }
+section { background:var(--sheet); border:1px solid var(--rule-soft); border-radius:8px; padding:4px 20px 18px; margin-top:18px; }
+form { display:flex; gap:8px; flex-wrap:wrap; margin:8px 0; }
+input { flex:1 1 320px; min-width:0; font:inherit; padding:8px 10px; border:1px solid var(--rule); border-radius:6px; background:var(--paper); color:var(--ink); }
+button { font:inherit; font-weight:700; padding:8px 14px; border:1px solid var(--rule); border-radius:6px; background:var(--ink); color:var(--paper); cursor:pointer; }
+.scroll { overflow-x:auto; }
+table { border-collapse:collapse; width:100%; font-size:.9rem; }
+th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--rule-soft); vertical-align:top; }
+code, .mono { font-family:ui-monospace, Consolas, monospace; font-size:.85rem; overflow-wrap:anywhere; }
+.ok { color:var(--ok); font-weight:700; } .bad { color:var(--bad); font-weight:700; }
+.sitebar { max-width:980px; margin:0 auto; padding:14px 16px 0; display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+.sitebar nav { display:flex; gap:12px; flex-wrap:wrap; }
+.sitebar a { text-decoration:none; } .sitebar a[aria-current] { font-weight:700; color:var(--ink); }
+</style>
+<script type="importmap">{ "imports": { "ethers": "https://cdn.jsdelivr.net/npm/ethers@6.13.4/+esm" } }</script>
+</head>
+<body>
+<div class="sitebar"><nav aria-label="Main"><a href="./">Takar</a><a href="trade.html">Trade Assurance</a><a href="verify.html" aria-current="page">Verify it yourself</a><a href="videos.html">Videos</a><a href="https://github.com/PugarHuda/takar">GitHub</a></nav></div>
+<main class="wrap">
+  <h1>Verify it yourself</h1>
+  <p class="lede">Every check on this page runs in your browser, with the same rule code the repository's tests run (<a href="lib/trade.mjs">lib/trade.mjs</a>, <a href="lib/countersign.mjs">lib/countersign.mjs</a>). It reads public records: Takar's receipts, the Telegraph node and Countersign's memos. Nothing here asks Takar's server for a verdict.</p>
+
+  <section aria-labelledby="re-h">
+    <h2 id="re-h">Re-decide every Trade Assurance round</h2>
+    <p class="note">Each evidence round stored the miners' answers, the port's record and the parties' documents. Here they are run through the rules again; the decision and payout must equal what was recorded, and acted on, on chain.</p>
+    <form id="re-form"><button type="submit">Re-decide all rounds</button></form>
+    <div class="scroll" id="re-out"></div>
+  </section>
+
+  <section aria-labelledby="sig-h">
+    <h2 id="sig-h">Recompute a Telegraph signal</h2>
+    <p class="note">A signal's hash is keccak256 of its payload as canonical JSON. Fetched straight from the Telegraph node and recomputed here: a match means the stored request and answer are exactly what the signal committed to. The node does not sign, so this shows integrity, not who produced the answer.</p>
+    <form id="sig-form"><label class="note" for="sig-in" style="flex-basis:100%">Signal hash</label><input id="sig-in" class="mono" value="0xe65167ca4a303d0124e60662b464a460f209a2aaf73f83e224cd5782d959d47e" spellcheck="false"><button type="submit">Recompute</button></form>
+    <div id="sig-out"></div>
+  </section>
+
+  <section aria-labelledby="cs-h">
+    <h2 id="cs-h">Check a Countersign memo</h2>
+    <p class="note">Countersign (another Season II team) signs shipment reports. The memo's digest is recomputed and its EIP-191 signer recovered here, against Countersign's pinned agent. The memo is relayed unchanged by <code>/api/memo</code> only because Countersign's API sends no CORS header; an altered relay would fail this check.</p>
+    <form id="cs-form"><label class="note" for="cs-in" style="flex-basis:100%">Memo id, and optionally the PO it must be about</label><input id="cs-in" class="mono" value="commodities-2026-11-23-3435f1fa" spellcheck="false"><input id="cs-po" class="mono" placeholder="PO, e.g. DEMO-PO-011W" value="DEMO-PO-011W" spellcheck="false" style="flex-basis:200px"><button type="submit">Check</button></form>
+    <div id="cs-out"></div>
+  </section>
+</main>
+<script type="module">
+import { replay, signalHashOf } from "./lib/trade.mjs";
+import { memoVerdict } from "./lib/countersign.mjs";
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+const mark = (ok) => `<span class="${ok ? "ok" : "bad"}">${ok ? "match" : "MISMATCH"}</span>`;
+const PORT = { lat: 60.1497, lon: 24.9155, radiusKm: 1.5, locode: "FIHEL", area: "LS" };
+const V4 = "0x310275e6d66818e068245326bb9e398822304248";
+
+document.getElementById("re-form").onsubmit = async (e) => {
+  e.preventDefault();
+  const out = document.getElementById("re-out"); out.innerHTML = `<p class="note">Fetching the receipts…</p>`;
+  try {
+    const rows = (await fetch("receipts/trade-assurance/log.jsonl", { cache: "no-store" }).then((r) => r.text())).split("\n").filter(Boolean).map((l) => JSON.parse(l));
+    const key = (r) => `${(r.contract ?? V4).toLowerCase()}:${r.id}`;
+    const terms = new Map(rows.filter((r) => r.action === "open").map((r) => [key(r), r.terms]));
+    const html = [];
+    let n = 0, ok = 0;
+    for (const row of rows.filter((r) => r.file && /^(hold|review|propose)$/.test(r.action))) {
+      const r = await fetch(row.file).then((x) => x.json());
+      const x = replay(r, terms.get(key(row)), PORT);
+      const m = x.decision === r.decision && (x.payout ?? null) === (r.payout ?? null);
+      n++; if (m) ok++;
+      html.push(`<tr><td>${esc(r.at.slice(0, 16).replace("T", " "))}</td><td class="mono">${esc((row.contract ?? V4).slice(0, 8))}… #${esc(row.id)}</td><td>${esc(r.decision)}${r.payout ? ` ${esc(Number(r.payout) / 1e6)}` : ""}</td><td>${esc(x.decision)}${x.payout ? ` ${esc(Number(x.payout) / 1e6)}` : ""}</td><td>${mark(m)}</td><td><a href="${esc(row.file)}">answers</a></td></tr>`);
+    }
+    out.innerHTML = `<p><b>${ok} of ${n}</b> rounds re-decide to what was recorded.</p><table><tr><th>Round (UTC)</th><th>Deal</th><th>Recorded</th><th>Re-decided here</th><th></th><th></th></tr>${html.join("")}</table>`;
+  } catch (err) { out.innerHTML = `<p class="bad">${esc(err.message)}</p>`; }
+};
+
+document.getElementById("sig-form").onsubmit = async (e) => {
+  e.preventDefault();
+  const out = document.getElementById("sig-out"); const h = document.getElementById("sig-in").value.trim();
+  if (!/^0x[0-9a-fA-F]{64}$/.test(h)) { out.innerHTML = `<p class="bad">A signal hash is 0x and 64 hex characters.</p>`; return; }
+  out.innerHTML = `<p class="note">Asking the Telegraph node…</p>`;
+  try {
+    const r = await fetch(`https://devnode.telegraphprotocol.com/engine/v1/signal/${h}`);
+    if (!r.ok) throw new Error(`the node answered ${r.status}`);
+    const s = await r.json(); const got = signalHashOf(s.payload);
+    out.innerHTML = `<p>${mark(got.toLowerCase() === h.toLowerCase())}: recomputed <code>${esc(got)}</code></p><p class="note">Intent <b>${esc(s.payload.intent_id)}</b>, miner ${esc(s.payload.miner_slug)}, paid by <code>${esc(s.payload.wallet_address)}</code>, at ${esc(s.payload.timestamp)}.</p><details><summary>Payload</summary><pre class="mono" style="white-space:pre-wrap">${esc(JSON.stringify(s.payload, null, 2))}</pre></details>`;
+  } catch (err) { out.innerHTML = `<p class="bad">${esc(err.message)}</p>`; }
+};
+
+document.getElementById("cs-form").onsubmit = async (e) => {
+  e.preventDefault();
+  const out = document.getElementById("cs-out"); const id = document.getElementById("cs-in").value.trim(); const po = document.getElementById("cs-po").value.trim();
+  out.innerHTML = `<p class="note">Fetching the memo…</p>`;
+  try {
+    const r = await fetch(`api/memo?id=${encodeURIComponent(id)}`);
+    if (!r.ok) throw new Error(`memo not found (${r.status})`);
+    const v = memoVerdict(await r.json(), { po: po || undefined });
+    out.innerHTML = `<p>Digest ${mark(v.digestOk)} · signer ${mark(v.signerOk)} (<code>${esc(v.signer ?? "none")}</code>)</p><p>For a Trade Assurance deal this memo means <b>${esc(v.state)}</b>${v.label ? ` (Countersign: ${esc(v.label)})` : ""}${v.why ? `: ${esc(v.why)}` : ""}.</p>`;
+  } catch (err) { out.innerHTML = `<p class="bad">${esc(err.message)}</p>`; }
+};
+</script>
+</body>
+</html>
