@@ -27,10 +27,10 @@ _Illustrative order (the supplier is not a real company; test USDC scaled 1:12,4
 
 | When (UTC) | Recorded | Replayed | Arrival / Goods / Supplier | Port record | Identity | Signals |
 |---|---|---|---|---|---|---|
-| 2026-11-23 15:21 | review | review ✓ | fail / review / pass | - | - | 6 (6 on the node) |
-| 2026-11-23 16:07 | review | review ✓ | fail / review / pass | - | - | 6 (6 on the node) |
-| 2026-11-23 23:46 | review | review ✓ | pass / review / pass | - | - | 6 (6 on the node) |
-| 2026-11-23 23:46 | review | review ✓ | pass / review / pass | - | - | 6 (6 on the node) |
-| 2026-11-23 23:51 | review | review ✓ | pass / review / pass | - | - | 6 (6 on the node) |
+| 2026-11-23 15:21 | review | review ✓ | fail / review / pass | - | - | 6 (6 on the node, 6 hash recomputed) |
+| 2026-11-23 16:07 | review | review ✓ | fail / review / pass | - | - | 6 (6 on the node, 6 hash recomputed) |
+| 2026-11-23 23:46 | review | review ✓ | pass / review / pass | - | - | 6 (6 on the node, 6 hash recomputed) |
+| 2026-11-23 23:46 | review | review ✓ | pass / review / pass | - | - | 6 (6 on the node, 6 hash recomputed) |
+| 2026-11-23 23:51 | review | review ✓ | pass / review / pass | - | - | 6 (6 on the node, 6 hash recomputed) |
 
 Replay: every round re-decides to what was recorded. Re-run: `node scripts/case-file.mjs --signals`. Each signal: `https://devnode.telegraphprotocol.com/engine/v1/signal/<hash>`.

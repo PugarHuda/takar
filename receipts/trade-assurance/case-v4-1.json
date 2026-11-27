@@ -1,7 +1,7 @@
 {
   "title": "Trade Assurance case: TakarSettle4 deal 1",
   "contract": "https://sepolia.etherscan.io/address/0x310275e6d66818e068245326bb9e398822304248",
-  "generated_at": "2026-11-27T07:40:23.535Z",
+  "generated_at": "2026-11-27T08:12:12.281Z",
   "order": "PO-7781: 1,000 stainless fasteners kits at USD 12.40, Tallinn -> Helsinki, delivered (DAP Helsinki West Harbour)",
   "supplier": "Harju Metal OÜ (illustrative supplier)",
   "vessel": "MEGASTAR",
@@ -115,7 +115,8 @@
         "0x1a3a6562d77f5ffe19af5aa7d049773509846cfb20ead0d4e56b47d7a3fc0be1",
         "0xcf1ff969389458180b16ab5fe5ab1f5678465b766597c8523024ea09d6a1d457"
       ],
-      "signalsOnNode": 6
+      "signalsOnNode": 6,
+      "signalsHashOk": 6
     },
     {
       "at": "2026-11-23T16:07:12.978Z",
@@ -140,7 +141,8 @@
         "0x3e6f91d1c04285f5d1c3c672a2f74e7a5138fb0149310f3c9122709e51f83344",
         "0x5983f3979c72adacc52ce9b58a51dc919bf381b24794c63fa3e0bc49e496f830"
       ],
-      "signalsOnNode": 6
+      "signalsOnNode": 6,
+      "signalsHashOk": 6
     },
     {
       "at": "2026-11-23T23:46:23.785Z",
@@ -165,7 +167,8 @@
         "0x2d18cfd7424b1d10beef7d673267c6533cf3f8fab6cd988f1db73b2a2c21eebd",
         "0xd43c90c3419683749ffab05604ec4eb1d91438555c1c89893cf1c93b6ca4f973"
       ],
-      "signalsOnNode": 6
+      "signalsOnNode": 6,
+      "signalsHashOk": 6
     },
     {
       "at": "2026-11-23T23:46:47.811Z",
@@ -190,7 +193,8 @@
         "0xf66298c6966a9a9d26bb8d4ee2dbecbeda6a102954f3463909c60224b30838a9",
         "0xf76e0117533d6ca5c046bbdad5d402483e87f75850757352ab39e3264d96ff7b"
       ],
-      "signalsOnNode": 6
+      "signalsOnNode": 6,
+      "signalsHashOk": 6
     },
     {
       "at": "2026-11-23T23:51:25.687Z",
@@ -215,7 +219,8 @@
         "0x2ecaea6c27d19e414d44b0f00cf9267f9e1d5e09401baaf2815c9f2c27553f66",
         "0x3d70e5650b1341c5cddd0714f891332de1247567f5a24e2a35d8b540be813a0c"
       ],
-      "signalsOnNode": 6
+      "signalsOnNode": 6,
+      "signalsHashOk": 6
     }
   ],
   "replay": {

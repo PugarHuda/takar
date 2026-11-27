@@ -8,7 +8,7 @@
 // from the contract now. Nothing here needs a key.
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { ethers } from "ethers";
-import { replay } from "../lib/trade.mjs";
+import { replay, signalHashOf } from "../lib/trade.mjs";
 
 const NODE = process.env.TELEGRAPH_NODE ?? "https://devnode.telegraphprotocol.com";
 const RPC = process.env.RPC ?? "https://ethereum-sepolia-rpc.publicnode.com";
@@ -52,8 +52,15 @@ for (const [k, steps] of deals) {
     const x = replay(r, t, PORT, d.amount);
     const round = { at: r.at, file: s.file, decision: r.decision, why: r.why, payout: r.payout ?? null, replayed: x.decision, replayMatches: x.decision === r.decision && (x.payout ?? null) === (r.payout ?? null), checks: r.checks, port: r.port ?? null, identity: r.identity ? { state: r.identity.state, lei: r.identity.lei ?? null } : null, signals: r.signals };
     if (withSignals) {
-      round.signalsOnNode = 0;
-      for (const sig of r.signals) { const res = await fetch(`${NODE}/engine/v1/signal/${sig}`, { signal: AbortSignal.timeout(15_000) }).catch(() => null); if (res?.ok) round.signalsOnNode++; }
+      // On the node, and its hash recomputed from the payload the node returns (keccak256 of canonical JSON).
+      round.signalsOnNode = 0; round.signalsHashOk = 0;
+      for (const sig of r.signals) {
+        const res = await fetch(`${NODE}/engine/v1/signal/${sig}`, { signal: AbortSignal.timeout(15_000) }).catch(() => null);
+        if (!res?.ok) continue;
+        round.signalsOnNode++;
+        const j = await res.json().catch(() => null);
+        if (j?.payload && signalHashOf(j.payload) === sig) round.signalsHashOk++;
+      }
     }
     rounds.push(round);
   }
@@ -76,11 +83,11 @@ for (const [k, steps] of deals) {
     "## Steps", "", "| When (UTC) | Step | Outcome | Tx |", "|---|---|---|---|",
     ...timeline.map((s) => `| ${s.at.slice(0, 16).replace("T", " ")} | ${s.step} | ${[s.decision, s.toSupplier && `supplier ${s.toSupplier}, buyer ${s.toBuyer}`, s.bond && `bond ${s.bond}`, s.by && `by ${s.by}`].filter(Boolean).join("; ") || ""} | ${s.tx ? `[${s.tx.slice(-66, -56)}…](${s.tx})` : ""} |`),
     "", "## Evidence rounds, re-decided", "", "| When (UTC) | Recorded | Replayed | Arrival / Goods / Supplier | Port record | Identity | Signals |", "|---|---|---|---|---|---|---|",
-    ...rounds.map((r) => `| ${r.at.slice(0, 16).replace("T", " ")} | ${r.decision}${r.payout ? ` (${usdc(r.payout)})` : ""} | ${r.replayed} ${r.replayMatches ? "✓" : "✗"} | ${r.checks.arrival} / ${r.checks.invoice} / ${r.checks.sanctions} | ${r.port ? `${r.port.state}${r.port.ata ? ` (ATA ${r.port.ata})` : ""}` : "-"} | ${r.identity?.state ?? "-"} | ${r.signals.length}${r.signalsOnNode != null ? ` (${r.signalsOnNode} on the node)` : ""} |`),
+    ...rounds.map((r) => `| ${r.at.slice(0, 16).replace("T", " ")} | ${r.decision}${r.payout ? ` (${usdc(r.payout)})` : ""} | ${r.replayed} ${r.replayMatches ? "✓" : "✗"} | ${r.checks.arrival} / ${r.checks.invoice} / ${r.checks.sanctions} | ${r.port ? `${r.port.state}${r.port.ata ? ` (ATA ${r.port.ata})` : ""}` : "-"} | ${r.identity?.state ?? "-"} | ${r.signals.length}${r.signalsOnNode != null ? ` (${r.signalsOnNode} on the node, ${r.signalsHashOk} hash recomputed)` : ""} |`),
     "", `Replay: ${doc.replay.all_match ? "every round re-decides to what was recorded" : "**a round does not re-decide to what was recorded**"}. Re-run: \`node scripts/case-file.mjs --signals\`. Each signal: \`${NODE}/engine/v1/signal/<hash>\`.`, "",
   ].join("\n");
   writeFileSync(`${DIR}/${name}.md`, md);
   index.push({ case: name, contract, id: Number(id), state: chain.state, rounds: rounds.length, replay_all_match: doc.replay.all_match });
-  console.log(`${name}: ${chain.state}, ${rounds.length} rounds, replay ${doc.replay.all_match ? "all match" : "MISMATCH"}${withSignals ? `, signals on node ${rounds.reduce((a, r) => a + r.signalsOnNode, 0)}/${rounds.reduce((a, r) => a + r.signals.length, 0)}` : ""}`);
+  console.log(`${name}: ${chain.state}, ${rounds.length} rounds, replay ${doc.replay.all_match ? "all match" : "MISMATCH"}${withSignals ? `, signals on node ${rounds.reduce((a, r) => a + r.signalsOnNode, 0)}/${rounds.reduce((a, r) => a + r.signals.length, 0)}, hash recomputed ${rounds.reduce((a, r) => a + r.signalsHashOk, 0)}` : ""}`);
 }
 writeFileSync(`${DIR}/cases.json`, JSON.stringify(index, null, 2) + "\n");

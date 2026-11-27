@@ -1,7 +1,7 @@
 {
   "title": "Trade Assurance case: TakarSettle4 deal 2",
   "contract": "https://sepolia.etherscan.io/address/0x310275e6d66818e068245326bb9e398822304248",
-  "generated_at": "2026-11-27T07:40:30.548Z",
+  "generated_at": "2026-11-27T08:12:19.668Z",
   "order": "PO-7781: 1,000 stainless fasteners kits at USD 12.40, Tallinn -> Helsinki, delivered (DAP Helsinki West Harbour)",
   "supplier": "Harju Metal OÜ (illustrative supplier)",
   "vessel": "MEGASTAR",
@@ -97,7 +97,8 @@
         "0x736b41cac6124318e5a456d258bac5fcebbf43f2c1b18470d04acea03564ef21",
         "0x78d4eb4db0339ce454dfc909c21ccc47ab592e8ed4f3b0070d96f40c766495c9"
       ],
-      "signalsOnNode": 5
+      "signalsOnNode": 5,
+      "signalsHashOk": 5
     },
     {
       "at": "2026-11-27T06:54:54.091Z",
@@ -122,7 +123,8 @@
         "0xbd6cf7074428c2b5a3db2fb5579a240e663249bea0fdf720e9eee139abcf6396",
         "0x0c60beb81a1127693a1aabcaa5bde746f49267e230e257acec8cd54820cae3d2"
       ],
-      "signalsOnNode": 6
+      "signalsOnNode": 6,
+      "signalsHashOk": 6
     },
     {
       "at": "2026-11-27T06:55:16.897Z",
@@ -147,7 +149,8 @@
         "0x317af9b58938b6a41b331d3580165260a84601b241ad079f445a23a62d846570",
         "0x4f907ed12ae1458642b04f255c4a467b5e871e413d6267db0b0398094d7bd19f"
       ],
-      "signalsOnNode": 6
+      "signalsOnNode": 6,
+      "signalsHashOk": 6
     },
     {
       "at": "2026-11-27T07:31:11.405Z",
@@ -185,7 +188,8 @@
         "0x55c6d8db8a8c6d7f061017dcfdca88f98d5c166078bfb84ec61c0caebbb810ae",
         "0xf9abae3a19ca498b27cc967e1aa322d98f01da7fd3d607cc77be787a3d41183f"
       ],
-      "signalsOnNode": 7
+      "signalsOnNode": 7,
+      "signalsHashOk": 7
     },
     {
       "at": "2026-11-27T07:39:14.044Z",
@@ -224,7 +228,8 @@
         "0xb8e67bdc6a5014d02db203f5bb320930adb9b2a063b1b0c42eded7e623308487",
         "0x9d388864823948804ad2f4d5107ca03ca926a9ab62b8ab512ba18903179525c6"
       ],
-      "signalsOnNode": 7
+      "signalsOnNode": 7,
+      "signalsHashOk": 7
     }
   ],
   "replay": {
