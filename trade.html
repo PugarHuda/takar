@@ -56,7 +56,7 @@ code { font-size:.85rem; overflow-wrap:anywhere; }
   <section aria-labelledby="rules-h">
     <h2 id="rules-h">The conditions, and who checks them</h2>
     <div class="grid">
-      <div><h3>Ship arrived</h3><p class="note">Two vessel miners on different operators (Quay, a terrestrial AIS network; VesselWire, Fintraffic Digitraffic) both put the named ship berthed at the destination port: within 1.5 km, under 1 knot, a reading under 60 minutes old. <b>Arrival alone never pays.</b> It proves the ship is in port, not that the goods were delivered or accepted.</p></div>
+      <div><h3>Ship arrived</h3><p class="note">Two vessel miners on different operators (Quay, a terrestrial AIS network; VesselWire, Fintraffic Digitraffic) both put the named ship berthed at the destination port: within 1.5 km, under 1 knot, a reading under 60 minutes old. <b>Arrival alone never pays.</b> It proves the ship is in port, not that the goods were delivered or accepted. From 27 Nov the port's own record must agree as well (Portnet arrival and departure times via Digitraffic, declared by the ship's agent and the port): two AIS relays are still one broadcast from the ship, so spoofed AIS alone cannot pay. With a delivery date in the terms, a late arrival goes to the panel.</p></div>
       <div><h3>Goods accepted</h3><p class="note">The buyer's goods-received note is the acceptance record. Two reconcile miners on different operators compare the supplier's invoice with the purchase order and that note. In the quantity case, Praman's own three-way reconciliation must land on the same shortfall.</p></div>
       <div><h3>Supplier clear</h3><p class="note">Two sanctions-screening miners on different operators agree, and Praman's own OFAC SDN screen lands the same way.</p></div>
     </div>
@@ -91,7 +91,11 @@ function round(r) {
   const s = r.sanctions.screens.map((x) => `<tr><td>Supplier clear</td><td>${esc(x.miner)}</td><td>matched = ${esc(x.matched)}</td><td>${sig(x.signal)}</td></tr>`);
   const p = r.sanctions.praman;
   s.push(`<tr><td>Supplier clear</td><td>Praman (MCP)</td><td>${p.error ? esc(p.error) : `matched = ${esc(p.matched)}, SDN list loaded ${esc(p.sdn_last_loaded)}`}</td><td>-</td></tr>`);
-  return `<p>${tag(r.decision)} ${esc(r.why)}${r.payout != null && r.decision !== "hold" && r.decision !== "review" ? ` · proposed payout to the supplier: <b>${usdc(r.payout)} USDC</b>` : ""}</p>
+  // Rounds from 27 Nov on also carry the port's own record and the supplier's registered identity.
+  if (r.port) v.push(`<tr><td>Ship arrived</td><td>Port record (Portnet, <a href="${esc(r.port.source ?? "https://meri.digitraffic.fi")}">Digitraffic</a>)</td><td>${esc(r.port.state)}${r.port.ata ? `: arrived ${esc(r.port.ata)}, berth ${esc(r.port.berth)}` : r.port.lastAtd ? `: departed ${esc(r.port.lastAtd)}${r.port.nextEta ? `, next arrival expected ${esc(r.port.nextEta)}` : ""}` : r.port.why ? `: ${esc(r.port.why)}` : ""}. Declared by the ship's agent and the port, not the ship's AIS.</td><td>-</td></tr>`);
+  if (r.identity) s.push(`<tr><td>Supplier identity</td><td>${esc(r.identity.miner)}</td><td>${esc(r.identity.state)}${r.identity.lei ? `: ${esc(r.identity.legal_name)}, LEI ${esc(r.identity.lei)}` : r.identity.why ? `: ${esc(r.identity.why)}` : ""}</td><td>${sig(r.identity.signal)}</td></tr>`);
+  const extra = [r.oneBroadcast ? "both vessel miners returned the same position fix: one AIS message relayed twice, so the port's own record decides with them" : "", r.checks.late ? `delivered ${r.checks.late} h after the agreed date` : ""].filter(Boolean);
+  return `<p>${tag(r.decision)} ${esc(r.why)}${r.payout != null && r.decision !== "hold" && r.decision !== "review" ? ` · proposed payout to the supplier: <b>${usdc(r.payout)} USDC</b>` : ""}</p>${extra.length ? `<p class="note">${esc(extra.join(" · "))}</p>` : ""}
     <p class="note">Ship ${r.checks.arrival === "fail" ? '<span class="tag hold">not in port</span>' : r.checks.arrival === "pass" ? '<span class="tag pass">in port</span>' : tag(r.checks.arrival)} Goods ${tag(r.checks.invoice)} Supplier ${tag(r.checks.sanctions)} · goods-received note used: “${esc(r.ledger)}”</p>
     <div class="scroll"><table><tr><th>Check</th><th>Miner</th><th>Answer</th><th>Signal</th></tr>${[...v, ...i, ...s].join("")}</table></div>`;
 }

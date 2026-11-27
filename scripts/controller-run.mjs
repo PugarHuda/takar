@@ -7,6 +7,7 @@
 //   node --env-file=.env scripts/controller-run.mjs [mine-slug ...]   -> receipts/controller-<slug>.json
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { ask, NODE } from "../lib/telegraph.mjs";
+import { sameEntity } from "../lib/trade.mjs";
 
 const wanted = process.argv.slice(2);
 const files = readdirSync("receipts").filter((n) => /^dossier-[a-z0-9-]+\.json$/.test(n)).filter((n) => !wanted.length || wanted.includes(n.slice(8, -5)));
@@ -19,9 +20,6 @@ async function raw(signal) {
 }
 
 const COMPANY = /\b(pty|ltd|limited|inc|corp|corporation|company|co|plc|llc|nl|holdings|group|trust)\b/i;
-const words = (s) => new Set(String(s ?? "").toUpperCase().replace(/[^A-Z0-9 ]/g, " ").split(/\s+/).filter((w) => w.length > 2 && !/^(PTY|LTD|LIMITED|THE|AND|CORPORATION|COMPANY)$/.test(w)));
-/** The register's name and the resolved legal name must share their distinctive words. */
-export const sameEntity = (a, b) => { const A = words(a), B = words(b); return A.size > 0 && [...A].every((w) => B.has(w)); };
 
 async function controller(holder) {
   const row = { holder_name: holder, legal_name: null, entity_id: null, jurisdiction: null, status: null, screened: null, source_ref: "miner:731005+731002", receipts: [], checked_at: new Date().toISOString() };

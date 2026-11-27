@@ -1,0 +1,27 @@
+name: keeper
+# Every 30 minutes: finalize any Trade Assurance deal whose dispute window has passed.
+# finalize() is permissionless, so TAKAR_KEEPER_KEY is a throwaway wallet with a little test ETH,
+# not a resolver. A settled deal is written to the trade log and the push redeploys the page.
+on:
+  schedule: [{ cron: "7,37 * * * *" }]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: keeper
+jobs:
+  keeper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: node scripts/keeper.mjs --send
+        env:
+          TAKAR_KEEPER_KEY: ${{ secrets.TAKAR_KEEPER_KEY }}
+      - run: |
+          git config user.name "takar-keeper"
+          git config user.email "takar-keeper@users.noreply.github.com"
+          git add receipts/trade-assurance/log.jsonl
+          git commit -m "keeper: finalized a Trade Assurance deal" || exit 0
+          git pull --rebase && git push

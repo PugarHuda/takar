@@ -28,7 +28,7 @@ import { ethers } from "ethers";
 import { ask, ranked, NODE, USDC } from "../lib/telegraph.mjs";
 import { secondOpinion } from "../lib/second.mjs";
 import { pramanTool } from "../lib/praman.mjs";
-import { berth, pair, decide, payable } from "../lib/trade.mjs";
+import { berth, pair, decide, payable, portCall, arrivalWith, sameFix, lateBy, identity } from "../lib/trade.mjs";
 
 const provider = new ethers.JsonRpcProvider(process.env.RPC ?? "https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true });
 const r1 = new ethers.Wallet(process.env.AGENT_PRIVATE_KEY, provider); // proposes, pays for the evidence
@@ -58,7 +58,28 @@ const VESSEL_MINERS = [8818818, 70068]; // Quay (terrestrial AIS network) | Vess
 // time on 23 Nov (rounds 2-3 of case 1 show it); evidence files record which miners each round used.
 // TAKAR_INVOICE_MINERS="a,b" swaps the pair when one stops answering (302 returned upstream 404s on 27 Nov).
 const INVOICE_MINERS = process.env.TAKAR_INVOICE_MINERS ? process.env.TAKAR_INVOICE_MINERS.split(",").map(Number) : [7455, 302];
-const PORTS = { "Helsinki West Harbour": { lat: 60.1497, lon: 24.9155, radiusKm: 1.5 } };
+// locode/area: the port authority's own record of the call (Portnet via Digitraffic), LS = Länsisatama.
+const PORTS = { "Helsinki West Harbour": { lat: 60.1497, lon: 24.9155, radiusKm: 1.5, locode: "FIHEL", area: "LS" } };
+const IDENTITY_MINER = 731005; // Sadiq's B2B identity miner: legal name + LEI (Ahmed asked for it in Takar's flow)
+
+/** Port calls for the vessel over the last three days, from Fintraffic Digitraffic (Portnet). Free, no key.
+ *  The same agency also publishes AIS, but this is a different record: arrivals and departures
+ *  declared by the ship's agent and the port, not the ship's own transponder. */
+async function portCalls(vessel) {
+  const from = new Date(Date.now() - 3 * 86_400_000).toISOString();
+  const url = `https://meri.digitraffic.fi/api/port-call/v1/port-calls?vesselName=${encodeURIComponent(vessel)}&from=${from}`;
+  const r = await fetch(url, { headers: { "Digitraffic-User": "takar/trade-assurance", "Accept-Encoding": "gzip" }, signal: AbortSignal.timeout(20_000) });
+  if (!r.ok) throw new Error(`port calls ${r.status}`);
+  return { url, calls: (await r.json()).portCalls ?? [] };
+}
+
+/** The miner's own fields (legal_name, lei) are in the signal's raw response. */
+async function rawOf(signal) {
+  if (!signal) return {};
+  const r = await fetch(`${NODE}/engine/v1/signal/${signal}`, { signal: AbortSignal.timeout(15_000) }).catch(() => null);
+  return r?.ok ? (await r.json()).payload?.response ?? {} : {};
+}
+const supplierName = (s) => String(s ?? "").replace(/\(.*?\)/g, "").trim();
 
 async function operators() {
   const list = await fetch(`${NODE}/api/miners`).then((x) => x.json());
@@ -76,14 +97,25 @@ async function askBoth(intent, miners, params, opOf) {
 async function evidence(t) {
   const opOf = await operators();
   const port = PORTS[t.port];
-  const [vessel, invoice, so, praman] = await Promise.all([
+  const [vessel, invoice, so, praman, calls, who] = await Promise.all([
     askBoth("VESSEL_TELEMETRY_VERIFY_GENERAL", VESSEL_MINERS, { vessel: t.vessel }, opOf),
     askBoth("INVOICE_LEDGER_RECONCILE_GENERAL", INVOICE_MINERS, { invoice: t.invoice, ledger: t.ledger }, opOf),
     secondOpinion({ intent: "SANCTIONS_SCREENING_MATCH_GENERAL", params: { name: t.supplier } }, { ask: (a) => ask({ ...a, unit: "trade-assurance" }), ranked, operatorOf: opOf, strictOperators: true, maxAsks: 6, unit: "trade-assurance", fields: ["matched"] }),
     pramanTool("screen_sanctions", { name: t.supplier }).catch((e) => ({ error: e.message })),
+    portCalls(t.vessel).catch((e) => ({ error: e.message, calls: null })),
+    ask({ intent: "B2B_IDENTITY_ENRICHMENT_GENERAL", params: { company: supplierName(t.supplier) }, minerId: IDENTITY_MINER, unit: "trade-assurance", purpose: "trade-assurance identity" })
+      .then(async (r) => ({ miner: IDENTITY_MINER, signal: r.signal_hash ?? null, ...identity(await rawOf(r.signal_hash), t.supplier) }))
+      .catch((e) => ({ miner: IDENTITY_MINER, signal: null, state: "unverified", why: e.message.slice(0, 160) })),
   ]);
   for (const v of vessel) v.berth = v.result ? berth(v.result, port, Date.now(), t.vessel) : { state: "unusable", why: v.error };
-  const arrival = pair(vessel[0].berth.state, vessel[1].berth.state, "berthed", "away");
+  const ais = pair(vessel[0].berth.state, vessel[1].berth.state, "berthed", "away");
+  const portRecord = calls.calls ? { source: calls.url, ...portCall(calls.calls, port, Date.now()) } : { state: "unknown", why: calls.error };
+  const arrival = arrivalWith(ais, portRecord.state);
+  const oneBroadcast = sameFix(vessel[0].result, vessel[1].result);
+  // Identity gates payment only when the buyer's terms ask for a registered entity (requireLei);
+  // otherwise it is shown as evidence. The demo suppliers are illustrative, so they are not found.
+  const identityCheck = t.requireLei ? (who.state === "verified" ? "pass" : "review") : "pass";
+  const late = arrival === "pass" ? lateBy(portRecord.ata, t.deliverBy) : 0;
   const inv = pair(invoice[0].result?.reconciled, invoice[1].result?.reconciled, true, false);
   // Fail closed: clear only on an explicit no-match, a hit only on an explicit match; anything else is review.
   const verdictOf = (v) => v === false || /^(false|no|0|clear)$/i.test(String(v)) ? true : v === true || /^(true|yes|match|matched|1)$/i.test(String(v)) ? false : null;
@@ -91,22 +123,22 @@ async function evidence(t) {
   const pramanClear = typeof praman.matched === "boolean" && praman.sdn_last_loaded ? !praman.matched : null;
   const sanctions = takarClear === true && pramanClear === true ? "pass" : takarClear === false && pramanClear === false ? "fail" : "review";
   const screens = so.answers.filter((a) => a.usable).map((a) => ({ miner: a.miner?.id, signal: a.signal, matched: a.result?.matched }));
-  const checks = { arrival, invoice: inv, sanctions };
+  const checks = { arrival, invoice: inv, sanctions, identity: identityCheck, late };
   let [decision, why] = decide(checks, t.port);
   let payout = decision === "pay" ? t.amount : decision === "refund" ? 0n : null, reconcile = null;
   // Quantity deals: an invoice that does not match the goods-received note is paid for the accepted
   // part, when both miners and Praman's three-way reconciliation agree on the shortfall.
   // Quantity deals are decided on the shortfall figure, not the reconciled flag (miners phrase a
   // partial acceptance differently). Only goods that arrived from a clear supplier can be paid at all.
-  if (t.qty && arrival === "pass" && sanctions === "pass") {
+  if (t.qty && arrival === "pass" && sanctions === "pass" && identityCheck === "pass" && !late) {
     reconcile = await pramanTool("reconcile_invoice", { invoice_id: t.qty.invoiceId, po_number: t.qty.po, billed_qty: t.qty.billed, accepted_qty: t.qty.accepted, unit_price: t.qty.unitPrice, tax_rate_pct: 0, currency: "USD" }).catch((e) => ({ error: e.message }));
     const p = payable(t.amount, t.qty.billed * t.qty.unitPrice, invoice.map((x) => x.result?.discrepancy), reconcile?.details?.delta_total);
     if (p !== null) [decision, why, payout] = ["partial", `pay for the accepted units only: both reconcile miners and Praman put the shortfall at USD ${Math.abs(Number(invoice[0].result.discrepancy))}`, p];
     else if (inv === "pass" && reconcile?.reconciled === true) [decision, why, payout] = ["pay", "every unit accepted: both miners and Praman reconcile the invoice", t.amount];
     else [decision, why, payout] = ["review", "the miners and Praman do not agree on what was accepted", null];
   }
-  const signals = [...vessel, ...invoice, ...screens].map((x) => x.signal).filter(Boolean);
-  return { decision, why, payout: payout === null ? null : String(payout), checks, vessel, invoice, sanctions: { takar: so.verdict, screens, praman }, reconcile, signals: [...new Set(signals)] };
+  const signals = [...vessel, ...invoice, ...screens, who].map((x) => x.signal).filter(Boolean);
+  return { decision, why, payout: payout === null ? null : String(payout), checks: { ...checks, ais }, vessel, oneBroadcast, port: portRecord, invoice, sanctions: { takar: so.verdict, screens, praman }, identity: who, reconcile, signals: [...new Set(signals)] };
 }
 
 /** Takar's second key re-reads every signal on the node before backing: each must be an answer to
@@ -114,7 +146,7 @@ async function evidence(t) {
  *  ponytail: ties evidence to the deal, does not re-derive berthed/reconciled from raw miner
  *  responses (shapes differ per miner); add per-miner parsers if the second key must re-decide. */
 async function backBy(w, id, payout, amount, signals, t) {
-  const expect = { VESSEL_TELEMETRY_VERIFY_GENERAL: t.vessel, INVOICE_LEDGER_RECONCILE_GENERAL: t.invoice.split(":")[0], SANCTIONS_SCREENING_MATCH_GENERAL: t.supplier };
+  const expect = { VESSEL_TELEMETRY_VERIFY_GENERAL: t.vessel, INVOICE_LEDGER_RECONCILE_GENERAL: t.invoice.split(":")[0], SANCTIONS_SCREENING_MATCH_GENERAL: t.supplier, B2B_IDENTITY_ENRICHMENT_GENERAL: supplierName(t.supplier) };
   for (const s of signals) {
     const r = await fetch(`${NODE}/engine/v1/signal/${s}`, { signal: AbortSignal.timeout(15_000) });
     if (!r.ok) return { declined: `signal ${s.slice(0, 10)} not found on the node (${r.status})` };
@@ -180,6 +212,10 @@ if (cmd === "deploy") {
     ledger: arg("ledger", "PO-7781: 1000 units x USD 12.40 = USD 12,400.00; goods received 1000 units"),
     text: `Pays the supplier when ${vessel} is berthed at Helsinki West Harbour (two vessel miners on different operators), the invoice reconciles with the PO and goods-received note (two reconcile miners), and the supplier screens clear (two screening miners + Praman). Disagreement = review, not payment. Test USDC, scaled 1:12,400.`,
   };
+  // --deliver-by <ISO>: arriving after it (by the port's actual arrival time) sends the deal to the panel.
+  // --require-lei: payment also needs the supplier resolved to a registered entity with an LEI.
+  if (arg("deliver-by")) { terms.deliverBy = new Date(arg("deliver-by")).toISOString(); terms.text += ` Latest delivery ${terms.deliverBy} by the port's actual arrival time; later goes to the panel.`; }
+  if (rest.includes("--require-lei")) { terms.requireLei = true; terms.text += " The supplier must resolve to a registered entity with an LEI."; }
   const t = await s.open(supplier.address, amount, BigInt(Math.floor(Date.now() / 1000) + 60), 0, JSON.stringify(terms));
   const r = await t.wait();
   const id = Number(s.interface.parseLog(r.logs.find((l) => l.address.toLowerCase() === s.target.toLowerCase())).args.id);

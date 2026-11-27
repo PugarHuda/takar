@@ -26,3 +26,4 @@
 {"at":"2026-11-27T06:54:18.346Z","contract":"0x310275e6D66818E068245326bB9e398822304248","action":"review","id":2,"why":"checks disagree or are unusable: invoice","file":"receipts/trade-assurance/deal-2-2026-11-27T06-54-18-344Z.json"}
 {"at":"2026-11-27T06:54:54.093Z","contract":"0x310275e6D66818E068245326bB9e398822304248","action":"review","id":2,"why":"checks disagree or are unusable: invoice","file":"receipts/trade-assurance/deal-2-2026-11-27T06-54-54-091Z.json"}
 {"at":"2026-11-27T06:55:16.951Z","contract":"0x310275e6D66818E068245326bB9e398822304248","action":"hold","id":2,"why":"the ship is not berthed at Helsinki West Harbour yet (both vessel miners agree)","file":"receipts/trade-assurance/deal-2-2026-11-27T06-55-16-897Z.json"}
+{"at":"2026-11-27T07:31:11.407Z","contract":"0x310275e6D66818E068245326bB9e398822304248","action":"review","id":2,"why":"checks disagree or are unusable: invoice","file":"receipts/trade-assurance/deal-2-2026-11-27T07-31-11-405Z.json"}
