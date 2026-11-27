@@ -30,7 +30,7 @@ import { secondOpinion } from "../lib/second.mjs";
 import { pramanTool } from "../lib/praman.mjs";
 import { existsSync } from "node:fs";
 import { memoVerdict, memoUrl } from "../lib/countersign.mjs";
-import { berth, pair, decide, payable, portCall, arrivalWith, sameFix, lateBy, latePayout, identity, verifyDocs, DOC_TYPES, docDomain } from "../lib/trade.mjs";
+import { berth, pair, decide, payable, portCall, arrivalWith, sameFix, lateBy, latePayout, identity, verifyDocs, verifyInspection, DOC_TYPES, docDomain } from "../lib/trade.mjs";
 
 const provider = new ethers.JsonRpcProvider(process.env.RPC ?? "https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true });
 const r1 = new ethers.Wallet(process.env.AGENT_PRIVATE_KEY, provider); // proposes, pays for the evidence
@@ -83,7 +83,7 @@ async function rawOf(signal) {
 }
 const supplierName = (s) => String(s ?? "").replace(/\(.*?\)/g, "").trim();
 const docFile = (id, kind) => `${DIR}/doc-v${V5 ? 5 : 4}-${id}-${kind}.json`;
-const loadDocs = (id) => Object.fromEntries(["grn", "invoice"].filter((k) => existsSync(docFile(id, k))).map((k) => [k, JSON.parse(readFileSync(docFile(id, k), "utf8"))]));
+const loadDocs = (id) => Object.fromEntries(["grn", "invoice", "inspection"].filter((k) => existsSync(docFile(id, k))).map((k) => [k, JSON.parse(readFileSync(docFile(id, k), "utf8"))]));
 
 async function operators() {
   const list = await fetch(`${NODE}/api/miners`).then((x) => x.json());
@@ -131,14 +131,16 @@ async function evidence(t) {
   const documents = t.signedDocs ? (t.documents?.state === "signed" ? "pass" : "review") : "pass";
   // A Countersign memo, when given for this round, can hold payment (HOLD, unsigned, another order) but never pays alone.
   const countersign = t.countersign ? (t.countersign.state === "release" ? "pass" : "review") : "pass";
-  const checks = { arrival, invoice: inv, sanctions, identity: identityCheck, documents, countersign, late };
+  // An inspection certificate is required only when the terms name an inspector; a failed or missing one is review.
+  const quality = !t.inspector || t.inspection?.state === "pass" ? "pass" : "review";
+  const checks = { arrival, invoice: inv, sanctions, identity: identityCheck, documents, countersign, quality, late };
   let [decision, why] = decide(checks, t.port);
   let payout = decision === "pay" ? t.amount : decision === "refund" ? 0n : null, reconcile = null;
   // Quantity deals: an invoice that does not match the goods-received note is paid for the accepted
   // part, when both miners and Praman's three-way reconciliation agree on the shortfall.
   // Quantity deals are decided on the shortfall figure, not the reconciled flag (miners phrase a
   // partial acceptance differently). Only goods that arrived from a clear supplier can be paid at all.
-  if (t.qty && arrival === "pass" && sanctions === "pass" && identityCheck === "pass" && documents === "pass" && countersign === "pass" && !late) {
+  if (t.qty && arrival === "pass" && sanctions === "pass" && identityCheck === "pass" && documents === "pass" && countersign === "pass" && quality === "pass" && !late) {
     reconcile = await pramanTool("reconcile_invoice", { invoice_id: t.qty.invoiceId, po_number: t.qty.po, billed_qty: t.qty.billed, accepted_qty: t.qty.accepted, unit_price: t.qty.unitPrice, tax_rate_pct: 0, currency: "USD" }).catch((e) => ({ error: e.message }));
     const p = payable(t.amount, t.qty.billed * t.qty.unitPrice, invoice.map((x) => x.result?.discrepancy), reconcile?.details?.delta_total);
     if (p !== null) [decision, why, payout] = ["partial", `pay for the accepted units only: both reconcile miners and Praman put the shortfall at USD ${Math.abs(Number(invoice[0].result.discrepancy))}`, p];
@@ -146,10 +148,10 @@ async function evidence(t) {
     else [decision, why, payout] = ["review", "the miners and Praman do not agree on what was accepted", null];
   }
   // Late, everything else clean, and the terms carry a penalty: settle the split now instead of the panel.
-  const lp = !t.qty && late && arrival === "pass" && inv === "pass" && sanctions === "pass" && identityCheck === "pass" && documents === "pass" && countersign === "pass" ? latePayout(t.amount, late, t.latePenaltyPctPerDay, t.latePenaltyCapPct) : null;
+  const lp = !t.qty && late && arrival === "pass" && inv === "pass" && sanctions === "pass" && identityCheck === "pass" && documents === "pass" && countersign === "pass" && quality === "pass" ? latePayout(t.amount, late, t.latePenaltyPctPerDay, t.latePenaltyCapPct) : null;
   if (lp) [decision, why, payout] = ["partial", `delivered ${late} h after the agreed date (${lp.days} started day${lp.days > 1 ? "s" : ""}): ${lp.cutPct}% off, per the terms`, lp.payout];
   const signals = [...vessel, ...invoice, ...screens, who].map((x) => x.signal).filter(Boolean);
-  return { decision, why, payout: payout === null ? null : String(payout), checks: { ...checks, ais }, vessel, oneBroadcast, port: portRecord, invoice, sanctions: { takar: so.verdict, screens, praman }, identity: who, documents: t.documents ?? null, countersign: t.countersign ?? null, reconcile, signals: [...new Set(signals)] };
+  return { decision, why, payout: payout === null ? null : String(payout), checks: { ...checks, ais }, vessel, oneBroadcast, port: portRecord, invoice, sanctions: { takar: so.verdict, screens, praman }, identity: who, documents: t.documents ?? null, countersign: t.countersign ?? null, inspection: t.inspection ?? null, reconcile, signals: [...new Set(signals)] };
 }
 
 /** Takar's second key re-reads every signal on the node before backing: each must be an answer to
@@ -233,6 +235,8 @@ if (cmd === "deploy") {
     Object.assign(terms, { latePenaltyPctPerDay: pct, latePenaltyCapPct: cap });
     terms.text += ` Late delivery: ${pct}% off per started day, at most ${cap}%.`;
   }
+  // --inspector <address>: payment also needs that inspector's signed certificate with every inspected unit passing.
+  if (arg("inspector")) { terms.inspector = ethers.getAddress(arg("inspector")); terms.text += ` Quality: needs a passing inspection certificate signed by ${terms.inspector}.`; }
   if (rest.includes("--require-lei")) { terms.requireLei = true; terms.text += " The supplier must resolve to a registered entity with an LEI."; }
   const t = await s.open(supplier.address, amount, BigInt(Math.floor(Date.now() / 1000) + 60), 0, JSON.stringify(terms));
   const r = await t.wait();
@@ -247,7 +251,9 @@ if (cmd === "deploy") {
   if (t.kind !== "trade") throw new Error(`deal ${id} is not a trade deal`);
   if (STATES[Number(d.state)] !== "open" && !(STATES[Number(d.state)] === "proposed" && d.finalizesAt === 0n)) throw new Error(`deal ${id} is ${STATES[Number(d.state)]}${d.finalizesAt ? " with its window open" : ""}`);
   // The parties' signed documents, when present: the buyer's signed note is what the miners reconcile.
-  const documents = verifyDocs(loadDocs(id), { contract: s.target, dealId: id, payer: d.payer, payee: d.payee });
+  const docs = loadDocs(id);
+  const documents = verifyDocs(docs, { contract: s.target, dealId: id, payer: d.payer, payee: d.payee });
+  const inspection = verifyInspection(docs.inspection, { contract: s.target, dealId: id, po: t.order.split(':')[0], inspector: t.inspector });
   // A buyer's dispute can come with a new goods-received note; it replaces the ledger for this round.
   const ledger = arg("ledger", documents.state === "signed" ? documents.note : t.ledger);
   // --countersign <memo id>: Countersign's signed shipment report for this order, verified here
@@ -256,7 +262,7 @@ if (cmd === "deploy") {
   const countersign = memo ? await fetch(memoUrl(memo), { signal: AbortSignal.timeout(20_000) }).then((r) => r.json())
     .then((m) => ({ url: memoUrl(memo), ...memoVerdict(m, { po: t.order.match(/PO-[\w-]+/)?.[0] }) }))
     .catch((err) => ({ url: memoUrl(memo), state: "unusable", why: err.message })) : null;
-  const e = await evidence({ ...t, amount: d.amount, ledger, documents, countersign });
+  const e = await evidence({ ...t, amount: d.amount, ledger, documents, countersign, inspection });
   const round = { id, at: new Date().toISOString(), ledger, ...e };
   mkdirSync(DIR, { recursive: true });
   const file = `${DIR}/deal-${id}-${round.at.replace(/[:.]/g, "-")}.json`;
@@ -319,9 +325,11 @@ if (cmd === "deploy") {
   if (!po || !inv || !units || !cents) throw new Error("cannot read PO, invoice, units and price from the terms");
   const [w, type, message] = kind === "grn"
     ? [buyer, "GoodsReceipt", { dealId: id, po, invoice: inv, acceptedUnits: Number(arg("accepted", t.qty?.accepted ?? units)), rejectedUnits: units - Number(arg("accepted", t.qty?.accepted ?? units)), note: arg("note", t.ledger) }]
-    : kind === "invoice" ? [supplier, "Invoice", { dealId: id, invoice: inv, po, units, unitPriceCents: cents, totalCents: units * cents }] : [];
-  if (!w) throw new Error("--doc grn|invoice (grn needs TAKAR_BUYER_KEY)");
-  if (w.address.toLowerCase() !== (kind === "grn" ? d.payer : d.payee).toLowerCase()) throw new Error(`${kind === "grn" ? "buyer" : "supplier"} key ${w.address} is not this deal's ${kind === "grn" ? "payer" : "payee"}`);
+    : kind === "invoice" ? [supplier, "Invoice", { dealId: id, invoice: inv, po, units, unitPriceCents: cents, totalCents: units * cents }]
+    : kind === "inspection" ? [process.env.INSPECTOR_KEY ? new ethers.Wallet(process.env.INSPECTOR_KEY) : null, "Inspection", { dealId: id, po, standard: arg("standard", "ISO 2859-1 AQL 2.5"), inspectedUnits: Number(arg("inspected", 125)), passedUnits: Number(arg("passed", arg("inspected", 125))), note: arg("note", "arrival inspection") }] : [];
+  if (!w) throw new Error("--doc grn|invoice|inspection (grn needs TAKAR_BUYER_KEY, inspection needs INSPECTOR_KEY)");
+  if (kind === "inspection" && w.address.toLowerCase() !== String(t.inspector ?? "").toLowerCase()) throw new Error(`inspector key ${w.address} is not the inspector the terms name (${t.inspector ?? "none"})`);
+  if (kind !== "inspection" && w.address.toLowerCase() !== (kind === "grn" ? d.payer : d.payee).toLowerCase()) throw new Error(`${kind === "grn" ? "buyer" : "supplier"} key ${w.address} is not this deal's ${kind === "grn" ? "payer" : "payee"}`);
   const signature = await w.signTypedData(docDomain(settle(r1).target), { [type]: DOC_TYPES[type] }, message);
   writeFileSync(docFile(id, kind), JSON.stringify({ type, domain: docDomain(settle(r1).target), message, signer: w.address, signature }, null, 2) + "\n");
   console.log(`deal ${id}: ${type} signed by ${w.address} -> ${docFile(id, kind)}`);
