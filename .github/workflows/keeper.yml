@@ -19,9 +19,10 @@ jobs:
       - run: node scripts/keeper.mjs --send
         env:
           TAKAR_KEEPER_KEY: ${{ secrets.TAKAR_KEEPER_KEY }}
+      - run: git diff --quiet receipts/trade-assurance/log.jsonl || node scripts/case-file.mjs
       - run: |
           git config user.name "takar-keeper"
           git config user.email "takar-keeper@users.noreply.github.com"
-          git add receipts/trade-assurance/log.jsonl
+          git add receipts/trade-assurance/log.jsonl receipts/trade-assurance/case-* receipts/trade-assurance/cases.json
           git commit -m "keeper: finalized a Trade Assurance deal" || exit 0
           git pull --rebase && git push

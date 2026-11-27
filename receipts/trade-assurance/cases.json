@@ -1,0 +1,26 @@
+[
+  {
+    "case": "case-v4-1",
+    "contract": "0x310275e6d66818e068245326bb9e398822304248",
+    "id": 1,
+    "state": "settled",
+    "rounds": 5,
+    "replay_all_match": true
+  },
+  {
+    "case": "case-v5-0",
+    "contract": "0xa6d0482cbf29fe43fb644f33f7a020766af4a42b",
+    "id": 0,
+    "state": "settled",
+    "rounds": 2,
+    "replay_all_match": true
+  },
+  {
+    "case": "case-v4-2",
+    "contract": "0x310275e6d66818e068245326bb9e398822304248",
+    "id": 2,
+    "state": "open",
+    "rounds": 4,
+    "replay_all_match": true
+  }
+]

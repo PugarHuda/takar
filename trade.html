@@ -136,7 +136,7 @@ function round(r) {
       if (r.action === "finalize") body = r.toSupplier != null ? `<p>Supplier received <b>${usdc(r.toSupplier)} USDC</b>, buyer refunded <b>${usdc(r.toBuyer)} USDC</b>${r.bond ? `; the ${esc(r.bond.from)}'s bond of <b>${usdc(r.bond.amount)} USDC</b> went to the ${esc(r.bond.to)}, because ${esc(r.bond.reason)}` : "; bonds returned or forfeited per the contract"}. ${tx(r.tx)}</p>` : `<p>${r.met ? "Supplier paid" : "Buyer refunded"}. ${tx(r.tx)}</p>`;
       out.push(`<li><h3>${esc(WHO[r.action] ?? r.action)}</h3><div class="when">${when(r.at)}</div>${body}</li>`);
     }
-    html.push(`<section><h2>${esc(title)}</h2><p class="note">Supplier: ${esc(t.supplier)}. Ship: ${esc(t.vessel)}, to ${esc(t.port)}. Invoice: “${esc(t.invoice)}”. Terms on chain: “${esc(t.text)}”</p><ol class="time">${out.join("")}</ol></section>`);
+    html.push(`<section><h2>${esc(title)}</h2><p class="note">Supplier: ${esc(t.supplier)}. Ship: ${esc(t.vessel)}, to ${esc(t.port)}. Invoice: “${esc(t.invoice)}”. Terms on chain: “${esc(t.text)}”</p><p class="note">Case file, with every round re-decided from its stored answers: <a href="receipts/trade-assurance/case-v${k.startsWith(V4.toLowerCase()) ? 4 : 5}-${k.split(":")[1]}.md">Markdown</a> · <a href="receipts/trade-assurance/case-v${k.startsWith(V4.toLowerCase()) ? 4 : 5}-${k.split(":")[1]}.json">JSON</a></p><ol class="time">${out.join("")}</ol></section>`);
   }
   document.getElementById("cases").innerHTML = html.join("") || "<section><p>No cases yet.</p></section>";
 })().catch((e) => { document.getElementById("cases").innerHTML = `<section><p>Could not load the cases (${esc(e.message)}).</p></section>`; });

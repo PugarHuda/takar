@@ -1,0 +1,144 @@
+{
+  "title": "Trade Assurance case: TakarSettle5 deal 0",
+  "contract": "https://sepolia.etherscan.io/address/0xa6d0482cbf29fe43fb644f33f7a020766af4a42b",
+  "generated_at": "2026-11-27T07:33:24.119Z",
+  "order": "PO-7790: 1,000 stainless fastener kits at USD 12.40, Tallinn -> Helsinki, paid on goods accepted at the buyer's warehouse",
+  "supplier": "Harju Metal OÜ (illustrative supplier)",
+  "vessel": "MEGASTAR",
+  "port": "Helsinki West Harbour",
+  "invoice": "INV-2026-1201: 1000 units x USD 12.40 = USD 12,400.00",
+  "terms_on_chain": "Ship arrival is not delivery: the supplier is paid for the units the buyer's goods-received note accepts. Needs MEGASTAR berthed (two vessel miners), the shortfall agreed by two reconcile miners and Praman's three-way reconciliation, and the supplier clear. Test USDC, scaled 1:12,400.",
+  "note": "Illustrative order (the supplier is not a real company; test USDC scaled 1:12,400). The ship, the miners, every paid answer and every transaction are real, on Ethereum Sepolia.",
+  "chain_now": {
+    "state": "settled",
+    "amount": "1.00",
+    "approvals": 3,
+    "payerDisputed": false,
+    "payeeDisputed": true
+  },
+  "timeline": [
+    {
+      "at": "2026-11-23T15:51:51.556Z",
+      "step": "open",
+      "decision": null,
+      "by": null,
+      "tx": "https://sepolia.etherscan.io/tx/0x11181c0bd1f5044953ce4f6757794acef1d86c14fa9cf2d6884e1d15c77f70a2"
+    },
+    {
+      "at": "2026-11-23T23:49:03.123Z",
+      "step": "propose",
+      "decision": "partial",
+      "by": null,
+      "tx": "https://sepolia.etherscan.io/tx/0xd1735789ab2ef7b4ce90627da79e553197313648e1c6d8cc37386994afca907d"
+    },
+    {
+      "at": "2026-11-23T23:49:39.043Z",
+      "step": "second",
+      "decision": null,
+      "by": null,
+      "tx": "https://sepolia.etherscan.io/tx/0x42fcab41994559fdd0edc2816dbcb0fb52ef13f49854411768b9edf7cbbf7187"
+    },
+    {
+      "at": "2026-11-23T23:50:12.902Z",
+      "step": "dispute",
+      "decision": null,
+      "by": "supplier",
+      "reason": "Supplier: all 1,000 units were loaded and shipped; the bill of lading shows 1,000. Pay in full.",
+      "tx": "https://sepolia.etherscan.io/tx/0xab6bec718d7d25b3e278c341add6f14d616a8ebcf7c06b3ca3564fdb328a406a"
+    },
+    {
+      "at": "2026-11-23T23:50:52.341Z",
+      "step": "propose",
+      "decision": "partial",
+      "by": null,
+      "tx": "https://sepolia.etherscan.io/tx/0x33c0697f9688479b61e5a469a84d9b1dd87daed75411c61a73b9ff80c745ec85"
+    },
+    {
+      "at": "2026-11-23T23:51:04.624Z",
+      "step": "second",
+      "decision": null,
+      "by": null,
+      "tx": "https://sepolia.etherscan.io/tx/0x59eac2055a075e3ea0190728b06002e3868da26b87981f12398b47a03f4ba82d"
+    },
+    {
+      "at": "2026-11-23T23:51:04.888Z",
+      "step": "awaiting-independent",
+      "decision": null,
+      "by": null,
+      "tx": null
+    },
+    {
+      "at": "2026-11-24T05:32:12.000Z",
+      "step": "independent-second",
+      "decision": null,
+      "by": "0x98021b20Efdb7ae2C57366010a6E0fDE207b4466",
+      "tx": "https://sepolia.etherscan.io/tx/0x28d3ff9c941714af3f15ec1776dec0a218ba23f826359bea4636804035ea67de"
+    },
+    {
+      "at": "2026-11-27T06:14:01.022Z",
+      "step": "finalize",
+      "decision": null,
+      "by": null,
+      "toSupplier": "0.96",
+      "toBuyer": "0.04",
+      "bond": "0.50 from the supplier to the buyer",
+      "tx": "https://sepolia.etherscan.io/tx/0x78876aca83f2827a587d7dadafe1248fefa0839c3eb84b5aa9e39626f8d3a6c5"
+    }
+  ],
+  "rounds": [
+    {
+      "at": "2026-11-23T23:48:56.810Z",
+      "file": "receipts/trade-assurance/deal-0-2026-11-23T23-48-56-810Z.json",
+      "decision": "partial",
+      "why": "pay for the accepted units only: both reconcile miners and Praman put the shortfall at USD 496",
+      "payout": "960000",
+      "replayed": "partial",
+      "replayMatches": true,
+      "checks": {
+        "arrival": "pass",
+        "invoice": "review",
+        "sanctions": "pass"
+      },
+      "port": null,
+      "identity": null,
+      "signals": [
+        "0x464229e3c0df57cb32d13ee5df8454e72f76e36580db85558e1e623bb6e54550",
+        "0x1ad58712d13ea96ce84586baf75b25ca43f252aece62aebb2818cdcf75feac15",
+        "0xbd077f64f5815657d1d03078821aba08d0514b063e499ae57c628451f01fe042",
+        "0xbb0495e7d4d778a5cbbff3dbc17250ce58e82090dc4fc04fe31eb682e2d6b096",
+        "0x13daa86bc8db164d0a2e7a88f63b539e553488965eb91cf572129a02ea1d9efa",
+        "0xd29bf7bbc41e12d17b3a17853947008a5d8227ed75de09ff080ed15446bc8d35"
+      ],
+      "signalsOnNode": 6
+    },
+    {
+      "at": "2026-11-23T23:50:34.410Z",
+      "file": "receipts/trade-assurance/deal-0-2026-11-23T23-50-34-410Z.json",
+      "decision": "partial",
+      "why": "pay for the accepted units only: both reconcile miners and Praman put the shortfall at USD 496",
+      "payout": "960000",
+      "replayed": "partial",
+      "replayMatches": true,
+      "checks": {
+        "arrival": "pass",
+        "invoice": "review",
+        "sanctions": "pass"
+      },
+      "port": null,
+      "identity": null,
+      "signals": [
+        "0xe65167ca4a303d0124e60662b464a460f209a2aaf73f83e224cd5782d959d47e",
+        "0x3ad9c6c1a7819876831cd5cae5055c5e232d87e4be1ae7a98e8561f233386cfb",
+        "0xc44223f6c11ada8767e70324efee3fdb4f5abd7f342c233c8ed601f272d51a87",
+        "0x3bd84695537c1f0d0dcc5941eb7ebebfd6db581751b45bc2adf5279e8bcd6bd7",
+        "0x3b15d8f9e6addd738fddf4ab11410b91f66f93b3ea9cc4390f971dc7478009fd",
+        "0x070504401796375d59928f0fab77ba909d00f7a141132493f9f0671e05371c1e"
+      ],
+      "signalsOnNode": 6
+    }
+  ],
+  "replay": {
+    "rule": "lib/trade.mjs replay(): each round re-decided from the answers it stored",
+    "all_match": true
+  }
+}

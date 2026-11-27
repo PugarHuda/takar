@@ -1,0 +1,174 @@
+{
+  "title": "Trade Assurance case: TakarSettle4 deal 2",
+  "contract": "https://sepolia.etherscan.io/address/0x310275e6d66818e068245326bb9e398822304248",
+  "generated_at": "2026-11-27T07:33:28.175Z",
+  "order": "PO-7781: 1,000 stainless fasteners kits at USD 12.40, Tallinn -> Helsinki, delivered (DAP Helsinki West Harbour)",
+  "supplier": "Harju Metal OÜ (illustrative supplier)",
+  "vessel": "MEGASTAR",
+  "port": "Helsinki West Harbour",
+  "invoice": "INV-2026-1107: 1000 units x USD 12.40 = USD 12,400.00",
+  "terms_on_chain": "Pays the supplier when MEGASTAR is berthed at Helsinki West Harbour (two vessel miners on different operators), the invoice reconciles with the PO and goods-received note (two reconcile miners), and the supplier screens clear (two screening miners + Praman). Disagreement = review, not payment. Test USDC, scaled 1:12,400.",
+  "note": "Illustrative order (the supplier is not a real company; test USDC scaled 1:12,400). The ship, the miners, every paid answer and every transaction are real, on Ethereum Sepolia.",
+  "chain_now": {
+    "state": "open",
+    "amount": "1.00",
+    "approvals": 0,
+    "payerDisputed": false,
+    "payeeDisputed": false
+  },
+  "timeline": [
+    {
+      "at": "2026-11-27T06:53:04.869Z",
+      "step": "open",
+      "decision": null,
+      "by": null,
+      "tx": "https://sepolia.etherscan.io/tx/0x3cdc2a1745b533e4c8b6dc72c5669c7d33524f978a2ba2803a84e8d1794aceda"
+    },
+    {
+      "at": "2026-11-27T06:54:18.346Z",
+      "step": "review",
+      "decision": null,
+      "by": null,
+      "tx": null
+    },
+    {
+      "at": "2026-11-27T06:54:54.093Z",
+      "step": "review",
+      "decision": null,
+      "by": null,
+      "tx": null
+    },
+    {
+      "at": "2026-11-27T06:55:16.951Z",
+      "step": "hold",
+      "decision": null,
+      "by": null,
+      "tx": null
+    },
+    {
+      "at": "2026-11-27T07:31:11.407Z",
+      "step": "review",
+      "decision": null,
+      "by": null,
+      "tx": null
+    }
+  ],
+  "rounds": [
+    {
+      "at": "2026-11-27T06:54:18.344Z",
+      "file": "receipts/trade-assurance/deal-2-2026-11-27T06-54-18-344Z.json",
+      "decision": "review",
+      "why": "checks disagree or are unusable: invoice",
+      "payout": null,
+      "replayed": "review",
+      "replayMatches": true,
+      "checks": {
+        "arrival": "fail",
+        "invoice": "review",
+        "sanctions": "pass"
+      },
+      "port": null,
+      "identity": null,
+      "signals": [
+        "0x739a0b6eda5085706d93cc8f4eb470c977a02b3be6622ddf2346f63e01d3a175",
+        "0x48a3cef75271a0b7af2d5a1b69da54eccb4e672c998bb32dbdaad5f617449633",
+        "0x64808bf466a513cf610ba2e8bea7337219b78297f4782a0e53018674ae58675a",
+        "0x736b41cac6124318e5a456d258bac5fcebbf43f2c1b18470d04acea03564ef21",
+        "0x78d4eb4db0339ce454dfc909c21ccc47ab592e8ed4f3b0070d96f40c766495c9"
+      ],
+      "signalsOnNode": 5
+    },
+    {
+      "at": "2026-11-27T06:54:54.091Z",
+      "file": "receipts/trade-assurance/deal-2-2026-11-27T06-54-54-091Z.json",
+      "decision": "review",
+      "why": "checks disagree or are unusable: invoice",
+      "payout": null,
+      "replayed": "review",
+      "replayMatches": true,
+      "checks": {
+        "arrival": "fail",
+        "invoice": "review",
+        "sanctions": "pass"
+      },
+      "port": null,
+      "identity": null,
+      "signals": [
+        "0xd7ff558f19728473ecfdad0bf77166e9a8de836bc4a665d4820694cbc01dc752",
+        "0x91039251f29834d7d2ac88ad52c31cc97c2e5114d9d067f7f77d12d5f0ee910e",
+        "0x2198f3a2d23c10161614291f0af374666d0b5d3faff8ccfffaaa0156f68ea47f",
+        "0xc9e08dba4f4bc0adb5c8faebc57bd83f8644fbb09eedb59666ecb10f65983cca",
+        "0xbd6cf7074428c2b5a3db2fb5579a240e663249bea0fdf720e9eee139abcf6396",
+        "0x0c60beb81a1127693a1aabcaa5bde746f49267e230e257acec8cd54820cae3d2"
+      ],
+      "signalsOnNode": 6
+    },
+    {
+      "at": "2026-11-27T06:55:16.897Z",
+      "file": "receipts/trade-assurance/deal-2-2026-11-27T06-55-16-897Z.json",
+      "decision": "hold",
+      "why": "the ship is not berthed at Helsinki West Harbour yet (both vessel miners agree)",
+      "payout": null,
+      "replayed": "hold",
+      "replayMatches": true,
+      "checks": {
+        "arrival": "fail",
+        "invoice": "pass",
+        "sanctions": "pass"
+      },
+      "port": null,
+      "identity": null,
+      "signals": [
+        "0x6c69befaff099a47416524a71698081a2a88d0211c6b963fa2ff6d82b10613de",
+        "0xf50a2e61c5b9167a946cc5b615f8f073f31316fe74fa24d846cd19cb2c6222b3",
+        "0x30cce483231496fe8d1e85048e953fc8b5f247396b08792b7d28dc487e99d4d0",
+        "0xa66816f1e66a24c19a30fda9eddf52c610a486c58caaa4ed1c90f8e60f35b892",
+        "0x317af9b58938b6a41b331d3580165260a84601b241ad079f445a23a62d846570",
+        "0x4f907ed12ae1458642b04f255c4a467b5e871e413d6267db0b0398094d7bd19f"
+      ],
+      "signalsOnNode": 6
+    },
+    {
+      "at": "2026-11-27T07:31:11.405Z",
+      "file": "receipts/trade-assurance/deal-2-2026-11-27T07-31-11-405Z.json",
+      "decision": "review",
+      "why": "checks disagree or are unusable: invoice",
+      "payout": null,
+      "replayed": "review",
+      "replayMatches": true,
+      "checks": {
+        "arrival": "fail",
+        "invoice": "review",
+        "sanctions": "pass",
+        "identity": "pass",
+        "late": 0,
+        "ais": "fail"
+      },
+      "port": {
+        "source": "https://meri.digitraffic.fi/api/port-call/v1/port-calls?vesselName=MEGASTAR&from=2026-11-24T07:31:04.289Z",
+        "state": "away",
+        "lastAtd": "2026-11-27T05:17:00.000Z",
+        "nextEta": null,
+        "call": 3412466
+      },
+      "identity": {
+        "state": "unverified",
+        "lei": null
+      },
+      "signals": [
+        "0x451d3bfce1417f2cf03da8aae95e3f9bdb78cac838a1b4763d127555d3db2373",
+        "0x8dba0da8f9873ba960149d0eb783d451033ea6b140eefcace0897c24219866ad",
+        "0xd2800661fb19f12e69683551062bd2b9c526c4a4259cb2f1a4a25fb1ac9d2b03",
+        "0x63635b71d85edf1793cb53a74ed8ba493746e566784d3f88d5a02493d03c6021",
+        "0xc05d3898a0e5f7e71234a98ee6b0a9e607834be09d22c605e53dd7d5595ba1dd",
+        "0x55c6d8db8a8c6d7f061017dcfdca88f98d5c166078bfb84ec61c0caebbb810ae",
+        "0xf9abae3a19ca498b27cc967e1aa322d98f01da7fd3d607cc77be787a3d41183f"
+      ],
+      "signalsOnNode": 7
+    }
+  ],
+  "replay": {
+    "rule": "lib/trade.mjs replay(): each round re-decided from the answers it stored",
+    "all_match": true
+  }
+}
