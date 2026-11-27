@@ -91,3 +91,13 @@ cek `status` + `status --v5`; kalau approvals sudah cukup dan `finalizesAt` lewa
 ## 7. Perubahan terakhir (sudah live & di-push)
 
 `trade.html`: langkah "Review goes to the panel" hanya menampilkan proposal + alasan (blockquote) + tx, tanpa mengulang tabel bukti; "Waiting for the outside seat" membedakan review call (2 dari 3) dan deal yang di-dispute (TakarSettle5: 3 dari 3). Tidak ada perubahan lokal yang tertinggal.
+
+## 8. Update 27 Nov 2026 (Singapore, device baru)
+
+- Kasus 1 & 2 **settled** (finalize oleh burner `0xf95f…244e`). Deal 2 (v4) = order HOLD: buka 06:53 UTC, ronde HOLD 06:55 dan 07:39 (bukti lengkap), buyer `0x8Aa8…664d`, supplier = burner. Tidak bisa di-propose dari device ini (Rabby `0xdbE1…9e09` bukan resolver); buyer bisa reclaim mulai 4 Des.
+- Fitur baru di `lib/trade.mjs` + `scripts/trade-assurance.mjs`: port record Portnet (Digitraffic), identitas supplier 731005 (`--require-lei`), keterlambatan (`--deliver-by`), dokumen bertanda tangan EIP-712 (`sign --doc grn|invoice`, `terms.signedDocs`), `replay()` + `scripts/case-file.mjs --signals` (12 ronde, 73 signal OK).
+- Keeper: `scripts/keeper.mjs` + `.github/workflows/keeper.yml`. **Butuh secret** `TAKAR_KEEPER_KEY` (nilai = `FINALIZER_KEY` di `.env`): jalankan sendiri `gh secret set TAKAR_KEEPER_KEY`.
+- Video `media/takar-trade-assurance.mp4` (3:00) dari `video/make-trade.mjs` + komposisi `Trade`.
+- Discord terkirim (semua reply + quote): Ahmed DM (link + video), Praman DM (konfirmasi, koreksi $80k, 6164), thread Alibaba (final + video), Anthony DM (evidence yang dibutuhkan), Hellheim (cara sitasi). Menunggu balasan Anthony untuk integrasi Countersign.
+- anjoman.ai: login via Rabby sudah, form submit terisi tapi **belum di-submit** (cek dulu apakah sudah pernah submit dari device lama).
+- `.env` di device ini: AGENT_PRIVATE_KEY = Rabby testing; TAKAR_INVOICE_MINERS=7455,6164 dipakai karena 302 error 404.
