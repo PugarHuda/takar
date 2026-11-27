@@ -16,6 +16,9 @@ There are no dependencies, no API key and no wallet.
 | `miner_reputation` | Miners ranked from an open EAS schema of who was right, with Wilson intervals; filter by intent or attester. |
 | `miner_report` | Why a miner scored what it scored: per-epoch scores and failure reasons, spot checks, its paid record, and flags such as a 0 with no failure reason. |
 | `network_check` | `operators`: miners grouped by fee address, and per intent how many independent operators exist. `disagreement`: how often miners from different operators disagree, per intent. `signal`: a signal hash on the node, in Takar's ledger, and inside its EAS-anchored Merkle root. |
+| `trade_case` | Takar Trade Assurance case files (an Alibaba-style escrow on Sepolia with Praman Desk on the panel): the order, every step with its transaction, and every evidence round re-decided from its stored answers with the same rules. Omit `case` to list them. |
+| `verify_signal` | Fetch a Telegraph signal from the node and recompute its hash from the payload (keccak256 of canonical JSON). `matches: true` means the stored request and answer are what the signal committed to. Integrity, not authorship: the node does not sign. |
+| `verify_countersign` | Verify a Countersign shipment memo: recompute its digest, recover the EIP-191 signer against the pinned agent, and check it is about the PO you give. Returns release, hold or unusable. |
 
 Environment overrides: `TAKAR_RESOLVER`, `TELEGRAPH_NODE`, `TAKAR_SCORECARD`.
 

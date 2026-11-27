@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Takar as an MCP server: seven tools over stdio, no dependencies, no wallet.
+// Takar as an MCP server: ten tools over stdio, no wallet.
 //
 //   npx -y takar-mcp
 //   node mcp/server.mjs
@@ -122,7 +122,38 @@ const TOOLS = [
       },
     },
   },
+  {
+    name: "trade_case",
+    description:
+      "Takar Trade Assurance (an Alibaba-style escrow on Sepolia, with Praman Desk holding an independent seat): a deal's " +
+      "whole case file. The order, every step with its transaction, and every evidence round (ship in port by two AIS miners " +
+      "and the port's own record, the parties' signed documents, invoice reconciliation, sanctions, supplier identity) " +
+      "re-decided from its stored answers with the same rules, plus the deal's state on chain. Omit `case` to list the cases.",
+    inputSchema: { type: "object", properties: { case: { type: "string", description: 'Case id such as "v5-0" (TakarSettle5 deal 0) or "v4-1". Omit to list.' } } },
+  },
+  {
+    name: "verify_signal",
+    description:
+      "Check one Telegraph signal without trusting anyone: fetch it from the node and recompute its hash from the payload " +
+      "(keccak256 of canonical JSON). matches: true means the stored request and answer are exactly what the signal committed to. " +
+      "The node does not sign, so this proves integrity, not who produced the answer.",
+    inputSchema: { type: "object", required: ["hash"], properties: { hash: { type: "string", description: "Signal hash, 0x + 64 hex" } } },
+  },
+  {
+    name: "verify_countersign",
+    description:
+      "Verify a Countersign shipment report (another team's signed memo recommending release or hold): recompute its digest, " +
+      "recover the EIP-191 signer and compare it with Countersign's pinned agent, and optionally check it is about a given PO. " +
+      "Returns release, hold or unusable, the way Takar's escrow uses it (a hold sends a deal to review; a release never pays alone).",
+    inputSchema: { type: "object", required: ["memo"], properties: { memo: { type: "string", description: "Memo id, e.g. commodities-2026-11-23-3435f1fa" }, po: { type: "string", description: "Optional PO number the memo must be about" } } },
+  },
 ];
+
+/** lib/ inside the npm package (copied at pack time), or the repo's lib/ when run from the repo. */
+async function lib(name) {
+  const dir = (await import("node:fs")).existsSync(new URL(`./lib/${name}.mjs`, import.meta.url)) ? "./lib/" : "../lib/";
+  return import(`${dir}${name}.mjs`);
+}
 
 /**
  * Self-pay mode (TAKAR_PAYER_KEY set): the same rules run here and the caller's own Telegraph
@@ -211,6 +242,31 @@ const CALLS = {
     if (!["operators", "disagreement", "signal"].includes(v)) throw new Error("view must be operators, disagreement or signal");
     if (v === "signal" && !/^0x[0-9a-fA-F]{64}$/.test(String(hash ?? ""))) throw new Error("hash must be 0x and 64 hex characters");
     return getJson(`${SITE}/api/network?view=${v}${v === "signal" ? `&hash=${hash}` : ""}`);
+  },
+
+  async trade_case({ case: c } = {}) {
+    const base = `${SITE}/receipts/trade-assurance`;
+    if (!c) return { cases: await getJson(`${base}/cases.json`), page: `${SITE}/trade.html` };
+    if (!/^v[45]-\d{1,4}$/.test(String(c))) throw new Error('case must look like "v5-0" or "v4-1"');
+    return getJson(`${base}/case-${c}.json`);
+  },
+
+  async verify_signal({ hash }) {
+    const h = String(hash ?? "");
+    if (!/^0x[0-9a-fA-F]{64}$/.test(h)) throw new Error("hash must be 0x and 64 hex characters");
+    const s = await getJson(`${NODE}/engine/v1/signal/${h}`);
+    const { signalHashOf } = await lib("trade");
+    const recomputed = signalHashOf(s.payload);
+    return { hash: h, on_node: true, recomputed, matches: recomputed.toLowerCase() === h.toLowerCase(), intent: s.payload?.intent_id, miner: s.payload?.miner_slug, paid_by: s.payload?.wallet_address, at: s.payload?.timestamp, request: s.payload?.request, response: s.payload?.response, note: "integrity of the committed payload; the node does not sign" };
+  },
+
+  async verify_countersign({ memo, po }) {
+    const id = String(memo ?? "");
+    if (!/^[\w.-]{3,120}$/.test(id)) throw new Error("memo must be a Countersign memo id");
+    const { memoVerdict, memoUrl } = await lib("countersign");
+    const m = await getJson(memoUrl(id));
+    const { computed, ...v } = memoVerdict(m, { po: po ? String(po) : undefined });
+    return { memo: memoUrl(id), ...v };
   },
 
   async miner_report({ id }) {

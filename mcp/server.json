@@ -1,17 +1,23 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.PugarHuda/takar",
-  "description": "Resolve real-world events with verbatim quotes, verify a forecast scorecard, rank Telegraph miners.",
-  "repository": { "url": "https://github.com/PugarHuda/takar", "source": "github", "subfolder": "mcp" },
-  "version": "0.5.0",
+  "description": "Second opinions on Telegraph answers, Trade Assurance case files, and signal and Countersign verification.",
+  "repository": {
+    "url": "https://github.com/PugarHuda/takar",
+    "source": "github",
+    "subfolder": "mcp"
+  },
+  "version": "0.6.0",
   "websiteUrl": "https://github.com/PugarHuda/takar/tree/main/mcp",
   "packages": [
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "takar-mcp",
-      "version": "0.5.0",
-      "transport": { "type": "stdio" }
+      "version": "0.6.0",
+      "transport": {
+        "type": "stdio"
+      }
     }
   ]
 }

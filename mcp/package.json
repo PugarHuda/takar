@@ -1,7 +1,7 @@
 {
   "name": "takar-mcp",
-  "version": "0.5.0",
-  "description": "A second opinion for any Telegraph intent: two independent miners, chosen by an open on-chain record of who was right. Plus event resolution with verbatim quotes and a signed forecast scorecard. No key, no wallet.",
+  "version": "0.6.0",
+  "description": "A second opinion for any Telegraph intent, plus Takar Trade Assurance case files you can re-check: signals recomputed from their payloads and Countersign memos verified. No key, no wallet.",
   "keywords": [
     "mcp",
     "modelcontextprotocol",
@@ -38,6 +38,6 @@
     "ethers": "^6.13.0"
   },
   "scripts": {
-    "prepack": "node -e \"const fs=require('fs');fs.mkdirSync('lib',{recursive:true});for(const f of ['second','telegraph','x402'])fs.copyFileSync('../lib/'+f+'.mjs','lib/'+f+'.mjs')\""
+    "prepack": "node -e \"const fs=require('fs');fs.mkdirSync('lib',{recursive:true});for(const f of ['second','telegraph','x402','trade','countersign'])fs.copyFileSync('../lib/'+f+'.mjs','lib/'+f+'.mjs')\""
   }
 }
