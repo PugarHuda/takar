@@ -101,3 +101,14 @@ cek `status` + `status --v5`; kalau approvals sudah cukup dan `finalizesAt` lewa
 - Discord terkirim (semua reply + quote): Ahmed DM (link + video), Praman DM (konfirmasi, koreksi $80k, 6164), thread Alibaba (final + video), Anthony DM (evidence yang dibutuhkan), Hellheim (cara sitasi). Menunggu balasan Anthony untuk integrasi Countersign.
 - anjoman.ai: login via Rabby sudah, form submit terisi tapi **belum di-submit** (cek dulu apakah sudah pernah submit dari device lama).
 - `.env` di device ini: AGENT_PRIVATE_KEY = Rabby testing; TAKAR_INVOICE_MINERS=7455,6164 dipakai karena 302 error 404.
+
+## 9. Update 27 Nov sore (lanjutan)
+
+- `.env` di device ini: `AGENT_PRIVATE_KEY` = key agent asli `0x39D2…5Cd7E` (resolver 1, dari device Indonesia). `RABBY_TEST_KEY` = Rabby `0xdbE1…9e09` (kursi kedua Takar di TakarSettle6). Resolver 2 lama `0x9cBD…` masih di device Indonesia.
+- **TakarSettle6** `0x789844606ca3c8693E2cEbf2e1B065314F1E8013` (Sourcify exact): arrival record, `confirm`, `autoRelease` (`--v6`, `open --accept-window`, `arrive`, `confirm`, `release`). Deal 1 = buyer confirm (settled). Deal 0 = menunggu MEGASTAR sandar (cron sesi 23:56 WIB `arrive`, 00:43 WIB release + Solana settle).
+- **Solana leg** `scripts/solana-leg.mjs` (devnet, keypair di `.solana/`, git-ignored): lock/settle mengikuti keputusan Sepolia, memo berisi case + tx + sha256 berkas kasus. v5-0 dan v6-1 sudah di-mirror; v6-0 terkunci.
+- Fitur lain: penalti telat (`--late-penalty`, v5/v6), sertifikat inspeksi (`--inspector`, `sign --doc inspection`), Countersign (`--countersign <memo>`), hash signal dihitung ulang (73/73), takar-mcp 0.6.0 (3 tool baru; **belum di-publish**, butuh `npm login`).
+- Keeper (GitHub Actions) pakai wallet khusus `0x6C19…e0F8`, secret `TAKAR_KEEPER_KEY` sudah di-set; juga auto-release v6.
+- anjoman: "Takar" (Agents, Live) + "Takar Trade Assurance" (Commerce, in review).
+- X: thread 2126225108406767789. Akun Premium → post berikutnya satu post panjang (setelah video v2).
+- Deal 2 (v4, HOLD): cron 23:47 WIB → kalau sandar, propose PAY dan tunggu second Praman (Praman sudah diberi tahu).
