@@ -16,6 +16,14 @@ const DEALS = [
   { v: 6, address: "0x789844606ca3c8693E2cEbf2e1B065314F1E8013" }, // arrival record + automatic release
 ];
 const LOG = "receipts/trade-assurance/log.jsonl";
+// The public /api/second-opinion pays from this Telegraph escrow account. On 25 Nov it ran dry and every call
+// came back "insufficient" (Chrysolite reported it); the keeper now tops it up before that happens.
+const PUBLIC_PAYER = "0x9cBDD9Cac5382d2cfe65669e5045C2D3dee6327E";
+const DIAMOND = "0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b", TUSDC = "0xcc194e1a843B658526D0D5C431f670028582Ae17";
+const TOPUP_BELOW = 2_000_000n, TOPUP = 10_000_000n; // test USDC, 6 dp
+
+/** Top up when the escrow's available balance is under the floor. Pure, so it is tested. */
+export const needsTopUp = (available) => BigInt(available ?? 0) < TOPUP_BELOW;
 const STATES = ["open", "proposed", "settled", "reclaimed"];
 
 /** Due = proposed, threshold met (finalizesAt set) and the window passed. Pure, so it is tested. */
@@ -69,6 +77,20 @@ async function main() {
     }
   }
   if (!n) console.log("nothing due");
+  // Public payer escrow (the node's ledger, read over HTTP).
+  const acct = await fetch(`https://devnode.telegraphprotocol.com/v1/ledger/account/${PUBLIC_PAYER}`).then((r) => r.json()).catch(() => null);
+  if (acct && needsTopUp(acct.available)) {
+    console.log(`public payer escrow low: ${ethers.formatUnits(acct.available, 6)} available`);
+    if (send && process.env.TAKAR_KEEPER_KEY) {
+      signer ??= new ethers.Wallet(process.env.TAKAR_KEEPER_KEY, provider);
+      const u = new ethers.Contract(TUSDC, ["function mint(address,uint256)", "function approve(address,uint256) returns (bool)"], signer);
+      await (await u.mint(signer.address, TOPUP)).wait(); // test token, public mint
+      await (await u.approve(DIAMOND, TOPUP)).wait();
+      const t = await new ethers.Contract(DIAMOND, ["function depositUSDCFor(address,uint256)"], signer).depositUSDCFor(PUBLIC_PAYER, TOPUP); await t.wait();
+      appendFileSync("receipts/ledger-topups.jsonl", JSON.stringify({ at: new Date().toISOString(), for: PUBLIC_PAYER, amount: String(TOPUP), by: signer.address, tx: t.hash, why: "keeper: available under 2 USDC" }) + "\n");
+      console.log(`  topped up 10 test USDC  https://sepolia.etherscan.io/tx/${t.hash}`);
+    }
+  }
 }
 
 if (process.argv[1]?.endsWith("keeper.mjs")) await main();
