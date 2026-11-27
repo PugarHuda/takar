@@ -1,0 +1,176 @@
+{
+  "id": 2,
+  "at": "2026-11-27T07:39:14.044Z",
+  "ledger": "GRN-5530 for PO-7781 and INV-2026-1107: 1000 units x USD 12.40 = USD 12,400.00, goods received 1000 units in good order",
+  "decision": "hold",
+  "why": "the ship is not berthed at Helsinki West Harbour yet (both vessel miners and the port's own record agree)",
+  "payout": null,
+  "checks": {
+    "arrival": "fail",
+    "invoice": "pass",
+    "sanctions": "pass",
+    "identity": "pass",
+    "documents": "pass",
+    "late": 0,
+    "ais": "fail"
+  },
+  "vessel": [
+    {
+      "miner": 8818818,
+      "operator": "0xa0f6dc5e53185691f900397745f08f99f9ffb9e1",
+      "signal": "0xc948e7d448c0a37a357d8d15b64068ff71ad50866a1bbc84c6e33762933a8a84",
+      "result": {
+        "vessel": "MEGASTAR",
+        "speed_knots": 4.9,
+        "latitude": 59.445773333333335,
+        "longitude": 24.772121666666667,
+        "course_deg": 212.4,
+        "observed_at": "2026-11-27T07:28:07.415Z"
+      },
+      "fieldStatus": {
+        "vessel": "ok",
+        "speed_knots": "ok",
+        "latitude": "ok",
+        "longitude": "ok",
+        "course_deg": "ok",
+        "observed_at": "ok"
+      },
+      "berth": {
+        "state": "away",
+        "km": 78.68,
+        "knots": 4.9,
+        "ageMin": 11
+      }
+    },
+    {
+      "miner": 70068,
+      "operator": "0x8b224783fe5b3c52b7db0cb9b1754f8812b75287",
+      "signal": "0xb75773203bdd2e23a20c7d9af89048c88e88b8ef60345e4e3733888892972f10",
+      "result": {
+        "vessel": "MEGASTAR",
+        "speed_knots": 0,
+        "latitude": 59.444185,
+        "longitude": 24.770202,
+        "course_deg": 157.3,
+        "observed_at": "2026-11-27T07:36:36.491Z"
+      },
+      "fieldStatus": {
+        "vessel": "ok",
+        "speed_knots": "ok",
+        "latitude": "ok",
+        "longitude": "ok",
+        "course_deg": "ok",
+        "observed_at": "ok"
+      },
+      "berth": {
+        "state": "away",
+        "km": 78.87,
+        "knots": 0,
+        "ageMin": 3
+      }
+    }
+  ],
+  "oneBroadcast": false,
+  "port": {
+    "source": "https://meri.digitraffic.fi/api/port-call/v1/port-calls?vesselName=MEGASTAR&from=2026-11-24T07:39:01.102Z",
+    "state": "away",
+    "lastAtd": "2026-11-27T05:17:00.000Z",
+    "nextEta": null,
+    "call": 3412466
+  },
+  "invoice": [
+    {
+      "miner": 7455,
+      "operator": "0x8b224783fe5b3c52b7db0cb9b1754f8812b75287",
+      "signal": "0x15a09fcc82ca145a1022ad5390d3da17bfc44bad6d2271eeaf36360d1de42cf6",
+      "result": {
+        "reconciled": true,
+        "discrepancy": null,
+        "explanation": "Reconciled. The invoice total of USD 12,400.00 matches the ledger amount for PO-7781, and the quantity matches at 1,000 units received in good order. The invoice reference INV-2026-1107 is consistent with ledger entry GRN-5530, with no discrepancies identified."
+      },
+      "fieldStatus": {
+        "reconciled": "ok",
+        "discrepancy": "missing",
+        "explanation": "ok"
+      }
+    },
+    {
+      "miner": 6164,
+      "operator": "0x98021b20efdb7ae2c57366010a6e0fde207b4466",
+      "signal": "0xba4a35132bce19cab66cce2c31e88bf83272d4a09f054e72f48b68b4c93e54b2",
+      "result": {
+        "reconciled": true,
+        "discrepancy": 0,
+        "explanation": "RECONCILIATION STATUS: RECONCILED. Invoice INV-2026-1107 total (USD 12400.00) ties out perfectly to authorized PO PO-7781 line-item equation (1000 units x USD 12.40 = USD 12400.00)."
+      },
+      "fieldStatus": {
+        "reconciled": "ok",
+        "discrepancy": "ok",
+        "explanation": "ok"
+      }
+    }
+  ],
+  "sanctions": {
+    "takar": "agree",
+    "screens": [
+      {
+        "miner": "302",
+        "signal": "0xf438cc198e070e3c366f3119e275dade89e028ae2c6fe9a044c37043dea6c51d",
+        "matched": false
+      },
+      {
+        "miner": "774921",
+        "signal": "0xb8e67bdc6a5014d02db203f5bb320930adb9b2a063b1b0c42eded7e623308487",
+        "matched": false
+      }
+    ],
+    "praman": {
+      "screened": true,
+      "name": "Harju Metal OÜ (illustrative supplier)",
+      "matched": false,
+      "near_miss": false,
+      "review_required": false,
+      "verdict": "CLEAR",
+      "confidence": 1,
+      "matches": [],
+      "potential_matches": [],
+      "lists": [
+        "US Treasury OFAC SDN"
+      ],
+      "match_score": 0,
+      "query_name": "Harju Metal OÜ (illustrative supplier)",
+      "match_found": false,
+      "match_count": 0,
+      "near_miss_count": 0,
+      "sdn_list_size": 19629,
+      "sdn_last_loaded": "2026-11-27T07:33:43.494Z",
+      "source": "US Treasury OFAC SDN List (treasury.gov/ofac)",
+      "source_url": "https://sanctionssearch.ofac.treas.gov/",
+      "summary": "VERDICT: NO SANCTIONS MATCH (CLEAN COUNTERPARTY). Screening of \"Harju Metal OÜ (illustrative supplier)\" against the US Treasury OFAC SDN list and Consolidated Sanctions List (19629 indexed records) returned zero sanctions matches. Counterparty is clear for standard commercial transaction processing as of 2026-11-27T07:39:01.944Z."
+    }
+  },
+  "identity": {
+    "miner": 731005,
+    "signal": "0x9d388864823948804ad2f4d5107ca03ca926a9ab62b8ab512ba18903179525c6",
+    "state": "unverified",
+    "why": "no registered entity found for Harju Metal OÜ"
+  },
+  "documents": {
+    "state": "signed",
+    "grnSigner": "0x8Aa8e7aF1758f4239a07D78B523205a3BA08664d",
+    "invoiceSigner": "0xf95f01c73b3ce68473B0FF48643367fD5443244e",
+    "acceptedUnits": 1000,
+    "invoicedUnits": 1000,
+    "note": "GRN-5530 for PO-7781 and INV-2026-1107: 1000 units x USD 12.40 = USD 12,400.00, goods received 1000 units in good order"
+  },
+  "reconcile": null,
+  "signals": [
+    "0xc948e7d448c0a37a357d8d15b64068ff71ad50866a1bbc84c6e33762933a8a84",
+    "0xb75773203bdd2e23a20c7d9af89048c88e88b8ef60345e4e3733888892972f10",
+    "0x15a09fcc82ca145a1022ad5390d3da17bfc44bad6d2271eeaf36360d1de42cf6",
+    "0xba4a35132bce19cab66cce2c31e88bf83272d4a09f054e72f48b68b4c93e54b2",
+    "0xf438cc198e070e3c366f3119e275dade89e028ae2c6fe9a044c37043dea6c51d",
+    "0xb8e67bdc6a5014d02db203f5bb320930adb9b2a063b1b0c42eded7e623308487",
+    "0x9d388864823948804ad2f4d5107ca03ca926a9ab62b8ab512ba18903179525c6"
+  ]
+}

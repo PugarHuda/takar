@@ -46,7 +46,7 @@ for (const [k, steps] of deals) {
   const chain = { state: STATES[Number(d.state)], amount: usdc(d.amount), approvals: Number(d.approvals), payerDisputed: d.payerDisputed, payeeDisputed: d.payeeDisputed };
 
   const rounds = [];
-  for (const s of steps.filter((x) => x.file && x.action !== "panel-propose")) {
+  for (const s of steps.filter((x) => x.file && /^(hold|review|propose)$/.test(x.action))) {
     if (!existsSync(s.file)) continue;
     const r = JSON.parse(readFileSync(s.file, "utf8"));
     const x = replay(r, t, PORT, d.amount);

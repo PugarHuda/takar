@@ -1,0 +1,19 @@
+{
+  "type": "Invoice",
+  "domain": {
+    "name": "Takar Trade Assurance",
+    "version": "1",
+    "chainId": 11155111,
+    "verifyingContract": "0x310275e6D66818E068245326bB9e398822304248"
+  },
+  "message": {
+    "dealId": 2,
+    "invoice": "INV-2026-1107",
+    "po": "PO-7781",
+    "units": 1000,
+    "unitPriceCents": 1240,
+    "totalCents": 1240000
+  },
+  "signer": "0xf95f01c73b3ce68473B0FF48643367fD5443244e",
+  "signature": "0x9b867489c53fe781f6af111ca3169e94f0ef4919673dc8abf0d92ce3e5f419ba1ddc74c7ec9e2e708dfd9ddff467c3f57bb42922b28d04bb03cfef0a39fba2d61b"
+}

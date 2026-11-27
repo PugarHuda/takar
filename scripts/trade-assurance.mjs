@@ -28,7 +28,8 @@ import { ethers } from "ethers";
 import { ask, ranked, NODE, USDC } from "../lib/telegraph.mjs";
 import { secondOpinion } from "../lib/second.mjs";
 import { pramanTool } from "../lib/praman.mjs";
-import { berth, pair, decide, payable, portCall, arrivalWith, sameFix, lateBy, identity } from "../lib/trade.mjs";
+import { existsSync } from "node:fs";
+import { berth, pair, decide, payable, portCall, arrivalWith, sameFix, lateBy, identity, verifyDocs, DOC_TYPES, docDomain } from "../lib/trade.mjs";
 
 const provider = new ethers.JsonRpcProvider(process.env.RPC ?? "https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true });
 const r1 = new ethers.Wallet(process.env.AGENT_PRIVATE_KEY, provider); // proposes, pays for the evidence
@@ -80,6 +81,8 @@ async function rawOf(signal) {
   return r?.ok ? (await r.json()).payload?.response ?? {} : {};
 }
 const supplierName = (s) => String(s ?? "").replace(/\(.*?\)/g, "").trim();
+const docFile = (id, kind) => `${DIR}/doc-v${V5 ? 5 : 4}-${id}-${kind}.json`;
+const loadDocs = (id) => Object.fromEntries(["grn", "invoice"].filter((k) => existsSync(docFile(id, k))).map((k) => [k, JSON.parse(readFileSync(docFile(id, k), "utf8"))]));
 
 async function operators() {
   const list = await fetch(`${NODE}/api/miners`).then((x) => x.json());
@@ -123,14 +126,16 @@ async function evidence(t) {
   const pramanClear = typeof praman.matched === "boolean" && praman.sdn_last_loaded ? !praman.matched : null;
   const sanctions = takarClear === true && pramanClear === true ? "pass" : takarClear === false && pramanClear === false ? "fail" : "review";
   const screens = so.answers.filter((a) => a.usable).map((a) => ({ miner: a.miner?.id, signal: a.signal, matched: a.result?.matched }));
-  const checks = { arrival, invoice: inv, sanctions, identity: identityCheck, late };
+  // Signed documents gate payment only when the terms ask for them (signedDocs); always shown.
+  const documents = t.signedDocs ? (t.documents?.state === "signed" ? "pass" : "review") : "pass";
+  const checks = { arrival, invoice: inv, sanctions, identity: identityCheck, documents, late };
   let [decision, why] = decide(checks, t.port);
   let payout = decision === "pay" ? t.amount : decision === "refund" ? 0n : null, reconcile = null;
   // Quantity deals: an invoice that does not match the goods-received note is paid for the accepted
   // part, when both miners and Praman's three-way reconciliation agree on the shortfall.
   // Quantity deals are decided on the shortfall figure, not the reconciled flag (miners phrase a
   // partial acceptance differently). Only goods that arrived from a clear supplier can be paid at all.
-  if (t.qty && arrival === "pass" && sanctions === "pass" && identityCheck === "pass" && !late) {
+  if (t.qty && arrival === "pass" && sanctions === "pass" && identityCheck === "pass" && documents === "pass" && !late) {
     reconcile = await pramanTool("reconcile_invoice", { invoice_id: t.qty.invoiceId, po_number: t.qty.po, billed_qty: t.qty.billed, accepted_qty: t.qty.accepted, unit_price: t.qty.unitPrice, tax_rate_pct: 0, currency: "USD" }).catch((e) => ({ error: e.message }));
     const p = payable(t.amount, t.qty.billed * t.qty.unitPrice, invoice.map((x) => x.result?.discrepancy), reconcile?.details?.delta_total);
     if (p !== null) [decision, why, payout] = ["partial", `pay for the accepted units only: both reconcile miners and Praman put the shortfall at USD ${Math.abs(Number(invoice[0].result.discrepancy))}`, p];
@@ -138,7 +143,7 @@ async function evidence(t) {
     else [decision, why, payout] = ["review", "the miners and Praman do not agree on what was accepted", null];
   }
   const signals = [...vessel, ...invoice, ...screens, who].map((x) => x.signal).filter(Boolean);
-  return { decision, why, payout: payout === null ? null : String(payout), checks: { ...checks, ais }, vessel, oneBroadcast, port: portRecord, invoice, sanctions: { takar: so.verdict, screens, praman }, identity: who, reconcile, signals: [...new Set(signals)] };
+  return { decision, why, payout: payout === null ? null : String(payout), checks: { ...checks, ais }, vessel, oneBroadcast, port: portRecord, invoice, sanctions: { takar: so.verdict, screens, praman }, identity: who, documents: t.documents ?? null, reconcile, signals: [...new Set(signals)] };
 }
 
 /** Takar's second key re-reads every signal on the node before backing: each must be an answer to
@@ -228,9 +233,12 @@ if (cmd === "deploy") {
   const t = JSON.parse(d.terms);
   if (t.kind !== "trade") throw new Error(`deal ${id} is not a trade deal`);
   if (STATES[Number(d.state)] !== "open" && !(STATES[Number(d.state)] === "proposed" && d.finalizesAt === 0n)) throw new Error(`deal ${id} is ${STATES[Number(d.state)]}${d.finalizesAt ? " with its window open" : ""}`);
+  // The parties' signed documents, when present: the buyer's signed note is what the miners reconcile.
+  const documents = verifyDocs(loadDocs(id), { contract: s.target, dealId: id, payer: d.payer, payee: d.payee });
   // A buyer's dispute can come with a new goods-received note; it replaces the ledger for this round.
-  const e = await evidence({ ...t, amount: d.amount, ledger: arg("ledger", t.ledger) });
-  const round = { id, at: new Date().toISOString(), ledger: arg("ledger", t.ledger), ...e };
+  const ledger = arg("ledger", documents.state === "signed" ? documents.note : t.ledger);
+  const e = await evidence({ ...t, amount: d.amount, ledger, documents });
+  const round = { id, at: new Date().toISOString(), ledger, ...e };
   mkdirSync(DIR, { recursive: true });
   const file = `${DIR}/deal-${id}-${round.at.replace(/[:.]/g, "-")}.json`;
   writeFileSync(file, JSON.stringify(round, null, 2));
@@ -275,6 +283,25 @@ if (cmd === "deploy") {
   console.log(`deal ${id}: panel proposal ${arg("decision")} on ${ev.signals.length} signals; waiting for Praman's seat\n  hash ${hash}\n  propose ${etherscan(p.hash)}`);
   log({ action: "panel-propose", id, decision: arg("decision"), payout: String(payout), reason, file, hash, signals: ev.signals, tx: p.hash });
   log({ action: "awaiting-independent", id, required: Number(await s.required(id)) });
+} else if (cmd === "sign") {
+  // sign --id N --doc grn [--accepted n] [--note "..."]   the buyer signs what it received
+  // sign --id N --doc invoice                             the supplier signs what it billed
+  // Numbers come from the deal's terms on chain, so a document cannot drift from the order.
+  const id = Number(arg("id")), kind = arg("doc");
+  const d = await settle(r1).deal(id);
+  const t = JSON.parse(d.terms);
+  const po = t.order.match(/PO-\d+/)?.[0], inv = t.invoice.match(/INV-[\d-]+/)?.[0];
+  const units = Number(t.invoice.match(/(\d+) units/)?.[1]), cents = Math.round(Number(t.invoice.match(/USD ([\d.]+)/)?.[1]) * 100);
+  if (!po || !inv || !units || !cents) throw new Error("cannot read PO, invoice, units and price from the terms");
+  const [w, type, message] = kind === "grn"
+    ? [buyer, "GoodsReceipt", { dealId: id, po, invoice: inv, acceptedUnits: Number(arg("accepted", t.qty?.accepted ?? units)), rejectedUnits: units - Number(arg("accepted", t.qty?.accepted ?? units)), note: arg("note", t.ledger) }]
+    : kind === "invoice" ? [supplier, "Invoice", { dealId: id, invoice: inv, po, units, unitPriceCents: cents, totalCents: units * cents }] : [];
+  if (!w) throw new Error("--doc grn|invoice (grn needs TAKAR_BUYER_KEY)");
+  if (w.address.toLowerCase() !== (kind === "grn" ? d.payer : d.payee).toLowerCase()) throw new Error(`${kind === "grn" ? "buyer" : "supplier"} key ${w.address} is not this deal's ${kind === "grn" ? "payer" : "payee"}`);
+  const signature = await w.signTypedData(docDomain(settle(r1).target), { [type]: DOC_TYPES[type] }, message);
+  writeFileSync(docFile(id, kind), JSON.stringify({ type, domain: docDomain(settle(r1).target), message, signer: w.address, signature }, null, 2) + "\n");
+  console.log(`deal ${id}: ${type} signed by ${w.address} -> ${docFile(id, kind)}`);
+  log({ action: "sign", id, doc: kind, signer: w.address, file: docFile(id, kind) });
 } else if (cmd === "dispute") {
   const id = Number(arg("id")), who = arg("as");
   const w = who === "buyer" ? buyer : who === "supplier" ? supplier : null;

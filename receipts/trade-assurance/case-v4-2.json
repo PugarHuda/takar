@@ -1,7 +1,7 @@
 {
   "title": "Trade Assurance case: TakarSettle4 deal 2",
   "contract": "https://sepolia.etherscan.io/address/0x310275e6d66818e068245326bb9e398822304248",
-  "generated_at": "2026-11-27T07:33:28.175Z",
+  "generated_at": "2026-11-27T07:40:30.548Z",
   "order": "PO-7781: 1,000 stainless fasteners kits at USD 12.40, Tallinn -> Helsinki, delivered (DAP Helsinki West Harbour)",
   "supplier": "Harju Metal OÜ (illustrative supplier)",
   "vessel": "MEGASTAR",
@@ -48,6 +48,27 @@
     {
       "at": "2026-11-27T07:31:11.407Z",
       "step": "review",
+      "decision": null,
+      "by": null,
+      "tx": null
+    },
+    {
+      "at": "2026-11-27T07:36:11.354Z",
+      "step": "sign",
+      "decision": null,
+      "by": null,
+      "tx": null
+    },
+    {
+      "at": "2026-11-27T07:36:12.101Z",
+      "step": "sign",
+      "decision": null,
+      "by": null,
+      "tx": null
+    },
+    {
+      "at": "2026-11-27T07:39:14.046Z",
+      "step": "hold",
       "decision": null,
       "by": null,
       "tx": null
@@ -163,6 +184,45 @@
         "0xc05d3898a0e5f7e71234a98ee6b0a9e607834be09d22c605e53dd7d5595ba1dd",
         "0x55c6d8db8a8c6d7f061017dcfdca88f98d5c166078bfb84ec61c0caebbb810ae",
         "0xf9abae3a19ca498b27cc967e1aa322d98f01da7fd3d607cc77be787a3d41183f"
+      ],
+      "signalsOnNode": 7
+    },
+    {
+      "at": "2026-11-27T07:39:14.044Z",
+      "file": "receipts/trade-assurance/deal-2-2026-11-27T07-39-14-044Z.json",
+      "decision": "hold",
+      "why": "the ship is not berthed at Helsinki West Harbour yet (both vessel miners and the port's own record agree)",
+      "payout": null,
+      "replayed": "hold",
+      "replayMatches": true,
+      "checks": {
+        "arrival": "fail",
+        "invoice": "pass",
+        "sanctions": "pass",
+        "identity": "pass",
+        "documents": "pass",
+        "late": 0,
+        "ais": "fail"
+      },
+      "port": {
+        "source": "https://meri.digitraffic.fi/api/port-call/v1/port-calls?vesselName=MEGASTAR&from=2026-11-24T07:39:01.102Z",
+        "state": "away",
+        "lastAtd": "2026-11-27T05:17:00.000Z",
+        "nextEta": null,
+        "call": 3412466
+      },
+      "identity": {
+        "state": "unverified",
+        "lei": null
+      },
+      "signals": [
+        "0xc948e7d448c0a37a357d8d15b64068ff71ad50866a1bbc84c6e33762933a8a84",
+        "0xb75773203bdd2e23a20c7d9af89048c88e88b8ef60345e4e3733888892972f10",
+        "0x15a09fcc82ca145a1022ad5390d3da17bfc44bad6d2271eeaf36360d1de42cf6",
+        "0xba4a35132bce19cab66cce2c31e88bf83272d4a09f054e72f48b68b4c93e54b2",
+        "0xf438cc198e070e3c366f3119e275dade89e028ae2c6fe9a044c37043dea6c51d",
+        "0xb8e67bdc6a5014d02db203f5bb320930adb9b2a063b1b0c42eded7e623308487",
+        "0x9d388864823948804ad2f4d5107ca03ca926a9ab62b8ab512ba18903179525c6"
       ],
       "signalsOnNode": 7
     }

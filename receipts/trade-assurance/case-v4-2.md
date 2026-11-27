@@ -17,6 +17,9 @@ _Illustrative order (the supplier is not a real company; test USDC scaled 1:12,4
 | 2026-11-27 06:54 | review |  |  |
 | 2026-11-27 06:55 | hold |  |  |
 | 2026-11-27 07:31 | review |  |  |
+| 2026-11-27 07:36 | sign |  |  |
+| 2026-11-27 07:36 | sign |  |  |
+| 2026-11-27 07:39 | hold |  |  |
 
 ## Evidence rounds, re-decided
 
@@ -26,5 +29,6 @@ _Illustrative order (the supplier is not a real company; test USDC scaled 1:12,4
 | 2026-11-27 06:54 | review | review ✓ | fail / review / pass | - | - | 6 (6 on the node) |
 | 2026-11-27 06:55 | hold | hold ✓ | fail / pass / pass | - | - | 6 (6 on the node) |
 | 2026-11-27 07:31 | review | review ✓ | fail / review / pass | away | unverified | 7 (7 on the node) |
+| 2026-11-27 07:39 | hold | hold ✓ | fail / pass / pass | away | unverified | 7 (7 on the node) |
 
 Replay: every round re-decides to what was recorded. Re-run: `node scripts/case-file.mjs --signals`. Each signal: `https://devnode.telegraphprotocol.com/engine/v1/signal/<hash>`.

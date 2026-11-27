@@ -1,0 +1,19 @@
+{
+  "type": "GoodsReceipt",
+  "domain": {
+    "name": "Takar Trade Assurance",
+    "version": "1",
+    "chainId": 11155111,
+    "verifyingContract": "0x310275e6D66818E068245326bB9e398822304248"
+  },
+  "message": {
+    "dealId": 2,
+    "po": "PO-7781",
+    "invoice": "INV-2026-1107",
+    "acceptedUnits": 1000,
+    "rejectedUnits": 0,
+    "note": "GRN-5530 for PO-7781 and INV-2026-1107: 1000 units x USD 12.40 = USD 12,400.00, goods received 1000 units in good order"
+  },
+  "signer": "0x8Aa8e7aF1758f4239a07D78B523205a3BA08664d",
+  "signature": "0x8786c4a681d4a5509dcb84eaee6792a6b28e79e5b76ad1183964276f9521c4ec4c6746a1953ed4dce8b1290b6703764ffeb4a647d63795c1e1567448e006d8c81b"
+}
