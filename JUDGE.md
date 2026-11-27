@@ -39,7 +39,7 @@ Several Season II entries ask more than one miner. The difference is in what cou
 | Money | Not involved | Escrow pays only when the evidence agrees; two resolvers, a bond on disputes, a panel of three on escalation |
 | The provider side | Not tested | Our own miner answers from official series by code, measured on unseen markets, and known-answer tests of the top miners go on chain |
 
-Offline: `npm ci && npm test` (622 checks; `npm run coverage`: 90.5% of lines, 79.2% of branches, 91.0% of functions in lib/, lowest in the network and payment layers telegraph.mjs and x402.mjs, which the paid ledger exercises instead), `cd onchain && forge test` (25). Everything below is detail.
+Offline: `npm ci && npm test` (674 checks; `npm run coverage`: 90.4% of lines, 79.5% of branches, 90.2% of functions in lib/, lowest in the network and payment layers telegraph.mjs and x402.mjs, which the paid ledger exercises instead), `cd onchain && forge test` (25). Everything below is detail.
 
 ---
 
@@ -84,7 +84,7 @@ curl -X POST https://takar-telegraph.vercel.app/api/second-opinion -H 'content-t
 
 ## Check it in five minutes, with no wallet
 
-1. `npm install && npm test` runs 622 offline checks: the payment signers (exact and escrow), the fleet, the outcome resolver, the scorecard, Settle, Trade Assurance and the Mission 05 note. `cd onchain && forge install foundry-rs/forge-std --no-git && forge test` runs the 29 contract tests. No network, no funds.
+1. `npm install && npm test` runs 674 offline checks: the payment signers (exact and escrow), the fleet, the outcome resolver, the scorecard, Settle, Trade Assurance and the Mission 05 note. `cd onchain && forge install foundry-rs/forge-std --no-git && forge test` runs the 35 contract tests. No network, no funds.
 2. On the site, press **Verify the signature in this browser** under the scorecard. It checks the Ed25519 signature against the key pinned in the page, with WebCrypto.
 3. On the site, use **Ask the outcome miner yourself**. It calls the miner's own endpoint, with no wallet.
 4. Open `receipts/ledger.jsonl` and pick a line with `"status":"paid"`.
