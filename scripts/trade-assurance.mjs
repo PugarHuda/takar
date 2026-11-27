@@ -29,6 +29,7 @@ import { ask, ranked, NODE, USDC } from "../lib/telegraph.mjs";
 import { secondOpinion } from "../lib/second.mjs";
 import { pramanTool } from "../lib/praman.mjs";
 import { existsSync } from "node:fs";
+import { memoVerdict, memoUrl } from "../lib/countersign.mjs";
 import { berth, pair, decide, payable, portCall, arrivalWith, sameFix, lateBy, identity, verifyDocs, DOC_TYPES, docDomain } from "../lib/trade.mjs";
 
 const provider = new ethers.JsonRpcProvider(process.env.RPC ?? "https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true });
@@ -128,14 +129,16 @@ async function evidence(t) {
   const screens = so.answers.filter((a) => a.usable).map((a) => ({ miner: a.miner?.id, signal: a.signal, matched: a.result?.matched }));
   // Signed documents gate payment only when the terms ask for them (signedDocs); always shown.
   const documents = t.signedDocs ? (t.documents?.state === "signed" ? "pass" : "review") : "pass";
-  const checks = { arrival, invoice: inv, sanctions, identity: identityCheck, documents, late };
+  // A Countersign memo, when given for this round, can hold payment (HOLD, unsigned, another order) but never pays alone.
+  const countersign = t.countersign ? (t.countersign.state === "release" ? "pass" : "review") : "pass";
+  const checks = { arrival, invoice: inv, sanctions, identity: identityCheck, documents, countersign, late };
   let [decision, why] = decide(checks, t.port);
   let payout = decision === "pay" ? t.amount : decision === "refund" ? 0n : null, reconcile = null;
   // Quantity deals: an invoice that does not match the goods-received note is paid for the accepted
   // part, when both miners and Praman's three-way reconciliation agree on the shortfall.
   // Quantity deals are decided on the shortfall figure, not the reconciled flag (miners phrase a
   // partial acceptance differently). Only goods that arrived from a clear supplier can be paid at all.
-  if (t.qty && arrival === "pass" && sanctions === "pass" && identityCheck === "pass" && documents === "pass" && !late) {
+  if (t.qty && arrival === "pass" && sanctions === "pass" && identityCheck === "pass" && documents === "pass" && countersign === "pass" && !late) {
     reconcile = await pramanTool("reconcile_invoice", { invoice_id: t.qty.invoiceId, po_number: t.qty.po, billed_qty: t.qty.billed, accepted_qty: t.qty.accepted, unit_price: t.qty.unitPrice, tax_rate_pct: 0, currency: "USD" }).catch((e) => ({ error: e.message }));
     const p = payable(t.amount, t.qty.billed * t.qty.unitPrice, invoice.map((x) => x.result?.discrepancy), reconcile?.details?.delta_total);
     if (p !== null) [decision, why, payout] = ["partial", `pay for the accepted units only: both reconcile miners and Praman put the shortfall at USD ${Math.abs(Number(invoice[0].result.discrepancy))}`, p];
@@ -143,7 +146,7 @@ async function evidence(t) {
     else [decision, why, payout] = ["review", "the miners and Praman do not agree on what was accepted", null];
   }
   const signals = [...vessel, ...invoice, ...screens, who].map((x) => x.signal).filter(Boolean);
-  return { decision, why, payout: payout === null ? null : String(payout), checks: { ...checks, ais }, vessel, oneBroadcast, port: portRecord, invoice, sanctions: { takar: so.verdict, screens, praman }, identity: who, documents: t.documents ?? null, reconcile, signals: [...new Set(signals)] };
+  return { decision, why, payout: payout === null ? null : String(payout), checks: { ...checks, ais }, vessel, oneBroadcast, port: portRecord, invoice, sanctions: { takar: so.verdict, screens, praman }, identity: who, documents: t.documents ?? null, countersign: t.countersign ?? null, reconcile, signals: [...new Set(signals)] };
 }
 
 /** Takar's second key re-reads every signal on the node before backing: each must be an answer to
@@ -237,7 +240,13 @@ if (cmd === "deploy") {
   const documents = verifyDocs(loadDocs(id), { contract: s.target, dealId: id, payer: d.payer, payee: d.payee });
   // A buyer's dispute can come with a new goods-received note; it replaces the ledger for this round.
   const ledger = arg("ledger", documents.state === "signed" ? documents.note : t.ledger);
-  const e = await evidence({ ...t, amount: d.amount, ledger, documents });
+  // --countersign <memo id>: Countersign's signed shipment report for this order, verified here
+  // (digest and signature recomputed, signer pinned, PO must match the deal's).
+  const memo = arg("countersign");
+  const countersign = memo ? await fetch(memoUrl(memo), { signal: AbortSignal.timeout(20_000) }).then((r) => r.json())
+    .then((m) => ({ url: memoUrl(memo), ...memoVerdict(m, { po: t.order.match(/PO-[\w-]+/)?.[0] }) }))
+    .catch((err) => ({ url: memoUrl(memo), state: "unusable", why: err.message })) : null;
+  const e = await evidence({ ...t, amount: d.amount, ledger, documents, countersign });
   const round = { id, at: new Date().toISOString(), ledger, ...e };
   mkdirSync(DIR, { recursive: true });
   const file = `${DIR}/deal-${id}-${round.at.replace(/[:.]/g, "-")}.json`;
