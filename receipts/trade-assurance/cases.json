@@ -22,5 +22,21 @@
     "state": "open",
     "rounds": 5,
     "replay_all_match": true
+  },
+  {
+    "case": "case-v6-0",
+    "contract": "0x789844606ca3c8693e2cebf2e1b065314f1e8013",
+    "id": 0,
+    "state": "open",
+    "rounds": 0,
+    "replay_all_match": true
+  },
+  {
+    "case": "case-v6-1",
+    "contract": "0x789844606ca3c8693e2cebf2e1b065314f1e8013",
+    "id": 1,
+    "state": "settled",
+    "rounds": 0,
+    "replay_all_match": true
   }
 ]

@@ -1,0 +1,33 @@
+{
+  "title": "Trade Assurance case: TakarSettle6 deal 0",
+  "contract": "https://sepolia.etherscan.io/address/0x789844606ca3c8693e2cebf2e1b065314f1e8013",
+  "generated_at": "2026-11-27T08:24:40.834Z",
+  "order": "PO-7781: 1,000 stainless fasteners kits at USD 12.40, Tallinn -> Helsinki, delivered (DAP Helsinki West Harbour)",
+  "supplier": "Harju Metal OÜ (illustrative supplier)",
+  "vessel": "MEGASTAR",
+  "port": "Helsinki West Harbour",
+  "invoice": "INV-2026-1107: 1000 units x USD 12.40 = USD 12,400.00",
+  "terms_on_chain": "Pays the supplier when MEGASTAR is berthed at Helsinki West Harbour (two vessel miners on different operators), the invoice reconciles with the PO and goods-received note (two reconcile miners), and the supplier screens clear (two screening miners + Praman). Disagreement = review, not payment. Test USDC, scaled 1:12,400. After arrival is recorded the buyer has 30 minutes to confirm or object; silence releases the payment (automatic confirmation).",
+  "note": "Illustrative order (the supplier is not a real company; test USDC scaled 1:12,400). The ship, the miners, every paid answer and every transaction are real, on Ethereum Sepolia.",
+  "chain_now": {
+    "state": "open",
+    "amount": "1.00",
+    "approvals": 0,
+    "payerDisputed": false,
+    "payeeDisputed": false
+  },
+  "timeline": [
+    {
+      "at": "2026-11-27T08:23:30.323Z",
+      "step": "open",
+      "decision": null,
+      "by": null,
+      "tx": "https://sepolia.etherscan.io/tx/0x631fbc4d02aca37edceb4f9a910d94ec6cf4d8b6e2cb7982899fed50146a46d0"
+    }
+  ],
+  "rounds": [],
+  "replay": {
+    "rule": "lib/trade.mjs replay(): each round re-decided from the answers it stored",
+    "all_match": true
+  }
+}
