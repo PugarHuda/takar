@@ -1,0 +1,104 @@
+[
+  {
+    "id": "t01",
+    "kind": "title",
+    "title": "Takar Trade Assurance",
+    "subtitle": "Two disputed orders, settled by independent checks",
+    "vo": "This is Takar Trade Assurance. A buyer locks the payment in a contract, and the supplier is paid only when independent specialists, bought through Telegraph, agree the conditions are met. Here are two cases, run end to end on Ethereum Sepolia."
+  },
+  {
+    "id": "t02",
+    "kind": "card",
+    "title": "What has to be true before money moves",
+    "bullets": [
+      "Ship arrived: two AIS miners, different operators",
+      "Goods accepted: two reconcile miners, on invoice, PO and receipt",
+      "Supplier clear: two sanctions screens plus Praman's OFAC check",
+      "Any disagreement: REVIEW. Any dispute: all three resolvers"
+    ],
+    "vo": "Three things have to be true. The ship arrived, by two vessel miners on different operators. The goods were accepted, by two invoice miners, checked against the purchase order and the buyer's goods-received note. And the supplier is clear on sanctions. If the checks disagree, nothing is paid. If either side disputes, the contract needs all three resolvers."
+  },
+  {
+    "id": "t03",
+    "kind": "clip",
+    "clip": "trade-c1a.webm",
+    "from": 0,
+    "caption": "Case 1 · MEGASTAR, Tallinn → Helsinki",
+    "vo": "Case one. The ferry MEGASTAR carries a thousand fastener kits from Tallinn to Helsinki, and the buyer locks the payment. In the first rounds the ship is still at sea, so arrival fails and nothing can be paid. One invoice miner also flags the goods-received note, so the round goes to review."
+  },
+  {
+    "id": "t04",
+    "kind": "clip",
+    "clip": "trade-c1b.webm",
+    "from": 0,
+    "caption": "Ship in port, invoice miners disagree",
+    "vo": "Then the ship berths. Both vessel miners put it in port, and the buyer's note accepts all one thousand units. But one invoice miner keeps objecting, first to missing references, then to the invoice and the receipt carrying different dates. Takar does not pay through a disagreement."
+  },
+  {
+    "id": "t05",
+    "kind": "clip",
+    "clip": "trade-c1c.webm",
+    "from": 0,
+    "caption": "REVIEW → panel → paid",
+    "vo": "So the review goes to a panel. Takar proposes pay, with its reason written in the open. Takar's own second key steps aside on its own review call, so the decision needs Praman's seat, run by another team. Praman checked the evidence and backed it, and after the dispute window the contract paid the supplier."
+  },
+  {
+    "id": "t05h",
+    "kind": "clip",
+    "clip": "trade-c3.webm",
+    "from": 0,
+    "caption": "HOLD · ship still at sea",
+    "vo": "A third order on the same route shows a hold. The ship is sixty kilometres out at sea, and both vessel miners agree it has not arrived. The invoice and supplier checks pass, but arrival is a condition, so nothing is paid and the buyer's money stays locked. Two earlier rounds that day went to review, because one invoice miner returned errors, and those rounds stay on the record too."
+  },
+  {
+    "id": "t06",
+    "kind": "clip",
+    "clip": "trade-c2a.webm",
+    "from": 0,
+    "caption": "Case 2 · invoiced 1,000, accepted 960",
+    "vo": "Case two is a quantity dispute. The supplier invoices a thousand units, and the buyer's note accepts nine hundred and sixty. Two reconcile miners and Praman each put the shortfall at four hundred and ninety-six dollars, so Takar proposes a split: pay for the accepted units only."
+  },
+  {
+    "id": "t07",
+    "kind": "clip",
+    "clip": "trade-c2b.webm",
+    "from": 0,
+    "caption": "Supplier disputes, bond posted",
+    "vo": "The supplier disputes and posts a bond. All one thousand were shipped, pay in full. On this contract any dispute means all three resolvers must agree. Takar re-checks on fresh evidence, and both Takar seats back the same split."
+  },
+  {
+    "id": "t08",
+    "kind": "clip",
+    "clip": "trade-c2c.webm",
+    "from": 0,
+    "caption": "3 of 3 → split settlement",
+    "vo": "Praman's independent seat backs it too. The contract settles. Point nine six to the supplier, point zero four back to the buyer, and the supplier's bond goes to the buyer, because the disputed payout stood."
+  },
+  {
+    "id": "t09",
+    "kind": "clip",
+    "clip": "trade-tx.webm",
+    "from": 0,
+    "caption": "Settlement on Sepolia",
+    "vo": "Every step is a transaction on Sepolia, and every check carries the Telegraph signal it was bought with, so anyone can replay the decision."
+  },
+  {
+    "id": "t10",
+    "kind": "card",
+    "title": "What happened to the money",
+    "bullets": [
+      "Case 1: REVIEW → panel with Praman → 1.00 to the supplier",
+      "Case 2: dispute → 3 of 3 → 0.96 / 0.04, bond to the buyer",
+      "Case 3: ship at sea → HOLD, nothing paid",
+      "No single miner, and no single company, could move it"
+    ],
+    "vo": "Three orders. One held, one paid after review, and one split after a dispute, all in test USDC. No single miner's answer, and no single company's key, could move the money."
+  },
+  {
+    "id": "t11",
+    "kind": "title",
+    "title": "Takar",
+    "subtitle": "takar-telegraph.vercel.app/trade.html",
+    "vo": "Every receipt and every transaction is on the page."
+  }
+]

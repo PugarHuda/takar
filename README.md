@@ -38,6 +38,7 @@ Reviewers: start at [JUDGE.md](JUDGE.md), which opens with what each app does **
 | Known-answer test of the top miners | `node --env-file=.env scripts/trap-run.mjs` puts six settled markets to the top-ranked EVENT_OUTCOME miners and ours; `scripts/attest.mjs --send` writes the grades to the reputation schema. 22 Nov: three miners 6/6, one top-4 miner failed every ask (`receipts/trap-2026-11-22.json`). |
 | Gold Rush dossier for a Queensland mine | [goldrush.html](https://takar-telegraph.vercel.app/goldrush.html) (8 mines, PDF/Markdown/signed JSON; tenure, native title category, real-terms gold price), `GET /api/dossier?mine=`. |
 | Is our log still append-only | `GET /api/network?view=audit` recomputes every ledger root anchored on EAS; `?view=miners` gives answered and complete rates per miner from what Takar paid for. |
+| Trade Assurance (Alibaba-style, with Praman) | [trade.html](https://takar-telegraph.vercel.app/trade.html) and the [3-minute video](https://takar-telegraph.vercel.app/media/takar-trade-assurance.mp4): HOLD while the ship is at sea, REVIEW → panel → paid, and a supplier dispute settled as a 0.96 / 0.04 split on [TakarSettle5](https://sepolia.etherscan.io/address/0xa6D0482cBF29FE43fB644F33f7a020766AF4A42B) with the bond going to the buyer. `scripts/trade-assurance.mjs`, rules in `lib/trade.mjs`. |
 | Escrow that needs two resolvers and a dispute bond | [TakarSettle v3](https://sepolia.etherscan.io/address/0xf977660CD28704Fa97D8f6B72835646F62E2502b) and v4 with escalation to the full panel ([0x2A61…2aBd](https://sepolia.etherscan.io/address/0x2A615f7D3E52e9Ee68AB8CaaE3385bcbACCB2aBd)), `scripts/settle3.mjs [--v4]`. Source verified on [Sourcify](https://repo.sourcify.dev/11155111/0x2A615f7D3E52e9Ee68AB8CaaE3385bcbACCB2aBd). |
 
 ### Before your agent acts: ten lines
@@ -161,7 +162,7 @@ It runs on free OpenRouter models, falling back to the next model in the list wh
 - Only one STORM_ALERT miner (PREFLIGHT) gave a usable answer for Indonesian places on 21 Nov, so drones that need two agreeing miners hold. That is the rule working, and a gap in the network.
 - Takar Outcome answers few of the scorecard's Manifold questions: it never guesses, and Wikipedia does not settle vague ones.
 - Ranking data comes from the node's public leaderboard, which only lists intents scored in a recent epoch. Takar walks back up to 12 epochs.
-- Settle v3's two resolver keys are both Takar's today; the contract accepts any set, so a partner can hold the second seat in a new instance. The contract cannot check on chain that a signal is Telegraph's.
+- Settle v3's two resolver keys are both Takar's. On v4/v5 (the Trade Assurance panel) the third seat is Praman Desk's own wallet, and a contested deal needs it; the other two seats are still Takar's. Panels are fixed at deployment, so a new partner means a new instance. The contract cannot check on chain that a signal is Telegraph's.
 - The Gold Rush dossiers read goldrush-qld-history's structured record by a direct call to its registered endpoint (the paid Telegraph answer carries text only) and check which figures appear in the paid answer.
 - Testnet only. Test USDC has no value, and nothing here is paid production usage.
 

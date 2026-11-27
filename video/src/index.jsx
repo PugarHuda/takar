@@ -1,13 +1,14 @@
 import React from "react";
 import { registerRoot, Composition, AbsoluteFill, Sequence, OffthreadVideo, Audio, staticFile, useCurrentFrame, interpolate, spring, useVideoConfig } from "remotion";
 import scenes from "../src-scenes.json";
+import tradeScenes from "../src-trade-scenes.json";
 
 const FPS = 30;
 const PAD = 0.8; // seconds of air after each voice line
 const C = { ink: "#E3EAEE", muted: "#9AABB5", bg: "#141C21", sheet: "#1B252B", gold: "#E0B341", go: "#5BBF86", rule: "#2C3A42" };
 const font = "'Segoe UI', system-ui, sans-serif";
 const len = (s) => Math.ceil((s.voSec + PAD) * FPS);
-const TOTAL = scenes.reduce((a, s) => a + len(s), 0);
+const total = (list) => list.reduce((a, s) => a + len(s), 0);
 
 function FadeIn({ children, delay = 0 }) {
   const f = useCurrentFrame();
@@ -66,7 +67,7 @@ function Clip({ s }) {
   );
 }
 
-function Takar() {
+function Takar({ scenes }) {
   let at = 0;
   return (
     <AbsoluteFill style={{ background: C.bg }}>
@@ -84,4 +85,9 @@ function Takar() {
   );
 }
 
-registerRoot(() => <Composition id="Takar" component={Takar} durationInFrames={TOTAL} fps={FPS} width={1920} height={1080} />);
+registerRoot(() => (
+  <>
+    <Composition id="Takar" component={Takar} defaultProps={{ scenes }} durationInFrames={total(scenes)} fps={FPS} width={1920} height={1080} />
+    <Composition id="Trade" component={Takar} defaultProps={{ scenes: tradeScenes }} durationInFrames={total(tradeScenes)} fps={FPS} width={1920} height={1080} />
+  </>
+));
