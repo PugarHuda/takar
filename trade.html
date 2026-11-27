@@ -81,7 +81,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<
 const when = (t) => new Date(t).toISOString().replace("T", " ").slice(0, 16) + " UTC";
 const tag = (k) => `<span class="tag ${esc(k)}">${esc(k)}</span>`;
 const usdc = (micro) => (Number(micro) / 1e6).toFixed(2);
-const WHO = { "panel-propose": "Review goes to the panel", open: "Buyer locks the payment", hold: "Evidence round", review: "Evidence round", propose: "Evidence round", second: "Takar's second key backs it", declined: "Takar's second key declines", "awaiting-independent": "Waiting for the outside seat", dispute: "Dispute", finalize: "Settled" };
+const WHO = { "panel-propose": "Review goes to the panel", open: "Buyer locks the payment", hold: "Evidence round", review: "Evidence round", propose: "Evidence round", second: "Takar's second key backs it", declined: "Takar's second key declines", "awaiting-independent": "Waiting for the outside seat", "independent-second": "Praman's seat backs it", dispute: "Dispute", finalize: "Settled" };
 
 function round(r) {
   const v = r.vessel.map((x) => `<tr><td>Ship arrived</td><td>${esc(x.miner)}</td><td>${esc(x.berth.state)}${x.berth.km != null ? `, ${x.berth.km} km from the berth, ${x.berth.knots} kn` : x.berth.why ? `: ${esc(x.berth.why)}` : ""}</td><td>${sig(x.signal)}</td></tr>`);
@@ -127,7 +127,8 @@ function round(r) {
         ? `<p>The deal is contested, so the decision needs Praman's seat to back it after its own check. The contract requires ${r.required} of 3 approvals${r.required === 3 ? " (on TakarSettle5 any dispute makes all three required); both Takar seats have backed it" : ""}.</p>`
         : `<p>This is a review call, so Takar's second key steps aside. The contract requires ${r.required} of 3 approvals: Takar's proposal plus Praman's seat, after its own check.</p>`;
       if (r.action === "dispute") body = `<p>The ${esc(r.by)} disputed and posted the bond${r.reason ? `: “${esc(r.reason)}”` : ""}. The proposal is cleared and cannot be proposed again on the same evidence. ${tx(r.tx)}</p>`;
-      if (r.action === "finalize") body = r.toSupplier != null ? `<p>Supplier received <b>${usdc(r.toSupplier)} USDC</b>, buyer refunded <b>${usdc(r.toBuyer)} USDC</b>; bonds returned or forfeited per the contract. ${tx(r.tx)}</p>` : `<p>${r.met ? "Supplier paid" : "Buyer refunded"}. ${tx(r.tx)}</p>`;
+      if (r.action === "independent-second") body = `<p>Praman's resolver (${esc(r.by.slice(0, 6))}…${esc(r.by.slice(-4))}, run by another team) checked the evidence itself and backed the same decision. The approvals reached the contract's threshold and the dispute window opened. ${tx(r.tx)}</p>`;
+      if (r.action === "finalize") body = r.toSupplier != null ? `<p>Supplier received <b>${usdc(r.toSupplier)} USDC</b>, buyer refunded <b>${usdc(r.toBuyer)} USDC</b>${r.bond ? `; the ${esc(r.bond.from)}'s bond of <b>${usdc(r.bond.amount)} USDC</b> went to the ${esc(r.bond.to)}, because ${esc(r.bond.reason)}` : "; bonds returned or forfeited per the contract"}. ${tx(r.tx)}</p>` : `<p>${r.met ? "Supplier paid" : "Buyer refunded"}. ${tx(r.tx)}</p>`;
       out.push(`<li><h3>${esc(WHO[r.action] ?? r.action)}</h3><div class="when">${when(r.at)}</div>${body}</li>`);
     }
     html.push(`<section><h2>${esc(title)}</h2><p class="note">Supplier: ${esc(t.supplier)}. Ship: ${esc(t.vessel)}, to ${esc(t.port)}. Invoice: “${esc(t.invoice)}”. Terms on chain: “${esc(t.text)}”</p><ol class="time">${out.join("")}</ol></section>`);

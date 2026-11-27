@@ -1,4 +1,6 @@
-# Handoff — Takar Trade Assurance (24 Nov 2026, 07:30 WIB)
+# Handoff — Takar Trade Assurance (diperbarui 27 Nov 2026, 13:15 WIB)
+
+> **Update 27 Nov:** kedua kasus SETTLED. Praman second 24 Nov 05:32 UTC (tx 0x28d3ff9c… v5, 0x976d78bb… v4). Finalize 27 Nov oleh wallet burner `0xf95f01c73b3ce68473B0FF48643367fD5443244e` (finalize permissionless; key di `.env` sebagai `FINALIZER_KEY`, diisi faucet Google Cloud): kasus 1 `0x82aa3076…dd32` (supplier 1.0), kasus 2 `0x78876aca…a6c5` (0.96 / 0.04, bond supplier 0.5 → buyer). `.env` lama TIDAK ada di device ini (key resolver tertinggal di device Indonesia); `vercel env pull` mengembalikan nilai kosong.
 
 Melanjutkan kerja di device lain. Semua angka di bawah dicek on-chain pada 24 Nov 2026 ~07:10 WIB.
 
@@ -80,7 +82,7 @@ cek `status` + `status --v5`; kalau approvals sudah cukup dan `finalizesAt` lewa
 ## 6. Belum selesai / TODO
 
 1. ~~Rapikan langkah panel di trade.html~~ — selesai, live & di-push (commit caa315d).
-2. Tunggu Praman second → finalize kedua kasus → DM Ahmed link tx.
+2. ~~Tunggu Praman second → finalize kedua kasus → DM Ahmed link tx.~~ — selesai 27 Nov.
 3. Kasus 1 belum punya ronde **HOLD** (kapal di laut, semua cek lain beres). Tambahkan saat MEGASTAR berlayar lagi (sandar ±1 jam sebelum berangkat; putaran Tallinn–Helsinki ±4 jam).
 4. Video walkthrough kedua kasus, dibuat setelah settlement.
 5. Heads-up ke operator miner 6164 (INVOICE_LEDGER_RECONCILE) sudah disebut di DM Praman: ledger total dibaca sebagai harga satuan (USD 12.40).
