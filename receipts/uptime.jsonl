@@ -43,3 +43,6 @@
 {"at":"2026-11-27T02:23:32.098Z","event":"Will Bitcoin reach $90000 in 2024","status":200,"outcome":"yes","right":true,"ms":811}
 {"at":"2026-11-27T02:23:32.098Z","event":"Did TSG Hoffenheim win the match against FSV Mainz 05 on 2024-12-01 in the Bundesliga?","status":200,"outcome":"no","right":true,"ms":961}
 {"at":"2026-11-27T02:23:32.098Z","event":"Did the US Federal Reserve cut its policy rate at the September 18 2024 FOMC meeting?","status":200,"outcome":"yes","right":true,"ms":741}
+{"at":"2026-11-27T11:22:39.380Z","event":"Will Bitcoin reach $90000 in 2024","status":200,"outcome":"yes","right":true,"ms":733}
+{"at":"2026-11-27T11:22:39.380Z","event":"Did TSG Hoffenheim win the match against FSV Mainz 05 on 2024-12-01 in the Bundesliga?","status":200,"outcome":"no","right":true,"ms":925}
+{"at":"2026-11-27T11:22:39.380Z","event":"Did the US Federal Reserve cut its policy rate at the September 18 2024 FOMC meeting?","status":200,"outcome":"yes","right":true,"ms":687}
