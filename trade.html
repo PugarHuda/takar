@@ -65,6 +65,12 @@ code { font-size:.85rem; overflow-wrap:anywhere; }
 
   <div id="cases"><section><p class="note">Loading the cases…</p></section></div>
 
+  <section aria-labelledby="sol-h">
+    <h2 id="sol-h">The same decisions, paid on Solana</h2>
+    <p class="note">A Solana settlement leg (devnet, an SPL test-USDC): the buyer locks the deal's amount with Takar's Solana escrow, and nothing moves until the Sepolia contract has settled. Then the leg pays exactly what the contract paid, to the supplier and back to the buyer, and each transfer carries a memo with the case, the Sepolia settlement transaction and the sha256 of the case file. The decision stays with the panel on Sepolia; the Solana side is custodial (Takar's escrow key) until a Solana program can check the Sepolia outcome itself. Code: <a href="https://github.com/PugarHuda/takar/blob/main/scripts/solana-leg.mjs">scripts/solana-leg.mjs</a>.</p>
+    <div class="scroll" id="solana"><p class="note">Loading…</p></div>
+  </section>
+
   <section aria-labelledby="tf-h">
     <h2 id="tf-h">In trade-finance terms</h2>
     <div class="grid">
@@ -159,6 +165,15 @@ function round(r) {
     html.push(`<section><h2>${esc(title)}</h2><p class="note">Supplier: ${esc(t.supplier)}. Ship: ${esc(t.vessel)}, to ${esc(t.port)}. Invoice: “${esc(t.invoice)}”. Terms on chain: “${esc(t.text)}”</p><p class="note">Case file, with every round re-decided from its stored answers: <a href="receipts/trade-assurance/case-v${VER(k)}-${k.split(":")[1]}.md">Markdown</a> · <a href="receipts/trade-assurance/case-v${VER(k)}-${k.split(":")[1]}.json">JSON</a></p><ol class="time">${out.join("")}</ol></section>`);
   }
   document.getElementById("cases").innerHTML = html.join("") || "<section><p>No cases yet.</p></section>";
+  // Solana leg: one row per case, lock and settlement with their devnet transactions.
+  const sol = await fetch("receipts/solana/log.jsonl", { cache: "no-store" }).then((r) => (r.ok ? r.text() : "")).catch(() => "");
+  const srows = sol.split("\n").filter(Boolean).map((l) => JSON.parse(l)).filter((r) => r.case);
+  const ex = (s) => `<a href="https://explorer.solana.com/tx/${esc(s)}?cluster=devnet">${esc(s.slice(0, 8))}…</a>`;
+  const byCase = [...new Set(srows.map((r) => r.case))].map((c) => {
+    const lock = srows.find((r) => r.case === c && r.action === "lock"), st = srows.find((r) => r.case === c && r.action === "settle");
+    return `<tr><td><a href="receipts/trade-assurance/case-${esc(c)}.md">${esc(c)}</a></td><td>${lock ? `${usdc(lock.amount)} ${ex(lock.sig)}` : "-"}</td><td>${st ? `supplier <b>${usdc(st.toSupplier)}</b>, buyer <b>${usdc(st.toBuyer)}</b> ${Object.values(st.sigs).map(ex).join(" ")}` : "waiting for the Sepolia settlement"}</td><td>${st ? tx(st.sepoliaTx) : "-"}</td></tr>`;
+  });
+  document.getElementById("solana").innerHTML = byCase.length ? `<table><tr><th>Case</th><th>Locked on Solana</th><th>Paid on Solana</th><th>Sepolia settlement it mirrors</th></tr>${byCase.join("")}</table>` : `<p class="note">No Solana leg yet.</p>`;
 })().catch((e) => { document.getElementById("cases").innerHTML = `<section><p>Could not load the cases (${esc(e.message)}).</p></section>`; });
 </script>
 </body>
