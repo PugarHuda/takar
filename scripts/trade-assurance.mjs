@@ -271,6 +271,11 @@ if (cmd === "deploy") {
   } else if (live.payerDisputed || live.payeeDisputed) {
     console.log(`  contested deal: Takar's second key steps aside; the decision needs the independent seat (Praman) to back it after its own check`);
     log({ action: "awaiting-independent", id, required: Number(await s.required(id)) });
+  } else if (!(await s.isResolver(r2.address))) {
+    // Takar's second key is not on this machine (it stayed on another device on 27 Nov): rather than
+    // fail half-way, the proposal waits for the other seat that can back it, Praman's.
+    console.log(`  Takar's second key is not available here; the proposal waits for Praman's seat (${Number(await s.required(id))} of 3)`);
+    log({ action: "awaiting-independent", id, required: Number(await s.required(id)), note: "second key unavailable" });
   } else {
     const b = await backBy(r2, id, payout, d.amount, e.signals, t);
     console.log(b.declined ? `  resolver 2 declined: ${b.declined}` : `  seconded by resolver 2 after re-reading every signal; dispute window open 10 min\n  second ${etherscan(b.tx)}`);

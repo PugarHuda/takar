@@ -139,7 +139,7 @@ function round(r) {
       if (r.action === "panel-propose") body = `<p>Takar proposed ${tag(r.decision)} on the ${r.signals.length} signals of the evidence round above, with its reason in the open:</p><blockquote>${esc(r.reason)}</blockquote><p>Takar's second key does not back its own review call, so the dispute window opens only if Praman's seat agrees after its own check. ${tx(r.tx)}</p>`;
       if (r.action === "second") body =`<p>Re-read every signal on the node, then backed the same decision. Dispute window open. ${tx(r.tx)}</p>`;
       if (r.action === "declined") body = `<p>${esc(r.declined)}</p>`;
-      if (r.action === "awaiting-independent") body = steps.some((s) => s.action === "dispute")
+      if (r.action === "awaiting-independent") body = r.note ? `<p>Takar's second key was not on the machine that ran this round, so instead of it the proposal waits for Praman's seat. The contract requires ${r.required} of 3 approvals.</p>` : steps.some((s) => s.action === "dispute")
         ? `<p>The deal is contested, so the decision needs Praman's seat to back it after its own check. The contract requires ${r.required} of 3 approvals${r.required === 3 ? " (on TakarSettle5 any dispute makes all three required); both Takar seats have backed it" : ""}.</p>`
         : `<p>This is a review call, so Takar's second key steps aside. The contract requires ${r.required} of 3 approvals: Takar's proposal plus Praman's seat, after its own check.</p>`;
       if (r.action === "dispute") body = `<p>The ${esc(r.by)} disputed and posted the bond${r.reason ? `: “${esc(r.reason)}”` : ""}. The proposal is cleared and cannot be proposed again on the same evidence. ${tx(r.tx)}</p>`;
