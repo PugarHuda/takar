@@ -14,7 +14,7 @@ const NODE = process.env.TELEGRAPH_NODE ?? "https://devnode.telegraphprotocol.co
 const RPC = process.env.RPC ?? "https://ethereum-sepolia-rpc.publicnode.com";
 const DIR = "receipts/trade-assurance";
 const V4 = "0x310275e6D66818E068245326bB9e398822304248";
-const CONTRACTS = { [V4.toLowerCase()]: 4, "0xa6d0482cbf29fe43fb644f33f7a020766af4a42b": 5 };
+const CONTRACTS = { [V4.toLowerCase()]: 4, "0xa6d0482cbf29fe43fb644f33f7a020766af4a42b": 5, "0x789844606ca3c8693e2cebf2e1b065314f1e8013": 6 };
 const PORT = { lat: 60.1497, lon: 24.9155, radiusKm: 1.5, locode: "FIHEL", area: "LS" };
 const STATES = ["open", "proposed", "settled", "reclaimed"];
 const tx = (h) => (h ? `https://sepolia.etherscan.io/tx/${h}` : null);

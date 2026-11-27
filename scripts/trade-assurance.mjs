@@ -34,14 +34,17 @@ import { berth, pair, decide, payable, portCall, arrivalWith, sameFix, lateBy, l
 
 const provider = new ethers.JsonRpcProvider(process.env.RPC ?? "https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true });
 const r1 = new ethers.Wallet(process.env.AGENT_PRIVATE_KEY, provider); // proposes, pays for the evidence
-const r2 = new ethers.Wallet(process.env.SERVER_PAYER_KEY, provider); // seconds uncontested deals only
+// --v6: TakarSettle6 (v5 + arrival record, buyer confirm, automatic release); its second Takar seat is RABBY_TEST_KEY.
+const V6 = process.argv.includes("--v6");
+const r2 = new ethers.Wallet(V6 && process.env.RABBY_TEST_KEY ? process.env.RABBY_TEST_KEY : process.env.SERVER_PAYER_KEY, provider); // seconds uncontested deals only
 const supplier = new ethers.Wallet(process.env.TAKAR_COUNTERPARTY_KEY, provider);
 const buyer = process.env.TAKAR_BUYER_KEY ? new ethers.Wallet(process.env.TAKAR_BUYER_KEY, provider) : null;
 // --v5: TakarSettle5 (split settlement) for quantity disputes; default is the v4 panel (pay or refund).
-const V5 = process.argv.includes("--v5");
-const ENV = V5 ? "TAKAR_SETTLE5" : "TAKAR_SETTLE4P";
+const V5 = process.argv.includes("--v5") || V6; // v6 settles like v5 (split)
+const VER = V6 ? 6 : V5 ? 5 : 4;
+const ENV = V6 ? "TAKAR_SETTLE6" : V5 ? "TAKAR_SETTLE5" : "TAKAR_SETTLE4P";
 const PRAMAN_SEAT = "0x98021b20Efdb7ae2C57366010a6E0fDE207b4466";
-const artifact = JSON.parse(readFileSync(new URL(`../onchain/TakarSettle${V5 ? 5 : 4}.artifact.json`, import.meta.url), "utf8"));
+const artifact = JSON.parse(readFileSync(new URL(`../onchain/TakarSettle${VER}.artifact.json`, import.meta.url), "utf8"));
 const settle = (w = r1) => { if (!process.env[ENV]) throw new Error(`no ${ENV} in .env`); return new ethers.Contract(process.env[ENV], artifact.abi, w); };
 // The decision as the contract takes it: v4 a bool, v5 the payee's amount.
 const decisionArg = (payout, amount) => (V5 ? payout : payout === amount);
@@ -82,7 +85,7 @@ async function rawOf(signal) {
   return r?.ok ? (await r.json()).payload?.response ?? {} : {};
 }
 const supplierName = (s) => String(s ?? "").replace(/\(.*?\)/g, "").trim();
-const docFile = (id, kind) => `${DIR}/doc-v${V5 ? 5 : 4}-${id}-${kind}.json`;
+const docFile = (id, kind) => `${DIR}/doc-v${VER}-${id}-${kind}.json`;
 const loadDocs = (id) => Object.fromEntries(["grn", "invoice", "inspection"].filter((k) => existsSync(docFile(id, k))).map((k) => [k, JSON.parse(readFileSync(docFile(id, k), "utf8"))]));
 
 async function operators() {
@@ -238,7 +241,10 @@ if (cmd === "deploy") {
   // --inspector <address>: payment also needs that inspector's signed certificate with every inspected unit passing.
   if (arg("inspector")) { terms.inspector = ethers.getAddress(arg("inspector")); terms.text += ` Quality: needs a passing inspection certificate signed by ${terms.inspector}.`; }
   if (rest.includes("--require-lei")) { terms.requireLei = true; terms.text += " The supplier must resolve to a registered entity with an LEI."; }
-  const t = await s.open(supplier.address, amount, BigInt(Math.floor(Date.now() / 1000) + 60), 0, JSON.stringify(terms));
+  // --accept-window <seconds> (v6): after the panel records arrival the buyer has this long to confirm or object; silence releases the payment.
+  const acceptWindow = V6 ? BigInt(arg("accept-window", 3600)) : null;
+  if (V6) terms.text += ` After arrival is recorded the buyer has ${Number(acceptWindow) / 60} minutes to confirm or object; silence releases the payment (automatic confirmation).`;
+  const t = await s.open(supplier.address, amount, BigInt(Math.floor(Date.now() / 1000) + 60), 0, JSON.stringify(terms), ...(V6 ? [acceptWindow] : []));
   const r = await t.wait();
   const id = Number(s.interface.parseLog(r.logs.find((l) => l.address.toLowerCase() === s.target.toLowerCase())).args.id);
   console.log(`opened deal ${id}: buyer ${buyer.address} locked ${ethers.formatUnits(amount, 6)} test USDC for the supplier\n  ${etherscan(t.hash)}`);
@@ -334,6 +340,47 @@ if (cmd === "deploy") {
   writeFileSync(docFile(id, kind), JSON.stringify({ type, domain: docDomain(settle(r1).target), message, signer: w.address, signature }, null, 2) + "\n");
   console.log(`deal ${id}: ${type} signed by ${w.address} -> ${docFile(id, kind)}`);
   log({ action: "sign", id, doc: kind, signer: w.address, file: docFile(id, kind) });
+} else if (cmd === "arrive") {
+  // v6: buy the arrival evidence (two AIS relays and the port's own record) and, when they agree the
+  // ship is in port, record arrival on chain with both Takar seats; that starts the buyer's window.
+  if (!V6) throw new Error("arrive is for --v6");
+  const id = Number(arg("id"));
+  const s = settle(r1);
+  const d = await s.deal(id);
+  const t = JSON.parse(d.terms);
+  const port = PORTS[t.port];
+  const [vessel, calls] = await Promise.all([
+    askBoth("VESSEL_TELEMETRY_VERIFY_GENERAL", VESSEL_MINERS, { vessel: t.vessel }, await operators()),
+    portCalls(t.vessel).catch((e) => ({ error: e.message, calls: null })),
+  ]);
+  for (const v of vessel) v.berth = v.result ? berth(v.result, port, Date.now(), t.vessel) : { state: "unusable", why: v.error };
+  const ais = pair(vessel[0].berth.state, vessel[1].berth.state, "berthed", "away");
+  const portRecord = calls.calls ? { source: calls.url, ...portCall(calls.calls, port, Date.now()) } : { state: "unknown", why: calls.error };
+  const arrival = arrivalWith(ais, portRecord.state);
+  const signals = vessel.map((v) => v.signal).filter(Boolean);
+  const at = new Date().toISOString();
+  const file = `${DIR}/arrival-v6-${id}-${at.replace(/[:.]/g, "-")}.json`;
+  writeFileSync(file, JSON.stringify({ id, at, kind: "arrival", vessel, oneBroadcast: sameFix(vessel[0].result, vessel[1].result), port: portRecord, checks: { ais, arrival }, signals }, null, 2));
+  console.log(`deal ${id}: arrival ${arrival} (AIS ${ais}: ${vessel.map((v) => `${v.miner} ${v.berth.state}${v.berth.km != null ? ` ${v.berth.km} km` : ""}`).join("; ")}; port ${portRecord.state}${portRecord.ata ? ` ATA ${portRecord.ata}` : ""})`);
+  if (arrival !== "pass" || signals.length < 2) { log({ action: "arrival-check", id, arrival, file }); process.exit(0); }
+  // ponytail: the second seat records on the same two signals without re-reading them; give it backBy's checks if the seats ever belong to different people.
+  const a1 = await s.connect(r1).recordArrival(id, signals); await a1.wait();
+  const a2 = await s.connect(r2).recordArrival(id, signals); await a2.wait();
+  const live = await s.deal(id);
+  console.log(`  arrival recorded, buyer's window ends ${new Date((Number(live.arrivedAt) + Number(live.acceptWindow)) * 1000).toISOString()}\n  ${etherscan(a1.hash)}\n  ${etherscan(a2.hash)}`);
+  log({ action: "arrival", id, ata: portRecord.ata ?? null, signals, file, tx: a1.hash, tx2: a2.hash, windowEnds: new Date((Number(live.arrivedAt) + Number(live.acceptWindow)) * 1000).toISOString() });
+} else if (cmd === "confirm") {
+  // v6: the buyer confirms receipt and the supplier is paid at once.
+  const id = Number(arg("id"));
+  const t = await settle(buyer).confirm(id); await t.wait();
+  console.log(`deal ${id}: the buyer confirmed receipt; supplier paid in full\n  ${etherscan(t.hash)}`);
+  log({ action: "confirm", id, toSupplier: String((await settle(r1).deal(id)).amount), toBuyer: "0", tx: t.hash });
+} else if (cmd === "release") {
+  // v6: the buyer stayed silent through its window; anyone may release (the keeper does this too).
+  const id = Number(arg("id"));
+  const t = await settle(r1).autoRelease(id); await t.wait();
+  console.log(`deal ${id}: released automatically after the buyer's window\n  ${etherscan(t.hash)}`);
+  log({ action: "release", id, toSupplier: String((await settle(r1).deal(id)).amount), toBuyer: "0", tx: t.hash });
 } else if (cmd === "dispute") {
   const id = Number(arg("id")), who = arg("as");
   const w = who === "buyer" ? buyer : who === "supplier" ? supplier : null;

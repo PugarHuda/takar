@@ -83,7 +83,9 @@ code { font-size:.85rem; overflow-wrap:anywhere; }
 <script>
 const NODE = "https://devnode.telegraphprotocol.com/engine/v1/signal/";
 const V4 = "0x310275e6D66818E068245326bB9e398822304248";
-const SHOWN = [V4, "0xa6D0482cBF29FE43fB644F33f7a020766AF4A42B"].map((a) => a.toLowerCase()); // the first v5 (0xa72A…) required all three only after both parties disputed; replaced before use
+const V6 = "0x789844606ca3c8693E2cEbf2e1B065314F1E8013";
+const VER = (k) => (k.startsWith(V4.toLowerCase()) ? 4 : k.startsWith(V6.toLowerCase()) ? 6 : 5);
+const SHOWN = [V4, "0xa6D0482cBF29FE43fB644F33f7a020766AF4A42B", V6].map((a) => a.toLowerCase()); // the first v5 (0xa72A…) required all three only after both parties disputed; replaced before use
 const HASH = /^0x[0-9a-fA-F]{64}$/;
 const tx = (h) => HASH.test(h ?? "") ? `<a href="https://sepolia.etherscan.io/tx/${h}">${h.slice(0, 10)}…</a>` : "";
 const sig = (h) => HASH.test(h ?? "") ? `<a href="${NODE}${h}">${h.slice(0, 10)}…</a>` : "none";
@@ -91,7 +93,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<
 const when = (t) => new Date(t).toISOString().replace("T", " ").slice(0, 16) + " UTC";
 const tag = (k) => `<span class="tag ${esc(k)}">${esc(k)}</span>`;
 const usdc = (micro) => (Number(micro) / 1e6).toFixed(2);
-const WHO = { "panel-propose": "Review goes to the panel", open: "Buyer locks the payment", hold: "Evidence round", review: "Evidence round", propose: "Evidence round", second: "Takar's second key backs it", declined: "Takar's second key declines", "awaiting-independent": "Waiting for the outside seat", "independent-second": "Praman's seat backs it", sign: "A party signs its document", dispute: "Dispute", finalize: "Settled" };
+const WHO = { "panel-propose": "Review goes to the panel", open: "Buyer locks the payment", hold: "Evidence round", review: "Evidence round", propose: "Evidence round", second: "Takar's second key backs it", declined: "Takar's second key declines", "awaiting-independent": "Waiting for the outside seat", "independent-second": "Praman's seat backs it", sign: "A party signs its document", arrival: "Arrival recorded on chain", "arrival-check": "Arrival check", confirm: "The buyer confirms receipt", release: "Released after the buyer's window", dispute: "Dispute", finalize: "Settled" };
 
 function round(r) {
   const v = r.vessel.map((x) => `<tr><td>Ship arrived</td><td>${esc(x.miner)}</td><td>${esc(x.berth.state)}${x.berth.km != null ? `, ${x.berth.km} km from the berth, ${x.berth.knots} kn` : x.berth.why ? `: ${esc(x.berth.why)}` : ""}</td><td>${sig(x.signal)}</td></tr>`);
@@ -144,13 +146,17 @@ function round(r) {
         ? `<p>The deal is contested, so the decision needs Praman's seat to back it after its own check. The contract requires ${r.required} of 3 approvals${r.required === 3 ? " (on TakarSettle5 any dispute makes all three required); both Takar seats have backed it" : ""}.</p>`
         : `<p>This is a review call, so Takar's second key steps aside. The contract requires ${r.required} of 3 approvals: Takar's proposal plus Praman's seat, after its own check.</p>`;
       if (r.action === "dispute") body = `<p>The ${esc(r.by)} disputed and posted the bond${r.reason ? `: “${esc(r.reason)}”` : ""}. The proposal is cleared and cannot be proposed again on the same evidence. ${tx(r.tx)}</p>`;
+      if (r.action === "arrival") body = `<p>Both vessel miners and the port's own record put the ship in port${r.ata ? ` (port arrival ${esc(r.ata)})` : ""}, so both Takar seats recorded arrival on TakarSettle6 on the same ${r.signals.length} signals. The buyer has until ${esc(r.windowEnds)} to confirm or object; if it stays silent, anyone may release the payment (automatic confirmation). ${tx(r.tx)} ${tx(r.tx2)}</p>`;
+      if (r.action === "arrival-check") body = `<p>Arrival not recorded: the checks say <b>${esc(r.arrival)}</b>. <a href="${esc(r.file)}">Evidence</a></p>`;
+      if (r.action === "confirm") body = `<p>The buyer confirmed receipt with its own wallet, and the supplier was paid <b>${usdc(r.toSupplier)} USDC</b> at once. ${tx(r.tx)}</p>`;
+      if (r.action === "release") body = `<p>The buyer neither confirmed nor objected within its window, so the payment was released to the supplier: <b>${usdc(r.toSupplier)} USDC</b>${r.by ? ` (by the ${esc(r.by)})` : ""}. ${tx(r.tx)}</p>`;
       if (r.action === "sign") body = `<p>${r.doc === "grn" ? "The buyer signed its goods-received note" : "The supplier signed its invoice"} with its own wallet (${esc(r.signer.slice(0, 6))}…${esc(r.signer.slice(-4))}), as EIP-712 typed data bound to this deal and contract. Every later round checks the signature against the deal's ${r.doc === "grn" ? "payer" : "payee"} on chain, and the miners reconcile the buyer's signed note, not text Takar wrote. <a href="${esc(r.file)}">Signed document</a></p>`;
       if (r.action === "sign" && r.doc === "inspection") body = `<p>The inspector named in the terms (${esc(r.signer.slice(0, 6))}…${esc(r.signer.slice(-4))}) signed its quality certificate, as EIP-712 typed data bound to this deal. Payment needs every inspected unit to pass; a failed certificate goes to the panel. <a href="${esc(r.file)}">Signed certificate</a></p>`;
       if (r.action === "independent-second") body = `<p>Praman's resolver (${esc(r.by.slice(0, 6))}…${esc(r.by.slice(-4))}, run by another team) checked the evidence itself and backed the same decision. The approvals reached the contract's threshold and the dispute window opened. ${tx(r.tx)}</p>`;
       if (r.action === "finalize") body = r.toSupplier != null ? `<p>Supplier received <b>${usdc(r.toSupplier)} USDC</b>, buyer refunded <b>${usdc(r.toBuyer)} USDC</b>${r.bond ? `; the ${esc(r.bond.from)}'s bond of <b>${usdc(r.bond.amount)} USDC</b> went to the ${esc(r.bond.to)}, because ${esc(r.bond.reason)}` : "; bonds returned or forfeited per the contract"}. ${tx(r.tx)}</p>` : `<p>${r.met ? "Supplier paid" : "Buyer refunded"}. ${tx(r.tx)}</p>`;
       out.push(`<li><h3>${esc(WHO[r.action] ?? r.action)}</h3><div class="when">${when(r.at)}</div>${body}</li>`);
     }
-    html.push(`<section><h2>${esc(title)}</h2><p class="note">Supplier: ${esc(t.supplier)}. Ship: ${esc(t.vessel)}, to ${esc(t.port)}. Invoice: “${esc(t.invoice)}”. Terms on chain: “${esc(t.text)}”</p><p class="note">Case file, with every round re-decided from its stored answers: <a href="receipts/trade-assurance/case-v${k.startsWith(V4.toLowerCase()) ? 4 : 5}-${k.split(":")[1]}.md">Markdown</a> · <a href="receipts/trade-assurance/case-v${k.startsWith(V4.toLowerCase()) ? 4 : 5}-${k.split(":")[1]}.json">JSON</a></p><ol class="time">${out.join("")}</ol></section>`);
+    html.push(`<section><h2>${esc(title)}</h2><p class="note">Supplier: ${esc(t.supplier)}. Ship: ${esc(t.vessel)}, to ${esc(t.port)}. Invoice: “${esc(t.invoice)}”. Terms on chain: “${esc(t.text)}”</p><p class="note">Case file, with every round re-decided from its stored answers: <a href="receipts/trade-assurance/case-v${VER(k)}-${k.split(":")[1]}.md">Markdown</a> · <a href="receipts/trade-assurance/case-v${VER(k)}-${k.split(":")[1]}.json">JSON</a></p><ol class="time">${out.join("")}</ol></section>`);
   }
   document.getElementById("cases").innerHTML = html.join("") || "<section><p>No cases yet.</p></section>";
 })().catch((e) => { document.getElementById("cases").innerHTML = `<section><p>Could not load the cases (${esc(e.message)}).</p></section>`; });
