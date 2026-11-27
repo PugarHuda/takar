@@ -30,7 +30,7 @@ import { secondOpinion } from "../lib/second.mjs";
 import { pramanTool } from "../lib/praman.mjs";
 import { existsSync } from "node:fs";
 import { memoVerdict, memoUrl } from "../lib/countersign.mjs";
-import { berth, pair, decide, payable, portCall, arrivalWith, sameFix, lateBy, identity, verifyDocs, DOC_TYPES, docDomain } from "../lib/trade.mjs";
+import { berth, pair, decide, payable, portCall, arrivalWith, sameFix, lateBy, latePayout, identity, verifyDocs, DOC_TYPES, docDomain } from "../lib/trade.mjs";
 
 const provider = new ethers.JsonRpcProvider(process.env.RPC ?? "https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true });
 const r1 = new ethers.Wallet(process.env.AGENT_PRIVATE_KEY, provider); // proposes, pays for the evidence
@@ -145,6 +145,9 @@ async function evidence(t) {
     else if (inv === "pass" && reconcile?.reconciled === true) [decision, why, payout] = ["pay", "every unit accepted: both miners and Praman reconcile the invoice", t.amount];
     else [decision, why, payout] = ["review", "the miners and Praman do not agree on what was accepted", null];
   }
+  // Late, everything else clean, and the terms carry a penalty: settle the split now instead of the panel.
+  const lp = !t.qty && late && arrival === "pass" && inv === "pass" && sanctions === "pass" && identityCheck === "pass" && documents === "pass" && countersign === "pass" ? latePayout(t.amount, late, t.latePenaltyPctPerDay, t.latePenaltyCapPct) : null;
+  if (lp) [decision, why, payout] = ["partial", `delivered ${late} h after the agreed date (${lp.days} started day${lp.days > 1 ? "s" : ""}): ${lp.cutPct}% off, per the terms`, lp.payout];
   const signals = [...vessel, ...invoice, ...screens, who].map((x) => x.signal).filter(Boolean);
   return { decision, why, payout: payout === null ? null : String(payout), checks: { ...checks, ais }, vessel, oneBroadcast, port: portRecord, invoice, sanctions: { takar: so.verdict, screens, praman }, identity: who, documents: t.documents ?? null, countersign: t.countersign ?? null, reconcile, signals: [...new Set(signals)] };
 }
@@ -223,6 +226,13 @@ if (cmd === "deploy") {
   // --deliver-by <ISO>: arriving after it (by the port's actual arrival time) sends the deal to the panel.
   // --require-lei: payment also needs the supplier resolved to a registered entity with an LEI.
   if (arg("deliver-by")) { terms.deliverBy = new Date(arg("deliver-by")).toISOString(); terms.text += ` Latest delivery ${terms.deliverBy} by the port's actual arrival time; later goes to the panel.`; }
+  // --late-penalty <pct per day>[,<cap pct>] (TakarSettle5 only): a late delivery settles as a split instead of going to the panel.
+  if (arg("late-penalty")) {
+    if (!V5) throw new Error("--late-penalty needs --v5 (split settlement)");
+    const [pct, cap = 30] = arg("late-penalty").split(",").map(Number);
+    Object.assign(terms, { latePenaltyPctPerDay: pct, latePenaltyCapPct: cap });
+    terms.text += ` Late delivery: ${pct}% off per started day, at most ${cap}%.`;
+  }
   if (rest.includes("--require-lei")) { terms.requireLei = true; terms.text += " The supplier must resolve to a registered entity with an LEI."; }
   const t = await s.open(supplier.address, amount, BigInt(Math.floor(Date.now() / 1000) + 60), 0, JSON.stringify(terms));
   const r = await t.wait();
