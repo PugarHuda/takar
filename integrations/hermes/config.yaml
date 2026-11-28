@@ -1,0 +1,15 @@
+# Takar in Hermes Agent: add this under mcp_servers in ~/.hermes/config.yaml, then /reload-mcp
+# (or start a new session). Tools appear as mcp_takar_<tool>, e.g. mcp_takar_second_opinion.
+# No key or wallet: Takar's testnet escrow pays the Telegraph asks (Ethereum Sepolia, test USDC).
+mcp_servers:
+  takar:
+    command: "npx"
+    args: ["-y", "takar-mcp"]
+    timeout: 120            # a second opinion buys two to three paid answers; allow for it
+    connect_timeout: 60
+    tools:
+      include: [second_opinion, verify_signal, verify_countersign, trade_case, miner_reputation, intent_ranking, resolve_event]
+
+# To pay from your own Telegraph escrow instead (no rate limit), add:
+#     env:
+#       TAKAR_PAYER_KEY: "${TAKAR_PAYER_KEY}"   # keep the value in ~/.hermes/.env

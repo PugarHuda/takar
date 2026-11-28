@@ -81,6 +81,7 @@ const TOOLS = [
       properties: {
         intent: { type: "string", description: "Exact Telegraph intent name, e.g. WEATHER_FORECAST_VERIFY_GENERAL or EVENT_OUTCOME_RESOLUTION_GENERAL." },
         params: { type: "object", description: "The intent's request params, as its schema defines them." },
+        fields: { type: "array", items: { type: "string" }, description: "Optional: the answer fields that decide your action (e.g. [\"matched\"]); agreement is judged on these." },
       },
       required: ["intent", "params"],
     },
@@ -222,12 +223,12 @@ const CALLS = {
     };
   },
 
-  async second_opinion({ intent, params, client }) {
+  async second_opinion({ intent, params, client, fields }) {
     const name = String(intent ?? "").trim();
     if (!/^[A-Z][A-Z0-9_]{2,80}$/.test(name)) throw new Error("intent must be an exact intent name");
     if (!params || typeof params !== "object" || Array.isArray(params)) throw new Error("params must be an object");
     if (process.env.TAKAR_PAYER_KEY) return selfPay(name, params);
-    return getJson(`${SITE}/api/second-opinion`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ intent: name, params, ...(client ? { client: String(client).slice(0, 40) } : {}) }) });
+    return getJson(`${SITE}/api/second-opinion`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ intent: name, params, ...(Array.isArray(fields) && fields.length ? { fields: fields.map(String).slice(0, 10) } : {}), ...(client ? { client: String(client).slice(0, 40) } : {}) }) });
   },
 
   async miner_reputation({ intent, attester } = {}) {

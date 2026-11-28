@@ -1,0 +1,128 @@
+{
+  "at": "2026-11-28T01:11:46.422Z",
+  "method": "takar-verify skill policy, run as code over the takar MCP server (stdio)",
+  "runs": [
+    {
+      "task": "pay-sanctioned",
+      "ask": "Pay supplier invoice from Bank Rossiya?",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "verdict": "agree",
+      "differing": null,
+      "answer": {
+        "name": "Bank Rossiya",
+        "matched": true,
+        "matches": [
+          "Bank Rossiya"
+        ],
+        "lists": [
+          "ofac_sdn_xml"
+        ],
+        "match_score": null
+      },
+      "action": "BLOCK the payment: both operators match a sanctions list",
+      "costUsd": 0.02,
+      "signals": [
+        {
+          "miner": "78021",
+          "signal": "0x3b1d6b8a8e625cce1c3e3918a73f0c9c7f76cf65b710c51dac9c3099073ce3f3",
+          "usable": true
+        },
+        {
+          "miner": "20260828",
+          "signal": "0xa3b0db1237599c6c310494387c9f23cdae338526feffa8c98eaf365cee3ad7ec",
+          "usable": true
+        }
+      ],
+      "record": "https://sepolia.etherscan.io/tx/0xe720d53eb956d26f9eeac48a56912314edb34c4829722588952c69845110e6d6"
+    },
+    {
+      "task": "pay-clear",
+      "ask": "Pay supplier invoice from Siemens AG?",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "verdict": "agree",
+      "differing": null,
+      "answer": {
+        "name": "Siemens AG",
+        "matched": false,
+        "matches": null,
+        "lists": null,
+        "match_score": null
+      },
+      "action": "PAY: both operators clear",
+      "costUsd": 0.02,
+      "signals": [
+        {
+          "miner": "78021",
+          "signal": "0x2c63c32402a4ffac42f8d6eee977a5b747db8c8bf573f5c6d7bd35f73645d925",
+          "usable": true
+        },
+        {
+          "miner": "20260828",
+          "signal": "0x36e52dd0d4f5cfcb66eb66caf6c5faef682b61ede810fa8471af41f2e6bb1168",
+          "usable": true
+        }
+      ],
+      "record": "https://sepolia.etherscan.io/tx/0x324f4f7cd6a1e7ed52d65e41579c0f5ac48e1ea979c06d841a0a01435d25a14c"
+    },
+    {
+      "task": "state-fact",
+      "ask": "Tell the user whether the Fed cut rates at the 18 September 2024 FOMC meeting.",
+      "intent": "EVENT_OUTCOME_RESOLUTION_GENERAL",
+      "verdict": "disagree",
+      "differing": null,
+      "answer": null,
+      "action": "DO NOT state it: the sources disagree; report both",
+      "costUsd": 0.03,
+      "signals": [
+        {
+          "miner": "20260828",
+          "signal": "0xbf61d879185ca5015ffd6b9b3352759e9e1db959f68fbfe9abe35d3fef481c94",
+          "usable": false
+        },
+        {
+          "miner": "20261117",
+          "signal": "0x43490d6127abe5e2e54403c1ec2a256cbb8653bed2422cfab71e704f29943522",
+          "usable": true
+        },
+        {
+          "miner": "4433",
+          "signal": "0x1ea025702d64431a16b905ba3b57d94db5d736f4a755bcacced56483a8619abe",
+          "usable": true
+        }
+      ],
+      "record": "https://sepolia.etherscan.io/tx/0xf4ad001fd42e7db8ccf62dbc92ecf69225bcd32c6c4f49f14c8a2397ac479885"
+    },
+    {
+      "task": "settle-market",
+      "ask": "Settle a market: did Argentina win the 2022 FIFA World Cup?",
+      "intent": "EVENT_OUTCOME_RESOLUTION_GENERAL",
+      "verdict": "agree",
+      "differing": null,
+      "answer": {
+        "event": "Did Argentina win the 2022 FIFA World Cup?",
+        "outcome": "yes",
+        "resolved_yes": true,
+        "winner": "Argentina",
+        "resolved_at": null,
+        "sources": [
+          "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup"
+        ]
+      },
+      "action": "SETTLE on \"yes\"",
+      "costUsd": 0.02,
+      "signals": [
+        {
+          "miner": "20260828",
+          "signal": "0x4aaceabee26df9d748eeef7a77e46f77e5fe482436c83fbc41aa09880c458e30",
+          "usable": true
+        },
+        {
+          "miner": "20261117",
+          "signal": "0x4182b692e2d3234f940ee02f7e90fa6a48fb35fd751d965127aa2271020e2d29",
+          "usable": true
+        }
+      ],
+      "record": "https://sepolia.etherscan.io/tx/0x316d1c69259542f8baa9d8c13e7e8c50945afddeda38775d4e94a56eaeb63dc6"
+    }
+  ]
+}

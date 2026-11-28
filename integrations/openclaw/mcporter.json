@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "takar": {
+      "command": ["npx", "-y", "takar-mcp"]
+    }
+  }
+}
