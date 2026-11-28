@@ -67,7 +67,7 @@ code { font-size:.85rem; overflow-wrap:anywhere; }
 
   <section aria-labelledby="sol-h">
     <h2 id="sol-h">The same decisions, paid on Solana</h2>
-    <p class="note">A Solana settlement leg (devnet, an SPL test-USDC): the buyer locks the deal's amount with Takar's Solana escrow, and nothing moves until the Sepolia contract has settled. Then the leg pays exactly what the contract paid, to the supplier and back to the buyer, and each transfer carries a memo with the case, the Sepolia settlement transaction and the sha256 of the case file. The decision stays with the panel on Sepolia; the Solana side is custodial (Takar's escrow key) until a Solana program can check the Sepolia outcome itself. Code: <a href="https://github.com/PugarHuda/takar/blob/main/scripts/solana-leg.mjs">scripts/solana-leg.mjs</a>.</p>
+    <p class="note">A Solana program on devnet, <a href="https://explorer.solana.com/address/9TB4j4rce2Tk2PZy8XVajaZxAsqxCW3hJKqPhroSzD9k?cluster=devnet">takar_escrow 9TB4…zD9k</a>, holds the buyer's SPL test-USDC in a vault it owns, not in a Takar wallet. A settlement can only pay the deal's supplier and buyer, only in amounts that add up to the deposit, and only when 2 of the deal's 3 attestors sign it; each settlement names the Sepolia transaction it mirrors, and nothing is asked of the program until the Sepolia contract has settled. If nobody settles by the deadline, the buyer takes the deposit back. The program refused one attestor alone, payouts that did not add up, and a non-attestor signer (tried on a live deal). The decision itself stays with the panel on Sepolia. Code: <a href="https://github.com/PugarHuda/takar/blob/main/solana/programs/takar_escrow/src/lib.rs">the program</a>, <a href="https://github.com/PugarHuda/takar/blob/main/solana/escrow.mjs">solana/escrow.mjs</a>. The first version of this leg (27 Nov) was custodial, a Takar key paying with a memo; its transfers stay in <a href="receipts/solana/log.jsonl">receipts/solana/log.jsonl</a>.</p>
     <div class="scroll" id="solana"><p class="note">Loading…</p></div>
   </section>
 
@@ -168,14 +168,14 @@ function round(r) {
   }
   document.getElementById("cases").innerHTML = html.join("") || "<section><p>No cases yet.</p></section>";
   // Solana leg: one row per case, lock and settlement with their devnet transactions.
-  const sol = await fetch("receipts/solana/log.jsonl", { cache: "no-store" }).then((r) => (r.ok ? r.text() : "")).catch(() => "");
+  const sol = await fetch("receipts/solana/escrow-log.jsonl", { cache: "no-store" }).then((r) => (r.ok ? r.text() : "")).catch(() => "");
   const srows = sol.split("\n").filter(Boolean).map((l) => JSON.parse(l)).filter((r) => r.case);
   const ex = (s) => `<a href="https://explorer.solana.com/tx/${esc(s)}?cluster=devnet">${esc(s.slice(0, 8))}…</a>`;
   const byCase = [...new Set(srows.map((r) => r.case))].map((c) => {
-    const lock = srows.find((r) => r.case === c && r.action === "lock"), st = srows.find((r) => r.case === c && r.action === "settle");
-    return `<tr><td><a href="receipts/trade-assurance/case-${esc(c)}.md">${esc(c)}</a></td><td>${lock ? `${usdc(lock.amount)} ${ex(lock.sig)}` : "-"}</td><td>${st ? `supplier <b>${usdc(st.toSupplier)}</b>, buyer <b>${usdc(st.toBuyer)}</b> ${Object.values(st.sigs).map(ex).join(" ")}` : "waiting for the Sepolia settlement"}</td><td>${st ? tx(st.sepoliaTx) : "-"}</td></tr>`;
+    const lock = srows.find((r) => r.case === c && r.action === "open"), st = srows.find((r) => r.case === c && r.action === "settle");
+    return `<tr><td><a href="receipts/trade-assurance/case-${esc(c)}.md">${esc(c)}</a></td><td>${lock ? `${usdc(lock.amount)} in the program's vault ${ex(lock.sig)}` : "-"}</td><td>${st ? `supplier <b>${usdc(st.toSupplier)}</b>, buyer <b>${usdc(st.toBuyer)}</b>, ${esc(st.attestors)} of 3 attestors ${ex(st.sig)}` : "waiting for the Sepolia settlement"}</td><td>${st ? tx(st.sepoliaTx) : "-"}</td></tr>`;
   });
-  document.getElementById("solana").innerHTML = byCase.length ? `<table><tr><th>Case</th><th>Locked on Solana</th><th>Paid on Solana</th><th>Sepolia settlement it mirrors</th></tr>${byCase.join("")}</table>` : `<p class="note">No Solana leg yet.</p>`;
+  document.getElementById("solana").innerHTML = byCase.length ? `<table><tr><th>Case</th><th>Locked on Solana</th><th>Paid by the program</th><th>Sepolia settlement it mirrors</th></tr>${byCase.join("")}</table>` : `<p class="note">No Solana leg yet.</p>`;
 })().catch((e) => { document.getElementById("cases").innerHTML = `<section><p>Could not load the cases (${esc(e.message)}).</p></section>`; });
 </script>
 </body>

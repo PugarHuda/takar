@@ -52,6 +52,7 @@ async function sepolia(caseId) {
   return { v: Number(v), id: Number(id), state: ["open", "proposed", "settled", "reclaimed"][Number(d.state)], amount: d.amount, settled };
 }
 
+export const sepoliaDeal = (c) => sepolia(c);
 const caseDigest = (caseId) => { const f = `receipts/trade-assurance/case-${caseId}.json`; return existsSync(f) ? createHash("sha256").update(readFileSync(f)).digest("hex") : null; };
 
 /** What the Solana leg owes, from the Sepolia outcome only. Pure, so it is tested. */

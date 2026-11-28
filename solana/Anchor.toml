@@ -1,0 +1,16 @@
+[toolchain]
+anchor_version = "0.31.1"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.devnet]
+takar_escrow = "9TB4j4rce2Tk2PZy8XVajaZxAsqxCW3hJKqPhroSzD9k"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "../.solana/escrow.json"

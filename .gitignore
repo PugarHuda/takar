@@ -7,3 +7,5 @@ node_modules/
 mcp/lib/
 
 .solana/
+solana/target/
+solana/node_modules/
