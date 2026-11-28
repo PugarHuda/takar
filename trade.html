@@ -108,6 +108,8 @@ function round(r) {
   const s = r.sanctions.screens.map((x) => `<tr><td>Supplier clear</td><td>${esc(x.miner)}</td><td>matched = ${esc(x.matched)}</td><td>${sig(x.signal)}</td></tr>`);
   const p = r.sanctions.praman;
   s.push(`<tr><td>Supplier clear</td><td>Praman (MCP)</td><td>${p.error ? esc(p.error) : `matched = ${esc(p.matched)}, SDN list loaded ${esc(p.sdn_last_loaded)}`}</td><td>-</td></tr>`);
+  const c = r.sanctions.cachet;
+  if (c) s.push(`<tr><td>Supplier clear</td><td>Cachet ${esc(c.miner)}</td><td>${c.error ? esc(c.error) : `matched = ${esc(c.matched)}${c.lists?.length ? `; lists: ${esc(c.lists.join(", "))}` : ""}`}</td><td>${sig(c.signal)}</td></tr>`);
   // Rounds from 27 Nov on also carry the port's own record and the supplier's registered identity.
   if (r.port) v.push(`<tr><td>Ship arrived</td><td>Port record (Portnet, <a href="${esc(r.port.source ?? "https://meri.digitraffic.fi")}">Digitraffic</a>)</td><td>${esc(r.port.state)}${r.port.ata ? `: arrived ${esc(r.port.ata)}, berth ${esc(r.port.berth)}` : r.port.lastAtd ? `: departed ${esc(r.port.lastAtd)}${r.port.nextEta ? `, next arrival expected ${esc(r.port.nextEta)}` : ""}` : r.port.why ? `: ${esc(r.port.why)}` : ""}. Declared by the ship's agent and the port, not the ship's AIS.</td><td>-</td></tr>`);
   if (r.documents) i.unshift(`<tr><td>Goods accepted</td><td>Signed documents</td><td>${esc(r.documents.state)}${r.documents.state === "signed" ? `: the buyer's note (${esc(r.documents.acceptedUnits)} of ${esc(r.documents.invoicedUnits)} units accepted) and the supplier's invoice, both signatures checked against the deal's parties` : r.documents.why ? `: ${esc(r.documents.why)}` : ""}</td><td>-</td></tr>`);

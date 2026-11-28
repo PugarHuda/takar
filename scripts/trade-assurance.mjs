@@ -30,7 +30,7 @@ import { secondOpinion } from "../lib/second.mjs";
 import { pramanTool } from "../lib/praman.mjs";
 import { existsSync } from "node:fs";
 import { memoVerdict, memoUrl } from "../lib/countersign.mjs";
-import { berth, pair, decide, payable, portCall, arrivalWith, sameFix, lateBy, latePayout, identity, verifyDocs, verifyInspection, DOC_TYPES, docDomain } from "../lib/trade.mjs";
+import { berth, pair, decide, payable, portCall, arrivalWith, sameFix, lateBy, latePayout, identity, verifyDocs, verifyInspection, sanctionsVerdict, DOC_TYPES, docDomain } from "../lib/trade.mjs";
 
 const provider = new ethers.JsonRpcProvider(process.env.RPC ?? "https://ethereum-sepolia-rpc.publicnode.com", 11155111, { staticNetwork: true });
 const r1 = new ethers.Wallet(process.env.AGENT_PRIVATE_KEY, provider); // proposes, pays for the evidence
@@ -66,6 +66,7 @@ const INVOICE_MINERS = process.env.TAKAR_INVOICE_MINERS ? process.env.TAKAR_INVO
 // locode/area: the port authority's own record of the call (Portnet via Digitraffic), LS = Länsisatama.
 const PORTS = { "Helsinki West Harbour": { lat: 60.1497, lon: 24.9155, radiusKm: 1.5, locode: "FIHEL", area: "LS" } };
 const IDENTITY_MINER = 731005; // Sadiq's B2B identity miner: legal name + LEI (Ahmed asked for it in Takar's flow)
+const CACHET = 804211; // AJ's sanctions miner: official entry IDs and snapshot dates per list
 
 /** Port calls for the vessel over the last three days, from Fintraffic Digitraffic (Portnet). Free, no key.
  *  The same agency also publishes AIS, but this is a different record: arrivals and departures
@@ -104,11 +105,13 @@ async function askBoth(intent, miners, params, opOf) {
 async function evidence(t) {
   const opOf = await operators();
   const port = PORTS[t.port];
-  const [vessel, invoice, so, praman, calls, who] = await Promise.all([
+  const [vessel, invoice, so, praman, cachet, calls, who] = await Promise.all([
     askBoth("VESSEL_TELEMETRY_VERIFY_GENERAL", VESSEL_MINERS, { vessel: t.vessel }, opOf),
     askBoth("INVOICE_LEDGER_RECONCILE_GENERAL", INVOICE_MINERS, { invoice: t.invoice, ledger: t.ledger }, opOf),
     secondOpinion({ intent: "SANCTIONS_SCREENING_MATCH_GENERAL", params: { name: t.supplier } }, { ask: (a) => ask({ ...a, unit: "trade-assurance" }), ranked, operatorOf: opOf, strictOperators: true, maxAsks: 6, unit: "trade-assurance", fields: ["matched"] }),
     pramanTool("screen_sanctions", { name: t.supplier }).catch((e) => ({ error: e.message })),
+    // Cachet (AJ's miner): a pinned third sanctions screen that cites official entry IDs and dated lists.
+    ask({ intent: "SANCTIONS_SCREENING_MATCH_GENERAL", params: { name: t.supplier }, minerId: CACHET, unit: "trade-assurance", purpose: "trade-assurance cachet" }).then((r) => ({ miner: CACHET, signal: r.signal_hash ?? null, matched: r.result?.matched ?? null, lists: r.result?.lists ?? [], matches: r.result?.matches ?? null })).catch((e) => ({ miner: CACHET, signal: null, matched: null, error: e.message.slice(0, 160) })),
     portCalls(t.vessel).catch((e) => ({ error: e.message, calls: null })),
     ask({ intent: "B2B_IDENTITY_ENRICHMENT_GENERAL", params: { company: supplierName(t.supplier) }, minerId: IDENTITY_MINER, unit: "trade-assurance", purpose: "trade-assurance identity" })
       .then(async (r) => ({ miner: IDENTITY_MINER, signal: r.signal_hash ?? null, ...identity(await rawOf(r.signal_hash), t.supplier) }))
@@ -128,7 +131,7 @@ async function evidence(t) {
   const verdictOf = (v) => v === false || /^(false|no|0|clear)$/i.test(String(v)) ? true : v === true || /^(true|yes|match|matched|1)$/i.test(String(v)) ? false : null;
   const takarClear = so.verdict === "agree" && so.compared.includes("matched") ? verdictOf(so.answer?.matched) : null;
   const pramanClear = typeof praman.matched === "boolean" && praman.sdn_last_loaded ? !praman.matched : null;
-  const sanctions = takarClear === true && pramanClear === true ? "pass" : takarClear === false && pramanClear === false ? "fail" : "review";
+  const sanctions = sanctionsVerdict(takarClear, pramanClear, cachet);
   const screens = so.answers.filter((a) => a.usable).map((a) => ({ miner: a.miner?.id, signal: a.signal, matched: a.result?.matched }));
   // Signed documents gate payment only when the terms ask for them (signedDocs); always shown.
   const documents = t.signedDocs ? (t.documents?.state === "signed" ? "pass" : "review") : "pass";
@@ -153,8 +156,8 @@ async function evidence(t) {
   // Late, everything else clean, and the terms carry a penalty: settle the split now instead of the panel.
   const lp = !t.qty && late && arrival === "pass" && inv === "pass" && sanctions === "pass" && identityCheck === "pass" && documents === "pass" && countersign === "pass" && quality === "pass" ? latePayout(t.amount, late, t.latePenaltyPctPerDay, t.latePenaltyCapPct) : null;
   if (lp) [decision, why, payout] = ["partial", `delivered ${late} h after the agreed date (${lp.days} started day${lp.days > 1 ? "s" : ""}): ${lp.cutPct}% off, per the terms`, lp.payout];
-  const signals = [...vessel, ...invoice, ...screens, who].map((x) => x.signal).filter(Boolean);
-  return { decision, why, payout: payout === null ? null : String(payout), checks: { ...checks, ais }, vessel, oneBroadcast, port: portRecord, invoice, sanctions: { takar: so.verdict, screens, praman }, identity: who, documents: t.documents ?? null, countersign: t.countersign ?? null, inspection: t.inspection ?? null, reconcile, signals: [...new Set(signals)] };
+  const signals = [...vessel, ...invoice, ...screens, cachet, who].map((x) => x.signal).filter(Boolean);
+  return { decision, why, payout: payout === null ? null : String(payout), checks: { ...checks, ais }, vessel, oneBroadcast, port: portRecord, invoice, sanctions: { takar: so.verdict, screens, praman, cachet }, identity: who, documents: t.documents ?? null, countersign: t.countersign ?? null, inspection: t.inspection ?? null, reconcile, signals: [...new Set(signals)] };
 }
 
 /** Takar's second key re-reads every signal on the node before backing: each must be an answer to
